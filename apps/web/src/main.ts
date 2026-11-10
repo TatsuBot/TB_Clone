@@ -1,6 +1,7 @@
 import { Battle, MoveTimer, stepDirFor, type DragSession, type Dir, type Pos, type StepDir, type TurnReport } from '@game/core';
 import { Renderer } from './renderer';
 import { stage1 } from './stage1';
+import { UI } from './ui/ui';
 
 const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
 const canvas = $<HTMLCanvasElement>('board');
@@ -15,6 +16,25 @@ let timer = new MoveTimer();
 let busy = false;
 
 const renderer = new Renderer(canvas, () => session?.board ?? battle.board);
+
+// --- UI shell ---
+const ui = new UI();
+ui.setBattleCallback(() => {
+  battle = new Battle(stage1, Date.now() & 0xffff);
+  session = null;
+  busy = false;
+  renderer.setDrag(null);
+  renderer.reset();
+  renderer.resize();
+  hud();
+});
+
+$('btn-leave-battle')?.addEventListener('click', () => {
+  session = null;
+  busy = false;
+  renderer.setDrag(null);
+  ui.show('map');
+});
 
 function hud(text?: string): void {
   waveEl.textContent = `Wave ${battle.waveIndex + 1}/${battle.waveCount}`;

@@ -12,3 +12,5 @@ export * from './ai';
 export * from './stage';
 export * from './battle';
 export * from './ascii';
+export * from './data/companions';
+export * from './data/characters';

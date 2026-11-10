@@ -3,9 +3,13 @@
 TypeScript monorepo for the combat-first build plan. Phases 0-2 plus flat damage, a basic enemy
 turn and waves (the plan's "first week" target) are implemented and tested.
 
+A full set of **meta-game UI interfaces** (title, hub, map, stage select, pre-battle, tavern,
+party, character detail, shop, options) is also present as navigable mock screens.
+
 ```
 packages/core   pure battle core: no DOM, no rendering, no input. Fully unit-tested.
-apps/web        presentation + input: canvas renderer, pointer drag, timer bar. Thin shell.
+apps/web        presentation + input + UI shell
+  src/ui/       screen router, status bar, bottom nav, all meta screens
 docs/           core-rules.md is the rules spec.
 ```
 
@@ -13,11 +17,21 @@ docs/           core-rules.md is the rules spec.
 
 ```bash
 npm install
-npm run dev        # play in the browser (Vite)
+npm run dev        # play in the browser (Vite) — starts on the title screen
 npm test           # core unit tests + stage validation + random-bot soak
 npm run typecheck
 npm run build      # static build in apps/web/dist
 ```
+
+## How to try the UI
+
+1. `npm install && npm run dev`
+2. Title → Start → Home hub
+3. Use the bottom tabs or hub tiles to reach Map, Tavern, Party, Options
+4. Map → pick a chapter → pick a stage → Confirm Party → Start Battle
+5. In battle, use **Leave** to return to the map
+
+Screens are interfaces only — recruitment, job unlocks, currency, and real progression are not wired yet.
 
 ## Architecture notes
 

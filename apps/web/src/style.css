@@ -1,10 +1,11 @@
 :root { color-scheme: dark; --bg: #12151c; --panel: #1b2030; --text: #e8ebf3; --muted: #8b93a7; --ally: #4aa3ff; --enemy: #ff6b6b; }
 * { box-sizing: border-box; }
 html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text); font-family: system-ui, sans-serif; overscroll-behavior: none; }
-#app { display: flex; flex-direction: column; height: 100%; max-width: 520px; margin: 0 auto; padding: env(safe-area-inset-top) 12px env(safe-area-inset-bottom); }
+#app { display: none; flex-direction: column; height: 100%; max-width: 520px; margin: 0 auto; padding: env(safe-area-inset-top) 12px env(safe-area-inset-bottom); }
+body.battle-active #app { display: flex; }
 #hud { display: flex; align-items: center; gap: 12px; padding: 10px 0; font-size: 14px; }
 #status { flex: 1; color: var(--muted); }
-#restart { background: var(--panel); color: var(--text); border: 1px solid #2c3450; border-radius: 8px; padding: 6px 12px; font: inherit; }
+#restart, #btn-leave-battle { background: var(--panel); color: var(--text); border: 1px solid #2c3450; border-radius: 8px; padding: 6px 12px; font: inherit; cursor: pointer; }
 #timer { height: 8px; background: var(--panel); border-radius: 4px; overflow: hidden; }
 #timer-bar { height: 100%; width: 100%; background: var(--ally); transform-origin: left; }
 #stage { flex: 1; min-height: 0; display: flex; align-items: center; justify-content: center; padding: 10px 0; }
