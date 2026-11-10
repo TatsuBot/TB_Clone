@@ -39,16 +39,17 @@ export const SCREENS: Record<ScreenId, ScreenMeta> = {
 
 /** Placeholder chapter data for the map UI. */
 export const CHAPTERS = [
-  { id: 1, title: 'Borderlands', stages: 10, cleared: true, unlocked: true },
-  { id: 2, title: 'Road to the Capital', stages: 10, cleared: true, unlocked: true },
-  { id: 3, title: 'Crucible City', stages: 10, cleared: false, unlocked: true },
-  { id: 4, title: 'Tower of Temptation', stages: 10, cleared: false, unlocked: true },
-  { id: 5, title: 'Deep Gate', stages: 10, cleared: false, unlocked: false },
-  { id: 6, title: 'Underground Town', stages: 10, cleared: false, unlocked: false },
-  { id: 7, title: 'Mantle', stages: 10, cleared: false, unlocked: false },
-  { id: 8, title: 'Machine Wall', stages: 10, cleared: false, unlocked: false },
-  { id: 9, title: 'Machine Interior', stages: 10, cleared: false, unlocked: false },
-  { id: 10, title: 'Stonefolk Town', stages: 10, cleared: false, unlocked: false },
+  { id: 1, title: 'Borderlands', stages: 5, cleared: false, unlocked: true },
+  { id: 2, title: 'To the Capital', stages: 5, cleared: false, unlocked: true },
+  { id: 3, title: 'Melting Pot', stages: 5, cleared: false, unlocked: true },
+  { id: 4, title: 'Into the Tower', stages: 10, cleared: false, unlocked: true },
+  { id: 5, title: 'Descent', stages: 10, cleared: false, unlocked: false },
+  { id: 6, title: 'The City Below', stages: 10, cleared: false, unlocked: false },
+  { id: 7, title: 'Molten Menace', stages: 10, cleared: false, unlocked: false },
+  // Chapters 8+ locked until wiki stage data is ingested
+  { id: 8, title: 'Labyrinth', stages: 0, cleared: false, unlocked: false },
+  { id: 9, title: '—', stages: 0, cleared: false, unlocked: false },
+  { id: 10, title: '—', stages: 0, cleared: false, unlocked: false },
 ];
 
 /** Stage list for map UI. Chapter 1 uses real data; others stay placeholder. */

@@ -21,6 +21,8 @@ import {
   type CharacterInstance,
 } from './inventory';
 import { downloadSave, promptLoadSave, loadFromLocalStorage, saveToLocalStorage } from './save';
+import { isCleared, progress } from './progress';
+import { rollPact, addEnergy, type PactId } from './tavern';
 
 /** Simple screen router + UI shell for the meta-game interfaces. */
 export class UI {
@@ -41,6 +43,9 @@ export class UI {
     this.navEl = document.getElementById('ui-nav')!;
     this.screensEl = document.getElementById('ui-screens')!;
     this.bindNav();
+    this.bindTavern();
+    this.refreshStatusBar();
+    this.refreshStatusBar();
     this.bindGlobal();
     this.tryLoadAutosave();
     this.show('title');
@@ -166,6 +171,44 @@ export class UI {
     if (el) el.textContent = msg;
   }
 
+
+  private refreshStatusBar(): void {
+    const e = document.getElementById('stat-energy-val');
+    const c = document.getElementById('stat-coins-val');
+    const s = document.getElementById('stat-stamina-val');
+    if (e) e.textContent = String(progress.energy);
+    if (c) c.textContent = progress.coins.toLocaleString();
+    if (s) s.textContent = String(progress.stamina);
+  }
+
+  private bindTavern(): void {
+    document.querySelectorAll('[data-pact]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const pactId = (btn as HTMLElement).dataset.pact as PactId;
+        const result = rollPact(pactId);
+        const box = document.getElementById('pact-result');
+        if (box) {
+          box.style.display = 'block';
+          if (!result.ok) {
+            box.innerHTML = `<p style="color:#f87171">${result.error}</p>`;
+          } else {
+            box.innerHTML = `<p><strong>${result.message}</strong></p>
+              <p class="meta">${result.rarity} · ${result.kind}${result.duplicate ? ' · duplicate' : ''}</p>`;
+          }
+        }
+        this.refreshStatusBar();
+      });
+    });
+    document.getElementById('btn-add-energy')?.addEventListener('click', () => {
+      addEnergy(1);
+      this.refreshStatusBar();
+    });
+    document.getElementById('btn-add-energy-10')?.addEventListener('click', () => {
+      addEnergy(10);
+      this.refreshStatusBar();
+    });
+  }
+
   private renderScreen(id: ScreenId): void {
     if (id === 'map') this.renderMap();
     if (id === 'stage-select') this.renderStageSelect();
@@ -218,7 +261,7 @@ export class UI {
             stamina: s.stamina,
             difficulty: s.difficulty,
             waves: s.waves.length,
-            cleared: this.selectedChapter === 1 && s.stage <= 3,
+            cleared: isCleared(s.id),
           }))
         : stagesForChapter(this.selectedChapter);
 

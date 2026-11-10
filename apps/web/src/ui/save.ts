@@ -9,6 +9,7 @@ import {
   ownedCharacters,
   ownedCompanions,
 } from './inventory';
+import { progress, progressSnapshot, applyProgressSnapshot } from './progress';
 
 export const SAVE_VERSION = 1;
 const STORAGE_KEY = 'pincer-save-v1';
@@ -22,23 +23,34 @@ export interface SaveGame {
   meta?: {
     selectedChapter?: number;
     rank?: number;
+    xp?: number;
+    xpToRank?: number;
     stamina?: number;
+    staminaMax?: number;
     energy?: number;
     coins?: number;
+    cleared?: Record<string, boolean>;
+    bag?: Record<string, number>;
   };
 }
 
 export function buildSave(meta?: SaveGame['meta']): SaveGame {
+  const snap = progressSnapshot();
   return {
     version: SAVE_VERSION,
     savedAt: new Date().toISOString(),
     characters: structuredClone(ownedCharacters),
     companions: structuredClone(ownedCompanions),
     meta: meta ?? {
-      rank: 12,
-      stamina: 42,
-      energy: 18,
-      coins: 24500,
+      rank: snap.rank,
+      xp: snap.xp,
+      xpToRank: snap.xpToRank,
+      stamina: snap.stamina,
+      staminaMax: snap.staminaMax,
+      energy: snap.energy,
+      coins: snap.coins,
+      cleared: snap.cleared,
+      bag: snap.bag,
     },
   };
 }
@@ -59,6 +71,8 @@ export function applySave(data: SaveGame): { ok: true } | { ok: false; error: st
 
   ownedCompanions.length = 0;
   ownedCompanions.push(...data.companions);
+
+  applyProgressSnapshot(data.meta);
 
   return { ok: true };
 }

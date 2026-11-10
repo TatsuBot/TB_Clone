@@ -16,3 +16,7 @@ export * from './data/companions';
 export * from './data/characters';
 export * from './data/enemies';
 export * from './data/stages';
+export * from './data/items';
+export * from './data/rewards';
+
+export * from './data/recruits';

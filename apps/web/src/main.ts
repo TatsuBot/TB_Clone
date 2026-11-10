@@ -1,6 +1,10 @@
-import { Battle, MoveTimer, stepDirFor, type DragSession, type Dir, type Pos, type StepDir, type TurnReport } from '@game/core';
+import { Battle, MoveTimer, stepDirFor, grantStageRewards, rewardsForStage, getStageRef, recruitForStage, type DragSession, type Dir, type Pos, type StepDir, type TurnReport } from '@game/core';
 import { Renderer } from './renderer';
 import { stage1, stageFor } from './stage1';
+import { stageWithSquad } from './squad';
+import { ownedCharacters } from './ui/inventory';
+import { applyClearRewards, progress, isCleared, tryRecruitBoss } from './ui/progress';
+import { saveToLocalStorage } from './ui/save';
 import { UI } from './ui/ui';
 
 const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
@@ -14,21 +18,29 @@ let battle = new Battle(stage1, Date.now() & 0xffff);
 let session: DragSession | null = null;
 let timer = new MoveTimer();
 let busy = false;
+let rewardsGranted = false;
 
 const renderer = new Renderer(canvas, () => session?.board ?? battle.board);
 
 // --- UI shell ---
 const ui = new UI();
-ui.setBattleCallback(() => {
+/** Active squad = first 6 owned characters (matches pre-battle strip). */
+function currentSquadStage(): ReturnType<typeof stageFor> {
   const { chapter, stage } = ui.getSelectedStage();
-  const data = stageFor(chapter, stage);
+  return stageWithSquad(stageFor(chapter, stage), ownedCharacters);
+}
+
+ui.setBattleCallback(() => {
+  const data = currentSquadStage();
   battle = new Battle(data, Date.now() & 0xffff);
   session = null;
   busy = false;
+  rewardsGranted = false;
   renderer.setDrag(null);
   renderer.reset();
   renderer.resize();
-  hud();
+  const names = data.allies.map((a) => a.unit.name).join(', ');
+  hud(`Squad: ${names}`);
 });
 
 $('btn-leave-battle')?.addEventListener('click', () => {
@@ -38,13 +50,39 @@ $('btn-leave-battle')?.addEventListener('click', () => {
   ui.show('map');
 });
 
+function tryGrantRewards(): string | undefined {
+  if (battle.phase !== 'victory' || rewardsGranted) return undefined;
+  rewardsGranted = true;
+  const { chapter, stage } = ui.getSelectedStage();
+  const ref = getStageRef(chapter, stage);
+  if (!ref) return 'Stage cleared.';
+  const def = rewardsForStage(ref);
+  // Seed from stage id so re-clear is stable; still grant coins/xp every clear
+  const seed = Array.from(ref.id).reduce((a, c) => a + c.charCodeAt(0), 0) + progress.coins;
+    const ids: string[] = [];
+  if (ref.waves) {
+    for (const w of ref.waves) for (const e of w) ids.push(e.enemyId);
+  }
+  const reward = grantStageRewards(def, seed ^ (Date.now() & 0xffff), ids);
+  applyClearRewards(ref.id, reward, def.staminaCost ?? ref.stamina);
+  const recruit = recruitForStage(ref.id);
+  let recruitLine = '';
+  if (recruit && tryRecruitBoss(recruit)) {
+    recruitLine = ` · Recruited ${recruit.name}!`;
+  }
+  saveToLocalStorage();
+  return `Cleared ${ref.name}! ${reward.lines.join(' · ')} · Rank ${progress.rank} · ${progress.coins} coins${recruitLine}`;
+}
+
 function hud(text?: string): void {
   waveEl.textContent = `Wave ${battle.waveIndex + 1}/${battle.waveCount}`;
   const phase = battle.phase;
   statusEl.textContent =
     phase === 'victory' ? 'Victory!' : phase === 'defeat' ? 'Defeat' : phase === 'enemy' ? 'Enemy turn…' : 'Your turn';
+  const grantMsg = phase === 'victory' ? tryGrantRewards() : undefined;
   messageEl.textContent =
     text ??
+    grantMsg ??
     (phase === 'victory'
       ? 'Stage cleared. Press Restart to play again.'
       : phase === 'defeat'
@@ -139,9 +177,11 @@ canvas.addEventListener('pointerup', release);
 canvas.addEventListener('pointercancel', release);
 
 $('restart').addEventListener('click', () => {
-  battle = new Battle(stage1, Date.now() & 0xffff);
+  const data = currentSquadStage();
+  battle = new Battle(data, Date.now() & 0xffff);
   session = null;
   busy = false;
+  rewardsGranted = false;
   renderer.setDrag(null);
   renderer.reset();
   renderer.resize();

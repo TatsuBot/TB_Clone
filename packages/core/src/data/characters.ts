@@ -552,8 +552,8 @@ export const CHARACTERS: Record<string, CharacterDef> = {
         title: 'Dark Mage',
         weapon: 'Staff',
         element: 'Darkness',
-        statsMin: { hp: 340, atk: 20, def: 22, matk: 38, mdef: 30 },
-        statsMax: { hp: 3150, atk: 180, def: 200, matk: 350, mdef: 280 },
+        statsMin: { hp: 358, atk: 24, def: 23, matk: 30, mdef: 24 },
+        statsMax: { hp: 3284, atk: 220, def: 210, matk: 275, mdef: 220 },
         skills: [
           { level: 1, id: 'shadow', name: 'Shadow', description: 'Darkness damage', trigger: 'pincer', frequency: 50 },
         ],
@@ -1341,6 +1341,503 @@ export const CHARACTERS: Record<string, CharacterDef> = {
           { level: 40, id: 'giga_thunder', name: 'Giga Thunder', description: 'x2 lightning damage', trigger: 'pincer', frequency: 35, power: 2 },
         ],
       },
+    ],
+  },
+
+
+  yukken: {
+    id: 'yukken',
+    name: 'Yukken',
+    rarity: 'SS',
+    species: 'Human',
+    gender: 'Female',
+    sources: ['Pact of Truth'],
+    jobs: [{
+      jobIndex: 1, title: 'Chatterbox', weapon: 'Bow', element: '—',
+      statsMin: { hp: 348, atk: 33, def: 30, matk: 25, mdef: 22 },
+      statsMax: { hp: 3192, atk: 302, def: 275, matk: 229, mdef: 202 },
+      skills: [
+        { level: 1, id: 'megabow', name: 'Megabow', description: 'x1 bow', trigger: 'pincer', frequency: 50 },
+        { level: 15, id: 'def_up', name: 'Defense +10%', description: 'DEF +10% 2 turns', trigger: 'chain', frequency: 30 },
+        { level: 35, id: 'mega_heal', name: 'Mega Heal', description: 'Heal power 2', trigger: 'chain', frequency: 30 },
+        { level: 65, id: 'chaos_arrows', name: 'Chaos Arrows', description: 'Bow + confusion', trigger: 'chain', frequency: 30 },
+      ],
+    }],
+  },
+  rikken: {
+    id: 'rikken',
+    name: 'Rikken',
+    rarity: 'SS',
+    species: 'Human',
+    gender: 'Female',
+    sources: ['Pact of Truth'],
+    jobs: [{
+      jobIndex: 1, title: 'Persuasive', weapon: 'Bow', element: '—',
+      statsMin: { hp: 345, atk: 32, def: 30, matk: 26, mdef: 24 },
+      statsMax: { hp: 3164, atk: 293, def: 276, matk: 238, mdef: 220 },
+      skills: [
+        { level: 1, id: 'megabow', name: 'Megabow', description: 'x1 bow', trigger: 'pincer', frequency: 50 },
+      ],
+    }],
+  },
+  harold: {
+    id: 'harold',
+    name: 'Harold',
+    rarity: 'A',
+    species: 'Human',
+    gender: 'Male',
+    sources: ['Pact of Truth'],
+    jobs: [{
+      jobIndex: 1, title: 'Roughrider', weapon: 'Bow', element: '—',
+      statsMin: { hp: 361, atk: 37, def: 26, matk: 14, mdef: 16 },
+      statsMax: { hp: 3311, atk: 339, def: 238, matk: 128, mdef: 146 },
+      skills: [
+        { level: 1, id: 'def_up', name: 'Defense +10%', description: 'DEF +10% 2 turns', trigger: 'chain', frequency: 30 },
+        { level: 15, id: 'megabow', name: 'Megabow', description: 'x1 bow', trigger: 'pincer', frequency: 50 },
+        { level: 65, id: 'gigabow', name: 'Gigabow', description: 'x2 bow', trigger: 'pincer', frequency: 40, power: 2 },
+      ],
+    }],
+  },
+
+  amazora: {
+    id: 'amazora',
+    name: 'Amazora',
+    rarity: 'B',
+    species: 'Human',
+    gender: 'Female',
+    sources: ['Pact of Truth'],
+    jobs: [
+      {
+        jobIndex: 1,
+        title: 'Airy',
+        weapon: 'Sword',
+        element: 'Fire',
+        statsMin: { hp: 323, atk: 25, def: 24, matk: 31, mdef: 24 },
+        statsMax: { hp: 2963, atk: 229, def: 220, matk: 284, mdef: 220 },
+        skills: [
+          { level: 1, id: 'fire_blade', name: 'Fire Blade', description: '', trigger: 'pincer', frequency: 80 },
+          { level: 65, id: 'inferno', name: 'Inferno Blade', description: '', trigger: 'chain', frequency: 30 }
+        ],
+      },
+      {
+        jobIndex: 2,
+        title: 'Dancer',
+        weapon: 'Sword',
+        element: 'Fire',
+        statsMin: { hp: 384, atk: 27, def: 28, matk: 37, mdef: 26 },
+        statsMax: { hp: 3522, atk: 247, def: 256, matk: 339, mdef: 238 },
+        skills: [
+          { level: 1, id: 'matk_up', name: 'Magic Attack +10%', description: '', trigger: 'equip', frequency: 100 }
+        ],
+      },
+      {
+        jobIndex: 3,
+        title: 'Ethereal',
+        weapon: 'Sword',
+        element: 'Fire',
+        statsMin: { hp: 447, atk: 36, def: 29, matk: 37, mdef: 29 },
+        statsMax: { hp: 4100, atk: 330, def: 266, matk: 339, mdef: 266 },
+        skills: [
+          { level: 1, id: 'hp_up', name: 'HP +10%', description: '', trigger: 'equip', frequency: 100 }
+        ],
+      }
+    ],
+  },
+
+  velraine: {
+    id: 'velraine',
+    name: 'Velraine',
+    rarity: 'A',
+    species: 'Human',
+    gender: 'Female',
+    sources: ['Pact of Truth'],
+    jobs: [
+      {
+        jobIndex: 1,
+        title: 'Dragon Hunter',
+        weapon: 'Sword',
+        element: 'Ice',
+        statsMin: { hp: 310, atk: 25, def: 25, matk: 31, mdef: 21 },
+        statsMax: { hp: 2856, atk: 229, def: 229, matk: 284, mdef: 192 },
+        skills: [
+          { level: 1, id: 'ice_blade', name: 'Ice Blade', description: '', trigger: 'pincer', frequency: 80 }
+        ],
+      },
+      {
+        jobIndex: 2,
+        title: 'Halfbreed',
+        weapon: 'Sword',
+        element: 'Darkness',
+        statsMin: { hp: 370, atk: 28, def: 28, matk: 34, mdef: 23 },
+        statsMax: { hp: 3408, atk: 256, def: 256, matk: 311, mdef: 210 },
+        skills: [
+          { level: 1, id: 'shadow_blade', name: 'Shadow Blade', description: '', trigger: 'pincer', frequency: 80 }
+        ],
+      },
+      {
+        jobIndex: 3,
+        title: 'Dragon',
+        weapon: 'Sword',
+        element: '—',
+        statsMin: { hp: 440, atk: 31, def: 31, matk: 31, mdef: 25 },
+        statsMax: { hp: 4036, atk: 284, def: 284, matk: 284, mdef: 229 },
+        skills: [
+          { level: 1, id: 'atk_up', name: 'Attack +10%', description: '', trigger: 'equip', frequency: 100 }
+        ],
+      }
+    ],
+  },
+
+  maralme: {
+    id: 'maralme',
+    name: 'Maralme',
+    rarity: 'A',
+    species: 'Human',
+    gender: 'Female',
+    sources: ['Pact of Truth'],
+    jobs: [
+      {
+        jobIndex: 1,
+        title: 'Dragon Slayer',
+        weapon: 'Sword',
+        element: 'Fire',
+        statsMin: { hp: 323, atk: 27, def: 28, matk: 31, mdef: 22 },
+        statsMax: { hp: 2963, atk: 247, def: 256, matk: 284, mdef: 201 },
+        skills: [
+          { level: 1, id: 'fire_blade', name: 'Fire Blade', description: '', trigger: 'pincer', frequency: 80 },
+          { level: 65, id: 'inferno', name: 'Inferno Blade', description: '', trigger: 'pincer', frequency: 60 }
+        ],
+      },
+      {
+        jobIndex: 2,
+        title: 'Weredrake',
+        weapon: 'Sword',
+        element: 'Lightning',
+        statsMin: { hp: 383, atk: 30, def: 29, matk: 34, mdef: 24 },
+        statsMax: { hp: 3513, atk: 275, def: 266, matk: 311, mdef: 220 },
+        skills: [
+          { level: 65, id: 'lightning', name: 'Lightning Blade', description: '', trigger: 'pincer', frequency: 60 }
+        ],
+      },
+      {
+        jobIndex: 3,
+        title: 'Wyrmmaster',
+        weapon: 'Sword',
+        element: '—',
+        statsMin: { hp: 443, atk: 33, def: 32, matk: 31, mdef: 26 },
+        statsMax: { hp: 4063, atk: 302, def: 293, matk: 284, mdef: 238 },
+        skills: [
+          { level: 1, id: 'def_up', name: 'Defense +10%', description: '', trigger: 'equip', frequency: 100 }
+        ],
+      }
+    ],
+  },
+
+  gegonago: {
+    id: 'gegonago',
+    name: 'Gegonago',
+    rarity: 'S',
+    species: 'Human',
+    gender: 'Male',
+    sources: ['Pact of Truth'],
+    jobs: [
+      {
+        jobIndex: 1,
+        title: 'Job 1',
+        weapon: 'Staff',
+        element: 'Remedy',
+        statsMin: { hp: 349, atk: 19, def: 18, matk: 33, mdef: 25 },
+        statsMax: { hp: 3145, atk: 173, def: 166, matk: 297, mdef: 231 },
+        skills: [
+          { level: 1, id: 'remedy', name: 'Remedy', description: '', trigger: 'chain', frequency: 50 }
+        ],
+      }
+    ],
+  },
+
+  shaplar: {
+    id: 'shaplar',
+    name: "Sha'plar",
+    rarity: 'S',
+    species: 'Human',
+    gender: 'Female',
+    sources: ['Pact of Truth'],
+    jobs: [
+      {
+        jobIndex: 1,
+        title: 'Job 1',
+        weapon: 'Staff',
+        element: 'Darkness',
+        statsMin: { hp: 376, atk: 19, def: 22, matk: 38, mdef: 31 },
+        statsMax: { hp: 3384, atk: 173, def: 198, matk: 346, mdef: 286 },
+        skills: [
+          { level: 1, id: 'basic', name: 'Basic Attack', description: 'x1 weapon', trigger: 'pincer', frequency: 50 }
+        ],
+      }
+    ],
+  },
+
+  amimari: {
+    id: 'amimari',
+    name: 'Amimari',
+    rarity: 'SS',
+    species: 'Human',
+    gender: 'Female',
+    sources: ['Pact of Truth'],
+    jobs: [
+      {
+        jobIndex: 1,
+        title: 'Job 1',
+        weapon: 'Staff',
+        element: 'Healing',
+        statsMin: { hp: 443, atk: 29, def: 27, matk: 43, mdef: 37 },
+        statsMax: { hp: 3995, atk: 264, def: 247, matk: 387, mdef: 338 },
+        skills: [
+          { level: 1, id: 'basic', name: 'Basic Attack', description: 'x1 weapon', trigger: 'pincer', frequency: 50 }
+        ],
+      }
+    ],
+  },
+
+  jaguna: {
+    id: 'jaguna',
+    name: 'Jaguna',
+    rarity: 'B',
+    species: 'Beastfolk',
+    gender: 'Female',
+    sources: ['Pact of Truth'],
+    jobs: [
+      {
+        jobIndex: 1,
+        title: 'Job 1',
+        weapon: 'Sword',
+        element: '—',
+        statsMin: { hp: 296, atk: 22, def: 22, matk: 28, mdef: 22 },
+        statsMax: { hp: 2666, atk: 206, def: 198, matk: 255, mdef: 198 },
+        skills: [
+          { level: 1, id: 'basic', name: 'Basic Attack', description: 'x1 weapon', trigger: 'pincer', frequency: 50 }
+        ],
+      }
+    ],
+  },
+
+  paigan: {
+    id: 'paigan',
+    name: 'Paigan',
+    rarity: 'A',
+    species: 'Lizardfolk',
+    gender: 'Male',
+    sources: ['Pact of Truth'],
+    jobs: [
+      {
+        jobIndex: 1,
+        title: 'Job 1',
+        weapon: 'Spear',
+        element: 'Lightning',
+        statsMin: { hp: 344, atk: 28, def: 27, matk: 22, mdef: 20 },
+        statsMax: { hp: 3100, atk: 260, def: 250, matk: 200, mdef: 180 },
+        skills: [
+          { level: 1, id: 'basic', name: 'Basic Attack', description: 'x1 weapon', trigger: 'pincer', frequency: 50 }
+        ],
+      }
+    ],
+  },
+
+  ginnong: {
+    id: 'ginnong',
+    name: 'Ginnong',
+    rarity: 'S',
+    species: 'Beastfolk',
+    gender: 'Male',
+    sources: ['Pact of Truth'],
+    jobs: [
+      {
+        jobIndex: 1,
+        title: 'Job 1',
+        weapon: 'Bow',
+        element: '—',
+        statsMin: { hp: 377, atk: 33, def: 24, matk: 17, mdef: 16 },
+        statsMax: { hp: 3400, atk: 300, def: 220, matk: 160, mdef: 150 },
+        skills: [
+          { level: 1, id: 'basic', name: 'Basic Attack', description: 'x1 weapon', trigger: 'pincer', frequency: 50 }
+        ],
+      }
+    ],
+  },
+
+  arionne: {
+    id: 'arionne',
+    name: 'Arionne',
+    rarity: 'Z',
+    species: 'Human',
+    gender: 'Female',
+    sources: ['Pact of Truth'],
+    jobs: [
+      {
+        jobIndex: 1,
+        title: 'Job 1',
+        weapon: 'Staff',
+        element: 'Healing',
+        statsMin: { hp: 500, atk: 22, def: 24, matk: 44, mdef: 42 },
+        statsMax: { hp: 4500, atk: 200, def: 220, matk: 400, mdef: 380 },
+        skills: [
+          { level: 1, id: 'basic', name: 'Basic Attack', description: 'x1 weapon', trigger: 'pincer', frequency: 50 }
+        ],
+      }
+    ],
+  },
+
+  ashe: {
+    id: 'ashe',
+    name: 'Ashe',
+    rarity: 'Z',
+    species: 'Human',
+    gender: 'Female',
+    sources: ['Pact of Truth'],
+    jobs: [
+      {
+        jobIndex: 1,
+        title: 'Job 1',
+        weapon: 'Sword',
+        element: 'Fire',
+        statsMin: { hp: 466, atk: 42, def: 33, matk: 31, mdef: 27 },
+        statsMax: { hp: 4200, atk: 380, def: 300, matk: 280, mdef: 250 },
+        skills: [
+          { level: 1, id: 'basic', name: 'Basic Attack', description: 'x1 weapon', trigger: 'pincer', frequency: 50 }
+        ],
+      }
+    ],
+  },
+
+  dahlia: {
+    id: 'dahlia',
+    name: 'Dahlia',
+    rarity: 'Z',
+    species: 'Human',
+    gender: 'Female',
+    sources: ['Pact of Truth'],
+    jobs: [
+      {
+        jobIndex: 1,
+        title: 'Job 1',
+        weapon: 'Bow',
+        element: '—',
+        statsMin: { hp: 444, atk: 40, def: 31, matk: 22, mdef: 21 },
+        statsMax: { hp: 4000, atk: 360, def: 280, matk: 200, mdef: 190 },
+        skills: [
+          { level: 1, id: 'basic', name: 'Basic Attack', description: 'x1 weapon', trigger: 'pincer', frequency: 50 }
+        ],
+      }
+    ],
+  },
+
+  lio: {
+    id: 'lio',
+    name: 'Lio',
+    rarity: 'Z',
+    species: 'Human',
+    gender: 'Male',
+    sources: ['Pact of Truth'],
+    jobs: [
+      {
+        jobIndex: 1,
+        title: 'Job 1',
+        weapon: 'Spear',
+        element: 'Lightning',
+        statsMin: { hp: 477, atk: 38, def: 34, matk: 35, mdef: 32 },
+        statsMax: { hp: 4300, atk: 350, def: 310, matk: 320, mdef: 290 },
+        skills: [
+          { level: 1, id: 'basic', name: 'Basic Attack', description: 'x1 weapon', trigger: 'pincer', frequency: 50 }
+        ],
+      }
+    ],
+  },
+
+  marcus: {
+    id: 'marcus',
+    name: 'Marcus',
+    rarity: 'Z',
+    species: 'Human',
+    gender: 'Male',
+    sources: ['Pact of Truth'],
+    jobs: [
+      {
+        jobIndex: 1,
+        title: 'Job 1',
+        weapon: 'Sword',
+        element: '—',
+        statsMin: { hp: 488, atk: 43, def: 35, matk: 20, mdef: 18 },
+        statsMax: { hp: 4400, atk: 390, def: 320, matk: 180, mdef: 170 },
+        skills: [
+          { level: 1, id: 'basic', name: 'Basic Attack', description: 'x1 weapon', trigger: 'pincer', frequency: 50 }
+        ],
+      }
+    ],
+  },
+
+  mizell: {
+    id: 'mizell',
+    name: 'Mizell',
+    rarity: 'Z',
+    species: 'Human',
+    gender: 'Female',
+    sources: ['Pact of Truth'],
+    jobs: [
+      {
+        jobIndex: 1,
+        title: 'Job 1',
+        weapon: 'Staff',
+        element: 'Ice',
+        statsMin: { hp: 455, atk: 23, def: 25, matk: 42, mdef: 38 },
+        statsMax: { hp: 4100, atk: 210, def: 230, matk: 380, mdef: 350 },
+        skills: [
+          { level: 1, id: 'basic', name: 'Basic Attack', description: 'x1 weapon', trigger: 'pincer', frequency: 50 }
+        ],
+      }
+    ],
+  },
+
+  myne: {
+    id: 'myne',
+    name: 'Myne',
+    rarity: 'Z',
+    species: 'Human',
+    gender: 'Female',
+    sources: ['Pact of Truth'],
+    jobs: [
+      {
+        jobIndex: 1,
+        title: 'Job 1',
+        weapon: 'Bow',
+        element: 'Darkness',
+        statsMin: { hp: 450, atk: 39, def: 30, matk: 27, mdef: 26 },
+        statsMax: { hp: 4050, atk: 355, def: 270, matk: 250, mdef: 240 },
+        skills: [
+          { level: 1, id: 'basic', name: 'Basic Attack', description: 'x1 weapon', trigger: 'pincer', frequency: 50 }
+        ],
+      }
+    ],
+  },
+
+  rejin: {
+    id: 'rejin',
+    name: 'Rejin',
+    rarity: 'Z',
+    species: 'Human',
+    gender: 'Male',
+    sources: ['Pact of Truth'],
+    jobs: [
+      {
+        jobIndex: 1,
+        title: 'Job 1',
+        weapon: 'Sword',
+        element: 'Photon',
+        statsMin: { hp: 483, atk: 41, def: 33, matk: 33, mdef: 31 },
+        statsMax: { hp: 4350, atk: 370, def: 300, matk: 300, mdef: 280 },
+        skills: [
+          { level: 1, id: 'basic', name: 'Basic Attack', description: 'x1 weapon', trigger: 'pincer', frequency: 50 }
+        ],
+      }
     ],
   },
 

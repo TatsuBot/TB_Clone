@@ -14,8 +14,9 @@
         <span class="rank">Rank 12</span>
         <span class="spacer"></span>
         <span class="stat stamina"><span class="icon">S</span> 42/50</span>
-        <span class="stat energy"><span class="icon">E</span> 18</span>
-        <span class="stat coins"><span class="icon">¢</span> 24,500</span>
+        <span class="stat energy" id="stat-energy"><span class="icon">E</span> <span id="stat-energy-val">18</span></span>
+        <span class="stat coins" id="stat-coins"><span class="icon">¢</span> <span id="stat-coins-val">24,500</span></span>
+        <span class="stat stamina" id="stat-stamina"><span class="icon">S</span> <span id="stat-stamina-val">42</span></span>
       </div>
 
       <div id="ui-screens" class="ui-screens">
@@ -101,19 +102,25 @@
               <div class="pact-name">Pact of Truth</div>
               <div class="pact-cost">5 Energy</div>
               <div class="pact-rates">Rates: 4% Z · 10% SS · 15% S · 71% A/B<br />Duplicates grant Skill Boost</div>
-              <button class="ui-btn" type="button" disabled>Recruit (preview)</button>
+              <button class="ui-btn" type="button" data-pact="truth">Recruit</button>
             </div>
             <div class="pact-card">
               <div class="pact-name">Pact of Fellowship</div>
               <div class="pact-cost">3,000 Coins</div>
               <div class="pact-rates">Monsters and some adventurers</div>
-              <button class="ui-btn secondary" type="button" disabled>Recruit (preview)</button>
+              <button class="ui-btn secondary" type="button" data-pact="fellowship">Recruit</button>
             </div>
             <div class="pact-card">
               <div class="pact-name">Companions of Truth</div>
               <div class="pact-cost">3 Energy</div>
-              <div class="pact-rates">Companion pool (rarer)</div>
-              <button class="ui-btn secondary" type="button" disabled>Recruit (preview)</button>
+              <div class="pact-rates">Companion pool</div>
+              <button class="ui-btn secondary" type="button" data-pact="companions">Recruit</button>
+            </div>
+            <div id="pact-result" class="ui-card" style="margin-top:12px;display:none"></div>
+            <div class="ui-card" style="margin-top:12px">
+              <h3>Debug</h3>
+              <button class="ui-btn secondary" type="button" id="btn-add-energy">+1 Energy</button>
+              <button class="ui-btn secondary" type="button" id="btn-add-energy-10" style="margin-left:8px">+10 Energy</button>
             </div>
           </div>
           <div class="tavern-pane" data-pane="jobs" style="display:none">

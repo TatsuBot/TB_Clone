@@ -32,10 +32,13 @@ describe('enemy catalog', () => {
 });
 
 describe('chapter stages (wiki-backed early, generated later)', () => {
-  it('defines 10 stages for chapters 1–10', () => {
-    for (let c = 1; c <= 10; c++) {
-      expect(stagesForChapter(c), `chapter ${c}`).toHaveLength(10);
-    }
+  it('matches wiki subzone counts for chapters 1–7', () => {
+    expect(stagesForChapter(1)).toHaveLength(5);
+    expect(stagesForChapter(2)).toHaveLength(5);
+    expect(stagesForChapter(3)).toHaveLength(5);
+    expect(stagesForChapter(4)).toHaveLength(10);
+    expect(stagesForChapter(7)).toHaveLength(10);
+    expect(stagesForChapter(8)).toHaveLength(0);
   });
 
   it('1-1 has 3 battles (wiki Borderlands) and validates', () => {
@@ -59,6 +62,29 @@ describe('chapter stages (wiki-backed early, generated later)', () => {
     expect(validateStage(data)).toEqual([]);
   });
 
+  it('3-1 uses Lizardfolk from Melting Pot wiki', () => {
+    const data = loadStage(3, 1)!;
+    expect(data.waves).toHaveLength(5);
+    const names = data.waves.flat().map((p) => p.unit.name);
+    expect(names.some((n) => n.includes('Lizardfolk'))).toBe(true);
+    expect(validateStage(data)).toEqual([]);
+  });
+
+  it('4-10 final wave recruits Ba\'gunar boss', () => {
+    const data = loadStage(4, 10)!;
+    const last = data.waves[data.waves.length - 1];
+    expect(last.some((p) => p.unit.name === "Ba'gunar")).toBe(true);
+    expect(validateStage(data)).toEqual([]);
+  });
+
+  it('7-1 uses Mantle / Wyvern from Molten Menace', () => {
+    const data = loadStage(7, 1)!;
+    expect(data.waves.length).toBeGreaterThanOrEqual(4);
+    const names = new Set(data.waves.flat().map((p) => p.unit.name));
+    expect(names.has('Mantle Slime') || names.has('Wyvern')).toBe(true);
+    expect(validateStage(data)).toEqual([]);
+  });
+
   it('2-2 ends with 2x2 Orbling boss', () => {
     const data = loadStage(2, 2)!;
     const boss = data.waves[data.waves.length - 1].find((p) => p.unit.w === 2);
@@ -76,9 +102,10 @@ describe('chapter stages (wiki-backed early, generated later)', () => {
   });
 
   it('getStageRef looks up by chapter/stage', () => {
-    expect(getStageRef(1, 10)?.name).toBe('1.10 Borderlands');
-    expect(getStageRef(2, 10)?.name).toBe('2.10 To the Capital');
-    expect(getStageRef(10, 10)?.name).toBe('Stonefolk Keep');
-    expect(getStageRef(11, 1)).toBeUndefined();
+    expect(getStageRef(1, 5)?.name).toContain('Borderlands');
+    expect(getStageRef(1, 6)).toBeUndefined();
+    expect(getStageRef(2, 5)?.name).toContain('Capital');
+    expect(getStageRef(4, 10)?.name).toContain('Tower');
+    expect(getStageRef(8, 1)).toBeUndefined();
   });
 });
