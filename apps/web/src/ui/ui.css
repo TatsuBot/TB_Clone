@@ -301,3 +301,30 @@ body.battle-active #app { display: flex; }
 
 .empty-state { text-align: center; padding: 40px 20px; color: var(--ui-muted); }
 .empty-state .empty-icon { font-size: 40px; margin-bottom: 12px; opacity: 0.5; }
+
+.party-slots-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.party-slot {
+  background: var(--ui-card, #1e1e2e);
+  border: 1px dashed var(--ui-muted, #666);
+  border-radius: 10px;
+  padding: 10px 6px;
+  text-align: center;
+  font-size: 12px;
+  cursor: pointer;
+}
+.party-slot.filled { border-style: solid; border-color: var(--ui-accent, #7c3aed); }
+.party-slot .portrait { font-size: 28px; line-height: 1.2; }
+.roster-picks { display: flex; flex-wrap: wrap; gap: 6px; }
+.roster-pick {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 6px 10px; border-radius: 8px;
+  border: 1px solid var(--ui-muted, #555);
+  background: var(--ui-card, #1e1e2e); color: inherit; cursor: pointer; font-size: 12px;
+}
+.roster-pick.in-party { opacity: 0.45; }
+.roster-pick .portrait { font-size: 16px; }
+.char-card .portrait { font-size: 32px; text-align: center; margin-bottom: 4px; }
+.char-card.rarity-z { box-shadow: 0 0 0 2px #fbbf24; }
+.char-card.rarity-ss { box-shadow: 0 0 0 2px #c084fc; }
+.char-card.rarity-s { box-shadow: 0 0 0 2px #60a5fa; }
+.char-card.rarity-a { box-shadow: 0 0 0 1px #34d399; }

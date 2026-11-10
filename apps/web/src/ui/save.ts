@@ -8,6 +8,8 @@ import type { CharacterInstance, CompanionInstance } from '@game/core';
 import {
   ownedCharacters,
   ownedCompanions,
+  battlePartyUids,
+  setBattleParty,
 } from './inventory';
 import { progress, progressSnapshot, applyProgressSnapshot } from './progress';
 
@@ -19,6 +21,7 @@ export interface SaveGame {
   savedAt: string; // ISO
   characters: CharacterInstance[];
   companions: CompanionInstance[];
+  battleParty?: string[];
   /** Optional meta progress — expand later */
   meta?: {
     selectedChapter?: number;
@@ -40,6 +43,7 @@ export function buildSave(meta?: SaveGame['meta']): SaveGame {
     version: SAVE_VERSION,
     savedAt: new Date().toISOString(),
     characters: structuredClone(ownedCharacters),
+    battleParty: [...battlePartyUids],
     companions: structuredClone(ownedCompanions),
     meta: meta ?? {
       rank: snap.rank,
@@ -67,12 +71,20 @@ export function applySave(data: SaveGame): { ok: true } | { ok: false; error: st
 
   // Mutate arrays in place so existing references in UI keep working
   ownedCharacters.length = 0;
-  ownedCharacters.push(...data.characters);
+  ownedCharacters.push(
+    ...data.characters.map((c) => ({
+      ...c,
+      jobsUnlocked: c.jobsUnlocked ?? 1,
+    }))
+  );
 
   ownedCompanions.length = 0;
   ownedCompanions.push(...data.companions);
 
   applyProgressSnapshot(data.meta);
+  if (Array.isArray((data as { battleParty?: string[] }).battleParty)) {
+    setBattleParty((data as { battleParty: string[] }).battleParty);
+  }
 
   return { ok: true };
 }

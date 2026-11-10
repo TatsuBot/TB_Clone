@@ -1,30 +1,42 @@
+/**
+ * UI shell: navigation, tavern, party, pre-battle party select, companion equip.
+ */
+import { type ScreenId, SCREENS, CHAPTERS, stagesForChapter } from './screens';
 import {
-  type ScreenId,
-  SCREENS,
-  CHAPTERS,
-  stagesForChapter,
-} from './screens';
-import {
-  statsAtLevel,
-  frequencyAtLevel,
   charStatsAtLevel,
-  skillsUnlocked,
+  CHARACTERS,
+  stagesForChapter as coreStageRefs,
 } from '@game/core';
-import { stagesForChapter as coreStageRefs, getStageRef } from '@game/core';
 import {
   ownedCompanions,
   ownedCharacters,
   equipCompanion,
   companionByUid,
+  equippedBy,
+  companionStock,
   getCompanionDef,
   getCharacterDef,
-  type CharacterInstance,
+  characterIcon,
+  companionIcon,
+  battlePartyUids,
+  setBattleParty,
+  getBattleParty,
 } from './inventory';
 import { downloadSave, promptLoadSave, loadFromLocalStorage, saveToLocalStorage } from './save';
 import { isCleared, progress } from './progress';
 import { rollPact, addEnergy, type PactId } from './tavern';
+import {
+  unlockNextJob,
+  setActiveJob,
+  tryRecode,
+  buyShopItem,
+  seedJobMaterials,
+  jobUnlockCost,
+  type ShopItemId,
+} from './tavernJobs';
 
-/** Simple screen router + UI shell for the meta-game interfaces. */
+const APP_VERSION = '1.2';
+
 export class UI {
   private root: HTMLElement;
   private statusEl: HTMLElement;
@@ -44,10 +56,11 @@ export class UI {
     this.screensEl = document.getElementById('ui-screens')!;
     this.bindNav();
     this.bindTavern();
-    this.refreshStatusBar();
-    this.refreshStatusBar();
+    this.bindShop();
     this.bindGlobal();
     this.tryLoadAutosave();
+    this.refreshStatusBar();
+    this.stampVersion();
     this.show('title');
   }
 
@@ -61,116 +74,30 @@ export class UI {
 
   show(id: ScreenId): void {
     this.current = id;
-    const meta = SCREENS[id];
-    this.pickingCompanion = false;
-
-    this.statusEl.style.display = meta.showStatusBar ? 'flex' : 'none';
-    this.navEl.style.display = meta.showBottomNav ? 'flex' : 'none';
-
-    this.navEl.querySelectorAll('button').forEach((btn) => {
-      btn.classList.toggle('active', btn.dataset.screen === id || this.navMatch(id, btn.dataset.screen));
-    });
-
+    const conf = SCREENS[id];
+    this.statusEl.style.display = conf?.showStatusBar ? '' : 'none';
+    this.navEl.style.display = conf?.showBottomNav ? '' : 'none';
     this.screensEl.querySelectorAll('.ui-screen').forEach((el) => {
-      el.classList.toggle('active', el.id === `screen-${id}`);
+      (el as HTMLElement).style.display = el.id === `screen-${id}` ? '' : 'none';
     });
-
     this.renderScreen(id);
-    document.body.classList.toggle('battle-active', id === 'battle');
+    this.refreshStatusBar();
   }
 
-  private navMatch(current: ScreenId, tab?: string): boolean {
-    if (!tab) return false;
-    if (tab === 'map' && (current === 'stage-select' || current === 'pre-battle')) return true;
-    if (tab === 'tavern' && (current === 'recruit' || current === 'shop')) return true;
-    if (tab === 'party' && current === 'character-detail') return true;
-    return false;
-  }
-
-  private bindNav(): void {
-    this.navEl.querySelectorAll('button[data-screen]').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const target = (btn as HTMLElement).dataset.screen as ScreenId;
-        if (target) this.show(target);
-      });
+  private stampVersion(): void {
+    document.querySelectorAll('.version').forEach((el) => {
+      el.textContent = `v${APP_VERSION}`;
     });
-  }
-
-  private bindGlobal(): void {
-    document.getElementById('btn-start')?.addEventListener('click', () => this.show('hub'));
-
-    document.querySelectorAll('[data-goto]').forEach((el) => {
-      el.addEventListener('click', () => {
-        const target = (el as HTMLElement).dataset.goto as ScreenId;
-        if (target) this.show(target);
-      });
-    });
-
-    document.querySelectorAll('[data-back]').forEach((el) => {
-      el.addEventListener('click', () => {
-        const target = (el as HTMLElement).dataset.back as ScreenId;
-        if (target) this.show(target);
-      });
-    });
-
-    document.querySelectorAll('.tavern-tabs button').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const target = (btn as HTMLElement).dataset.tavern as string;
-        document.querySelectorAll('.tavern-tabs button').forEach((b) => b.classList.remove('active'));
-        btn.classList.add('active');
-        document.querySelectorAll('.tavern-pane').forEach((p) => {
-          (p as HTMLElement).style.display = (p as HTMLElement).dataset.pane === target ? 'block' : 'none';
-        });
-      });
-    });
-
-    document.getElementById('btn-start-battle')?.addEventListener('click', () => {
-      this.show('battle');
-      this.onEnterBattle?.();
-    });
-
-    document.getElementById('btn-results-continue')?.addEventListener('click', () => this.show('map'));
-
-    document.querySelectorAll('.toggle').forEach((el) => {
-      el.addEventListener('click', () => el.classList.toggle('on'));
-    });
-
-    document.getElementById('btn-save-game')?.addEventListener('click', () => {
-      downloadSave();
-      this.setSaveStatus('Saved — file downloaded and stored locally.');
-    });
-
-    document.getElementById('btn-load-game')?.addEventListener('click', async () => {
-      const result = await promptLoadSave();
-      if (result.ok) {
-        this.setSaveStatus('Loaded save file.');
-        // refresh any open views that depend on inventory
-        if (this.current === 'party' || this.current === 'character-detail' || this.current === 'pre-battle') {
-          this.renderScreen(this.current);
-        }
-      } else {
-        this.setSaveStatus(result.error);
-      }
-    });
-
-    document.getElementById('btn-continue')?.addEventListener('click', () => {
-      this.show('hub');
-    });
-  }
-
-  private tryLoadAutosave(): void {
-    const result = loadFromLocalStorage();
-    const cont = document.getElementById('btn-continue');
-    if (result.ok && cont) {
-      cont.style.display = 'block';
+    let badge = document.getElementById('app-version-badge');
+    if (!badge) {
+      badge = document.createElement('div');
+      badge.id = 'app-version-badge';
+      badge.style.cssText =
+        'position:fixed;bottom:4px;right:8px;font-size:11px;opacity:0.55;pointer-events:none;z-index:99';
+      document.body.appendChild(badge);
     }
+    badge.textContent = `v${APP_VERSION}`;
   }
-
-  private setSaveStatus(msg: string): void {
-    const el = document.getElementById('save-status');
-    if (el) el.textContent = msg;
-  }
-
 
   private refreshStatusBar(): void {
     const e = document.getElementById('stat-energy-val');
@@ -181,6 +108,70 @@ export class UI {
     if (s) s.textContent = String(progress.stamina);
   }
 
+  private bindNav(): void {
+    document.querySelectorAll('[data-screen]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const id = (btn as HTMLElement).dataset.screen as ScreenId;
+        if (id) this.show(id);
+      });
+    });
+    document.querySelectorAll('[data-back]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const id = (btn as HTMLElement).dataset.back as ScreenId;
+        if (id) this.show(id);
+      });
+    });
+    document.getElementById('btn-start')?.addEventListener('click', () => this.show('hub'));
+    document.querySelectorAll('.tavern-tabs button').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const target = (btn as HTMLElement).dataset.tavern as string;
+        document.querySelectorAll('.tavern-tabs button').forEach((b) => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.querySelectorAll('.tavern-pane').forEach((p) => {
+          const pane = p as HTMLElement;
+          pane.style.display = pane.dataset.pane === target ? '' : 'none';
+        });
+        if (target === 'jobs') this.renderJobUnlockList();
+        if (target === 'recode') this.renderRecodeList();
+      });
+    });
+  }
+
+  private bindGlobal(): void {
+    document.getElementById('btn-enter-battle')?.addEventListener('click', () => {
+      this.onEnterBattle?.();
+      // Hide meta UI — battle canvas lives outside
+      this.root.style.display = 'none';
+    });
+    document.getElementById('btn-save')?.addEventListener('click', () => {
+      downloadSave();
+      this.setSaveStatus('Save downloaded');
+    });
+    document.getElementById('btn-load')?.addEventListener('click', () => {
+      promptLoadSave(() => {
+        this.setSaveStatus('Save loaded');
+        this.refreshStatusBar();
+        this.show(this.current);
+      });
+    });
+  }
+
+  private setSaveStatus(msg: string): void {
+    const el = document.getElementById('save-status');
+    if (el) el.textContent = msg;
+  }
+
+  private tryLoadAutosave(): void {
+    const r = loadFromLocalStorage();
+    if (r.ok) {
+      const cont = document.getElementById('btn-continue');
+      if (cont) {
+        cont.style.display = '';
+        cont.onclick = () => this.show('hub');
+      }
+    }
+  }
+
   private bindTavern(): void {
     document.querySelectorAll('[data-pact]').forEach((btn) => {
       btn.addEventListener('click', () => {
@@ -189,12 +180,9 @@ export class UI {
         const box = document.getElementById('pact-result');
         if (box) {
           box.style.display = 'block';
-          if (!result.ok) {
-            box.innerHTML = `<p style="color:#f87171">${result.error}</p>`;
-          } else {
-            box.innerHTML = `<p><strong>${result.message}</strong></p>
-              <p class="meta">${result.rarity} · ${result.kind}${result.duplicate ? ' · duplicate' : ''}</p>`;
-          }
+          box.innerHTML = result.ok
+            ? `<p><strong>${result.message}</strong></p>`
+            : `<p style="color:#f87171">${result.error}</p>`;
         }
         this.refreshStatusBar();
       });
@@ -209,12 +197,39 @@ export class UI {
     });
   }
 
+  private bindShop(): void {
+    document.querySelectorAll('.shop-buy').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const id = (btn as HTMLElement).dataset.shop as ShopItemId;
+        const r = buyShopItem(id);
+        const box = document.getElementById('shop-status');
+        if (box) {
+          box.style.display = 'block';
+          box.innerHTML = `<p style="color:${r.ok ? '#86efac' : '#f87171'}">${r.ok ? r.message : r.error}</p>`;
+        }
+        this.refreshStatusBar();
+      });
+    });
+    document.getElementById('btn-seed-mats')?.addEventListener('click', () => {
+      seedJobMaterials();
+      const box = document.getElementById('job-unlock-status');
+      if (box) {
+        box.style.display = 'block';
+        box.innerHTML = '<p style="color:#86efac">Granted job materials</p>';
+      }
+    });
+  }
+
   private renderScreen(id: ScreenId): void {
     if (id === 'map') this.renderMap();
     if (id === 'stage-select') this.renderStageSelect();
     if (id === 'pre-battle') this.renderPreBattle();
     if (id === 'party') this.renderParty();
     if (id === 'character-detail') this.renderCharacterDetail();
+    if (id === 'tavern') {
+      this.renderJobUnlockList();
+      this.renderRecodeList();
+    }
   }
 
   private renderMap(): void {
@@ -227,8 +242,7 @@ export class UI {
           ? '<span class="ui-badge cleared">Cleared</span>'
           : '<span class="ui-badge new">New</span>';
       return `
-        <div class="chapter-card ${ch.unlocked ? '' : 'locked'} ${ch.cleared ? 'cleared' : ''}"
-             data-chapter="${ch.id}">
+        <div class="chapter-card ${ch.unlocked ? '' : 'locked'}" data-chapter="${ch.id}">
           <div class="chapter-num">${ch.id}</div>
           <div class="chapter-info">
             <div class="name">Chapter ${ch.id}: ${ch.title}</div>
@@ -236,7 +250,6 @@ export class UI {
           </div>
         </div>`;
     }).join('');
-
     list.querySelectorAll('.chapter-card:not(.locked)').forEach((card) => {
       card.addEventListener('click', () => {
         this.selectedChapter = Number((card as HTMLElement).dataset.chapter);
@@ -251,7 +264,6 @@ export class UI {
     if (!header || !list) return;
     const ch = CHAPTERS.find((c) => c.id === this.selectedChapter);
     header.textContent = ch ? `Chapter ${ch.id}: ${ch.title}` : 'Stages';
-
     const core = coreStageRefs(this.selectedChapter);
     const stages =
       core.length > 0
@@ -260,30 +272,21 @@ export class UI {
             name: s.name,
             stamina: s.stamina,
             difficulty: s.difficulty,
-            waves: s.waves.length,
             cleared: isCleared(s.id),
           }))
         : stagesForChapter(this.selectedChapter);
-
     list.innerHTML = stages
-      .map((s) => {
-        const stars = '★'.repeat(s.difficulty) + '☆'.repeat(5 - s.difficulty);
-        return `
-        <div class="stage-row ${s.cleared ? 'cleared' : ''}" data-stage="${s.id}">
-          <div class="stage-num">${s.id}</div>
-          <div class="stage-info">
-            <div class="name">${s.name}</div>
-            <div class="meta">
-              <span>⚡ ${s.stamina}</span>
-              <span>${s.waves} waves</span>
-              <span class="stage-stars">${stars}</span>
-            </div>
-          </div>
-          ${s.cleared ? '<span class="ui-badge cleared">✓</span>' : ''}
-        </div>`;
-      })
+      .map(
+        (s) => `
+      <div class="stage-row ${s.cleared ? 'cleared' : ''}" data-stage="${s.id}">
+        <div class="stage-id">${this.selectedChapter}-${s.id}</div>
+        <div class="stage-body">
+          <div class="name">${s.name}</div>
+          <div class="meta">⚡ ${s.stamina} · ${'★'.repeat(s.difficulty)}${s.cleared ? ' · Cleared' : ''}</div>
+        </div>
+      </div>`
+      )
       .join('');
-
     list.querySelectorAll('.stage-row').forEach((row) => {
       row.addEventListener('click', () => {
         this.selectedStage = Number((row as HTMLElement).dataset.stage);
@@ -292,241 +295,286 @@ export class UI {
     });
   }
 
+  /** Pre-battle: pick up to 6 party members, then start. */
   private renderPreBattle(): void {
     const info = document.getElementById('prebattle-stage-info');
     const slots = document.getElementById('party-slots');
     if (!info || !slots) return;
 
-    const ref = getStageRef(this.selectedChapter, this.selectedStage);
-    const fallback = stagesForChapter(this.selectedChapter).find((s) => s.id === this.selectedStage);
-    const name = ref?.name ?? fallback?.name ?? 'Stage';
-    const stamina = ref?.stamina ?? fallback?.stamina ?? 5;
-    const waves = ref?.waves.length ?? fallback?.waves ?? 3;
-    const difficulty = ref?.difficulty ?? fallback?.difficulty ?? 1;
-    info.innerHTML = `
-      <h3>${name}</h3>
-      <div class="cost">
-        <span>⚡ Stamina ${stamina}</span>
-        <span>${waves} waves</span>
-        <span class="stage-stars">${'★'.repeat(difficulty)}</span>
-      </div>`;
+    const core = coreStageRefs(this.selectedChapter);
+    const stage =
+      core.find((s) => s.stage === this.selectedStage) ??
+      stagesForChapter(this.selectedChapter).find((s) => s.id === this.selectedStage);
 
-    // Show first 6 owned characters as the squad
-    slots.innerHTML = ownedCharacters.slice(0, 6)
-      .map((inst) => {
-        const def = getCharacterDef(inst);
-        if (!def) return '';
-        const job = def.jobs[inst.activeJob - 1];
-        const lv = inst.jobLevels[inst.activeJob - 1];
-        return `
-      <div class="party-slot filled">
-        <div class="portrait">${weaponEmoji(job.weapon)}</div>
-        <div>${def.name}</div>
-        <div class="lvl">Lv.${lv}</div>
-      </div>`;
+    info.innerHTML = `
+      <h3>${stage && 'name' in stage ? stage.name : 'Stage'}</h3>
+      <div class="cost">
+        <span>⚡ Stamina ${stage && 'stamina' in stage ? stage.stamina : 5}</span>
+        <span class="stage-stars">${'★'.repeat(stage && 'difficulty' in stage ? stage.difficulty : 1)}</span>
+      </div>
+      <p style="font-size:12px;color:var(--ui-muted);margin-top:8px">Tap roster below to fill 6 slots. Tap a slot to remove.</p>`;
+
+    const party = getBattleParty();
+    const slotHtml = [0, 1, 2, 3, 4, 5]
+      .map((i) => {
+        const ch = party[i];
+        if (!ch) {
+          return `<div class="party-slot empty" data-slot="${i}"><div class="portrait">+</div><div>Empty</div></div>`;
+        }
+        const def = getCharacterDef(ch);
+        return `<div class="party-slot filled" data-slot="${i}" data-uid="${ch.uid}">
+          <div class="portrait">${characterIcon(ch.defId)}</div>
+          <div>${def?.name ?? ch.defId}</div>
+          <div class="lvl">J${ch.activeJob} Lv.${ch.jobLevels[ch.activeJob - 1]}</div>
+        </div>`;
       })
       .join('');
+
+    const rosterHtml = ownedCharacters
+      .map((ch) => {
+        const def = getCharacterDef(ch);
+        const inParty = battlePartyUids.includes(ch.uid);
+        return `<button type="button" class="roster-pick ${inParty ? 'in-party' : ''}" data-uid="${ch.uid}" ${
+          inParty || battlePartyUids.length >= 6 ? (inParty ? '' : 'disabled') : ''
+        }>
+          <span class="portrait">${characterIcon(ch.defId)}</span>
+          <span>${def?.name ?? ch.defId}</span>
+        </button>`;
+      })
+      .join('');
+
+    slots.innerHTML = `
+      <div class="party-slots-row">${slotHtml}</div>
+      <h4 style="margin:12px 0 6px;font-size:13px;color:var(--ui-muted)">Roster</h4>
+      <div class="roster-picks">${rosterHtml}</div>`;
+
+    slots.querySelectorAll('.party-slot.filled').forEach((el) => {
+      el.addEventListener('click', () => {
+        const uid = (el as HTMLElement).dataset.uid!;
+        setBattleParty(battlePartyUids.filter((u) => u !== uid));
+        this.renderPreBattle();
+      });
+    });
+    slots.querySelectorAll('.roster-pick:not([disabled])').forEach((el) => {
+      el.addEventListener('click', () => {
+        const uid = (el as HTMLElement).dataset.uid!;
+        if (battlePartyUids.includes(uid)) return;
+        if (battlePartyUids.length >= 6) return;
+        setBattleParty([...battlePartyUids, uid]);
+        this.renderPreBattle();
+      });
+    });
   }
 
   private renderParty(): void {
     const grid = document.getElementById('char-grid');
     if (!grid) return;
     grid.innerHTML = ownedCharacters
-      .map((inst) => {
-        const def = getCharacterDef(inst);
-        if (!def) return '';
-        const job = def.jobs[inst.activeJob - 1];
-        const lv = inst.jobLevels[inst.activeJob - 1];
+      .map((ch) => {
+        const def = getCharacterDef(ch);
+        const r = def?.rarity ?? 'B';
+        const job = def?.jobs.find((j) => j.jobIndex === ch.activeJob) ?? def?.jobs[0];
+        const lv = ch.jobLevels[(ch.activeJob - 1) as 0 | 1 | 2];
+        const comp = companionByUid(ch.companionUid);
+        const compDef = comp ? getCompanionDef(comp) : null;
         return `
-      <div class="char-card rarity-${def.rarity.toLowerCase()}" data-uid="${inst.uid}">
-        <div class="portrait">${weaponEmoji(job.weapon)}</div>
-        <div class="cname">${def.name}</div>
-        <div class="cmeta">${def.rarity} · Lv.${lv}</div>
-      </div>`;
+        <div class="char-card rarity-${r.toLowerCase()}" data-uid="${ch.uid}">
+          <div class="portrait">${characterIcon(ch.defId)}</div>
+          <div class="cname">${def?.name ?? ch.defId}</div>
+          <div class="cmeta">${r} · J${ch.activeJob} Lv.${lv}</div>
+          <div class="cmeta">${compDef ? companionIcon(comp.defId) + ' ' + compDef.name : 'No companion'}</div>
+        </div>`;
       })
       .join('');
-
     grid.querySelectorAll('.char-card').forEach((card) => {
       card.addEventListener('click', () => {
         this.selectedCharUid = (card as HTMLElement).dataset.uid ?? null;
+        this.pickingCompanion = false;
         this.show('character-detail');
       });
     });
   }
 
   private renderCharacterDetail(): void {
-    const inst = this.selectedCharUid
-      ? ownedCharacters.find((c) => c.uid === this.selectedCharUid)
-      : ownedCharacters[0];
-    if (!inst) return;
-    const def = getCharacterDef(inst);
-    if (!def) return;
+    const ch =
+      ownedCharacters.find((c) => c.uid === this.selectedCharUid) ?? ownedCharacters[0];
+    if (!ch) return;
+    this.selectedCharUid = ch.uid;
+    const def = getCharacterDef(ch);
+    const job = def?.jobs.find((j) => j.jobIndex === ch.activeJob) ?? def?.jobs[0];
+    const lv = ch.jobLevels[(ch.activeJob - 1) as 0 | 1 | 2];
+    const stats = job ? charStatsAtLevel(job, lv) : null;
 
-    const job = def.jobs[inst.activeJob - 1];
-    const lv = inst.jobLevels[inst.activeJob - 1];
-    const stats = charStatsAtLevel(job, lv);
-    const unlocked = skillsUnlocked(job, lv);
+    const nameEl = document.querySelector('#screen-character-detail .detail-name');
+    const rareEl = document.querySelector('#screen-character-detail .detail-rarity');
+    const port = document.querySelector('#screen-character-detail .detail-portrait');
+    if (nameEl) nameEl.textContent = def?.name ?? ch.defId;
+    if (rareEl) rareEl.textContent = `${def?.rarity ?? '?'} · ${job?.title ?? ''} · Lv.${lv}`;
+    if (port) port.textContent = characterIcon(ch.defId);
 
-    // Header / portrait / name
-    const portrait = document.querySelector('#screen-character-detail .detail-portrait');
-    if (portrait) portrait.textContent = weaponEmoji(job.weapon);
-
-    const nameBlock = document.querySelector('#screen-character-detail .detail-portrait')?.nextElementSibling;
-    if (nameBlock) {
-      nameBlock.innerHTML = `
-        <div style="font-size:20px;font-weight:700">${def.name}</div>
-        <div style="font-size:13px;color:var(--ui-muted)">${def.rarity} · ${job.weapon} · ${job.element} · Lv.${lv} · Job ${inst.activeJob}</div>
-        <div style="font-size:12px;color:var(--ui-muted);margin-top:4px">${job.title}</div>`;
+    const boxes = document.querySelectorAll('#screen-character-detail .stat-box .value');
+    if (stats && boxes.length >= 4) {
+      boxes[0].textContent = String(stats.hp);
+      boxes[1].textContent = String(stats.atk);
+      boxes[2].textContent = String(stats.def);
+      boxes[3].textContent = String(stats.matk);
     }
 
-    // Stats
-    const statBoxes = document.querySelectorAll('#screen-character-detail .detail-stats .stat-box .value');
-    if (statBoxes.length >= 4) {
-      statBoxes[0].textContent = stats.hp.toLocaleString();
-      statBoxes[1].textContent = String(stats.atk);
-      statBoxes[2].textContent = String(stats.def);
-      statBoxes[3].textContent = String(stats.matk);
-    }
-
-    // Job tabs
-    const jobTabs = document.querySelector('#screen-character-detail .job-tabs');
-    if (jobTabs) {
-      jobTabs.innerHTML = def.jobs
-        .map(
-          (j) =>
-            `<button type="button" class="${j.jobIndex === inst.activeJob ? 'active' : ''}" data-job="${j.jobIndex}" ${
-              j.jobIndex > 1 && inst.jobLevels[j.jobIndex - 1] <= 1 && j.jobIndex !== inst.activeJob ? '' : ''
-            }>Job ${j.jobIndex}</button>`
-        )
-        .join('');
-      jobTabs.querySelectorAll('button').forEach((btn) => {
-        btn.addEventListener('click', () => {
-          const j = Number((btn as HTMLElement).dataset.job) as 1 | 2 | 3;
-          if (def.jobs.some((x) => x.jobIndex === j)) {
-            inst.activeJob = j;
-            this.renderCharacterDetail();
-          }
-        });
-      });
-    }
-
-    // Skills
-    const skillList = document.querySelector('#screen-character-detail .skill-list');
-    if (skillList) {
-      const allSkills = job.skills;
-      skillList.innerHTML = allSkills
-        .map((s) => {
-          const open = lv >= s.level;
-          return `<div class="skill-row" style="${open ? '' : 'opacity:0.45'}">
-            <div class="sk-name">${open ? s.name : '— locked —'}</div>
-            <div class="sk-meta">${open ? `${s.trigger} · ${s.description}` : `Unlocks at Job Lv.${s.level}`}</div>
-          </div>`;
-        })
-        .join('');
-    }
-
-    this.renderCompanionSlot(inst);
-  }
-
-  private renderCompanionSlot(inst: CharacterInstance): void {
-    const el = document.getElementById('companion-slot-content');
-    if (!el) return;
-
-    if (this.pickingCompanion) {
-      // Picker list
-      const equippedUid = inst.companionUid;
-      el.innerHTML = `
-        <div style="font-size:13px;color:var(--ui-muted);margin-bottom:8px">Select a companion to equip</div>
-        <div style="display:flex;flex-direction:column;gap:6px;max-height:240px;overflow-y:auto">
-          <button class="ui-btn ghost" data-equip="" type="button" style="justify-content:flex-start;padding:10px 12px;font-size:13px">
-            — Unequip —
-          </button>
-          ${ownedCompanions
-            .map((c) => {
-              const cdef = getCompanionDef(c);
-              if (!cdef || cdef.skill.id === 'none') return ''; // skip pure EXP fodder in equip list
-              const stats = statsAtLevel(cdef, c.level);
-              const freq = frequencyAtLevel(cdef, c.level);
-              const bonus = [stats.atk && `ATK +${stats.atk}`, stats.def && `DEF +${stats.def}`, stats.matk && `MATK +${stats.matk}`, stats.mdef && `MDEF +${stats.mdef}`]
-                .filter(Boolean)
-                .join(' · ');
-              const selected = c.uid === equippedUid;
-              return `
-              <button class="ui-btn ${selected ? '' : 'secondary'}" data-equip="${c.uid}" type="button"
-                style="justify-content:flex-start;padding:10px 12px;font-size:13px;text-align:left">
-                <span style="font-weight:600">${cdef.name}</span>
-                <span style="color:var(--ui-muted);margin-left:6px">Lv.${c.level} · ${bonus || '—'} · ${freq.toFixed(0)}%</span>
-              </button>`;
-            })
-            .join('')}
+    const eq = document.getElementById('equipped-companion');
+    const comp = companionByUid(ch.companionUid);
+    const compDef = comp ? getCompanionDef(comp) : null;
+    if (eq) {
+      eq.innerHTML = `
+        <h3 style="margin:0 0 8px;font-size:14px;color:var(--ui-muted)">Equipped Companion</h3>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+          <div class="portrait" style="font-size:28px">${compDef ? companionIcon(comp!.defId) : '—'}</div>
+          <div>
+            <div><strong>${compDef?.name ?? 'None'}</strong></div>
+            <div class="meta" style="font-size:12px;color:var(--ui-muted)">${
+              comp ? `Lv.${comp.level} · ${compDef?.rarity}` : 'Empty slot'
+            }</div>
+          </div>
         </div>
-        <button class="ui-btn secondary" id="btn-cancel-pick" type="button" style="margin-top:10px;width:100%;padding:8px;font-size:13px">Cancel</button>
-      `;
+        <button type="button" class="ui-btn secondary" id="btn-pick-companion">${
+          this.pickingCompanion ? 'Close picker' : 'Equip companion'
+        }</button>
+        ${comp ? `<button type="button" class="ui-btn secondary" id="btn-unequip-companion" style="margin-left:8px">Unequip</button>` : ''}
+        <div id="companion-picker" style="margin-top:12px;${this.pickingCompanion ? '' : 'display:none'}"></div>`;
 
-      el.querySelectorAll('[data-equip]').forEach((btn) => {
-        btn.addEventListener('click', () => {
-          const uid = (btn as HTMLElement).dataset.equip || undefined;
-          equipCompanion(inst.uid, uid || undefined);
-          this.pickingCompanion = false;
-          this.renderCharacterDetail();
-        });
+      document.getElementById('btn-pick-companion')?.addEventListener('click', () => {
+        this.pickingCompanion = !this.pickingCompanion;
+        this.renderCharacterDetail();
       });
-      document.getElementById('btn-cancel-pick')?.addEventListener('click', () => {
+      document.getElementById('btn-unequip-companion')?.addEventListener('click', () => {
+        equipCompanion(ch.uid, undefined);
         this.pickingCompanion = false;
         this.renderCharacterDetail();
       });
-      return;
-    }
 
-    // Equipped view
-    const cInst = companionByUid(inst.companionUid);
-    if (!cInst) {
-      el.innerHTML = `
-        <div style="color:var(--ui-muted);font-size:13px;margin-bottom:8px">No companion equipped</div>
-        <button class="ui-btn secondary" id="btn-change-companion" type="button" style="width:100%;padding:8px;font-size:13px">Equip Companion</button>
-      `;
-    } else {
-      const cdef = getCompanionDef(cInst)!;
-      const stats = statsAtLevel(cdef, cInst.level);
-      const freq = frequencyAtLevel(cdef, cInst.level);
-      const bonus = [stats.atk && `ATK +${stats.atk}`, stats.def && `DEF +${stats.def}`, stats.matk && `MATK +${stats.matk}`, stats.mdef && `MDEF +${stats.mdef}`]
-        .filter(Boolean)
-        .join(' · ');
-      el.innerHTML = `
-        <div style="display:flex;align-items:center;gap:12px">
-          <div style="width:48px;height:48px;border-radius:10px;background:var(--ui-panel-2);display:flex;align-items:center;justify-content:center;font-size:22px">${companionEmoji(cdef.id)}</div>
-          <div style="flex:1">
-            <div style="font-weight:600">${cdef.name} <span style="color:var(--ui-muted);font-weight:400">Lv.${cInst.level}/${cdef.maxLevel}</span></div>
-            <div style="font-size:12px;color:var(--ui-muted);margin-top:2px">${cdef.rarity} · ${bonus || '—'} · Skill ${freq.toFixed(0)}%</div>
-            <div style="font-size:12px;margin-top:4px">${cdef.skill.name}: ${cdef.skill.description}</div>
-          </div>
-        </div>
-        <button class="ui-btn secondary" id="btn-change-companion" type="button" style="margin-top:10px;width:100%;padding:8px;font-size:13px">Change Companion</button>
-      `;
+      if (this.pickingCompanion) {
+        const picker = document.getElementById('companion-picker');
+        if (picker) {
+          const stock = companionStock();
+          picker.innerHTML = stock
+            .map((row) => {
+              const freeInst = row.instances.find((i) => !equippedBy(i.uid));
+              const disabled = !freeInst;
+              const holder = row.instances
+                .map((i) => {
+                  const who = equippedBy(i.uid);
+                  return who ? getCharacterDef(who)?.name ?? '?' : 'free';
+                })
+                .join(', ');
+              return `<div class="ui-card" style="margin-bottom:8px;opacity:${disabled ? 0.5 : 1}">
+                <div style="display:flex;align-items:center;gap:8px">
+                  <span style="font-size:22px">${companionIcon(row.defId)}</span>
+                  <div style="flex:1">
+                    <strong>${row.name}</strong> · ${row.rarity}
+                    <div class="meta" style="font-size:11px;color:var(--ui-muted)">Owned ${row.total} · Free ${row.free} · ${holder}</div>
+                  </div>
+                  <button type="button" class="ui-btn secondary pick-comp" data-cuid="${freeInst?.uid ?? ''}" ${
+                    disabled ? 'disabled' : ''
+                  }>Equip</button>
+                </div>
+              </div>`;
+            })
+            .join('');
+          picker.querySelectorAll('.pick-comp').forEach((btn) => {
+            btn.addEventListener('click', () => {
+              const cuid = (btn as HTMLElement).dataset.cuid;
+              if (!cuid) return;
+              const r = equipCompanion(ch.uid, cuid);
+              if (!r.ok) alert(r.error);
+              this.pickingCompanion = false;
+              this.renderCharacterDetail();
+            });
+          });
+        }
+      }
     }
+  }
 
-    document.getElementById('btn-change-companion')?.addEventListener('click', () => {
-      this.pickingCompanion = true;
-      this.renderCompanionSlot(inst);
+  private showTavernStatus(id: string, msg: string, ok: boolean): void {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.style.display = 'block';
+    el.innerHTML = `<p style="color:${ok ? '#86efac' : '#f87171'}">${msg}</p>`;
+  }
+
+  private renderJobUnlockList(): void {
+    const list = document.getElementById('job-unlock-list');
+    if (!list) return;
+    list.innerHTML = ownedCharacters
+      .map((ch) => {
+        const def = CHARACTERS[ch.defId];
+        if (!def) return '';
+        const unlocked = ch.jobsUnlocked ?? 1;
+        const next =
+          unlocked < 3 && def.jobs.some((j) => j.jobIndex === unlocked + 1) ? unlocked + 1 : null;
+        let costLine = next
+          ? (() => {
+              const c = jobUnlockCost(def.rarity, next as 2 | 3);
+              return `Job ${next}: ${c.coins}¢ + ${c.items.map((i) => `${i.itemId}×${i.qty}`).join(', ')}`;
+            })()
+          : 'Max jobs unlocked / no further jobs in data';
+        const jobBtns = def.jobs
+          .map((j) => {
+            const open = j.jobIndex <= unlocked;
+            const active = ch.activeJob === j.jobIndex;
+            return `<button type="button" class="ui-btn secondary job-set" data-uid="${ch.uid}" data-job="${j.jobIndex}" ${
+              open ? '' : 'disabled'
+            } style="${active ? 'outline:2px solid var(--ui-accent)' : ''}">${characterIcon(ch.defId)} J${j.jobIndex}</button>`;
+          })
+          .join(' ');
+        return `<div class="ui-card" style="margin-bottom:10px">
+          <div><span style="font-size:20px">${characterIcon(ch.defId)}</span> <strong>${def.name}</strong> · Job ${unlocked}</div>
+          <div class="meta" style="font-size:12px;color:var(--ui-muted);margin:6px 0">${costLine}</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px">${jobBtns}</div>
+          ${next ? `<button type="button" class="ui-btn job-unlock" data-uid="${ch.uid}">Unlock Job ${next}</button>` : ''}
+        </div>`;
+      })
+      .join('');
+    list.querySelectorAll('.job-unlock').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const r = unlockNextJob((btn as HTMLElement).dataset.uid!);
+        this.showTavernStatus('job-unlock-status', r.ok ? r.message : r.error, r.ok);
+        this.refreshStatusBar();
+        this.renderJobUnlockList();
+      });
+    });
+    list.querySelectorAll('.job-set').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const r = setActiveJob(
+          (btn as HTMLElement).dataset.uid!,
+          Number((btn as HTMLElement).dataset.job) as 1 | 2 | 3
+        );
+        this.showTavernStatus('job-unlock-status', r.ok ? r.message : r.error, r.ok);
+        this.renderJobUnlockList();
+      });
     });
   }
-}
 
-function weaponEmoji(w: string): string {
-  switch (w) {
-    case 'Sword': return '⚔️';
-    case 'Bow': return '🏹';
-    case 'Spear': return '🔱';
-    case 'Staff': return '🔮';
-    default: return '👤';
+  private renderRecodeList(): void {
+    const list = document.getElementById('recode-list');
+    if (!list) return;
+    list.innerHTML = ownedCharacters
+      .map((ch) => {
+        const def = CHARACTERS[ch.defId];
+        if (!def) return '';
+        const ready = (ch.jobsUnlocked ?? 1) >= 3 && ch.jobLevels.every((lv) => lv >= 50);
+        return `<div class="ui-card" style="margin-bottom:10px">
+          <div>${characterIcon(ch.defId)} <strong>${def.name}</strong> · ${ch.jobLevels.join('/')} · SB ${ch.skillBoost ?? 0}%</div>
+          <button type="button" class="ui-btn recode-btn" data-uid="${ch.uid}" ${ready ? '' : 'disabled'}>Recode DNA</button>
+        </div>`;
+      })
+      .join('');
+    list.querySelectorAll('.recode-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const r = tryRecode((btn as HTMLElement).dataset.uid!);
+        this.showTavernStatus('recode-status', r.ok ? r.message : r.error, r.ok);
+        this.refreshStatusBar();
+        this.renderRecodeList();
+      });
+    });
   }
-}
-
-function companionEmoji(id: string): string {
-  if (id.includes('fire')) return '🔥';
-  if (id.includes('heal') || id.includes('white')) return '💚';
-  if (id.includes('sword')) return '⚔️';
-  if (id.includes('shield') || id.includes('combat')) return '🛡️';
-  if (id.includes('punish') || id.includes('avenge')) return '⚡';
-  return '📦';
 }

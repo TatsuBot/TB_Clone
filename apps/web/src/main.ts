@@ -2,7 +2,7 @@ import { Battle, MoveTimer, stepDirFor, grantStageRewards, rewardsForStage, getS
 import { Renderer } from './renderer';
 import { stage1, stageFor } from './stage1';
 import { stageWithSquad } from './squad';
-import { ownedCharacters } from './ui/inventory';
+import { ownedCharacters, getBattleParty } from './ui/inventory';
 import { applyClearRewards, progress, isCleared, tryRecruitBoss } from './ui/progress';
 import { saveToLocalStorage } from './ui/save';
 import { UI } from './ui/ui';
@@ -27,7 +27,7 @@ const ui = new UI();
 /** Active squad = first 6 owned characters (matches pre-battle strip). */
 function currentSquadStage(): ReturnType<typeof stageFor> {
   const { chapter, stage } = ui.getSelectedStage();
-  return stageWithSquad(stageFor(chapter, stage), ownedCharacters);
+  return stageWithSquad(stageFor(chapter, stage), getBattleParty());
 }
 
 ui.setBattleCallback(() => {

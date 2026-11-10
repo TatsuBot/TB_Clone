@@ -14,9 +14,8 @@
         <span class="rank">Rank 12</span>
         <span class="spacer"></span>
         <span class="stat stamina"><span class="icon">S</span> 42/50</span>
-        <span class="stat energy" id="stat-energy"><span class="icon">E</span> <span id="stat-energy-val">18</span></span>
-        <span class="stat coins" id="stat-coins"><span class="icon">¢</span> <span id="stat-coins-val">24,500</span></span>
-        <span class="stat stamina" id="stat-stamina"><span class="icon">S</span> <span id="stat-stamina-val">42</span></span>
+        <span class="stat energy"><span class="icon">E</span> 18</span>
+        <span class="stat coins"><span class="icon">¢</span> 24,500</span>
       </div>
 
       <div id="ui-screens" class="ui-screens">
@@ -26,7 +25,6 @@
           <div class="logo">Pincer</div>
           <p class="tagline">A combat-first tactics clone</p>
           <button id="btn-start" class="ui-btn large" type="button">Start</button>
-          <button id="btn-continue" class="ui-btn secondary large" style="margin-top:10px;display:none" type="button">Continue</button>
           <div class="version">v0.1.0 · Interfaces preview</div>
         </div>
 
@@ -102,25 +100,19 @@
               <div class="pact-name">Pact of Truth</div>
               <div class="pact-cost">5 Energy</div>
               <div class="pact-rates">Rates: 4% Z · 10% SS · 15% S · 71% A/B<br />Duplicates grant Skill Boost</div>
-              <button class="ui-btn" type="button" data-pact="truth">Recruit</button>
+              <button class="ui-btn" type="button" disabled>Recruit (preview)</button>
             </div>
             <div class="pact-card">
               <div class="pact-name">Pact of Fellowship</div>
               <div class="pact-cost">3,000 Coins</div>
               <div class="pact-rates">Monsters and some adventurers</div>
-              <button class="ui-btn secondary" type="button" data-pact="fellowship">Recruit</button>
+              <button class="ui-btn secondary" type="button" disabled>Recruit (preview)</button>
             </div>
             <div class="pact-card">
               <div class="pact-name">Companions of Truth</div>
               <div class="pact-cost">3 Energy</div>
-              <div class="pact-rates">Companion pool</div>
-              <button class="ui-btn secondary" type="button" data-pact="companions">Recruit</button>
-            </div>
-            <div id="pact-result" class="ui-card" style="margin-top:12px;display:none"></div>
-            <div class="ui-card" style="margin-top:12px">
-              <h3>Debug</h3>
-              <button class="ui-btn secondary" type="button" id="btn-add-energy">+1 Energy</button>
-              <button class="ui-btn secondary" type="button" id="btn-add-energy-10" style="margin-left:8px">+10 Energy</button>
+              <div class="pact-rates">Companion pool (rarer)</div>
+              <button class="ui-btn secondary" type="button" disabled>Recruit (preview)</button>
             </div>
           </div>
           <div class="tavern-pane" data-pane="jobs" style="display:none">
@@ -174,15 +166,6 @@
             <div class="stat-box"><div class="label">DEF</div><div class="value">112</div></div>
             <div class="stat-box"><div class="label">MATK</div><div class="value">48</div></div>
           </div>
-
-          <!-- Equipped companion (live data) -->
-          <div class="ui-card" id="equipped-companion" style="margin-bottom:14px">
-            <h3 style="margin:0 0 8px;font-size:14px;color:var(--ui-muted)">Equipped Companion</h3>
-            <div id="companion-slot-content">
-              <!-- filled by UI -->
-            </div>
-          </div>
-
           <div class="job-tabs">
             <button class="active" type="button">Job 1</button>
             <button type="button" disabled>Job 2</button>
@@ -207,12 +190,6 @@
             <div class="option-row" style="cursor:pointer"><span class="opt-label">Story Log</span><span class="opt-value">→</span></div>
             <div class="option-row" style="cursor:pointer"><span class="opt-label">Credits</span><span class="opt-value">→</span></div>
             <div class="option-row"><span class="opt-label">Version</span><span class="opt-value">0.1.0</span></div>
-          </div>
-          <div style="margin-top:20px">
-            <h3 style="margin:0 0 10px;font-size:14px;color:var(--ui-muted)">Save Data</h3>
-            <button id="btn-save-game" class="ui-btn large" type="button">Save Game</button>
-            <button id="btn-load-game" class="ui-btn secondary large" style="margin-top:8px" type="button">Load Game</button>
-            <p id="save-status" style="font-size:12px;color:var(--ui-muted);margin:10px 0 0;min-height:1.4em"></p>
           </div>
         </div>
 
