@@ -14,3 +14,5 @@ export * from './battle';
 export * from './ascii';
 export * from './data/companions';
 export * from './data/characters';
+export * from './data/enemies';
+export * from './data/stages';

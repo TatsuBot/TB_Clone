@@ -51,8 +51,10 @@ export const CHAPTERS = [
   { id: 10, title: 'Stonefolk Town', stages: 10, cleared: false, unlocked: false },
 ];
 
-/** Placeholder stages for a chapter. */
+/** Stage list for map UI. Chapter 1 uses real data; others stay placeholder. */
 export function stagesForChapter(chapterId: number) {
+  // Real refs are injected at render time from @game/core when available;
+  // this fallback keeps non-authored chapters visible.
   const ch = CHAPTERS.find((c) => c.id === chapterId);
   if (!ch) return [];
   return Array.from({ length: ch.stages }, (_, i) => ({

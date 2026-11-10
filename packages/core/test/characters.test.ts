@@ -9,7 +9,7 @@ import {
 
 describe('characters', () => {
   it('has at least 15 seed adventurers', () => {
-    expect(CHARACTER_LIST.length).toBeGreaterThanOrEqual(15);
+    expect(CHARACTER_LIST.length).toBeGreaterThanOrEqual(40);
   });
 
   it('Bahl job 1 stats at level bounds', () => {
@@ -32,6 +32,12 @@ describe('characters', () => {
     expect(s.rarity).toBe('SS');
     expect(s.jobs[0].weapon).toBe('Spear');
     expect(s.jobs[0].element).toBe('Lightning');
+  });
+
+  it('includes Z-class and elemental coverage', () => {
+    expect(getCharacter('haruhikari')?.rarity).toBe('Z');
+    expect(getCharacter('daiana')?.jobs[0].element).toBe('Ice');
+    expect(getCharacter('bahamut')?.species).toBe('Monster');
   });
 
   it('starters include Bahl, Grace, Kuscah, Healer', () => {

@@ -10,6 +10,7 @@ import {
   charStatsAtLevel,
   skillsUnlocked,
 } from '@game/core';
+import { stagesForChapter as coreStageRefs, getStageRef } from '@game/core';
 import {
   ownedCompanions,
   ownedCharacters,
@@ -47,6 +48,10 @@ export class UI {
 
   setBattleCallback(fn: () => void): void {
     this.onEnterBattle = fn;
+  }
+
+  getSelectedStage(): { chapter: number; stage: number } {
+    return { chapter: this.selectedChapter, stage: this.selectedStage };
   }
 
   show(id: ScreenId): void {
@@ -204,7 +209,19 @@ export class UI {
     const ch = CHAPTERS.find((c) => c.id === this.selectedChapter);
     header.textContent = ch ? `Chapter ${ch.id}: ${ch.title}` : 'Stages';
 
-    const stages = stagesForChapter(this.selectedChapter);
+    const core = coreStageRefs(this.selectedChapter);
+    const stages =
+      core.length > 0
+        ? core.map((s) => ({
+            id: s.stage,
+            name: s.name,
+            stamina: s.stamina,
+            difficulty: s.difficulty,
+            waves: s.waves.length,
+            cleared: this.selectedChapter === 1 && s.stage <= 3,
+          }))
+        : stagesForChapter(this.selectedChapter);
+
     list.innerHTML = stages
       .map((s) => {
         const stars = '★'.repeat(s.difficulty) + '☆'.repeat(5 - s.difficulty);
@@ -237,14 +254,18 @@ export class UI {
     const slots = document.getElementById('party-slots');
     if (!info || !slots) return;
 
-    const stages = stagesForChapter(this.selectedChapter);
-    const stage = stages.find((s) => s.id === this.selectedStage);
+    const ref = getStageRef(this.selectedChapter, this.selectedStage);
+    const fallback = stagesForChapter(this.selectedChapter).find((s) => s.id === this.selectedStage);
+    const name = ref?.name ?? fallback?.name ?? 'Stage';
+    const stamina = ref?.stamina ?? fallback?.stamina ?? 5;
+    const waves = ref?.waves.length ?? fallback?.waves ?? 3;
+    const difficulty = ref?.difficulty ?? fallback?.difficulty ?? 1;
     info.innerHTML = `
-      <h3>${stage?.name ?? 'Stage'}</h3>
+      <h3>${name}</h3>
       <div class="cost">
-        <span>⚡ Stamina ${stage?.stamina ?? 5}</span>
-        <span>${stage?.waves ?? 3} waves</span>
-        <span class="stage-stars">${'★'.repeat(stage?.difficulty ?? 1)}</span>
+        <span>⚡ Stamina ${stamina}</span>
+        <span>${waves} waves</span>
+        <span class="stage-stars">${'★'.repeat(difficulty)}</span>
       </div>`;
 
     // Show first 6 owned characters as the squad

@@ -1,6 +1,6 @@
 import { Battle, MoveTimer, stepDirFor, type DragSession, type Dir, type Pos, type StepDir, type TurnReport } from '@game/core';
 import { Renderer } from './renderer';
-import { stage1 } from './stage1';
+import { stage1, stageFor } from './stage1';
 import { UI } from './ui/ui';
 
 const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
@@ -20,7 +20,9 @@ const renderer = new Renderer(canvas, () => session?.board ?? battle.board);
 // --- UI shell ---
 const ui = new UI();
 ui.setBattleCallback(() => {
-  battle = new Battle(stage1, Date.now() & 0xffff);
+  const { chapter, stage } = ui.getSelectedStage();
+  const data = stageFor(chapter, stage);
+  battle = new Battle(data, Date.now() & 0xffff);
   session = null;
   busy = false;
   renderer.setDrag(null);
