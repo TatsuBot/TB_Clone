@@ -18,7 +18,9 @@ is a **design decision**, not a bug fix. Constants are in `packages/core/src/rul
 | Boss | Contact with any square counts; a boss is listed once per pincer. |
 | Chain | Allies in the same row/column as a flanker with no enemy or wall between them join the attack. Empty cells do **not** break a chain (`RULES.chainThroughEmpty`). |
 | Attack count | A unit attacks once per pincer it belongs to (as flanker or chain). |
-| Resolution order | 1) finalise positions, 2) detect pincers + chains and freeze the attacker list, 3) apply damage (flankers first, then chain nearest-first), 4) remove defeated. Detection never deals damage. |
+| Resolution order | 1) finalise positions, 2) detect all pincers + chains and freeze each pincer's attacker roster, 3) put the pincers in order, 4) resolve them **one at a time**: apply that pincer's damage (flankers first, then chain nearest-first), then remove what it defeated before the next pincer starts. Detection never deals damage. |
+| Pincer order | A pincer the **moving unit flanks resolves first**. The rest go in reading order of each pincer's anchor (the top-left-most cell among its flankers and targets): top row first, then leftmost. Exact ties: horizontal, vertical, corner, then flanker ids. The enemy turn has no mover, so it is reading order only. |
+| Already defeated | A target killed by an earlier pincer is gone and is not hit by later ones; a pincer with no live targets left is skipped. Overkill inside a single pincer still lands. |
 | Damage (current) | `max(1, atk - def)` per attack. Skills, weapon triangle and elements arrive in Phase 3. |
 | Enemy turn | Each 1x1 enemy in turn may step into an adjacent empty cell (never displacing anyone), preferring cells that complete a pincer on an ally, otherwise closer to the nearest ally. Then the same pincer/chain resolution runs with sides swapped. Bosses hold position for now. |
 | Waves | Clearing a wave spawns the next one and the player keeps the turn. Clearing the last wave is victory. A spawn cell occupied by an ally falls back to the nearest free cell. |
@@ -29,5 +31,7 @@ is a **design decision**, not a bug fix. Constants are in `packages/core/src/rul
 
 - **Diagonals only fail when both skirted squares are blocked.** One enemy/wall beside the path is fine (confirmed by a reported board); the two-blocked case is my assumption, so test it against the original.
 - **Empty cells don't break chains**, and **walls do**.
+- **Pincers resolve one at a time** (mover's first, then top-left to bottom-right), with defeated units removed after each pincer. This deliberately departs from the plan's single removal pass at step 6, so any future on-death or counter effect fires between pincers.
+- **Anchor = top-left-most cell of the pincer** (flankers and targets). "Top-left to bottom-right" is read as reading order, not diagonal order; say so if you meant diagonal.
 - **A drag that never moved is not a turn.**
 - **New wave = player keeps initiative** (skips the enemy turn).

@@ -33,9 +33,10 @@ function hud(text?: string): void {
 function describe(r: TurnReport): string {
   const hits = r.resolution.attacks.length;
   const down = r.resolution.defeated.length;
+  const pincers = r.resolution.steps.length;
   const who = r.actor === 'player' ? 'You' : 'Enemies';
   if (hits === 0) return r.actor === 'player' ? 'No pincer formed.' : 'Enemies moved.';
-  return `${who} landed ${hits} hit${hits === 1 ? '' : 's'}${down ? `, ${down} defeated` : ''}.`;
+  return `${who} resolved ${pincers} pincer${pincers === 1 ? '' : 's'}: ${hits} hit${hits === 1 ? '' : 's'}${down ? `, ${down} defeated` : ''}.`;
 }
 
 /** Walk the dragged unit toward the pointer cell, one resolved grid step at a time. */
@@ -74,16 +75,20 @@ function endDrag(now: number): void {
   renderer.setDrag(null);
   const report = battle.commitDrag(s);
   if (!report) return hud();
-  renderer.playResolution(report.resolution, battle.board, now);
+  const playback = renderer.playResolution(report.resolution, now);
   hud(describe(report));
   if (battle.phase === 'enemy') {
     busy = true;
+    // let the player's pincers finish playing, then the enemy takes its turn
     window.setTimeout(() => {
       const r = battle.runEnemyTurn();
-      renderer.playResolution(r.resolution, battle.board, performance.now());
-      busy = false;
+      const enemyPlayback = renderer.playResolution(r.resolution, performance.now());
       hud(describe(r));
-    }, 550);
+      window.setTimeout(() => (busy = false), enemyPlayback);
+    }, Math.max(550, playback + 300));
+  } else if (playback > 0) {
+    busy = true; // a new wave or the end screen: let the hits play out first
+    window.setTimeout(() => (busy = false), playback);
   }
 }
 
@@ -116,6 +121,7 @@ $('restart').addEventListener('click', () => {
   session = null;
   busy = false;
   renderer.setDrag(null);
+  renderer.reset();
   renderer.resize();
   hud();
 });

@@ -27,6 +27,20 @@ describe('battle flow', () => {
     expect(b.phase).toBe('enemy');
   });
 
+  it("the mover's pincer resolves first through a real turn, then the rest top-left to bottom-right", () => {
+    const b = new Battle(
+      stage(
+        [ally('1', 1, 0), ally('2', 1, 2), ally('3', 5, 0), ally('4', 6, 2)],
+        [ally('x', 1, 1), ally('y', 5, 1)],
+      ),
+    );
+    const s = b.startDrag('4')!;
+    s.step('up'); // completes 3 y 4 on row 5; 1 x 2 on row 1 already stood
+    const r = b.commitDrag(s)!;
+    expect(r.resolution.steps.map((st) => st.pincer.targets)).toEqual([['y'], ['x']]);
+    expect(r.resolution.steps[0]!.pincer.flankers).toContain('4');
+  });
+
   it('a drag that never moves is not a turn', () => {
     const b = new Battle(stage([ally('1', 3, 1), ally('2', 3, 3)], [ally('x', 0, 0)]));
     expect(b.commitDrag(b.startDrag('1')!)).toBeNull();

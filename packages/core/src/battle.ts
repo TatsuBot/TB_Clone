@@ -53,7 +53,7 @@ export class Battle {
     if (session.path.length === 0) return null;
 
     this.board = session.board;
-    const resolution = resolveAttacks(this.board, 'ally');
+    const resolution = resolveAttacks(this.board, 'ally', { moverId: session.moverId });
     const spawned: string[] = [];
 
     if (this.board.unitsOf('enemy').length === 0) {

@@ -6,6 +6,7 @@ export * from './board';
 export * from './drag';
 export * from './pincer';
 export * from './chain';
+export * from './order';
 export * from './combat';
 export * from './ai';
 export * from './stage';
