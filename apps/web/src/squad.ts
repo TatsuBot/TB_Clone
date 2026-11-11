@@ -9,7 +9,7 @@ import {
   type UnitTemplate,
   CHARACTERS,
   charStatsAtLevel,
-} from '@game/core';
+} from "@game/core";
 
 const ALLY_ROW = 6;
 
@@ -28,9 +28,12 @@ export function placementsFromSquad(squad: CharacterInstance[]): Placement[] {
     const unit: UnitTemplate = {
       id: inst.uid,
       name: def?.name ?? inst.defId,
+      description: def?.description,
       maxHp: Math.max(1, stats.hp),
       atk: Math.max(1, stats.atk),
       def: Math.max(0, stats.def),
+      weapon: job?.weapon,
+      element: job?.element,
     };
 
     return {
@@ -42,7 +45,10 @@ export function placementsFromSquad(squad: CharacterInstance[]): Placement[] {
 }
 
 /** Clone stage data with squad allies replacing the practice defaults. */
-export function stageWithSquad(stage: StageData, squad: CharacterInstance[]): StageData {
+export function stageWithSquad(
+  stage: StageData,
+  squad: CharacterInstance[],
+): StageData {
   const allies = placementsFromSquad(squad);
   // Need ≥2 allies for RULES.minAlliesToFight — if roster is tiny, keep defaults partially
   if (allies.length < 2) {

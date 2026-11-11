@@ -2,20 +2,41 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no"
+    />
     <title>Pincer</title>
     <link rel="stylesheet" href="/src/style.css" />
     <link rel="stylesheet" href="/src/ui/ui.css" />
   </head>
   <body>
+    <!-- Shown until the UI script marks the page ready; if it never does, this is what you see. -->
+    <div id="boot-fallback">
+      <strong>Loading…</strong>
+      <small
+        >If this message stays on screen, the game failed to start. Press F12
+        and read the Console for the error.</small
+      >
+    </div>
     <!-- ========== Meta UI Shell ========== -->
     <div id="ui-root">
       <div id="ui-status" class="ui-status" style="display: none">
         <span class="rank">Rank 12</span>
         <span class="spacer"></span>
         <span class="stat stamina"><span class="icon">S</span> 42/50</span>
-        <span class="stat energy"><span class="icon">E</span> 18</span>
-        <span class="stat coins"><span class="icon">¢</span> 24,500</span>
+        <span class="stat energy" id="stat-energy"
+          ><span class="icon">E</span>
+          <span id="stat-energy-val">18</span></span
+        >
+        <span class="stat coins" id="stat-coins"
+          ><span class="icon">¢</span>
+          <span id="stat-coins-val">24,500</span></span
+        >
+        <span class="stat stamina" id="stat-stamina"
+          ><span class="icon">S</span>
+          <span id="stat-stamina-val">42</span></span
+        >
       </div>
 
       <div id="ui-screens" class="ui-screens">
@@ -24,7 +45,17 @@
           <div class="title-art">⚔️</div>
           <div class="logo">Pincer</div>
           <p class="tagline">A combat-first tactics clone</p>
-          <button id="btn-start" class="ui-btn large" type="button">Start</button>
+          <button id="btn-start" class="ui-btn large" type="button">
+            Start
+          </button>
+          <button
+            id="btn-continue"
+            class="ui-btn secondary large"
+            style="margin-top: 10px; display: none"
+            type="button"
+          >
+            Continue
+          </button>
           <div class="version">v0.1.0 · Interfaces preview</div>
         </div>
 
@@ -67,7 +98,9 @@
         <!-- Stage Select -->
         <div id="screen-stage-select" class="ui-screen">
           <div class="ui-header">
-            <button class="ui-back" data-back="map" type="button">← Back</button>
+            <button class="ui-back" data-back="map" type="button">
+              ← Back
+            </button>
             <h1 id="stage-select-title">Stages</h1>
           </div>
           <div id="stage-list" class="stage-list"></div>
@@ -76,21 +109,36 @@
         <!-- Pre-Battle -->
         <div id="screen-pre-battle" class="ui-screen">
           <div class="ui-header">
-            <button class="ui-back" data-back="stage-select" type="button">← Back</button>
+            <button class="ui-back" data-back="stage-select" type="button">
+              ← Back
+            </button>
             <h1>Confirm Party</h1>
           </div>
           <div id="prebattle-stage-info" class="ui-card prebattle-info"></div>
-          <p style="font-size:13px;color:var(--ui-muted);margin:0 0 8px">Active squad</p>
+          <p style="font-size: 13px; color: var(--ui-muted); margin: 0 0 8px">
+            Active squad
+          </p>
           <div id="party-slots" class="party-slots"></div>
-          <button id="btn-start-battle" class="ui-btn large" type="button">Start Battle</button>
-          <button class="ui-btn secondary large" style="margin-top:8px" type="button" disabled>Change Squad (soon)</button>
+          <button id="btn-start-battle" class="ui-btn large" type="button">
+            Start Battle
+          </button>
+          <button
+            class="ui-btn secondary large"
+            style="margin-top: 8px"
+            type="button"
+            disabled
+          >
+            Change Squad (soon)
+          </button>
         </div>
 
         <!-- Tavern -->
         <div id="screen-tavern" class="ui-screen">
           <div class="ui-header"><h1>Tavern</h1></div>
           <div class="tavern-tabs">
-            <button class="active" data-tavern="recruit" type="button">Recruit</button>
+            <button class="active" data-tavern="recruit" type="button">
+              Recruit
+            </button>
             <button data-tavern="jobs" type="button">Add Jobs</button>
             <button data-tavern="recode" type="button">Recode DNA</button>
             <button data-tavern="shop" type="button">Shop</button>
@@ -99,47 +147,125 @@
             <div class="pact-card">
               <div class="pact-name">Pact of Truth</div>
               <div class="pact-cost">5 Energy</div>
-              <div class="pact-rates">Rates: 4% Z · 10% SS · 15% S · 71% A/B<br />Duplicates grant Skill Boost</div>
-              <button class="ui-btn" type="button" disabled>Recruit (preview)</button>
+              <div class="pact-rates">
+                Rates: 4% Z · 10% SS · 15% S · 71% A/B<br />Duplicates grant
+                Skill Boost
+              </div>
+              <button class="ui-btn" type="button" data-pact="truth">
+                Recruit
+              </button>
             </div>
             <div class="pact-card">
               <div class="pact-name">Pact of Fellowship</div>
               <div class="pact-cost">3,000 Coins</div>
               <div class="pact-rates">Monsters and some adventurers</div>
-              <button class="ui-btn secondary" type="button" disabled>Recruit (preview)</button>
+              <button
+                class="ui-btn secondary"
+                type="button"
+                data-pact="fellowship"
+              >
+                Recruit
+              </button>
             </div>
             <div class="pact-card">
               <div class="pact-name">Companions of Truth</div>
               <div class="pact-cost">3 Energy</div>
-              <div class="pact-rates">Companion pool (rarer)</div>
-              <button class="ui-btn secondary" type="button" disabled>Recruit (preview)</button>
+              <div class="pact-rates">Companion pool</div>
+              <button
+                class="ui-btn secondary"
+                type="button"
+                data-pact="companions"
+              >
+                Recruit
+              </button>
+            </div>
+            <div
+              id="pact-result"
+              class="ui-card"
+              style="margin-top: 12px; display: none"
+            ></div>
+            <div class="ui-card" style="margin-top: 12px">
+              <h3>Debug</h3>
+              <button
+                class="ui-btn secondary"
+                type="button"
+                id="btn-add-energy"
+              >
+                +1 Energy
+              </button>
+              <button
+                class="ui-btn secondary"
+                type="button"
+                id="btn-add-energy-10"
+                style="margin-left: 8px"
+              >
+                +10 Energy
+              </button>
             </div>
           </div>
-          <div class="tavern-pane" data-pane="jobs" style="display:none">
-            <div class="ui-card"><h3>Add Jobs</h3><p>Unlock Job 2 and Job 3 for owned adventurers. Costs coins + materials.</p></div>
-            <div class="empty-state"><div class="empty-icon">🛠️</div><p>Job unlock list will appear here once the roster data layer is connected.</p></div>
+          <div class="tavern-pane" data-pane="jobs" style="display: none">
+            <div class="ui-card">
+              <h3>Add Jobs</h3>
+              <p>
+                Unlock Job 2 and Job 3 for owned adventurers. Costs coins +
+                materials.
+              </p>
+            </div>
+            <div class="empty-state">
+              <div class="empty-icon">🛠️</div>
+              <p>
+                Job unlock list will appear here once the roster data layer is
+                connected.
+              </p>
+            </div>
           </div>
-          <div class="tavern-pane" data-pane="recode" style="display:none">
-            <div class="ui-card"><h3>Recode DNA (Λ)</h3><p>Transform a maxed character (Lv 80 in all three jobs) into a new single-job form.</p></div>
-            <div class="empty-state"><div class="empty-icon">🧬</div><p>Eligible characters will list here after progression systems are in place.</p></div>
+          <div class="tavern-pane" data-pane="recode" style="display: none">
+            <div class="ui-card">
+              <h3>Recode DNA (Λ)</h3>
+              <p>
+                Transform a maxed character (Lv 80 in all three jobs) into a new
+                single-job form.
+              </p>
+            </div>
+            <div class="empty-state">
+              <div class="empty-icon">🧬</div>
+              <p>
+                Eligible characters will list here after progression systems are
+                in place.
+              </p>
+            </div>
           </div>
-          <div class="tavern-pane" data-pane="shop" style="display:none">
+          <div class="tavern-pane" data-pane="shop" style="display: none">
             <div class="shop-item">
               <div class="shop-icon">💚</div>
-              <div class="shop-info"><div class="name">Restore Stamina</div><div class="desc">Fully refill stamina</div></div>
+              <div class="shop-info">
+                <div class="name">Restore Stamina</div>
+                <div class="desc">Fully refill stamina</div>
+              </div>
               <div class="price">1 Energy</div>
             </div>
             <div class="shop-item">
               <div class="shop-icon">⚡</div>
-              <div class="shop-info"><div class="name">Energy Pack (S)</div><div class="desc">+5 Energy (soft currency for now)</div></div>
+              <div class="shop-info">
+                <div class="name">Energy Pack (S)</div>
+                <div class="desc">+5 Energy (soft currency for now)</div>
+              </div>
               <div class="price">—</div>
             </div>
             <div class="shop-item">
               <div class="shop-icon">⚡</div>
-              <div class="shop-info"><div class="name">Energy Pack (M)</div><div class="desc">+15 Energy</div></div>
+              <div class="shop-info">
+                <div class="name">Energy Pack (M)</div>
+                <div class="desc">+15 Energy</div>
+              </div>
               <div class="price">—</div>
             </div>
-            <p style="font-size:12px;color:var(--ui-muted);margin-top:12px">Real-money purchases are intentionally omitted. Energy and coins are granted by play.</p>
+            <p
+              style="font-size: 12px; color: var(--ui-muted); margin-top: 12px"
+            >
+              Real-money purchases are intentionally omitted. Energy and coins
+              are granted by play.
+            </p>
           </div>
         </div>
 
@@ -152,30 +278,75 @@
         <!-- Character Detail -->
         <div id="screen-character-detail" class="ui-screen">
           <div class="ui-header">
-            <button class="ui-back" data-back="party" type="button">← Back</button>
+            <button class="ui-back" data-back="party" type="button">
+              ← Back
+            </button>
             <h1>Character</h1>
           </div>
           <div class="detail-portrait">⚔️</div>
-          <div style="text-align:center;margin-bottom:16px">
-            <div style="font-size:20px;font-weight:700">Blade</div>
-            <div style="font-size:13px;color:var(--ui-muted)">B · Sword · Lv.12 · Job 1</div>
+          <div style="text-align: center; margin-bottom: 16px">
+            <div style="font-size: 20px; font-weight: 700">Blade</div>
+            <div style="font-size: 13px; color: var(--ui-muted)">
+              B · Sword · Lv.12 · Job 1
+            </div>
           </div>
           <div class="detail-stats">
-            <div class="stat-box"><div class="label">HP</div><div class="value">1,240</div></div>
-            <div class="stat-box"><div class="label">ATK</div><div class="value">186</div></div>
-            <div class="stat-box"><div class="label">DEF</div><div class="value">112</div></div>
-            <div class="stat-box"><div class="label">MATK</div><div class="value">48</div></div>
+            <div class="stat-box">
+              <div class="label">HP</div>
+              <div class="value">1,240</div>
+            </div>
+            <div class="stat-box">
+              <div class="label">ATK</div>
+              <div class="value">186</div>
+            </div>
+            <div class="stat-box">
+              <div class="label">DEF</div>
+              <div class="value">112</div>
+            </div>
+            <div class="stat-box">
+              <div class="label">MATK</div>
+              <div class="value">48</div>
+            </div>
           </div>
+
+          <!-- Equipped companion (live data) -->
+          <div
+            class="ui-card"
+            id="equipped-companion"
+            style="margin-bottom: 14px"
+          >
+            <h3
+              style="margin: 0 0 8px; font-size: 14px; color: var(--ui-muted)"
+            >
+              Equipped Companion
+            </h3>
+            <div id="companion-slot-content">
+              <!-- filled by UI -->
+            </div>
+          </div>
+
           <div class="job-tabs">
             <button class="active" type="button">Job 1</button>
             <button type="button" disabled>Job 2</button>
             <button type="button" disabled>Job 3</button>
           </div>
           <div class="skill-list">
-            <div class="skill-row"><div class="sk-name">Mega Slash</div><div class="sk-meta">Physical · Single · Equip</div></div>
-            <div class="skill-row"><div class="sk-name">Giga Break</div><div class="sk-meta">Physical · Line · 40%</div></div>
-            <div class="skill-row"><div class="sk-name">— locked —</div><div class="sk-meta">Unlocks at Job Lv.15</div></div>
-            <div class="skill-row"><div class="sk-name">— locked —</div><div class="sk-meta">Unlocks at Job Lv.35</div></div>
+            <div class="skill-row">
+              <div class="sk-name">Mega Slash</div>
+              <div class="sk-meta">Physical · Single · Equip</div>
+            </div>
+            <div class="skill-row">
+              <div class="sk-name">Giga Break</div>
+              <div class="sk-meta">Physical · Line · 40%</div>
+            </div>
+            <div class="skill-row">
+              <div class="sk-name">— locked —</div>
+              <div class="sk-meta">Unlocks at Job Lv.15</div>
+            </div>
+            <div class="skill-row">
+              <div class="sk-name">— locked —</div>
+              <div class="sk-meta">Unlocks at Job Lv.35</div>
+            </div>
           </div>
         </div>
 
@@ -183,35 +354,99 @@
         <div id="screen-options" class="ui-screen">
           <div class="ui-header"><h1>Options</h1></div>
           <div class="options-list">
-            <div class="option-row"><span class="opt-label">Music</span><div class="toggle on"></div></div>
-            <div class="option-row"><span class="opt-label">Sound Effects</span><div class="toggle on"></div></div>
-            <div class="option-row"><span class="opt-label">Fast Forward</span><span class="opt-value">×2</span></div>
-            <div class="option-row"><span class="opt-label">Main Screen Tips</span><div class="toggle"></div></div>
-            <div class="option-row" style="cursor:pointer"><span class="opt-label">Story Log</span><span class="opt-value">→</span></div>
-            <div class="option-row" style="cursor:pointer"><span class="opt-label">Credits</span><span class="opt-value">→</span></div>
-            <div class="option-row"><span class="opt-label">Version</span><span class="opt-value">0.1.0</span></div>
+            <div class="option-row">
+              <span class="opt-label">Music</span>
+              <div class="toggle on"></div>
+            </div>
+            <div class="option-row">
+              <span class="opt-label">Sound Effects</span>
+              <div class="toggle on"></div>
+            </div>
+            <div class="option-row">
+              <span class="opt-label">Fast Forward</span
+              ><span class="opt-value">×2</span>
+            </div>
+            <div class="option-row">
+              <span class="opt-label">Main Screen Tips</span>
+              <div class="toggle"></div>
+            </div>
+            <div class="option-row" style="cursor: pointer">
+              <span class="opt-label">Story Log</span
+              ><span class="opt-value">→</span>
+            </div>
+            <div class="option-row" style="cursor: pointer">
+              <span class="opt-label">Credits</span
+              ><span class="opt-value">→</span>
+            </div>
+            <div class="option-row">
+              <span class="opt-label">Version</span
+              ><span class="opt-value">0.1.0</span>
+            </div>
+          </div>
+          <div style="margin-top: 20px">
+            <h3
+              style="margin: 0 0 10px; font-size: 14px; color: var(--ui-muted)"
+            >
+              Save Data
+            </h3>
+            <button id="btn-save-game" class="ui-btn large" type="button">
+              Save Game
+            </button>
+            <button
+              id="btn-load-game"
+              class="ui-btn secondary large"
+              style="margin-top: 8px"
+              type="button"
+            >
+              Load Game
+            </button>
+            <p
+              id="save-status"
+              style="
+                font-size: 12px;
+                color: var(--ui-muted);
+                margin: 10px 0 0;
+                min-height: 1.4em;
+              "
+            ></p>
           </div>
         </div>
 
         <!-- Results -->
         <div id="screen-results" class="ui-screen screen-results">
           <div class="results-banner victory">Victory!</div>
-          <p style="color:var(--ui-muted)">Stage cleared</p>
+          <p style="color: var(--ui-muted)">Stage cleared</p>
           <div class="results-rewards">
-            <div class="reward-row"><span>Experience</span><span>+1,240</span></div>
+            <div class="reward-row">
+              <span>Experience</span><span>+1,240</span>
+            </div>
             <div class="reward-row"><span>Coins</span><span>+850</span></div>
-            <div class="reward-row"><span>Items</span><span>Iron Ore ×2</span></div>
+            <div class="reward-row">
+              <span>Items</span><span>Iron Ore ×2</span>
+            </div>
           </div>
-          <button id="btn-results-continue" class="ui-btn large" type="button">Continue</button>
+          <button id="btn-results-continue" class="ui-btn large" type="button">
+            Continue
+          </button>
         </div>
       </div>
 
       <nav id="ui-nav" class="ui-nav" style="display: none">
-        <button data-screen="map" type="button"><span class="nav-icon">🗺️</span>Map</button>
-        <button data-screen="hub" type="button"><span class="nav-icon">🏠</span>Home</button>
-        <button data-screen="party" type="button"><span class="nav-icon">👥</span>Party</button>
-        <button data-screen="tavern" type="button"><span class="nav-icon">🍺</span>Tavern</button>
-        <button data-screen="options" type="button"><span class="nav-icon">⚙️</span>Options</button>
+        <button data-screen="map" type="button">
+          <span class="nav-icon">🗺️</span>Map
+        </button>
+        <button data-screen="hub" type="button">
+          <span class="nav-icon">🏠</span>Home
+        </button>
+        <button data-screen="party" type="button">
+          <span class="nav-icon">👥</span>Party
+        </button>
+        <button data-screen="tavern" type="button">
+          <span class="nav-icon">🍺</span>Tavern
+        </button>
+        <button data-screen="options" type="button">
+          <span class="nav-icon">⚙️</span>Options
+        </button>
       </nav>
     </div>
 
@@ -221,11 +456,49 @@
         <span id="wave"></span>
         <span id="status"></span>
         <button id="restart" type="button">Restart</button>
-        <button id="btn-leave-battle" type="button" style="margin-left:8px">Leave</button>
+        <button id="btn-leave-battle" type="button" style="margin-left: 8px">
+          Leave
+        </button>
       </header>
       <div id="timer"><div id="timer-bar"></div></div>
       <div id="stage"><canvas id="board"></canvas></div>
       <p id="message"></p>
+      <aside
+        id="unit-description"
+        class="unit-description"
+        role="dialog"
+        aria-labelledby="unit-description-title"
+        hidden
+      >
+        <header class="unit-description-header">
+          <strong id="unit-description-title"></strong>
+          <button
+            id="unit-description-close"
+            class="unit-description-close"
+            type="button"
+            aria-label="Close description"
+          >
+            ×
+          </button>
+        </header>
+        <div id="unit-description-meta" class="unit-description-meta"></div>
+        <div id="unit-description-stats" class="unit-description-stats"></div>
+        <section
+          id="unit-description-companion-section"
+          class="unit-description-section"
+          hidden
+        >
+          <h2>Companion</h2>
+          <div
+            id="unit-description-companion"
+            class="unit-description-companion"
+          ></div>
+        </section>
+        <section class="unit-description-section">
+          <h2>Active Skills</h2>
+          <div id="unit-description-skills"></div>
+        </section>
+      </aside>
     </div>
 
     <script type="module" src="/src/main.ts"></script>

@@ -1,8 +1,18 @@
-import { Board } from './board';
-import { chainUnits, type ChainOptions } from './chain';
-import { orderPincers } from './order';
-import { detectPincers, type Pincer, type PincerScan } from './pincer';
-import type { Pos, Side, Unit } from './types';
+import { Board } from "./board";
+import { chainUnits, type ChainOptions } from "./chain";
+import { orderPincers } from "./order";
+import { detectPincers, type Pincer, type PincerScan } from "./pincer";
+import {
+  SKILL_POWER_TIER_VALUES,
+  type ElementType,
+  type Pos,
+  type Side,
+  type Skill,
+  type SkillEvent,
+  type SkillTrigger,
+  type Unit,
+  type WeaponType,
+} from "./types";
 
 export interface Attack {
   /** Position in resolution order (0 = first pincer to resolve). */
@@ -11,7 +21,7 @@ export interface Attack {
   pincerIndex: number;
   attacker: string;
   target: string;
-  role: 'flanker' | 'chain';
+  role: "flanker" | "chain" | "counter";
   damage: number;
   targetHp: number;
 }
@@ -46,9 +56,161 @@ export interface ResolveOptions extends ChainOptions {
   moverId?: string;
 }
 
-/** Flat damage for now (Phase 3 adds skills, weapon triangle and elements). */
-export function computeDamage(attacker: Unit, target: Unit): number {
-  return Math.max(1, attacker.stats.atk - target.stats.def);
+const weaponAdvantage: Record<WeaponType, WeaponType | null> = {
+  Sword: "Bow",
+  Spear: "Sword",
+  Bow: "Spear",
+  Staff: null,
+};
+
+const elementAdvantage: Record<ElementType, ElementType | null> = {
+  Fire: "Ice",
+  Ice: "Fire",
+  Lightning: "Darkness",
+  Darkness: "Lightning",
+  Photon: "Graviton",
+  Graviton: "Photon",
+  Sun: "Moon",
+  Moon: "Sun",
+  Healing: null,
+  Remedy: null,
+  "—": null,
+};
+
+export function weaponTriangleFactor(
+  attacker: Pick<Unit, "weapon">,
+  target: Pick<Unit, "weapon">,
+): number {
+  const a = attacker.weapon ?? "Sword";
+  const b = target.weapon ?? "Sword";
+  if (a === b) return 1;
+  if (weaponAdvantage[a] === b) return 1.5;
+  if (weaponAdvantage[b] === a) return 0.75;
+  return 1;
+}
+
+export function elementalFactor(
+  attacker: Pick<Unit, "element">,
+  target: Pick<Unit, "element">,
+): number {
+  const a = attacker.element ?? "—";
+  const b = target.element ?? "—";
+  if (a === "—" || b === "—" || a === b) return 1;
+  if (elementAdvantage[a] === b) return 1.5;
+  if (elementAdvantage[b] === a) return 0.75;
+  return 1;
+}
+
+/** Phase 3 foundation: use the weapon triangle, elemental advantage, and trigger-based skills on top of the attack/defense delta. */
+export interface DamageContext {
+  trigger?: SkillTrigger;
+  random?: () => number;
+}
+
+export function skillPowerMultiplier(
+  skill: Pick<Skill, "name" | "power" | "tier">,
+): number {
+  if (typeof skill.power === "number") return skill.power;
+  const tier =
+    skill.tier ??
+    (skill.name?.match(/^(Mega|Giga|Tera|Peta)\b/i)?.[1] as
+      | keyof typeof SKILL_POWER_TIER_VALUES
+      | undefined);
+  if (!tier) return 1;
+  return (
+    SKILL_POWER_TIER_VALUES[tier as keyof typeof SKILL_POWER_TIER_VALUES] ?? 1
+  );
+}
+
+export function shouldActivateSkill(
+  skill: { trigger: SkillTrigger; frequency?: number },
+  trigger: SkillTrigger | undefined,
+  random: () => number = Math.random,
+): boolean {
+  if (skill.trigger === "equip") return true;
+  if (trigger !== skill.trigger) return false;
+  if (typeof skill.frequency === "undefined") return true;
+  if (skill.frequency <= 0) return false;
+  if (skill.frequency >= 100) return true;
+  return random() * 100 < skill.frequency;
+}
+
+export interface SkillEventContext {
+  trigger?: SkillTrigger;
+  sourceUnitId?: string;
+  targetUnitIds?: string[];
+  random?: () => number;
+  order?: number;
+}
+
+export function buildSkillEvents(
+  attacker: Pick<Unit, "id" | "name" | "skills">,
+  context: SkillEventContext = {},
+  randomOverride?: () => number,
+): SkillEvent[] {
+  const random = randomOverride ?? context.random ?? Math.random;
+  const active = (attacker.skills ?? []).filter((skill) => {
+    if (skill.trigger === "equip") return true;
+    if (!context.trigger) return false;
+    return shouldActivateSkill(skill, context.trigger, random);
+  });
+
+  return active.map((skill, index) => ({
+    skillId: skill.id,
+    skillName: skill.name ?? skill.id,
+    trigger: skill.trigger,
+    sourceUnitId: context.sourceUnitId ?? attacker.id,
+    targetUnitIds: context.targetUnitIds ?? [],
+    activated: true,
+    multiplier: skillPowerMultiplier(skill),
+    chance: skill.frequency,
+    order: typeof context.order === "number" ? context.order + index : index,
+    effect: "damage",
+    shape: skill.shape ?? "single",
+    radius: skill.radius ?? 0,
+    targetMode: skill.target ?? "enemy",
+  }));
+}
+
+export function damageSkillMultiplier(
+  attacker: Pick<Unit, "skills">,
+  trigger: SkillTrigger | undefined,
+  random: () => number = Math.random,
+): number {
+  const active = buildSkillEvents(
+    attacker as Pick<Unit, "id" | "name" | "skills">,
+    {
+      trigger,
+      random,
+    },
+  );
+  if (active.length === 0) return 1;
+  return active.reduce((total, skillEvent) => total * skillEvent.multiplier, 1);
+}
+
+export function computeDamage(
+  attacker: Unit,
+  target: Unit,
+  context: DamageContext = {},
+): number {
+  const attackStat =
+    attacker.weapon === "Staff"
+      ? (attacker.stats.matk ?? attacker.stats.atk)
+      : attacker.stats.atk;
+  const defenseStat =
+    target.weapon === "Staff"
+      ? (target.stats.mdef ?? target.stats.def)
+      : target.stats.def;
+  const base = Math.max(1, attackStat - defenseStat);
+  const modifier =
+    weaponTriangleFactor(attacker, target) *
+    elementalFactor(attacker, target) *
+    damageSkillMultiplier(
+      attacker,
+      context.trigger,
+      context.random ?? Math.random,
+    );
+  return Math.max(1, Math.round(base * modifier));
 }
 
 /**
@@ -60,12 +222,19 @@ export function computeDamage(attacker: Unit, target: Unit): number {
  * Targets already defeated by an earlier pincer are not hit again. Each unit attacks once per
  * pincer it belongs to. Mutates `board`.
  */
-export function resolveAttacks(board: Board, attackers: Side, opts: ResolveOptions = {}): Resolution {
+export function resolveAttacks(
+  board: Board,
+  attackers: Side,
+  opts: ResolveOptions = {},
+): Resolution {
   const scan = detectPincers(board, attackers);
 
   const rosters = scan.pincers.map((pincer) => [
-    ...pincer.flankers.map((id) => ({ id, role: 'flanker' as const })),
-    ...chainUnits(board, pincer, attackers, opts).map((id) => ({ id, role: 'chain' as const })),
+    ...pincer.flankers.map((id) => ({ id, role: "flanker" as const })),
+    ...chainUnits(board, pincer, attackers, opts).map((id) => ({
+      id,
+      role: "chain" as const,
+    })),
   ]);
   const ordered = orderPincers(board, scan.pincers, opts.moverId);
 
@@ -78,11 +247,41 @@ export function resolveAttacks(board: Board, attackers: Side, opts: ResolveOptio
     const attacks: Attack[] = [];
     for (const { id, role } of rosters[index] ?? []) {
       const attacker = board.getUnit(id);
+      const trigger = role === "flanker" ? "pincer" : "chain";
       for (const targetId of targets) {
         const target = board.getUnit(targetId);
-        const damage = computeDamage(attacker, target);
+        const damage = computeDamage(attacker, target, { trigger });
         target.hp -= damage;
-        attacks.push({ step, pincerIndex: index, attacker: id, target: targetId, role, damage, targetHp: target.hp });
+        attacks.push({
+          step,
+          pincerIndex: index,
+          attacker: id,
+          target: targetId,
+          role,
+          damage,
+          targetHp: target.hp,
+        });
+
+        if (target.hp > 0) {
+          const counterSkills = (target.skills ?? []).filter(
+            (skill) => skill.trigger === "counter",
+          );
+          if (counterSkills.length > 0) {
+            const counterDamage = computeDamage(target, attacker, {
+              trigger: "counter",
+            });
+            attacker.hp -= counterDamage;
+            attacks.push({
+              step,
+              pincerIndex: index,
+              attacker: targetId,
+              target: id,
+              role: "counter",
+              damage: counterDamage,
+              targetHp: attacker.hp,
+            });
+          }
+        }
       }
     }
 
@@ -91,7 +290,10 @@ export function resolveAttacks(board: Board, attackers: Side, opts: ResolveOptio
     for (const id of targets) {
       const unit = board.getUnit(id);
       if (unit.hp > 0) continue;
-      fallen.push({ unit: { ...unit, stats: { ...unit.stats } }, origin: board.originOf(id) });
+      fallen.push({
+        unit: { ...unit, stats: { ...unit.stats } },
+        origin: board.originOf(id),
+      });
       defeated.push(id);
     }
     defeated.forEach((id) => board.remove(id));

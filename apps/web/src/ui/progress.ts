@@ -97,8 +97,8 @@ export function applyProgressSnapshot(data: Partial<ProgressState> | undefined):
   if (typeof data.staminaMax === 'number') progress.staminaMax = data.staminaMax;
   if (typeof data.energy === 'number') progress.energy = data.energy;
   if (typeof data.coins === 'number') progress.coins = data.coins;
-  if (data.cleared) progress.cleared = { ...data.cleared };
-  if (data.bag) progress.bag = { ...data.bag };
+  if (data.cleared && typeof data.cleared === 'object') progress.cleared = { ...data.cleared };
+  if (data.bag && typeof data.bag === 'object') progress.bag = { ...data.bag };
 }
 
 

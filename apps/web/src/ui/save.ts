@@ -4,12 +4,10 @@
  * - explicit download (Save) and file-picker upload (Load)
  */
 
-import type { CharacterInstance, CompanionInstance } from '@game/core';
+import { CHARACTERS, COMPANIONS, type CharacterInstance, type CompanionInstance } from '@game/core';
 import {
   ownedCharacters,
   ownedCompanions,
-  battlePartyUids,
-  setBattleParty,
 } from './inventory';
 import { progress, progressSnapshot, applyProgressSnapshot } from './progress';
 
@@ -21,7 +19,6 @@ export interface SaveGame {
   savedAt: string; // ISO
   characters: CharacterInstance[];
   companions: CompanionInstance[];
-  battleParty?: string[];
   /** Optional meta progress — expand later */
   meta?: {
     selectedChapter?: number;
@@ -43,7 +40,6 @@ export function buildSave(meta?: SaveGame['meta']): SaveGame {
     version: SAVE_VERSION,
     savedAt: new Date().toISOString(),
     characters: structuredClone(ownedCharacters),
-    battleParty: [...battlePartyUids],
     companions: structuredClone(ownedCompanions),
     meta: meta ?? {
       rank: snap.rank,
@@ -59,7 +55,33 @@ export function buildSave(meta?: SaveGame['meta']): SaveGame {
   };
 }
 
-/** Replace in-memory inventory from a save payload. */
+const isNum = (n: unknown): n is number => typeof n === 'number' && Number.isFinite(n);
+
+/** A character the current game data can actually use. Unknown ids / broken shapes are dropped. */
+export function isUsableCharacter(c: unknown): c is CharacterInstance {
+  const x = c as Partial<CharacterInstance> | null;
+  return (
+    !!x &&
+    typeof x.uid === 'string' &&
+    typeof x.defId === 'string' &&
+    x.defId in CHARACTERS &&
+    (x.activeJob === 1 || x.activeJob === 2 || x.activeJob === 3) &&
+    Array.isArray(x.jobLevels) &&
+    x.jobLevels.length === 3 &&
+    x.jobLevels.every(isNum)
+  );
+}
+
+export function isUsableCompanion(c: unknown): c is CompanionInstance {
+  const x = c as Partial<CompanionInstance> | null;
+  return !!x && typeof x.uid === 'string' && typeof x.defId === 'string' && x.defId in COMPANIONS && isNum(x.level);
+}
+
+/**
+ * Replace in-memory inventory from a save payload.
+ * A bad save is rejected WITHOUT touching the current roster, and broken individual entries are
+ * dropped, so stale or corrupted data can never leave the game in an unusable state.
+ */
 export function applySave(data: SaveGame): { ok: true } | { ok: false; error: string } {
   if (!data || typeof data !== 'object') return { ok: false, error: 'Invalid save file' };
   if (data.version !== SAVE_VERSION) {
@@ -69,22 +91,24 @@ export function applySave(data: SaveGame): { ok: true } | { ok: false; error: st
     return { ok: false, error: 'Save missing characters or companions' };
   }
 
+  const characters = data.characters.filter(isUsableCharacter);
+  const companions = data.companions.filter(isUsableCompanion);
+  if (characters.length === 0) return { ok: false, error: 'Save has no usable characters' };
+
+  // An equipped companion that no longer exists is simply unequipped.
+  const companionUids = new Set(companions.map((c) => c.uid));
+  for (const c of characters) {
+    if (c.companionUid && !companionUids.has(c.companionUid)) c.companionUid = undefined;
+  }
+
   // Mutate arrays in place so existing references in UI keep working
   ownedCharacters.length = 0;
-  ownedCharacters.push(
-    ...data.characters.map((c) => ({
-      ...c,
-      jobsUnlocked: c.jobsUnlocked ?? 1,
-    }))
-  );
+  ownedCharacters.push(...characters);
 
   ownedCompanions.length = 0;
-  ownedCompanions.push(...data.companions);
+  ownedCompanions.push(...companions);
 
   applyProgressSnapshot(data.meta);
-  if (Array.isArray((data as { battleParty?: string[] }).battleParty)) {
-    setBattleParty((data as { battleParty: string[] }).battleParty);
-  }
 
   return { ok: true };
 }
