@@ -357,14 +357,20 @@ function tryGrantRewards(): string | undefined {
     for (const w of ref.waves) for (const e of w) ids.push(e.enemyId);
   }
   const reward = grantStageRewards(def, seed ^ (Date.now() & 0xffff), ids);
-  applyClearRewards(ref.id, reward, def.staminaCost ?? ref.stamina);
+  const characterXp = applyClearRewards(ref.id, reward, def.staminaCost ?? ref.stamina);
   const recruit = recruitForStage(ref.id);
   let recruitLine = "";
   if (recruit && tryRecruitBoss(recruit)) {
     recruitLine = ` · Recruited ${recruit.name}!`;
   }
   saveToLocalStorage();
-  return `Cleared ${ref.name}! ${reward.lines.join(" · ")} · Rank ${progress.rank} · ${progress.coins} coins${recruitLine}`;
+  const rewardLines = reward.lines.filter((line) => !line.endsWith(" XP"));
+  const xpLines = characterXp.map((entry) =>
+    entry.levelsGained > 0
+      ? `${entry.name} reached Job ${entry.job} Lv. ${entry.level}! (+${entry.xp} XP)`
+      : `${entry.name} +${entry.xp} XP`,
+  );
+  return `Cleared ${ref.name}! ${[...rewardLines, ...xpLines, `${reward.xp} party XP`, `${progress.coins} coins`].join(" · ")}${recruitLine}`;
 }
 
 function hud(text?: string): void {

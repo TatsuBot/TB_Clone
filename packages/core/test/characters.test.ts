@@ -3,13 +3,39 @@ import {
   CHARACTERS,
   CHARACTER_LIST,
   charStatsAtLevel,
+  addCharacterJobXp,
+  characterXpAtLevel,
+  characterXpToNextLevel,
+  createCharacterInstance,
   skillsUnlocked,
   getCharacter,
 } from "../src/data/characters";
 
 describe("characters", () => {
+  it("levels an individual job from accumulated XP and carries XP forward", () => {
+    const character = createCharacterInstance("bahl");
+    const job = CHARACTERS.bahl.jobs[0]!;
+    const firstLevelXp = characterXpToNextLevel(job, 1);
+    const secondLevelXp = characterXpToNextLevel(job, 2);
+
+    expect(characterXpAtLevel(job, 1)).toBe(0);
+    expect(characterXpAtLevel(job, 99)).toBe(job.expMax);
+    expect(addCharacterJobXp(character, job, firstLevelXp + secondLevelXp)).toEqual({
+      xpAwarded: firstLevelXp + secondLevelXp,
+      levelsGained: 2,
+    });
+    expect(character.jobLevels).toEqual([3, 1, 1]);
+    expect(character.jobXp).toEqual([0, 0, 0]);
+  });
+
   it("has a named adventurer roster without generic class placeholders", () => {
-    expect(CHARACTER_LIST.length).toBeGreaterThanOrEqual(35);
+    expect(CHARACTER_LIST).toHaveLength(202);
+    expect(CHARACTER_LIST.every((character) => character.verified === "Y")).toBe(true);
+    expect(
+      CHARACTER_LIST.every((character) =>
+        character.jobs.every((job) => job.expMax > 0 && job.expCoeff > 0),
+      ),
+    ).toBe(true);
     for (const id of [
       "warrior",
       "knight",
@@ -64,7 +90,7 @@ describe("characters", () => {
       matk: 22,
       mdef: 30,
     });
-    expect(gatz.jobs[2].statsMax).toEqual({
+    expect(charStatsAtLevel(gatz.jobs[2]!, 90)).toEqual({
       hp: 4219,
       atk: 376,
       def: 302,
@@ -90,7 +116,7 @@ describe("characters", () => {
       matk: 44,
       mdef: 39,
     });
-    expect(peyrna.jobs[2].statsMax).toEqual({
+    expect(charStatsAtLevel(peyrna.jobs[2]!, 90)).toEqual({
       hp: 5898,
       atk: 400,
       def: 372,
@@ -133,7 +159,20 @@ describe("characters", () => {
   it("includes Z-class and elemental coverage", () => {
     expect(getCharacter("haruhikari")?.rarity).toBe("Z");
     expect(getCharacter("daiana")?.jobs[0].element).toBe("Fire");
-    expect(getCharacter("bahamut")?.species).toBe("Monster");
+    expect(getCharacter("bahamut")?.rarity).toBe("S");
+    expect(getCharacter("bahamut")?.gender).toBe("Unisex");
+  });
+
+  it("corrects mismatched roster fields and includes missing Adventurers", () => {
+    expect(getCharacter("amerpact")).toMatchObject({ rarity: "A", verified: "Y" });
+    expect(getCharacter("amerpact")?.jobs[0]?.weapon).toBe("Staff");
+    expect(getCharacter("eileen")).toMatchObject({ rarity: "A", verified: "Y" });
+    expect(getCharacter("eileen")?.jobs[0]?.weapon).toBe("Staff");
+    expect(getCharacter("zerro")).toMatchObject({ rarity: "SS", gender: "Female", verified: "Y" });
+    expect(getCharacter("bahamut")?.jobs[0]?.weapon).toBe("Staff");
+    expect(getCharacter("djugan")).toMatchObject({ name: "Djugan", verified: "Y" });
+    expect(getCharacter("bahl_lambda")).toMatchObject({ name: "Bahl Λ", verified: "Y" });
+    expect(getCharacter("djugan")?.jobs).toHaveLength(3);
   });
 
   it("starters include Bahl, Grace, and Kuscah", () => {

@@ -29,7 +29,7 @@ export interface LootTable {
 export interface StageRewardDef {
   /** Fixed coin grant on clear (wiki "Coins earned") */
   coins: number;
-  /** Fixed XP grant (party / rank XP for now) */
+  /** Total XP pool for the stage, split across participating characters on clear. */
   xp: number;
   /** Optional stamina refund note — actual spend handled by meta */
   staminaCost?: number;

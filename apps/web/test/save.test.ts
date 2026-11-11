@@ -17,6 +17,18 @@ describe('loading a save never leaves the game unusable', () => {
     expect(snapshot()).toBe(before);
   });
 
+  it('migrates characters from older saves without per-job XP', () => {
+    const save = buildSave();
+    const legacyCharacter = { ...save.characters[0] } as Record<string, unknown>;
+    delete legacyCharacter.jobXp;
+    save.characters = save.characters.map((character, index) =>
+      index === 0 ? legacyCharacter as never : character,
+    );
+
+    expect(applySave(save)).toEqual({ ok: true });
+    expect(ownedCharacters[0].jobXp).toEqual([0, 0, 0]);
+  });
+
   it('rejects a save with no usable characters and keeps the current roster', () => {
     const before = snapshot();
     const save = buildSave();

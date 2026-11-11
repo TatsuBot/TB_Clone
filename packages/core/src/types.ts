@@ -45,7 +45,7 @@ export const addDir = (p: Pos, d: Dir): Pos => ({
 export const samePos = (a: Pos, b: Pos): boolean =>
   a.row === b.row && a.col === b.col;
 
-export type WeaponType = "Sword" | "Spear" | "Bow" | "Staff";
+export type WeaponType = "Sword" | "Spear" | "Bow" | "Staff" | "None";
 export type ElementType =
   | "—"
   | "Fire"

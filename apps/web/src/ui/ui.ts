@@ -8,6 +8,7 @@ import {
   statsAtLevel,
   frequencyAtLevel,
   charStatsAtLevel,
+  characterXpToNextLevel,
   skillsUnlocked,
   cycleWeaponAdvantagePreset,
   getWeaponAdvantageMultiplier,
@@ -389,6 +390,7 @@ export class UI {
 
     const job = def.jobs[inst.activeJob - 1];
     const lv = inst.jobLevels[inst.activeJob - 1];
+    const jobXp = inst.jobXp[inst.activeJob - 1];
     const stats = charStatsAtLevel(job, lv);
     const unlocked = skillsUnlocked(job, lv);
 
@@ -401,6 +403,7 @@ export class UI {
       nameBlock.innerHTML = `
         <div style="font-size:20px;font-weight:700">${def.name}</div>
         <div style="font-size:13px;color:var(--ui-muted)">${def.rarity} · ${job.weapon} · ${job.element} · Lv.${lv} · Job ${inst.activeJob}</div>
+        <div style="font-size:12px;color:var(--ui-muted);margin-top:4px">${lv >= 90 ? 'Max level' : `${jobXp.toLocaleString()} / ${characterXpToNextLevel(job, lv).toLocaleString()} XP to next level`}</div>
         <div style="font-size:12px;color:var(--ui-muted);margin-top:4px">${job.title}</div>`;
     }
 

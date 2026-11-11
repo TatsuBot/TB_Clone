@@ -80,6 +80,7 @@ const weaponAdvantage: Record<WeaponType, WeaponType | null> = {
   Spear: "Sword",
   Bow: "Spear",
   Staff: null,
+  None: null,
 };
 
 const elementAdvantage: Record<ElementType, ElementType | null> = {

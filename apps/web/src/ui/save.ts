@@ -22,9 +22,6 @@ export interface SaveGame {
   /** Optional meta progress — expand later */
   meta?: {
     selectedChapter?: number;
-    rank?: number;
-    xp?: number;
-    xpToRank?: number;
     stamina?: number;
     staminaMax?: number;
     energy?: number;
@@ -42,9 +39,6 @@ export function buildSave(meta?: SaveGame['meta']): SaveGame {
     characters: structuredClone(ownedCharacters),
     companions: structuredClone(ownedCompanions),
     meta: meta ?? {
-      rank: snap.rank,
-      xp: snap.xp,
-      xpToRank: snap.xpToRank,
       stamina: snap.stamina,
       staminaMax: snap.staminaMax,
       energy: snap.energy,
@@ -68,7 +62,8 @@ export function isUsableCharacter(c: unknown): c is CharacterInstance {
     (x.activeJob === 1 || x.activeJob === 2 || x.activeJob === 3) &&
     Array.isArray(x.jobLevels) &&
     x.jobLevels.length === 3 &&
-    x.jobLevels.every(isNum)
+    x.jobLevels.every(isNum) &&
+    (x.jobXp === undefined || (Array.isArray(x.jobXp) && x.jobXp.length === 3 && x.jobXp.every(isNum)))
   );
 }
 
@@ -91,7 +86,11 @@ export function applySave(data: SaveGame): { ok: true } | { ok: false; error: st
     return { ok: false, error: 'Save missing characters or companions' };
   }
 
-  const characters = data.characters.filter(isUsableCharacter);
+  const characters: CharacterInstance[] = data.characters.filter(isUsableCharacter).map((c) => ({
+    ...c,
+    // Existing saves predate per-job XP; initialize their progress at the current levels.
+    jobXp: c.jobXp ?? [0, 0, 0] as [number, number, number],
+  }));
   const companions = data.companions.filter(isUsableCompanion);
   if (characters.length === 0) return { ok: false, error: 'Save has no usable characters' };
 

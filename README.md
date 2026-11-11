@@ -46,7 +46,9 @@ Screens are interfaces only — recruitment, job unlocks, currency, and real pro
 
 ## Not built yet (next up per the plan)
 
-Phase 3 skills / weapon triangle / elements, per-unit weapon and element fields, jobs and
+- Parse the `Monster` entries in `apps/web/public/wikiCharData.txt` into
+  `packages/core/src/data/enemies.ts`, keeping enemy records separate from recruitable adventurers.
+
 roster data (Phase 5), meta layer (Phase 6), and the Capacitor / Tauri wrappers. A `packages/meta`
 and `apps/mobile` / `apps/desktop` can slot into the existing workspaces.
 

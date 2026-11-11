@@ -1,17 +1,13 @@
 /**
- * Meta progress: coins, XP, stamina, cleared stages, item bag.
+ * Meta progress: coins, stamina, cleared stages, item bag.
  * Persisted through save.ts.
  */
 
 import type { GrantedItem, RewardResult, RecruitBoss } from '@game/core';
 import { ownedCharacters } from './inventory';
-import { createCharacterInstance, CHARACTERS } from '@game/core';
+import { addCharacterJobXp, createCharacterInstance, CHARACTERS } from '@game/core';
 
 export interface ProgressState {
-  rank: number;
-  xp: number;
-  /** XP required for next rank (simple curve) */
-  xpToRank: number;
   stamina: number;
   staminaMax: number;
   energy: number;
@@ -29,9 +25,6 @@ export interface ProgressState {
 }
 
 export const progress: ProgressState = {
-  rank: 12,
-  xp: 0,
-  xpToRank: 1000,
   stamina: 42,
   staminaMax: 50,
   energy: 18,
@@ -50,33 +43,40 @@ export function addItems(items: GrantedItem[]): void {
   }
 }
 
-export function addXp(amount: number): void {
-  progress.xp += amount;
-  while (progress.xp >= progress.xpToRank) {
-    progress.xp -= progress.xpToRank;
-    progress.rank += 1;
-    progress.xpToRank = Math.round(progress.xpToRank * 1.15);
-    progress.staminaMax += 1;
-    progress.stamina = progress.staminaMax;
-  }
-}
-
-/** Apply a clear: mark stage, grant rewards, spend stamina. Returns false if already applied this session flag handled by caller. */
+/** Apply stage rewards and distribute its XP pool across the deployed characters. */
 export function applyClearRewards(
   stageId: string,
   reward: RewardResult,
   staminaCost: number
-): void {
+): { name: string; job: number; xp: number; level: number; levelsGained: number }[] {
   progress.cleared[stageId] = true;
   progress.coins += reward.coins;
-  addXp(reward.xp);
   addItems(reward.items);
   progress.stamina = Math.max(0, progress.stamina - staminaCost);
+  const participants = ownedCharacters.slice(0, 6);
+  const xpEach = participants.length > 0 ? Math.floor(reward.xp / participants.length) : 0;
+  const remainder = participants.length > 0 ? reward.xp % participants.length : 0;
+  const characterXp = participants.map((character, index) => {
+    const xp = xpEach + (index < remainder ? 1 : 0);
+    const job = character.activeJob;
+    const jobDef = CHARACTERS[character.defId]?.jobs[job - 1];
+    const result = jobDef
+      ? addCharacterJobXp(character, jobDef, xp)
+      : { xpAwarded: 0, levelsGained: 0 };
+    return {
+      name: CHARACTERS[character.defId]?.name ?? character.defId,
+      job,
+      xp: result.xpAwarded,
+      level: character.jobLevels[job - 1],
+      levelsGained: result.levelsGained,
+    };
+  });
   progress.lastClear = {
     stageId,
     reward,
     at: new Date().toISOString(),
   };
+  return characterXp;
 }
 
 export function canAffordStage(staminaCost: number): boolean {
@@ -90,9 +90,6 @@ export function progressSnapshot(): ProgressState {
 
 export function applyProgressSnapshot(data: Partial<ProgressState> | undefined): void {
   if (!data) return;
-  if (typeof data.rank === 'number') progress.rank = data.rank;
-  if (typeof data.xp === 'number') progress.xp = data.xp;
-  if (typeof data.xpToRank === 'number') progress.xpToRank = data.xpToRank;
   if (typeof data.stamina === 'number') progress.stamina = data.stamina;
   if (typeof data.staminaMax === 'number') progress.staminaMax = data.staminaMax;
   if (typeof data.energy === 'number') progress.energy = data.energy;
