@@ -18,4 +18,10 @@ export const RULES = {
    * "no enemy in between", so the default is yes. Flip to test the stricter reading.
    */
   chainThroughEmpty: true,
+  /**
+   * Weapon triangle advantage multiplier.
+   * TB wiki classic is 2.0 (disadvantage 0.5); original clone baseline was 1.5 (disadvantage 0.75).
+   * Currently set to 1.75 per user configuration.
+   */
+  weaponTriangleAdvantage: 1.75,
 } as const;

@@ -1,12 +1,17 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, beforeEach } from "vitest";
 import {
   buildSkillEvents,
   computeDamage,
   parseBoard,
   resolveAttacks,
+  setWeaponAdvantageMultiplier,
+  getWeaponAdvantageMultiplier,
 } from "../src";
 
 describe("combat resolution", () => {
+  beforeEach(() => {
+    setWeaponAdvantageMultiplier(1.75);
+  });
   it("damage is atk - def, minimum 1", () => {
     const board = parseBoard(["1 x"], { "1": { atk: 10 }, x: { def: 3 } });
     expect(computeDamage(board.getUnit("1"), board.getUnit("x"))).toBe(7);
@@ -67,7 +72,16 @@ describe("combat resolution", () => {
     target.weapon = "Bow";
     target.element = "Ice";
 
+    // Default weapon multiplier is 1.75: base 20 * 1.75 * 1.5 = 52.5 => 53
+    expect(computeDamage(attacker, target)).toBe(53);
+
+    // Can be configured to 1.5: base 20 * 1.5 * 1.5 = 45
+    setWeaponAdvantageMultiplier(1.5);
     expect(computeDamage(attacker, target)).toBe(45);
+
+    // Can be configured to 2.0 (TB wiki standard): base 20 * 2.0 * 1.5 = 60
+    setWeaponAdvantageMultiplier(2.0);
+    expect(computeDamage(attacker, target)).toBe(60);
   });
 
   it("magical attacks use matk vs mdef with a weapon/element advantage", () => {
@@ -130,7 +144,8 @@ describe("combat resolution", () => {
         },
       ];
 
-      expect(computeDamage(attacker, target, { trigger: "pincer" })).toBe(39);
+      // Magic: (24 - 8) * 1.5 = 24. Weapon: (30 - 10) * 0.5 * 1.75 = 17.5. Total = 41.5 => 42
+      expect(computeDamage(attacker, target, { trigger: "pincer" })).toBe(42);
     }
   });
 

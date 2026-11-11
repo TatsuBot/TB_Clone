@@ -1,4 +1,4 @@
-import type { Board, Fallen, Pos, Resolution, Unit } from "@game/core";
+import type { Board, Fallen, Pos, Resolution, TapReport, Unit } from "@game/core";
 import { constrainToken, type Rect } from "./constrain";
 
 interface FloatText {
@@ -6,6 +6,7 @@ interface FloatText {
   x: number;
   y: number;
   born: number;
+  color?: string;
 }
 
 const TOKEN_R = 0.4; // token radius in cells
@@ -115,8 +116,14 @@ export class Renderer {
     const board = this.getBoard();
 
     const before = new Map<string, number>();
-    for (const a of res.attacks)
-      if (!before.has(a.target)) before.set(a.target, a.targetHp + a.damage);
+    for (const a of res.attacks) {
+      if (!before.has(a.target)) {
+        before.set(
+          a.target,
+          a.effect === "heal" ? Math.max(0, a.targetHp - a.damage) : a.targetHp + a.damage,
+        );
+      }
+    }
     before.forEach((hp, id) => this.shownHp.set(id, hp));
 
     const fallen = new Map<string, Fallen>();
@@ -135,11 +142,27 @@ export class Renderer {
             this.flash.set(a.attacker, nowRun + 220);
             this.shownHp.set(a.target, Math.max(0, a.targetHp));
             if (origin) {
+              let text = `-${a.damage}`;
+              let color = "#ffffff";
+              if (a.effect === "heal") {
+                text = `+${a.damage}`;
+                color = "#7dff9a";
+              } else if (a.effect === "buff") {
+                text = `+${(a.stat ?? "BUFF").toUpperCase()}`;
+                color = "#fde047";
+              } else if (a.effect === "debuff") {
+                text = `-${(a.stat ?? "DEBUFF").toUpperCase()}`;
+                color = "#f87171";
+              } else if (a.effect === "cure") {
+                text = "Cured!";
+                color = "#38bdf8";
+              }
               this.floats.push({
-                text: `-${a.damage}`,
+                text,
                 x: (origin.col + 0.5) * this.cell,
                 y: (origin.row + 0.3) * this.cell,
                 born: nowRun,
+                color,
               });
             }
           },
@@ -156,6 +179,41 @@ export class Renderer {
     }
     this.queue.push({ at: now + t, run: () => this.shownHp.clear() });
     return t;
+  }
+
+  showTapFeedback(report: TapReport, now: number = performance.now()): void {
+    const board = this.getBoard();
+    const color = report.category === "buff" ? "#7dff9a" : "#f87171";
+    const text =
+      report.category === "buff"
+        ? `+${report.percent}% ${(report.stat ?? "BUFF").toUpperCase()}`
+        : `${report.percent}% ${(report.stat ?? "DEBUFF").toUpperCase()}`;
+
+    if (board.hasUnit(report.unitId)) {
+      const origin = board.originOf(report.unitId);
+      this.flash.set(report.unitId, now + 300);
+      this.floats.push({
+        text: `Tap: ${report.skill.name ?? text}`,
+        x: (origin.col + 0.5) * this.cell,
+        y: (origin.row + 0.15) * this.cell,
+        born: now,
+        color,
+      });
+    }
+
+    for (const tid of report.targets) {
+      if (board.hasUnit(tid)) {
+        const p = board.originOf(tid);
+        this.flash.set(tid, now + 250);
+        this.floats.push({
+          text,
+          x: (p.col + 0.5) * this.cell,
+          y: (p.row + 0.35) * this.cell,
+          born: now + 60,
+          color,
+        });
+      }
+    }
   }
 
   draw(now: number): void {
@@ -227,8 +285,11 @@ export class Renderer {
     ctx.textAlign = "center";
     for (const f of this.floats) {
       const t = (now - f.born) / 900;
-      ctx.fillStyle = `rgba(255,255,255,${1 - t})`;
+      ctx.save();
+      ctx.globalAlpha = Math.max(0, 1 - t);
+      ctx.fillStyle = f.color ?? "#ffffff";
       ctx.fillText(f.text, f.x, f.y - t * cell * 0.5);
+      ctx.restore();
     }
   }
 

@@ -487,6 +487,21 @@ const release = () => endDrag(performance.now());
 canvas.addEventListener("pointerup", release);
 canvas.addEventListener("pointercancel", release);
 
+canvas.addEventListener("dblclick", (e) => {
+  if (busy || session || battle.phase !== "player") return;
+  const cell = renderer.cellFromClient(e.clientX, e.clientY);
+  if (!cell) return;
+  const unitId = battle.board.idAt(cell);
+  if (!unitId) return;
+  const report = battle.activateTap(unitId);
+  if (report) {
+    renderer.showTapFeedback(report);
+    hud(
+      `${report.unitName} used ${report.skill.name ?? "Tap Skill"}! (${report.remainingCharges} charges left)`,
+    );
+  }
+});
+
 canvas.addEventListener("contextmenu", (e) => {
   e.preventDefault();
   const cell = renderer.cellFromClient(e.clientX, e.clientY);

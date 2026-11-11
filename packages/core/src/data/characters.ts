@@ -1,4 +1,4 @@
-import type { DamageComponent } from "../types";
+import type { DamageComponent, ElementType, WeaponType } from "../types";
 
 /**
  * Adventurer / character data — first batch from Terra Battle wiki.
@@ -6,17 +6,6 @@ import type { DamageComponent } from "../types";
  * Stats are Lv1 / Lv90 bounds per job where the wiki provided them.
  */
 
-export type WeaponType = "Sword" | "Spear" | "Bow" | "Staff";
-export type ElementType =
-  | "—"
-  | "Fire"
-  | "Ice"
-  | "Lightning"
-  | "Darkness"
-  | "Healing"
-  | "Remedy"
-  | "Photon"
-  | "Graviton";
 export type CharacterRarity = "C" | "B" | "A" | "S" | "SS" | "Z";
 
 export interface SkillUnlock {

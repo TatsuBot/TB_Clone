@@ -26,7 +26,16 @@ export class Board {
     b.occupancy = [...this.occupancy];
     b.terrain = [...this.terrain];
     b.hazards = [...this.hazards];
-    for (const [id, u] of this.units) b.units.set(id, { ...u, stats: { ...u.stats } });
+    for (const [id, u] of this.units) {
+      b.units.set(id, {
+        ...u,
+        stats: { ...u.stats },
+        skills: u.skills ? u.skills.map((s) => ({ ...s })) : undefined,
+        buffs: u.buffs ? u.buffs.map((buff) => ({ ...buff })) : undefined,
+        statuses: u.statuses ? u.statuses.map((status) => ({ ...status })) : undefined,
+        tapCharges: u.tapCharges ? { ...u.tapCharges } : undefined,
+      });
+    }
     return b;
   }
 

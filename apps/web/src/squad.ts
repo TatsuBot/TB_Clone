@@ -26,21 +26,19 @@ export function placementsFromSquad(squad: CharacterInstance[]): Placement[] {
       ? charStatsAtLevel(job, level)
       : { hp: 60, atk: 14, def: 2, matk: 10, mdef: 10 };
     const skills: Skill[] = (job?.skills ?? []).flatMap((skill) => {
-      if (
-        skill.level > level ||
-        skill.trigger === "tap" ||
-        !skill.damageComponents
-      ) {
+      if (skill.level > level) {
         return [];
       }
       return [
         {
           id: skill.id,
           name: skill.name,
+          description: skill.description,
           trigger: skill.trigger,
           frequency: skill.frequency,
           power: skill.power,
           damageComponents: skill.damageComponents,
+          target: skill.target as any,
         },
       ];
     });

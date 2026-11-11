@@ -9,6 +9,8 @@ import {
   frequencyAtLevel,
   charStatsAtLevel,
   skillsUnlocked,
+  cycleWeaponAdvantagePreset,
+  getWeaponAdvantageMultiplier,
 } from '@game/core';
 import { stagesForChapter as coreStageRefs, getStageRef } from '@game/core';
 import {
@@ -146,6 +148,16 @@ export class UI {
 
     document.querySelectorAll('.toggle').forEach((el) => {
       el.addEventListener('click', () => el.classList.toggle('on'));
+    });
+
+    const advRow = document.getElementById('row-weapon-advantage');
+    const advVal = document.getElementById('val-weapon-advantage');
+    if (advVal) {
+      advVal.textContent = `×${getWeaponAdvantageMultiplier().toFixed(2).replace(/\.00$/, '')}`;
+    }
+    advRow?.addEventListener('click', () => {
+      const mult = cycleWeaponAdvantagePreset();
+      if (advVal) advVal.textContent = `×${mult.toFixed(2).replace(/\.00$/, '')}`;
     });
 
     document.getElementById('btn-save-game')?.addEventListener('click', () => {

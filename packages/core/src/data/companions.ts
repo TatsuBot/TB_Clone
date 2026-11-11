@@ -8,7 +8,7 @@
 
 export type CompanionRarity = 'D' | 'C' | 'B' | 'A' | 'S' | 'SS' | 'Z';
 
-export type SkillTrigger = 'pincer' | 'chain' | 'equip' | 'self';
+export type CompanionSkillTrigger = 'pincer' | 'chain' | 'equip' | 'self';
 
 export type SkillTarget =
   | 'self'
@@ -25,7 +25,7 @@ export interface CompanionSkill {
   name: string;
   /** Short mechanical description */
   description: string;
-  trigger: SkillTrigger;
+  trigger: CompanionSkillTrigger;
   target: SkillTarget;
   /** Frequency at level 1 and at max level (percent). Linear interpolate between. */
   frequencyMin: number;

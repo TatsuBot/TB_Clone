@@ -58,7 +58,7 @@ export type ElementType =
   | "Graviton"
   | "Sun"
   | "Moon";
-export type SkillTrigger = "pincer" | "chain" | "counter" | "equip";
+export type SkillTrigger = "pincer" | "chain" | "counter" | "equip" | "tap";
 
 export type SkillPowerTier = "Mega" | "Giga" | "Tera" | "Peta";
 
@@ -75,8 +75,34 @@ export type SkillShape =
   | "row"
   | "column"
   | "cross"
-  | "adjacent";
+  | "adjacent"
+  | "lateral"
+  | "all";
 export type SkillTargetMode = "enemy" | "ally" | "self" | "all";
+export type SkillEffectType =
+  | "damage"
+  | "heal"
+  | "buff"
+  | "debuff"
+  | "status"
+  | "cure"
+  | "utility";
+
+export interface ActiveBuff {
+  id: string;
+  stat: "atk" | "def" | "matk" | "mdef";
+  percent: number;
+  duration: number; // turns remaining
+  isTap?: boolean;
+}
+
+export type StatusType = "poison" | "paralysis" | "sleep" | "confusion";
+
+export interface StatusEffect {
+  type: StatusType;
+  duration: number;
+  power?: number;
+}
 
 export interface DamageComponent {
   /** Weapon uses ATK/DEF and the weapon triangle; magic uses MATK/MDEF and an element. */
@@ -89,11 +115,14 @@ export interface DamageComponent {
 export interface Skill {
   id: string;
   name?: string;
+  description?: string;
   trigger: SkillTrigger;
   /** Percent chance to activate when the trigger fires, 0–100. Equip skills ignore this and are always active. */
   frequency?: number;
   /** Explicit numeric override for the skill's power multiplier. */
   power?: number;
+  /** Skill element or 'Healing'. */
+  element?: ElementType | "Healing";
   /** Separate channels for hybrid attacks; when active these replace the default hit. */
   damageComponents?: DamageComponent[];
   /** Optional explicit tier label; if omitted, the tier is inferred from the skill name prefix. */
@@ -104,6 +133,12 @@ export interface Skill {
   radius?: number;
   /** Who the skill targets. */
   target?: SkillTargetMode;
+  effect?: SkillEffectType;
+  stat?: "atk" | "def" | "matk" | "mdef";
+  statPercent?: number;
+  duration?: number;
+  cureStatus?: StatusType | "all";
+  tapCharges?: number;
 }
 
 export interface SkillEvent {
@@ -117,10 +152,14 @@ export interface SkillEvent {
   damageComponents?: DamageComponent[];
   chance?: number;
   order: number;
-  effect: "damage" | "heal" | "status" | "utility";
+  effect: SkillEffectType;
   shape?: SkillShape;
   radius?: number;
   targetMode?: SkillTargetMode;
+  stat?: "atk" | "def" | "matk" | "mdef";
+  statPercent?: number;
+  duration?: number;
+  cureStatus?: StatusType | "all";
 }
 
 export interface UnitStats {
@@ -148,6 +187,21 @@ export interface Unit {
   /** Footprint in cells. Allies are always 1x1; bosses may be larger. */
   w: number;
   h: number;
+  buffs?: ActiveBuff[];
+  statuses?: StatusEffect[];
+  tapCharges?: Record<string, number>;
+}
+
+export interface TapReport {
+  unitId: string;
+  unitName: string;
+  skill: Skill;
+  category: "debuff" | "buff";
+  remainingCharges: number;
+  stat?: "atk" | "def" | "matk" | "mdef";
+  percent: number;
+  duration: number;
+  targets: string[];
 }
 
 export type Terrain = "floor" | "wall";
