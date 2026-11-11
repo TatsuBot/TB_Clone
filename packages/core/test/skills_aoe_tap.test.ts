@@ -163,10 +163,10 @@ describe("Healing, Buffs, and Status Remedies", () => {
       id: "hero",
       side: "ally",
       name: "Hero",
-      job: 1,
-      level: 50,
       stats: { maxHp: 1000, atk: 100, def: 50, matk: 80, mdef: 40 },
       hp: 1000,
+      w: 1,
+      h: 1,
       skills: [],
     };
 
@@ -175,7 +175,6 @@ describe("Healing, Buffs, and Status Remedies", () => {
     // Apply +50% ATK buff
     applyBuff(unit, {
       id: "buff_atk_1",
-      name: "Attack +50%",
       stat: "atk",
       percent: 50,
       duration: 2,
@@ -185,7 +184,6 @@ describe("Healing, Buffs, and Status Remedies", () => {
     // Apply another +180% ATK buff -> sum is +230%, clamped to +200% (max 3x base)
     applyBuff(unit, {
       id: "buff_atk_2",
-      name: "Attack +180%",
       stat: "atk",
       percent: 180,
       duration: 2,
@@ -195,7 +193,6 @@ describe("Healing, Buffs, and Status Remedies", () => {
     // Test debuff clamping: -250% clamped to -200% (stats have minimum of 1)
     applyBuff(unit, {
       id: "debuff_def",
-      name: "Defense -250%",
       stat: "def",
       percent: -250,
       duration: 2,

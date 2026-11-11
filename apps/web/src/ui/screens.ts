@@ -5,6 +5,7 @@ export type ScreenId =
   | 'map'
   | 'stage-select'
   | 'pre-battle'
+  | 'party-select'
   | 'battle'
   | 'tavern'
   | 'recruit'
@@ -27,6 +28,7 @@ export const SCREENS: Record<ScreenId, ScreenMeta> = {
   map: { id: 'map', title: 'Map', showStatusBar: true, showBottomNav: true },
   'stage-select': { id: 'stage-select', title: 'Stages', showStatusBar: true, showBottomNav: false },
   'pre-battle': { id: 'pre-battle', title: 'Confirm Party', showStatusBar: true, showBottomNav: false },
+  'party-select': { id: 'party-select', title: 'Select Party', showStatusBar: true, showBottomNav: false },
   battle: { id: 'battle', title: 'Battle', showStatusBar: false, showBottomNav: false },
   tavern: { id: 'tavern', title: 'Tavern', showStatusBar: true, showBottomNav: true },
   recruit: { id: 'recruit', title: 'Recruit', showStatusBar: true, showBottomNav: false },

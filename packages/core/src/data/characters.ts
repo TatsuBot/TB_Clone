@@ -3856,7 +3856,62 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 2000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "counterattack",
+            "name": "Counterattack",
+            "description": "Inflict x1.5 character-weapon damage.",
+            "trigger": "counter",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.5
+              }
+            ],
+            "power": 1.5
+          },
+          {
+            "level": 15,
+            "id": "attack_10",
+            "name": "Attack +10%",
+            "description": "Self; ATK +10% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 35,
+            "id": "gigasword",
+            "name": "Gigasword",
+            "description": "Inflict x2 sword damage.",
+            "trigger": "pincer",
+            "frequency": 40,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.0
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 65,
+            "id": "counterattack_2",
+            "name": "Counterattack",
+            "description": "Inflict x2 character-weapon damage.",
+            "trigger": "counter",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.0
+              }
+            ],
+            "power": 2.0
+          }
+        ]
       },
       {
         jobIndex: 2,
@@ -3886,7 +3941,49 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 2500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "defense_10",
+            "name": "Defense +10%",
+            "description": "Self; DEF +10% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 15,
+            "id": "megasword",
+            "name": "Megasword",
+            "description": "Inflict x1 sword damage.",
+            "trigger": "pincer",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.0
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 35,
+            "id": "hp_10",
+            "name": "HP +10%",
+            "description": "Self; HP +10%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 65,
+            "id": "physical_damage_x1_5",
+            "name": "Physical Damage x1.5",
+            "description": "Self; Boost physical damage inflicted by 50% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          }
+        ]
       },
       {
         jobIndex: 3,
@@ -3916,7 +4013,54 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 2500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "attack_10",
+            "name": "Attack +10%",
+            "description": "Self; ATK +10%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 15,
+            "id": "defense_10",
+            "name": "Defense +10%",
+            "description": "Self; DEF +10%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 35,
+            "id": "counterattack",
+            "name": "Counterattack",
+            "description": "Inflict x1.5 character-weapon damage.",
+            "trigger": "counter",
+            "frequency": 35,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.5
+              }
+            ],
+            "power": 1.5
+          },
+          {
+            "level": 65,
+            "id": "terasword",
+            "name": "Terasword",
+            "description": "Inflict x3 sword damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 3.0
+              }
+            ],
+            "power": 3.0
+          }
+        ]
       }
     ]
   },
@@ -3956,7 +4100,54 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "magic_attack_10",
+            "name": "Magic Attack +10%",
+            "description": "Self; Boost MATK by 10% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 15,
+            "id": "thunder_strike",
+            "name": "Thunder Strike",
+            "description": "Inflict x1 lightning and x0.5 spear damage.",
+            "trigger": "pincer",
+            "frequency": 80,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 0.5
+              }
+            ],
+            "power": 0.5
+          },
+          {
+            "level": 35,
+            "id": "dark_damage_down_20",
+            "name": "Dark Damage Down 20%",
+            "description": "Adjacent, Equip; Reduce darkness damage by 20% for adjacent allies.",
+            "trigger": "equip"
+          },
+          {
+            "level": 65,
+            "id": "lightning_strike",
+            "name": "Lightning Strike",
+            "description": "Area (1); Inflict x2 lightning and x0.7 spear damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 0.7
+              }
+            ],
+            "power": 0.7
+          }
+        ]
       },
       {
         jobIndex: 2,
@@ -3986,7 +4177,53 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "megaspear",
+            "name": "Megaspear",
+            "description": "Inflict x1 spear damage.",
+            "trigger": "pincer",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.0
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 15,
+            "id": "attack_10",
+            "name": "Attack +10%",
+            "description": "Equip; Boost ATK by 10%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 35,
+            "id": "gigaspear",
+            "name": "Gigaspear",
+            "description": "Inflict x2 spear damage.",
+            "trigger": "pincer",
+            "frequency": 40,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.0
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 65,
+            "id": "negotiator",
+            "name": "Negotiator",
+            "description": "Increases rate of recruiting pincered, defeated monsters by 200%.",
+            "trigger": "chain",
+            "frequency": 30
+          }
+        ]
       },
       {
         jobIndex: 3,
@@ -4016,7 +4253,52 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "anti_darkness_shield",
+            "name": "Anti-Darkness Shield",
+            "description": "Equip; Reduce darkness damage by 40%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 15,
+            "id": "magic_attack_10",
+            "name": "Magic Attack +10%",
+            "description": "Equip; Boost MATK by 10%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 35,
+            "id": "thunder_strike",
+            "name": "Thunder Strike",
+            "description": "1 Column; Inflict x1 lightning and x0.5 spear damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 0.5
+              }
+            ],
+            "power": 0.5
+          },
+          {
+            "level": 65,
+            "id": "tempest_strike",
+            "name": "Tempest Strike",
+            "description": "Inflict x3 lightning and x0.9 spear damage.",
+            "trigger": "pincer",
+            "frequency": 40,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 0.9
+              }
+            ],
+            "power": 0.9
+          }
+        ]
       }
     ]
   },
@@ -4256,7 +4538,40 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 4000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "antidote",
+            "name": "Antidote",
+            "description": "All; Cure all allies of poison.",
+            "trigger": "chain",
+            "frequency": 100,
+            "target": "all"
+          },
+          {
+            "level": 15,
+            "id": "poison",
+            "name": "Poison",
+            "description": "Area (2); Apply poison of power 2 for 3 turns with a 30% chance",
+            "trigger": "chain",
+            "frequency": 100
+          },
+          {
+            "level": 35,
+            "id": "poison_ward",
+            "name": "Poison Ward",
+            "description": "Equip; Immune to poison.",
+            "trigger": "equip"
+          },
+          {
+            "level": 65,
+            "id": "control_time_2_sec",
+            "name": "Control Time +2 Sec",
+            "description": "Chain; Extends chained allies' move timers by 2 seconds for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30
+          }
+        ]
       },
       {
         jobIndex: 2,
@@ -4286,7 +4601,54 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 4000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "megaspear",
+            "name": "Megaspear",
+            "description": "Inflict x1 spear damage.",
+            "trigger": "pincer",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.0
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 15,
+            "id": "levitation",
+            "name": "Levitation",
+            "description": "All; All allies evade ground attacks and floor traps for 3 turns.",
+            "trigger": "chain",
+            "frequency": 100,
+            "target": "all"
+          },
+          {
+            "level": 35,
+            "id": "megaspear_2",
+            "name": "Megaspear",
+            "description": "1 Column; Inflict x1 spear damage on caster's column.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.0
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 65,
+            "id": "powered_point_amp",
+            "name": "Powered Point Amp",
+            "description": "Equip; Charge power points 20% faster.",
+            "trigger": "equip"
+          }
+        ]
       },
       {
         jobIndex: 3,
@@ -4316,7 +4678,38 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 4000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "defense_10",
+            "name": "Defense +10%",
+            "description": "Equip; Boost DEF by 10%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 15,
+            "id": "giga_regen",
+            "name": "Giga Regen",
+            "description": "Chain; Applies Regen with power 2 (cap 600) for 3 turns.",
+            "trigger": "chain",
+            "frequency": 90
+          },
+          {
+            "level": 35,
+            "id": "hp_20",
+            "name": "HP +20%",
+            "description": "Equip; Boost HP by 20%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 65,
+            "id": "venom",
+            "name": "Venom",
+            "description": "1 Column; Applies poison with power 3 on caster's column for 3 turns with an 80% chance.",
+            "trigger": "chain",
+            "frequency": 30
+          }
+        ]
       }
     ]
   },
@@ -4456,7 +4849,50 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 4000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "attack_10",
+            "name": "Attack +10%",
+            "description": "Self; ATK +10% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 15,
+            "id": "fancy_footwork",
+            "name": "Fancy Footwork",
+            "description": "Self; Physical evasion +25% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 35,
+            "id": "megaspear",
+            "name": "Megaspear",
+            "description": "Inflict x1 spear damage.",
+            "trigger": "pincer",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.0
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 65,
+            "id": "ninja_footwork",
+            "name": "Ninja Footwork",
+            "description": "Self; Physical evasion +50% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          }
+        ]
       },
       {
         jobIndex: 2,
@@ -4486,7 +4922,39 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 4000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "disarm_bomb",
+            "name": "Disarm Bomb",
+            "description": "Self; Disarm bombs in the area you've traveled.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 15,
+            "id": "attack_10",
+            "name": "Attack +10%",
+            "description": "Self; ATK +10%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 35,
+            "id": "phys_dmg_down_20",
+            "name": "Phys Dmg Down 20%",
+            "description": "Adjacent; Reduce physical damage received by 20%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 65,
+            "id": "negate_circle",
+            "name": "Negate Circle",
+            "description": "Spear; Negate the Circle of Carnage for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30
+          }
+        ]
       },
       {
         jobIndex: 3,
@@ -4516,7 +4984,48 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "defense_10",
+            "name": "Defense +10%",
+            "description": "Self; DEF +10%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 15,
+            "id": "outflank",
+            "name": "Outflank",
+            "description": "Self; Deal 50% more damage to completely surrounded enemies (unstackable).",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 35,
+            "id": "gigaspear",
+            "name": "Gigaspear",
+            "description": "Inflict x2 spear damage.",
+            "trigger": "pincer",
+            "frequency": 40,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.0
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 65,
+            "id": "augment_circle",
+            "name": "Augment Circle",
+            "description": "Spear; Circle of Carnage x1.2 for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "power": 1.2
+          }
+        ]
       }
     ]
   },
@@ -4556,7 +5065,45 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "defense_5",
+            "name": "Defense +5%",
+            "description": "Adjacent, Equip; Boost DEF by 5% for adjacent allies.",
+            "trigger": "equip"
+          },
+          {
+            "level": 15,
+            "id": "capsule_point",
+            "name": "Capsule Point",
+            "description": "Chain; Create a capsule point that increases DEF by 10% per capsule for all allies.",
+            "trigger": "chain",
+            "frequency": 30
+          },
+          {
+            "level": 35,
+            "id": "megaspear",
+            "name": "Megaspear",
+            "description": "Inflict x1 spear damage.",
+            "trigger": "pincer",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.0
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 65,
+            "id": "fancy_footwork",
+            "name": "Fancy Footwork",
+            "description": "Equip; Boost physical evasion by 25%.",
+            "trigger": "equip"
+          }
+        ]
       },
       {
         jobIndex: 2,
@@ -4586,7 +5133,39 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 6000000,
         expCoeff: 2.05,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "heal_500",
+            "name": "Heal 500",
+            "description": "Chain; Heal 500 HP.",
+            "trigger": "chain",
+            "frequency": 30
+          },
+          {
+            "level": 15,
+            "id": "magic_defense_10",
+            "name": "Magic Defense +10%",
+            "description": "Equip; Boost MDEF by 10%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 35,
+            "id": "heal_1000",
+            "name": "Heal 1000",
+            "description": "Chain; Heal 1000 HP.",
+            "trigger": "chain",
+            "frequency": 30
+          },
+          {
+            "level": 65,
+            "id": "evasive_arts",
+            "name": "Evasive Arts",
+            "description": "Chain; Boost physical evasion by 50% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30
+          }
+        ]
       },
       {
         jobIndex: 3,
@@ -4616,7 +5195,44 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 6000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "attack_10",
+            "name": "Attack +10%",
+            "description": "Equip; Boost ATK by 10%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 15,
+            "id": "defense_10",
+            "name": "Defense +10%",
+            "description": "Adjacent, Equip; Boost DEF by 10% for adjacent allies.",
+            "trigger": "equip"
+          },
+          {
+            "level": 35,
+            "id": "gigaspear",
+            "name": "Gigaspear",
+            "description": "Inflict x2 spear damage.",
+            "trigger": "pincer",
+            "frequency": 40,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.0
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 65,
+            "id": "self_sacrifice",
+            "name": "Self-Sacrifice",
+            "description": "Equip; Receive damage taken by allies until user reaches 1 HP.",
+            "trigger": "equip"
+          }
+        ]
       }
     ]
   },
@@ -4856,7 +5472,54 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 4000000,
         expCoeff: 2.15,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "levitation",
+            "name": "Levitation",
+            "description": "All; All allies evade ground attacks and floor traps for 3 turns.",
+            "trigger": "chain",
+            "frequency": 100,
+            "target": "all"
+          },
+          {
+            "level": 15,
+            "id": "levitation_2",
+            "name": "Levitation",
+            "description": "Equip; Evade ground attacks and floor traps.",
+            "trigger": "equip"
+          },
+          {
+            "level": 35,
+            "id": "megasword",
+            "name": "Megasword",
+            "description": "Inflict x1 sword damage.",
+            "trigger": "pincer",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.0
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 65,
+            "id": "leeching_blade",
+            "name": "Leeching Blade",
+            "description": "Inflict x2 magical damage and absorb HP (cap 700).",
+            "trigger": "pincer",
+            "frequency": 30,
+            "power": 2.0,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 2.0
+              }
+            ]
+          }
+        ]
       },
       {
         jobIndex: 2,
@@ -4886,7 +5549,36 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 4000000,
         expCoeff: 2.15,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "defense_10",
+            "name": "Defense +10%",
+            "description": "Equip; Boost DEF by 10%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 15,
+            "id": "disarm_bomb",
+            "name": "Disarm Bomb",
+            "description": "Equip; Moving over bombs removes them without exploding.",
+            "trigger": "equip"
+          },
+          {
+            "level": 35,
+            "id": "hp_20",
+            "name": "HP +20%",
+            "description": "Equip; Boost HP by 20%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 65,
+            "id": "treasure_hunter",
+            "name": "Treasure Hunter",
+            "description": "Equip; Increases rate of item drops by 25% of the base rate.",
+            "trigger": "equip"
+          }
+        ]
       },
       {
         jobIndex: 3,
@@ -4916,7 +5608,45 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 4500000,
         expCoeff: 2.15,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "attack_10",
+            "name": "Attack +10%",
+            "description": "Equip; Boost ATK by 10%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 15,
+            "id": "sleep_guard",
+            "name": "Sleep Guard",
+            "description": "Adjacent, Equip; +50% resistance to sleep for adjacent allies.",
+            "trigger": "equip"
+          },
+          {
+            "level": 35,
+            "id": "gigasword",
+            "name": "Gigasword",
+            "description": "Inflict x2 sword damage.",
+            "trigger": "pincer",
+            "frequency": 40,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.0
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 65,
+            "id": "panacea",
+            "name": "Panacea",
+            "description": "Area (2); Cure allies of sleep, poison, paralysis, confusion, demoralization, petrification, icebind, and shadowbind status effects.",
+            "trigger": "chain",
+            "frequency": 100
+          }
+        ]
       }
     ]
   },
@@ -5056,7 +5786,56 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 4500000,
         expCoeff: 2.15,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "megabow",
+            "name": "Megabow",
+            "description": "Inflict x1 bow damage.",
+            "trigger": "pincer",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.0
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 15,
+            "id": "defense_10",
+            "name": "Defense +10%",
+            "description": "Self; Boost DEF by 10% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 35,
+            "id": "mega_heal",
+            "name": "Mega Heal",
+            "description": "Self; Heal with power 2 (cap 700).",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 65,
+            "id": "chaos_arrows",
+            "name": "Chaos Arrows",
+            "description": "Area (1); Inflict x1 bow damage, 80% chance to apply confusion for 3 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.0
+              }
+            ],
+            "power": 1.0
+          }
+        ]
       },
       {
         jobIndex: 2,
@@ -5086,7 +5865,52 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5000000,
         expCoeff: 2.15,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "confusion_guard",
+            "name": "Confusion Guard",
+            "description": "Equip; +50% resistance to confusion.",
+            "trigger": "equip"
+          },
+          {
+            "level": 15,
+            "id": "megasword",
+            "name": "Megasword",
+            "description": "Inflict x1 sword damage.",
+            "trigger": "pincer",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.0
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 35,
+            "id": "control_time_2_sec",
+            "name": "Control Time +2 Sec",
+            "description": "Equip; Extends this unit's move timer by 2 seconds.",
+            "trigger": "equip"
+          },
+          {
+            "level": 65,
+            "id": "gigasword",
+            "name": "Gigasword",
+            "description": "Inflict x2 sword damage.",
+            "trigger": "pincer",
+            "frequency": 40,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.0
+              }
+            ],
+            "power": 2.0
+          }
+        ]
       },
       {
         jobIndex: 3,
@@ -5116,7 +5940,53 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5000000,
         expCoeff: 2.15,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "hp_20",
+            "name": "HP +20%",
+            "description": "Equip; Boost HP by 20%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 15,
+            "id": "megaspear",
+            "name": "Megaspear",
+            "description": "Inflict x1 spear damage.",
+            "trigger": "pincer",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.0
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 35,
+            "id": "pro_negotiator",
+            "name": "Pro Negotiator",
+            "description": "Increases rate of recruiting pincered, defeated monsters by 800%.",
+            "trigger": "chain",
+            "frequency": 30
+          },
+          {
+            "level": 65,
+            "id": "teraspear",
+            "name": "Teraspear",
+            "description": "Inflict x3 spear damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 3.0
+              }
+            ],
+            "power": 3.0
+          }
+        ]
       }
     ]
   },
@@ -6056,7 +6926,39 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 4000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "levitation",
+            "name": "Levitation",
+            "description": "Equip; Evade ground attacks and floor traps.",
+            "trigger": "equip"
+          },
+          {
+            "level": 15,
+            "id": "levitation_2",
+            "name": "Levitation",
+            "description": "All; All allies evade ground attacks and floor traps for 3 turns.",
+            "trigger": "chain",
+            "frequency": 100,
+            "target": "all"
+          },
+          {
+            "level": 35,
+            "id": "magic_attack_5",
+            "name": "Magic Attack +5%",
+            "description": "Adjacent, Equip; Boost MATK by 5% for adjacent allies.",
+            "trigger": "equip"
+          },
+          {
+            "level": 65,
+            "id": "frequency_20",
+            "name": "Frequency +20%",
+            "description": "Chain; Boost skill frequency by 20% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30
+          }
+        ]
       },
       {
         jobIndex: 2,
@@ -6086,7 +6988,52 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 4000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "defense_10",
+            "name": "Defense +10%",
+            "description": "Equip; Boost DEF by 10%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 15,
+            "id": "megabow",
+            "name": "Megabow",
+            "description": "Inflict x1 bow damage.",
+            "trigger": "pincer",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.0
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 35,
+            "id": "disarm_bomb",
+            "name": "Disarm Bomb",
+            "description": "Equip; Moving over bombs removes them without exploding.",
+            "trigger": "equip"
+          },
+          {
+            "level": 65,
+            "id": "gigabow",
+            "name": "Gigabow",
+            "description": "Inflict x2 bow damage.",
+            "trigger": "pincer",
+            "frequency": 40,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.0
+              }
+            ],
+            "power": 2.0
+          }
+        ]
       },
       {
         jobIndex: 3,
@@ -6116,7 +7063,39 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 4500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "hp_10",
+            "name": "HP +10%",
+            "description": "Equip; Boost HP by 10%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 15,
+            "id": "magic_attack_10",
+            "name": "Magic Attack +10%",
+            "description": "Adjacent, Equip; Boost MATK by 10% for adjacent allies.",
+            "trigger": "equip"
+          },
+          {
+            "level": 35,
+            "id": "giga_regen",
+            "name": "Giga Regen",
+            "description": "Chain; Applies Regen with power 2 (cap 600) for 3 turns.",
+            "trigger": "chain",
+            "frequency": 90
+          },
+          {
+            "level": 65,
+            "id": "control_time_3_sec",
+            "name": "Control Time +3 Sec",
+            "description": "All; Extends all allies' move timers by 3 seconds for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "all"
+          }
+        ]
       }
     ]
   },
@@ -6156,7 +7135,42 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "mega_heal",
+            "name": "Mega Heal",
+            "description": "Chain; Heal with power 2 (cap 700).",
+            "trigger": "chain",
+            "frequency": 100
+          },
+          {
+            "level": 15,
+            "id": "magic_defense_10",
+            "name": "Magic Defense +10%",
+            "description": "Self; MDEF +10% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 35,
+            "id": "mega_heal_2",
+            "name": "Mega Heal",
+            "description": "Self; Heal with power 2 (cap 700).",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 65,
+            "id": "ally_revival",
+            "name": "Ally Revival",
+            "description": "Self; Revive an ally with 1 HP when starting a new floor.",
+            "trigger": "equip",
+            "target": "self"
+          }
+        ]
       },
       {
         jobIndex: 2,
@@ -6186,7 +7200,42 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "magic_defense_10",
+            "name": "Magic Defense +10%",
+            "description": "Self; MDEF +10%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 15,
+            "id": "giga_heal",
+            "name": "Giga Heal",
+            "description": "Chain; Heal with power 2.5 (cap 1300).",
+            "trigger": "chain",
+            "frequency": 90
+          },
+          {
+            "level": 35,
+            "id": "poison_guard",
+            "name": "Poison Guard",
+            "description": "Self; Resistance to poison +50%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 65,
+            "id": "heal_x1_5",
+            "name": "Heal x1.5",
+            "description": "All; Increase healing by x1.5 for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "all",
+            "power": 1.5
+          }
+        ]
       },
       {
         jobIndex: 3,
@@ -6216,7 +7265,40 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "hp_10",
+            "name": "HP +10%",
+            "description": "Self; HP +10%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 15,
+            "id": "control_time_2_sec",
+            "name": "Control Time +2 Sec",
+            "description": "Self; Control time +2 sec.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 35,
+            "id": "tera_heal",
+            "name": "Tera Heal",
+            "description": "Chain; Heal with power 3 (cap 2500).",
+            "trigger": "chain",
+            "frequency": 80
+          },
+          {
+            "level": 65,
+            "id": "party_revival",
+            "name": "Party Revival",
+            "description": "Self; Revive 6 allies with 1 HP when starting a new floor.",
+            "trigger": "equip",
+            "target": "self"
+          }
+        ]
       }
     ]
   },
@@ -6256,7 +7338,44 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "mega_heal",
+            "name": "Mega Heal",
+            "description": "Chain; Heal with power 2 (cap 700).",
+            "trigger": "chain",
+            "frequency": 100
+          },
+          {
+            "level": 15,
+            "id": "magic_defense_10",
+            "name": "Magic Defense +10%",
+            "description": "Self; Boost MDEF by 10% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 35,
+            "id": "mega_heal_2",
+            "name": "Mega Heal",
+            "description": "Self; Heal with power 2 (cap 700).",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 65,
+            "id": "heal_x1_5",
+            "name": "Heal x1.5",
+            "description": "All; Increase healing by x1.5 for all allies for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "all",
+            "power": 1.5
+          }
+        ]
       },
       {
         jobIndex: 2,
@@ -6286,7 +7405,39 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "magic_defense_10",
+            "name": "Magic Defense +10%",
+            "description": "Equip; Boost MDEF by 10%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 15,
+            "id": "giga_heal",
+            "name": "Giga Heal",
+            "description": "Chain; Heal with power 2.5 (cap 1300).",
+            "trigger": "chain",
+            "frequency": 90
+          },
+          {
+            "level": 35,
+            "id": "death_ward",
+            "name": "Death Ward",
+            "description": "Chain; Grant chained allies immunity to instant death for 6 turns.",
+            "trigger": "chain",
+            "frequency": 100
+          },
+          {
+            "level": 65,
+            "id": "nullify_healing",
+            "name": "Nullify Healing",
+            "description": "Area (2); Apply Nullify Healing for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30
+          }
+        ]
       },
       {
         jobIndex: 3,
@@ -6316,7 +7467,37 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "hp_10",
+            "name": "HP +10%",
+            "description": "Equip; Boost HP by 10%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 15,
+            "id": "death_ward",
+            "name": "Death Ward",
+            "description": "Equip; Immune to instant death.",
+            "trigger": "equip"
+          },
+          {
+            "level": 35,
+            "id": "tera_heal",
+            "name": "Tera Heal",
+            "description": "Chain; Heal with power 3 (cap 2500).",
+            "trigger": "chain",
+            "frequency": 80
+          },
+          {
+            "level": 65,
+            "id": "dual_revival",
+            "name": "Dual Revival",
+            "description": "Equip; Revive two allies with 25% HP when starting a new floor.",
+            "trigger": "equip"
+          }
+        ]
       }
     ]
   },
@@ -6456,7 +7637,62 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 2500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "fire_blade",
+            "name": "Fire Blade",
+            "description": "Inflict x1 fire and x0.5 sword damage.",
+            "trigger": "pincer",
+            "frequency": 80,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 0.5
+              }
+            ],
+            "power": 0.5
+          },
+          {
+            "level": 15,
+            "id": "magic_attack_10",
+            "name": "Magic Attack +10%",
+            "description": "Self; Boost MATK by 10% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 35,
+            "id": "counterattack",
+            "name": "Counterattack",
+            "description": "Inflict x1.5 character-weapon damage.",
+            "trigger": "counter",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.5
+              }
+            ],
+            "power": 1.5
+          },
+          {
+            "level": 65,
+            "id": "inferno_blade",
+            "name": "Inferno Blade",
+            "description": "Area (1); Inflict x2 fire and x0.7 sword damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 0.7
+              }
+            ],
+            "power": 0.7
+          }
+        ]
       },
       {
         jobIndex: 2,
@@ -6486,7 +7722,54 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 3000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "magic_attack_10",
+            "name": "Magic Attack +10%",
+            "description": "Equip; Boost MATK by 10%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 15,
+            "id": "anti_ice_shield",
+            "name": "Anti-Ice Shield",
+            "description": "Self; Reduce ice damage by 40% for 3 turns.",
+            "trigger": "chain",
+            "frequency": 50,
+            "target": "self"
+          },
+          {
+            "level": 35,
+            "id": "inferno_blade",
+            "name": "Inferno Blade",
+            "description": "Inflict x2 fire and x0.7 sword damage.",
+            "trigger": "pincer",
+            "frequency": 60,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 0.7
+              }
+            ],
+            "power": 0.7
+          },
+          {
+            "level": 65,
+            "id": "counterattack",
+            "name": "Counterattack",
+            "description": "Inflict x2 character-weapon damage.",
+            "trigger": "counter",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.0
+              }
+            ],
+            "power": 2.0
+          }
+        ]
       },
       {
         jobIndex: 3,
@@ -6516,7 +7799,53 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 3000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "hp_10",
+            "name": "HP +10%",
+            "description": "Equip; Boost HP by 10%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 15,
+            "id": "demoralization_guard",
+            "name": "Demoralization Guard",
+            "description": "Equip; +50% resistance to demoralization.",
+            "trigger": "equip"
+          },
+          {
+            "level": 35,
+            "id": "blazing_counter",
+            "name": "Blazing Counter",
+            "description": "Inflict x1.5 fire damage.",
+            "trigger": "counter",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.5,
+                "element": "Fire"
+              }
+            ],
+            "power": 1.5
+          },
+          {
+            "level": 65,
+            "id": "solar_wind_blade",
+            "name": "Solar Wind Blade",
+            "description": "Inflict x3 fire and x0.9 sword damage.",
+            "trigger": "pincer",
+            "frequency": 40,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 0.9
+              }
+            ],
+            "power": 0.9
+          }
+        ]
       }
     ]
   },
@@ -7156,7 +8485,59 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "fire_strike",
+            "name": "Fire Strike",
+            "description": "Inflict x1 fire damage and x0.5 spear damage.",
+            "trigger": "pincer",
+            "frequency": 80,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.0,
+                "element": "Fire"
+              },
+              {
+                "type": "weapon",
+                "multiplier": 0.5
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 15,
+            "id": "sleep_guard",
+            "name": "Sleep Guard",
+            "description": "Equip; +50% resistance to sleep.",
+            "trigger": "equip"
+          },
+          {
+            "level": 35,
+            "id": "magic_defense_10",
+            "name": "Magic Defense +10%",
+            "description": "Self; Boost MDEF by 10% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 65,
+            "id": "inferno_strike",
+            "name": "Inferno Strike",
+            "description": "Area (1); Inflict x2 fire and x0.7 spear damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 0.7
+              }
+            ],
+            "power": 0.7
+          }
+        ]
       },
       {
         jobIndex: 2,
@@ -7186,7 +8567,53 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "magic_defense_10",
+            "name": "Magic Defense +10%",
+            "description": "Equip; Boost MDEF by 10%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 15,
+            "id": "anti_ice_capsule",
+            "name": "Anti-Ice Capsule",
+            "description": "Chain; Create a capsule point that reduces ice damage by 10% per capsule for all allies.",
+            "trigger": "chain",
+            "frequency": 30
+          },
+          {
+            "level": 35,
+            "id": "inferno_strike",
+            "name": "Inferno Strike",
+            "description": "Inflict x2 fire and x0.7 spear damage.",
+            "trigger": "pincer",
+            "frequency": 60,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 0.7
+              }
+            ],
+            "power": 0.7
+          },
+          {
+            "level": 65,
+            "id": "life_drain",
+            "name": "Life Drain",
+            "description": "Area (1); Inflict x1.5 magical damage and absorb HP (cap 700).",
+            "trigger": "chain",
+            "frequency": 30,
+            "power": 1.5,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.5
+              }
+            ]
+          }
+        ]
       },
       {
         jobIndex: 3,
@@ -7216,7 +8643,57 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "anti_ice_shield",
+            "name": "Anti-Ice Shield",
+            "description": "Equip; Reduce ice damage by 40%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 15,
+            "id": "hp_10",
+            "name": "HP +10%",
+            "description": "Equip; Boost HP by 10%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 35,
+            "id": "fire_strike",
+            "name": "Fire Strike",
+            "description": "1 Column; Inflict x1 fire damage and x0.5 spear damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.0,
+                "element": "Fire"
+              },
+              {
+                "type": "weapon",
+                "multiplier": 0.5
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 65,
+            "id": "solar_wind_strike",
+            "name": "Solar Wind Strike",
+            "description": "Inflict x3 fire and x0.9 spear damage.",
+            "trigger": "pincer",
+            "frequency": 40,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 0.9
+              }
+            ],
+            "power": 0.9
+          }
+        ]
       }
     ]
   },
@@ -7256,7 +8733,56 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 4000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "thunder_arrows",
+            "name": "Thunder Arrows",
+            "description": "Inflict x1 lightning and x0.5 bow damage.",
+            "trigger": "pincer",
+            "frequency": 80,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 0.5
+              }
+            ],
+            "power": 0.5
+          },
+          {
+            "level": 15,
+            "id": "anti_darkness_shield",
+            "name": "Anti-Darkness Shield",
+            "description": "Self; Reduce darkness damage by 40% for 3 turns.",
+            "trigger": "chain",
+            "frequency": 50,
+            "target": "self"
+          },
+          {
+            "level": 35,
+            "id": "magic_attack_10",
+            "name": "Magic Attack +10%",
+            "description": "Self; Boost MATK by 10% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 65,
+            "id": "life_drain",
+            "name": "Life Drain",
+            "description": "Inflict x1.5 magical damage and absorb HP (cap 700).",
+            "trigger": "chain",
+            "frequency": 30,
+            "power": 1.5,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.5
+              }
+            ]
+          }
+        ]
       },
       {
         jobIndex: 2,
@@ -7286,7 +8812,54 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 4000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "magic_defense_10",
+            "name": "Magic Defense +10%",
+            "description": "Self; Boost MDEF by 10% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 15,
+            "id": "lightning_arrows",
+            "name": "Lightning Arrows",
+            "description": "Inflict x2 lightning and x0.7 bow damage.",
+            "trigger": "pincer",
+            "frequency": 60,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 0.7
+              }
+            ],
+            "power": 0.7
+          },
+          {
+            "level": 35,
+            "id": "confusion_guard",
+            "name": "Confusion Guard",
+            "description": "Equip; +50% resistance to confusion.",
+            "trigger": "equip"
+          },
+          {
+            "level": 65,
+            "id": "tempest_arrows",
+            "name": "Tempest Arrows",
+            "description": "Inflict x3 lightning and x0.9 bow damage.",
+            "trigger": "pincer",
+            "frequency": 40,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 0.9
+              }
+            ],
+            "power": 0.9
+          }
+        ]
       },
       {
         jobIndex: 3,
@@ -7316,7 +8889,46 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 4000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "mega_regen",
+            "name": "Mega Regen",
+            "description": "Self; Applies Regen with power 1.5 (cap 300) for 3 turns to self.",
+            "trigger": "chain",
+            "frequency": 50,
+            "target": "self"
+          },
+          {
+            "level": 15,
+            "id": "magic_defense_10",
+            "name": "Magic Defense +10%",
+            "description": "Equip; Boost MDEF by 10%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 35,
+            "id": "thunder_arrows",
+            "name": "Thunder Arrows",
+            "description": "Area (1); Inflict x1 lightning and x0.5 bow damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 0.5
+              }
+            ],
+            "power": 0.5
+          },
+          {
+            "level": 65,
+            "id": "treasure_hunter",
+            "name": "Treasure Hunter",
+            "description": "Equip; Increases rate of item drops by 25% of the base rate.",
+            "trigger": "equip"
+          }
+        ]
       }
     ]
   },
@@ -7456,7 +9068,55 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 2500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "ice_arrows",
+            "name": "Ice Arrows",
+            "description": "Inflict x1 ice and x0.5 bow damage.",
+            "trigger": "pincer",
+            "frequency": 80,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 0.5
+              }
+            ],
+            "power": 0.5
+          },
+          {
+            "level": 15,
+            "id": "magic_defense_10",
+            "name": "Magic Defense +10%",
+            "description": "Self; MDEF +10% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 35,
+            "id": "anti_fire_capsule",
+            "name": "Anti-Fire Capsule",
+            "description": "Create a Capsule Point that reduces fire damage by 10% per capsule for all allies.",
+            "trigger": "chain",
+            "frequency": 30
+          },
+          {
+            "level": 65,
+            "id": "glacial_arrows",
+            "name": "Glacial Arrows",
+            "description": "Area (1); Inflict x2 ice and x0.7 bow damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 0.7
+              }
+            ],
+            "power": 0.7
+          }
+        ]
       },
       {
         jobIndex: 2,
@@ -7486,7 +9146,47 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 3000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "magic_defense_10",
+            "name": "Magic Defense +10%",
+            "description": "Self; MDEF +10%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 15,
+            "id": "poison_guard",
+            "name": "Poison Guard",
+            "description": "Adjacent; Resistance to poison +50%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 35,
+            "id": "hp_20",
+            "name": "HP +20%",
+            "description": "Self; HP +20%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 65,
+            "id": "glacier",
+            "name": "Glacier",
+            "description": "Pincer Area (1); Inflict x2 ice damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 2.0,
+                "element": "Ice"
+              }
+            ],
+            "power": 2.0
+          }
+        ]
       },
       {
         jobIndex: 3,
@@ -7516,7 +9216,55 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 2500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "anti_fire_shield",
+            "name": "Anti-Fire Shield",
+            "description": "Self; Reduce fire damage received by 40% for 3 turns.",
+            "trigger": "chain",
+            "frequency": 50,
+            "target": "self"
+          },
+          {
+            "level": 15,
+            "id": "poison_guard",
+            "name": "Poison Guard",
+            "description": "Self; Resistance to poison +50%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 35,
+            "id": "ice_arrows",
+            "name": "Ice Arrows",
+            "description": "Cross (2); Inflict x1 ice and x0.5 bow damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 0.5
+              }
+            ],
+            "power": 0.5
+          },
+          {
+            "level": 65,
+            "id": "absolute_zero_arrows",
+            "name": "Absolute Zero Arrows",
+            "description": "Inflict x3 ice and x0.9 bow damage.",
+            "trigger": "pincer",
+            "frequency": 40,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 0.9
+              }
+            ],
+            "power": 0.9
+          }
+        ]
       }
     ]
   },
@@ -7956,7 +9704,46 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 2500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "megasword",
+            "name": "Megasword",
+            "description": "Inflict x1 sword damage.",
+            "trigger": "pincer",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.0
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 15,
+            "id": "magic_defense_20",
+            "name": "Magic Defense +20%",
+            "description": "Fire; Boost MDEF of Fire allies by 20% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30
+          },
+          {
+            "level": 35,
+            "id": "hp_10",
+            "name": "HP +10%",
+            "description": "Equip; Boost HP by 10%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 65,
+            "id": "magic_attack_5",
+            "name": "Magic Attack +5%",
+            "description": "Fire; Boost MATK of Fire allies by 5% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30
+          }
+        ]
       },
       {
         jobIndex: 2,
@@ -7986,7 +9773,48 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 3000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "attack_10",
+            "name": "Attack +10%",
+            "description": "Self; Boost ATK by 10% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 15,
+            "id": "magic_defense_20",
+            "name": "Magic Defense +20%",
+            "description": "Ice; Boost MDEF of Ice allies by 20% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30
+          },
+          {
+            "level": 35,
+            "id": "gigasword",
+            "name": "Gigasword",
+            "description": "Inflict x2 sword damage.",
+            "trigger": "pincer",
+            "frequency": 40,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.0
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 65,
+            "id": "magic_attack_5",
+            "name": "Magic Attack +5%",
+            "description": "Ice; Boost MATK of Ice allies by 5% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30
+          }
+        ]
       },
       {
         jobIndex: 3,
@@ -8016,7 +9844,45 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 3000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "attack_10",
+            "name": "Attack +10%",
+            "description": "Equip; Boost ATK by 10%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 15,
+            "id": "control_time_2_sec",
+            "name": "Control Time +2 Sec",
+            "description": "Equip; Extends this unit's move timer by 2 seconds.",
+            "trigger": "equip"
+          },
+          {
+            "level": 35,
+            "id": "gigasword",
+            "name": "Gigasword",
+            "description": "Cross (1); Inflict x2 sword damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.0
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 65,
+            "id": "defense_20",
+            "name": "Defense -20%",
+            "description": "Wild Beast; Reduce DEF of Wild Beast enemies by 20% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30
+          }
+        ]
       }
     ]
   },
@@ -8456,7 +10322,47 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 4000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "shadow_blade",
+            "name": "Shadow Blade",
+            "description": "Inflict x1 dark and x0.5 sword damage.",
+            "trigger": "pincer",
+            "frequency": 80,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 0.5
+              }
+            ],
+            "power": 0.5
+          },
+          {
+            "level": 15,
+            "id": "anti_lightning_shield",
+            "name": "Anti-Lightning Shield",
+            "description": "Self; Reduce lightning damage received by 40%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 35,
+            "id": "hp_10",
+            "name": "HP +10%",
+            "description": "Self; HP +10%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 65,
+            "id": "death",
+            "name": "Death",
+            "description": "Apply instant death (80% chance).",
+            "trigger": "pincer",
+            "frequency": 30
+          }
+        ]
       },
       {
         jobIndex: 2,
@@ -8486,7 +10392,43 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 4000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "magic_defense_10",
+            "name": "Magic Defense +10%",
+            "description": "Self; MDEF +10% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 15,
+            "id": "shadow",
+            "name": "Shadow",
+            "description": "Pincer Area (1); Inflict x1 dark damage.",
+            "trigger": "chain",
+            "frequency": 50,
+            "power": 1.0
+          },
+          {
+            "level": 35,
+            "id": "death_guard",
+            "name": "Death Guard",
+            "description": "Self; Resistance to instant death +50%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 65,
+            "id": "abyss",
+            "name": "Abyss",
+            "description": "Pincer Area (1); Inflict x2 dark damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "power": 2.0
+          }
+        ]
       },
       {
         jobIndex: 3,
@@ -8516,7 +10458,48 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 4500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "magic_attack_10",
+            "name": "Magic Attack +10%",
+            "description": "Self; MATK +10%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 15,
+            "id": "control_time_2_sec",
+            "name": "Control Time +2 Sec",
+            "description": "Self; Control time +2 sec.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 35,
+            "id": "shadow_counter",
+            "name": "Shadow Counter",
+            "description": "Inflict x1.5 dark damage.",
+            "trigger": "counter",
+            "frequency": 30,
+            "power": 1.5
+          },
+          {
+            "level": 65,
+            "id": "dark_matter_blade",
+            "name": "Dark Matter Blade",
+            "description": "Area (1); Inflict x3 dark and x0.9 sword damage.",
+            "trigger": "pincer",
+            "frequency": 40,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 0.9
+              }
+            ],
+            "power": 0.9
+          }
+        ]
       }
     ]
   },
@@ -8656,7 +10639,41 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 3500000,
         expCoeff: 2.15,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "disarm_bomb",
+            "name": "Disarm Bomb",
+            "description": "Self; Disarm bombs in the area you've traveled.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 15,
+            "id": "levitation",
+            "name": "Levitation",
+            "description": "All; Levitation for 3 turns.",
+            "trigger": "chain",
+            "frequency": 100,
+            "target": "all"
+          },
+          {
+            "level": 35,
+            "id": "build_bomb",
+            "name": "Build Bomb",
+            "description": "Self; Trails 3 bombs dealing 10% target max HP as character-weapon damage (cap 500).",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 65,
+            "id": "frequency_20",
+            "name": "Frequency +20%",
+            "description": "Chain; Skill frequency +20% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30
+          }
+        ]
       },
       {
         jobIndex: 2,
@@ -8686,7 +10703,41 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 4000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "antidote",
+            "name": "Antidote",
+            "description": "All; Cures allies of poison power 1.",
+            "trigger": "chain",
+            "frequency": 100,
+            "target": "all"
+          },
+          {
+            "level": 15,
+            "id": "poison_ward",
+            "name": "Poison Ward",
+            "description": "Self; Confer immunity to poison.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 35,
+            "id": "poison",
+            "name": "Poison",
+            "description": "Area (2); Apply poison power 2 (30% chance) for 3 turns.",
+            "trigger": "chain",
+            "frequency": 100
+          },
+          {
+            "level": 65,
+            "id": "venom",
+            "name": "Venom",
+            "description": "1 Row; Apply poison power 3 (80% chance) for 3 turns.",
+            "trigger": "chain",
+            "frequency": 30
+          }
+        ]
       },
       {
         jobIndex: 3,
@@ -8716,7 +10767,40 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 4500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "magic_defense_10",
+            "name": "Magic Defense +10%",
+            "description": "Self; MDEF +10%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 15,
+            "id": "giga_regen",
+            "name": "Giga Regen",
+            "description": "Chain; Gradually restores HP with power 2 (cap 600) for 3 turns.",
+            "trigger": "chain",
+            "frequency": 90
+          },
+          {
+            "level": 35,
+            "id": "hp_20",
+            "name": "HP +20%",
+            "description": "Self; HP +20%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 65,
+            "id": "panacea",
+            "name": "Panacea",
+            "description": "Area (2); Cures allies of all status ailments.",
+            "trigger": "chain",
+            "frequency": 100
+          }
+        ]
       }
     ]
   },
@@ -8756,7 +10840,40 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 3500000,
         expCoeff: 2.15,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "reanimation",
+            "name": "Reanimation",
+            "description": "All; Cure all allies of petrification.",
+            "trigger": "chain",
+            "frequency": 100,
+            "target": "all"
+          },
+          {
+            "level": 15,
+            "id": "petrify",
+            "name": "Petrify",
+            "description": "Pincer Area (1); Apply petrification around pincered area for 20 turns with an 80% chance.",
+            "trigger": "chain",
+            "frequency": 30
+          },
+          {
+            "level": 35,
+            "id": "petrification_ward",
+            "name": "Petrification Ward",
+            "description": "Equip; Immune to petrification.",
+            "trigger": "equip"
+          },
+          {
+            "level": 65,
+            "id": "petrify_2",
+            "name": "Petrify",
+            "description": "Area (2); Apply petrification for 20 turns with a 30% chance.",
+            "trigger": "chain",
+            "frequency": 100
+          }
+        ]
       },
       {
         jobIndex: 2,
@@ -8786,7 +10903,40 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 4000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "locomotion",
+            "name": "Locomotion",
+            "description": "All; Cure all allies of paralysis.",
+            "trigger": "chain",
+            "frequency": 100,
+            "target": "all"
+          },
+          {
+            "level": 15,
+            "id": "paralysis_ward",
+            "name": "Paralysis Ward",
+            "description": "Equip; Immune to paralysis.",
+            "trigger": "equip"
+          },
+          {
+            "level": 35,
+            "id": "paralyze",
+            "name": "Paralyze",
+            "description": "Area (2); Apply paralysis for 3 turns with a 30% chance.",
+            "trigger": "chain",
+            "frequency": 100
+          },
+          {
+            "level": 65,
+            "id": "healing_melody",
+            "name": "Healing Melody",
+            "description": "Area (2); Heal with power 2 (cap 700).",
+            "trigger": "chain",
+            "frequency": 30
+          }
+        ]
       },
       {
         jobIndex: 3,
@@ -8816,7 +10966,37 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 4500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "defense_10",
+            "name": "Defense +10%",
+            "description": "Equip; Boost DEF by 10%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 15,
+            "id": "giga_regen",
+            "name": "Giga Regen",
+            "description": "Chain; Applies Regen with power 2 (cap 600) for 3 turns.",
+            "trigger": "chain",
+            "frequency": 90
+          },
+          {
+            "level": 35,
+            "id": "hp_20",
+            "name": "HP +20%",
+            "description": "Equip; Boost HP by 20%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 65,
+            "id": "seasoned_pro",
+            "name": "Seasoned Pro",
+            "description": "Equip; Increases experience earned by 15%.",
+            "trigger": "equip"
+          }
+        ]
       }
     ]
   },
@@ -8956,7 +11136,55 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 4000000,
         expCoeff: 2.15,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "shadow",
+            "name": "Shadow",
+            "description": "Pincer Area (1); Inflict x1 darkness damage.",
+            "trigger": "chain",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.0,
+                "element": "Darkness"
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 15,
+            "id": "anti_lightning_capsule",
+            "name": "Anti-Lightning Capsule",
+            "description": "Chain; Create a capsule point that reduces lightning damage by 10% per capsule for all allies.",
+            "trigger": "chain",
+            "frequency": 30
+          },
+          {
+            "level": 35,
+            "id": "death_guard",
+            "name": "Death Guard",
+            "description": "Equip; +50% resistance to instant death.",
+            "trigger": "equip"
+          },
+          {
+            "level": 65,
+            "id": "shadow_counter",
+            "name": "Shadow Counter",
+            "description": "Cross (1); Inflict x1.5 darkness damage to adjacent spaces.",
+            "trigger": "counter",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.5,
+                "element": "Darkness"
+              }
+            ],
+            "power": 1.5
+          }
+        ]
       },
       {
         jobIndex: 2,
@@ -8986,7 +11214,48 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 4000000,
         expCoeff: 2.15,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "mega_heal",
+            "name": "Mega Heal",
+            "description": "Self; Heal with power 2 (cap 700).",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 15,
+            "id": "magic_defense_10",
+            "name": "Magic Defense +10%",
+            "description": "Equip; Boost MDEF by 10%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 35,
+            "id": "abyss",
+            "name": "Abyss",
+            "description": "Pincer Area (1); Inflict x2 darkness damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 2.0,
+                "element": "Darkness"
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 65,
+            "id": "frequency_30",
+            "name": "Frequency +30%",
+            "description": "Staff; Boost Staff allies' skill frequency by 30% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30
+          }
+        ]
       },
       {
         jobIndex: 3,
@@ -9016,7 +11285,47 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 4500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "anti_lightning_shield",
+            "name": "Anti-Lightning Shield",
+            "description": "Self; Reduce lightning damage by 40% for 3 turns.",
+            "trigger": "chain",
+            "frequency": 50,
+            "target": "self"
+          },
+          {
+            "level": 15,
+            "id": "confusion_guard",
+            "name": "Confusion Guard",
+            "description": "Equip; +50% resistance to confusion.",
+            "trigger": "equip"
+          },
+          {
+            "level": 35,
+            "id": "hp_20",
+            "name": "HP +20%",
+            "description": "Equip; Boost HP by 20%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 65,
+            "id": "dark_matter",
+            "name": "Dark Matter",
+            "description": "Pincer Area (1); Inflict x3 darkness damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 3.0,
+                "element": "Darkness"
+              }
+            ],
+            "power": 3.0
+          }
+        ]
       }
     ]
   },
@@ -9356,7 +11665,46 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "fire",
+            "name": "Fire",
+            "description": "Pincer Area (1); Inflict x1 fire damage.",
+            "trigger": "chain",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.0,
+                "element": "Fire"
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 15,
+            "id": "anti_ice_capsule",
+            "name": "Anti-Ice Capsule",
+            "description": "Chain; Create a capsule point that reduces ice damage by 10% per capsule for all allies.",
+            "trigger": "chain",
+            "frequency": 30
+          },
+          {
+            "level": 35,
+            "id": "hp_20",
+            "name": "HP +20%",
+            "description": "Equip; Boost HP by 20%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 65,
+            "id": "one_time_revival",
+            "name": "One-Time Revival",
+            "description": "Equip; Revive self with 25% HP. Once per quest.",
+            "trigger": "equip"
+          }
+        ]
       },
       {
         jobIndex: 2,
@@ -9386,7 +11734,54 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "magic_defense_10",
+            "name": "Magic Defense +10%",
+            "description": "Equip; Boost MDEF by 10%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 15,
+            "id": "fire",
+            "name": "Fire",
+            "description": "Pincer Area (Column); Inflict x1 fire damage on entire columns of pincered units.",
+            "trigger": "chain",
+            "frequency": 20,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.0,
+                "element": "Fire"
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 35,
+            "id": "inferno",
+            "name": "Inferno",
+            "description": "Pincer Area (1); Inflict x2 fire damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 2.0,
+                "element": "Fire"
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 65,
+            "id": "regen",
+            "name": "Regen",
+            "description": "Equip; Regen with power 1.",
+            "trigger": "equip"
+          }
+        ]
       },
       {
         jobIndex: 3,
@@ -9416,7 +11811,56 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 6000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "anti_ice_shield",
+            "name": "Anti-Ice Shield",
+            "description": "Equip; Reduce ice damage by 40%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 15,
+            "id": "mega_heal",
+            "name": "Mega Heal",
+            "description": "Self; Heal with power 2 (cap 700).",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 35,
+            "id": "inferno",
+            "name": "Inferno",
+            "description": "Pincer Area (Row); Inflict x2 fire damage on entire rows of pincered units.",
+            "trigger": "chain",
+            "frequency": 20,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 2.0,
+                "element": "Fire"
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 65,
+            "id": "solar_wind",
+            "name": "Solar Wind",
+            "description": "Pincer Area (1); Inflict x3 fire damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 3.0,
+                "element": "Fire"
+              }
+            ],
+            "power": 3.0
+          }
+        ]
       }
     ]
   },
@@ -9456,7 +11900,46 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "ice",
+            "name": "Ice",
+            "description": "Pincer Area (1); Inflict x1 ice damage.",
+            "trigger": "chain",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.0,
+                "element": "Ice"
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 15,
+            "id": "anti_fire_capsule",
+            "name": "Anti-Fire Capsule",
+            "description": "Chain; Create a capsule point that reduces fire damage by 10% per capsule for all allies.",
+            "trigger": "chain",
+            "frequency": 30
+          },
+          {
+            "level": 35,
+            "id": "hp_20",
+            "name": "HP +20%",
+            "description": "Equip; Boost HP by 20%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 65,
+            "id": "one_time_revival",
+            "name": "One-Time Revival",
+            "description": "Equip; Revive self with 25% HP. Once per quest.",
+            "trigger": "equip"
+          }
+        ]
       },
       {
         jobIndex: 2,
@@ -9486,7 +11969,54 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "magic_defense_10",
+            "name": "Magic Defense +10%",
+            "description": "Equip; Boost MDEF by 10%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 15,
+            "id": "ice",
+            "name": "Ice",
+            "description": "Pincer Area (Column); Inflict x1 ice damage on entire columns of pincered units.",
+            "trigger": "chain",
+            "frequency": 20,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.0,
+                "element": "Ice"
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 35,
+            "id": "glacier",
+            "name": "Glacier",
+            "description": "Pincer Area (1); Inflict x2 ice damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 2.0,
+                "element": "Ice"
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 65,
+            "id": "regen",
+            "name": "Regen",
+            "description": "Equip; Regen with power 1.",
+            "trigger": "equip"
+          }
+        ]
       },
       {
         jobIndex: 3,
@@ -9516,7 +12046,56 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 6000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "anti_fire_shield",
+            "name": "Anti-Fire Shield",
+            "description": "Equip; Reduce fire damage by 40%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 15,
+            "id": "mega_heal",
+            "name": "Mega Heal",
+            "description": "Self; Heal with power 2 (cap 700).",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 35,
+            "id": "glacier",
+            "name": "Glacier",
+            "description": "Pincer Area (Row); Inflict x2 ice damage on entire rows of pincered units.",
+            "trigger": "chain",
+            "frequency": 20,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 2.0,
+                "element": "Ice"
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 65,
+            "id": "absolute_zero",
+            "name": "Absolute Zero",
+            "description": "Pincer Area (1); Inflict x3 ice damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 3.0,
+                "element": "Ice"
+              }
+            ],
+            "power": 3.0
+          }
+        ]
       }
     ]
   },
@@ -9556,7 +12135,46 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "thunder",
+            "name": "Thunder",
+            "description": "Pincer Area (1); Inflict x1 lightning damage.",
+            "trigger": "chain",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.0,
+                "element": "Lightning"
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 15,
+            "id": "anti_darkness_capsule",
+            "name": "Anti-Darkness Capsule",
+            "description": "Chain; Create a capsule point that reduces darkness damage by 10% per capsule for all allies.",
+            "trigger": "chain",
+            "frequency": 30
+          },
+          {
+            "level": 35,
+            "id": "hp_20",
+            "name": "HP +20%",
+            "description": "Equip; Boost HP by 20%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 65,
+            "id": "one_time_revival",
+            "name": "One-Time Revival",
+            "description": "Equip; Revive self with 25% HP. Once per quest.",
+            "trigger": "equip"
+          }
+        ]
       },
       {
         jobIndex: 2,
@@ -9586,7 +12204,54 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "magic_defense_10",
+            "name": "Magic Defense +10%",
+            "description": "Equip; Boost MDEF by 10%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 15,
+            "id": "thunder",
+            "name": "Thunder",
+            "description": "Pincer Area (Column); Inflict x1 lightning damage on entire columns of pincered units.",
+            "trigger": "chain",
+            "frequency": 20,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.0,
+                "element": "Lightning"
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 35,
+            "id": "lightning",
+            "name": "Lightning",
+            "description": "Pincer Area (1); Inflict x2 lightning damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 2.0,
+                "element": "Lightning"
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 65,
+            "id": "regen",
+            "name": "Regen",
+            "description": "Equip; Regen with power 1.",
+            "trigger": "equip"
+          }
+        ]
       },
       {
         jobIndex: 3,
@@ -9616,7 +12281,56 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 6000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "anti_darkness_shield",
+            "name": "Anti-Darkness Shield",
+            "description": "Equip; Reduce darkness damage by 40%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 15,
+            "id": "mega_heal",
+            "name": "Mega Heal",
+            "description": "Self; Heal with power 2 (cap 700).",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 35,
+            "id": "lightning",
+            "name": "Lightning",
+            "description": "Pincer Area (Row); Inflict x2 lightning damage on entire rows of pincered units.",
+            "trigger": "chain",
+            "frequency": 20,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 2.0,
+                "element": "Lightning"
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 65,
+            "id": "tempest",
+            "name": "Tempest",
+            "description": "Pincer Area (1); Inflict x3 lightning damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 3.0,
+                "element": "Lightning"
+              }
+            ],
+            "power": 3.0
+          }
+        ]
       }
     ]
   },
@@ -9656,7 +12370,46 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "shadow",
+            "name": "Shadow",
+            "description": "Pincer Area (1); Inflict x1 darkness damage.",
+            "trigger": "chain",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.0,
+                "element": "Darkness"
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 15,
+            "id": "anti_lightning_capsule",
+            "name": "Anti-Lightning Capsule",
+            "description": "Chain; Create a capsule point that reduces lightning damage by 10% per capsule for all allies.",
+            "trigger": "chain",
+            "frequency": 30
+          },
+          {
+            "level": 35,
+            "id": "hp_20",
+            "name": "HP +20%",
+            "description": "Equip; Boost HP by 20%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 65,
+            "id": "one_time_revival",
+            "name": "One-Time Revival",
+            "description": "Equip; Revive self with 25% HP. Once per quest.",
+            "trigger": "equip"
+          }
+        ]
       },
       {
         jobIndex: 2,
@@ -9686,7 +12439,54 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "magic_defense_10",
+            "name": "Magic Defense +10%",
+            "description": "Equip; Boost MDEF by 10%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 15,
+            "id": "shadow",
+            "name": "Shadow",
+            "description": "Pincer Area (Column); Inflict x1 darkness damage on entire columns of pincered units.",
+            "trigger": "chain",
+            "frequency": 20,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.0,
+                "element": "Darkness"
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 35,
+            "id": "abyss",
+            "name": "Abyss",
+            "description": "Pincer Area (1); Inflict x2 darkness damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 2.0,
+                "element": "Darkness"
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 65,
+            "id": "regen",
+            "name": "Regen",
+            "description": "Equip; Regen with power 1.",
+            "trigger": "equip"
+          }
+        ]
       },
       {
         jobIndex: 3,
@@ -9716,7 +12516,56 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 6000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "anti_lightning_shield",
+            "name": "Anti-Lightning Shield",
+            "description": "Equip; Reduce lightning damage by 40%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 15,
+            "id": "mega_heal",
+            "name": "Mega Heal",
+            "description": "Self; Heal with power 2 (cap 700).",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 35,
+            "id": "abyss",
+            "name": "Abyss",
+            "description": "Pincer Area (Row); Inflict x2 darkness damage on entire rows of pincered units.",
+            "trigger": "chain",
+            "frequency": 20,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 2.0,
+                "element": "Darkness"
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 65,
+            "id": "dark_matter",
+            "name": "Dark Matter",
+            "description": "Pincer Area (1); Inflict x3 darkness damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 3.0,
+                "element": "Darkness"
+              }
+            ],
+            "power": 3.0
+          }
+        ]
       }
     ]
   },
@@ -9756,7 +12605,41 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 4500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "mega_regen",
+            "name": "Mega Regen",
+            "description": "Chain; Applies Regen with power 1.5 (cap 300) for 3 turns.",
+            "trigger": "chain",
+            "frequency": 100
+          },
+          {
+            "level": 15,
+            "id": "defense_10",
+            "name": "Defense +10%",
+            "description": "Self; Boost DEF by 10% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 35,
+            "id": "rise_and_shine",
+            "name": "Rise and Shine",
+            "description": "Area (2); Cure caster's area of sleep.",
+            "trigger": "chain",
+            "frequency": 100
+          },
+          {
+            "level": 65,
+            "id": "control_time_2_sec",
+            "name": "Control Time +2 Sec",
+            "description": "Chain; Extends chained allies' move timers by 2 seconds for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30
+          }
+        ]
       },
       {
         jobIndex: 2,
@@ -9786,7 +12669,38 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "antidote",
+            "name": "Antidote",
+            "description": "Area (2); Cure caster's area of poison.",
+            "trigger": "chain",
+            "frequency": 100
+          },
+          {
+            "level": 15,
+            "id": "hp_10",
+            "name": "HP +10%",
+            "description": "Equip; Boost HP by 10%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 35,
+            "id": "locomotion",
+            "name": "Locomotion",
+            "description": "Area (2); Cure caster's area of paralysis.",
+            "trigger": "chain",
+            "frequency": 100
+          },
+          {
+            "level": 65,
+            "id": "regen",
+            "name": "Regen",
+            "description": "Equip; Regen with power 1.",
+            "trigger": "equip"
+          }
+        ]
       },
       {
         jobIndex: 3,
@@ -9816,7 +12730,40 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "clarity",
+            "name": "Clarity",
+            "description": "Area (2); Cure caster's area of confusion.",
+            "trigger": "chain",
+            "frequency": 100
+          },
+          {
+            "level": 15,
+            "id": "giga_regen",
+            "name": "Giga Regen",
+            "description": "Chain; Applies Regen with power 2 (cap 600) for 3 turns.",
+            "trigger": "chain",
+            "frequency": 90
+          },
+          {
+            "level": 35,
+            "id": "esprit_de_corps",
+            "name": "Esprit de Corps",
+            "description": "Area (2); Cure caster's area of demoralization.",
+            "trigger": "chain",
+            "frequency": 100
+          },
+          {
+            "level": 65,
+            "id": "panacea",
+            "name": "Panacea",
+            "description": "Area (2); Cure allies of sleep, poison, paralysis, confusion, demoralization, petrification, icebind, and shadowbind status effects.",
+            "trigger": "chain",
+            "frequency": 100
+          }
+        ]
       }
     ]
   },
@@ -10256,7 +13203,56 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5000000,
         expCoeff: 2,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "ice",
+            "name": "Ice",
+            "description": "Pincer Area (1); Inflict x1 ice damage.",
+            "trigger": "chain",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.0,
+                "element": "Ice"
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 15,
+            "id": "magic_defense_10",
+            "name": "Magic Defense +10%",
+            "description": "Self; Boost MDEF by 10% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 35,
+            "id": "ice_damage_down_10",
+            "name": "Ice Damage Down 10%",
+            "description": "Adjacent, Equip; Reduce ice damage by 10% for adjacent allies.",
+            "trigger": "equip"
+          },
+          {
+            "level": 65,
+            "id": "ice_2",
+            "name": "Ice",
+            "description": "Pincer Area (Column); Inflict x1 ice damage on entire columns of pincered units.",
+            "trigger": "chain",
+            "frequency": 20,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.0,
+                "element": "Ice"
+              }
+            ],
+            "power": 1.0
+          }
+        ]
       },
       {
         jobIndex: 2,
@@ -10286,7 +13282,54 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5000000,
         expCoeff: 2,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "magic_defense_10",
+            "name": "Magic Defense +10%",
+            "description": "Equip; Boost MDEF by 10%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 15,
+            "id": "anti_fire_shield",
+            "name": "Anti-Fire Shield",
+            "description": "Equip; Reduce fire damage by 40%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 35,
+            "id": "glacier",
+            "name": "Glacier",
+            "description": "Pincer Area (1); Inflict x2 ice damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 2.0,
+                "element": "Ice"
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 65,
+            "id": "icy_counter",
+            "name": "Icy Counter",
+            "description": "Inflict x1.5 ice damage.",
+            "trigger": "counter",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.5,
+                "element": "Ice"
+              }
+            ],
+            "power": 1.5
+          }
+        ]
       },
       {
         jobIndex: 3,
@@ -10316,7 +13359,55 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5500000,
         expCoeff: 2,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "hp_10",
+            "name": "HP +10%",
+            "description": "Equip; Boost HP by 10%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 15,
+            "id": "poison_guard",
+            "name": "Poison Guard",
+            "description": "Equip; +50% resistance to poison.",
+            "trigger": "equip"
+          },
+          {
+            "level": 35,
+            "id": "glacier",
+            "name": "Glacier",
+            "description": "Cross (All); Inflict x2 ice damage",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "all",
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 2.0,
+                "element": "Ice"
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 65,
+            "id": "absolute_zero",
+            "name": "Absolute Zero",
+            "description": "Pincer Area (1); Inflict x3 ice damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 3.0,
+                "element": "Ice"
+              }
+            ],
+            "power": 3.0
+          }
+        ]
       }
     ]
   },
@@ -10356,7 +13447,56 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5000000,
         expCoeff: 2,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "fire",
+            "name": "Fire",
+            "description": "Pincer Area (1); Inflict x1 fire damage.",
+            "trigger": "chain",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.0,
+                "element": "Fire"
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 15,
+            "id": "magic_defense_10",
+            "name": "Magic Defense +10%",
+            "description": "Self; Boost MDEF by 10% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 35,
+            "id": "fire_damage_down_10",
+            "name": "Fire Damage Down 10%",
+            "description": "Adjacent, Equip; Reduce fire damage by 10% for adjacent allies.",
+            "trigger": "equip"
+          },
+          {
+            "level": 65,
+            "id": "fire_2",
+            "name": "Fire",
+            "description": "Pincer Area (Column); Inflict x1 fire damage on entire columns of pincered units.",
+            "trigger": "chain",
+            "frequency": 20,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.0,
+                "element": "Fire"
+              }
+            ],
+            "power": 1.0
+          }
+        ]
       },
       {
         jobIndex: 2,
@@ -10386,7 +13526,54 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5000000,
         expCoeff: 2,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "magic_defense_10",
+            "name": "Magic Defense +10%",
+            "description": "Equip; Boost MDEF by 10%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 15,
+            "id": "anti_ice_shield",
+            "name": "Anti-Ice Shield",
+            "description": "Equip; Reduce ice damage by 40%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 35,
+            "id": "inferno",
+            "name": "Inferno",
+            "description": "Pincer Area (1); Inflict x2 fire damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 2.0,
+                "element": "Fire"
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 65,
+            "id": "blazing_counter",
+            "name": "Blazing Counter",
+            "description": "Inflict x1.5 fire damage.",
+            "trigger": "counter",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.5,
+                "element": "Fire"
+              }
+            ],
+            "power": 1.5
+          }
+        ]
       },
       {
         jobIndex: 3,
@@ -10416,7 +13603,55 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5500000,
         expCoeff: 2,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "hp_10",
+            "name": "HP +10%",
+            "description": "Equip; Boost HP by 10%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 15,
+            "id": "demoralization_guard",
+            "name": "Demoralization Guard",
+            "description": "Equip; +50% resistance to demoralization.",
+            "trigger": "equip"
+          },
+          {
+            "level": 35,
+            "id": "inferno",
+            "name": "Inferno",
+            "description": "Cross (All); Inflict x2 fire damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "all",
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 2.0,
+                "element": "Fire"
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 65,
+            "id": "solar_wind",
+            "name": "Solar Wind",
+            "description": "Pincer Area (1); Inflict x3 fire damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 3.0,
+                "element": "Fire"
+              }
+            ],
+            "power": 3.0
+          }
+        ]
       }
     ]
   },
@@ -10456,7 +13691,47 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5000000,
         expCoeff: 2,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "megaspear",
+            "name": "Megaspear",
+            "description": "Inflict x1 spear damage.",
+            "trigger": "pincer",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.0
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 15,
+            "id": "attack_10",
+            "name": "Attack +10%",
+            "description": "Self; Boost ATK by 10% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 35,
+            "id": "attack_5",
+            "name": "Attack +5%",
+            "description": "Adjacent, Equip; Boost ATK by 5% for adjacent allies.",
+            "trigger": "equip"
+          },
+          {
+            "level": 65,
+            "id": "demoralizing_counter",
+            "name": "Demoralizing Counter",
+            "description": "75% chance to apply demoralization for 3 turns.",
+            "trigger": "counter",
+            "frequency": 30
+          }
+        ]
       },
       {
         jobIndex: 2,
@@ -10486,7 +13761,52 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5000000,
         expCoeff: 2,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "attack_10",
+            "name": "Attack +10%",
+            "description": "Equip; Boost ATK by 10%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 15,
+            "id": "outflank",
+            "name": "Outflank",
+            "description": "Equip; Deal 50% more damage to completely surrounded enemies (unstackable).",
+            "trigger": "equip"
+          },
+          {
+            "level": 35,
+            "id": "gigaspear",
+            "name": "Gigaspear",
+            "description": "Inflict x2 spear damage.",
+            "trigger": "pincer",
+            "frequency": 40,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.0
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 65,
+            "id": "megaspear",
+            "name": "Megaspear",
+            "description": "1 Column; Inflict x1 spear damage on caster's column.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.0
+              }
+            ],
+            "power": 1.0
+          }
+        ]
       },
       {
         jobIndex: 3,
@@ -10516,7 +13836,53 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5500000,
         expCoeff: 2,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "defense_10",
+            "name": "Defense +10%",
+            "description": "Equip; Boost DEF by 10%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 15,
+            "id": "demoralization_guard",
+            "name": "Demoralization Guard",
+            "description": "Equip; +50% resistance to demoralization.",
+            "trigger": "equip"
+          },
+          {
+            "level": 35,
+            "id": "gigaspear",
+            "name": "Gigaspear",
+            "description": "Cross (All); Inflict x2 spear damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "all",
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.0
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 65,
+            "id": "teraspear",
+            "name": "Teraspear",
+            "description": "Inflict x3 spear damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 3.0
+              }
+            ],
+            "power": 3.0
+          }
+        ]
       }
     ]
   },
@@ -10656,7 +14022,54 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 2000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "megabow",
+            "name": "Megabow",
+            "description": "Inflict x1 bow damage.",
+            "trigger": "pincer",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.0
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 15,
+            "id": "defense_10",
+            "name": "Defense +10%",
+            "description": "Self; Boost DEF by 10% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 35,
+            "id": "phys_dmg_down_10",
+            "name": "Phys Dmg Down 10%",
+            "description": "Adjacent, Equip; Reduce physical damage by 10% for adjacent allies.",
+            "trigger": "equip"
+          },
+          {
+            "level": 65,
+            "id": "gigabow",
+            "name": "Gigabow",
+            "description": "Inflict x2 bow damage.",
+            "trigger": "pincer",
+            "frequency": 40,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.0
+              }
+            ],
+            "power": 2.0
+          }
+        ]
       },
       {
         jobIndex: 2,
@@ -10686,7 +14099,54 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 2500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "megaspear",
+            "name": "Megaspear",
+            "description": "Inflict x1 spear damage.",
+            "trigger": "pincer",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.0
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 15,
+            "id": "magic_defense_10",
+            "name": "Magic Defense +10%",
+            "description": "Self; Boost MDEF by 10% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 35,
+            "id": "outflank",
+            "name": "Outflank",
+            "description": "Equip; Deal 50% more damage to completely surrounded enemies (unstackable).",
+            "trigger": "equip"
+          },
+          {
+            "level": 65,
+            "id": "gigaspear",
+            "name": "Gigaspear",
+            "description": "Inflict x2 spear damage.",
+            "trigger": "pincer",
+            "frequency": 40,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.0
+              }
+            ],
+            "power": 2.0
+          }
+        ]
       },
       {
         jobIndex: 3,
@@ -10716,7 +14176,40 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 2500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "antidote",
+            "name": "Antidote",
+            "description": "Area (2); Cure caster's area of poison.",
+            "trigger": "chain",
+            "frequency": 100
+          },
+          {
+            "level": 15,
+            "id": "hp_10",
+            "name": "HP +10%",
+            "description": "Equip; Boost HP by 10%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 35,
+            "id": "levitation",
+            "name": "Levitation",
+            "description": "Self; Evade ground attacks and floor traps for 3 turns.",
+            "trigger": "chain",
+            "frequency": 100,
+            "target": "self"
+          },
+          {
+            "level": 65,
+            "id": "healing_breeze",
+            "name": "Healing Breeze",
+            "description": "Area (2); Heal with power 2 (cap 700).",
+            "trigger": "chain",
+            "frequency": 30
+          }
+        ]
       }
     ]
   },
@@ -10756,7 +14249,54 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "attack_10",
+            "name": "Attack +10%",
+            "description": "Self; Boost ATK by 10% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 15,
+            "id": "megasword",
+            "name": "Megasword",
+            "description": "Inflict x1 sword damage.",
+            "trigger": "pincer",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.0
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 35,
+            "id": "hp_5",
+            "name": "HP +5%",
+            "description": "Equip; Boost HP by 5%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 65,
+            "id": "gigasword",
+            "name": "Gigasword",
+            "description": "Inflict x2 sword damage.",
+            "trigger": "pincer",
+            "frequency": 40,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.0
+              }
+            ],
+            "power": 2.0
+          }
+        ]
       },
       {
         jobIndex: 2,
@@ -10786,7 +14326,49 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "defense_10",
+            "name": "Defense +10%",
+            "description": "Self; Boost DEF by 10% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 15,
+            "id": "phys_dmg_down_25",
+            "name": "Phys Dmg Down 25%",
+            "description": "Self; Reduce physical damage by 25% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 35,
+            "id": "gigabow",
+            "name": "Gigabow",
+            "description": "Inflict x2 bow damage.",
+            "trigger": "pincer",
+            "frequency": 40,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.0
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 65,
+            "id": "assassinate",
+            "name": "Assassinate",
+            "description": "Cross (1); Apply instant death with an 80% chance.",
+            "trigger": "chain",
+            "frequency": 30
+          }
+        ]
       },
       {
         jobIndex: 3,
@@ -10816,7 +14398,49 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "negate_circle",
+            "name": "Negate Circle",
+            "description": "Self; Disables the effect of the Circle of Carnage for self for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 15,
+            "id": "physical_damage_x1_2",
+            "name": "Physical Damage x1.2",
+            "description": "Self; Increase physical damage by x1.2 for self for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self",
+            "power": 1.2
+          },
+          {
+            "level": 35,
+            "id": "love_thy_neighbor",
+            "name": "Love Thy Neighbor",
+            "description": "Equip; Boost skill frequency by 30% for adjacent allies.",
+            "trigger": "equip"
+          },
+          {
+            "level": 65,
+            "id": "teraspear",
+            "name": "Teraspear",
+            "description": "Inflict x3 spear damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 3.0
+              }
+            ],
+            "power": 3.0
+          }
+        ]
       }
     ]
   },
@@ -10856,7 +14480,52 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "femme_fatale",
+            "name": "Femme Fatale",
+            "description": "Defense +10%, Equip; Boost DEF by 2% for each male squad member, up to 10%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 15,
+            "id": "megasword",
+            "name": "Megasword",
+            "description": "Inflict x1 sword damage.",
+            "trigger": "pincer",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.0
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 35,
+            "id": "femme_fatale_2",
+            "name": "Femme Fatale",
+            "description": "Attack +10%, Equip; Boost ATK by 2% for each male squad member, up to 10%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 65,
+            "id": "gigasword",
+            "name": "Gigasword",
+            "description": "Inflict x2 sword damage.",
+            "trigger": "pincer",
+            "frequency": 40,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.0
+              }
+            ],
+            "power": 2.0
+          }
+        ]
       },
       {
         jobIndex: 2,
@@ -10886,7 +14555,52 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "femme_fatale",
+            "name": "Femme Fatale",
+            "description": "Defense +15%, Equip; Boost DEF by 3% for each male squad member, up to 15%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 15,
+            "id": "megabow",
+            "name": "Megabow",
+            "description": "Inflict x1 bow damage.",
+            "trigger": "pincer",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.0
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 35,
+            "id": "femme_fatale_2",
+            "name": "Femme Fatale",
+            "description": "Attack +15%, Equip; Boost ATK by 3% for each male squad member, up to 15%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 65,
+            "id": "terabow",
+            "name": "Terabow",
+            "description": "Inflict x3 bow damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 3.0
+              }
+            ],
+            "power": 3.0
+          }
+        ]
       },
       {
         jobIndex: 3,
@@ -10916,7 +14630,52 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "femme_fatale",
+            "name": "Femme Fatale",
+            "description": "Defense +25%, Equip; Boost DEF by 5% for each male squad member, up to 25%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 15,
+            "id": "megaspear",
+            "name": "Megaspear",
+            "description": "Inflict x1 spear damage.",
+            "trigger": "pincer",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.0
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 35,
+            "id": "femme_fatale_2",
+            "name": "Femme Fatale",
+            "description": "Attack +25%, Equip; Boost ATK by 5% for each male squad member, up to 25%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 65,
+            "id": "teraspear",
+            "name": "Teraspear",
+            "description": "Inflict x3 spear damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 3.0
+              }
+            ],
+            "power": 3.0
+          }
+        ]
       }
     ]
   },
@@ -10956,7 +14715,53 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 3500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "megasword",
+            "name": "Megasword",
+            "description": "Inflict x1 sword damage.",
+            "trigger": "pincer",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.0
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 15,
+            "id": "slumber",
+            "name": "Slumber",
+            "description": "3 Columns; Apply sleep to caster's column and adjacent columns for 2 turns with a 75% chance.",
+            "trigger": "pincer",
+            "frequency": 100
+          },
+          {
+            "level": 35,
+            "id": "hp_10",
+            "name": "HP +10%",
+            "description": "Equip; Boost HP by 10%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 65,
+            "id": "gigasword",
+            "name": "Gigasword",
+            "description": "Inflict x2 sword damage.",
+            "trigger": "pincer",
+            "frequency": 40,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.0
+              }
+            ],
+            "power": 2.0
+          }
+        ]
       },
       {
         jobIndex: 2,
@@ -10986,7 +14791,45 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 4000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "outflank",
+            "name": "Outflank",
+            "description": "Equip; Deal 50% more damage to completely surrounded enemies (unstackable).",
+            "trigger": "equip"
+          },
+          {
+            "level": 15,
+            "id": "sleep_guard",
+            "name": "Sleep Guard",
+            "description": "Equip; +50% resistance to sleep.",
+            "trigger": "equip"
+          },
+          {
+            "level": 35,
+            "id": "paralyze",
+            "name": "Paralyze",
+            "description": "3 Columns; Apply paralysis to caster's column and adjacent columns for 2 turns with a 75% chance.",
+            "trigger": "pincer",
+            "frequency": 100
+          },
+          {
+            "level": 65,
+            "id": "megasword",
+            "name": "Megasword",
+            "description": "1 Row; Inflict x1 sword damage on caster's row.",
+            "trigger": "pincer",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.0
+              }
+            ],
+            "power": 1.0
+          }
+        ]
       },
       {
         jobIndex: 3,
@@ -11016,7 +14859,52 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 4500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "paralysis_guard",
+            "name": "Paralysis Guard",
+            "description": "Equip; +50% resistance to paralysis.",
+            "trigger": "equip"
+          },
+          {
+            "level": 15,
+            "id": "defense_10",
+            "name": "Defense +10%",
+            "description": "Equip; Boost DEF by 10%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 35,
+            "id": "gigasword",
+            "name": "Gigasword",
+            "description": "1 Row; Inflict x2 sword damage.",
+            "trigger": "pincer",
+            "frequency": 40,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.0
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 65,
+            "id": "terasword",
+            "name": "Terasword",
+            "description": "Inflict x3 sword damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 3.0
+              }
+            ],
+            "power": 3.0
+          }
+        ]
       }
     ]
   },
@@ -11556,7 +15444,55 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 6500000,
         expCoeff: 2.05,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "trance",
+            "name": "Trance",
+            "description": "Pincer Area (1); Inflict x1 non-elemental damage.",
+            "trigger": "chain",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.0,
+                "element": "—"
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 30,
+            "id": "anti_lightning_shield",
+            "name": "Anti-Lightning Shield",
+            "description": "Self; Reduce lightning damage received by 40%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 50,
+            "id": "megalauncher",
+            "name": "Megalauncher",
+            "description": "Inflict x1 character-weapon damage.",
+            "trigger": "chain",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.0
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 80,
+            "id": "frequency_20",
+            "name": "Frequency +20%",
+            "description": "Staff; Boost Staff allies' skill frequency by 20% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30
+          }
+        ]
       },
       {
         jobIndex: 2,
@@ -11586,7 +15522,56 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 8500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "anti_fire_shield",
+            "name": "Anti-Fire Shield",
+            "description": "Self; Reduce fire damage received by 40%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 30,
+            "id": "trance",
+            "name": "Trance",
+            "description": "Pincer Area (1) + Row; Inflict x1 non-elemental damage.",
+            "trigger": "chain",
+            "frequency": 20,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.0,
+                "element": "—"
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 50,
+            "id": "ultima",
+            "name": "Ultima",
+            "description": "Pincer Area (1); Inflict x2 non-elemental damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 2.0,
+                "element": "—"
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 80,
+            "id": "aerial_shield",
+            "name": "Aerial Shield",
+            "description": "Chain; Levitation + Reduce all damage by 20% (unstackable) for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30
+          }
+        ]
       },
       {
         jobIndex: 3,
@@ -11616,7 +15601,55 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 9500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "anti_darkness_shield",
+            "name": "Anti-Darkness Shield",
+            "description": "Self; Reduce darkness damage received by 40%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 30,
+            "id": "anti_ice_shield",
+            "name": "Anti-Ice Shield",
+            "description": "Self; Reduce ice damage received by 40%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 50,
+            "id": "gigalauncher",
+            "name": "Gigalauncher",
+            "description": "Inflict x2 character-weapon damage.",
+            "trigger": "chain",
+            "frequency": 40,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.0
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 80,
+            "id": "transcendence",
+            "name": "Transcendence",
+            "description": "Pincer Area (1); Inflict x3 non-elemental damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 3.0,
+                "element": "—"
+              }
+            ],
+            "power": 3.0
+          }
+        ]
       }
     ]
   },
@@ -11856,7 +15889,42 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 8500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "defensive_counter",
+            "name": "Defensive Counter",
+            "description": "Self; DEF +30% for 4 turns.",
+            "trigger": "counter",
+            "frequency": 60,
+            "target": "self"
+          },
+          {
+            "level": 30,
+            "id": "magic_defense_counter",
+            "name": "Magic Defense Counter",
+            "description": "Self; MDEF +30% for 4 turns.",
+            "trigger": "counter",
+            "frequency": 60,
+            "target": "self"
+          },
+          {
+            "level": 50,
+            "id": "hp_10",
+            "name": "HP +10%",
+            "description": "Self; HP +10%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 80,
+            "id": "shadowbind",
+            "name": "Shadowbind",
+            "description": "Area (2); Apply shadowbind (30% chance) for 3 turns.",
+            "trigger": "chain",
+            "frequency": 100
+          }
+        ]
       },
       {
         jobIndex: 2,
@@ -11886,7 +15954,42 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 9000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "shadow",
+            "name": "Shadow",
+            "description": "Pincer Area (1); Inflict x1 dark damage.",
+            "trigger": "chain",
+            "frequency": 50,
+            "power": 1.0
+          },
+          {
+            "level": 30,
+            "id": "anti_lightning_shield",
+            "name": "Anti-Lightning Shield",
+            "description": "Self; Reduce lightning damage received by 40%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 50,
+            "id": "abyss",
+            "name": "Abyss",
+            "description": "Pincer Area (1); Inflict x2 dark damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "power": 2.0
+          },
+          {
+            "level": 80,
+            "id": "magic_attack_5",
+            "name": "Magic Attack +5%",
+            "description": "Dragon; MATK +5% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30
+          }
+        ]
       },
       {
         jobIndex: 3,
@@ -11916,7 +16019,49 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 9500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "rake",
+            "name": "Rake",
+            "description": "Area (1); Inflict x2 character-weapon damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.0
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 30,
+            "id": "shadowbind_guard",
+            "name": "Shadowbind Guard",
+            "description": "Self; Resistance to shadowbind +50%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 50,
+            "id": "shadow",
+            "name": "Shadow",
+            "description": "Pincer Ring; Inflict x1 dark damage.",
+            "trigger": "chain",
+            "frequency": 50,
+            "power": 1.0
+          },
+          {
+            "level": 80,
+            "id": "dark_matter",
+            "name": "Dark Matter",
+            "description": "Pincer Area (1); Inflict x3 dark damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "power": 3.0
+          }
+        ]
       }
     ]
   },
@@ -12156,7 +16301,52 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 12500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "lightning_spear",
+            "name": "Lightning & Spear",
+            "description": "Pincer Row; Inflict x1.6 lightning and x1.6 spear damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.6
+              }
+            ],
+            "power": 1.6
+          },
+          {
+            "level": 30,
+            "id": "control_time_4_sec",
+            "name": "Control Time +4 Sec",
+            "description": "Equip; Extends this unit's move timer by 4 seconds.",
+            "trigger": "equip"
+          },
+          {
+            "level": 50,
+            "id": "hypermetabolic_magic",
+            "name": "Hypermetabolic Magic",
+            "description": "Equip; Moving over capsules boosts MATK by 10% for 3 turns. Capsules of your own element are doubly potent.",
+            "trigger": "equip"
+          },
+          {
+            "level": 80,
+            "id": "tempest_spear",
+            "name": "Tempest & Spear",
+            "description": "Inflict x2.6 lightning and x2.6 spear damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.6
+              }
+            ],
+            "power": 2.6
+          }
+        ]
       }
     ]
   },
@@ -12196,7 +16386,54 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 12500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "teraspear",
+            "name": "Teraspear",
+            "description": "Inflict x3 spear damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 3.0
+              }
+            ],
+            "power": 3.0
+          },
+          {
+            "level": 30,
+            "id": "trident",
+            "name": "Trident",
+            "description": "Area (1); Inflict x2 spear damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.0
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 50,
+            "id": "healing_conversion",
+            "name": "Healing Conversion",
+            "description": "All; Heal all allies by 20% of pincer damage dealt (cap 1300).",
+            "trigger": "pincer",
+            "frequency": 30,
+            "target": "all"
+          },
+          {
+            "level": 80,
+            "id": "barrier",
+            "name": "Barrier",
+            "description": "Adjacent, Equip; Reduce physical and magic damage by 50% (unstackable).",
+            "trigger": "equip"
+          }
+        ]
       }
     ]
   },
@@ -12236,7 +16473,61 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 12500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "cross_aim",
+            "name": "Cross Aim",
+            "description": "Cross (2); Inflict x2 bow damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.0
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 30,
+            "id": "terabow",
+            "name": "Terabow",
+            "description": "Inflict x3 bow damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 3.0
+              }
+            ],
+            "power": 3.0
+          },
+          {
+            "level": 50,
+            "id": "chaos_arrows",
+            "name": "Chaos Arrows",
+            "description": "Ring; Inflict x1 bow damage in a square ring around the caster's location, 60% chance to apply confusion for 3 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.0
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 80,
+            "id": "ribbon",
+            "name": "Ribbon",
+            "description": "Area (1); +50% resistance against poison, sleep, paralysis, confusion, demoralization, petrification, icebind, shadowbind, and instant death for 3 turns.",
+            "trigger": "chain",
+            "frequency": 100
+          }
+        ]
       }
     ]
   },
@@ -12276,7 +16567,38 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 12500000,
         expCoeff: 2.05,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "heal",
+            "name": "Heal",
+            "description": "All; Heal all allies with power 1 (cap 700).",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "all"
+          },
+          {
+            "level": 30,
+            "id": "status_guard",
+            "name": "Status Guard",
+            "description": "Equip; +50% resistance against poison, sleep, paralysis, confusion, demoralization, and petrification.",
+            "trigger": "equip"
+          },
+          {
+            "level": 50,
+            "id": "dual_revival_50_hp",
+            "name": "Dual Revival 50% HP",
+            "description": "Equip; Revive two allies with 50% HP when starting a new floor.",
+            "trigger": "equip"
+          },
+          {
+            "level": 80,
+            "id": "extend_chain",
+            "name": "Extend Chain",
+            "description": "Equip; Extends chains to connect allies in all four directions, including those not aligned along a straight line.",
+            "trigger": "equip"
+          }
+        ]
       }
     ]
   },
@@ -12316,7 +16638,52 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 12500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "inferno_spear",
+            "name": "Inferno & Spear",
+            "description": "Pincer Row; Inflict x1.6 fire and x1.6 spear damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.6
+              }
+            ],
+            "power": 1.6
+          },
+          {
+            "level": 30,
+            "id": "control_time_4_sec",
+            "name": "Control Time +4 Sec",
+            "description": "Equip; Extends this unit's move timer by 4 seconds.",
+            "trigger": "equip"
+          },
+          {
+            "level": 50,
+            "id": "hypermetabolic_magic",
+            "name": "Hypermetabolic Magic",
+            "description": "Equip; Moving over capsules boosts MATK by 10% for 3 turns. Capsules of your own element are doubly potent.",
+            "trigger": "equip"
+          },
+          {
+            "level": 80,
+            "id": "solar_wind_spear",
+            "name": "Solar Wind & Spear",
+            "description": "Inflict x2.6 fire and x2.6 spear damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.6
+              }
+            ],
+            "power": 2.6
+          }
+        ]
       }
     ]
   },
@@ -12356,7 +16723,63 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 12500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "fire",
+            "name": "Fire",
+            "description": "Pincer + Ring; Inflict x1 fire damage on pincered units and a square ring around them.",
+            "trigger": "chain",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.0,
+                "element": "Fire"
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 30,
+            "id": "metabolic_magic",
+            "name": "Metabolic Magic",
+            "description": "Equip; Moving over capsules boosts MATK by 5% for 3 turns. Capsules of your own element are doubly potent.",
+            "trigger": "equip"
+          },
+          {
+            "level": 50,
+            "id": "inferno",
+            "name": "Inferno",
+            "description": "Pincer + Corners; Inflict x2 fire damage on pincered units and each 2x2 corner.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 2.0,
+                "element": "Fire"
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 80,
+            "id": "magic_bomb",
+            "name": "Magic Bomb",
+            "description": "Chain; Sets bombs that inflict x3 fire damage in a Diamond pattern when detonated by magic.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 3.0,
+                "element": "Fire"
+              }
+            ],
+            "power": 3.0
+          }
+        ]
       }
     ]
   },
@@ -12396,7 +16819,63 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 12500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "ice",
+            "name": "Ice",
+            "description": "Pincer + Ring; Inflict x1 ice damage on pincered units and a square ring around them.",
+            "trigger": "chain",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.0,
+                "element": "Ice"
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 30,
+            "id": "metabolic_magic",
+            "name": "Metabolic Magic",
+            "description": "Equip; Moving over capsules boosts MATK by 5% for 3 turns. Capsules of your own element are doubly potent.",
+            "trigger": "equip"
+          },
+          {
+            "level": 50,
+            "id": "glacier",
+            "name": "Glacier",
+            "description": "Pincer + Corners; Inflict x2 ice damage on pincered units and each 2x2 corner.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 2.0,
+                "element": "Ice"
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 80,
+            "id": "magic_bomb",
+            "name": "Magic Bomb",
+            "description": "Chain; Sets bombs that inflict x3 ice damage in a Diamond pattern when detonated by magic.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 3.0,
+                "element": "Ice"
+              }
+            ],
+            "power": 3.0
+          }
+        ]
       }
     ]
   },
@@ -12436,7 +16915,63 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 12500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "thunder",
+            "name": "Thunder",
+            "description": "Pincer + Ring; Inflict x1 lightning damage on pincered units and a square ring around them.",
+            "trigger": "chain",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.0,
+                "element": "Lightning"
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 30,
+            "id": "metabolic_magic",
+            "name": "Metabolic Magic",
+            "description": "Equip; Moving over capsules boosts MATK by 5% for 3 turns. Capsules of your own element are doubly potent.",
+            "trigger": "equip"
+          },
+          {
+            "level": 50,
+            "id": "lightning",
+            "name": "Lightning",
+            "description": "Pincer + Corners; Inflict x2 lightning damage on pincered units and each 2x2 corner.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 2.0,
+                "element": "Lightning"
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 80,
+            "id": "magic_bomb",
+            "name": "Magic Bomb",
+            "description": "Chain; Sets bombs that inflict x3 lightning damage in a Diamond pattern when detonated by magic.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 3.0,
+                "element": "Lightning"
+              }
+            ],
+            "power": 3.0
+          }
+        ]
       }
     ]
   },
@@ -12476,7 +17011,56 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 12500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "shadow",
+            "name": "Shadow",
+            "description": "Pincer + Ring; Inflict x1 darkness damage on pincered units and a square ring around them.",
+            "trigger": "chain",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.0,
+                "element": "Darkness"
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 30,
+            "id": "metabolic_magic",
+            "name": "Metabolic Magic",
+            "description": "Equip; Moving over capsules boosts MATK by 5% for 3 turns. Capsules of your own element are doubly potent.",
+            "trigger": "equip"
+          },
+          {
+            "level": 50,
+            "id": "abyss",
+            "name": "Abyss",
+            "description": "Pincer + Corners; Inflict x2 darkness damage on pincered units and each 2x2 corner.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 2.0,
+                "element": "Darkness"
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 80,
+            "id": "magic_bomb",
+            "name": "Magic Bomb",
+            "description": "Chain; Sets bombs that inflict x3 dark damage in a Diamond pattern when detonated by magic.",
+            "trigger": "chain",
+            "frequency": 30,
+            "power": 3.0
+          }
+        ]
       }
     ]
   },
@@ -12516,7 +17100,56 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 12500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "petrification_guard",
+            "name": "Petrification Guard",
+            "description": "Equip; +50% resistance to petrification.",
+            "trigger": "equip"
+          },
+          {
+            "level": 30,
+            "id": "fire",
+            "name": "Fire",
+            "description": "Pincer + Ring; Inflict x1 fire damage on pincered units and a square ring around them.",
+            "trigger": "chain",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.0,
+                "element": "Fire"
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 50,
+            "id": "magic_defense_10",
+            "name": "Magic Defense -10%",
+            "description": "Dragon; Reduce MDEF for Dragon enemies by 10% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30
+          },
+          {
+            "level": 80,
+            "id": "meteor",
+            "name": "Meteor",
+            "description": "All; Inflict x2 fire damage to random spaces not occupied by allies or objects (24).",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "all",
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 2.0,
+                "element": "Fire"
+              }
+            ],
+            "power": 2.0
+          }
+        ]
       }
     ]
   },
@@ -12556,7 +17189,46 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 12500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "demoralizing_spear",
+            "name": "Demoralizing Spear",
+            "description": "1 Column; Inflict x1 spear damage, 80% chance to apply demoralization for 3 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.0
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 30,
+            "id": "death_guard",
+            "name": "Death Guard",
+            "description": "Equip; +50% resistance to instant death.",
+            "trigger": "equip"
+          },
+          {
+            "level": 50,
+            "id": "valhalla_s_fury",
+            "name": "Valhalla's Fury",
+            "description": "Inflict 2000 damage.",
+            "trigger": "pincer",
+            "frequency": 30
+          },
+          {
+            "level": 80,
+            "id": "zantetsuso",
+            "name": "Zantetsuso",
+            "description": "Area (2); Reduce HP by 50% around caster's location with a 60% chance.",
+            "trigger": "pincer",
+            "frequency": 30
+          }
+        ]
       }
     ]
   },
@@ -12596,7 +17268,53 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 12500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "icebind_guard",
+            "name": "Icebind Guard",
+            "description": "Equip; +50% resistance to icebind.",
+            "trigger": "equip"
+          },
+          {
+            "level": 30,
+            "id": "ice",
+            "name": "Ice",
+            "description": "Pincer + Ring; Inflict x1 ice damage on pincered units and a square ring around them.",
+            "trigger": "chain",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.0,
+                "element": "Ice"
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 50,
+            "id": "icebind",
+            "name": "Icebind",
+            "description": "Area (2); Apply icebind on targets for 3 turns with a 30% chance. Frozen targets that are pincered will die instantly.",
+            "trigger": "chain",
+            "frequency": 100
+          },
+          {
+            "level": 80,
+            "id": "maelstrom",
+            "name": "Maelstrom",
+            "description": "Area (2) (Ground) 30%; Inflict x2 character-weapon damage to non-levitating enemies around caster's location.",
+            "trigger": "chain",
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.0
+              }
+            ],
+            "power": 2.0
+          }
+        ]
       }
     ]
   },
@@ -12736,7 +17454,47 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 12000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "leeching_blade",
+            "name": "Leeching Blade",
+            "description": "Inflict x2 magical damage and absorb HP (cap 700).",
+            "trigger": "pincer",
+            "frequency": 30,
+            "power": 2.0,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 2.0
+              }
+            ]
+          },
+          {
+            "level": 30,
+            "id": "shadowbind_guard",
+            "name": "Shadowbind Guard",
+            "description": "Equip; +50% resistance to shadowbind.",
+            "trigger": "equip"
+          },
+          {
+            "level": 50,
+            "id": "augment_circle",
+            "name": "Augment Circle",
+            "description": "Self; Increases Circle of Carnage damage of self by 20% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 80,
+            "id": "gravity_field",
+            "name": "Gravity Field",
+            "description": "3 Columns; Apply shadowbind of power 1 on caster's column and adjacent columns for 2 turns with a 75% chance.",
+            "trigger": "pincer",
+            "frequency": 100
+          }
+        ]
       }
     ]
   },
@@ -12776,7 +17534,53 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 12000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "thunder_sword",
+            "name": "Thunder & Sword",
+            "description": "Pincer Column; Inflict x0.8 lightning and x0.8 sword damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 0.8
+              }
+            ],
+            "power": 0.8
+          },
+          {
+            "level": 30,
+            "id": "hp_20",
+            "name": "HP +20%",
+            "description": "Equip; Boost HP by 20%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 50,
+            "id": "lightning_sword",
+            "name": "Lightning & Sword",
+            "description": "Pincer Row; Inflict x1.6 lightning and x1.6 sword damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.6
+              }
+            ],
+            "power": 1.6
+          },
+          {
+            "level": 80,
+            "id": "fetters",
+            "name": "Fetters",
+            "description": "Area (2); Shortens the distance enemies can move each turn for 3 turns.",
+            "trigger": "chain",
+            "frequency": 100
+          }
+        ]
       }
     ]
   },
@@ -12816,7 +17620,41 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 12000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "restore_time",
+            "name": "Restore Time",
+            "description": "All; Allies with impaired control time regain full time to maneuver.",
+            "trigger": "chain",
+            "frequency": 100,
+            "target": "all"
+          },
+          {
+            "level": 30,
+            "id": "hp_20",
+            "name": "HP +20%",
+            "description": "Equip; Boost HP by 20%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 50,
+            "id": "stealth",
+            "name": "Stealth",
+            "description": "Self; Slip past enemies and obstacles like a shadow. Active for 3 turns.",
+            "trigger": "chain",
+            "frequency": 100,
+            "target": "self"
+          },
+          {
+            "level": 80,
+            "id": "extended_regen",
+            "name": "Extended Regen",
+            "description": "Area (2); Applies Regen with power 1.5 (cap 300) for 5 turns.",
+            "trigger": "chain",
+            "frequency": 30
+          }
+        ]
       }
     ]
   },
@@ -12856,7 +17694,72 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 12000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "shadow",
+            "name": "Shadow",
+            "description": "Pincer Area (Column); Inflict x1 darkness damage on entire columns of pincered units.",
+            "trigger": "chain",
+            "frequency": 20,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.0,
+                "element": "Darkness"
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 30,
+            "id": "guardian_sword",
+            "name": "Guardian Sword",
+            "description": "Lateral (2); Inflict x2.5 sword damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.5
+              }
+            ],
+            "power": 2.5
+          },
+          {
+            "level": 50,
+            "id": "abyss",
+            "name": "Abyss",
+            "description": "Pincer + Ring; Inflict x2 darkness damage on pincered units and a square ring around them.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 2.0,
+                "element": "Darkness"
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 80,
+            "id": "dark_retaliation",
+            "name": "Dark Retaliation",
+            "description": "All; Inflict x1 darkness damage to all enemies when caster is hit by magic.",
+            "trigger": "counter",
+            "frequency": 30,
+            "target": "all",
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.0,
+                "element": "Darkness"
+              }
+            ],
+            "power": 1.0
+          }
+        ]
       }
     ]
   },
@@ -12896,7 +17799,52 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "trance_blast",
+            "name": "Trance Blast",
+            "description": "Pincer Area (1); Inflict x1 non-elemental magic and x0.5 character-weapon damage.",
+            "trigger": "chain",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.0,
+                "element": "—"
+              },
+              {
+                "type": "weapon",
+                "multiplier": 0.5
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 15,
+            "id": "hp_10",
+            "name": "HP +10%",
+            "description": "Equip; Boost HP by 10%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 35,
+            "id": "mega_heal",
+            "name": "Mega Heal",
+            "description": "Chain; Heal with power 2 (cap 700).",
+            "trigger": "chain",
+            "frequency": 100
+          },
+          {
+            "level": 65,
+            "id": "magic_deflector",
+            "name": "Magic Deflector",
+            "description": "Self; Mitigates damage inflicted by magic by 10% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          }
+        ]
       }
     ]
   },
@@ -12936,7 +17884,76 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 12000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "ultima_blast",
+            "name": "Ultima Blast",
+            "description": "Pincer Area (1); Inflict x2 non-elemental magic and x0.7 character-weapon damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 2.0,
+                "element": "—"
+              },
+              {
+                "type": "weapon",
+                "multiplier": 0.7
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 30,
+            "id": "hp_20",
+            "name": "HP +20%",
+            "description": "Equip; Boost HP by 20%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 50,
+            "id": "astral_blast",
+            "name": "Astral Blast",
+            "description": "Pincer Area (1); Inflict x3 non-elemental magic and x0.9 character-weapon damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 3.0,
+                "element": "—"
+              },
+              {
+                "type": "weapon",
+                "multiplier": 0.9
+              }
+            ],
+            "power": 3.0
+          },
+          {
+            "level": 80,
+            "id": "trance_retaliation",
+            "name": "Trance Retaliation",
+            "description": "All; Inflict x1 non-elemental magic and x0.5 character-weapon damage to all enemies when caster is hit by magic.",
+            "trigger": "counter",
+            "frequency": 30,
+            "target": "all",
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.0,
+                "element": "—"
+              },
+              {
+                "type": "weapon",
+                "multiplier": 0.5
+              }
+            ],
+            "power": 1.0
+          }
+        ]
       }
     ]
   },
@@ -12976,7 +17993,48 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5000000,
         expCoeff: 2.15,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "megamoogle",
+            "name": "Megamoogle",
+            "description": "Area (1); Inflict x1.1 character-weapon damage.",
+            "trigger": "chain",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.1
+              }
+            ],
+            "power": 1.1
+          },
+          {
+            "level": 15,
+            "id": "levitation",
+            "name": "Levitation",
+            "description": "Self; Levitation.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 35,
+            "id": "reanimation",
+            "name": "Reanimation",
+            "description": "All; Cures allies of petrification.",
+            "trigger": "chain",
+            "frequency": 100,
+            "target": "all"
+          },
+          {
+            "level": 65,
+            "id": "giga_regen",
+            "name": "Giga Regen",
+            "description": "Area (2); Gradually restores HP with power 1.5 (cap 600) for 3 turns.",
+            "trigger": "chain",
+            "frequency": 30
+          }
+        ]
       },
       {
         jobIndex: 2,
@@ -13006,7 +18064,49 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5500000,
         expCoeff: 2.15,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "defense_10",
+            "name": "Defense +10%",
+            "description": "Self; DEF +10% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 15,
+            "id": "gigamoogle",
+            "name": "Gigamoogle",
+            "description": "Area (1); Inflict x2.2 character-weapon damage.",
+            "trigger": "chain",
+            "frequency": 40,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.2
+              }
+            ],
+            "power": 2.2
+          },
+          {
+            "level": 35,
+            "id": "petrification_ward",
+            "name": "Petrification Ward",
+            "description": "Self; Confer immunity to petrification.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 65,
+            "id": "mega_regen",
+            "name": "Mega Regen",
+            "description": "All; Gradually restores HP with power 1 (cap 300) for 3 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "all"
+          }
+        ]
       },
       {
         jobIndex: 3,
@@ -13036,7 +18136,48 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5500000,
         expCoeff: 2.15,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "defense_10",
+            "name": "Defense +10%",
+            "description": "Self; DEF +10%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 15,
+            "id": "hp_10",
+            "name": "HP +10%",
+            "description": "Self; HP +10%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 35,
+            "id": "levitation",
+            "name": "Levitation",
+            "description": "All; Levitation for 3 turns.",
+            "trigger": "chain",
+            "frequency": 100,
+            "target": "all"
+          },
+          {
+            "level": 65,
+            "id": "teramoogle",
+            "name": "Teramoogle",
+            "description": "Area (1); Inflict x3.3 character-weapon damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 3.3
+              }
+            ],
+            "power": 3.3
+          }
+        ]
       }
     ]
   },
@@ -13076,7 +18217,62 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 12000000,
         expCoeff: 2.2,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "teraspear",
+            "name": "Teraspear",
+            "description": "Inflict x3 spear damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 3.0
+              }
+            ],
+            "power": 3.0
+          },
+          {
+            "level": 30,
+            "id": "gigaspear",
+            "name": "Gigaspear",
+            "description": "Cross (All); Inflict x2 spear damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "all",
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.0
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 50,
+            "id": "venomous_spear",
+            "name": "Venomous Spear",
+            "description": "Pincer Area (Column); Apply poison lasting 3 turns with power 1 (75% chance) and inflict x1 spear damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.0
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 80,
+            "id": "aerial_regen",
+            "name": "Aerial Regen",
+            "description": "Area (2); Levitate over traps and gradually recover HP with power 2 (cap 500) for 3 turns.",
+            "trigger": "chain",
+            "frequency": 30
+          }
+        ]
       }
     ]
   },
@@ -13116,7 +18312,62 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 12000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "fire_sword",
+            "name": "Fire & Sword",
+            "description": "Pincer Column; Inflict x0.8 fire and x0.8 sword damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 0.8
+              }
+            ],
+            "power": 0.8
+          },
+          {
+            "level": 30,
+            "id": "giga_heal",
+            "name": "Giga Heal",
+            "description": "Self; Heal with power 2.5 (cap 1300).",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 50,
+            "id": "solar_wind_sword",
+            "name": "Solar Wind & Sword",
+            "description": "Inflict x2.6 fire and x2.6 sword damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.6
+              }
+            ],
+            "power": 2.6
+          },
+          {
+            "level": 80,
+            "id": "hellfire_sword",
+            "name": "Hellfire Sword",
+            "description": "Diamond; Inflict x0.8 fire and x0.8 sword damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 0.8
+              }
+            ],
+            "power": 0.8
+          }
+        ]
       }
     ]
   },
@@ -13156,7 +18407,46 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 12000000,
         expCoeff: 2.05,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "venom_bomb",
+            "name": "Venom Bomb",
+            "description": "Summon a bomb that explodes after 1 turn, dealing 30% of HP as damage (cap 600) and poisons with power 3 in its Area (1).",
+            "trigger": "chain",
+            "frequency": 30
+          },
+          {
+            "level": 30,
+            "id": "control_time_4_sec",
+            "name": "Control Time +4 Sec",
+            "description": "Equip; Extends this unit's move timer by 4 seconds.",
+            "trigger": "equip"
+          },
+          {
+            "level": 50,
+            "id": "poison_predator",
+            "name": "Poison Predator",
+            "description": "Poisoned; Inflict x6 character-weapon damage to all poisoned enemies.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 6.0
+              }
+            ],
+            "power": 6.0
+          },
+          {
+            "level": 80,
+            "id": "corrosive_cloud",
+            "name": "Corrosive Cloud",
+            "description": "Diamond; Apply paralysis and poison of power 3, 75% chance. Active for 3 turns.",
+            "trigger": "chain",
+            "frequency": 30
+          }
+        ]
       }
     ]
   },
@@ -13296,7 +18586,71 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 11500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "terasword",
+            "name": "Terasword",
+            "description": "Inflict x3 sword damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 3.0
+              }
+            ],
+            "power": 3.0
+          },
+          {
+            "level": 30,
+            "id": "hp_20",
+            "name": "HP +20%",
+            "description": "Equip; Boost HP by 20%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 50,
+            "id": "latent_inferno_blade",
+            "name": "Latent Inferno Blade",
+            "description": "Cross (All); Inflict x1.6 sword damage and (if squad contains a Fire-attribute ally) x1.6 fire damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "all",
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.6
+              },
+              {
+                "type": "magic",
+                "multiplier": 1.6,
+                "element": "Fire"
+              }
+            ],
+            "power": 1.6
+          },
+          {
+            "level": 80,
+            "id": "latent_glacial_blade",
+            "name": "Latent Glacial Blade",
+            "description": "Diamond; Inflict x1.6 sword damage and (if squad contains an Ice-attribute ally) x1.6 ice damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.6
+              },
+              {
+                "type": "magic",
+                "multiplier": 1.6,
+                "element": "Ice"
+              }
+            ],
+            "power": 1.6
+          }
+        ]
       }
     ]
   },
@@ -13336,7 +18690,61 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 12000000,
         expCoeff: 2.15,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "gigabow",
+            "name": "Gigabow",
+            "description": "Area (1); Inflict x2 bow damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.0
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 30,
+            "id": "control_time_4_sec",
+            "name": "Control Time +4 Sec",
+            "description": "Self; Control time +4 sec.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 50,
+            "id": "gigabow_2",
+            "name": "Gigabow",
+            "description": "Ring; Inflict x2 bow damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.0
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 80,
+            "id": "twin_arrows",
+            "name": "Twin Arrows",
+            "description": "Most HP (2); Inflict x3 bow damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 3.0
+              }
+            ],
+            "power": 3.0
+          }
+        ]
       }
     ]
   },
@@ -13376,7 +18784,55 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 9500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "crushing_strike",
+            "name": "Crushing Strike",
+            "description": "Inflict x1 graviton and x0.5 spear damage.",
+            "trigger": "pincer",
+            "frequency": 80,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 0.5
+              }
+            ],
+            "power": 0.5
+          },
+          {
+            "level": 30,
+            "id": "anti_photon_shield",
+            "name": "Anti-Photon Shield",
+            "description": "Self; Reduce photon damage received by 40%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 50,
+            "id": "magic_attack_10",
+            "name": "Magic Attack +10%",
+            "description": "Self; MATK +10%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 80,
+            "id": "crushing_counter",
+            "name": "Crushing Counter",
+            "description": "Cross (1); Inflict x1.5 graviton damage.",
+            "trigger": "counter",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.5,
+                "element": "Graviton"
+              }
+            ],
+            "power": 1.5
+          }
+        ]
       },
       {
         jobIndex: 2,
@@ -13406,7 +18862,54 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 9500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "gravity_strike",
+            "name": "Gravity Strike",
+            "description": "Inflict x2 graviton and x0.7 spear damage.",
+            "trigger": "pincer",
+            "frequency": 60,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 0.7
+              }
+            ],
+            "power": 0.7
+          },
+          {
+            "level": 30,
+            "id": "hp_20",
+            "name": "HP +20%",
+            "description": "Self; HP +20%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 50,
+            "id": "hypermetabolic_magic",
+            "name": "Hypermetabolic Magic",
+            "description": "Self; Move on Capsule Point to boost MATK +10% for 3 turns (+20% for capsule of own element).",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 80,
+            "id": "supergravity_strike",
+            "name": "Supergravity Strike",
+            "description": "Inflict x3 graviton and x0.9 spear damage.",
+            "trigger": "pincer",
+            "frequency": 40,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 0.9
+              }
+            ],
+            "power": 0.9
+          }
+        ]
       },
       {
         jobIndex: 3,
@@ -13436,7 +18939,61 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 10000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "control_time_4_sec",
+            "name": "Control Time +4 Sec",
+            "description": "Self; Control time +4 sec.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 30,
+            "id": "crush_spear",
+            "name": "Crush & Spear",
+            "description": "Pincer Column; Inflict x0.8 graviton and x0.8 spear damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 0.8
+              }
+            ],
+            "power": 0.8
+          },
+          {
+            "level": 50,
+            "id": "gravity_spear",
+            "name": "Gravity & Spear",
+            "description": "Pincer Row; Inflict x1.6 graviton and x1.6 spear damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.6
+              }
+            ],
+            "power": 1.6
+          },
+          {
+            "level": 80,
+            "id": "axion_strike",
+            "name": "Axion Strike",
+            "description": "Inflict x3.5 graviton and x1.3 spear damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.3
+              }
+            ],
+            "power": 1.3
+          }
+        ]
       }
     ]
   },
@@ -13676,7 +19233,56 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 10000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "radiance",
+            "name": "Radiance",
+            "description": "Pincer Area (1); Inflict x1 photon damage.",
+            "trigger": "chain",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.0,
+                "element": "Photon"
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 30,
+            "id": "anti_graviton_capsule",
+            "name": "Anti-Graviton Capsule",
+            "description": "Create a Capsule Point that reduces graviton damage by 10% per capsule for all allies.",
+            "trigger": "chain",
+            "frequency": 30
+          },
+          {
+            "level": 50,
+            "id": "metabolic_magic",
+            "name": "Metabolic Magic",
+            "description": "Self; Move on Capsule Point to boost MATK +5% for 3 turns (+10% for capsule of own element).",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 80,
+            "id": "luxon",
+            "name": "Luxon",
+            "description": "Pincer Area (1); Inflict x2 photon damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 2.0,
+                "element": "Photon"
+              }
+            ],
+            "power": 2.0
+          }
+        ]
       },
       {
         jobIndex: 2,
@@ -13706,7 +19312,56 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 10000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "magic_defense_10",
+            "name": "Magic Defense +10%",
+            "description": "Self; MDEF +10%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 30,
+            "id": "luxon",
+            "name": "Luxon",
+            "description": "Pincer + Corners; Inflict x2 photon damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 2.0,
+                "element": "Photon"
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 50,
+            "id": "radiance",
+            "name": "Radiance",
+            "description": "Pincer Area (1) + Column; Inflict x1 photon damage.",
+            "trigger": "chain",
+            "frequency": 20,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.0,
+                "element": "Photon"
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 80,
+            "id": "one_time_revival",
+            "name": "One-Time Revival",
+            "description": "Self; Revive self with 25% HP, but only once.",
+            "trigger": "equip",
+            "target": "self"
+          }
+        ]
       },
       {
         jobIndex: 3,
@@ -13736,7 +19391,56 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 10000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "anti_graviton_shield",
+            "name": "Anti-Graviton Shield",
+            "description": "Self; Reduce graviton damage received by 40%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 30,
+            "id": "magic_bomb",
+            "name": "Magic Bomb",
+            "description": "Create a magic bomb dealing diamond photon damage of power 3.",
+            "trigger": "chain",
+            "frequency": 30
+          },
+          {
+            "level": 50,
+            "id": "tachyon",
+            "name": "Tachyon",
+            "description": "Pincer Area (1); Inflict x3 photon damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 3.0,
+                "element": "Photon"
+              }
+            ],
+            "power": 3.0
+          },
+          {
+            "level": 80,
+            "id": "holy",
+            "name": "Holy",
+            "description": "Pincer Area (1); Inflict x3.5 photon damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 3.5,
+                "element": "Photon"
+              }
+            ],
+            "power": 3.5
+          }
+        ]
       }
     ]
   },
@@ -13976,7 +19680,54 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 9500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "radiant_blade",
+            "name": "Radiant Blade",
+            "description": "Inflict x1 photon and x0.5 sword damage.",
+            "trigger": "pincer",
+            "frequency": 80,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 0.5
+              }
+            ],
+            "power": 0.5
+          },
+          {
+            "level": 30,
+            "id": "anti_graviton_shield",
+            "name": "Anti-Graviton Shield",
+            "description": "Self; Reduce graviton damage received by 40%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 50,
+            "id": "magic_attack_10",
+            "name": "Magic Attack +10%",
+            "description": "Self; MATK +10%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 80,
+            "id": "chaos_sword",
+            "name": "Chaos Sword",
+            "description": "Apply confusion (75% chance) for 3 turns and inflict x1 sword damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.0
+              }
+            ],
+            "power": 1.0
+          }
+        ]
       },
       {
         jobIndex: 2,
@@ -14006,7 +19757,61 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 9500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "luxon_blade",
+            "name": "Luxon Blade",
+            "description": "Inflict x2 photon and x0.7 sword damage.",
+            "trigger": "pincer",
+            "frequency": 60,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 0.7
+              }
+            ],
+            "power": 0.7
+          },
+          {
+            "level": 30,
+            "id": "radiance_sword",
+            "name": "Radiance & Sword",
+            "description": "Pincer Column; Inflict x0.8 photon and x0.8 sword damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 0.8
+              }
+            ],
+            "power": 0.8
+          },
+          {
+            "level": 50,
+            "id": "hypermetabolic_magic",
+            "name": "Hypermetabolic Magic",
+            "description": "Self; Move on Capsule Point to boost MATK +10% for 3 turns (+20% for capsule of own element).",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 80,
+            "id": "tachyon_blade",
+            "name": "Tachyon Blade",
+            "description": "Inflict x3 photon and x0.9 sword damage.",
+            "trigger": "pincer",
+            "frequency": 40,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 0.9
+              }
+            ],
+            "power": 0.9
+          }
+        ]
       },
       {
         jobIndex: 3,
@@ -14036,7 +19841,61 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 10000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "phys_dmg_down_10",
+            "name": "Phys Dmg Down 10%",
+            "description": "Adjacent; Reduce physical damage received by 10%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 30,
+            "id": "radiant_counter",
+            "name": "Radiant Counter",
+            "description": "Cross (1); Inflict x1.5 photon damage.",
+            "trigger": "counter",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.5,
+                "element": "Photon"
+              }
+            ],
+            "power": 1.5
+          },
+          {
+            "level": 50,
+            "id": "luxon_sword",
+            "name": "Luxon & Sword",
+            "description": "Pincer Row; Inflict x1.6 photon and x1.6 sword damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.6
+              }
+            ],
+            "power": 1.6
+          },
+          {
+            "level": 80,
+            "id": "holy_blade",
+            "name": "Holy Blade",
+            "description": "Inflict x3.5 photon and x1.3 sword damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.3
+              }
+            ],
+            "power": 1.3
+          }
+        ]
       }
     ]
   },
@@ -14276,7 +20135,63 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 12000000,
         expCoeff: 2.15,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "terasword",
+            "name": "Terasword",
+            "description": "Inflict x3 sword damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 3.0
+              }
+            ],
+            "power": 3.0
+          },
+          {
+            "level": 30,
+            "id": "cross_cleave",
+            "name": "Cross Cleave",
+            "description": "Cross (All); Inflict x2 sword damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "all",
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.0
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 50,
+            "id": "augment_attack",
+            "name": "Augment Attack",
+            "description": "All, 3 charges; Allies' ATK +30% for 1 turn.",
+            "trigger": "tap",
+            "target": "all"
+          },
+          {
+            "level": 80,
+            "id": "berserker",
+            "name": "Berserker",
+            "description": "6 random enemies; Inflict x1 sword damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "enemy",
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.0
+              }
+            ],
+            "power": 1.0
+          }
+        ]
       }
     ]
   },
@@ -14316,7 +20231,39 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 9000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "defense_10",
+            "name": "Defense +10%",
+            "description": "Self; DEF +10%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 30,
+            "id": "ally_revival",
+            "name": "Ally Revival",
+            "description": "Self; Revive an ally with 1 HP when starting a new floor.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 50,
+            "id": "barrier",
+            "name": "Barrier",
+            "description": "Adjacent; Reduce physical and magical damage received by 25% (unstackable).",
+            "trigger": "equip"
+          },
+          {
+            "level": 80,
+            "id": "augment_attack",
+            "name": "Augment Attack",
+            "description": "All, 3 charges; Allies' ATK +30% for 1 turn.",
+            "trigger": "tap",
+            "target": "all"
+          }
+        ]
       }
     ]
   },
@@ -14396,7 +20343,53 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 12500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "terasword",
+            "name": "Terasword",
+            "description": "Inflict x3 sword damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 3.0
+              }
+            ],
+            "power": 3.0
+          },
+          {
+            "level": 30,
+            "id": "powered_point_amp",
+            "name": "Powered Point Amp",
+            "description": "Self; Boost powered point charge by 20%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 50,
+            "id": "blossoming_love",
+            "name": "Blossoming Love",
+            "description": "Adjacent; Boost physical damage inflicted by 20%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 90,
+            "id": "petasword",
+            "name": "Petasword",
+            "description": "Inflict x3.5 sword damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 3.5
+              }
+            ],
+            "power": 3.5
+          }
+        ]
       }
     ]
   },
@@ -14436,7 +20429,55 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 12500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "gigaspear",
+            "name": "Gigaspear",
+            "description": "Cross (All); Inflict x2 spear damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "all",
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.0
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 30,
+            "id": "hp_20",
+            "name": "HP +20%",
+            "description": "Self; HP +20%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 50,
+            "id": "femme_fatale_revival",
+            "name": "Femme Fatale Revival",
+            "description": "Self, Male; Revive an ally with 100% HP when starting a new floor.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 90,
+            "id": "petaspear",
+            "name": "Petaspear",
+            "description": "Inflict x3.5 spear damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 3.5
+              }
+            ],
+            "power": 3.5
+          }
+        ]
       }
     ]
   },
@@ -14676,7 +20717,41 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 12500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "heal",
+            "name": "Heal",
+            "description": "All; Heal with power 1 (cap 900).",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "all"
+          },
+          {
+            "level": 30,
+            "id": "defense_15",
+            "name": "Defense +15%",
+            "description": "Human; DEF +15% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30
+          },
+          {
+            "level": 50,
+            "id": "restorative_counter",
+            "name": "Restorative Counter",
+            "description": "Area (2); Heal with power 2.5 (cap 1300).",
+            "trigger": "counter",
+            "frequency": 30
+          },
+          {
+            "level": 90,
+            "id": "extend_chain",
+            "name": "Extend Chain",
+            "description": "Self; Extends chains to link allies in all four cardinal directions, plus any allies positioned to chain with them.",
+            "trigger": "equip",
+            "target": "self"
+          }
+        ]
       }
     ]
   },
@@ -14836,7 +20911,58 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 10000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "trance",
+            "name": "Trance",
+            "description": "Pincer Area (1); Inflict x1 non-elemental damage.",
+            "trigger": "chain",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.0,
+                "element": "—"
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 30,
+            "id": "magic_defense_10",
+            "name": "Magic Defense +10%",
+            "description": "Self; MDEF +10% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 50,
+            "id": "mega_regen",
+            "name": "Mega Regen",
+            "description": "Self; Gradually restores HP with power 1.5 (cap 300) for 3 turns.",
+            "trigger": "chain",
+            "frequency": 50,
+            "target": "self"
+          },
+          {
+            "level": 80,
+            "id": "trance_2",
+            "name": "Trance",
+            "description": "Pincer Area (1) + Column; Inflict x1 non-elemental damage.",
+            "trigger": "chain",
+            "frequency": 20,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.0,
+                "element": "—"
+              }
+            ],
+            "power": 1.0
+          }
+        ]
       },
       {
         jobIndex: 2,
@@ -14866,7 +20992,56 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 10000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "control_time_2_sec",
+            "name": "Control Time +2 Sec",
+            "description": "Self; Control time +2 sec.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 30,
+            "id": "ultima",
+            "name": "Ultima",
+            "description": "Pincer Area (1); Inflict x2 non-elemental damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 2.0,
+                "element": "—"
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 50,
+            "id": "demoralization_ward",
+            "name": "Demoralization Ward",
+            "description": "Self; Confer immunity to demoralization.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 80,
+            "id": "transcendence",
+            "name": "Transcendence",
+            "description": "Pincer Area (1); Inflict x3 non-elemental damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 3.0,
+                "element": "—"
+              }
+            ],
+            "power": 3.0
+          }
+        ]
       },
       {
         jobIndex: 3,
@@ -14896,7 +21071,54 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 10000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "magic_defense_10",
+            "name": "Magic Defense +10%",
+            "description": "Self; MDEF +10%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 30,
+            "id": "trance_arrow",
+            "name": "Trance & Arrow",
+            "description": "Inflict x0.8 non-elemental and x0.8 bow damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 0.8
+              }
+            ],
+            "power": 0.8
+          },
+          {
+            "level": 50,
+            "id": "twister_ward",
+            "name": "Twister Ward",
+            "description": "Self; Invulnerable to twisters.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 80,
+            "id": "ultima_arrow",
+            "name": "Ultima & Arrow",
+            "description": "Ring; Inflict x1.6 non-elemental and x1.6 bow damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.6
+              }
+            ],
+            "power": 1.6
+          }
+        ]
       }
     ]
   },
@@ -14936,7 +21158,65 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 12500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "ultima",
+            "name": "Ultima",
+            "description": "Pincer + Corners; Inflict x2 non-elemental damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 2.0,
+                "element": "—"
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 30,
+            "id": "trance_retaliation",
+            "name": "Trance Retaliation",
+            "description": "All; Inflict x1 non-elemental damage.",
+            "trigger": "counter",
+            "frequency": 30,
+            "target": "all",
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.0,
+                "element": "—"
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 50,
+            "id": "augment_magic",
+            "name": "Augment Magic",
+            "description": "All, 3 charges; Allies' MATK +30% for 1 turn.",
+            "trigger": "tap",
+            "target": "all"
+          },
+          {
+            "level": 90,
+            "id": "x_treme",
+            "name": "X-Treme",
+            "description": "Pincer Area (1); Inflict x3.5 non-elemental damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 3.5,
+                "element": "—"
+              }
+            ],
+            "power": 3.5
+          }
+        ]
       }
     ]
   },
@@ -14976,7 +21256,54 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 10000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "crushing_arrows",
+            "name": "Crushing Arrows",
+            "description": "Inflict x1 graviton and x0.5 bow damage.",
+            "trigger": "pincer",
+            "frequency": 80,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 0.5
+              }
+            ],
+            "power": 0.5
+          },
+          {
+            "level": 30,
+            "id": "anti_photon_shield",
+            "name": "Anti-Photon Shield",
+            "description": "Self; Reduce photon damage received by 40%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 50,
+            "id": "paralysis_ward",
+            "name": "Paralysis Ward",
+            "description": "Self; Confer immunity to paralysis.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 80,
+            "id": "gravity_arrows",
+            "name": "Gravity Arrows",
+            "description": "Inflict x2 graviton and x0.7 bow damage.",
+            "trigger": "pincer",
+            "frequency": 60,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 0.7
+              }
+            ],
+            "power": 0.7
+          }
+        ]
       },
       {
         jobIndex: 2,
@@ -15006,7 +21333,55 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 10000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "magic_defense_10",
+            "name": "Magic Defense +10%",
+            "description": "Self; MDEF +10% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 30,
+            "id": "crushing_arrows",
+            "name": "Crushing Arrows",
+            "description": "Area (1); Inflict x1 graviton and x0.5 bow damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 0.5
+              }
+            ],
+            "power": 0.5
+          },
+          {
+            "level": 50,
+            "id": "crushing_arrows_2",
+            "name": "Crushing Arrows",
+            "description": "Pincer + Corners; Inflict x1 graviton and x0.5 bow damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 0.5
+              }
+            ],
+            "power": 0.5
+          },
+          {
+            "level": 80,
+            "id": "rift_ward",
+            "name": "Rift Ward",
+            "description": "Self; Invulnerable to dimensional rifts.",
+            "trigger": "equip",
+            "target": "self"
+          }
+        ]
       },
       {
         jobIndex: 3,
@@ -15036,7 +21411,53 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 10000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "magic_defense_10",
+            "name": "Magic Defense +10%",
+            "description": "Self; MDEF +10%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 30,
+            "id": "photon_dmg_down_20",
+            "name": "Photon Dmg Down 20%",
+            "description": "Adjacent; Reduce photon damage received by 20%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 50,
+            "id": "gravity_arrows",
+            "name": "Gravity Arrows",
+            "description": "Ring; Inflict x2 graviton and x0.7 bow damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 0.7
+              }
+            ],
+            "power": 0.7
+          },
+          {
+            "level": 80,
+            "id": "supergravity_arrows",
+            "name": "Supergravity Arrows",
+            "description": "Inflict x3 graviton and x0.9 bow damage.",
+            "trigger": "pincer",
+            "frequency": 40,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 0.9
+              }
+            ],
+            "power": 0.9
+          }
+        ]
       }
     ]
   },
@@ -15076,7 +21497,55 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 12500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "supergravity_arrows",
+            "name": "Supergravity & Arrows",
+            "description": "Inflict x2.6 graviton and x2.6 bow damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.6
+              }
+            ],
+            "power": 2.6
+          },
+          {
+            "level": 30,
+            "id": "life_drain",
+            "name": "Life Drain",
+            "description": "Diamond; Inflict x1.5 absorb damage (cap 900).",
+            "trigger": "chain",
+            "frequency": 30,
+            "power": 1.5
+          },
+          {
+            "level": 50,
+            "id": "money_bags",
+            "name": "Money Bags",
+            "description": "Self; Increase coins acquired by 30%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 90,
+            "id": "axion_arrows",
+            "name": "Axion & Arrows",
+            "description": "Inflict x3 graviton and x3 bow damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 3.0
+              }
+            ],
+            "power": 3.0
+          }
+        ]
       }
     ]
   },
@@ -15216,7 +21685,54 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "defense_10",
+            "name": "Defense +10%",
+            "description": "Self; DEF +10% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 15,
+            "id": "wildcat_sword",
+            "name": "Wildcat Sword",
+            "description": "Inflict x1 sword damage.",
+            "trigger": "pincer",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.0
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 35,
+            "id": "attack_5",
+            "name": "Attack +5%",
+            "description": "Adjacent; ATK +5%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 65,
+            "id": "panther_sword",
+            "name": "Panther Sword",
+            "description": "Inflict x2 sword damage.",
+            "trigger": "pincer",
+            "frequency": 40,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.0
+              }
+            ],
+            "power": 2.0
+          }
+        ]
       },
       {
         jobIndex: 2,
@@ -15246,7 +21762,54 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "frost_sword",
+            "name": "Frost Sword",
+            "description": "Inflict x1 ice and x0.5 sword damage.",
+            "trigger": "pincer",
+            "frequency": 80,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 0.5
+              }
+            ],
+            "power": 0.5
+          },
+          {
+            "level": 15,
+            "id": "control_time_2_sec",
+            "name": "Control Time +2 Sec",
+            "description": "Self; Control time +2 sec.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 35,
+            "id": "hp_10",
+            "name": "HP +10%",
+            "description": "Self; HP +10%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 65,
+            "id": "blizzard_sword",
+            "name": "Blizzard Sword",
+            "description": "Inflict x3 ice and x0.9 sword damage.",
+            "trigger": "pincer",
+            "frequency": 40,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 0.9
+              }
+            ],
+            "power": 0.9
+          }
+        ]
       },
       {
         jobIndex: 3,
@@ -15276,7 +21839,40 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 6000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "wildcat_healer",
+            "name": "Wildcat Healer",
+            "description": "Chain; Heal with power 2 (cap 700).",
+            "trigger": "chain",
+            "frequency": 100
+          },
+          {
+            "level": 15,
+            "id": "defense_10",
+            "name": "Defense +10%",
+            "description": "Self; DEF +10%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 35,
+            "id": "panther_healer",
+            "name": "Panther Healer",
+            "description": "Chain; Heal with power 2.5 (cap 1300).",
+            "trigger": "chain",
+            "frequency": 90
+          },
+          {
+            "level": 65,
+            "id": "major_revival",
+            "name": "Major Revival",
+            "description": "Self; Revive an ally with 25% HP when starting a new floor.",
+            "trigger": "equip",
+            "target": "self"
+          }
+        ]
       }
     ]
   },
@@ -15316,7 +21912,47 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 12000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "disarm_bomb",
+            "name": "Disarm Bomb",
+            "description": "Self; Disarm bombs in the area you've traveled.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 30,
+            "id": "summon_bomb",
+            "name": "Summon Bomb",
+            "description": "Create a time bomb dealing 30% HP as damage (cap 800).",
+            "trigger": "chain",
+            "frequency": 30
+          },
+          {
+            "level": 50,
+            "id": "frequency_20",
+            "name": "Frequency +20%",
+            "description": "Area (2); Skill frequency +20% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30
+          },
+          {
+            "level": 90,
+            "id": "twin_missile",
+            "name": "Twin Missile",
+            "description": "Most HP (2); Inflict x3 character-weapon damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 3.0
+              }
+            ],
+            "power": 3.0
+          }
+        ]
       }
     ]
   },
@@ -15356,7 +21992,66 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 9000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "gigasword",
+            "name": "Gigasword",
+            "description": "1 Row; Inflict x2 sword damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.0
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 30,
+            "id": "demoralization_ward",
+            "name": "Demoralization Ward",
+            "description": "Self; Confer immunity to demoralization.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 50,
+            "id": "cross_cleave",
+            "name": "Cross Cleave",
+            "description": "Cross (All); Inflict x2 sword damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "all",
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.0
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 90,
+            "id": "sword_of_valor",
+            "name": "Sword of Valor",
+            "description": "3 Rows; Inflict x4 sword damage if critical hit (30% chance); otherwise inflict x2 sword damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 4.0
+              },
+              {
+                "type": "weapon",
+                "multiplier": 2.0
+              }
+            ],
+            "power": 4.0
+          }
+        ]
       }
     ]
   },
@@ -15396,7 +22091,61 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 12500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "abyss_sword",
+            "name": "Abyss & Sword",
+            "description": "Pincer Row; Inflict x1.6 dark and x1.6 sword damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.6
+              }
+            ],
+            "power": 1.6
+          },
+          {
+            "level": 30,
+            "id": "hp_20",
+            "name": "HP +20%",
+            "description": "Self; HP +20%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 50,
+            "id": "chaos_blade",
+            "name": "Chaos Blade",
+            "description": "1 Row; Apply instant death (80% chance) and inflict x1 sword damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.0
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 90,
+            "id": "oblivion_sword",
+            "name": "Oblivion & Sword",
+            "description": "Inflict x3 dark and x3 sword damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 3.0
+              }
+            ],
+            "power": 3.0
+          }
+        ]
       }
     ]
   },
@@ -15516,7 +22265,65 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 10000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "radiance",
+            "name": "Radiance",
+            "description": "Pincer Area (1); Inflict x1 photon damage.",
+            "trigger": "chain",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.0,
+                "element": "Photon"
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 30,
+            "id": "magic_defense_10",
+            "name": "Magic Defense +10%",
+            "description": "Self; MDEF +10% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 50,
+            "id": "radiance_2",
+            "name": "Radiance",
+            "description": "Pincer Area (1) + Column; Inflict x1 photon damage.",
+            "trigger": "chain",
+            "frequency": 20,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.0,
+                "element": "Photon"
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 80,
+            "id": "luxon",
+            "name": "Luxon",
+            "description": "Pincer Area (1); Inflict x2 photon damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 2.0,
+                "element": "Photon"
+              }
+            ],
+            "power": 2.0
+          }
+        ]
       },
       {
         jobIndex: 2,
@@ -15546,7 +22353,63 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 10000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "fire",
+            "name": "Fire",
+            "description": "Pincer Area (1); Inflict x1 fire damage.",
+            "trigger": "chain",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.0,
+                "element": "Fire"
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 30,
+            "id": "magic_attack_10",
+            "name": "Magic Attack +10%",
+            "description": "Adjacent; MATK +10%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 50,
+            "id": "fire_2",
+            "name": "Fire",
+            "description": "Pincer Area (1) + Column; Inflict x1 fire damage.",
+            "trigger": "chain",
+            "frequency": 20,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.0,
+                "element": "Fire"
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 80,
+            "id": "inferno",
+            "name": "Inferno",
+            "description": "Pincer Area (1); Inflict x2 fire damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 2.0,
+                "element": "Fire"
+              }
+            ],
+            "power": 2.0
+          }
+        ]
       },
       {
         jobIndex: 3,
@@ -15576,7 +22439,49 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 10000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "magic_defense_10",
+            "name": "Magic Defense +10%",
+            "description": "Self; MDEF +10%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 30,
+            "id": "mega_heal",
+            "name": "Mega Heal",
+            "description": "Self; Heal with power 2 (cap 700).",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 50,
+            "id": "status_guard",
+            "name": "Status Guard",
+            "description": "Self; Resistance to poison, sleep, paralysis, confusion, demoralization, and petrification status effects +50%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 80,
+            "id": "solar_wind",
+            "name": "Solar Wind",
+            "description": "Pincer Area (1); Inflict x3 fire damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 3.0,
+                "element": "Fire"
+              }
+            ],
+            "power": 3.0
+          }
+        ]
       }
     ]
   },
@@ -15616,7 +22521,57 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 12500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "tachyon",
+            "name": "Tachyon",
+            "description": "Pincer Area (1); Inflict x3 photon damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 3.0,
+                "element": "Photon"
+              }
+            ],
+            "power": 3.0
+          },
+          {
+            "level": 30,
+            "id": "magic_deflector",
+            "name": "Magic Deflector",
+            "description": "Self; Reduce all magic damage received by 10% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 50,
+            "id": "impair_magic",
+            "name": "Impair Magic",
+            "description": "All, 3 charges; Enemies' MATK -10% for 1 turn.",
+            "trigger": "tap",
+            "target": "all"
+          },
+          {
+            "level": 90,
+            "id": "big_bang",
+            "name": "Big Bang",
+            "description": "Pincer Area (1); Inflict x3.5 fire damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 3.5,
+                "element": "Fire"
+              }
+            ],
+            "power": 3.5
+          }
+        ]
       }
     ]
   },
@@ -15696,7 +22651,62 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "defense_10",
+            "name": "Defense +10%",
+            "description": "Self; DEF +10% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 15,
+            "id": "megaspear",
+            "name": "Megaspear",
+            "description": "Inflict x1 spear damage.",
+            "trigger": "pincer",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.0
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 35,
+            "id": "counterattack",
+            "name": "Counterattack",
+            "description": "Inflict x1.5 character-weapon damage.",
+            "trigger": "counter",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.5
+              }
+            ],
+            "power": 1.5
+          },
+          {
+            "level": 65,
+            "id": "megaspear_2",
+            "name": "Megaspear",
+            "description": "1 Column; Inflict x1 spear damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.0
+              }
+            ],
+            "power": 1.0
+          }
+        ]
       },
       {
         jobIndex: 2,
@@ -15726,7 +22736,48 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "defense_10",
+            "name": "Defense +10%",
+            "description": "Self; DEF +10%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 15,
+            "id": "gigaspear",
+            "name": "Gigaspear",
+            "description": "Inflict x2 spear damage.",
+            "trigger": "pincer",
+            "frequency": 40,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.0
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 35,
+            "id": "defensive_counter",
+            "name": "Defensive Counter",
+            "description": "Self; DEF +10% for 2 turns.",
+            "trigger": "counter",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 65,
+            "id": "defense_10_2",
+            "name": "Defense -10%",
+            "description": "Dragon; DEF -10% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30
+          }
+        ]
       },
       {
         jobIndex: 3,
@@ -15756,7 +22807,63 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 5500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "offensive_counter",
+            "name": "Offensive Counter",
+            "description": "Self; ATK +10% for 2 turns.",
+            "trigger": "counter",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 15,
+            "id": "counterattack",
+            "name": "Counterattack",
+            "description": "Inflict x2 character-weapon damage.",
+            "trigger": "counter",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.0
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 35,
+            "id": "megaspear",
+            "name": "Megaspear",
+            "description": "Cross (All); Inflict x1 spear damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "all",
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.0
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 65,
+            "id": "teraspear",
+            "name": "Teraspear",
+            "description": "Inflict x3 spear damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 3.0
+              }
+            ],
+            "power": 3.0
+          }
+        ]
       }
     ]
   },
@@ -15796,7 +22903,69 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 12500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "gigaspear",
+            "name": "Gigaspear",
+            "description": "1 Column; Inflict x2 spear damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.0
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 30,
+            "id": "gigaspear_2",
+            "name": "Gigaspear",
+            "description": "Cross (All); Inflict x2 spear damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "all",
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.0
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 50,
+            "id": "mighty_counter",
+            "name": "Mighty Counter",
+            "description": "Area (2); Inflict x2.5 character-weapon damage.",
+            "trigger": "counter",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.5
+              }
+            ],
+            "power": 2.5
+          },
+          {
+            "level": 90,
+            "id": "petaspear",
+            "name": "Petaspear",
+            "description": "Inflict x3.5 spear damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 3.5
+              }
+            ],
+            "power": 3.5
+          }
+        ]
       }
     ]
   },
@@ -15876,7 +23045,63 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 12000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "ultima_missile",
+            "name": "Ultima & Missile",
+            "description": "Cross (All); Inflict x1.6 non-elemental and x1.6 character-weapon damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "all",
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.6
+              }
+            ],
+            "power": 1.6
+          },
+          {
+            "level": 30,
+            "id": "def_mdef_5",
+            "name": "DEF & MDEF +5%",
+            "description": "Staff; DEF and MDEF +5% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30
+          },
+          {
+            "level": 50,
+            "id": "ultima_missile_2",
+            "name": "Ultima & Missile",
+            "description": "Ring; Inflict x1.6 non-elemental and x1.6 character-weapon damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.6
+              }
+            ],
+            "power": 1.6
+          },
+          {
+            "level": 90,
+            "id": "x_treme",
+            "name": "X-Treme",
+            "description": "Pincer Area (1); Inflict x3.5 non-elemental damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 3.5,
+                "element": "—"
+              }
+            ],
+            "power": 3.5
+          }
+        ]
       }
     ]
   },
@@ -15916,7 +23141,55 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 12000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "regen",
+            "name": "Regen",
+            "description": "Self; Gradually restores HP with power 1 (cap 200).",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 30,
+            "id": "megamoggy",
+            "name": "Megamoggy",
+            "description": "Ring; Inflict x1.1 character-weapon damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.1
+              }
+            ],
+            "power": 1.1
+          },
+          {
+            "level": 50,
+            "id": "gigamoggy",
+            "name": "Gigamoggy",
+            "description": "Cross (All); Inflict x2.2 character-weapon damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "all",
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.2
+              }
+            ],
+            "power": 2.2
+          },
+          {
+            "level": 90,
+            "id": "extended_regen",
+            "name": "Extended Regen",
+            "description": "Area (2); Gradually restores HP with power 1.5 (cap 300) for 5 turns.",
+            "trigger": "chain",
+            "frequency": 30
+          }
+        ]
       }
     ]
   },
@@ -16156,7 +23429,43 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 12000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "shadow",
+            "name": "Shadow",
+            "description": "Pincer Area (1) + Column; Inflict x1 dark damage.",
+            "trigger": "chain",
+            "frequency": 20,
+            "power": 1.0
+          },
+          {
+            "level": 30,
+            "id": "abyss",
+            "name": "Abyss",
+            "description": "Pincer Area (1) + Row; Inflict x2 dark damage.",
+            "trigger": "chain",
+            "frequency": 20,
+            "power": 2.0
+          },
+          {
+            "level": 50,
+            "id": "hypermetabolic_magic",
+            "name": "Hypermetabolic Magic",
+            "description": "Self; Move on Capsule Point to boost MATK +10% for 3 turns (+20% for capsule of own element).",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 90,
+            "id": "oblivion",
+            "name": "Oblivion",
+            "description": "Pincer Area (1); Inflict x3.5 dark damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "power": 3.5
+          }
+        ]
       }
     ]
   },
@@ -17076,7 +24385,47 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 9500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "sharp_beaks",
+            "name": "Sharp Beaks",
+            "description": "Random (3); Inflict x2 character-weapon damage.",
+            "trigger": "chain",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.0
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 30,
+            "id": "defense_10",
+            "name": "Defense +10%",
+            "description": "Self; DEF +10% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 50,
+            "id": "magic_attack_5",
+            "name": "Magic Attack +5%",
+            "description": "Adjacent; MATK +5%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 80,
+            "id": "frequency_20",
+            "name": "Frequency +20%",
+            "description": "Chain; Skill frequency +20% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30
+          }
+        ]
       },
       {
         jobIndex: 2,
@@ -17106,7 +24455,48 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 10000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "defense_10",
+            "name": "Defense +10%",
+            "description": "Self; DEF +10%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 30,
+            "id": "beaks_of_agony",
+            "name": "Beaks of Agony",
+            "description": "Random (3); Inflict x4 character-weapon damage.",
+            "trigger": "chain",
+            "frequency": 40,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 4.0
+              }
+            ],
+            "power": 4.0
+          },
+          {
+            "level": 50,
+            "id": "life_drain",
+            "name": "Life Drain",
+            "description": "Area (1); Inflict x1.5 absorb damage (cap 700).",
+            "trigger": "chain",
+            "frequency": 30,
+            "power": 1.5
+          },
+          {
+            "level": 80,
+            "id": "panacea",
+            "name": "Panacea",
+            "description": "Area (2); Cures allies of all status ailments.",
+            "trigger": "chain",
+            "frequency": 100
+          }
+        ]
       },
       {
         jobIndex: 3,
@@ -17136,7 +24526,38 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 10500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "control_time_2_sec",
+            "name": "Control Time +2 Sec",
+            "description": "Self; Control time +2 sec.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 30,
+            "id": "magic_attack_10",
+            "name": "Magic Attack +10%",
+            "description": "Adjacent; MATK +10%.",
+            "trigger": "equip"
+          },
+          {
+            "level": 50,
+            "id": "status_guard",
+            "name": "Status Guard",
+            "description": "Self; Resistance to poison, sleep, paralysis, confusion, demoralization, and petrification status effects +50%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 80,
+            "id": "barrier",
+            "name": "Barrier",
+            "description": "Adjacent; Reduce physical and magical damage received by 50% (unstackable).",
+            "trigger": "equip"
+          }
+        ]
       }
     ]
   },
@@ -17176,7 +24597,42 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 12500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "restore_time",
+            "name": "Restore Time",
+            "description": "All; Cure control time debuff.",
+            "trigger": "chain",
+            "frequency": 100,
+            "target": "all"
+          },
+          {
+            "level": 30,
+            "id": "fickle_birds",
+            "name": "Fickle Birds",
+            "description": "Random (3); Apply poison, sleep, or demoralization status effect (75% chance) for 3 turns.",
+            "trigger": "chain",
+            "frequency": 30
+          },
+          {
+            "level": 50,
+            "id": "stealth",
+            "name": "Stealth",
+            "description": "Self; Slip past enemies and obstacles like a shadow.",
+            "trigger": "chain",
+            "frequency": 100,
+            "target": "self"
+          },
+          {
+            "level": 90,
+            "id": "extend_chain",
+            "name": "Extend Chain",
+            "description": "Self; Extends chains to link allies in all four cardinal directions, plus any allies positioned to chain with them.",
+            "trigger": "equip",
+            "target": "self"
+          }
+        ]
       }
     ]
   },
@@ -17316,7 +24772,56 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 10000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "moonlight",
+            "name": "Moonlight",
+            "description": "Pincer Area (1); Inflict x1 moon damage.",
+            "trigger": "chain",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.0,
+                "element": "Moon"
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 30,
+            "id": "anti_solar_capsule",
+            "name": "Anti-Solar Capsule",
+            "description": "Create a Capsule Point that reduces sun damage by 10% per capsule for all allies.",
+            "trigger": "chain",
+            "frequency": 30
+          },
+          {
+            "level": 50,
+            "id": "metabolic_magic",
+            "name": "Metabolic Magic",
+            "description": "Self; Move on Capsule Point to boost MATK +5% for 3 turns (+10% for capsule of own element).",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 80,
+            "id": "luna",
+            "name": "Luna",
+            "description": "Pincer Area (1); Inflict x2 moon damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 2.0,
+                "element": "Moon"
+              }
+            ],
+            "power": 2.0
+          }
+        ]
       },
       {
         jobIndex: 2,
@@ -17346,7 +24851,56 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 10000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "magic_defense_10",
+            "name": "Magic Defense +10%",
+            "description": "Self; MDEF +10%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 30,
+            "id": "luna",
+            "name": "Luna",
+            "description": "Pincer + Corners; Inflict x2 moon damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 2.0,
+                "element": "Moon"
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 50,
+            "id": "moonlight",
+            "name": "Moonlight",
+            "description": "Pincer Area (1) + Column; Inflict x1 moon damage.",
+            "trigger": "chain",
+            "frequency": 20,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.0,
+                "element": "Moon"
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 80,
+            "id": "one_time_revival",
+            "name": "One-Time Revival",
+            "description": "Self; Revive self with 25% HP, but only once.",
+            "trigger": "equip",
+            "target": "self"
+          }
+        ]
       },
       {
         jobIndex: 3,
@@ -17376,7 +24930,56 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 10000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "anti_solar_shield",
+            "name": "Anti-Solar Shield",
+            "description": "Self; Reduce sun damage received by 40%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 30,
+            "id": "magic_bomb",
+            "name": "Magic Bomb",
+            "description": "Create a magic bomb dealing diamond moon damage of power 3.",
+            "trigger": "chain",
+            "frequency": 30
+          },
+          {
+            "level": 50,
+            "id": "frigid_moon",
+            "name": "Frigid Moon",
+            "description": "Pincer Area (1); Inflict x3 moon damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 3.0,
+                "element": "Moon"
+              }
+            ],
+            "power": 3.0
+          },
+          {
+            "level": 80,
+            "id": "full_moon",
+            "name": "Full Moon",
+            "description": "Pincer Area (1); Inflict x3.5 moon damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 3.5,
+                "element": "Moon"
+              }
+            ],
+            "power": 3.5
+          }
+        ]
       }
     ]
   },
@@ -18316,7 +25919,61 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 9000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "megabow",
+            "name": "Megabow",
+            "description": "Inflict x1 bow damage.",
+            "trigger": "pincer",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.0
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 30,
+            "id": "megabow_2",
+            "name": "Megabow",
+            "description": "Inflict x1 bow damage.",
+            "trigger": "pincer",
+            "frequency": 50,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.0
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 50,
+            "id": "defense_5",
+            "name": "Defense +5%",
+            "description": "Bow; DEF +5% for 2 turns.",
+            "trigger": "chain",
+            "frequency": 30
+          },
+          {
+            "level": 80,
+            "id": "gigabow",
+            "name": "Gigabow",
+            "description": "Inflict x2 bow damage.",
+            "trigger": "pincer",
+            "frequency": 40,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.0
+              }
+            ],
+            "power": 2.0
+          }
+        ]
       },
       {
         jobIndex: 2,
@@ -18346,7 +26003,55 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 10000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "mega_heal",
+            "name": "Mega Heal",
+            "description": "Self; Heal with power 2 (cap 700).",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "self"
+          },
+          {
+            "level": 30,
+            "id": "hp_10",
+            "name": "HP +10%",
+            "description": "Self; HP +10%.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 50,
+            "id": "megabow",
+            "name": "Megabow",
+            "description": "Area (1); Inflict x1 bow damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.0
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 80,
+            "id": "terabow",
+            "name": "Terabow",
+            "description": "Inflict x3 bow damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 3.0
+              }
+            ],
+            "power": 3.0
+          }
+        ]
       },
       {
         jobIndex: 3,
@@ -18376,7 +26081,61 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 11000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "gigabow",
+            "name": "Gigabow",
+            "description": "Inflict x2 bow damage.",
+            "trigger": "pincer",
+            "frequency": 40,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.0
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 30,
+            "id": "control_time_4_sec",
+            "name": "Control Time +4 Sec",
+            "description": "Self; Control time +4 sec.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 50,
+            "id": "gigabow_2",
+            "name": "Gigabow",
+            "description": "Ring; Inflict x2 bow damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.0
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 80,
+            "id": "petabow",
+            "name": "Petabow",
+            "description": "Inflict x3.5 bow damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 3.5
+              }
+            ],
+            "power": 3.5
+          }
+        ]
       }
     ]
   },
@@ -18556,7 +26315,62 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 12000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "teraspear",
+            "name": "Teraspear",
+            "description": "Inflict x3 spear damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 3.0
+              }
+            ],
+            "power": 3.0
+          },
+          {
+            "level": 30,
+            "id": "gigaspear",
+            "name": "Gigaspear",
+            "description": "Cross (All); Inflict x2 spear damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "all",
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.0
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 50,
+            "id": "valhalla_s_fury",
+            "name": "Valhalla's Fury",
+            "description": "Inflict 2000 damage.",
+            "trigger": "pincer",
+            "frequency": 30
+          },
+          {
+            "level": 90,
+            "id": "petaspear",
+            "name": "Petaspear",
+            "description": "Inflict x3.5 spear damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 3.5
+              }
+            ],
+            "power": 3.5
+          }
+        ]
       }
     ]
   },
@@ -18596,7 +26410,65 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 12500000,
         expCoeff: 2.05,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "scorch_ward",
+            "name": "Scorch Ward",
+            "description": "Self; Confer immunity to scorch.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 30,
+            "id": "moonlight_counter",
+            "name": "Moonlight Counter",
+            "description": "Cross (All); Inflict x1.5 moon damage.",
+            "trigger": "counter",
+            "frequency": 50,
+            "target": "all",
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.5,
+                "element": "Moon"
+              }
+            ],
+            "power": 1.5
+          },
+          {
+            "level": 50,
+            "id": "luna",
+            "name": "Luna",
+            "description": "Pincer Area (1) + Column; Inflict x2 moon damage.",
+            "trigger": "chain",
+            "frequency": 20,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 2.0,
+                "element": "Moon"
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 90,
+            "id": "frigid_moon",
+            "name": "Frigid Moon",
+            "description": "3 Rows; Inflict x3 moon damage.",
+            "trigger": "chain",
+            "frequency": 20,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 3.0,
+                "element": "Moon"
+              }
+            ],
+            "power": 3.0
+          }
+        ]
       }
     ]
   },
@@ -18636,7 +26508,65 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 12500000,
         expCoeff: 2.05,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "radiant_counter",
+            "name": "Radiant Counter",
+            "description": "Cross (All); Inflict x1.5 photon damage.",
+            "trigger": "counter",
+            "frequency": 50,
+            "target": "all",
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 1.5,
+                "element": "Photon"
+              }
+            ],
+            "power": 1.5
+          },
+          {
+            "level": 30,
+            "id": "control_time_4_sec",
+            "name": "Control Time +4 Sec",
+            "description": "Self; Control time +4 sec.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 50,
+            "id": "luxon",
+            "name": "Luxon",
+            "description": "Pincer Area (1) + Column; Inflict x2 photon damage.",
+            "trigger": "chain",
+            "frequency": 20,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 2.0,
+                "element": "Photon"
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 90,
+            "id": "tachyon",
+            "name": "Tachyon",
+            "description": "3 Rows; Inflict x3 photon damage.",
+            "trigger": "chain",
+            "frequency": 20,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 3.0,
+                "element": "Photon"
+              }
+            ],
+            "power": 3.0
+          }
+        ]
       }
     ]
   },
@@ -18676,7 +26606,61 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 12500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "supergravity_spear",
+            "name": "Supergravity & Spear",
+            "description": "Inflict x2.6 graviton and x2.6 spear damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.6
+              }
+            ],
+            "power": 2.6
+          },
+          {
+            "level": 30,
+            "id": "anti_photon_capsule",
+            "name": "Anti-Photon Capsule",
+            "description": "Create a Capsule Point that reduces photon damage by 10% per capsule for all allies.",
+            "trigger": "chain",
+            "frequency": 30
+          },
+          {
+            "level": 50,
+            "id": "gravity_spear",
+            "name": "Gravity & Spear",
+            "description": "Pincer Column; Inflict x1.6 graviton and x1.6 spear damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.6
+              }
+            ],
+            "power": 1.6
+          },
+          {
+            "level": 90,
+            "id": "axion_spear",
+            "name": "Axion & Spear",
+            "description": "Inflict x3 graviton and x3 spear damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 3.0
+              }
+            ],
+            "power": 3.0
+          }
+        ]
       }
     ]
   },
@@ -18716,7 +26700,64 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 12500000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "anti_graviton_capsule",
+            "name": "Anti-Graviton Capsule",
+            "description": "Create a Capsule Point that reduces graviton damage by 10% per capsule for all allies.",
+            "trigger": "chain",
+            "frequency": 30
+          },
+          {
+            "level": 30,
+            "id": "luxon",
+            "name": "Luxon",
+            "description": "Pincer Area (1) + Row; Inflict x2 photon damage.",
+            "trigger": "chain",
+            "frequency": 20,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 2.0,
+                "element": "Photon"
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 50,
+            "id": "tachyon",
+            "name": "Tachyon",
+            "description": "Pincer Area (1); Inflict x3 photon damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 3.0,
+                "element": "Photon"
+              }
+            ],
+            "power": 3.0
+          },
+          {
+            "level": 90,
+            "id": "holy",
+            "name": "Holy",
+            "description": "Pincer Area (1); Inflict x3.5 photon damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "magic",
+                "multiplier": 3.5,
+                "element": "Photon"
+              }
+            ],
+            "power": 3.5
+          }
+        ]
       }
     ]
   },
@@ -18756,7 +26797,62 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 12500000,
         expCoeff: 2.05,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "gigabow",
+            "name": "Gigabow",
+            "description": "Area (1); Inflict x2 bow damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.0
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 30,
+            "id": "seasoned_pro",
+            "name": "Seasoned Pro",
+            "description": "Self; Experience acquired is x1.1.",
+            "trigger": "equip",
+            "target": "self",
+            "power": 1.1
+          },
+          {
+            "level": 50,
+            "id": "terabow",
+            "name": "Terabow",
+            "description": "Area (1); Inflict x3 bow damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 3.0
+              }
+            ],
+            "power": 3.0
+          },
+          {
+            "level": 90,
+            "id": "petabow",
+            "name": "Petabow",
+            "description": "Area (1); Inflict x3.5 bow damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 3.5
+              }
+            ],
+            "power": 3.5
+          }
+        ]
       }
     ]
   },
@@ -18796,7 +26892,54 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 12000000,
         expCoeff: 2.15,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "giga_heigh_ho",
+            "name": "Giga Heigh-Ho",
+            "description": "3 Columns; Inflict x2 character-weapon damage.",
+            "trigger": "chain",
+            "frequency": 20,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 2.0
+              }
+            ],
+            "power": 2.0
+          },
+          {
+            "level": 30,
+            "id": "ribbon",
+            "name": "Ribbon",
+            "description": "Self; Halves chance of being inflicted with status ailments.",
+            "trigger": "equip",
+            "target": "self"
+          },
+          {
+            "level": 50,
+            "id": "tera_heigh_ho",
+            "name": "Tera Heigh-Ho",
+            "description": "3 Rows; Inflict x3 character-weapon damage.",
+            "trigger": "chain",
+            "frequency": 20,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 3.0
+              }
+            ],
+            "power": 3.0
+          },
+          {
+            "level": 90,
+            "id": "augment_all",
+            "name": "Augment All",
+            "description": "All, 3 charges; Allies' ATK/MATK/DEF/MDEF +30% for 1 turn.",
+            "trigger": "tap",
+            "target": "all"
+          }
+        ]
       }
     ]
   },
@@ -19176,7 +27319,62 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
         },
         expMax: 12000000,
         expCoeff: 2.1,
-        skills: []
+        skills: [
+          {
+            "level": 1,
+            "id": "terabow",
+            "name": "Terabow",
+            "description": "Inflict x3 bow damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 3.0
+              }
+            ],
+            "power": 3.0
+          },
+          {
+            "level": 30,
+            "id": "dizzy_arrow",
+            "name": "Dizzy Arrow",
+            "description": "6 random enemies; Inflict x1 bow damage.",
+            "trigger": "chain",
+            "frequency": 30,
+            "target": "enemy",
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 1.0
+              }
+            ],
+            "power": 1.0
+          },
+          {
+            "level": 50,
+            "id": "impair_all",
+            "name": "Impair All",
+            "description": "All, 3 charges; Enemies' ATK/MATK/DEF/MDEF -10% for 1 turn.",
+            "trigger": "tap",
+            "target": "all"
+          },
+          {
+            "level": 90,
+            "id": "petabow",
+            "name": "Petabow",
+            "description": "Inflict x3.5 bow damage.",
+            "trigger": "pincer",
+            "frequency": 30,
+            "damageComponents": [
+              {
+                "type": "weapon",
+                "multiplier": 3.5
+              }
+            ],
+            "power": 3.5
+          }
+        ]
       }
     ]
   },
@@ -20182,6 +28380,154 @@ const WIKI_ADVENTURERS: Record<string, Omit<CharacterDef, "verified">> = {
   }
 };
 
+const VERIFIED_ADVENTURER_IDS = new Set([
+  "54b2",
+  "a_merpact_lambda",
+  "a_misandra",
+  "a_misandra_lambda",
+  "alika",
+  "alika_lambda",
+  "amazora",
+  "amazora_lambda",
+  "amerpact",
+  "amimari",
+  "amina",
+  "amina_lambda",
+  "andelucia",
+  "andelucia_lambda",
+  "annu",
+  "arionne",
+  "ashe",
+  "ba_gunar",
+  "ba_gunar_lambda",
+  "bahamut",
+  "bahamut_lambda",
+  "bahl",
+  "bahl_lambda",
+  "bajanna",
+  "beau_ne",
+  "beau_ne_lambda",
+  "bonna",
+  "bonna_lambda",
+  "burbaba",
+  "burbaba_lambda",
+  "calista",
+  "camellia",
+  "camellia_lambda",
+  "captive_golem",
+  "chirol",
+  "clara",
+  "clara_lambda",
+  "czekras",
+  "dahlia",
+  "daiana",
+  "daiana_lambda",
+  "djagos",
+  "djugan",
+  "djugan_lambda",
+  "dracorin",
+  "dracorin_lambda",
+  "echo",
+  "echo_lambda",
+  "edg_low",
+  "eileen",
+  "eileen_lambda",
+  "elga",
+  "ella_lambda",
+  "ellvern",
+  "ellvern_lambda",
+  "engi",
+  "feno",
+  "feno_lambda",
+  "gaiga",
+  "gatz",
+  "gatz_lambda",
+  "gegonago",
+  "gegonago_lambda",
+  "gigojago",
+  "gigojago_lambda",
+  "ginny",
+  "ginny_lambda",
+  "grace",
+  "grace_lambda",
+  "gugba",
+  "haggo",
+  "hakann",
+  "harold",
+  "haruhikari",
+  "invincible",
+  "invincible_lambda",
+  "iskar",
+  "jade_dragon",
+  "jag",
+  "jaguna",
+  "jaguna_lambda",
+  "jennish",
+  "jennish_lambda",
+  "ka_pori",
+  "kana",
+  "kem",
+  "kem_lambda",
+  "kirue",
+  "koh",
+  "koko",
+  "koko_lambda",
+  "korin",
+  "korin_lambda",
+  "kuscah",
+  "lacuma",
+  "lacuma_lambda",
+  "leviathan",
+  "leviathan_lambda",
+  "lew",
+  "lewto",
+  "lewto_lambda",
+  "lich_lambda",
+  "lio",
+  "lucia",
+  "lucia_lambda",
+  "lunaken",
+  "lunato",
+  "mizell",
+  "mizell_lambda",
+  "nakupi",
+  "nakupi_lambda",
+  "nazuna",
+  "nazuna_lambda",
+  "nia",
+  "nia_lambda",
+  "odin",
+  "odin_lambda",
+  "olber",
+  "olber_lambda",
+  "palpa",
+  "palpa_lambda",
+  "piz_fer_lambda",
+  "puprope",
+  "puprope_lambda",
+  "rejin",
+  "rejin_lambda",
+  "samatha",
+  "samatha_lambda",
+  "sayu",
+  "sayu_lambda",
+  "seiryu",
+  "seiryu_lambda",
+  "senala",
+  "senala_lambda",
+  "sha_plar",
+  "sha_plar_lambda",
+  "suoh",
+  "suoh_lambda",
+  "thirty6ais",
+  "yukken",
+  "yukken_lambda",
+  "zafitte",
+  "zafitte_lambda",
+  "zerro",
+  "zerro_lambda",
+]);
+
 export const CHARACTERS: Record<string, CharacterDef> = (() => {
   const curatedByName = new Map(
     Object.values(CURATED_CHARACTERS).map((character) => [character.name, character]),
@@ -20193,7 +28539,7 @@ export const CHARACTERS: Record<string, CharacterDef> = (() => {
     characters[id] = {
       ...source,
       id,
-      verified: "Y",
+      verified: VERIFIED_ADVENTURER_IDS.has(id) ? "Y" : "N",
       sources: curated?.sources ?? source.sources,
       description: curated?.description,
       jobs: source.jobs.map((job) => {
@@ -20201,7 +28547,7 @@ export const CHARACTERS: Record<string, CharacterDef> = (() => {
         return {
           ...job,
           title: previous?.title ?? job.title,
-          skills: previous?.skills ?? job.skills,
+          skills: VERIFIED_ADVENTURER_IDS.has(id) ? job.skills : previous?.skills ?? job.skills,
           unlockCost: previous?.unlockCost,
         };
       }),

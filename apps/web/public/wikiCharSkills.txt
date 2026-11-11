@@ -1,0 +1,6429 @@
+Bahl Λ SwordIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	555 	5091
+ATK 	46 	418
+DEF 	35 	318
+MATK 	29 	264
+MDEF 	29 	264
+Skills LV 1 	
+Skill icon 28 Gigasword, 1 Row, 30%
+[Pincer: Inflict x2 sword damage.]
+LV 30 	
+Skill icon 53 Demoralization Ward, Self
+[Equip: Confer immunity to demoralization.]
+LV 50 	
+Skill icon 28 Cross Cleave, Cross (All), 30%
+[Chain: Inflict x2 sword damage.]
+LV 90 	
+Skill icon 28 Sword of Valor, 3 Rows, 30%
+[Pincer: Inflict x4 sword damage if critical hit (30% chance); otherwise inflict x2 sword damage.]
+Recode DNA requirements
+
+    Bahl icon Bahl (LV 80 in all jobs)
+    Snaptrap icon Snaptrap (LV 50)
+    Phi Orbling icon Phi Orbling (LV 50)
+    Coins 20,000 Coins
+    Temporal Helix Temporal Helix x5
+    Black Hole Black Hole x1
+    Terra Swordsteel Terra Swordsteel x15
+
+Available from skill slots Job 1
+Skill icon 05 Counterattack, 30%
+[Counter: Inflict x1.5 character-weapon damage.]
+Skill icon 03 Attack +10%, Self, 30%
+[Chain: ATK +10% for 2 turns.]
+Skill icon 28 Gigasword, 40%
+[Pincer: Inflict x2 sword damage.]
+Skill icon 05 Counterattack, 30%
+[Counter: Inflict x2 character-weapon damage.]
+Job 2
+Skill icon 04 Defense +10%, Self, 30%
+[Chain: DEF +10% for 2 turns.]
+Skill icon 28 Megasword, 50%
+[Pincer: Inflict x1 sword damage.]
+Skill icon 22 HP +10%, Self
+[Equip: HP +10%.]
+Skill icon 70 Physical Damage x1.5, Self, 30%
+[Chain: Boost physical damage inflicted by 50% for 2 turns.]
+Job 3
+Skill icon 03 Attack +10%, Self
+[Equip: ATK +10%.]
+Skill icon 04 Defense +10%, Self
+[Equip: DEF +10%.]
+Skill icon 05 Counterattack, 35%
+[Counter: Inflict x1.5 character-weapon damage.]
+Skill icon 28 Terasword, 30%
+[Pincer: Inflict x3 sword damage.]
+Profile
+
+Alika Λ SwordIconLightningIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	635 	5775
+ATK 	36 	327
+DEF 	36 	327
+MATK 	45 	409
+MDEF 	38 	345
+Skills LV 1 	
+Skill icon 08 Thunder & Sword, Pincer Column, 30%
+[Pincer: Inflict x0.8 lightning and x0.8 sword damage.]
+LV 30 	
+Skill icon 22 HP +20%, Equip
+[Passive: Boost HP by 20%.]
+LV 50 	
+Skill icon 08 Lightning & Sword, Pincer Row, 30%
+[Pincer: Inflict x1.6 lightning and x1.6 sword damage.]
+LV 80 	
+Skill icon 90 Fetters, Area (2), 100%
+[Chain: Shortens the distance enemies can move each turn for 3 turns.]
+Recode DNA requirements
+
+    Alika icon Alika (LV 80 in all jobs)
+    Marilith icon Marilith (LV 50)
+    Mechaclops icon Mechaclops (LV 50)
+    Coins 30,000 Coins
+    Deepwater Helix Deepwater Helix x5
+    Black Hole Black Hole
+    Terra Swordsteel Terra Swordsteel x15
+
+Available from skill slots Job 1
+Skill icon 08 Thunder Arrows, 80%
+[Pincer: Inflict x1 lightning and x0.5 bow damage.]
+Skill icon 45 Anti-Darkness Shield, Self, 50%
+[Chain: Reduce darkness damage by 40% for 3 turns.]
+Skill icon 24 Magic Attack +10%, Self, 30%
+[Chain: Boost MATK by 10% for 2 turns.]
+Skill icon 60 Life Drain, 30%
+[Chain: Inflict x1.5 magical damage and absorb HP (cap 700).]
+Job 2
+Skill icon 26 Magic Defense +10%, Self, 30%
+[Chain: Boost MDEF by 10% for 2 turns.]
+Skill icon 08 Lightning Arrows, 60%
+[Pincer: Inflict x2 lightning and x0.7 bow damage.]
+Skill icon 52 Confusion Guard, Equip
+[Passive: +50% resistance to confusion.]
+Skill icon 08 Tempest Arrows, 40%
+[Pincer: Inflict x3 lightning and x0.9 bow damage.]
+Job 3
+Skill icon 01 Mega Regen, Self, 50%
+[Chain: Applies Regen with power 1.5 (cap 300) for 3 turns to self.]
+Skill icon 26 Magic Defense +10%, Equip
+[Passive: Boost MDEF by 10%.]
+Skill icon 08 Thunder Arrows, Area (1), 30%
+[Chain: Inflict x1 lightning and x0.5 bow damage.]
+Skill icon 85 Treasure Hunter, Equip
+[Passive: Increases rate of item drops by 25% of the base rate.]
+
+Amazora Λ SwordIconFireIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	693 	6302
+ATK 	42 	383
+DEF 	44 	400
+MATK 	44 	400
+MDEF 	39 	354
+Skills LV 1 	
+Skill icon 07 Fire & Sword, Pincer Column, 30%
+[Pincer: Inflict x0.8 fire and x0.8 sword damage.]
+LV 30 	
+Skill icon 01 Giga Heal, Self, 30%
+[Chain: Heal with power 2.5 (cap 1300).]
+LV 50 	
+Skill icon 07 Solar Wind & Sword, 30%
+[Pincer: Inflict x2.6 fire and x2.6 sword damage.]
+LV 80 	
+Skill icon 07 Hellfire Sword, Diamond, 30%
+[Chain: Inflict x0.8 fire and x0.8 sword damage.]
+Recode DNA requirements
+
+    Amazora icon Amazora (LV 80 in all jobs)
+    Scar icon Scar (LV 50)
+    Cyberclops icon Cyberclops (LV 50)
+    Coins 30,000 Coins
+    Deepwater Helix Deepwater Helix x5
+    Black Hole Black Hole
+    Terra Swordsteel Terra Swordsteel x15
+
+Available from skill slots Job 1
+Skill icon 07 Fire Blade, 80%
+[Pincer: Inflict x1 fire and x0.5 sword damage.]
+Skill icon 24 Magic Attack +10%, Self, 30%
+[Chain: Boost MATK by 10% for 2 turns.]
+Skill icon 05 Counterattack, 30%
+[Counter: Inflict x1.5 character-weapon damage.]
+Skill icon 07 Inferno Blade, Area (1), 30%
+[Chain: Inflict x2 fire and x0.7 sword damage.]
+Job 2
+Skill icon 24 Magic Attack +10%, Equip
+[Passive: Boost MATK by 10%.]
+Skill icon 43 Anti-Ice Shield, Self, 50%
+[Chain: Reduce ice damage by 40% for 3 turns.]
+Skill icon 07 Inferno Blade, 60%
+[Pincer: Inflict x2 fire and x0.7 sword damage.]
+Skill icon 05 Counterattack, 30%
+[Counter: Inflict x2 character-weapon damage.]
+Job 3
+Skill icon 22 HP +10%, Equip
+[Passive: Boost HP by 10%.]
+Skill icon 53 Demoralization Guard, Equip
+[Passive: +50% resistance to demoralization.]
+Skill icon 07 Blazing Counter, 30%
+[Counter: Inflict x1.5 fire damage.]
+Skill icon 07 Solar Wind Blade, 40%
+[Pincer: Inflict x3 fire and x0.9 sword damage.]
+
+Amina Λ StaffIconRegen Icon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	608 	5506
+ATK 	30 	272
+DEF 	32 	291
+MATK 	55 	500
+MDEF 	48 	436
+Skills LV 1 	
+Skill icon 01 Heal, All, 30%
+[Chain: Heal with power 1 (cap 900).]
+LV 30 	
+Skill icon 04 Defense +15%, Human, 30%
+[Chain: DEF +15% for 2 turns.]
+LV 50 	
+Skill icon 01 Restorative Counter, Area (2), 30%
+[Counter: Heal with power 2.5 (cap 1300).]
+LV 90 	
+Skill icon 17 Extend Chain, Self
+[Equip: Extends chains to link allies in all four cardinal directions, plus any allies positioned to chain with them.]
+Recode DNA requirements
+
+    Amina icon Amina (LV 80 in all jobs)
+    8-Bit Hiso Alien Λ icon 8-Bit Hiso Alien Λ (LV 50)
+    Mediscanner icon Mediscanner (LV 50)
+    Coins 30,000 Coins
+    Mantle Helix Mantle Helix x5
+    Elixir Elixir x1
+    White Ring White Ring x15
+
+Available from skill slots Job 1
+Skill icon 01 Mega Heal, Chain, 100%
+[Chain: Heal with power 2 (cap 700).]
+Skill icon 26 Magic Defense +10%, Self, 30%
+[Chain: MDEF +10% for 2 turns.]
+Skill icon 01 Mega Heal, Self, 30%
+[Chain: Heal with power 2 (cap 700).]
+Skill icon 02 Ally Revival, Self
+[Equip: Revive an ally with 1 HP when starting a new floor.]
+Job 2
+Skill icon 26 Magic Defense +10%, Self
+[Equip: MDEF +10%.]
+Skill icon 01 Giga Heal, Chain, 90%
+[Chain: Heal with power 2.5 (cap 1300).]
+Skill icon 49 Poison Guard, Self
+[Equip: Resistance to poison +50%.]
+Skill icon 94 Heal x1.5, All, 30%
+[Chain: Increase healing by x1.5 for 2 turns.]
+Job 3
+Skill icon 22 HP +10%, Self
+[Equip: HP +10%.]
+Skill icon 68 Control Time +2 Sec, Self
+[Equip: Control time +2 sec.]
+Skill icon 01 Tera Heal, Chain, 80%
+[Chain: Heal with power 3 (cap 2500).]
+Skill icon 02 Party Revival, Self
+[Equip: Revive 6 allies with 1 HP when starting a new floor.]
+
+A'misandra Λ StaffIconRegen Icon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	619 	5629
+ATK 	29 	263
+DEF 	32 	291
+MATK 	56 	509
+MDEF 	45 	409
+Skills LV 1 	
+Skill icon 01 Heal, All, 30%
+[Chain: Heal all allies with power 1 (cap 700).]
+LV 30 	
+Skill icon 89 Status Guard, Equip
+[Passive: +50% resistance against poison, sleep, paralysis, confusion, demoralization, and petrification.]
+LV 50 	
+Skill icon 02 Dual Revival 50% HP, Equip
+[Passive: Revive two allies with 50% HP when starting a new floor.]
+LV 80 	
+Skill icon 17 Extend Chain, Equip
+[Passive: Extends chains to connect allies in all four directions, including those not aligned along a straight line.]
+Recode DNA requirements
+
+    A'misandra icon A'misandra (LV 80 in all jobs)
+    Lich icon Lich (LV 50)
+    Mediscanner icon Mediscanner (LV 50)
+    Coins 30,000 Coins
+    Mantle Helix Mantle Helix x5
+    Elixir Elixir
+    White Ring White Ring x15
+
+Available from skill slots Job 1
+Skill icon 01 Mega Heal, Chain, 100%
+[Chain: Heal with power 2 (cap 700).]
+Skill icon 26 Magic Defense +10%, Self, 30%
+[Chain: Boost MDEF by 10% for 2 turns.]
+Skill icon 01 Mega Heal, Self, 30%
+[Chain: Heal with power 2 (cap 700).]
+Skill icon 94 Heal x1.5, All, 30%
+[Chain: Increase healing by x1.5 for all allies for 2 turns.]
+Job 2
+Skill icon 26 Magic Defense +10%, Equip
+[Passive: Boost MDEF by 10%.]
+Skill icon 01 Giga Heal, Chain, 90%
+[Chain: Heal with power 2.5 (cap 1300).]
+Skill icon 56 Death Ward, Chain, 100%
+[Chain: Grant chained allies immunity to instant death for 6 turns.]
+Skill icon 75 Nullify Healing, Area (2), 30%
+[Chain: Apply Nullify Healing for 2 turns.]
+Job 3
+Skill icon 22 HP +10%, Equip
+[Passive: Boost HP by 10%.]
+Skill icon 56 Death Ward, Equip
+[Passive: Immune to instant death.]
+Skill icon 01 Tera Heal, Chain, 80%
+[Chain: Heal with power 3 (cap 2500).]
+Skill icon 02 Dual Revival, Equip
+[Passive: Revive two allies with 25% HP when starting a new floor.]
+
+Andelucia Λ SpearIconSkill icon 114
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	702 	6384
+ATK 	49 	445
+DEF 	51 	463
+MATK 	56 	509
+MDEF 	54 	491
+Skills LV 1 	
+Skill icon 114 Supergravity & Spear, 30%
+[Pincer: Inflict x2.6 graviton and x2.6 spear damage.]
+LV 30 	
+Skill icon 57 Anti-Photon Capsule, 30%
+[Chain: Create a Capsule Point that reduces photon damage by 10% per capsule for all allies.]
+LV 50 	
+Skill icon 114 Gravity & Spear, Pincer Column, 30%
+[Pincer: Inflict x1.6 graviton and x1.6 spear damage.]
+LV 90 	
+Skill icon 114 Axion & Spear, 30%
+[Pincer: Inflict x3 graviton and x3 spear damage.]
+Recode DNA requirements
+
+    Andelucia icon Andelucia (LV 80 in all jobs)
+    Relic icon Relic (LV 50)
+    Dark Petrifier icon Dark Petrifier (LV 50)
+    Coins 30,000 Coins
+    Deepwater Helix Deepwater Helix x5
+    Black Hole Black Hole x1
+    Graviton Ring Graviton Ring x15
+
+Available from skill slots Job 1
+Skill icon 114 Crushing Strike, 80%
+[Pincer: Inflict x1 graviton and x0.5 spear damage.]
+Skill icon 125 Anti-Photon Shield, Self
+[Equip: Reduce photon damage received by 40%.]
+Skill icon 24 Magic Attack +10%, Self
+[Equip: MATK +10%.]
+Skill icon 114 Crushing Counter, Cross (1), 50%
+[Counter: Inflict x1.5 graviton damage.]
+Job 2
+Skill icon 114 Gravity Strike, 60%
+[Pincer: Inflict x2 graviton and x0.7 spear damage.]
+Skill icon 22 HP +20%, Self
+[Equip: HP +20%.]
+Skill icon 57 Hypermetabolic Magic, Self
+[Equip: Move on Capsule Point to boost MATK +10% for 3 turns (+20% for capsule of own element).]
+Skill icon 114 Supergravity Strike, 40%
+[Pincer: Inflict x3 graviton and x0.9 spear damage.]
+Job 3
+Skill icon 68 Control Time +4 Sec, Self
+[Equip: Control time +4 sec.]
+Skill icon 114 Crush & Spear, Pincer Column, 30%
+[Pincer: Inflict x0.8 graviton and x0.8 spear damage.]
+Skill icon 114 Gravity & Spear, Pincer Row, 30%
+[Pincer: Inflict x1.6 graviton and x1.6 spear damage.]
+Skill icon 114 Axion Strike, 30%
+[Pincer: Inflict x3.5 graviton and x1.3 spear damage.]
+
+Bahamut Λ StaffIconFireIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	699 	6357
+ATK 	35 	318
+DEF 	33 	300
+MATK 	51 	463
+MDEF 	42 	381
+Skills LV 1 	
+Skill icon 54 Petrification Guard, Equip
+[Passive: +50% resistance to petrification.]
+LV 30 	
+Skill icon 07 Fire, Pincer + Ring, 50%
+[Chain: Inflict x1 fire damage on pincered units and a square ring around them.]
+LV 50 	
+Skill icon 27 Magic Defense -10%, Dragon, 30%
+[Chain: Reduce MDEF for Dragon enemies by 10% for 2 turns.]
+LV 80 	
+Skill icon 36 Meteor, All, 30%
+[Chain: Inflict x2 fire damage to random spaces not occupied by allies or objects (24).]
+Recode DNA requirements
+
+    Bahamut icon Bahamut (LV 80 in all jobs)
+    Mantledrake icon Mantledrake (LV 50)
+    Suzaku icon Suzaku (LV 50)
+    Coins 30,000 Coins
+    Mantle Helix Mantle Helix x5
+    Ether Ether
+    Fire Ring Fire Ring x15
+
+Available from skill slots Job 1
+Skill icon 07 Fire, Pincer Area (1), 50%
+[Chain: Inflict x1 fire damage.]
+Skill icon 26 Magic Defense +10%, Self, 30%
+[Chain: Boost MDEF by 10% for 2 turns.]
+Skill icon 42 Fire Damage Down 10%, Adjacent, Equip
+[Passive: Reduce fire damage by 10% for adjacent allies.]
+Skill icon 07 Fire, Pincer Area (Column), 20%
+[Chain: Inflict x1 fire damage on entire columns of pincered units.]
+Job 2
+Skill icon 26 Magic Defense +10%, Equip
+[Passive: Boost MDEF by 10%.]
+Skill icon 43 Anti-Ice Shield, Equip
+[Passive: Reduce ice damage by 40%.]
+Skill icon 07 Inferno, Pincer Area (1), 30%
+[Chain: Inflict x2 fire damage.]
+Skill icon 07 Blazing Counter, 30%
+[Counter: Inflict x1.5 fire damage.]
+Job 3
+Skill icon 22 HP +10%, Equip
+[Passive: Boost HP by 10%.]
+Skill icon 53 Demoralization Guard, Equip
+[Passive: +50% resistance to demoralization.]
+Skill icon 07 Inferno, Cross (All), 30%
+[Chain: Inflict x2 fire damage.]
+Skill icon 07 Solar Wind, Pincer Area (1), 30%
+[Chain: Inflict x3 fire damage.]
+
+Beau'ne Λ StaffIconSkill icon 113
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	741 	6739
+ATK 	45 	409
+DEF 	41 	372
+MATK 	60 	545
+MDEF 	57 	518
+Skills LV 1 	
+Skill icon 57 Anti-Graviton Capsule, 30%
+[Chain: Create a Capsule Point that reduces graviton damage by 10% per capsule for all allies.]
+LV 30 	
+Skill icon 113 Luxon, Pincer Area (1) + Row, 20%
+[Chain: Inflict x2 photon damage.]
+LV 50 	
+Skill icon 113 Tachyon, Pincer Area (1), 30%
+[Chain: Inflict x3 photon damage.]
+LV 90 	
+Skill icon 113 Holy, Pincer Area (1), 30%
+[Chain: Inflict x3.5 photon damage.]
+Recode DNA requirements
+
+    Beau'ne icon Beau'ne (LV 80 in all jobs)
+    Phaarz icon Phaarz (LV 50)
+    Starwhip icon Starwhip (LV 50)
+    Coins 30,000 Coins
+    Mantle Helix Mantle Helix x5
+    Ether Ether x1
+    Photon Ring Photon Ring x15
+
+Available from skill slots Job 1
+Skill icon 113 Radiant Blade, 80%
+[Pincer: Inflict x1 photon and x0.5 sword damage.]
+Skill icon 126 Anti-Graviton Shield, Self
+[Equip: Reduce graviton damage received by 40%.]
+Skill icon 24 Magic Attack +10%, Self
+[Equip: MATK +10%.]
+Skill icon 21 Chaos Sword, 30%
+[Pincer: Apply confusion (75% chance) for 3 turns and inflict x1 sword damage.]
+Job 2
+Skill icon 113 Luxon Blade, 60%
+[Pincer: Inflict x2 photon and x0.7 sword damage.]
+Skill icon 113 Radiance & Sword, Pincer Column, 30%
+[Pincer: Inflict x0.8 photon and x0.8 sword damage.]
+Skill icon 57 Hypermetabolic Magic, Self
+[Equip: Move on Capsule Point to boost MATK +10% for 3 turns (+20% for capsule of own element).]
+Skill icon 113 Tachyon Blade, 40%
+[Pincer: Inflict x3 photon and x0.9 sword damage.]
+Job 3
+Skill icon 41 Phys Dmg Down 10%, Adjacent
+[Equip: Reduce physical damage received by 10%.]
+Skill icon 113 Radiant Counter, Cross (1), 50%
+[Counter: Inflict x1.5 photon damage.]
+Skill icon 113 Luxon & Sword, Pincer Row, 30%
+[Pincer: Inflict x1.6 photon and x1.6 sword damage.]
+Skill icon 113 Holy Blade, 30%
+[Pincer: Inflict x3.5 photon and x1.3 sword damage.]
+
+Bonna Λ BowIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	651 	5920
+ATK 	48 	436
+DEF 	34 	309
+MATK 	40 	360
+MDEF 	39 	351
+Skills LV 1 	
+Skill icon 30 Gigabow, Area (1), 30%
+[Chain: Inflict x2 bow damage.]
+LV 30 	
+Skill icon 68 Control Time +4 Sec, Self
+[Equip: Control time +4 sec.]
+LV 50 	
+Skill icon 30 Gigabow, Ring, 30%
+[Chain: Inflict x2 bow damage.]
+LV 80 	
+Skill icon 30 Twin Arrows, Most HP (2), 30%
+[Chain: Inflict x3 bow damage.]
+Recode DNA requirements
+
+    Bonna icon Bonna (LV 80 in all jobs)
+    Fortified Oxsecian Bulwark icon Fortified Oxsecian Bulwark (LV 50)
+    Thornasaurus icon Thornasaurus (LV 50)
+    Coins 30,000 Coins
+    Deepwater Helix Deepwater Helix x5
+    Wormhole Wormhole x1
+    Terra Bowstring Terra Bowstring x15
+
+Available from skill slots Job 1
+Skill icon 54 Reanimation, All, 100%
+[Chain: Cure all allies of petrification.]
+Skill icon 37 Petrify, Pincer Area (1), 30%
+[Chain: Apply petrification around pincered area for 20 turns with an 80% chance.]
+Skill icon 54 Petrification Ward, Equip
+[Passive: Immune to petrification.]
+Skill icon 37 Petrify, Area (2), 100%
+[Chain: Apply petrification for 20 turns with a 30% chance.]
+Job 2
+Skill icon 51 Locomotion, All, 100%
+[Chain: Cure all allies of paralysis.]
+Skill icon 51 Paralysis Ward, Equip
+[Passive: Immune to paralysis.]
+Skill icon 13 Paralyze, Area (2), 100%
+[Chain: Apply paralysis for 3 turns with a 30% chance.]
+Skill icon 01 Healing Melody, Area (2), 30%
+[Chain: Heal with power 2 (cap 700).]
+Job 3
+Skill icon 04 Defense +10%, Equip
+[Passive: Boost DEF by 10%.]
+Skill icon 01 Giga Regen, Chain, 90%
+[Chain: Applies Regen with power 2 (cap 600) for 3 turns.]
+Skill icon 22 HP +20%, Equip
+[Passive: Boost HP by 20%.]
+Skill icon 87 Seasoned Pro, Equip
+[Passive: Increases experience earned by 15%.]
+Profile
+
+Clara Λ SpearIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	644 	5907
+ATK 	50 	454
+DEF 	45 	409
+MATK 	30 	272
+MDEF 	31 	281
+Skills LV 1 	
+Skill icon 29 Gigaspear, 1 Column, 30%
+[Pincer: Inflict x2 spear damage.]
+LV 30 	
+Skill icon 29 Gigaspear, Cross (All), 30%
+[Chain: Inflict x2 spear damage.]
+LV 50 	
+Skill icon 05 Mighty Counter, Area (2), 30%
+[Counter: Inflict x2.5 character-weapon damage.]
+LV 90 	
+Skill icon 29 Petaspear, 30%
+[Pincer: Inflict x3.5 spear damage.]
+Recode DNA requirements
+
+    Clara icon Clara (LV 80 in all jobs)
+    Marilith Kino Λ icon Marilith Kino Λ (LV 50)
+    Mecharose icon Mecharose (LV 50)
+    Coins 30,000 Coins
+    Deepwater Helix Deepwater Helix x5
+    White Hole White Hole x1
+    Terra Spearbronze Terra Spearbronze x15
+
+Available from skill slots Job 1
+Skill icon 04 Defense +10%, Self, 30%
+[Chain: DEF +10% for 2 turns.]
+Skill icon 29 Megaspear, 50%
+[Pincer: Inflict x1 spear damage.]
+Skill icon 05 Counterattack, 30%
+[Counter: Inflict x1.5 character-weapon damage.]
+Skill icon 29 Megaspear, 1 Column, 30%
+[Chain: Inflict x1 spear damage.]
+Job 2
+Skill icon 04 Defense +10%, Self
+[Equip: DEF +10%.]
+Skill icon 29 Gigaspear, 40%
+[Pincer: Inflict x2 spear damage.]
+Skill icon 05 Defensive Counter, Self, 30%
+[Counter: DEF +10% for 2 turns.]
+Skill icon 20 Defense -10%, Dragon, 30%
+[Chain: DEF -10% for 2 turns.]
+Job 3
+Skill icon 05 Offensive Counter, Self, 30%
+[Counter: ATK +10% for 2 turns.]
+Skill icon 05 Counterattack, 30%
+[Counter: Inflict x2 character-weapon damage.]
+Skill icon 29 Megaspear, Cross (All), 30%
+[Chain: Inflict x1 spear damage.]
+Skill icon 29 Teraspear, 30%
+[Pincer: Inflict x3 spear damage.]
+
+Camellia Λ SpearIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	691 	6284
+ATK 	40 	363
+DEF 	33 	300
+MATK 	40 	363
+MDEF 	43 	391
+Skills LV 1 	
+Skill icon 29 Gigaspear, Cross (All), 30%
+[Chain: Inflict x2 spear damage.]
+LV 30 	
+Skill icon 22 HP +20%, Self
+[Equip: HP +20%.]
+LV 50 	
+Skill icon 02 Femme Fatale Revival, Self, Male
+[Equip: Revive an ally with 100% HP when starting a new floor.]
+LV 90 	
+Skill icon 29 Petaspear, 30%
+[Pincer: Inflict x3.5 spear damage.]
+Recode DNA requirements
+
+    Camellia icon Camellia (LV 80 in all jobs)
+    Tiamat Kino Λ icon Tiamat Kino Λ (LV 50)
+    Mermaid icon Mermaid (LV 50)
+    Coins 30,000 Coins
+    Pig Snout Pig Snout x5
+    White Hole White Hole x1
+    Terra Spearbronze Terra Spearbronze x15
+
+Available from skill slots Job 1
+Skill icon 04 Femme Fatale, Defense +10%, Equip
+[Passive: Boost DEF by 2% for each male squad member, up to 10%.]
+Skill icon 28 Megasword, 50%
+[Pincer: Inflict x1 sword damage.]
+Skill icon 03 Femme Fatale, Attack +10%, Equip
+[Passive: Boost ATK by 2% for each male squad member, up to 10%.]
+Skill icon 28 Gigasword, 40%
+[Pincer: Inflict x2 sword damage.]
+Job 2
+Skill icon 04 Femme Fatale, Defense +15%, Equip
+[Passive: Boost DEF by 3% for each male squad member, up to 15%.]
+Skill icon 30 Megabow, 50%
+[Pincer: Inflict x1 bow damage.]
+Skill icon 03 Femme Fatale, Attack +15%, Equip
+[Passive: Boost ATK by 3% for each male squad member, up to 15%.]
+Skill icon 30 Terabow, 30%
+[Pincer: Inflict x3 bow damage.]
+Job 3
+Skill icon 04 Femme Fatale, Defense +25%, Equip
+[Passive: Boost DEF by 5% for each male squad member, up to 25%.]
+Skill icon 29 Megaspear, 50%
+[Pincer: Inflict x1 spear damage.]
+Skill icon 03 Femme Fatale, Attack +25%, Equip
+[Passive: Boost ATK by 5% for each male squad member, up to 25%.]
+Skill icon 29 Teraspear, 30%
+[Pincer: Inflict x3 spear damage.]
+
+Djugan Λ SpearIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	736 	6694
+ATK 	53 	482
+DEF 	48 	436
+MATK 	36 	327
+MDEF 	37 	336
+Skills LV 1 	
+Skill icon 29 Teraspear, 30%
+[Pincer: Inflict x3 spear damage.]
+LV 30 	
+Skill icon 29 Gigaspear, Cross (All), 30%
+[Chain: Inflict x2 spear damage.]
+LV 50 	
+Skill icon 29 Valhalla's Fury, 30%
+[Pincer: Inflict 2000 damage.]
+LV 90 	
+Skill icon 29 Petaspear, 30%
+[Pincer: Inflict x3.5 spear damage.]
+Recode DNA requirements
+
+    Djugan icon Djugan (LV 80 in all jobs)
+    Giant Nega icon Giant Nega (LV 50)
+    Floralpede icon Floralpede (LV 50)
+    Coins 30,000 Coins
+    Deepwater Helix Deepwater Helix x5
+    White Hole White Hole x1
+    Terra Spearbronze Terra Spearbronze x15
+
+Available from skill slots Job 1
+Skill icon 03 Attack +10%, Self, 30%
+[Chain: ATK +10% for 2 turns.]
+Skill icon 93 Fancy Footwork, Self, 30%
+[Chain: Physical evasion +25% for 2 turns.]
+Skill icon 29 Megaspear, 50%
+[Pincer: Inflict x1 spear damage.]
+Skill icon 93 Ninja Footwork, Self, 30%
+[Chain: Physical evasion +50% for 2 turns.]
+Job 2
+Skill icon 31 Disarm Bomb, Self
+[Equip: Disarm bombs in the area you've traveled.]
+Skill icon 03 Attack +10%, Self
+[Equip: ATK +10%.]
+Skill icon 41 Phys Dmg Down 20%, Adjacent
+[Equip: Reduce physical damage received by 20%.]
+Skill icon 06 Negate Circle, Spear, 30%
+[Chain: Negate the Circle of Carnage for 2 turns.]
+Job 3
+Skill icon 04 Defense +10%, Self
+[Equip: DEF +10%.]
+Skill icon 83 Outflank, Self
+[Equip: Deal 50% more damage to completely surrounded enemies (unstackable).]
+Skill icon 29 Gigaspear, 40%
+[Pincer: Inflict x2 spear damage.]
+Skill icon 63 Augment Circle, Spear, 30%
+[Chain: Circle of Carnage x1.2 for 2 turns.]
+
+Echo Λ StaffIconRemedy icon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	597 	5476
+ATK 	40 	363
+DEF 	32 	291
+MATK 	41 	372
+MDEF 	46 	418
+Skills LV 1 	
+Skill icon 01 Regen, Self
+[Equip: Gradually restores HP with power 1 (cap 200).]
+LV 30 	
+Skill icon 82 Megamoggy, Ring, 30%
+[Chain: Inflict x1.1 character-weapon damage.]
+LV 50 	
+Skill icon 82 Gigamoggy, Cross (All), 30%
+[Chain: Inflict x2.2 character-weapon damage.]
+LV 90 	
+Skill icon 01 Extended Regen, Area (2), 30%
+[Chain: Gradually restores HP with power 1.5 (cap 300) for 5 turns.]
+Recode DNA requirements
+
+    Echo icon Echo (LV 80 in all jobs)
+    Cockatrice Λ icon Cockatrice Λ (LV 50)
+    Mothbot icon Mothbot (LV 50)
+    Coins 30,000 Coins
+    Mantle Helix Mantle Helix x5
+    Elixir Elixir x1
+    Moggy's Sunglasses Moggy's Sunglasses x5
+
+Available from skill slots Job 1
+Skill icon 82 Megamoogle, Area (1), 50%
+[Chain: Inflict x1.1 character-weapon damage.]
+Skill icon 32 Levitation, Self
+[Equip: Levitation.]
+Skill icon 54 Reanimation, All, 100%
+[Chain: Cures allies of petrification.]
+Skill icon 01 Giga Regen, Area (2), 30%
+[Chain: Gradually restores HP with power 1.5 (cap 600) for 3 turns.]
+Job 2
+Skill icon 04 Defense +10%, Self, 30%
+[Chain: DEF +10% for 2 turns.]
+Skill icon 82 Gigamoogle, Area (1), 40%
+[Chain: Inflict x2.2 character-weapon damage.]
+Skill icon 54 Petrification Ward, Self
+[Equip: Confer immunity to petrification.]
+Skill icon 01 Mega Regen, All, 30%
+[Chain: Gradually restores HP with power 1 (cap 300) for 3 turns.]
+Job 3
+Skill icon 04 Defense +10%, Self
+[Equip: DEF +10%.]
+Skill icon 22 HP +10%, Self
+[Equip: HP +10%.]
+Skill icon 32 Levitation, All, 100%
+[Chain: Levitation for 3 turns.]
+Skill icon 82 Teramoogle, Area (1), 30%
+[Chain: Inflict x3.3 character-weapon damage.]
+
+Ellvern Λ StaffIconRemedy icon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	606 	5511
+ATK 	28 	254
+DEF 	31 	280
+MATK 	52 	472
+MDEF 	52 	474
+Skills LV 1 	
+Skill icon 31 Venom Bomb, 30%
+[Chain: Summon a bomb that explodes after 1 turn, dealing 30% of HP as damage (cap 600) and poisons with power 3 in its Area (1).]
+LV 30 	
+Skill icon 68 Control Time +4 Sec, Equip
+[Passive: Extends this unit's move timer by 4 seconds.]
+LV 50 	
+Skill icon 82 Poison Predator, Poisoned, 30%
+[Chain: Inflict x6 character-weapon damage to all poisoned enemies.]
+LV 80 	
+Skill icon 92 Corrosive Cloud, Diamond, 30%
+[Chain: Apply paralysis and poison of power 3, 75% chance. Active for 3 turns.]
+Recode DNA requirements
+
+    Ellvern icon Ellvern (LV 80 in all jobs)
+    Snaptrap icon Snaptrap (LV 50)
+    Vial Chucker icon Vial Chucker (LV 50)
+    Coins 30,000 Coins
+    Mantle Helix Mantle Helix x5
+    Elixir Elixir x1
+    Green Ring Green Ring x15
+
+Available from skill slots Job 1
+Skill icon 49 Antidote, All, 100%
+[Chain: Cure all allies of poison.]
+Skill icon 11 Poison, Area (2), 100%
+[Chain: Apply poison of power 2 for 3 turns with a 30% chance]
+Skill icon 49 Poison Ward, Equip
+[Passive: Immune to poison.]
+Skill icon 68 Control Time +2 Sec, Chain, 30%
+[Chain: Extends chained allies' move timers by 2 seconds for 2 turns.]
+Job 2
+Skill icon 29 Megaspear, 50%
+[Pincer: Inflict x1 spear damage.]
+Skill icon 32 Levitation, All, 100%
+[Chain: All allies evade ground attacks and floor traps for 3 turns.]
+Skill icon 29 Megaspear, 1 Column, 30%
+[Chain: Inflict x1 spear damage on caster's column.]
+Skill icon 81 Powered Point Amp, Equip
+[Passive: Charge power points 20% faster.]
+Job 3
+Skill icon 04 Defense +10%, Equip
+[Passive: Boost DEF by 10%.]
+Skill icon 01 Giga Regen, Chain, 90%
+[Chain: Applies Regen with power 2 (cap 600) for 3 turns.]
+Skill icon 22 HP +20%, Equip
+[Passive: Boost HP by 20%.]
+Skill icon 11 Venom, 1 Column, 30%
+[Chain: Applies poison with power 3 on caster's column for 3 turns with an 80% chance.]
+
+Feno Λ StaffIconSkill icon 137
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	681 	6193
+ATK 	29 	263
+DEF 	37 	336
+MATK 	69 	627
+MDEF 	57 	518
+Skills LV 1 	
+Skill icon 145 Scorch Ward, Self
+[Equip: Confer immunity to scorch.]
+LV 30 	
+Skill icon 137 Moonlight Counter, Cross (All), 50%
+[Counter: Inflict x1.5 moon damage.]
+LV 50 	
+Skill icon 137 Luna, Pincer Area (1) + Column, 20%
+[Chain: Inflict x2 moon damage.]
+LV 90 	
+Skill icon 137 Frigid Moon, 3 Rows, 20%
+[Chain: Inflict x3 moon damage.]
+Recode DNA requirements
+
+    Feno icon Feno (LV 80 in all jobs)
+    Layla icon Layla (LV 50)
+    Cryowisp icon Cryowisp (LV 50)
+    Coins 30,000 Coins
+    Mantle Helix Mantle Helix x5
+    Ether Ether x1
+    Lunar Ring Lunar Ring x15
+
+Available from skill slots Job 1
+Skill icon 137 Moonlight, Pincer Area (1), 50%
+[Chain: Inflict x1 moon damage.]
+Skill icon 57 Anti-Solar Capsule, 30%
+[Chain: Create a Capsule Point that reduces sun damage by 10% per capsule for all allies.]
+Skill icon 57 Metabolic Magic, Self
+[Equip: Move on Capsule Point to boost MATK +5% for 3 turns (+10% for capsule of own element).]
+Skill icon 137 Luna, Pincer Area (1), 30%
+[Chain: Inflict x2 moon damage.]
+Job 2
+Skill icon 26 Magic Defense +10%, Self
+[Equip: MDEF +10%.]
+Skill icon 137 Luna, Pincer + Corners, 30%
+[Chain: Inflict x2 moon damage.]
+Skill icon 137 Moonlight, Pincer Area (1) + Column, 20%
+[Chain: Inflict x1 moon damage.]
+Skill icon 02 One-Time Revival, Self
+[Equip: Revive self with 25% HP, but only once.]
+Job 3
+Skill icon 138 Anti-Solar Shield, Self
+[Equip: Reduce sun damage received by 40%.]
+Skill icon 102 Magic Bomb, 30%
+[Chain: Create a magic bomb dealing diamond moon damage of power 3.]
+Skill icon 137 Frigid Moon, Pincer Area (1), 30%
+[Chain: Inflict x3 moon damage.]
+Skill icon 137 Full Moon, Pincer Area (1), 30%
+[Chain: Inflict x3.5 moon damage.]
+
+Gatz Λ SwordIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	663 	6030
+ATK 	49 	449
+DEF 	36 	327
+MATK 	37 	336
+MDEF 	37 	336
+Skills LV 1 	
+Skill icon 28 Terasword, 30%
+[Pincer: Inflict x3 sword damage.]
+LV 30 	
+Skill icon 28 Cross Cleave, Cross (All), 30%
+[Chain: Inflict x2 sword damage.]
+LV 50 	
+Skill icon 115 Augment Attack, All, 3 charges
+[Tap: Allies' ATK +30% for 1 turn.]
+LV 80 	
+Skill icon 28 Berserker, 6 random enemies, 30%
+[Chain: Inflict x1 sword damage.]
+Recode DNA requirements
+
+    Gatz icon Gatz (LV 80 in all jobs)
+    Apirath icon Apirath (LV 50)
+    Slasher icon Slasher (LV 50)
+    Coins 30,000 Coins
+    Deepwater Helix Deepwater Helix x5
+    Black Hole Black Hole x1
+    Terra Swordsteel Terra Swordsteel x15
+
+Available from skill slots Job 1
+Skill icon 32 Levitation, All, 100%
+[Chain: All allies evade ground attacks and floor traps for 3 turns.]
+Skill icon 32 Levitation, Equip
+[Passive: Evade ground attacks and floor traps.]
+Skill icon 28 Megasword, 50%
+[Pincer: Inflict x1 sword damage.]
+Skill icon 28 Leeching Blade, 30%
+[Pincer: Inflict x2 magical damage and absorb HP (cap 700).]
+Job 2
+Skill icon 04 Defense +10%, Equip
+[Passive: Boost DEF by 10%.]
+Skill icon 31 Disarm Bomb, Equip
+[Passive: Moving over bombs removes them without exploding.]
+Skill icon 22 HP +20%, Equip
+[Passive: Boost HP by 20%.]
+Skill icon 85 Treasure Hunter, Equip
+[Passive: Increases rate of item drops by 25% of the base rate.]
+Job 3
+Skill icon 03 Attack +10%, Equip
+[Passive: Boost ATK by 10%.]
+Skill icon 50 Sleep Guard, Adjacent, Equip
+[Passive: +50% resistance to sleep for adjacent allies.]
+Skill icon 28 Gigasword, 40%
+[Pincer: Inflict x2 sword damage.]
+Skill icon 89 Panacea, Area (2), 100%
+[Chain: Cure allies of sleep, poison, paralysis, confusion, demoralization, petrification, icebind, and shadowbind status effects.]
+
+Gegonago Λ StaffIconRemedy icon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	648 	5893
+ATK 	30 	292
+DEF 	33 	300
+MATK 	45 	409
+MDEF 	42 	381
+Skills LV 1 	
+Skill icon 68 Restore Time, All, 100%
+[Chain: Allies with impaired control time regain full time to maneuver.]
+LV 30 	
+Skill icon 22 HP +20%, Equip
+[Passive: Boost HP by 20%.]
+LV 50 	
+Skill icon 108 Stealth, Self, 100%
+[Chain: Slip past enemies and obstacles like a shadow. Active for 3 turns.]
+LV 80 	
+Skill icon 01 Extended Regen, Area (2), 30%
+[Chain: Applies Regen with power 1.5 (cap 300) for 5 turns.]
+Recode DNA requirements
+
+    Gegonago icon Gegonago (LV 80 in all jobs)
+    Kraken icon Kraken (LV 50)
+    Mechavirus 3721 icon Mechavirus 3721 (LV 50)
+    Coins 30,000 Coins
+    Mantle Helix Mantle Helix x5
+    Elixir Elixir
+    Green Ring Green Ring x15
+
+Available from skill slots Job 1
+Skill icon 32 Levitation, Equip
+[Passive: Evade ground attacks and floor traps.]
+Skill icon 32 Levitation, All, 100%
+[Chain: All allies evade ground attacks and floor traps for 3 turns.]
+Skill icon 24 Magic Attack +5%, Adjacent, Equip
+[Passive: Boost MATK by 5% for adjacent allies.]
+Skill icon 16 Frequency +20%, Chain, 30%
+[Chain: Boost skill frequency by 20% for 2 turns.]
+Job 2
+Skill icon 04 Defense +10%, Equip
+[Passive: Boost DEF by 10%.]
+Skill icon 30 Megabow, 50%
+[Pincer: Inflict x1 bow damage.]
+Skill icon 31 Disarm Bomb, Equip
+[Passive: Moving over bombs removes them without exploding.]
+Skill icon 30 Gigabow, 40%
+[Pincer: Inflict x2 bow damage.]
+Job 3
+Skill icon 22 HP +10%, Equip
+[Passive: Boost HP by 10%.]
+Skill icon 24 Magic Attack +10%, Adjacent, Equip
+[Passive: Boost MATK by 10% for adjacent allies.]
+Skill icon 01 Giga Regen, Chain, 90%
+[Chain: Applies Regen with power 2 (cap 600) for 3 turns.]
+Skill icon 68 Control Time +3 Sec, All, 30%
+[Chain: Extends all allies' move timers by 3 seconds for 2 turns.]
+
+Gigojago Λ BowIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	668 	6075
+ATK 	54 	491
+DEF 	46 	418
+MATK 	51 	463
+MDEF 	41 	372
+Skills LV 1 	
+Skill icon 30 Terabow, 30%
+[Pincer: Inflict x3 bow damage.]
+LV 30 	
+Skill icon 30 Dizzy Arrow, 6 random enemies, 30%
+[Chain: Inflict x1 bow damage.]
+LV 50 	
+Skill icon 124 Impair All, All, 3 charges
+[Tap: Enemies' ATK/MATK/DEF/MDEF -10% for 1 turn.]
+LV 90 	
+Skill icon 30 Petabow, 30%
+[Pincer: Inflict x3.5 bow damage.]
+Recode DNA requirements
+
+    Gigojago icon Gigojago (LV 80 in all jobs)
+    Ancient Sadness icon Ancient Sadness (LV 50)
+    Devil Bat icon Devil Bat (LV 50)
+    Coins 30,000 Coins
+    Temporal Helix Temporal Helix x5
+    Black Hole Black Hole x1
+    Terra Bowstring Terra Bowstring x15
+
+Available from skill slots Job 1
+Skill icon 09 Ice Arrows, 80%
+[Pincer: Inflict x1 ice and x0.5 bow damage.]
+Skill icon 26 Magic Defense +10%, Self, 30%
+[Chain: MDEF +10% for 2 turns.]
+Skill icon 57 Anti-Fire Capsule, 30%
+[Chain: Create a Capsule Point that reduces fire damage by 10% per capsule for all allies.]
+Skill icon 09 Glacial Arrows, Area (1), 30%
+[Chain: Inflict x2 ice and x0.7 bow damage.]
+Job 2
+Skill icon 26 Magic Defense +10%, Self
+[Equip: MDEF +10%.]
+Skill icon 49 Poison Guard, Adjacent
+[Equip: Resistance to poison +50%.]
+Skill icon 22 HP +20%, Self
+[Equip: HP +20%.]
+Skill icon 09 Glacier, Pincer Area (1), 30%
+[Chain: Inflict x2 ice damage.]
+Job 3
+Skill icon 42 Anti-Fire Shield, Self, 50%
+[Chain: Reduce fire damage received by 40% for 3 turns.]
+Skill icon 49 Poison Guard, Self
+[Equip: Resistance to poison +50%.]
+Skill icon 09 Ice Arrows, Cross (2), 30%
+[Chain: Inflict x1 ice and x0.5 bow damage.]
+Skill icon 09 Absolute Zero Arrows, 40%
+[Pincer: Inflict x3 ice and x0.9 bow damage.]
+
+Ginny Λ BowIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	727 	6612
+ATK 	57 	518
+DEF 	50 	454
+MATK 	32 	291
+MDEF 	35 	318
+Skills LV 1 	
+Skill icon 30 Gigabow, Area (1), 30%
+[Chain: Inflict x2 bow damage.]
+LV 30 	
+Skill icon 87 Seasoned Pro, Self
+[Equip: Experience acquired is x1.1.]
+LV 50 	
+Skill icon 30 Terabow, Area (1), 30%
+[Chain: Inflict x3 bow damage.]
+LV 90 	
+Skill icon 30 Petabow, Area (1), 30%
+[Chain: Inflict x3.5 bow damage.]
+Recode DNA requirements
+
+    Ginny icon Ginny (LV 80 in all jobs)
+    Ancient Sadness icon Ancient Sadness (LV 50)
+    Thornasaurus icon Thornasaurus (LV 50)
+    Coins 30,000 Coins
+    Temporal Helix Temporal Helix x5
+    White Hole White Hole x1
+    Terra Bowstring Terra Bowstring x15
+
+Available from skill slots Job 1
+Skill icon 30 Megabow, 50%
+[Pincer: Inflict x1 bow damage.]
+Skill icon 30 Megabow, 50%
+[Pincer: Inflict x1 bow damage.]
+Skill icon 04 Defense +5%, Bow, 30%
+[Chain: DEF +5% for 2 turns.]
+Skill icon 30 Gigabow, 40%
+[Pincer: Inflict x2 bow damage.]
+Job 2
+Skill icon 01 Mega Heal, Self, 30%
+[Chain: Heal with power 2 (cap 700).]
+Skill icon 22 HP +10%, Self
+[Equip: HP +10%.]
+Skill icon 30 Megabow, Area (1), 30%
+[Chain: Inflict x1 bow damage.]
+Skill icon 30 Terabow, 30%
+[Pincer: Inflict x3 bow damage.]
+Job 3
+Skill icon 30 Gigabow, 40%
+[Pincer: Inflict x2 bow damage.]
+Skill icon 68 Control Time +4 Sec, Self
+[Equip: Control time +4 sec.]
+Skill icon 30 Gigabow, Ring, 30%
+[Chain: Inflict x2 bow damage.]
+Skill icon 30 Petabow, 30%
+[Pincer: Inflict x3.5 bow damage.]
+
+The Invincible Λ StaffIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	772 	6991
+ATK 	39 	354
+DEF 	36 	327
+MATK 	56 	509
+MDEF 	47 	427
+Skills LV 1 	
+Skill icon 98 Ultima & Missile, Cross (All), 30%
+[Chain: Inflict x1.6 non-elemental and x1.6 character-weapon damage.]
+LV 30 	
+Skill icon 04 DEF & MDEF +5%, Staff, 30%
+[Chain: DEF and MDEF +5% for 2 turns.]
+LV 50 	
+Skill icon 98 Ultima & Missile, Ring, 30%
+[Chain: Inflict x1.6 non-elemental and x1.6 character-weapon damage.]
+LV 90 	
+Skill icon 98 X-Treme, Pincer Area (1), 30%
+[Chain: Inflict x3.5 non-elemental damage.]
+Recode DNA requirements
+
+    Invincible icon Invincible (LV 80 in all jobs)
+    Apirath icon Apirath (LV 50)
+    Wastecell icon Wastecell (LV 50)
+    Coins 30,000 Coins
+    Mantle Helix Mantle Helix x5
+    Ether Ether x1
+    Terra Staffwood Terra Staffwood x15
+
+Available from skill slots Job 1
+Skill icon 98 Trance, Pincer Area (1), 50%
+[Chain: Inflict x1 non-elemental damage.]
+Skill icon 44 Anti-Lightning Shield, Self
+[Equip: Reduce lightning damage received by 40%.]
+Skill icon 31 Megalauncher, 50%
+[Chain: Inflict x1 character-weapon damage.]
+Skill icon 16 Frequency +20%, Staff, 30%
+[Chain: Boost Staff allies' skill frequency by 20% for 2 turns.]
+Job 2
+Skill icon 42 Anti-Fire Shield, Self
+[Equip: Reduce fire damage received by 40%.]
+Skill icon 98 Trance, Pincer Area (1) + Row, 20%
+[Chain: Inflict x1 non-elemental damage.]
+Skill icon 98 Ultima, Pincer Area (1), 30%
+[Chain: Inflict x2 non-elemental damage.]
+Skill icon 32 Aerial Shield, Chain, 30%
+[Chain: Levitation + Reduce all damage by 20% (unstackable) for 2 turns.]
+Job 3
+Skill icon 45 Anti-Darkness Shield, Self
+[Equip: Reduce darkness damage received by 40%.]
+Skill icon 43 Anti-Ice Shield, Self
+[Equip: Reduce ice damage received by 40%.]
+Skill icon 31 Gigalauncher, 40%
+[Chain: Inflict x2 character-weapon damage.]
+Skill icon 98 Transcendence, Pincer Area (1), 30%
+[Chain: Inflict x3 non-elemental damage.]
+
+Jaguna Λ SpearIconRemedy icon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	611 	5557
+ATK 	40 	393
+DEF 	41 	400
+MATK 	46 	426
+MDEF 	44 	460
+Skills LV 1 	
+Skill icon 29 Teraspear, 30%
+[Pincer: Inflict x3 spear damage.]
+LV 30 	
+Skill icon 29 Gigaspear, Cross (All), 30%
+[Chain: Inflict x2 spear damage.]
+LV 50 	
+Skill icon 11 Venomous Spear, Pincer Area (Column), 30%
+[Pincer: Apply poison lasting 3 turns with power 1 (75% chance) and inflict x1 spear damage.]
+LV 80 	
+Skill icon 32 Aerial Regen, Area (2), 30%
+[Chain: Levitate over traps and gradually recover HP with power 2 (cap 500) for 3 turns.]
+Recode DNA requirements
+
+    Jaguna icon Jaguna (LV 80 in all jobs)
+    Dark Tortoise icon Dark Tortoise (LV 50)
+    Mothbot icon Mothbot (LV 50)
+    Coins 30,000 Coins
+    Deepwater Helix Deepwater Helix x5
+    White Hole White Hole
+    Terra Spearbronze Terra Spearbronze x15
+
+Available from skill slots Job 1
+Skill icon 30 Megabow, 50%
+[Pincer: Inflict x1 bow damage.]
+Skill icon 04 Defense +10%, Self, 30%
+[Chain: Boost DEF by 10% for 2 turns.]
+Skill icon 41 Phys Dmg Down 10%, Adjacent, Equip
+[Passive: Reduce physical damage by 10% for adjacent allies.]
+Skill icon 30 Gigabow, 40%
+[Pincer: Inflict x2 bow damage.]
+Job 2
+Skill icon 29 Megaspear, 50%
+[Pincer: Inflict x1 spear damage.]
+Skill icon 26 Magic Defense +10%, Self, 30%
+[Chain: Boost MDEF by 10% for 2 turns.]
+Skill icon 83 Outflank, Equip
+[Passive: Deal 50% more damage to completely surrounded enemies (unstackable).]
+Skill icon 29 Gigaspear, 40%
+[Pincer: Inflict x2 spear damage.]
+Job 3
+Skill icon 49 Antidote, Area (2), 100%
+[Chain: Cure caster's area of poison.]
+Skill icon 22 HP +10%, Equip
+[Passive: Boost HP by 10%.]
+Skill icon 32 Levitation, Self, 100%
+[Chain: Evade ground attacks and floor traps for 3 turns.]
+Skill icon 01 Healing Breeze, Area (2), 30%
+[Chain: Heal with power 2 (cap 700).]
+
+Jennish Λ StaffIconLightningIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	645 	5866
+ATK 	29 	263
+DEF 	33 	300
+MATK 	56 	507
+MDEF 	53 	482
+Skills LV 1 	
+Skill icon 08 Thunder, Pincer + Ring, 50%
+[Chain: Inflict x1 lightning damage on pincered units and a square ring around them.]
+LV 30 	
+Skill icon 57 Metabolic Magic, Equip
+[Passive: Moving over capsules boosts MATK by 5% for 3 turns. Capsules of your own element are doubly potent.]
+LV 50 	
+Skill icon 08 Lightning, Pincer + Corners, 30%
+[Chain: Inflict x2 lightning damage on pincered units and each 2x2 corner.]
+LV 80 	
+Skill icon 102 Magic Bomb, Chain, 30%
+[Chain: Sets bombs that inflict x3 lightning damage in a Diamond pattern when detonated by magic.]
+Recode DNA requirements
+
+    Jennish icon Jennish (LV 80 in all jobs)
+    Vajra (Monster) icon Vajra (LV 50)
+    Paralypede icon Paralypede (LV 50)
+    Coins 30,000 Coins
+    Mantle Helix Mantle Helix x5
+    Ether Ether
+    Lightning Ring Lightning Ring x15
+
+Available from skill slots Job 1
+Skill icon 08 Thunder, Pincer Area (1), 50%
+[Chain: Inflict x1 lightning damage.]
+Skill icon 57 Anti-Darkness Capsule, Chain, 30%
+[Chain: Create a capsule point that reduces darkness damage by 10% per capsule for all allies.]
+Skill icon 22 HP +20%, Equip
+[Passive: Boost HP by 20%.]
+Skill icon 02 One-Time Revival, Equip
+[Passive: Revive self with 25% HP. Once per quest.]
+Job 2
+Skill icon 26 Magic Defense +10%, Equip
+[Passive: Boost MDEF by 10%.]
+Skill icon 08 Thunder, Pincer Area (Column), 20%
+[Chain: Inflict x1 lightning damage on entire columns of pincered units.]
+Skill icon 08 Lightning, Pincer Area (1), 30%
+[Chain: Inflict x2 lightning damage.]
+Skill icon 01 Regen, Equip
+[Passive: Regen with power 1.]
+Job 3
+Skill icon 45 Anti-Darkness Shield, Equip
+[Passive: Reduce darkness damage by 40%.]
+Skill icon 01 Mega Heal, Self, 30%
+[Chain: Heal with power 2 (cap 700).]
+Skill icon 08 Lightning, Pincer Area (Row), 20%
+[Chain: Inflict x2 lightning damage on entire rows of pincered units.]
+Skill icon 08 Tempest, Pincer Area (1), 30%
+[Chain: Inflict x3 lightning damage.]
+
+Koko Λ SpearIconFireIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	800 	7276
+ATK 	43 	391
+DEF 	40 	363
+MATK 	49 	445
+MDEF 	43 	392
+Skills LV 1 	
+Skill icon 07 Inferno & Spear, Pincer Row, 30%
+[Pincer: Inflict x1.6 fire and x1.6 spear damage.]
+LV 30 	
+Skill icon 68 Control Time +4 Sec, Equip
+[Passive: Extends this unit's move timer by 4 seconds.]
+LV 50 	
+Skill icon 57 Hypermetabolic Magic, Equip
+[Passive: Moving over capsules boosts MATK by 10% for 3 turns. Capsules of your own element are doubly potent.]
+LV 80 	
+Skill icon 07 Solar Wind & Spear, 30%
+[Pincer: Inflict x2.6 fire and x2.6 spear damage.]
+Recode DNA requirements
+
+    Koko icon Koko (LV 80 in all jobs)
+    Marilith icon Marilith (LV 50)
+    Pegawyrm icon Pegawyrm (LV 50)
+    Coins 30,000 Coins
+    Deepwater Helix Deepwater Helix x5
+    White Hole White Hole
+    Terra Spearbronze Terra Spearbronze x15
+
+Available from skill slots Job 1
+Skill icon 07 Fire Strike, 80%
+[Pincer: Inflict x1 fire damage and x0.5 spear damage.]
+Skill icon 50 Sleep Guard, Equip
+[Passive: +50% resistance to sleep.]
+Skill icon 26 Magic Defense +10%, Self, 30%
+[Chain: Boost MDEF by 10% for 2 turns.]
+Skill icon 07 Inferno Strike, Area (1), 30%
+[Chain: Inflict x2 fire and x0.7 spear damage.]
+Job 2
+Skill icon 26 Magic Defense +10%, Equip
+[Passive: Boost MDEF by 10%.]
+Skill icon 57 Anti-Ice Capsule, Chain, 30%
+[Chain: Create a capsule point that reduces ice damage by 10% per capsule for all allies.]
+Skill icon 07 Inferno Strike, 60%
+[Pincer: Inflict x2 fire and x0.7 spear damage.]
+Skill icon 60 Life Drain, Area (1), 30%
+[Chain: Inflict x1.5 magical damage and absorb HP (cap 700).]
+Job 3
+Skill icon 43 Anti-Ice Shield, Equip
+[Passive: Reduce ice damage by 40%.]
+Skill icon 22 HP +10%, Equip
+[Passive: Boost HP by 10%.]
+Skill icon 07 Fire Strike, 1 Column, 30%
+[Chain: Inflict x1 fire damage and x0.5 spear damage.]
+Skill icon 07 Solar Wind Strike, 40%
+[Pincer: Inflict x3 fire and x0.9 spear damage.]
+
+Lacuma Λ BowIconSkill icon 114
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	849 	7721
+ATK 	48 	434
+DEF 	43 	391
+MATK 	55 	500
+MDEF 	51 	463
+Skills LV 1 	
+Skill icon 114 Supergravity & Arrows, 30%
+[Pincer: Inflict x2.6 graviton and x2.6 bow damage.]
+LV 30 	
+Skill icon 60 Life Drain, Diamond, 30%
+[Chain: Inflict x1.5 absorb damage (cap 900).]
+LV 50 	
+Skill icon 69 Money Bags, Self
+[Equip: Increase coins acquired by 30%.]
+LV 90 	
+Skill icon 114 Axion & Arrows, 30%
+[Pincer: Inflict x3 graviton and x3 bow damage.]
+Recode DNA requirements
+
+    Lacuma icon Lacuma (LV 80 in all jobs)
+    Relic icon Relic (LV 50)
+    Axion Dragon Λ icon Axion Dragon Λ (LV 50)
+    Coins 30,000 Coins
+    Flawless Helix Flawless Helix x50
+    Odin's Fang Odin's Fang x5
+    Graviton Ring Graviton Ring x15
+
+Available from skill slots Job 1
+Skill icon 114 Crushing Arrows, 80%
+[Pincer: Inflict x1 graviton and x0.5 bow damage.]
+Skill icon 125 Anti-Photon Shield, Self
+[Equip: Reduce photon damage received by 40%.]
+Skill icon 51 Paralysis Ward, Self
+[Equip: Confer immunity to paralysis.]
+Skill icon 114 Gravity Arrows, 60%
+[Pincer: Inflict x2 graviton and x0.7 bow damage.]
+Job 2
+Skill icon 26 Magic Defense +10%, Self, 30%
+[Chain: MDEF +10% for 2 turns.]
+Skill icon 114 Crushing Arrows, Area (1), 30%
+[Chain: Inflict x1 graviton and x0.5 bow damage.]
+Skill icon 114 Crushing Arrows, Pincer + Corners, 30%
+[Pincer: Inflict x1 graviton and x0.5 bow damage.]
+Skill icon 134 Rift Ward, Self
+[Equip: Invulnerable to dimensional rifts.]
+Job 3
+Skill icon 26 Magic Defense +10%, Self
+[Equip: MDEF +10%.]
+Skill icon 125 Photon Dmg Down 20%, Adjacent
+[Equip: Reduce photon damage received by 20%.]
+Skill icon 114 Gravity Arrows, Ring, 30%
+[Chain: Inflict x2 graviton and x0.7 bow damage.]
+Skill icon 114 Supergravity Arrows, 40%
+[Pincer: Inflict x3 graviton and x0.9 bow damage.]
+
+Leviathan Λ StaffIconIceIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	682 	6202
+ATK 	33 	300
+DEF 	34 	309
+MATK 	51 	463
+MDEF 	44 	400
+Skills LV 1 	
+Skill icon 55 Icebind Guard, Equip
+[Passive: +50% resistance to icebind.]
+LV 30 	
+Skill icon 09 Ice, Pincer + Ring, 50%
+[Chain: Inflict x1 ice damage on pincered units and a square ring around them.]
+LV 50 	
+Skill icon 48 Icebind, Area (2), 100%
+[Chain: Apply icebind on targets for 3 turns with a 30% chance. Frozen targets that are pincered will die instantly.]
+LV 80 	
+Skill icon 95 Maelstrom, Area (2) (Ground) 30%
+[Chain: Inflict x2 character-weapon damage to non-levitating enemies around caster's location.]
+Recode DNA requirements
+
+    Leviathan icon Leviathan (LV 80 in all jobs)
+    Megacell icon Megacell (LV 50)
+    Chiton icon Chiton (LV 50)
+    Coins 30,000 Coins
+    Mantle Helix Mantle Helix x5
+    Ether Ether
+    Ice Ring Ice Ring x15
+
+Available from skill slots Job 1
+Skill icon 09 Ice, Pincer Area (1), 50%
+[Chain: Inflict x1 ice damage.]
+Skill icon 26 Magic Defense +10%, Self, 30%
+[Chain: Boost MDEF by 10% for 2 turns.]
+Skill icon 43 Ice Damage Down 10%, Adjacent, Equip
+[Passive: Reduce ice damage by 10% for adjacent allies.]
+Skill icon 09 Ice, Pincer Area (Column), 20%
+[Chain: Inflict x1 ice damage on entire columns of pincered units.]
+Job 2
+Skill icon 26 Magic Defense +10%, Equip
+[Passive: Boost MDEF by 10%.]
+Skill icon 42 Anti-Fire Shield, Equip
+[Passive: Reduce fire damage by 40%.]
+Skill icon 09 Glacier, Pincer Area (1), 30%
+[Chain: Inflict x2 ice damage.]
+Skill icon 09 Icy Counter, 30%
+[Counter: Inflict x1.5 ice damage.]
+Job 3
+Skill icon 22 HP +10%, Equip
+[Passive: Boost HP by 10%.]
+Skill icon 49 Poison Guard, Equip
+[Passive: +50% resistance to poison.]
+Skill icon 09 Glacier, Cross (All), 30%
+[Chain: Inflict x2 ice damage]
+Skill icon 09 Absolute Zero, Pincer Area (1), 30%
+[Chain: Inflict x3 ice damage.]
+
+Lewto Λ StaffIconFireIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	648 	5893
+ATK 	29 	263
+DEF 	33 	300
+MATK 	56 	507
+MDEF 	53 	482
+Skills LV 1 	
+Skill icon 07 Fire, Pincer + Ring, 50%
+[Chain: Inflict x1 fire damage on pincered units and a square ring around them.]
+LV 30 	
+Skill icon 57 Metabolic Magic, Equip
+[Passive: Moving over capsules boosts MATK by 5% for 3 turns. Capsules of your own element are doubly potent.]
+LV 50 	
+Skill icon 07 Inferno, Pincer + Corners, 30%
+[Chain: Inflict x2 fire damage on pincered units and each 2x2 corner.]
+LV 80 	
+Skill icon 102 Magic Bomb, Chain, 30%
+[Chain: Sets bombs that inflict x3 fire damage in a Diamond pattern when detonated by magic.]
+Recode DNA requirements
+
+    Lewto icon Lewto (LV 80 in all jobs)
+    Tiamat icon Tiamat (LV 50)
+    Pyrowisp icon Pyrowisp (LV 50)
+    Coins 30,000 Coins
+    Mantle Helix Mantle Helix x5
+    Ether Ether
+    Fire Ring Fire Ring x15
+
+Available from skill slots Job 1
+Skill icon 07 Fire, Pincer Area (1), 50%
+[Chain: Inflict x1 fire damage.]
+Skill icon 57 Anti-Ice Capsule, Chain, 30%
+[Chain: Create a capsule point that reduces ice damage by 10% per capsule for all allies.]
+Skill icon 22 HP +20%, Equip
+[Passive: Boost HP by 20%.]
+Skill icon 02 One-Time Revival, Equip
+[Passive: Revive self with 25% HP. Once per quest.]
+Job 2
+Skill icon 26 Magic Defense +10%, Equip
+[Passive: Boost MDEF by 10%.]
+Skill icon 07 Fire, Pincer Area (Column), 20%
+[Chain: Inflict x1 fire damage on entire columns of pincered units.]
+Skill icon 07 Inferno, Pincer Area (1), 30%
+[Chain: Inflict x2 fire damage.]
+Skill icon 01 Regen, Equip
+[Passive: Regen with power 1.]
+Job 3
+Skill icon 43 Anti-Ice Shield, Equip
+[Passive: Reduce ice damage by 40%.]
+Skill icon 01 Mega Heal, Self, 30%
+[Chain: Heal with power 2 (cap 700).]
+Skill icon 07 Inferno, Pincer Area (Row), 20%
+[Chain: Inflict x2 fire damage on entire rows of pincered units.]
+Skill icon 07 Solar Wind, Pincer Area (1), 30%
+[Chain: Inflict x3 fire damage.]
+
+Lucia Λ StaffIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	604 	5493
+ATK 	35 	318
+DEF 	30 	272
+MATK 	41 	372
+MDEF 	36 	327
+Skills LV 1 	
+Skill icon 98 Ultima Blast, Pincer Area (1), 30%
+[Chain: Inflict x2 non-elemental magic and x0.7 character-weapon damage.]
+LV 30 	
+Skill icon 22 HP +20%, Equip
+[Passive: Boost HP by 20%.]
+LV 50 	
+Skill icon 98 Astral Blast, Pincer Area (1), 30%
+[Chain: Inflict x3 non-elemental magic and x0.9 character-weapon damage.]
+LV 80 	
+Skill icon 98 Trance Retaliation, All, 30%
+[Magic Counter: Inflict x1 non-elemental magic and x0.5 character-weapon damage to all enemies when caster is hit by magic.]
+Recode DNA requirements
+
+    Lucia icon Lucia (LV 80 in all jobs)
+    Leonidas icon Leonidas (LV 50)
+    Storm Witch icon Storm Witch (LV 50)
+    Coins 30,000 Coins
+    Lantern Lantern x5
+    Compass Compass x5
+    Ancient Map Ancient Map x5
+
+Available from skill slots Lucia
+Skill icon 98 Trance Blast, Pincer Area (1), 50%
+[Chain: Inflict x1 non-elemental magic and x0.5 character-weapon damage.]
+Skill icon 22 HP +10%, Equip
+[Passive: Boost HP by 10%.]
+Skill icon 01 Mega Heal, Chain, 100%
+[Chain: Heal with power 2 (cap 700).]
+Skill icon 111 Magic Deflector, Self, 30%
+[Chain: Mitigates damage inflicted by magic by 10% for 2 turns.]
+Leonidas
+Skill icon 04 Defense +10%, Equip
+[Passive: Boost DEF by 10%.]
+Skill icon 07 Fire, Pincer Area (Column), 20%
+[Chain: Inflict x1 fire damage on entire columns of pincered units.]
+Skill icon 07 Inferno Blast, Pincer Area (1), 30%
+[Chain: Inflict x2 fire and x0.7 character-weapon damage.]
+Skill icon 02 One-Time Revival, Equip
+[Passive: Revive self with 25% HP. Once per quest.]
+Storm Witch
+Skill icon 08 Thunder, Pincer Area (Column), 20%
+[Chain: Inflict x1 lightning damage on entire columns of pincered units.]
+Skill icon 26 Magic Defense +10%, Equip
+[Passive: Boost MDEF by 10%.]
+Skill icon 01 Restorative Counter, 50%
+[Counter: Heal self with power 2 (cap 700).]
+Skill icon 08 Tempest Blast, Pincer Area (1), 30%
+[Chain: Inflict x3 lightning and x0.9 character-weapon damage.]
+
+Mizell Λ StaffIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	837 	7612
+ATK 	36 	327
+DEF 	40 	363
+MATK 	68 	618
+MDEF 	64 	582
+Skills LV 1 	
+Skill icon 98 Ultima, Pincer + Corners, 30%
+[Chain: Inflict x2 non-elemental damage.]
+LV 30 	
+Skill icon 98 Trance Retaliation, All, 30%
+[Magic Counter: Inflict x1 non-elemental damage.]
+LV 50 	
+Skill icon 116 Augment Magic, All, 3 charges
+[Tap: Allies' MATK +30% for 1 turn.]
+LV 90 	
+Skill icon 98 X-Treme, Pincer Area (1), 30%
+[Chain: Inflict x3.5 non-elemental damage.]
+Recode DNA requirements
+
+    Mizell icon Mizell (LV 80 in all jobs)
+    8-Bit Orbling Λ icon 8-Bit Orbling Λ (LV 50)
+    Holy Dragon Λ icon Holy Dragon Λ (LV 50)
+    Coins 30,000 Coins
+    Flawless Helix Flawless Helix x50
+    Bahamut's Fang Bahamut's Fang x5
+    Terra Staffwood Terra Staffwood x15
+
+Available from skill slots Job 1
+Skill icon 98 Trance, Pincer Area (1), 50%
+[Chain: Inflict x1 non-elemental damage.]
+Skill icon 26 Magic Defense +10%, Self, 30%
+[Chain: MDEF +10% for 2 turns.]
+Skill icon 01 Mega Regen, Self, 50%
+[Chain: Gradually restores HP with power 1.5 (cap 300) for 3 turns.]
+Skill icon 98 Trance, Pincer Area (1) + Column, 20%
+[Chain: Inflict x1 non-elemental damage.]
+Job 2
+Skill icon 68 Control Time +2 Sec, Self
+[Equip: Control time +2 sec.]
+Skill icon 98 Ultima, Pincer Area (1), 30%
+[Chain: Inflict x2 non-elemental damage.]
+Skill icon 53 Demoralization Ward, Self
+[Equip: Confer immunity to demoralization.]
+Skill icon 98 Transcendence, Pincer Area (1), 30%
+[Chain: Inflict x3 non-elemental damage.]
+Job 3
+Skill icon 26 Magic Defense +10%, Self
+[Equip: MDEF +10%.]
+Skill icon 98 Trance & Arrow, 30%
+[Pincer: Inflict x0.8 non-elemental and x0.8 bow damage.]
+Skill icon 133 Twister Ward, Self
+[Equip: Invulnerable to twisters.]
+Skill icon 98 Ultima & Arrow, Ring, 30%
+[Chain: Inflict x1.6 non-elemental and x1.6 bow damage.]
+
+Nakupí Λ SwordIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	676 	5540
+ATK 	42 	344
+DEF 	43 	352
+MATK 	48 	393
+MDEF 	43 	352
+Skills LV 1 	
+Skill icon 28 Terasword, 30%
+[Pincer: Inflict x3 sword damage.]
+LV 30 	
+Skill icon 22 HP +20%, Equip
+[Passive: Boost HP by 20%.]
+LV 50 	
+Skill icon 28 Latent Inferno Blade, Cross (All), 30%
+[Chain: Inflict x1.6 sword damage and (if squad contains a Fire-attribute ally) x1.6 fire damage.]
+LV 80 	
+Skill icon 28 Latent Glacial Blade, Diamond, 30%
+[Chain: Inflict x1.6 sword damage and (if squad contains an Ice-attribute ally) x1.6 ice damage.]
+Recode DNA requirements
+
+    Nakupí icon Nakupí (LV 80 in all jobs)
+    Scar icon Scar (LV 50)
+    Cybergolem icon Cybergolem (LV 50)
+    Coins 30,000 Coins
+    Deepwater Helix Deepwater Helix x5
+    Black Hole Black Hole x1
+    Terra Swordsteel Terra Swordsteel x15
+
+Available from skill slots Job 1
+Skill icon 28 Megasword, 50%
+[Pincer: Inflict x1 sword damage.]
+Skill icon 26 Magic Defense +20%, Fire, 30%
+[Chain: Boost MDEF of Fire allies by 20% for 2 turns.]
+Skill icon 22 HP +10%, Equip
+[Passive: Boost HP by 10%.]
+Skill icon 24 Magic Attack +5%, Fire, 30%
+[Chain: Boost MATK of Fire allies by 5% for 2 turns.]
+Job 2
+Skill icon 03 Attack +10%, Self, 30%
+[Chain: Boost ATK by 10% for 2 turns.]
+Skill icon 26 Magic Defense +20%, Ice, 30%
+[Chain: Boost MDEF of Ice allies by 20% for 2 turns.]
+Skill icon 28 Gigasword, 40%
+[Pincer: Inflict x2 sword damage.]
+Skill icon 24 Magic Attack +5%, Ice, 30%
+[Chain: Boost MATK of Ice allies by 5% for 2 turns.]
+Job 3
+Skill icon 03 Attack +10%, Equip
+[Passive: Boost ATK by 10%.]
+Skill icon 68 Control Time +2 Sec, Equip
+[Passive: Extends this unit's move timer by 2 seconds.]
+Skill icon 28 Gigasword, Cross (1), 30%
+[Pincer: Inflict x2 sword damage.]
+Skill icon 20 Defense -20%, Wild Beast, 30%
+[Chain: Reduce DEF of Wild Beast enemies by 20% for 2 turns.]
+
+Nazuna Λ StaffIconRemedy icon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	657 	5975
+ATK 	28 	254
+DEF 	36 	327
+MATK 	66 	600
+MDEF 	65 	591
+Skills LV 1 	
+Skill icon 68 Restore Time, All, 100%
+[Chain: Cure control time debuff.]
+LV 30 	
+Skill icon 96 Fickle Birds, Random (3), 30%
+[Chain: Apply poison, sleep, or demoralization status effect (75% chance) for 3 turns.]
+LV 50 	
+Skill icon 108 Stealth, Self, 100%
+[Chain: Slip past enemies and obstacles like a shadow.]
+LV 90 	
+Skill icon 17 Extend Chain, Self
+[Equip: Extends chains to link allies in all four cardinal directions, plus any allies positioned to chain with them.]
+Recode DNA requirements
+
+    Nazuna icon Nazuna (LV 80 in all jobs)
+    Bahamut Kino Λ icon Bahamut Kino Λ (LV 50)
+    Holy Dragon Λ icon Holy Dragon Λ (LV 50)
+    Coins 30,000 Coins
+    Flawless Helix Flawless Helix x50
+    Bahamut's Fang Bahamut's Fang x5
+    Green Ring Green Ring x15
+
+Available from skill slots Job 1
+Skill icon 82 Sharp Beaks, Random (3), 50%
+[Chain: Inflict x2 character-weapon damage.]
+Skill icon 04 Defense +10%, Self, 30%
+[Chain: DEF +10% for 2 turns.]
+Skill icon 24 Magic Attack +5%, Adjacent
+[Equip: MATK +5%.]
+Skill icon 16 Frequency +20%, Chain, 30%
+[Chain: Skill frequency +20% for 2 turns.]
+Job 2
+Skill icon 04 Defense +10%, Self
+[Equip: DEF +10%.]
+Skill icon 82 Beaks of Agony, Random (3), 40%
+[Chain: Inflict x4 character-weapon damage.]
+Skill icon 60 Life Drain, Area (1), 30%
+[Chain: Inflict x1.5 absorb damage (cap 700).]
+Skill icon 89 Panacea, Area (2), 100%
+[Chain: Cures allies of all status ailments.]
+Job 3
+Skill icon 68 Control Time +2 Sec, Self
+[Equip: Control time +2 sec.]
+Skill icon 24 Magic Attack +10%, Adjacent
+[Equip: MATK +10%.]
+Skill icon 89 Status Guard, Self
+[Equip: Resistance to poison, sleep, paralysis, confusion, demoralization, and petrification status effects +50%.]
+Skill icon 80 Barrier, Adjacent
+[Equip: Reduce physical and magical damage received by 50% (unstackable).]
+
+Nia Λ
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	597 	5429
+ATK 	39 	354
+DEF 	36 	327
+MATK 	44 	400
+MDEF 	39 	354
+Skills LV 1 	
+Skill icon 31 Disarm Bomb, Self
+[Equip: Disarm bombs in the area you've traveled.]
+LV 30 	
+Skill icon 31 Summon Bomb, 30%
+[Chain: Create a time bomb dealing 30% HP as damage (cap 800).]
+LV 50 	
+Skill icon 16 Frequency +20%, Area (2), 30%
+[Chain: Skill frequency +20% for 2 turns.]
+LV 90 	
+Skill icon 31 Twin Missile, Most HP (2), 30%
+[Chain: Inflict x3 character-weapon damage.]
+Recode DNA requirements
+
+    Nia icon Nia (LV 80 in all jobs)
+    Rascal★ icon Rascal★ (LV 50)
+    Mech Orbling icon Mech Orbling (LV 50)
+    Coins 30,000 Coins
+    Mantle Helix Mantle Helix x5
+    Elixir Elixir x1
+    Mana Stone Mana Stone x5
+
+Available from skill slots Job 1
+Skill icon 04 Defense +10%, Self, 30%
+[Chain: DEF +10% for 2 turns.]
+Skill icon 28 Wildcat Sword, 50%
+[Pincer: Inflict x1 sword damage.]
+Skill icon 03 Attack +5%, Adjacent
+[Equip: ATK +5%.]
+Skill icon 28 Panther Sword, 40%
+[Pincer: Inflict x2 sword damage.]
+Job 2
+Skill icon 09 Frost Sword, 80%
+[Pincer: Inflict x1 ice and x0.5 sword damage.]
+Skill icon 68 Control Time +2 Sec, Self
+[Equip: Control time +2 sec.]
+Skill icon 22 HP +10%, Self
+[Equip: HP +10%.]
+Skill icon 09 Blizzard Sword, 40%
+[Pincer: Inflict x3 ice and x0.9 sword damage.]
+Job 3
+Skill icon 01 Wildcat Healer, Chain, 100%
+[Chain: Heal with power 2 (cap 700).]
+Skill icon 04 Defense +10%, Self
+[Equip: DEF +10%.]
+Skill icon 01 Panther Healer, Chain, 90%
+[Chain: Heal with power 2.5 (cap 1300).]
+Skill icon 02 Major Revival, Self
+[Equip: Revive an ally with 25% HP when starting a new floor.]
+
+Odin Λ SpearIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	688 	6257
+ATK 	46 	418
+DEF 	41 	372
+MATK 	33 	300
+MDEF 	33 	300
+Skills LV 1 	
+Skill icon 40 Demoralizing Spear, 1 Column, 30%
+[Chain: Inflict x1 spear damage, 80% chance to apply demoralization for 3 turns.]
+LV 30 	
+Skill icon 56 Death Guard, Equip
+[Passive: +50% resistance to instant death.]
+LV 50 	
+Skill icon 29 Valhalla's Fury, 30%
+[Pincer: Inflict 2000 damage.]
+LV 80 	
+Skill icon 29 Zantetsuso, Area (2), 30%
+[Pincer: Reduce HP by 50% around caster's location with a 60% chance.]
+Recode DNA requirements
+
+    Odin icon Odin (LV 80 in all jobs)
+    Golem icon Golem (LV 50)
+    Wailing Wall icon Wailing Wall (LV 50)
+    Coins 30,000 Coins
+    Deepwater Helix Deepwater Helix x5
+    White Hole White Hole
+    Terra Spearbronze Terra Spearbronze x15
+
+Available from skill slots Job 1
+Skill icon 29 Megaspear, 50%
+[Pincer: Inflict x1 spear damage.]
+Skill icon 03 Attack +10%, Self, 30%
+[Chain: Boost ATK by 10% for 2 turns.]
+Skill icon 03 Attack +5%, Adjacent, Equip
+[Passive: Boost ATK by 5% for adjacent allies.]
+Skill icon 40 Demoralizing Counter, 30%
+[Counter: 75% chance to apply demoralization for 3 turns.]
+Job 2
+Skill icon 03 Attack +10%, Equip
+[Passive: Boost ATK by 10%.]
+Skill icon 83 Outflank, Equip
+[Passive: Deal 50% more damage to completely surrounded enemies (unstackable).]
+Skill icon 29 Gigaspear, 40%
+[Pincer: Inflict x2 spear damage.]
+Skill icon 29 Megaspear, 1 Column, 30%
+[Chain: Inflict x1 spear damage on caster's column.]
+Job 3
+Skill icon 04 Defense +10%, Equip
+[Passive: Boost DEF by 10%.]
+Skill icon 53 Demoralization Guard, Equip
+[Passive: +50% resistance to demoralization.]
+Skill icon 29 Gigaspear, Cross (All), 30%
+[Chain: Inflict x2 spear damage.]
+Skill icon 29 Teraspear, 30%
+[Pincer: Inflict x3 spear damage.]
+
+Olber Λ SpearIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	731 	6648
+ATK 	44 	400
+DEF 	46 	416
+MATK 	37 	336
+MDEF 	34 	309
+Skills LV 1 	
+Skill icon 29 Teraspear, 30%
+[Pincer: Inflict x3 spear damage.]
+LV 30 	
+Skill icon 29 Trident, Area (1), 30%
+[Pincer: Inflict x2 spear damage.]
+LV 50 	
+Skill icon 29 Healing Conversion, All, 30%
+[Pincer: Heal all allies by 20% of pincer damage dealt (cap 1300).]
+LV 80 	
+Skill icon 80 Barrier, Adjacent, Equip
+[Passive: Reduce physical and magic damage by 50% (unstackable).]
+Recode DNA requirements
+
+    Olber icon Olber (LV 80 in all jobs)
+    Celestial Dragon icon Celestial Dragon (LV 50)
+    Floralpede icon Floralpede (LV 50)
+    Coins 30,000 Coins
+    Deepwater Helix Deepwater Helix x5
+    White Hole White Hole
+    Terra Spearbronze Terra Spearbronze x15
+
+Available from skill slots Job 1
+Skill icon 04 Defense +5%, Adjacent, Equip
+[Passive: Boost DEF by 5% for adjacent allies.]
+Skill icon 57 Capsule Point, Chain, 30%
+[Chain: Create a capsule point that increases DEF by 10% per capsule for all allies.]
+Skill icon 29 Megaspear, 50%
+[Pincer: Inflict x1 spear damage.]
+Skill icon 93 Fancy Footwork, Equip
+[Passive: Boost physical evasion by 25%.]
+Job 2
+Skill icon 01 Heal 500, Chain, 30%
+[Chain: Heal 500 HP.]
+Skill icon 26 Magic Defense +10%, Equip
+[Passive: Boost MDEF by 10%.]
+Skill icon 01 Heal 1000, Chain, 30%
+[Chain: Heal 1000 HP.]
+Skill icon 93 Evasive Arts, Chain, 30%
+[Chain: Boost physical evasion by 50% for 2 turns.]
+Job 3
+Skill icon 03 Attack +10%, Equip
+[Passive: Boost ATK by 10%.]
+Skill icon 04 Defense +10%, Adjacent, Equip
+[Passive: Boost DEF by 10% for adjacent allies.]
+Skill icon 29 Gigaspear, 40%
+[Pincer: Inflict x2 spear damage.]
+Skill icon 84 Self-Sacrifice, Equip
+[Passive: Receive damage taken by allies until user reaches 1 HP.]
+
+Palpa Λ StaffIconRemedy icon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	566 	5192
+ATK 	27 	245
+DEF 	31 	281
+MATK 	42 	385
+MDEF 	40 	366
+Skills LV 1 	
+Skill icon 04 Defense +10%, Self
+[Equip: DEF +10%.]
+LV 30 	
+Skill icon 02 Ally Revival, Self
+[Equip: Revive an ally with 1 HP when starting a new floor.]
+LV 50 	
+Skill icon 80 Barrier, Adjacent
+[Equip: Reduce physical and magical damage received by 25% (unstackable).]
+LV 80 	
+Skill icon 115 Augment Attack, All, 3 charges
+[Tap: Allies' ATK +30% for 1 turn.]
+Recode DNA requirements
+
+    Palpa icon Palpa (LV 80 in all jobs)
+    Stonefolk Healer icon Stonefolk Healer (LV 50)
+    Magma Mummy icon Magma Mummy (LV 50)
+    Coins 10,000 Coins
+    Mantle Helix Mantle Helix x1
+    Locket of Vows Locket of Vows x1
+    Green Ring Green Ring x5
+
+Available from skill slots Job 1
+Skill icon 01 Mega Regen, Chain, 100%
+[Chain: Applies Regen with power 1.5 (cap 300) for 3 turns.]
+Skill icon 04 Defense +10%, Self, 30%
+[Chain: Boost DEF by 10% for 2 turns.]
+Skill icon 50 Rise and Shine, Area (2), 100%
+[Chain: Cure caster's area of sleep.]
+Skill icon 68 Control Time +2 Sec, Chain, 30%
+[Chain: Extends chained allies' move timers by 2 seconds for 2 turns.]
+Job 2
+Skill icon 49 Antidote, Area (2), 100%
+[Chain: Cure caster's area of poison.]
+Skill icon 22 HP +10%, Equip
+[Passive: Boost HP by 10%.]
+Skill icon 51 Locomotion, Area (2), 100%
+[Chain: Cure caster's area of paralysis.]
+Skill icon 01 Regen, Equip
+[Passive: Regen with power 1.]
+Job 3
+Skill icon 52 Clarity, Area (2), 100%
+[Chain: Cure caster's area of confusion.]
+Skill icon 01 Giga Regen, Chain, 90%
+[Chain: Applies Regen with power 2 (cap 600) for 3 turns.]
+Skill icon 53 Esprit de Corps, Area (2), 100%
+[Chain: Cure caster's area of demoralization.]
+Skill icon 89 Panacea, Area (2), 100%
+[Chain: Cure allies of sleep, poison, paralysis, confusion, demoralization, petrification, icebind, and shadowbind status effects.]
+
+Piz'fer Λ StaffIconIceIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	647 	5884
+ATK 	28 	254
+DEF 	32 	291
+MATK 	56 	507
+MDEF 	53 	482
+Skills LV 1 	
+Skill icon 09 Ice, Pincer + Ring, 50%
+[Chain: Inflict x1 ice damage on pincered units and a square ring around them.]
+LV 30 	
+Skill icon 57 Metabolic Magic, Equip
+[Passive: Moving over capsules boosts MATK by 5% for 3 turns. Capsules of your own element are doubly potent.]
+LV 50 	
+Skill icon 09 Glacier, Pincer + Corners, 30%
+[Chain: Inflict x2 ice damage on pincered units and each 2x2 corner.]
+LV 80 	
+Skill icon 102 Magic Bomb, Chain, 30%
+[Chain: Sets bombs that inflict x3 ice damage in a Diamond pattern when detonated by magic.]
+Recode DNA requirements
+
+    Piz'fer icon Piz'fer (LV 80 in all jobs)
+    Tiamat icon Tiamat (LV 50)
+    Cryowisp icon Cryowisp (LV 50)
+    Coins 30,000 Coins
+    Mantle Helix Mantle Helix x5
+    Ether Ether
+    Ice Ring Ice Ring x15
+
+Available from skill slots Job 1
+Skill icon 09 Ice, Pincer Area (1), 50%
+[Chain: Inflict x1 ice damage.]
+Skill icon 57 Anti-Fire Capsule, Chain, 30%
+[Chain: Create a capsule point that reduces fire damage by 10% per capsule for all allies.]
+Skill icon 22 HP +20%, Equip
+[Passive: Boost HP by 20%.]
+Skill icon 02 One-Time Revival, Equip
+[Passive: Revive self with 25% HP. Once per quest.]
+Job 2
+Skill icon 26 Magic Defense +10%, Equip
+[Passive: Boost MDEF by 10%.]
+Skill icon 09 Ice, Pincer Area (Column), 20%
+[Chain: Inflict x1 ice damage on entire columns of pincered units.]
+Skill icon 09 Glacier, Pincer Area (1), 30%
+[Chain: Inflict x2 ice damage.]
+Skill icon 01 Regen, Equip
+[Passive: Regen with power 1.]
+Job 3
+Skill icon 42 Anti-Fire Shield, Equip
+[Passive: Reduce fire damage by 40%.]
+Skill icon 01 Mega Heal, Self, 30%
+[Chain: Heal with power 2 (cap 700).]
+Skill icon 09 Glacier, Pincer Area (Row), 20%
+[Chain: Inflict x2 ice damage on entire rows of pincered units.]
+Skill icon 09 Absolute Zero, Pincer Area (1), 30%
+[Chain: Inflict x3 ice damage.]
+
+Pupropé Λ StaffIconDarkIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	622 	5657
+ATK 	27 	245
+DEF 	32 	291
+MATK 	50 	454
+MDEF 	44 	400
+Skills LV 1 	
+Skill icon 10 Shadow, Pincer Area (Column), 20%
+[Chain: Inflict x1 darkness damage on entire columns of pincered units.]
+LV 30 	
+Skill icon 28 Guardian Sword, Lateral (2), 30%
+[Chain: Inflict x2.5 sword damage.]
+LV 50 	
+Skill icon 10 Abyss, Pincer + Ring, 30%
+[Chain: Inflict x2 darkness damage on pincered units and a square ring around them.]
+LV 80 	
+Skill icon 10 Dark Retaliation, All, 30%
+[Magic Counter: Inflict x1 darkness damage to all enemies when caster is hit by magic.]
+Recode DNA requirements
+
+    Pupropé icon Pupropé (LV 80 in all jobs)
+    Apirath icon Apirath (LV 50)
+    Dark Petrifier icon Dark Petrifier (LV 50)
+    Coins 30,000 Coins
+    Mantle Helix Mantle Helix x5
+    Ether Ether
+    Dark Ring Dark Ring x15
+
+Available from skill slots Job 1
+Skill icon 10 Shadow, Pincer Area (1), 50%
+[Chain: Inflict x1 darkness damage.]
+Skill icon 57 Anti-Lightning Capsule, Chain, 30%
+[Chain: Create a capsule point that reduces lightning damage by 10% per capsule for all allies.]
+Skill icon 56 Death Guard, Equip
+[Passive: +50% resistance to instant death.]
+Skill icon 10 Shadow Counter, Cross (1), 50%
+[Counter: Inflict x1.5 darkness damage to adjacent spaces.]
+Job 2
+Skill icon 01 Mega Heal, Self, 30%
+[Chain: Heal with power 2 (cap 700).]
+Skill icon 26 Magic Defense +10%, Equip
+[Passive: Boost MDEF by 10%.]
+Skill icon 10 Abyss, Pincer Area (1), 30%
+[Chain: Inflict x2 darkness damage.]
+Skill icon 16 Frequency +30%, Staff, 30%
+[Chain: Boost Staff allies' skill frequency by 30% for 2 turns.]
+Job 3
+Skill icon 44 Anti-Lightning Shield, Self, 50%
+[Chain: Reduce lightning damage by 40% for 3 turns.]
+Skill icon 52 Confusion Guard, Equip
+[Passive: +50% resistance to confusion.]
+Skill icon 22 HP +20%, Equip
+[Passive: Boost HP by 20%.]
+Skill icon 10 Dark Matter, Pincer Area (1), 30%
+[Chain: Inflict x3 darkness damage.]
+
+Rejin Λ SwordIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	619 	5629
+ATK 	40 	399
+DEF 	35 	349
+MATK 	38 	379
+MDEF 	38 	379
+Skills LV 1 	
+Skill icon 28 Leeching Blade, 30%
+[Pincer: Inflict x2 magical damage and absorb HP (cap 700).]
+LV 30 	
+Skill icon 104 Shadowbind Guard, Equip
+[Passive: +50% resistance to shadowbind.]
+LV 50 	
+Skill icon 63 Augment Circle, Self, 30%
+[Chain: Increases Circle of Carnage damage of self by 20% for 2 turns.]
+LV 80 	
+Skill icon 59 Gravity Field, 3 Columns, 100%
+[Pincer: Apply shadowbind of power 1 on caster's column and adjacent columns for 2 turns with a 75% chance.]
+Recode DNA requirements
+
+    Rejin icon Rejin (LV 80 in all jobs)
+    Lich icon Lich (LV 50)
+    Flamebot icon Flamebot (LV 50)
+    Coins 30,000 Coins
+    Deepwater Helix Deepwater Helix x5
+    Black Hole Black Hole
+    Terra Swordsteel Terra Swordsteel x15
+
+Available from skill slots Job 1
+Skill icon 28 Megasword, 50%
+[Pincer: Inflict x1 sword damage.]
+Skill icon 12 Slumber, 3 Columns, 100%
+[Pincer: Apply sleep to caster's column and adjacent columns for 2 turns with a 75% chance.]
+Skill icon 22 HP +10%, Equip
+[Passive: Boost HP by 10%.]
+Skill icon 28 Gigasword, 40%
+[Pincer: Inflict x2 sword damage.]
+Job 2
+Skill icon 83 Outflank, Equip
+[Passive: Deal 50% more damage to completely surrounded enemies (unstackable).]
+Skill icon 50 Sleep Guard, Equip
+[Passive: +50% resistance to sleep.]
+Skill icon 13 Paralyze, 3 Columns, 100%
+[Pincer: Apply paralysis to caster's column and adjacent columns for 2 turns with a 75% chance.]
+Skill icon 28 Megasword, 1 Row, 50%
+[Pincer: Inflict x1 sword damage on caster's row.]
+Job 3
+Skill icon 51 Paralysis Guard, Equip
+[Passive: +50% resistance to paralysis.]
+Skill icon 04 Defense +10%, Equip
+[Passive: Boost DEF by 10%.]
+Skill icon 28 Gigasword, 1 Row, 40%
+[Pincer: Inflict x2 sword damage.]
+Skill icon 28 Terasword, 30%
+[Pincer: Inflict x3 sword damage.]
+
+Samatha Λ SpearIconLightningIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	729 	6601
+ATK 	41 	372
+DEF 	42 	381
+MATK 	51 	463
+MDEF 	43 	391
+Skills LV 1 	
+Skill icon 08 Lightning & Spear, Pincer Row, 30%
+[Pincer: Inflict x1.6 lightning and x1.6 spear damage.]
+LV 30 	
+Skill icon 68 Control Time +4 Sec, Equip
+[Passive: Extends this unit's move timer by 4 seconds.]
+LV 50 	
+Skill icon 57 Hypermetabolic Magic, Equip
+[Passive: Moving over capsules boosts MATK by 10% for 3 turns. Capsules of your own element are doubly potent.]
+LV 80 	
+Skill icon 08 Tempest & Spear, 30%
+[Pincer: Inflict x2.6 lightning and x2.6 spear damage.]
+Recode DNA requirements
+
+    Samatha icon Samatha (LV 80 in all jobs)
+    Celestial Dragon icon Celestial Dragon (LV 50)
+    Mermaid icon Mermaid (LV 50)
+    Coins 30,000 Coins
+    Deepwater Helix Deepwater Helix x5
+    White Hole White Hole
+    Terra Spearbronze Terra Spearbronze x15
+
+Available from skill slots Job 1
+Skill icon 24 Magic Attack +10%, Self, 30%
+[Chain: Boost MATK by 10% for 2 turns.]
+Skill icon 08 Thunder Strike, 80%
+[Pincer: Inflict x1 lightning and x0.5 spear damage.]
+Skill icon 45 Dark Damage Down 20%, Adjacent, Equip
+[Passive: Reduce darkness damage by 20% for adjacent allies.]
+Skill icon 08 Lightning Strike, Area (1), 30%
+[Chain: Inflict x2 lightning and x0.7 spear damage.]
+Job 2
+Skill icon 29 Megaspear, 50%
+[Pincer: Inflict x1 spear damage.]
+Skill icon 03 Attack +10%, Equip
+[Passive: Boost ATK by 10%.]
+Skill icon 29 Gigaspear, 40%
+[Pincer: Inflict x2 spear damage.]
+Skill icon 86 Negotiator, 30%
+[Chain: Increases rate of recruiting pincered, defeated monsters by 200%.]
+Job 3
+Skill icon 45 Anti-Darkness Shield, Equip
+[Passive: Reduce darkness damage by 40%.]
+Skill icon 24 Magic Attack +10%, Equip
+[Passive: Boost MATK by 10%.]
+Skill icon 08 Thunder Strike, 1 Column, 30%
+[Chain: Inflict x1 lightning and x0.5 spear damage.]
+Skill icon 08 Tempest Strike, 40%
+[Pincer: Inflict x3 lightning and x0.9 spear damage.]
+
+Sayu Λ StaffIconSkill icon 113
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	698 	6348
+ATK 	30 	272
+DEF 	36 	327
+MATK 	68 	618
+MDEF 	58 	527
+Skills LV 1 	
+Skill icon 113 Radiant Counter, Cross (All), 50%
+[Counter: Inflict x1.5 photon damage.]
+LV 30 	
+Skill icon 68 Control Time +4 Sec, Self
+[Equip: Control time +4 sec.]
+LV 50 	
+Skill icon 113 Luxon, Pincer Area (1) + Column, 20%
+[Chain: Inflict x2 photon damage.]
+LV 90 	
+Skill icon 113 Tachyon, 3 Rows, 20%
+[Chain: Inflict x3 photon damage.]
+Recode DNA requirements
+
+    Sayu icon Sayu (LV 80 in all jobs)
+    Snaptrap icon Snaptrap (LV 50)
+    Mermaid icon Mermaid (LV 50)
+    Coins 30,000 Coins
+    Mantle Helix Mantle Helix x5
+    Ether Ether x1
+    Photon Ring Photon Ring x15
+
+Available from skill slots Job 1
+Skill icon 113 Radiance, Pincer Area (1), 50%
+[Chain: Inflict x1 photon damage.]
+Skill icon 57 Anti-Graviton Capsule, 30%
+[Chain: Create a Capsule Point that reduces graviton damage by 10% per capsule for all allies.]
+Skill icon 57 Metabolic Magic, Self
+[Equip: Move on Capsule Point to boost MATK +5% for 3 turns (+10% for capsule of own element).]
+Skill icon 113 Luxon, Pincer Area (1), 30%
+[Chain: Inflict x2 photon damage.]
+Job 2
+Skill icon 26 Magic Defense +10%, Self
+[Equip: MDEF +10%.]
+Skill icon 113 Luxon, Pincer + Corners, 30%
+[Chain: Inflict x2 photon damage.]
+Skill icon 113 Radiance, Pincer Area (1) + Column, 20%
+[Chain: Inflict x1 photon damage.]
+Skill icon 02 One-Time Revival, Self
+[Equip: Revive self with 25% HP, but only once.]
+Job 3
+Skill icon 126 Anti-Graviton Shield, Self
+[Equip: Reduce graviton damage received by 40%.]
+Skill icon 102 Magic Bomb, 30%
+[Chain: Create a magic bomb dealing diamond photon damage of power 3.]
+Skill icon 113 Tachyon, Pincer Area (1), 30%
+[Chain: Inflict x3 photon damage.]
+Skill icon 113 Holy, Pincer Area (1), 30%
+[Chain: Inflict x3.5 photon damage.]
+
+Seiryu Λ StaffIconDarkIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	723 	6575
+ATK 	40 	363
+DEF 	38 	345
+MATK 	54 	491
+MDEF 	48 	436
+Skills LV 1 	
+Skill icon 10 Shadow, Pincer Area (1) + Column, 20%
+[Chain: Inflict x1 dark damage.]
+LV 30 	
+Skill icon 10 Abyss, Pincer Area (1) + Row, 20%
+[Chain: Inflict x2 dark damage.]
+LV 50 	
+Skill icon 57 Hypermetabolic Magic, Self
+[Equip: Move on Capsule Point to boost MATK +10% for 3 turns (+20% for capsule of own element).]
+LV 90 	
+Skill icon 10 Oblivion, Pincer Area (1), 30%
+[Chain: Inflict x3.5 dark damage.]
+Recode DNA requirements
+
+    Seiryu icon Seiryu (LV 80 in all jobs)
+    Electrosapper icon Electrosapper (LV 50)
+    Beastfolk Mage (Darkness) icon Beastfolk Mage (Darkness) (LV 50)
+    Coins 10,000 Coins
+    Mantle Helix Mantle Helix x1
+    Ether Ether x1
+    Dark Ring Dark Ring x5
+
+Available from skill slots Job 1
+Skill icon 05 Defensive Counter, Self, 60%
+[Counter: DEF +30% for 4 turns.]
+Skill icon 05 Magic Defense Counter, Self, 60%
+[Counter: MDEF +30% for 4 turns.]
+Skill icon 22 HP +10%, Self
+[Equip: HP +10%.]
+Skill icon 59 Shadowbind, Area (2), 100%
+[Chain: Apply shadowbind (30% chance) for 3 turns.]
+Job 2
+Skill icon 10 Shadow, Pincer Area (1), 50%
+[Chain: Inflict x1 dark damage.]
+Skill icon 44 Anti-Lightning Shield, Self
+[Equip: Reduce lightning damage received by 40%.]
+Skill icon 10 Abyss, Pincer Area (1), 30%
+[Chain: Inflict x2 dark damage.]
+Skill icon 24 Magic Attack +5%, Dragon, 30%
+[Chain: MATK +5% for 2 turns.]
+Job 3
+Skill icon 82 Rake, Area (1), 30%
+[Chain: Inflict x2 character-weapon damage.]
+Skill icon 104 Shadowbind Guard, Self
+[Equip: Resistance to shadowbind +50%.]
+Skill icon 10 Shadow, Pincer Ring, 50%
+[Chain: Inflict x1 dark damage.]
+Skill icon 10 Dark Matter, Pincer Area (1), 30%
+[Chain: Inflict x3 dark damage.]
+
+Senala Λ StaffIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	735 	6684
+ATK 	29 	263
+DEF 	38 	345
+MATK 	68 	618
+MDEF 	67 	609
+Skills LV 1 	
+Skill icon 113 Tachyon, Pincer Area (1), 30%
+[Chain: Inflict x3 photon damage.]
+LV 30 	
+Skill icon 111 Magic Deflector, Self, 30%
+[Chain: Reduce all magic damage received by 10% for 2 turns.]
+LV 50 	
+Skill icon 121 Impair Magic, All, 3 charges
+[Tap: Enemies' MATK -10% for 1 turn.]
+LV 90 	
+Skill icon 07 Big Bang, Pincer Area (1), 30%
+[Chain: Inflict x3.5 fire damage.]
+Recode DNA requirements
+
+    Senala icon Senala (LV 80 in all jobs)
+    Lich Kino Λ icon Lich Kino Λ (LV 50)
+    Primordial Dragon Λ icon Primordial Dragon Λ (LV 50)
+    Coins 30,000 Coins
+    Flawless Helix Flawless Helix x50
+    Leviathan's Fang Leviathan's Fang x5
+    Terra Staffwood Terra Staffwood x15
+
+Available from skill slots Job 1
+Skill icon 113 Radiance, Pincer Area (1), 50%
+[Chain: Inflict x1 photon damage.]
+Skill icon 26 Magic Defense +10%, Self, 30%
+[Chain: MDEF +10% for 2 turns.]
+Skill icon 113 Radiance, Pincer Area (1) + Column, 20%
+[Chain: Inflict x1 photon damage.]
+Skill icon 113 Luxon, Pincer Area (1), 30%
+[Chain: Inflict x2 photon damage.]
+Job 2
+Skill icon 07 Fire, Pincer Area (1), 50%
+[Chain: Inflict x1 fire damage.]
+Skill icon 24 Magic Attack +10%, Adjacent
+[Equip: MATK +10%.]
+Skill icon 07 Fire, Pincer Area (1) + Column, 20%
+[Chain: Inflict x1 fire damage.]
+Skill icon 07 Inferno, Pincer Area (1), 30%
+[Chain: Inflict x2 fire damage.]
+Job 3
+Skill icon 26 Magic Defense +10%, Self
+[Equip: MDEF +10%.]
+Skill icon 01 Mega Heal, Self, 30%
+[Chain: Heal with power 2 (cap 700).]
+Skill icon 89 Status Guard, Self
+[Equip: Resistance to poison, sleep, paralysis, confusion, demoralization, and petrification status effects +50%.]
+Skill icon 07 Solar Wind, Pincer Area (1), 30%
+[Chain: Inflict x3 fire damage.]
+
+Sha'plar Λ SwordIconDarkIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	677 	6157
+ATK 	40 	363
+DEF 	37 	336
+MATK 	47 	427
+MDEF 	36 	327
+Skills LV 1 	
+Skill icon 10 Abyss & Sword, Pincer Row, 30%
+[Pincer: Inflict x1.6 dark and x1.6 sword damage.]
+LV 30 	
+Skill icon 22 HP +20%, Self
+[Equip: HP +20%.]
+LV 50 	
+Skill icon 47 Chaos Blade, 1 Row, 30%
+[Pincer: Apply instant death (80% chance) and inflict x1 sword damage.]
+LV 90 	
+Skill icon 10 Oblivion & Sword, 30%
+[Pincer: Inflict x3 dark and x3 sword damage.]
+Recode DNA requirements
+
+    Sha'plar icon Sha'plar (LV 80 in all jobs)
+    Scar icon Scar (LV 50)
+    Slasher icon Slasher (LV 50)
+    Coins 30,000 Coins
+    Deepwater Helix Deepwater Helix x5
+    Black Hole Black Hole x1
+    Terra Swordsteel Terra Swordsteel x15
+
+Available from skill slots Job 1
+Skill icon 10 Shadow Blade, 80%
+[Pincer: Inflict x1 dark and x0.5 sword damage.]
+Skill icon 44 Anti-Lightning Shield, Self
+[Equip: Reduce lightning damage received by 40%.]
+Skill icon 22 HP +10%, Self
+[Equip: HP +10%.]
+Skill icon 47 Death, 30%
+[Pincer: Apply instant death (80% chance).]
+Job 2
+Skill icon 26 Magic Defense +10%, Self, 30%
+[Chain: MDEF +10% for 2 turns.]
+Skill icon 10 Shadow, Pincer Area (1), 50%
+[Chain: Inflict x1 dark damage.]
+Skill icon 56 Death Guard, Self
+[Equip: Resistance to instant death +50%.]
+Skill icon 10 Abyss, Pincer Area (1), 30%
+[Chain: Inflict x2 dark damage.]
+Job 3
+Skill icon 24 Magic Attack +10%, Self
+[Equip: MATK +10%.]
+Skill icon 68 Control Time +2 Sec, Self
+[Equip: Control time +2 sec.]
+Skill icon 10 Shadow Counter, 30%
+[Counter: Inflict x1.5 dark damage.]
+Skill icon 10 Dark Matter Blade, Area (1), 40%
+[Pincer: Inflict x3 dark and x0.9 sword damage.]
+
+Suoh Λ SwordIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	753 	6848
+ATK 	47 	427
+DEF 	45 	409
+MATK 	41 	372
+MDEF 	41 	372
+Skills LV 1 	
+Skill icon 28 Terasword, 30%
+[Pincer: Inflict x3 sword damage.]
+LV 30 	
+Skill icon 81 Powered Point Amp, Self
+[Equip: Boost powered point charge by 20%.]
+LV 50 	
+Skill icon 70 Blossoming Love, Adjacent
+[Equip: Boost physical damage inflicted by 20%.]
+LV 90 	
+Skill icon 28 Petasword, 30%
+[Pincer: Inflict x3.5 sword damage.]
+Recode DNA requirements
+
+    Suoh icon Suoh (LV 80 in all jobs)
+    Kraken Kino Λ icon Kraken Kino Λ (LV 50)
+    Dark Pegawyrm icon Dark Pegawyrm (LV 50)
+    Coins 30,000 Coins
+    Pig Snout Pig Snout x5
+    Black Hole Black Hole x1
+    Terra Swordsteel Terra Swordsteel x15
+
+Available from skill slots Job 1
+Skill icon 03 Attack +10%, Self, 30%
+[Chain: Boost ATK by 10% for 2 turns.]
+Skill icon 28 Megasword, 50%
+[Pincer: Inflict x1 sword damage.]
+Skill icon 22 HP +5%, Equip
+[Passive: Boost HP by 5%.]
+Skill icon 28 Gigasword, 40%
+[Pincer: Inflict x2 sword damage.]
+Job 2
+Skill icon 04 Defense +10%, Self, 30%
+[Chain: Boost DEF by 10% for 2 turns.]
+Skill icon 41 Phys Dmg Down 25%, Self, 30%
+[Chain: Reduce physical damage by 25% for 2 turns.]
+Skill icon 30 Gigabow, 40%
+[Pincer: Inflict x2 bow damage.]
+Skill icon 47 Assassinate, Cross (1), 30%
+[Chain: Apply instant death with an 80% chance.]
+Job 3
+Skill icon 06 Negate Circle, Self, 30%
+[Chain: Disables the effect of the Circle of Carnage for self for 2 turns.]
+Skill icon 70Physical Damage x1.2, Self, 30%
+[Chain: Increase physical damage by x1.2 for self for 2 turns.]
+Skill icon 16 Love Thy Neighbor, Equip
+[Passive: Boost skill frequency by 30% for adjacent allies.]
+Skill icon 29 Teraspear, 30%
+[Pincer: Inflict x3 spear damage.]
+
+Yukken Λ BowIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	634 	5668
+ATK 	46 	411
+DEF 	41 	366
+MATK 	36 	321
+MDEF 	37 	330
+Skills LV 1 	
+Skill icon 30 Cross Aim, Cross (2), 30%
+[Pincer: Inflict x2 bow damage.]
+LV 30 	
+Skill icon 30 Terabow, 30%
+[Pincer: Inflict x3 bow damage.]
+LV 50 	
+Skill icon 21 Chaos Arrows, Ring, 30%
+[Chain: Inflict x1 bow damage in a square ring around the caster's location, 60% chance to apply confusion for 3 turns.]
+LV 80 	
+Skill icon 101 Ribbon, Area (1), 100%
+[Chain: +50% resistance against poison, sleep, paralysis, confusion, demoralization, petrification, icebind, shadowbind, and instant death for 3 turns.]
+Recode DNA requirements
+
+    Yukken icon Yukken (LV 80 in all jobs)
+    Kraken icon Kraken (LV 50)
+    Electrosapper icon Electrosapper (LV 50)
+    Coins 30,000 Coins
+    Deepwater Helix Deepwater Helix x5
+    Wormhole Wormhole
+    Terra Bowstring Terra Bowstring x15
+
+Available from skill slots Job 1
+Skill icon 30 Megabow, 50%
+[Pincer: Inflict x1 bow damage.]
+Skill icon 04 Defense +10%, Self, 30%
+[Chain: Boost DEF by 10% for 2 turns.]
+Skill icon 01 Mega Heal, Self, 30%
+[Chain: Heal with power 2 (cap 700).]
+Skill icon 21 Chaos Arrows, Area (1), 30%
+[Chain: Inflict x1 bow damage, 80% chance to apply confusion for 3 turns.]
+Job 2
+Skill icon 52 Confusion Guard, Equip
+[Passive: +50% resistance to confusion.]
+Skill icon 28 Megasword, 50%
+[Pincer: Inflict x1 sword damage.]
+Skill icon 68 Control Time +2 Sec, Equip
+[Passive: Extends this unit's move timer by 2 seconds.]
+Skill icon 28 Gigasword, 40%
+[Pincer: Inflict x2 sword damage.]
+Job 3
+Skill icon 22 HP +20%, Equip
+[Passive: Boost HP by 20%.]
+Skill icon 29 Megaspear, 50%
+[Pincer: Inflict x1 spear damage.]
+Skill icon 86 Pro Negotiator, 30%
+[Chain: Increases rate of recruiting pincered, defeated monsters by 800%.]
+Skill icon 29 Teraspear, 30%
+[Pincer: Inflict x3 spear damage.]
+
+Zafitte Λ StaffIconRemedy icon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	649 	5953
+ATK 	47 	427
+DEF 	35 	321
+MATK 	63 	572
+MDEF 	62 	563
+Skills LV 1 	
+Skill icon 82 Giga Heigh-Ho, 3 Columns, 20%
+[Chain: Inflict x2 character-weapon damage.]
+LV 30 	
+Skill icon 101 Ribbon, Self
+[Equip: Halves chance of being inflicted with status ailments.]
+LV 50 	
+Skill icon 82 Tera Heigh-Ho, 3 Rows, 20%
+[Chain: Inflict x3 character-weapon damage.]
+LV 90 	
+Skill icon 119 Augment All, All, 3 charges
+[Tap: Allies' ATK/MATK/DEF/MDEF +30% for 1 turn.]
+Recode DNA requirements
+
+    Zafitte icon Zafitte (LV 80 in all jobs)
+    Reaver icon Reaver (LV 50)
+    Paralypede icon Paralypede (LV 50)
+    Coins 30,000 Coins
+    Mantle Helix Mantle Helix x5
+    Elixir Elixir x1
+    Green Ring Green Ring x15
+
+Available from skill slots Job 1
+Skill icon 31 Disarm Bomb, Self
+[Equip: Disarm bombs in the area you've traveled.]
+Skill icon 32 Levitation, All, 100%
+[Chain: Levitation for 3 turns.]
+Skill icon 31 Build Bomb, Self
+[Equip: Trails 3 bombs dealing 10% target max HP as character-weapon damage (cap 500).]
+Skill icon 16 Frequency +20%, Chain, 30%
+[Chain: Skill frequency +20% for 2 turns.]
+Job 2
+Skill icon 49 Antidote, All, 100%
+[Chain: Cures allies of poison power 1.]
+Skill icon 49 Poison Ward, Self
+[Equip: Confer immunity to poison.]
+Skill icon 11 Poison, Area (2), 100%
+[Chain: Apply poison power 2 (30% chance) for 3 turns.]
+Skill icon 11 Venom, 1 Row, 30%
+[Chain: Apply poison power 3 (80% chance) for 3 turns.]
+Job 3
+Skill icon 26 Magic Defense +10%, Self
+[Equip: MDEF +10%.]
+Skill icon 01 Giga Regen, Chain, 90%
+[Chain: Gradually restores HP with power 2 (cap 600) for 3 turns.]
+Skill icon 22 HP +20%, Self
+[Equip: HP +20%.]
+Skill icon 89 Panacea, Area (2), 100%
+[Chain: Cures allies of all status ailments.]
+
+Zerro Λ StaffIconDarkIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	646 	5875
+ATK 	28 	254
+DEF 	32 	291
+MATK 	56 	507
+MDEF 	53 	482
+Skills LV 1 	
+Skill icon 10 Shadow, Pincer + Ring, 50%
+[Chain: Inflict x1 darkness damage on pincered units and a square ring around them.]
+LV 30 	
+Skill icon 57 Metabolic Magic, Equip
+[Passive: Moving over capsules boosts MATK by 5% for 3 turns. Capsules of your own element are doubly potent.]
+LV 50 	
+Skill icon 10 Abyss, Pincer + Corners, 30%
+[Chain: Inflict x2 darkness damage on pincered units and each 2x2 corner.]
+LV 80 	
+Skill icon 102 Magic Bomb, Chain, 30%
+[Chain: Sets bombs that inflict x3 dark damage in a Diamond pattern when detonated by magic.]
+Recode DNA requirements
+
+    Zerro icon Zerro (LV 80 in all jobs)
+    Onyx Dragon icon Onyx Dragon (LV 50)
+    Dark Petrifier icon Dark Petrifier (LV 50)
+    Coins 30,000 Coins
+    Mantle Helix Mantle Helix x5
+    Ether Ether
+    Dark Ring Dark Ring x15
+
+Available from skill slots Job 1
+Skill icon 10 Shadow, Pincer Area (1), 50%
+[Chain: Inflict x1 darkness damage.]
+Skill icon 57 Anti-Lightning Capsule, Chain, 30%
+[Chain: Create a capsule point that reduces lightning damage by 10% per capsule for all allies.]
+Skill icon 22 HP +20%, Equip
+[Passive: Boost HP by 20%.]
+Skill icon 02 One-Time Revival, Equip
+[Passive: Revive self with 25% HP. Once per quest.]
+Job 2
+Skill icon 26 Magic Defense +10%, Equip
+[Passive: Boost MDEF by 10%.]
+Skill icon 10 Shadow, Pincer Area (Column), 20%
+[Chain: Inflict x1 darkness damage on entire columns of pincered units.]
+Skill icon 10 Abyss, Pincer Area (1), 30%
+[Chain: Inflict x2 darkness damage.]
+Skill icon 01 Regen, Equip
+[Passive: Regen with power 1.]
+Job 3
+Skill icon 44 Anti-Lightning Shield, Equip
+[Passive: Reduce lightning damage by 40%.]
+Skill icon 01 Mega Heal, Self, 30%
+[Chain: Heal with power 2 (cap 700).]
+Skill icon 10 Abyss, Pincer Area (Row), 20%
+[Chain: Inflict x2 darkness damage on entire rows of pincered units.]
+Skill icon 10 Dark Matter, Pincer Area (1), 30%
+[Chain: Inflict x3 darkness damage.]
+
+START HERE
+ 36AIS Adventurer
+Class 	SS
+Species 	Oxsecian
+Gender 	Female
+Artist 	Kimihiko Fujisaka
+  Availability
+
+After completing Chapter 34:
+
+    Pact of Truth
+    Pact of Fate (Energy)
+
+36AIS the Forsaken StaffIconRegen Icon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	312 	2862
+ATK 	16 	146
+DEF 	18 	165
+MATK 	31 	284
+MDEF 	28 	256
+Skills LV 1 	
+Skill icon 26 Magic Defense +10%, Self, 30%
+[Chain: Boost MDEF by 10% for 2 turns.]
+LV 15 	
+Skill icon 01 Mega Heal, Chain, 100%
+[Chain: Heal with power 2 (cap 700).]
+LV 35 	
+Skill icon 26 Magic Defense +5%, Adjacent, Equip
+[Passive: Boost MDEF by 5% for adjacent allies.]
+LV 65 	
+Skill icon 22 HP +20%, Equip
+[Passive: Boost HP by 20%.]
+36AIS the Allmother StaffIconRegen Icon
+Job 2
+
+Job 2
+Stats LV 	1 	90
+HP 	372 	3412
+ATK 	19 	174
+DEF 	21 	192
+MATK 	34 	311
+MDEF 	31 	284
+Skills LV 1 	
+Skill icon 26 Magic Defense +10%, Equip
+[Passive: Boost MDEF by 10%.]
+LV 15 	
+Skill icon 01 Mega Heal, Self, 30%
+[Chain: Heal with power 2 (cap 700).]
+LV 35 	
+Skill icon 26 Magic Defense +10%, Adjacent, Equip
+[Passive: Boost MDEF by 10% for adjacent allies.]
+LV 65 	
+Skill icon 02 One-Time Revival, Equip
+[Passive: Revive self with 25% HP. Once per quest.]
+Add Job requirements
+
+    Coins 10,000 Coins
+    Tranquil Clock Tranquil Clock x15
+    White Ring White Ring x15
+    Oxsecium Oxsecium x3
+
+36AIS the Lifepulse StaffIconRegen Icon
+Job 3
+
+Job 3
+Stats LV 	1 	90
+HP 	480 	4403
+ATK 	25 	229
+DEF 	28 	256
+MATK 	44 	403
+MDEF 	41 	376
+Skills LV 1 	
+Skill icon 01 Giga Heal, Chain, 90%
+[Chain: Heal with power 2.5 (cap 1300).]
+LV 15 	
+Skill icon 01 Heal, All, 30%
+[Chain: Heal all allies with power 1 (cap 700).]
+LV 35 	
+Skill icon 01 Healing Pulse, Area (2), 30%
+[Chain: Heal with power 2 (cap 1300).]
+LV 65 	
+Skill icon 01 Imbibe HP, Area (1), 30%
+[Chain: Inflict x2 magical damage and absorb HP.]
+Add Job requirements
+
+    Coins 20,000 Coins
+    Tome of Enlightenment Tome of Enlightenment x15
+    Asclepius Asclepius x1
+    Animaton Animaton x3
+	
+ 54B2 Adventurer
+Class 	Z
+Species 	Oxsecian
+Gender 	Male
+Artist 	Kimihiko Fujisaka
+  Availability
+
+After completing Chapter 34:
+
+    Pact of Truth
+    Pact of Fate (Energy)
+
+King 54B2 SwordIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	631 	5215
+ATK 	49 	445
+DEF 	43 	355
+MATK 	22 	201
+MDEF 	27 	247
+Skills LV 1 	
+Skill icon 04 Defense +10%, Self, 30%
+[Chain: Boost DEF by 10% for 2 turns.]
+LV 30 	
+Skill icon 28 Megasword, 50%
+[Pincer: Inflict x1 sword damage.]
+LV 50 	
+Skill icon 40 Intimidate, Area (1), 30%
+[Chain: Apply demoralize with a 75% chance for 3 turns.]
+LV 80 	
+Skill icon 93 Evasive Arts, Area (1), 30%
+[Chain: Boost physical evasion by 50% for 2 turns.]
+King 54B2 the Unforgiving​ SwordIcon
+Job 2
+
+Job 2
+Stats LV 	1 	90
+HP 	693 	5727
+ATK 	52 	472
+DEF 	46 	380
+MATK 	25 	229
+MDEF 	30 	275
+Skills LV 1 	
+Skill icon 04 Defense +10%, Equip
+[Passive: Boost DEF by 10%.]
+LV 30 	
+Skill icon 53 Demoralization Ward, Equip
+[Passive: Immune to demoralization.]
+LV 50 	
+Skill icon 40 Demoralizing Blade, Pincer Row, 50%
+[Pincer: Inflict x1 sword damage, 75% chance to apply demoralization for 3 turns.]
+LV 80 	
+Skill icon 28 Terasword, 30%
+[Pincer: Inflict x3 sword damage.]
+Add Job requirements
+
+    Coins 14,000 Coins
+    Tranquil Clock Tranquil Clock x15
+    Terra Swordsteel Terra Swordsteel x15
+    Orichalcum Orichalcum x3
+
+King 54B2 the Unrelenting SwordIcon
+Job 3
+
+Job 3
+Stats LV 	1 	90
+HP 	752 	6215
+ATK 	55 	500
+DEF 	49 	405
+MATK 	28 	256
+MDEF 	33 	302
+Skills LV 1 	
+Skill icon 22 HP +10%, Equip
+[Passive: Boost HP by 10%.]
+LV 30 	
+Skill icon 28 Gigasword, 40%
+[Pincer: Inflict x2 sword damage.]
+LV 50 	
+Skill icon 05 Counterattack, 30%
+[Counter: Inflict x1.5 character-weapon damage.]
+LV 80 	
+Skill icon 28 Royal Blade, 1 Row, 30%
+[Pincer: Inflict x3 sword damage on caster's row.]
+Add Job requirements
+
+    Coins 28,000 Coins
+    Tome of Enlightenment Tome of Enlightenment x15
+    Heartwood Sword Heartwood Sword x1
+    Oxsecium Oxsecium x3
+	
+ A'merpact Λ Adventurer
+Class 	SS
+Species 	Lizardfolk
+Gender 	Male
+Artist 	Yoshitomo Ikawa
+  Availability
+
+    Recode DNA
+
+A'merpact Λ StaffIconIceIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	636 	5834
+ATK 	28 	254
+DEF 	30 	272
+MATK 	49 	449
+MDEF 	52 	477
+Skills LV 1 	
+Skill icon 55 Icebind Ward, Self
+[Equip: Confer immunity to icebind.]
+LV 30 	
+Skill icon 09 Glacier, Pincer Area (1) + Row, 20%
+[Chain: Inflict x2 ice damage.]
+LV 50 	
+Skill icon 134 Rift Ward, Self
+[Equip: Invulnerable to dimensional rifts.]
+LV 90 	
+Skill icon 09 Negatemp, Pincer Area (1), 30%
+[Chain: Inflict x3.5 ice damage.]
+Recode DNA requirements
+
+    A'merpact icon A'merpact (LV 80 in all jobs)
+    Layla icon Layla (LV 50)
+    Cryowisp icon Cryowisp (LV 50)
+    Coins 20,000 Coins
+    Temporal Helix Temporal Helix x5
+    Ether Ether x1
+    Ice Ring Ice Ring x15
+
+Available from skill slots Job 1
+Skill icon 09 Ice, Pincer Area (1), 50%
+[Chain: Inflict x1 ice damage.]
+Skill icon 42 Anti-Fire Shield, Self
+[Equip: Reduce fire damage received by 40%.]
+Skill icon 22 HP +10%, Self
+[Equip: HP +10%.]
+Skill icon 09 Icy Counter, Cross (1), 50%
+[Counter: Inflict x1.5 ice damage.]
+Job 2
+Skill icon 24 Magic Attack +10%, Self, 30%
+[Chain: MATK +10% for 2 turns.]
+Skill icon 57 Anti-Fire Capsule, 30%
+[Chain: Create a Capsule Point that reduces fire damage by 10% per capsule for all allies.]
+Skill icon 09 Glacier, Pincer Area (1), 30%
+[Chain: Inflict x2 ice damage.]
+Skill icon 09 Ice, 1 Row, 30%
+[Chain: Inflict x1 ice damage.]
+Job 3
+Skill icon 24 Magic Attack +10%, Self
+[Equip: MATK +10%.]
+Skill icon 53 Demoralization Guard, Self
+[Equip: Resistance to demoralization +50%.]
+Skill icon 09 Icy Counter, 30%
+[Counter: Inflict x1.5 ice damage.]
+Skill icon 09 Absolute Zero, Pincer Area (1), 30%
+[Chain: Inflict x3 ice damage.]
+
+ Amimari Adventurer
+Class 	SS
+Species 	Beastfolk
+Gender 	Female
+Artist 	Kimihiko Fujisaka
+  Availability
+
+    Pact of Truth
+    Pact of Fate (Energy)
+    Limited-time Starter Character
+
+Amimari the Nurse StaffIconRegen Icon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	364 	3339
+ATK 	22 	201
+DEF 	22 	201
+MATK 	41 	376
+MDEF 	35 	321
+Skills LV 1 	
+Skill icon 01 Mega Heal, Chain, 100%
+[Chain: Heal with power 2 (cap 700).]
+LV 15 	
+Skill icon 26 Magic Defense +10%, Self, 30%
+[Chain: Boost MDEF by 10% for 2 turns.]
+LV 35 	
+Skill icon 54 Petrification Guard, Equip
+[Passive: +50% resistance to petrification.]
+LV 65 	
+Skill icon 94 Heal x1.5, All, 30%
+[Chain: Increase healing by x1.5 for all allies for 2 turns.]
+Amimari the Medic SwordIcon
+Job 2
+
+Job 2
+Stats LV 	1 	90
+HP 	428 	3926
+ATK 	35 	321
+DEF 	32 	293
+MATK 	20 	183
+MDEF 	22 	201
+Skills LV 1 	
+Skill icon 28 Megasword, 50%
+[Pincer: Inflict x1 sword damage.]
+LV 15 	
+Skill icon 04 Defense +10%, Equip
+[Passive: Boost DEF by 10%.]
+LV 35 	
+Skill icon 28 Leeching Blade, 30%
+[Pincer: Inflict x2 magical damage and absorb HP (cap 700).]
+LV 65 	
+Skill icon 28 Gigasword, 40%
+[Pincer: Inflict x2 sword damage.]
+Add Job requirements
+
+    Coins 10,000 Coins
+    Claw of Fate Claw of Fate x15
+    Terra Swordsteel Terra Swordsteel x15
+    Animaton Animaton x3
+
+Amimari the Saint StaffIconRegen Icon
+Job 3
+
+Job 3
+Stats LV 	1 	90
+HP 	484 	4439
+ATK 	32 	293
+DEF 	30 	275
+MATK 	47 	431
+MDEF 	41 	376
+Skills LV 1 	
+Skill icon 22 HP +10%, Equip
+[Passive: Boost HP by 10%.]
+LV 15 	
+Skill icon 68 Control Time +2 Sec, Equip
+[Passive: Extends this unit's move timer by 2 seconds.]
+LV 35 	
+Skill icon 01 Tera Heal, Chain, 80%
+[Chain: Heal with power 3 (cap 2500).]
+LV 65 	
+Skill icon 02 Major Ally Revival, Equip
+[Passive: Revive a defeated ally with 50% HP when starting a new floor.]
+Add Job requirements
+
+    Coins 20,000 Coins
+    Pelt of Knowledge Pelt of Knowledge x15
+    Asclepius Asclepius
+    Oxsecium Oxsecium x3
+
+ Annu Adventurer
+Class 	Z
+Species 	Wild Beast
+Gender 	Female
+  Availability
+
+    Pact of Truth
+    Pact of Fate (Energy)
+
+Annu the Ice Dancer BowIconIceIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	535 	4865
+ATK 	35 	318
+DEF 	41 	372
+MATK 	48 	436
+MDEF 	38 	345
+Skills LV 1 	
+Skill icon 09 Ice Arrows, 80%
+[Pincer: Inflict x1 ice and x0.5 bow damage.]
+LV 30 	
+Skill icon 24 Magic Attack +10%, Self, 30%
+[Chain: MATK +10% for 2 turns.]
+LV 50 	
+Skill icon 115 Augment Attack, All, 3 charges
+[Tap: Allies' ATK +30% for 1 turn.]
+LV 90 	
+Skill icon 01 Regen, Self
+[Equip: Gradually restores HP with power 1 (cap 200).]
+Annu the Priestess BowIconIceIcon
+Job 2
+
+Job 2
+Stats LV 	1 	90
+HP 	591 	5375
+ATK 	37 	336
+DEF 	44 	400
+MATK 	51 	463
+MDEF 	41 	372
+Skills LV 1 	
+Skill icon 09 Glacial Arrows, 60%
+[Pincer: Inflict x2 ice and x0.7 bow damage.]
+LV 30 	
+Skill icon 42 Anti-Fire Shield, Self
+[Equip: Reduce fire damage received by 40%.]
+LV 50 	
+Skill icon 116 Augment Magic, All, 3 charges
+[Tap: Allies' MATK +30% for 1 turn.]
+LV 90 	
+Skill icon 09 Absolute Zero Arrows, 40%
+[Pincer: Inflict x3 ice and x0.9 bow damage.]
+Add Job requirements
+
+    Coins 14,000 Coins
+    Lustrous Tail Lustrous Tail x15
+    Terra Bowstring Terra Bowstring x15
+    Animaton Animaton x3
+
+Annu the Frozen BowIconIceIcon
+Job 3
+
+Job 3
+Stats LV 	1 	90
+HP 	653 	5939
+ATK 	40 	363
+DEF 	47 	427
+MATK 	54 	491
+MDEF 	44 	400
+Skills LV 1 	
+Skill icon 24 Magic Attack +10%, Self
+[Equip: MATK +10%.]
+LV 30 	
+Skill icon 09 Ice Arrows, Ring, 30%
+[Chain: Inflict x1 ice and x0.5 bow damage.]
+LV 50 	
+Skill icon 09 Glacial Arrows, Area (1), 30%
+[Chain: Inflict x2 ice and x0.7 bow damage.]
+LV 90 	
+Skill icon 09 Negatemp Arrows, 30%
+[Pincer: Inflict x3.5 ice and x1.3 bow damage.]
+Add Job requirements
+
+    Coins 28,000 Coins
+    Ignorant Flea Ignorant Flea x15
+    Heartwood Bow Heartwood Bow x1
+    Evanescent Star Evanescent Star x50
+	
+ Arionne Adventurer
+Class 	Z
+Species 	Human
+Gender 	Female
+Artist 	Isamu Kamikokuryo
+  Availability
+
+    Pact of Truth
+    Pact of Fate (Energy)
+
+Witch of the West Arionne StaffIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	506 	4602
+ATK 	23 	209
+DEF 	30 	272
+MATK 	55 	504
+MDEF 	56 	509
+Skills LV 1 	
+Skill icon 98 Trance, Pincer Area (1), 50%
+[Chain: Inflict x1 non-elemental damage.]
+LV 30 	
+Skill icon 26 Magic Defense +10%, Self, 30%
+[Chain: MDEF +10% for 2 turns.]
+LV 50 	
+Skill icon 147 Lunacy Ward, Self
+[Equip: Confer immunity to lunacy.]
+LV 90 	
+Skill icon 01 Restorative Counter, Self, 50%
+[Counter: Heal with power 2 (cap 700).]
+Queen of the North Arionne StaffIcon
+Job 2
+
+Job 2
+Stats LV 	1 	90
+HP 	569 	5175
+ATK 	24 	218
+DEF 	33 	300
+MATK 	59 	541
+MDEF 	60 	545
+Skills LV 1 	
+Skill icon 26 Magic Defense +10%, Self
+[Equip: MDEF +10%.]
+LV 30 	
+Skill icon 98 Ultima, Pincer Area (1), 30%
+[Chain: Inflict x2 non-elemental damage.]
+LV 50 	
+Skill icon 147 Lunacy Relief, All, 100%
+[Chain: Frees allies from lunacy.]
+LV 90 	
+Skill icon 98 Transcendence, Pincer Area (1), 30%
+[Chain: Inflict x3 non-elemental damage.]
+Add Job requirements
+
+    Coins 14,000 Coins
+    Serenity Shoot Serenity Shoot x15
+    Terra Staffwood Terra Staffwood x15
+    Animaton Animaton x3
+
+Doctor Arionne StaffIcon
+Job 3
+
+Job 3
+Stats LV 	1 	90
+HP 	626 	5693
+ATK 	29 	263
+DEF 	36 	327
+MATK 	61 	554
+MDEF 	62 	563
+Skills LV 1 	
+Skill icon 24 Magic Attack +10%, Adjacent
+[Equip: MATK +10%.]
+LV 30 	
+Skill icon 68 Control Time +2 Sec, Self
+[Equip: Control time +2 sec.]
+LV 50 	
+Skill icon 98 Ultima, Pincer Area (1) + Row, 20%
+[Chain: Inflict x2 non-elemental damage.]
+LV 90 	
+Skill icon 98 X-Treme, Pincer Area (1), 30%
+[Chain: Inflict x3.5 non-elemental damage.]
+Add Job requirements
+
+    Coins 28,000 Coins
+    Wisdom Flower Wisdom Flower x15
+    Heartwood Wand Heartwood Wand x1
+    Evanescent Star Evanescent Star x50
+	
+ Ashe Adventurer
+Class 	Z
+Species 	Human
+Gender 	Male
+Artist 	Max Berthelot
+  Availability
+
+    Pact of Truth
+    Pact of Fate (Energy)
+
+Ashe the Guard SpearIconSkill icon 137
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	518 	4751
+ATK 	34 	309
+DEF 	36 	327
+MATK 	47 	427
+MDEF 	39 	354
+Skills LV 1 	
+Skill icon 137 Moonlight Strike, 80%
+[Pincer: Inflict x1 moon and x0.5 spear damage.]
+LV 30 	
+Skill icon 138 Anti-Solar Shield, Self
+[Equip: Reduce sun damage received by 40%.]
+LV 50 	
+Skill icon 116 Augment Magic, All, 3 charges
+[Tap: Allies' MATK +30% for 1 turn.]
+LV 90 	
+Skill icon 137 Moonlight Strike, 1 Column, 30%
+[Chain: Inflict x1 moon and x0.5 spear damage.]
+Ashe the Spearman SpearIconSkill icon 137
+Job 2
+
+Job 2
+Stats LV 	1 	90
+HP 	576 	5283
+ATK 	37 	336
+DEF 	39 	354
+MATK 	50 	454
+MDEF 	42 	381
+Skills LV 1 	
+Skill icon 24 Magic Attack +10%, Self
+[Equip: MATK +10%.]
+LV 30 	
+Skill icon 137 Luna Strike, 60%
+[Pincer: Inflict x2 moon and x0.7 spear damage.]
+LV 50 	
+Skill icon 121 Impair Magic, All, 3 charges
+[Tap: Enemies' MATK -10% for 1 turn.]
+LV 90 	
+Skill icon 137 Frigid Moon Strike, 40%
+[Pincer: Inflict x3 moon and x0.9 spear damage.]
+Add Job requirements
+
+    Coins 14,000 Coins
+    Serenity Shoot Serenity Shoot x15
+    Lunar Ring Lunar Ring x15
+    Dark Matter Dark Matter x3
+
+Pulsar Ashe SpearIconSkill icon 137
+Job 3
+
+Job 3
+Stats LV 	1 	90
+HP 	639 	5861
+ATK 	40 	363
+DEF 	42 	381
+MATK 	53 	482
+MDEF 	45 	409
+Skills LV 1 	
+Skill icon 68 Control Time +4 Sec, Self
+[Equip: Control time +4 sec.]
+LV 30 	
+Skill icon 145 Scorch Guard, Self
+[Equip: Resistance to scorch +50%.]
+LV 50 	
+Skill icon 137 Luna Strike, Cross (All), 30%
+[Chain: Inflict x2 moon and x0.7 spear damage.]
+LV 90 	
+Skill icon 137 Full Moon Strike, 30%
+[Pincer: Inflict x3.5 moon and x1.3 spear damage.]
+Add Job requirements
+
+    Coins 28,000 Coins
+    Wisdom Flower Wisdom Flower x15
+    Heartwood Spear Heartwood Spear x1
+    Binary Star Binary Star x50
+	
+ Ba'gunar Λ Adventurer
+Class 	S
+Species 	Lizardfolk
+Gender 	Male
+  Availability
+
+    Recode DNA
+
+Ba'gunar Λ SwordIconSkill icon 113
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	614 	5632
+ATK 	44 	401
+DEF 	34 	311
+MATK 	52 	474
+MDEF 	41 	376
+Skills LV 1 	
+Skill icon 113 Luxon Blade, 3 Rows, 30%
+[Chain: Inflict x2 photon and x0.7 sword damage.]
+LV 30 	
+Skill icon 126 Anti-Graviton Shield, Self
+[Equip: Reduce graviton damage received by 40%.]
+LV 50 	
+Skill icon 113 Tachyon Blade, 40%
+[Pincer: Inflict x3 photon and x0.9 sword damage.]
+LV 90 	
+Skill icon 113 Holy Blade, 30%
+[Pincer: Inflict x3.5 photon and x1.3 sword damage.]
+Recode DNA requirements
+
+    Ba'gunar icon Ba'gunar (LV 80 in all jobs)
+    Phaarz icon Phaarz (LV 50)
+    Mech Orbling icon Mech Orbling (LV 50)
+    Coins 20,000 Coins
+    Temporal Helix Temporal Helix x5
+    Black Hole Black Hole x1
+    Terra Swordsteel Terra Swordsteel x15
+
+Available from skill slots Job 1
+Skill icon 08 Thunder Blade, 80%
+[Pincer: Inflict x1 lightning and x0.5 sword damage.]
+Skill icon 57 Anti-Darkness Capsule, 30%
+[Chain: Create a Capsule Point that reduces darkness damage by 10% per capsule for all allies.]
+Skill icon 26 Magic Defense +10%, Self, 30%
+[Chain: MDEF +10% for 2 turns.]
+Skill icon 08 Lightning Blade, Cross (1), 30%
+[Chain: Inflict x2 lightning and x0.7 sword damage.]
+Job 2
+Skill icon 83 Outflank, Self
+[Equip: Deal 50% more damage to completely surrounded enemies (unstackable).]
+Skill icon 22 HP +10%, Self
+[Equip: HP +10%.]
+Skill icon 08 Lightning Blade, 60%
+[Pincer: Inflict x2 lightning and x0.7 sword damage.]
+Skill icon 13 Paralyzing Blade, Lateral (1), 30%
+[Pincer: Apply paralysis (80% chance) for 3 turns and inflict x1 sword damage.]
+Job 3
+Skill icon 24 Magic Attack +10%, Self
+[Equip: MATK +10%.]
+Skill icon 45 Anti-Darkness Shield, Self, 50%
+[Chain: Reduce darkness damage received by 40% for 3 turns.]
+Skill icon 51 Paralysis Guard, Self
+[Equip: Resistance to paralysis +50%.]
+Skill icon 08 Tempest Blade, 40%
+[Pincer: Inflict x3 lightning and x0.9 sword damage.]
+
+ Bajanna Adventurer
+Class 	SS
+Species 	Beastfolk
+Gender 	Female
+Artist 	Kimihiko Fujisaka
+  Availability
+
+    Pact of Truth
+    Pact of Fate (Energy)
+
+Bajanna the Medium SpearIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	447 	4100
+ATK 	39 	357
+DEF 	28 	256
+MATK 	24 	220
+MDEF 	24 	220
+Skills LV 1 	
+Skill icon 29 Megaspear, 50%
+[Pincer: Inflict x1 spear damage.]
+LV 15 	
+Skill icon 26 Magic Defense +10%, Self, 30%
+[Chain: Boost MDEF by 10% for 2 turns.]
+LV 35 	
+Skill icon 56 Death Ward, Equip
+[Passive: Immune to instant death.]
+LV 65 	
+Skill icon 29 Megaspear, Cross (2), 30%
+[Chain: Inflict x1 spear damage.]
+Bajanna the Spiritbinder SpearIcon
+Job 2
+
+Job 2
+Stats LV 	1 	90
+HP 	504 	4623
+ATK 	42 	385
+DEF 	31 	284
+MATK 	27 	247
+MDEF 	27 	247
+Skills LV 1 	
+Skill icon 03 Attack +10%, Self, 30%
+[Chain: Boost ATK by 10% for 2 turns.]
+LV 15 	
+Skill icon 26 Magic Defense +10%, Equip
+[Passive: Boost MDEF by 10%.]
+LV 35 	
+Skill icon 29 Gigaspear, 40%
+[Pincer: Inflict x2 spear damage.]
+LV 65 	
+Skill icon 47 Dispatch, Cross (1), 30%
+[Chain: Apply instant death with an 80% chance.]
+Add Job requirements
+
+    Coins 10,000 Coins
+    Claw of Fate Claw of Fate x15
+    Terra Spearbronze Terra Spearbronze x15
+    Dark Matter Dark Matter x3
+
+Bajanna the Supernaturalist SpearIcon
+Job 3
+
+Job 3
+Stats LV 	1 	90
+HP 	569 	5219
+ATK 	45 	412
+DEF 	34 	311
+MATK 	30 	275
+MDEF 	30 	275
+Skills LV 1 	
+Skill icon 69 Coin Bonus, Equip
+[Pincer: Increases coins earned based on combo modifier for 1 turn.]
+LV 15 	
+Skill icon 03 Attack +10%, Equip
+[Passive: Boost ATK by 10%.]
+LV 35 	
+Skill icon 29 Teraspear, 30%
+[Pincer: Inflict x3 spear damage.]
+LV 65 	
+Skill icon 31 Summon Bomb, 30%
+[Chain: Summon a bomb that explodes after 1 turn, dealing 30% of max HP as damage in its Area (1).]
+Add Job requirements
+
+    Coins 20,000 Coins
+    Pelt of Knowledge Pelt of Knowledge x15
+    Gungnir Gungnir
+    Orichalcum Orichalcum x3
+	
+ Burbaba Λ Adventurer
+Class 	SS
+Species 	Beastfolk
+Gender 	Male
+  Availability
+
+    Recode DNA
+
+Burbaba Λ SwordIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	748 	6861
+ATK 	48 	436
+DEF 	37 	336
+MATK 	28 	254
+MDEF 	30 	272
+Skills LV 1 	
+Skill icon 28 Terasword, 30%
+[Pincer: Inflict x3 sword damage.]
+LV 30 	
+Skill icon 50 Sleep Guard, Adjacent
+[Equip: Resistance to sleep +50%.]
+LV 50 	
+Skill icon 05 Mighty Counter, Area (2), 30%
+[Counter: Inflict x2.5 character-weapon damage.]
+LV 90 	
+Skill icon 28 Petasword, 30%
+[Pincer: Inflict x3.5 sword damage.]
+Recode DNA requirements
+
+    Burbaba icon Burbaba (LV 80 in all jobs)
+    8-Bit Orbling Λ icon 8-Bit Orbling Λ (LV 50)
+    Cybergolem icon Cybergolem (LV 50)
+    Coins 20,000 Coins
+    Temporal Helix Temporal Helix x5
+    Black Hole Black Hole x1
+    Terra Swordsteel Terra Swordsteel x15
+
+Available from skill slots Job 1
+Skill icon 04 Defense +10%, Self, 30%
+[Chain: DEF +10% for 2 turns.]
+Skill icon 28 Megasword, 50%
+[Pincer: Inflict x1 sword damage.]
+Skill icon 05 Defensive Counter, Self, 30%
+[Counter: DEF +10% for 2 turns.]
+Skill icon 81 Powered Point Amp, Self
+[Equip: Boost powered point charge by 20%.]
+Job 2
+Skill icon 05 Counterattack, 30%
+[Counter: Inflict x1.5 character-weapon damage.]
+Skill icon 50 Sleep Guard, Self
+[Equip: Resistance to sleep +50%.]
+Skill icon 29 Gigaspear, 40%
+[Pincer: Inflict x2 spear damage.]
+Skill icon 05 Offensive Counter, Self, 30%
+[Counter: ATK +10% for 2 turns.]
+Job 3
+Skill icon 22 HP +10%, Self
+[Equip: HP +10%.]
+Skill icon 30 Megabow, 50%
+[Pincer: Inflict x1 bow damage.]
+Skill icon 05 Counterattack, 35%
+[Counter: Inflict x1.5 character-weapon damage.]
+Skill icon 05 Defensive Counter, Self, 30%
+[Counter: DEF +20% for 2 turns.]
+
+ Calista Adventurer
+Class 	S
+Species 	Human
+Gender 	Female
+Artist 	Kimihiko Fujisaka
+  Availability
+
+    The Last Story (Alternate Fate, Perfect Fate)
+
+Calista the Heiress StaffIconRegen Icon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	317 	2907
+ATK 	22 	201
+DEF 	22 	201
+MATK 	34 	311
+MDEF 	29 	266
+Skills LV 1 	
+Skill icon 01 Mega Heal, Chain, 100%
+[Chain: Heal with power 2 (cap 700).]
+LV 15 	
+Skill icon 04 Defense +10%, Self, 30%
+[Chain: Boost DEF by 10% for 2 turns.]
+LV 35 	
+Skill icon 04 Defense +10%, Adjacent, Equip
+[Passive: Boost DEF by 10% for adjacent allies.]
+LV 65 	
+Skill icon 01 Restorative Counter, 50%
+[Counter: Heal self with power 2 (cap 700).]
+Calista the Countess StaffIconRegen Icon
+Job 2
+
+Job 2
+Stats LV 	1 	90
+HP 	379 	3476
+ATK 	25 	229
+DEF 	25 	229
+MATK 	37 	339
+MDEF 	32 	293
+Skills LV 1 	
+Skill icon 04 Defense +10%, Equip
+[Passive: Boost DEF by 10%.]
+LV 15 	
+Skill icon 51 Paralysis Ward, Equip
+[Passive: Immune to paralysis.]
+LV 35 	
+Skill icon 01 Giga Heal, Chain, 90%
+[Chain: Heal with power 2.5 (cap 1300).]
+LV 65 	
+Skill icon 04 Defense +10%, Chain, 30%
+[Chain: Boost DEF by 10% for 2 turns.]
+Add Job requirements
+
+    Coins 10,000 Coins
+    Serenity Shoot Serenity Shoot x15
+    White Ring White Ring x15
+    Animaton Animaton x3
+
+Calista the Regal SwordIcon
+Job 3
+
+Job 3
+Stats LV 	1 	90
+HP 	438 	4017
+ATK 	34 	311
+DEF 	28 	256
+MATK 	37 	339
+MDEF 	35 	321
+Skills LV 1 	
+Skill icon 28 Megasword, Lateral (2), 40%
+[Chain: Inflict x1 sword damage.]
+LV 15 	
+Skill icon 22 HP +10%, Equip
+[Passive: Boost HP by 10%.]
+LV 35 	
+Skill icon 28 Gigasword, Lateral (2), 30%
+[Chain: Inflict x2 sword damage.]
+LV 65 	
+Skill icon 80 Ancient Barrier, Area (1), 30%
+[Chain: Active for 2 turns. Erect a barrier that mitigates 20% of both physical and magical damage (unstackable).]
+Add Job requirements
+
+    Coins 20,000 Coins
+    Wisdom Flower Wisdom Flower x15
+    Terra Swordsteel Terra Swordsteel x15
+    Dark Matter Dark Matter x3
+	
+ Captive Golem Adventurer
+Class 	S
+Species 	Wild Beast
+Gender 	Unisex
+  Availability
+
+    The Captive Golem
+
+Captive Golem
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	481 	4412
+ATK 	37 	339
+DEF 	27 	247
+MATK 	28 	256
+MDEF 	20 	183
+Skills LV 1 	
+Skill icon 37 Megaboulder, 50%
+[Pincer: Inflict x1 character-weapon damage.]
+LV 15 	
+Skill icon 03 Attack +10%, Self, 30%
+[Chain: Boost ATK by 10% for 2 turns.]
+LV 35 	
+Skill icon 05 Counterattack, 30%
+[Counter: Inflict x1.5 character-weapon damage.]
+LV 65 	
+Skill icon 37 Gigaboulder, 40%
+[Pincer: Inflict x2 character-weapon damage.]
+Golem of Creation StaffIcon
+Job 2
+
+Job 2
+Stats LV 	1 	90
+HP 	542 	4972
+ATK 	40 	366
+DEF 	19 	174
+MATK 	34 	311
+MDEF 	32 	293
+Skills LV 1 	
+Skill icon 03 Attack +5%, Adjacent, Equip
+[Passive: Boost ATK by 5% for adjacent allies.]
+LV 15 	
+Skill icon 22 HP +10%, Equip
+[Passive: Boost HP by 10%.]
+LV 35 	
+Skill icon 37 Megaboulder, Area (1), 30%
+[Chain: Inflict x1 character-weapon damage.]
+LV 65 	
+Skill icon 05 Counterattack, 30%
+[Counter: Inflict x2 character-weapon damage.]
+Add Job requirements
+
+    Coins 10,000 Coins
+    Lustrous Tail Lustrous Tail x15
+    Terra Staffwood Terra Staffwood x15
+    Formless Clay Formless Clay x3
+
+Golem of Destruction StaffIcon
+Job 3
+
+Job 3
+Stats LV 	1 	90
+HP 	600 	5504
+ATK 	43 	394
+DEF 	22 	201
+MATK 	40 	366
+MDEF 	35 	321
+Skills LV 1 	
+Skill icon 03 Attack +10%, Equip
+[Passive: Boost ATK by 10%.]
+LV 15 	
+Skill icon 37 Gigaboulder, Cross (All), 30%
+[Chain: Inflict x2 character-weapon damage.]
+LV 35 	
+Skill icon 03 Attack +10%, Adjacent, Equip
+[Passive: Boost ATK by 10% for adjacent allies.]
+LV 65 	
+Skill icon 37 Teraboulder, 30%
+[Pincer: Inflict x3 character-weapon damage.]
+Add Job requirements
+
+    Coins 20,000 Coins
+    Ignorant Flea Ignorant Flea x15
+    Terra Staffwood Terra Staffwood x15
+    Parchment Parchment x3
+	
+ Chirol Adventurer
+Class 	Z
+Species 	Machine
+Gender 	Unisex
+  Availability
+
+    Limited-time Pact of Truth and Pact of Fate (Energy)
+
+Guardian Chirol StaffIconSkill icon 114
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	542 	4929
+ATK 	21 	190
+DEF 	27 	246
+MATK 	55 	500
+MDEF 	43 	392
+Skills LV 1 	
+Skill icon 114 Crush, Pincer Area (1), 50%
+[Chain: Inflict x1 graviton damage.]
+LV 30 	
+Skill icon 57 Anti-Photon Capsule, 30%
+[Chain: Create a Capsule Point that reduces photon damage by 10% per capsule for all allies.]
+LV 50 	
+Skill icon 114 Crushing Counter, Area (2), 50%
+[Counter: Inflict x1.5 graviton damage.]
+LV 90 	
+Skill icon 114 Gravity, Pincer Area (1), 30%
+[Chain: Inflict x2 graviton damage.]
+Guardian Chirol DNA StaffIconSkill icon 114
+Job 2
+
+Job 2
+Stats LV 	1 	90
+HP 	603 	5484
+ATK 	24 	218
+DEF 	30 	274
+MATK 	58 	527
+MDEF 	46 	420
+Skills LV 1 	
+Skill icon 125 Anti-Photon Shield, Self
+[Equip: Reduce photon damage received by 40%.]
+LV 30 	
+Skill icon 57 Metabolic Magic, Self
+[Equip: Move on Capsule Point to boost MATK +5% for 3 turns (+10% for capsule of own element).]
+LV 50 	
+Skill icon 114 Gravity, Pincer Area (1) + Row, 20%
+[Chain: Inflict x2 graviton damage.]
+LV 90 	
+Skill icon 69 Money Bags, Self
+[Equip: Increase coins acquired by 30%.]
+Add Job requirements
+
+    Coins 14,000 Coins
+    Spirit Tears Spirit Tears x3
+    Graviton Ring Graviton Ring x15
+    Dark Matter Dark Matter x3
+
+Guardian Chirol RNA StaffIconSkill icon 114
+Job 3
+
+Job 3
+Stats LV 	1 	90
+HP 	664 	6039
+ATK 	27 	245
+DEF 	33 	301
+MATK 	61 	554
+MDEF 	49 	447
+Skills LV 1 	
+Skill icon 26 Magic Defense +10%, Self
+[Equip: MDEF +10%.]
+LV 30 	
+Skill icon 114 Crush, Pincer Ring, 50%
+[Chain: Inflict x1 graviton damage.]
+LV 50 	
+Skill icon 114 Supergravity, Pincer Area (1), 30%
+[Chain: Inflict x3 graviton damage.]
+LV 90 	
+Skill icon 114 Axion, Pincer Area (1), 30%
+[Chain: Inflict x3.5 graviton damage.]
+Add Job requirements
+
+    Coins 28,000 Coins
+    Wish Particle Wish Particle x3
+    Heartwood Wand Heartwood Wand x1
+    Dark Star Dark Star x50
+	
+ Czekras Adventurer
+Class 	SS
+Species 	Human
+Gender 	Male
+Artist 	Kimihiko Fujisaka
+  Availability
+
+    Pact of Truth
+    Pact of Fate (Energy)
+
+Czekras the Preemptive SwordIconIceIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	443 	4063
+ATK 	31 	284
+DEF 	26 	238
+MATK 	38 	348
+MDEF 	32 	293
+Skills LV 1 	
+Skill icon 24 Magic Attack +10%, Self, 30%
+[Chain: Boost MATK by 10% for 2 turns.]
+LV 15 	
+Skill icon 09 Ice Blade, 80%
+[Pincer: Inflict x1 ice and x0.5 sword damage.]
+LV 35 	
+Skill icon 54 Petrification Guard, Equip
+[Passive: +50% resistance to petrification.]
+LV 65 	
+Skill icon 09 Glacial Blade, 1 Row, 30%
+[Chain: Inflict x2 ice and x0.7 sword damage.]
+Czekras the Swift SwordIconIceIcon
+Job 2
+
+Job 2
+Stats LV 	1 	90
+HP 	510 	4678
+ATK 	33 	302
+DEF 	31 	284
+MATK 	41 	376
+MDEF 	34 	311
+Skills LV 1 	
+Skill icon 24 Magic Attack +10%, Equip
+[Passive: Boost MATK by 10%.]
+LV 15 	
+Skill icon 42 Fire Damage Down 10%, Adjacent, Equip
+[Passive: Reduce fire damage by 10% for adjacent allies.]
+LV 35 	
+Skill icon 09 Glacial Blade, 60%
+[Pincer: Inflict x2 ice and x0.7 sword damage.]
+LV 65 	
+Skill icon 09 Absolute Zero Blade, 40%
+[Pincer: Inflict x3 ice and x0.9 sword damage.]
+Add Job requirements
+
+    Coins 10,000 Coins
+    Serenity Shoot Serenity Shoot x15
+    Terra Swordsteel Terra Swordsteel x15
+    Oxsecium Oxsecium x3
+
+Czekras the Striker SwordIconIceIcon
+Job 3
+
+Job 3
+Stats LV 	1 	90
+HP 	562 	5155
+ATK 	36 	330
+DEF 	34 	311
+MATK 	44 	403
+MDEF 	37 	339
+Skills LV 1 	
+Skill icon 42 Anti-Fire Shield, Equip
+[Passive: Reduce fire damage by 40%.]
+LV 15 	
+Skill icon 09 Ice Blade, Area (1), 30%
+[Chain: Inflict x1 ice and x0.5 sword damage.]
+LV 35 	
+Skill icon 42 Fire Damage Down 20%, Adjacent, Equip
+[Passive: Reduce fire damage by 20% for adjacent allies.]
+LV 65 	
+Skill icon 90 Add Action Turn, 30%
+[Pincer: Delay pincered units by 1 turn with an 80% chance.]
+Add Job requirements
+
+    Coins 20,000 Coins
+    Wisdom Flower Wisdom Flower x15
+    Gae Bolg Gae Bolg x1
+    Orichalcum Orichalcum x3
+	
+ Dahlia Adventurer
+Class 	Z
+Species 	Human
+Gender 	Female
+Artist 	Yoshitomo Ikawa
+  Availability
+
+    Pact of Truth
+    Pact of Fate (Energy)
+
+Dahlia the Impish SwordIconSkill icon 137
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	521 	4738
+ATK 	32 	293
+DEF 	34 	309
+MATK 	49 	445
+MDEF 	40 	363
+Skills LV 1 	
+Skill icon 137 Moonlight Blade, 80%
+[Pincer: Inflict x1 moon and x0.5 sword damage.]
+LV 30 	
+Skill icon 24 Magic Attack +10%, Self
+[Equip: MATK +10%.]
+LV 50 	
+Skill icon 123 Impair Magic Defense, All, 3 charges
+[Tap: Enemies' MDEF -10% for 1 turn.]
+LV 90 	
+Skill icon 137 Luna Blade, 60%
+[Pincer: Inflict x2 moon and x0.7 sword damage.]
+Dahlia the Moonlit StaffIconSkill icon 137
+Job 2
+
+Job 2
+Stats LV 	1 	90
+HP 	583 	5302
+ATK 	35 	321
+DEF 	37 	336
+MATK 	52 	472
+MDEF 	43 	391
+Skills LV 1 	
+Skill icon 26 Magic Defense +10%, Self
+[Equip: MDEF +10%.]
+LV 30 	
+Skill icon 137 Moonlight, Area (1), 30%
+[Chain: Inflict x1 moon damage.]
+LV 50 	
+Skill icon 137 Moonlight Counter, Cross (1), 50%
+[Counter: Inflict x1.5 moon damage.]
+LV 90 	
+Skill icon 102 Magic Bomb, 30%
+[Chain: Create a magic bomb dealing diamond moon damage of power 3.]
+Add Job requirements
+
+    Coins 14,000 Coins
+    Serenity Shoot Serenity Shoot x15
+    Lunar Ring Lunar Ring x15
+    Oxsecium Oxsecium x3
+
+Vamp Dahlia SwordIconSkill icon 137
+Job 3
+
+Job 3
+Stats LV 	1 	90
+HP 	644 	5857
+ATK 	38 	348
+DEF 	40 	363
+MATK 	55 	500
+MDEF 	46 	418
+Skills LV 1 	
+Skill icon 138 Anti-Solar Shield, Self
+[Equip: Reduce sun damage received by 40%.]
+LV 30 	
+Skill icon 89 Status Guard, Self
+[Equip: Resistance to poison, sleep, paralysis, confusion, demoralization, and petrification status effects +50%.]
+LV 50 	
+Skill icon 137 Luna Blade, 1 Row, 30%
+[Chain: Inflict x2 moon and x0.7 sword damage.]
+LV 90 	
+Skill icon 137 Frigid Moon Blade, 40%
+[Pincer: Inflict x3 moon and x0.9 sword damage.]
+Add Job requirements
+
+    Coins 28,000 Coins
+    Wisdom Flower Wisdom Flower x15
+    Heartwood Sword Heartwood Sword x1
+    Dark Star Dark Star x50
+	
+ Daiana Λ Adventurer
+Class 	SS
+Species 	Stonefolk
+Gender 	Female
+Artist 	Yoshitomo Ikawa
+  Availability
+
+    Recode DNA
+
+Daiana Λ StaffIconFireIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	601 	5513
+ATK 	31 	286
+DEF 	29 	266
+MATK 	51 	467
+MDEF 	54 	495
+Skills LV 1 	
+Skill icon 07 Inferno, Pincer Area (1) + Row, 20%
+[Chain: Inflict x2 fire damage.]
+LV 30 	
+Skill icon 24 Magic Attack +10%, Self
+[Equip: MATK +10%.]
+LV 50 	
+Skill icon 133 Twister Ward, Self
+[Equip: Invulnerable to twisters.]
+LV 90 	
+Skill icon 07 Big Bang, Pincer Area (1), 30%
+[Chain: Inflict x3.5 fire damage.]
+Recode DNA requirements
+
+    Daiana icon Daiana (LV 80 in all jobs)
+    Tiamat Kino Λ icon Tiamat Kino Λ (LV 50)
+    Pyrowisp icon Pyrowisp (LV 50)
+    Coins 20,000 Coins
+    Temporal Helix Temporal Helix x5
+    Ether Ether x1
+    Fire Ring Fire Ring x15
+
+Available from skill slots Job 1
+Skill icon 07 Fire, Pincer Area (1), 50%
+[Chain: Inflict x1 fire damage.]
+Skill icon 26 Magic Defense +10%, Self, 30%
+[Chain: Boost MDEF by 10% for 2 turns.]
+Skill icon 57 Anti-Ice Capsule, Chain, 30%
+[Chain: Create a capsule point that reduces ice damage by 10% per capsule for all allies.]
+Skill icon 37 Mantle Chunk, Cross (1), 30%
+[Chain: Inflict x1.5 fire damage.]
+Job 2
+Skill icon 30 Megabow, 50%
+[Pincer: Inflict x1 bow damage.]
+Skill icon 03 Attack +10%, Equip
+[Passive: Boost ATK by 10%.]
+Skill icon 54 Petrification Guard, Equip
+[Passive: +50% resistance to petrification.]
+Skill icon 30 Gigabow, Area (1), 30%
+[Chain: Inflict x2 bow damage.]
+Job 3
+Skill icon 43 Anti-Ice Shield, Equip
+[Passive: Reduce ice damage by 40%.]
+Skill icon 07 Inferno, Pincer Area (1), 30%
+[Chain: Inflict x2 fire damage.]
+Skill icon 07 Blazing Counter, 30%
+[Counter: Inflict x1.5 fire damage.]
+Skill icon 07 Solar Wind, Pincer Area (1), 30%
+[Chain: Inflict x3 fire damage.]
+
+ Djagos Adventurer
+Class 	Z
+Species 	Human
+Gender 	Female
+  Availability
+
+    Limited-time Pact of Truth and Pact of Fate (Energy)
+
+Guardian Djagos StaffIconFireIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	522 	4747
+ATK 	21 	190
+DEF 	24 	218
+MATK 	52 	472
+MDEF 	47 	427
+Skills LV 1 	
+Skill icon 07 Fire, Pincer Area (1), 50%
+[Chain: Inflict x1 fire damage.]
+LV 30 	
+Skill icon 57 Anti-Ice Capsule, 30%
+[Chain: Create a Capsule Point that reduces ice damage by 10% per capsule for all allies.]
+LV 50 	
+Skill icon 01 Mega Heal, Self, 30%
+[Chain: Heal with power 2 (cap 700).]
+LV 90 	
+Skill icon 86 Negotiator, 30%
+[Chain: Increases rate of recruiting pincered, defeated monsters by 200% for 1 turn.]
+Guardian Djagos DNA StaffIconFireIcon
+Job 2
+
+Job 2
+Stats LV 	1 	90
+HP 	581 	5284
+ATK 	24 	218
+DEF 	27 	245
+MATK 	55 	500
+MDEF 	50 	454
+Skills LV 1 	
+Skill icon 43 Anti-Ice Shield, Self
+[Equip: Reduce ice damage received by 40%.]
+LV 30 	
+Skill icon 22 HP +20%, Self
+[Equip: HP +20%.]
+LV 50 	
+Skill icon 07 Fire, Pincer Ring, 50%
+[Chain: Inflict x1 fire damage.]
+LV 90 	
+Skill icon 07 Solar Wind, Pincer Area (1), 30%
+[Chain: Inflict x3 fire damage.]
+Add Job requirements
+
+    Coins 14,000 Coins
+    Serenity Shoot Serenity Shoot x15
+    Fire Ring Fire Ring x15
+    Oxsecium Oxsecium x3
+
+Guardian Djagos RNA StaffIconFireIcon
+Job 3
+
+Job 3
+Stats LV 	1 	90
+HP 	641 	5829
+ATK 	27 	245
+DEF 	30 	272
+MATK 	58 	527
+MDEF 	53 	482
+Skills LV 1 	
+Skill icon 24 Magic Attack +10%, Self
+[Equip: MATK +10%.]
+LV 30 	
+Skill icon 07 Inferno, Pincer Area (1), 30%
+[Chain: Inflict x2 fire damage.]
+LV 50 	
+Skill icon 102 Magic Bomb, 30%
+[Chain: Create a magic bomb dealing diamond fire damage of power 3.]
+LV 90 	
+Skill icon 07 Big Bang, Pincer Area (1), 30%
+[Chain: Inflict x3.5 fire damage.]
+Add Job requirements
+
+    Coins 28,000 Coins
+    Wisdom Flower Wisdom Flower x15
+    Heartwood Wand Heartwood Wand x1
+    Shooting Star Shooting Star x50
+	
+ Dracorin Λ Adventurer
+Class 	S
+Species 	Wild Beast
+Gender 	Unisex
+  Availability
+
+    Recode DNA
+
+Dracorin Λ BowIconLightningIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	472 	4292
+ATK 	35 	318
+DEF 	33 	300
+MATK 	39 	354
+MDEF 	30 	272
+Skills LV 1 	
+Skill icon 26 Magic Defense +10%, Self
+[Equip: MDEF +10%.]
+LV 30 	
+Skill icon 08 Lightning Arrows, Area (1), 30%
+[Chain: Inflict x2 lightning and x0.7 bow damage.]
+LV 50 	
+Skill icon 92 Cryptid Ruler, Self
+[Equip: Chance to encounter an extra Lucky Orbling in the Cryptid Forest.]
+LV 90 	
+Skill icon 08 Tempest Arrows, 40%
+[Pincer: Inflict x3 lightning and x0.9 bow damage.]
+Recode DNA requirements
+
+    Dracorin icon Dracorin (LV 80 in all jobs)
+    Golem icon Golem (LV 50)
+    Mechaclops icon Mechaclops (LV 50)
+    Coins 20,000 Coins
+    Deepwater Helix Deepwater Helix x1
+    White Hole White Hole x1
+    Terra Bowstring Terra Bowstring x5
+
+Available from skill slots Job 1
+Skill icon 08 Thunder Arrows, 80%
+[Pincer: Inflict x1 lightning and x0.5 bow damage.]
+Job 2
+Skill icon 08 Thunder, Pincer Area (1), 30%
+[Chain: Inflict x1 lightning damage.]
+Skill icon 13 Paralyze, Area (1), 100%
+[Chain: Apply paralysis (75% chance) for 2 turns.]
+Skill icon 45 Anti-Darkness Shield, Self, 50%
+[Chain: Reduce darkness damage received by 40% for 3 turns.]
+Skill icon 32 Levitation, Self
+[Equip: Levitation.]
+Job 3
+Skill icon 08 Lightning Arrows, 60%
+[Pincer: Inflict x2 lightning and x0.7 bow damage.]
+Skill icon 21 Confuse, Area (1), 100%
+[Chain: Apply confusion (75% chance) for 2 turns.]
+Skill icon 22 HP +5%, Self
+[Equip: HP +5%.]
+Skill icon 08 Thunder, 3 Rows, 30%
+[Chain: Inflict x1 lightning damage.]
+
+ Edg'low Adventurer
+Class 	Z
+Species 	Lizardfolk
+Gender 	Male
+Artist 	Takatoshi Goto
+  Availability
+
+    Pact of Truth
+    Pact of Fate (Energy)
+
+Edg'low the Afflicted StaffIconSkill icon 113
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	579 	5311
+ATK 	28 	254
+DEF 	27 	245
+MATK 	47 	427
+MDEF 	34 	309
+Skills LV 1 	
+Skill icon 113 Radiance, Pincer Area (1), 50%
+[Chain: Inflict x1 photon damage.]
+LV 30 	
+Skill icon 126 Anti-Graviton Shield, Self
+[Equip: Reduce graviton damage received by 40%.]
+LV 50 	
+Skill icon 113 Luxon, Pincer Area (1), 30%
+[Chain: Inflict x2 photon damage.]
+LV 80 	
+Skill icon 113 Tachyon, 30%
+[Chain: Inflict x3 photon damage.]
+Edg'low the Medical Miracle StaffIconSkill icon 114
+Job 2
+
+Job 2
+Stats LV 	1 	90
+HP 	638 	5852
+ATK 	31 	281
+DEF 	30 	272
+MATK 	50 	454
+MDEF 	37 	336
+Skills LV 1 	
+Skill icon 114 Crush, Pincer Area (1), 50%
+[Chain: Inflict x1 graviton damage.]
+LV 30 	
+Skill icon 125 Anti-Photon Shield, Self
+[Equip: Reduce photon damage received by 40%.]
+LV 50 	
+Skill icon 114 Gravity, Pincer Area (1), 30%
+[Chain: Inflict x2 graviton damage.]
+LV 80 	
+Skill icon 114 Supergravity, 30%
+[Chain: Inflict x3 graviton damage.]
+Add Job requirements
+
+    Coins 14,000 Coins
+    Benevolent Fang Benevolent Fang x15
+    Graviton Ring Graviton Ring x15
+    Dark Matter Dark Matter x3
+
+Edg'low the Medical Marvel
+Job 3
+
+Job 3
+Stats LV 	1 	90
+HP 	697 	6393
+ATK 	40 	363
+DEF 	33 	300
+MATK 	53 	482
+MDEF 	38 	345
+Skills LV 1 	
+Skill icon 26 Magic Defense +10%, Self
+[Equip: MDEF +10%.]
+LV 30 	
+Skill icon 03 Attack +10%, Self
+[Equip: ATK +10%.]
+LV 50 	
+Skill icon 100 Synergy Wave, 1 Column, 30%
+[Chain: Inflict x2 character-weapon damage.]
+LV 80 	
+Skill icon 124 Impair All, All, 3 charges
+[Tap: Enemies' ATK/MATK/DEF/MDEF -10% for 1 turn.]
+Add Job requirements
+
+    Coins 28,000 Coins
+    Tail of Insight Tail of Insight x15
+    Heartwood Wand Heartwood Wand x1
+    Binary Star Binary Star x50
+	
+ Eileen Λ Adventurer
+Class 	SS
+Species 	Human
+Gender 	Female
+Artist 	Kimihiko Fujisaka
+  Availability
+
+    Recode DNA
+
+Eileen Λ StaffIconRemedy icon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	631 	5888
+ATK 	31 	284
+DEF 	30 	275
+MATK 	43 	394
+MDEF 	43 	394
+Skills LV 1 	
+Skill icon 68 Control Time +2 Sec, Self
+[Equip: Control time +2 sec.]
+LV 30 	
+Skill icon 12 Sandman's Lullaby, Area (2), 100%
+[Chain: Apply deep sleep (30% chance) for 3 turns.]
+LV 50 	
+Skill icon 131 Time Trap Ward, Self
+[Equip: Invulnerable to time traps.]
+LV 90 	
+Skill icon 01 Extended Regen, Chain, 30%
+[Chain: Gradually restores HP with power 1.5 (cap 300) for 5 turns.]
+Recode DNA requirements
+
+    Eileen icon Eileen (LV 80 in all jobs)
+    Spinetrich Kino Λ icon Spinetrich Kino Λ (LV 50)
+    Mechavirus 3721 icon Mechavirus 3721 (LV 50)
+    Coins 20,000 Coins
+    Temporal Helix Temporal Helix x5
+    Elixir Elixir x1
+    Green Ring Green Ring x15
+
+Available from skill slots Job 1
+Skill icon 12 Lullaby, Area (2), 100%
+[Chain: Apply sleep for 3 turns with a 30% chance.]
+Skill icon 50 Rise and Shine, All, 100%
+[Chain: Cure all allies of sleep.]
+Skill icon 50 Sleep Ward, Equip
+[Passive: Immune to sleep.]
+Skill icon 01 Regen, Equip
+[Passive: Regen with power 1.]
+Job 2
+Skill icon 32 Levitation, All, 100%
+[Chain: All allies evade ground attacks and floor traps for 3 turns.]
+Skill icon 32 Levitation, Equip
+[Passive: Evade ground attacks and floor traps.]
+Skill icon 04 Defense +10%, Equip
+[Passive: Boost DEF by 10%.]
+Skill icon 01 Healing Dance, Area (2), 30%
+[Chain: Heal with power 2 (cap 700).]
+Job 3
+Skill icon 26 Magic Defense +10%, Equip
+[Passive: Boost MDEF by 10%.]
+Skill icon 01 Giga Regen, Chain, 90%
+[Chain: Applies Regen with power 2 (cap 600) for 3 turns.]
+Skill icon 22 HP +20%, Equip
+[Passive: Boost HP by 20%.]
+Skill icon 89 Panacea, Area (2), 100%
+[Chain: Cure allies of sleep, poison, paralysis, confusion, demoralization, petrification, icebind, and shadowbind status effects.]
+
+ngi Adventurer
+Class 	Z
+Species 	Wild Beast
+Gender 	Male
+  Availability
+
+    Pact of Truth
+    Pact of Fate (Energy)
+
+Engi the Rockgunner BowIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	557 	5044
+ATK 	47 	427
+DEF 	43 	391
+MATK 	25 	227
+MDEF 	26 	236
+Skills LV 1 	
+Skill icon 30 Megabow, 50%
+[Pincer: Inflict x1 bow damage.]
+LV 30 	
+Skill icon 83 Outflank, Self
+[Equip: Deal 50% more damage to completely surrounded enemies (unstackable).]
+LV 50 	
+Skill icon 05 Counterattack, 30%
+[Counter: Inflict x1.5 character-weapon damage.]
+LV 90 	
+Skill icon 30 Rock Cannon, Area (1), 30%
+[Chain: Inflict x1.5 bow damage.]
+Engi the Ballista BowIcon
+Job 2
+
+Job 2
+Stats LV 	1 	90
+HP 	612 	5542
+ATK 	50 	454
+DEF 	46 	418
+MATK 	27 	245
+MDEF 	29 	263
+Skills LV 1 	
+Skill icon 30 Gigabow, 40%
+[Pincer: Inflict x2 bow damage.]
+LV 30 	
+Skill icon 03 Attack +10%, Self, 30%
+[Chain: ATK +10% for 2 turns.]
+LV 50 	
+Skill icon 132 Kinetic Trap Ward, Self
+[Equip: Invulnerable to kinetic traps.]
+LV 90 	
+Skill icon 30 Terabow, 30%
+[Pincer: Inflict x3 bow damage.]
+Add Job requirements
+
+    Coins 14,000 Coins
+    Lustrous Tail Lustrous Tail x15
+    Terra Bowstring Terra Bowstring x15
+    Oxsecium Oxsecium x3
+
+Engi the Cannon BowIcon
+Job 3
+
+Job 3
+Stats LV 	1 	90
+HP 	674 	6130
+ATK 	53 	479
+DEF 	49 	445
+MATK 	30 	272
+MDEF 	32 	291
+Skills LV 1 	
+Skill icon 03 Attack +10%, Self
+[Equip: ATK +10%.]
+LV 30 	
+Skill icon 05 Counterattack, 30%
+[Counter: Inflict x2 character-weapon damage.]
+LV 50 	
+Skill icon 30 Rock Cannon, Ring, 30%
+[Chain: Inflict x1.5 bow damage.]
+LV 90 	
+Skill icon 30 Petabow, 30%
+[Pincer: Inflict x3.5 bow damage.]
+Add Job requirements
+
+    Coins 28,000 Coins
+    Ignorant Flea Ignorant Flea x15
+    Heartwood Bow Heartwood Bow x1
+    Dark Star Dark Star x50
+	
+ Gaiga Adventurer
+Class 	SS
+Species 	Beastfolk
+Gender 	Female
+Artist 	Kimihiko Fujisaka
+  Availability
+
+    Pact of Truth
+    Pact of Fate (Energy)
+
+Gaiga the Alluring BowIconDarkIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	412 	3763
+ATK 	30 	275
+DEF 	27 	247
+MATK 	38 	348
+MDEF 	31 	284
+Skills LV 1 	
+Skill icon 10 Shadow Arrows, 80%
+[Pincer: Inflict x1 darkness and x0.5 bow damage.]
+LV 15 	
+Skill icon 24 Magic Attack +10%, Self, 30%
+[Chain: Boost MATK by 10% for 2 turns.]
+LV 35 	
+Skill icon 44 Anti-Lightning Shield, Equip
+[Passive: Reduce lightning damage by 40%.]
+LV 65 	
+Skill icon 05 Counterattack, 30%
+[Counter: Inflict x1.5 character-weapon damage.]
+Gaiga the Bewitching BowIconDarkIcon
+Job 2
+
+Job 2
+Stats LV 	1 	90
+HP 	473 	4320
+ATK 	33 	302
+DEF 	35 	321
+MATK 	37 	339
+MDEF 	30 	275
+Skills LV 1 	
+Skill icon 44 Bolt Damage Down 10%, Adjacent, Equip
+[Passive: Reduce lightning damage by 10% for adjacent allies.]
+LV 15 	
+Skill icon 56 Death Ward, Equip
+[Passive: Immune to instant death.]
+LV 35 	
+Skill icon 10 Abyss Arrows, 60%
+[Pincer: Inflict x2 darkness and x0.7 bow damage.]
+LV 65 	
+Skill icon 10 Dark Matter Arrows, 40%
+[Pincer: Inflict x3 darkness and x0.9 bow damage.]
+Add Job requirements
+
+    Coins 10,000 Coins
+    Claw of Fate Claw of Fate x15
+    Dark Ring Dark Ring x15
+    Dark Matter Dark Matter x3
+
+Gaiga the Temptress BowIconDarkIcon
+Job 3
+
+Job 3
+Stats LV 	1 	90
+HP 	539 	4923
+ATK 	36 	330
+DEF 	38 	348
+MATK 	40 	366
+MDEF 	33 	302
+Skills LV 1 	
+Skill icon 24 Magic Attack +10%, Equip
+[Passive: Boost MATK by 10%.]
+LV 15 	
+Skill icon 44 Bolt Damage Down 20%, Adjacent, Equip
+[Passive: Reduce lightning damage by 20% for adjacent allies.]
+LV 35 	
+Skill icon 56 Death Ward, Chain, 100%
+[Chain: Grant chained allies immunity to instant death for 6 turns.]
+LV 65 	
+Skill icon 47 Death, 15%
+[Chain: Apply instant death with an 80% chance.]
+Add Job requirements
+
+    Coins 20,000 Coins
+    Pelt of Knowledge Pelt of Knowledge x15
+    Apollo Apollo x1
+    Oxsecium Oxsecium x3
+	
+ Grace Λ Adventurer
+Class 	S
+Species 	Human
+Gender 	Female
+Artist 	Kimihiko Fujisaka
+  Availability
+
+    Recode DNA
+
+Grace Λ BowIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	574 	5220
+ATK 	48 	436
+DEF 	35 	318
+MATK 	30 	272
+MDEF 	32 	291
+Skills LV 1 	
+Skill icon 30 Gigabow, Area (1), 30%
+[Chain: Inflict x2 bow damage.]
+LV 30 	
+Skill icon 68 Control Time +2 Sec, Self
+[Equip: Control time +2 sec.]
+LV 50 	
+Skill icon 30 Gigabow, Ring, 30%
+[Chain: Inflict x2 bow damage.]
+LV 90 	
+Skill icon 30 Petabow, 30%
+[Pincer: Inflict x3.5 bow damage.]
+Recode DNA requirements
+
+    Grace icon Grace (LV 80 in all jobs)
+    Fortified Oxsecian Bulwark icon Fortified Oxsecian Bulwark (LV 50)
+    Devil Bat icon Devil Bat (LV 50)
+    Coins 20,000 Coins
+    Temporal Helix Temporal Helix x5
+    Wormhole Wormhole x1
+    Terra Bowstring Terra Bowstring x15
+
+Available from skill slots Job 1
+Skill icon 30 Megabow, 50%
+[Pincer: Inflict x1 bow damage.]
+Skill icon 03 Attack +10%, Self, 30%
+[Chain: ATK +10% for 2 turns.]
+Skill icon 20 Defense -10%, Wild Beast, 30%
+[Chain: DEF -10% for 2 turns.]
+Skill icon 11 Poison Arrows, Area (1), 30%
+[Chain: Apply poison power 1 (100% chance) for 3 turns and inflict x1 bow damage.]
+Job 2
+Skill icon 04 Defense +10%, Self, 30%
+[Chain: DEF +10% for 2 turns.]
+Skill icon 30 Megabow, Area (1), 30%
+[Chain: Inflict x1 bow damage.]
+Skill icon 22 HP +10%, Self
+[Equip: HP +10%.]
+Skill icon 30 Terabow, 30%
+[Pincer: Inflict x3 bow damage.]
+Job 3
+Skill icon 03 Attack +10%, Self
+[Equip: ATK +10%.]
+Skill icon 04 Defense +10%, Self
+[Equip: DEF +10%.]
+Skill icon 30 Gigabow, 40%
+[Pincer: Inflict x2 bow damage.]
+Skill icon 20 Defense -20%, Dragon, 30%
+[Chain: DEF -20% for 2 turns.]
+
+ Gugba Adventurer
+Class 	SS
+Species 	Beastfolk
+Gender 	Male
+Artist 	Kimihiko Fujisaka
+  Availability
+
+    Pact of Truth
+    Pact of Fate (Energy)
+
+Gugba the Hefty SwordIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	531 	4871
+ATK 	41 	376
+DEF 	29 	266
+MATK 	19 	174
+MDEF 	17 	155
+Skills LV 1 	
+Skill icon 31 Disarm Bomb, Equip
+[Passive: Moving over bombs removes them without exploding.]
+LV 15 	
+Skill icon 28 Megasword, 50%
+[Pincer: Inflict x1 sword damage.]
+LV 35 	
+Skill icon 31 Build Bomb, Equip
+[Passive: Moving creates 3 trailing bombs that deal 10% of max HP as damage (cap 500).]
+LV 65 	
+Skill icon 37 Avalanche, Area (1), 30%
+[Chain: Inflict x1.5 character-weapon damage.]
+Gugba the Corpulent SwordIcon
+Job 2
+
+Job 2
+Stats LV 	1 	90
+HP 	593 	5439
+ATK 	44 	403
+DEF 	32 	293
+MATK 	22 	201
+MDEF 	20 	183
+Skills LV 1 	
+Skill icon 03 Attack +10%, Self, 30%
+[Chain: Boost ATK by 10% for 2 turns.]
+LV 15 	
+Skill icon 04 Defense +10%, Equip
+[Passive: Boost DEF by 10%.]
+LV 35 	
+Skill icon 28 Gigasword, 40%
+[Pincer: Inflict x2 sword damage.]
+LV 65 	
+Skill icon 81 Powered Point Amp, Equip
+[Passive: Charge power points 20% faster.]
+Add Job requirements
+
+    Coins 10,000 Coins
+    Claw of Fate Claw of Fate x15
+    Terra Swordsteel Terra Swordsteel x15
+    Dark Matter Dark Matter x3
+
+Gugba the Earthshaker SwordIcon
+Job 3
+
+Job 3
+Stats LV 	1 	90
+HP 	653 	5990
+ATK 	47 	431
+DEF 	35 	321
+MATK 	25 	229
+MDEF 	23 	210
+Skills LV 1 	
+Skill icon 83 Outflank, Equip
+[Passive: Deal 50% more damage to completely surrounded enemies (unstackable).]
+LV 15 	
+Skill icon 03 Attack +10%, Equip
+[Passive: Boost ATK by 10%.]
+LV 35 	
+Skill icon 28 Terasword, 30%
+[Pincer: Inflict x3 sword damage.]
+LV 65 	
+Skill icon 34 Tremor, All, 10%
+[Chain: Inflict x0.25 character-weapon damage 4 times to all non-levitating enemies.]
+Add Job requirements
+
+    Coins 20,000 Coins
+    Pelt of Knowledge Pelt of Knowledge x15
+    Excalibur Excalibur
+    Animaton Animaton x3
+	
+ Haggo Adventurer
+Class 	Z
+Species 	Beastfolk
+Gender 	Male
+  Availability
+
+    Pact of Truth
+    Pact of Fate (Energy)
+
+Haggo the Attentive StaffIconSkill icon 114
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	536 	4874
+ATK 	24 	220
+DEF 	28 	254
+MATK 	50 	454
+MDEF 	45 	409
+Skills LV 1 	
+Skill icon 114 Crush Blast, Pincer Area (1), 50%
+[Chain: Inflict x1 graviton damage.]
+LV 30 	
+Skill icon 24 Magic Attack +10%, Self
+[Equip: MATK +10%.]
+LV 50 	
+Skill icon 125 Anti-Photon Shield, Self
+[Equip: Reduce photon damage received by 40%.]
+LV 90 	
+Skill icon 123 Impair Magic Defense, All, 3 charges
+[Tap: Enemies' MDEF -10% for 1 turn.]
+Haggo the Conjurer StaffIconSkill icon 114
+Job 2
+
+Job 2
+Stats LV 	1 	90
+HP 	595 	5411
+ATK 	27 	247
+DEF 	31 	281
+MATK 	53 	482
+MDEF 	48 	436
+Skills LV 1 	
+Skill icon 114 Gravity Blast, Pincer Area (1), 30%
+[Chain: Inflict x2 graviton damage.]
+LV 30 	
+Skill icon 22 HP +10%, Self
+[Equip: HP +10%.]
+LV 50 	
+Skill icon 69 Pickpocket, Area (1), 30%
+[Chain: Steal 15% coins from target with a 30% chance.]
+LV 90 	
+Skill icon 114 Supergravity Blast, Pincer Area (1), 30%
+[Chain: Inflict x3 graviton damage.]
+Add Job requirements
+
+    Coins 14,000 Coins
+    Claw of Fate Claw of Fate x15
+    Graviton Ring Graviton Ring x15
+    Dark Matter Dark Matter x3
+
+Haggo the Illusionist StaffIconSkill icon 114
+Job 3
+
+Job 3
+Stats LV 	1 	90
+HP 	654 	5948
+ATK 	30 	275
+DEF 	34 	309
+MATK 	56 	509
+MDEF 	51 	463
+Skills LV 1 	
+Skill icon 59 Shadowbind, Area (1), 30%
+[Chain: Apply shadowbind (75% chance) for 3 turns.]
+LV 30 	
+Skill icon 114 Crush Blast, Pincer Area (1) + Column, 50%
+[Chain: Inflict x1 graviton damage.]
+LV 50 	
+Skill icon 60 Life Drain, Area (1), 30%
+[Chain: Inflict x1 absorb damage (cap 700).]
+LV 90 	
+Skill icon 114 Axion Blast, Pincer Area (1), 30%
+[Chain: Inflict x3.5 graviton damage.]
+Add Job requirements
+
+    Coins 28,000 Coins
+    Pelt of Knowledge Pelt of Knowledge x15
+    Heartwood Wand Heartwood Wand x1
+    Dark Star Dark Star x50
+
+ Hakann Adventurer
+Class 	Z
+Species 	Lizardfolk
+Gender 	Male
+Artist 	Mizufune Tomoyuki
+  Availability
+
+    Pact of Truth
+    Pact of Fate (Energy)
+
+Hakann the Teacher BowIconSkill icon 136
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	572 	5202
+ATK 	40 	363
+DEF 	40 	363
+MATK 	41 	376
+MDEF 	33 	300
+Skills LV 1 	
+Skill icon 136 Sunlight & Arrows, 80%
+[Pincer: Inflict x0.8 sun and x0.8 bow damage.]
+LV 30 	
+Skill icon 139 Anti-Lunar Shield, Self
+[Equip: Reduce moon damage received by 40%.]
+LV 50 	
+Skill icon 136 Sunlight Counter, Cross (1), 50%
+[Counter: Inflict x1.5 sun damage.]
+LV 90 	
+Skill icon 136 Sunlight & Arrows, Area (1), 30%
+[Chain: Inflict x0.8 sun and x0.8 bow damage.]
+Hakann the Coach BowIconSkill icon 136
+Job 2
+
+Job 2
+Stats LV 	1 	90
+HP 	632 	5748
+ATK 	43 	391
+DEF 	43 	391
+MATK 	44 	403
+MDEF 	36 	327
+Skills LV 1 	
+Skill icon 24 Magic Attack +10%, Self
+[Equip: MATK +10%.]
+LV 30 	
+Skill icon 136 Corona & Arrows, 60%
+[Pincer: Inflict x1.6 sun and x1.6 bow damage.]
+LV 50 	
+Skill icon 139 Lunar Dmg Down 20%, Adjacent
+[Equip: Reduce moon damage received by 20%.]
+LV 90 	
+Skill icon 05 Mighty Counter, Area (1), 50%
+[Counter: Inflict x2.5 character-weapon damage.]
+Add Job requirements
+
+    Coins 14,000 Coins
+    Benevolent Fang Benevolent Fang x15
+    Solar Ring Solar Ring x15
+    Orichalcum Orichalcum x3
+
+Solar Hakann BowIconSkill icon 136
+Job 3
+
+Job 3
+Stats LV 	1 	90
+HP 	696 	6330
+ATK 	46 	418
+DEF 	46 	418
+MATK 	47 	431
+MDEF 	39 	354
+Skills LV 1 	
+Skill icon 68 Control Time +4 Sec, Self
+[Equip: Control time +4 sec.]
+LV 30 	
+Skill icon 147 Lunacy Guard, Self
+[Equip: Resistance to lunacy +50%.]
+LV 50 	
+Skill icon 136 Corona & Arrows, Ring, 30%
+[Chain: Inflict x1.6 sun and x1.6 bow damage.]
+LV 90 	
+Skill icon 136 Thermo Fusion & Arrows, 40%
+[Pincer: Inflict x2.6 sun and x2.6 bow damage.]
+Add Job requirements
+
+    Coins 28,000 Coins
+    Tail of Insight Tail of Insight x15
+    Heartwood Bow Heartwood Bow x1
+    Shooting Star Shooting Star x50
+	
+ Harold Adventurer
+Class 	A
+Species 	Human
+Gender 	Male
+Artist 	Kimihiko Fujisaka
+  Availability
+
+    Pact of Truth
+    Pact of Fate (Energy)
+
+Harold the Roughrider BowIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	361 	3311
+ATK 	37 	339
+DEF 	26 	238
+MATK 	14 	128
+MDEF 	16 	146
+Skills LV 1 	
+Skill icon 04 Defense +10%, Self, 30%
+[Chain: Boost DEF by 10% for 2 turns.]
+LV 15 	
+Skill icon 30 Megabow, 50%
+[Pincer: Inflict x1 bow damage.]
+LV 35 	
+Skill icon 52 Confusion Guard, Equip
+[Passive: +50% resistance to confusion.]
+LV 65 	
+Skill icon 30 Gigabow, 40%
+[Pincer: Inflict x2 bow damage.]
+Harold the Virtuoso BowIcon
+Job 2
+
+Job 2
+Stats LV 	1 	90
+HP 	413 	3788
+ATK 	40 	366
+DEF 	29 	266
+MATK 	17 	155
+MDEF 	19 	174
+Skills LV 1 	
+Skill icon 03 Attack +10%, Self, 30%
+[Chain: Boost ATK by 10% for 2 turns.]
+LV 15 	
+Skill icon 83 Outflank, Equip
+[Passive: Deal 50% more damage to completely surrounded enemies (unstackable).]
+LV 35 	
+Skill icon 22 HP +10%, Equip
+[Passive: Boost HP by 10%.]
+LV 65 	
+Skill icon 30 Thousand Arrows, 30%
+[Pincer: Inflict 1000 damage.]
+Add Job requirements
+
+    Coins 8,000 Coins
+    Serenity Shoot Serenity Shoot x15
+    Terra Bowstring Terra Bowstring x15
+    Moon Tears Moon Tears x3
+
+Harold the Cavalier BowIcon
+Job 3
+
+Job 3
+Stats LV 	1 	90
+HP 	472 	4329
+ATK 	43 	394
+DEF 	32 	293
+MATK 	20 	183
+MDEF 	23 	210
+Skills LV 1 	
+Skill icon 04 Defense +10%, Equip
+[Passive: Boost DEF by 10%.]
+LV 15 	
+Skill icon 03 Attack +10%, Equip
+[Passive: Boost ATK by 10%.]
+LV 35 	
+Skill icon 30 Gigabow, Area (1), 30%
+[Chain: Inflict x2 bow damage.]
+LV 65 	
+Skill icon 30 Terabow, 30%
+[Pincer: Inflict x3 bow damage.]
+Add Job requirements
+
+    Coins 16,000 Coins
+    Wisdom Flower Wisdom Flower x15
+    Terra Bowstring Terra Bowstring x15
+    Lore Particle Lore Particle x3
+	
+ Haruhikari Adventurer
+Class 	Z
+Species 	Human
+Gender 	Female
+  Availability
+
+    Pact of Truth
+    Pact of Fate (Energy)
+
+Maidenly Haruhikari StaffIconRegen Icon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	418 	3801
+ATK 	22 	201
+DEF 	30 	272
+MATK 	51 	463
+MDEF 	51 	463
+Skills LV 1 	
+Skill icon 01 Heal 500, Area (2), 50%
+[Chain: Heal 500 HP.]
+LV 30 	
+Skill icon 26 Magic Defense +5%, Adjacent
+[Equip: MDEF +5%.]
+LV 50 	
+Skill icon 01 Restorative Counter, Diamond, 30%
+[Counter: Heal with power 2 (cap 700).]
+LV 90 	
+Skill icon 68 Control Time +2 Sec, Area (2), 30%
+[Chain: Control time +2 sec for 2 turns.]
+Angelic Haruhikari StaffIconRegen Icon
+Job 2
+
+Job 2
+Stats LV 	1 	90
+HP 	477 	4338
+ATK 	25 	229
+DEF 	33 	300
+MATK 	54 	491
+MDEF 	54 	491
+Skills LV 1 	
+Skill icon 26 Magic Defense +10%, Adjacent
+[Equip: MDEF +10%.]
+LV 30 	
+Skill icon 01 Heal 1000, Area (2), 40%
+[Chain: Heal 1000 HP.]
+LV 50 	
+Skill icon 80 Barrier, Low HP (1), 30%
+[Chain: Reduce physical and magical damage received by 20% (unstackable) for 2 turns.]
+LV 90 	
+Skill icon 02 Revive 100% HP, Self
+[Equip: Revive an ally with 100% HP when starting a new floor.]
+Add Job requirements
+
+    Coins 14,000 Coins
+    Serenity Shoot Serenity Shoot x15
+    White Ring White Ring x15
+    Orichalcum Orichalcum x3
+
+Sublime Haruhikari StaffIconRegen Icon
+Job 3
+
+Job 3
+Stats LV 	1 	90
+HP 	539 	4902
+ATK 	28 	256
+DEF 	36 	327
+MATK 	57 	518
+MDEF 	57 	518
+Skills LV 1 	
+Skill icon 22 HP +10%, Self
+[Equip: HP +10%.]
+LV 30 	
+Skill icon 32 Levitation, All, 100%
+[Chain: Levitation for 3 turns.]
+LV 50 	
+Skill icon 01 Heal 2000, Area (2), 30%
+[Chain: Heal 2000 HP.]
+LV 90 	
+Skill icon 124 Impair All, All, 3 charges
+[Tap: Enemies' ATK/MATK/DEF/MDEF -10% for 1 turn.]
+Add Job requirements
+
+    Coins 28,000 Coins
+    Wisdom Flower Wisdom Flower x15
+    Heartwood Pendant Heartwood Pendant x1
+    Shooting Star Shooting Star x50
+	
+ Iskar Adventurer
+Class 	A
+Species 	Wild Beast
+Gender 	Male
+  Availability
+
+    Pact of Truth
+    Pact of Fate (Energy)
+
+Iskar the Lonely BowIconSkill icon 113
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	388 	3528
+ATK 	28 	256
+DEF 	26 	238
+MATK 	36 	328
+MDEF 	28 	255
+Skills LV 1 	
+Skill icon 113 Radiance & Arrows, 80%
+[Pincer: Inflict x0.8 photon and x0.8 bow damage.]
+LV 15 	
+Skill icon 03 Attack +10%, Self, 30%
+[Chain: ATK +10% for 2 turns.]
+LV 35 	
+Skill icon 113 Radiance & Arrows, Area (1), 30%
+[Chain: Inflict x0.8 photon and x0.8 bow damage.]
+LV 65 	
+Skill icon 93 Fancy Footwork, Self, 30%
+[Chain: Physical evasion +25% for 2 turns.]
+Iskar the Brave BowIconSkill icon 113
+Job 2
+
+Job 2
+Stats LV 	1 	90
+HP 	447 	4065
+ATK 	31 	284
+DEF 	29 	266
+MATK 	39 	356
+MDEF 	31 	283
+Skills LV 1 	
+Skill icon 22 HP +10%, Self
+[Equip: HP +10%.]
+LV 15 	
+Skill icon 113 Luxon & Arrows, 60%
+[Pincer: Inflict x1.6 photon and x1.6 bow damage.]
+LV 35 	
+Skill icon 126 Anti-Graviton Shield, Self
+[Equip: Reduce graviton damage received by 40%.]
+LV 65 	
+Skill icon 60 Life Drain, Area (1), 30%
+[Chain: Inflict x1.5 absorb damage (cap 700).]
+Add Job requirements
+
+    Coins 8,000 Coins
+    Lustrous Tail Lustrous Tail x15
+    Terra Bowstring Terra Bowstring x15
+    Moon Tears Moon Tears x3
+
+Iskar the Believer BowIconSkill icon 113
+Job 3
+
+Job 3
+Stats LV 	1 	90
+HP 	508 	4620
+ATK 	34 	311
+DEF 	32 	293
+MATK 	42 	383
+MDEF 	34 	310
+Skills LV 1 	
+Skill icon 03 Attack +10%, Self
+[Equip: ATK +10%.]
+LV 15 	
+Skill icon 113 Luxon & Arrows, Area (1), 30%
+[Chain: Inflict x1.6 photon and x1.6 bow damage.]
+LV 35 	
+Skill icon 05 Counterattack, 30%
+[Counter: Inflict x2 character-weapon damage.]
+LV 65 	
+Skill icon 113 Tachyon & Arrows, 40%
+[Pincer: Inflict x2.6 photon and x2.6 bow damage.]
+Add Job requirements
+
+    Coins 16,000 Coins
+    Ignorant Flea Ignorant Flea x15
+    Photon Ring Photon Ring x15
+    Lore Particle Lore Particle x3
+	
+ Jade Dragon Adventurer
+Class 	A
+Species 	Dragon
+Gender 	Unisex
+Artist 	Hideo Minaba
+  Availability
+
+    Hunting the Jade Dragon
+
+Jade Dragon SwordIconLightningIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	452 	4110
+ATK 	28 	257
+DEF 	25 	229
+MATK 	33 	302
+MDEF 	26 	238
+Skills LV 1 	
+Skill icon 08 Thunder Blade, 80%
+[Pincer: Inflict x1 lightning and x0.5 sword damage.]
+LV 15 	
+Skill icon 24 Magic Attack +10%, Self, 30%
+[Chain: Boost MATK by 10% for 2 turns.]
+LV 35 	
+Skill icon 45 Anti-Darkness Shield, Self, 50%
+[Chain: Reduce darkness damage by 40% for 3 turns.]
+LV 65 	
+Skill icon 82 Rake, Area (1), 30%
+[Chain: Inflict x2 character-weapon damage.]
+Luminous Jade Dragon BowIconLightningIcon
+Job 2
+
+Job 2
+Stats LV 	1 	90
+HP 	488 	4457
+ATK 	31 	285
+DEF 	28 	256
+MATK 	36 	330
+MDEF 	29 	266
+Skills LV 1 	
+Skill icon 83 Outflank, Equip
+[Passive: Deal 50% more damage to completely surrounded enemies (unstackable).]
+LV 15 	
+Skill icon 08 Lightning Arrows, 60%
+[Pincer: Inflict x2 lightning and x0.7 bow damage.]
+LV 35 	
+Skill icon 22 HP +10%, Equip
+[Passive: Boost HP by 10%.]
+LV 65 	
+Skill icon 08 Thunder Arrows, Cross (2), 30%
+[Chain: Inflict x1 lightning and x0.5 bow damage.]
+Add Job requirements
+
+    Coins 8,000 Coins
+    Mangled Horn Mangled Horn x15
+    Terra Bowstring Terra Bowstring x15
+    Jade Magatama Jade Magatama x5
+
+Phantasmal Jade Dragon BowIconLightningIcon
+Job 3
+
+Job 3
+Stats LV 	1 	90
+HP 	541 	4962
+ATK 	34 	313
+DEF 	31 	284
+MATK 	39 	357
+MDEF 	32 	293
+Skills LV 1 	
+Skill icon 24 Magic Attack +10%, Equip
+[Passive: Boost MATK by 10%.]
+LV 15 	
+Skill icon 50 Sleep Guard, Equip
+[Passive: +50% resistance to sleep.]
+LV 35 	
+Skill icon 12 Lullaby Arrows, Area (1), 30%
+[Chain: Inflict x1 bow damage and apply sleep for 3 turns.]
+LV 65 	
+Skill icon 08 Tempest Arrows, 40%
+[Pincer: Inflict x3 lightning and x0.9 bow damage.]
+Add Job requirements
+
+    Coins 16,000 Coins
+    Sentient Flame Sentient Flame x15
+    Lightning Ring Lightning Ring x15
+    Thunderbird Wing Thunderbird Wing x5
+	
+ Jade Dragon Adventurer
+Class 	A
+Species 	Dragon
+Gender 	Unisex
+Artist 	Hideo Minaba
+  Availability
+
+    Hunting the Jade Dragon
+
+Jade Dragon SwordIconLightningIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	452 	4110
+ATK 	28 	257
+DEF 	25 	229
+MATK 	33 	302
+MDEF 	26 	238
+Skills LV 1 	
+Skill icon 08 Thunder Blade, 80%
+[Pincer: Inflict x1 lightning and x0.5 sword damage.]
+LV 15 	
+Skill icon 24 Magic Attack +10%, Self, 30%
+[Chain: Boost MATK by 10% for 2 turns.]
+LV 35 	
+Skill icon 45 Anti-Darkness Shield, Self, 50%
+[Chain: Reduce darkness damage by 40% for 3 turns.]
+LV 65 	
+Skill icon 82 Rake, Area (1), 30%
+[Chain: Inflict x2 character-weapon damage.]
+Luminous Jade Dragon BowIconLightningIcon
+Job 2
+
+Job 2
+Stats LV 	1 	90
+HP 	488 	4457
+ATK 	31 	285
+DEF 	28 	256
+MATK 	36 	330
+MDEF 	29 	266
+Skills LV 1 	
+Skill icon 83 Outflank, Equip
+[Passive: Deal 50% more damage to completely surrounded enemies (unstackable).]
+LV 15 	
+Skill icon 08 Lightning Arrows, 60%
+[Pincer: Inflict x2 lightning and x0.7 bow damage.]
+LV 35 	
+Skill icon 22 HP +10%, Equip
+[Passive: Boost HP by 10%.]
+LV 65 	
+Skill icon 08 Thunder Arrows, Cross (2), 30%
+[Chain: Inflict x1 lightning and x0.5 bow damage.]
+Add Job requirements
+
+    Coins 8,000 Coins
+    Mangled Horn Mangled Horn x15
+    Terra Bowstring Terra Bowstring x15
+    Jade Magatama Jade Magatama x5
+
+Phantasmal Jade Dragon BowIconLightningIcon
+Job 3
+
+Job 3
+Stats LV 	1 	90
+HP 	541 	4962
+ATK 	34 	313
+DEF 	31 	284
+MATK 	39 	357
+MDEF 	32 	293
+Skills LV 1 	
+Skill icon 24 Magic Attack +10%, Equip
+[Passive: Boost MATK by 10%.]
+LV 15 	
+Skill icon 50 Sleep Guard, Equip
+[Passive: +50% resistance to sleep.]
+LV 35 	
+Skill icon 12 Lullaby Arrows, Area (1), 30%
+[Chain: Inflict x1 bow damage and apply sleep for 3 turns.]
+LV 65 	
+Skill icon 08 Tempest Arrows, 40%
+[Pincer: Inflict x3 lightning and x0.9 bow damage.]
+Add Job requirements
+
+    Coins 16,000 Coins
+    Sentient Flame Sentient Flame x15
+    Lightning Ring Lightning Ring x15
+    Thunderbird Wing Thunderbird Wing x5
+	
+ Ka'pori Adventurer
+Class 	A
+Species 	Lizardfolk
+Gender 	Male
+Artist 	Kimihiko Fujisaka
+  Availability
+
+    Pact of Truth
+    Pact of Fate (Energy)
+
+Ka'pori the Big Mouth SwordIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	436 	3999
+ATK 	31 	284
+DEF 	28 	256
+MATK 	12 	110
+MDEF 	12 	110
+Skills LV 1 	
+Skill icon 03 Attack +10%, Self, 30%
+[Chain: Boost ATK by 10% for 2 turns.]
+LV 15 	
+Skill icon 93 Fancy Footwork, Self, 30%
+[Chain: Boost physical evasion by 25% for 2 turns.]
+LV 35 	
+Skill icon 28 Megasword, 50%
+[Pincer: Inflict x1 sword damage.]
+LV 65 	
+Skill icon 93 Ninja Footwork, Self, 30%
+[Chain: Boost physical evasion by 50% for 2 turns.]
+Ka'pori the Massive Mouth SwordIcon
+Job 2
+
+Job 2
+Stats LV 	1 	90
+HP 	491 	4504
+ATK 	34 	311
+DEF 	31 	284
+MATK 	15 	137
+MDEF 	15 	137
+Skills LV 1 	
+Skill icon 03 Attack +10%, Equip
+[Passive: Boost ATK by 10%.]
+LV 15 	
+Skill icon 41 Phys Dmg Down 10%, Adjacent, Equip
+[Passive: Reduce physical damage by 10% for adjacent allies.]
+LV 35 	
+Skill icon 28 Gigasword, 40%
+[Pincer: Inflict x2 sword damage.]
+LV 65 	
+Skill icon 06 Negate Circle, Sword, 30%
+[Chain: Disables the effect of the Circle of Carnage for Sword allies for 2 turns.]
+Add Job requirements
+
+    Coins 8,000 Coins
+    Benevolent Fang Benevolent Fang x15
+    Terra Swordsteel Terra Swordsteel x15
+    Rainbow Tears Rainbow Tears x3
+
+Ka'pori the Insatiable SwordIcon
+Job 3
+
+Job 3
+Stats LV 	1 	90
+HP 	558 	5118
+ATK 	37 	339
+DEF 	34 	311
+MATK 	18 	165
+MDEF 	18 	165
+Skills LV 1 	
+Skill icon 83 Outflank, Equip
+[Passive: Deal 50% more damage to completely surrounded enemies (unstackable).]
+LV 15 	
+Skill icon 41 Phys Dmg Down 20%, Adjacent, Equip
+[Passive: Reduce physical damage by 20% for adjacent allies.]
+LV 35 	
+Skill icon 28 Gigasword, Cross (1), 30%
+[Pincer: Inflict x2 sword damage.]
+LV 65 	
+Skill icon 63 Augment Circle, Sword, 30%
+[Chain: Increases Circle of Carnage damage of Sword allies by 20% for 2 turns.]
+Add Job requirements
+
+    Coins 16,000 Coins
+    Tail of Insight Tail of Insight x15
+    Terra Swordsteel Terra Swordsteel x15
+    Warped Particle Warped Particle x3
+	
+ Kana Adventurer
+Class 	A
+Species 	Beastfolk
+Gender 	Female
+Artist 	Kimihiko Fujisaka
+  Availability
+
+    Pact of Truth
+    Pact of Fate (Energy)
+
+Kana the Apothecary StaffIconRemedy icon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	293 	2711
+ATK 	19 	174
+DEF 	17 	155
+MATK 	34 	311
+MDEF 	28 	256
+Skills LV 1 	
+Skill icon 51 Locomotion, All, 100%
+[Chain: Cure all allies of paralysis.]
+LV 15 	
+Skill icon 13 Paralyze, Area (2), 100%
+[Chain: Apply paralysis for 3 turns with a 30% chance.]
+LV 35 	
+Skill icon 52 Clarity, All, 100%
+[Chain: Cure all allies of confusion.]
+LV 65 	
+Skill icon 01 Restorative Counter, 50%
+[Counter: Heal self with power 2 (cap 700).]
+Kana the Instructor StaffIconRemedy icon
+Job 2
+
+Job 2
+Stats LV 	1 	90
+HP 	355 	3284
+ATK 	22 	201
+DEF 	20 	183
+MATK 	37 	339
+MDEF 	31 	284
+Skills LV 1 	
+Skill icon 01 Mega Heal, Chain, 100%
+[Chain: Heal with power 2 (cap 700).]
+LV 15 	
+Skill icon 52 Confusion Ward, Equip
+[Passive: Immune to confusion.]
+LV 35 	
+Skill icon 22 HP +20%, Equip
+[Passive: Boost HP by 20%.]
+LV 65 	
+Skill icon 21 Confuse, Area (2), 100%
+[Chain:Apply confusion for 3 turns with a 30% chance.]
+Add Job requirements
+
+    Coins 8,000 Coins
+    Claw of Fate Claw of Fate x15
+    Terra Staffwood Terra Staffwood x15
+    Rainbow Tears Rainbow Tears x3
+
+Kana the Chemist StaffIconRemedy icon
+Job 3
+
+Job 3
+Stats LV 	1 	90
+HP 	411 	3802
+ATK 	25 	229
+DEF 	23 	210
+MATK 	40 	366
+MDEF 	34 	311
+Skills LV 1 	
+Skill icon 04 Defense +10%, Equip
+[Passive: Boost DEF by 10%.]
+LV 15 	
+Skill icon 51 Paralysis Ward, Equip
+[Passive: Immune to paralysis.]
+LV 35 	
+Skill icon 01 Heal, All, 30%
+[Chain: Heal all allies with power 1 (cap 700).]
+LV 65 	
+Skill icon 61 Reduce Life (1/3), Pincer Area (1), 30%
+[Chain: Reduce HP by 33% around pincered area.]
+Add Job requirements
+
+    Coins 16,000 Coins
+    Pelt of Knowledge Pelt of Knowledge x15
+    Green Ring Green Ring x15
+    Spirit Particle Spirit Particle x3
+	
+ Kem Λ Adventurer
+Class 	SS
+Species 	Stonefolk
+Gender 	Male
+  Availability
+
+    Recode DNA
+
+Kem Λ SpearIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	602 	5475
+ATK 	44 	400
+DEF 	39 	354
+MATK 	30 	272
+MDEF 	42 	381
+Skills LV 1 	
+Skill icon 29 Teraspear, 30%
+[Pincer: Inflict x3 spear damage.]
+LV 30 	
+Skill icon 03 Attack +10%, Self
+[Equip: ATK +10%.]
+LV 50 	
+Skill icon 133 Twister Ward, Self
+[Equip: Invulnerable to twisters.]
+LV 90 	
+Skill icon 29 Union Spear, Spear Vertical (2), 30%
+[Chain: Inflict x1 spear damage.]
+Recode DNA requirements
+
+    Kem icon Kem (LV 80 in all jobs)
+    8-Bit Spinetrich Λ icon 8-Bit Spinetrich Λ (LV 50)
+    Sabertooth King icon Sabertooth King (LV 50)
+    Coins 20,000 Coins
+    Temporal Helix Temporal Helix x5
+    White Hole White Hole x1
+    Terra Spearbronze Terra Spearbronze x15
+
+Available from skill slots Job 1
+Skill icon 01 Mega Heal, Self, 30%
+[Chain: Heal with power 2 (cap 700).]
+Skill icon 04 Defense +20%, Spear, 30%
+[Chain: DEF +20% for 2 turns.]
+Skill icon 29 Gigaspear, 40%
+[Pincer: Inflict x2 spear damage.]
+Skill icon 04 Defense +30%, Spear, 30%
+[Chain: DEF +30% for 2 turns.]
+Job 2
+Skill icon 29 Megaspear, 50%
+[Pincer: Inflict x1 spear damage.]
+Skill icon 04 Defense +5%, Adjacent
+[Equip: DEF +5%.]
+Skill icon 22 HP +20%, Self
+[Equip: HP +20%.]
+Skill icon 03 Attack +5%, Spear, 30%
+[Chain: ATK +5% for 2 turns.]
+Job 3
+Skill icon 04 Defense +10%, Self
+[Equip: DEF +10%.]
+Skill icon 16 Frequency +20%, Spear, 30%
+[Chain: Skill frequency +20% for 2 turns.]
+Skill icon 29 Gigaspear, Cross (1), 30%
+[Chain: Inflict x2 spear damage.]
+Skill icon 03 Desperate Measures, Self
+[Equip: Boost ATK by the % of HP lost.]
+
+ Kir'ue Adventurer
+Class 	SS
+Species 	Wild Beast
+Gender 	Male
+  Availability
+
+    Pact of Truth
+    Pact of Fate (Energy)
+
+Kir'ue the Skilled SpearIconSkill icon 113
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	483 	4392
+ATK 	33 	302
+DEF 	29 	266
+MATK 	40 	366
+MDEF 	34 	311
+Skills LV 1 	
+Skill icon 113 Radiant Strike, 80%
+[Pincer: Inflict x1 photon and x0.5 spear damage.]
+LV 15 	
+Skill icon 24 Magic Attack +10%, Self, 30%
+[Chain: MATK +10% for 2 turns.]
+LV 35 	
+Skill icon 57 Anti-Graviton Capsule, 30%
+[Chain: Create a Capsule Point that reduces graviton damage by 10% per capsule for all allies.]
+LV 65 	
+Skill icon 113 Luxon Strike, 60%
+[Pincer: Inflict x2 photon and x0.7 spear damage.]
+Kir'ue the Cunning SpearIconSkill icon 113
+Job 2
+
+Job 2
+Stats LV 	1 	90
+HP 	547 	4975
+ATK 	36 	330
+DEF 	32 	293
+MATK 	43 	394
+MDEF 	37 	339
+Skills LV 1 	
+Skill icon 24 Magic Attack +10%, Self
+[Equip: MATK +10%.]
+LV 15 	
+Skill icon 68 Control Time +2 Sec, Self
+[Equip: Control time +2 sec.]
+LV 35 	
+Skill icon 113 Luxon Strike, Cross (All), 30%
+[Chain: Inflict x2 photon and x0.7 spear damage.]
+LV 65 	
+Skill icon 113 Tachyon Strike, 40%
+[Pincer: Inflict x3 photon and x0.9 spear damage.]
+Add Job requirements
+
+    Coins 10,000 Coins
+    Lustrous Tail Lustrous Tail x15
+    Terra Spearbronze Terra Spearbronze x15
+    Dark Matter Dark Matter x3
+
+Kir'ue the Enlightened SpearIconSkill icon 113
+Job 3
+
+Job 3
+Stats LV 	1 	90
+HP 	605 	5502
+ATK 	39 	357
+DEF 	35 	321
+MATK 	46 	421
+MDEF 	40 	366
+Skills LV 1 	
+Skill icon 126 Anti-Graviton Shield, Self
+[Equip: Reduce graviton damage received by 40%.]
+LV 15 	
+Skill icon 01 Restorative Counter, Self, 50%
+[Counter: Heal with power 2 (cap 700).]
+LV 35 	
+Skill icon 113 Radiant Strike, Pincer Column, 30%
+[Pincer: Inflict x1 photon and x0.5 spear damage.]
+LV 65 	
+Skill icon 113 Holy Strike, 30%
+[Pincer: Inflict x3.5 photon and x1.3 spear damage.]
+Add Job requirements
+
+    Coins 20,000 Coins
+    Ignorant Flea Ignorant Flea x15
+    Vajra (Item) Vajra x1
+    Animaton Animaton x3
+	
+ Koh Adventurer
+Class 	SS
+Species 	Human
+Gender 	Male
+  Availability
+
+    Limited-time Pact of Truth and Pact of Fate (Energy)
+
+Guardian Koh SwordIconFireIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	477 	4357
+ATK 	32 	293
+DEF 	29 	266
+MATK 	38 	348
+MDEF 	35 	321
+Skills LV 1 	
+Skill icon 07 Fire Blade, 80%
+[Pincer: Inflict x1 fire and x0.5 sword damage.]
+LV 15 	
+Skill icon 43 Anti-Ice Shield, Self
+[Equip: Reduce ice damage received by 40%.]
+LV 35 	
+Skill icon 24 Magic Attack +10%, Self, 30%
+[Chain: MATK +10% for 2 turns.]
+LV 65 	
+Skill icon 07 Fire Blade, 1 Row, 30%
+[Chain: Inflict x1 fire and x0.5 sword damage.]
+Guardian Koh DNA SwordIconFireIcon
+Job 2
+
+Job 2
+Stats LV 	1 	90
+HP 	536 	4895
+ATK 	35 	321
+DEF 	32 	293
+MATK 	41 	376
+MDEF 	38 	348
+Skills LV 1 	
+Skill icon 57 Anti-Ice Capsule, 30%
+[Chain: Create a Capsule Point that reduces ice damage by 10% per capsule for all allies.]
+LV 15 	
+Skill icon 07 Blazing Counter, 30%
+[Counter: Inflict x1.5 fire damage.]
+LV 35 	
+Skill icon 07 Inferno Blade, 60%
+[Pincer: Inflict x2 fire and x0.7 sword damage.]
+LV 65 	
+Skill icon 07 Solar Wind Blade, 40%
+[Pincer: Inflict x3 fire and x0.9 sword damage.]
+Add Job requirements
+
+    Coins 10,000 Coins
+    Serenity Shoot Serenity Shoot x15
+    Fire Ring Fire Ring x15
+    Animaton Animaton x3
+
+Guardian Koh RNA SwordIconFireIcon
+Job 3
+
+Job 3
+Stats LV 	1 	90
+HP 	595 	5434
+ATK 	38 	348
+DEF 	35 	321
+MATK 	44 	403
+MDEF 	41 	376
+Skills LV 1 	
+Skill icon 24 Magic Attack +10%, Self
+[Equip: MATK +10%.]
+LV 15 	
+Skill icon 68 Control Time +2 Sec, Self
+[Equip: Control time +2 sec.]
+LV 35 	
+Skill icon 07 Inferno Blade, 1 Row, 30%
+[Chain: Inflict x2 fire and x0.7 sword damage.]
+LV 65 	
+Skill icon 07 BIg Bang Blade, 30%
+[Pincer: Inflict x3.5 fire and x1.3 sword damage.]
+Add Job requirements
+
+    Coins 20,000 Coins
+    Wisdom Flower Wisdom Flower x15
+    Flame of Indra Flame of Indra x1
+    Dark Matter Dark Matter x3
+	
+ Korin Λ Adventurer
+Class 	SS
+Species 	Stonefolk
+Gender 	Male
+Artist 	Yoshitomo Ikawa
+  Availability
+
+    Recode DNA
+
+Korin Λ SwordIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	631 	5888
+ATK 	44 	403
+DEF 	39 	357
+MATK 	29 	266
+MDEF 	39 	357
+Skills LV 1 	
+Skill icon 28 Terasword, 30%
+[Pincer: Inflict x3 sword damage.]
+LV 30 	
+Skill icon 03 Attack +10%, Self
+[Equip: ATK +10%.]
+LV 50 	
+Skill icon 134 Rift Ward, Self
+[Equip: Invulnerable to dimensional rifts.]
+LV 90 	
+Skill icon 28 Sword Synergy, Sword Lateral (2), 30%
+[Chain: Inflict x1 sword damage.]
+Recode DNA requirements
+
+    Korin icon Korin (LV 80 in all jobs)
+    Slugosaur Kino Λ icon Slugosaur Kino Λ (LV 50)
+    Flamebot icon Flamebot (LV 50)
+    Coins 20,000 Coins
+    Temporal Helix Temporal Helix x5
+    Black Hole Black Hole x1
+    Terra Swordsteel Terra Swordsteel x15
+
+Available from skill slots Job 1
+Skill icon 01 Mega Heal, Self, 30%
+[Chain: Heal with power 2 (cap 700).]
+Skill icon 04 Defense +20%, Sword, 30%
+[Chain: Boost DEF of Sword allies by 20% for 2 turns.]
+Skill icon 28 Gigasword, 40%
+[Pincer: Inflict x2 sword damage.]
+Skill icon 04 Defense +30%, Sword, 30%
+[Chain: Boost DEF of Sword allies by 30% for 2 turns.]
+Job 2
+Skill icon 28 Megasword, 50%
+[Pincer: Inflict x1 sword damage.]
+Skill icon 03 Attack +5%, Adjacent, Equip
+[Passive: Boost ATK by 5% for adjacent allies.]
+Skill icon 22 HP +20%, Equip
+[Passive: Boost HP by 20%.]
+Skill icon 03 Attack +5%, Sword, 30%
+[Chain: Boost ATK of Sword allies by 5% for 2 turns.]
+Job 3
+Skill icon 04 Defense +10%, Equip
+[Passive: Boost DEF by 10%.]
+Skill icon 16 Frequency +20%, Sword, 30%
+[Chain: Boost Sword allies' skill frequency by 20% for 2 turns.]
+Skill icon 28 Gigasword, Cross (1), 30%
+[Pincer: Inflict x2 sword damage.]
+Skill icon 03 Desperate Measures, Equip
+[Passive: Boost ATK by the % of HP lost.]
+
+ Kuscah Adventurer
+Class 	B
+Species 	Human
+Gender 	Male
+Artist 	Kimihiko Fujisaka
+  Availability
+
+    Pact of Truth
+    Pact of Fate (Energy)
+    Limited-time Starter Character
+
+Kuscah the Acolyte StaffIconRegen Icon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	293 	2734
+ATK 	12 	110
+DEF 	17 	157
+MATK 	29 	266
+MDEF 	26 	238
+Skills LV 1 	
+Skill icon 01 Mega Heal, Chain, 100%
+[Chain: Heal with power 2 (cap 700).]
+LV 15 	
+Skill icon 04 Defense +10%, Self, 30%
+[Chain: Boost DEF by 10% for 2 turns.]
+LV 35 	
+Skill icon 01 Mega Heal, Self, 30%
+[Chain: Heal with power 2 (cap 700).]
+LV 65 	
+Skill icon 01 Restorative Counter, 50%
+[Counter: Heal self with power 2 (cap 700).]
+Kuscah the Priest StaffIconRegen Icon
+Job 2
+
+Job 2
+Stats LV 	1 	90
+HP 	353 	3294
+ATK 	15 	137
+DEF 	20 	185
+MATK 	32 	293
+MDEF 	29 	266
+Skills LV 1 	
+Skill icon 04 Defense +10%, Equip
+[Passive: Boost DEF by 10%.]
+LV 15 	
+Skill icon 01 Heal, All, 30%
+[Chain: Heal all allies with power 1 (cap 700).]
+LV 35 	
+Skill icon 50 Sleep Guard, Equip
+[Passive: +50% resistance to sleep.]
+LV 65 	
+Skill icon 02 Ally Revival, Equip
+[Passive: Revive a defeated ally with 1 HP when starting a new floor.]
+Add Job requirements
+
+    Coins 8,000 Coins
+    Serenity Shoot Serenity Shoot x15
+    Terra Staffwood Terra Staffwood x15
+    Rainbow Tears Rainbow Tears x3
+
+Kuscah the Healer StaffIconRegen Icon
+Job 3
+
+Job 3
+Stats LV 	1 	90
+HP 	417 	3891
+ATK 	18 	165
+DEF 	23 	212
+MATK 	35 	321
+MDEF 	32 	293
+Skills LV 1 	
+Skill icon 22 HP +10%, Equip
+[Passive: Boost HP by 10%.]
+LV 15 	
+Skill icon 68 Control Time +2 Sec, Equip
+[Passive: Extends this unit's move timer by 2 seconds.]
+LV 35 	
+Skill icon 01 Giga Heal, Chain, 90%
+[Chain: Heal with power 2.5 (cap 1300).]
+LV 65 	
+Skill icon 94 Heal x1.5, All, 30%
+[Chain: Increase healing by x1.5 for all allies for 2 turns.]
+Add Job requirements
+
+    Coins 16,000 Coins
+    Wisdom Flower Wisdom Flower x15
+    White Ring White Ring x15
+    Wish Particle Wish Particle x3
+	
+ Lew Adventurer
+Class 	SS
+Species 	Human
+Gender 	Female
+  Availability
+
+    Limited-time Pact of Truth and Pact of Fate (Energy)
+
+Guardian Lew StaffIconRegen Icon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	373 	3421
+ATK 	19 	174
+DEF 	23 	210
+MATK 	44 	403
+MDEF 	40 	366
+Skills LV 1 	
+Skill icon 01 Mega Heal, Chain, 100%
+[Chain: Heal with power 2 (cap 700).]
+LV 15 	
+Skill icon 26 Magic Defense +10%, Self, 30%
+[Chain: MDEF +10% for 2 turns.]
+LV 35 	
+Skill icon 01 Restorative Counter, Self, 50%
+[Counter: Heal with power 2 (cap 700).]
+LV 65 	
+Skill icon 02 Ally Revival, Self
+[Equip: Revive an ally with 1 HP when starting a new floor.]
+Guardian Lew DNA StaffIconRegen Icon
+Job 2
+
+Job 2
+Stats LV 	1 	90
+HP 	432 	3962
+ATK 	22 	201
+DEF 	26 	238
+MATK 	47 	431
+MDEF 	43 	394
+Skills LV 1 	
+Skill icon 26 Magic Defense +10%, Self
+[Equip: MDEF +10%.]
+LV 15 	
+Skill icon 49 Poison Ward, Self
+[Equip: Confer immunity to poison.]
+LV 35 	
+Skill icon 11 Poison, Area (2), 100%
+[Chain: Apply poison power 2 (30% chance) for 3 turns.]
+LV 65 	
+Skill icon 68 Control Time +2 Sec, Chain, 30%
+[Chain: Control time +2 sec for 2 turns.]
+Add Job requirements
+
+    Coins 10,000 Coins
+    Serenity Shoot Serenity Shoot x15
+    White Ring White Ring x15
+    Oxsecium Oxsecium x3
+
+Guardian Lew RNA StaffIconRegen Icon
+Job 3
+
+Job 3
+Stats LV 	1 	90
+HP 	491 	4504
+ATK 	25 	229
+DEF 	31 	284
+MATK 	50 	458
+MDEF 	46 	421
+Skills LV 1 	
+Skill icon 22 HP +10%, Self
+[Equip: HP +10%.]
+LV 15 	
+Skill icon 01 Giga Heal, Chain, 90%
+[Chain: Heal with power 2.5 (cap 1300).]
+LV 35 	
+Skill icon 01 Tera Heal, Chain, 80%
+[Chain: Heal with power 3 (cap 2500).]
+LV 65 	
+Skill icon 02 Revive 100% HP, Self
+[Equip: Revive an ally with 100% HP when starting a new floor.]
+Add Job requirements
+
+    Coins 20,000 Coins
+    Wisdom Flower Wisdom Flower x15
+    Asclepius Asclepius x1
+    Orichalcum Orichalcum x3
+	
+ Lich Λ Adventurer
+Class 	S
+Species 	Wild Beast
+Gender 	Unisex
+  Availability
+
+    Recode DNA
+
+Lich the Accursed SwordIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	422 	3838
+ATK 	37 	339
+DEF 	27 	247
+MATK 	28 	256
+MDEF 	31 	284
+Skills LV 1 	
+Skill icon 28 Megasword, 50%
+[Pincer: Inflict x1 sword damage.]
+LV 15 	
+Skill icon 56 Death Ward, Equip
+[Passive: Immune to instant death.]
+LV 35 	
+Skill icon 47 Chaos Blade, 30%
+[Pincer: Inflict x1 sword damage, apply instant death after 3 turns.]
+LV 65 	
+Skill icon 28 Gigasword, 1 Row, 30%
+[Pincer: Inflict x2 sword damage.]
+Recode DNA requirements
+
+    Lich icon Lich (LV 80 in all jobs)
+    Onyx Dragon icon Onyx Dragon (LV 50)
+    Dark Pegawyrm icon Dark Pegawyrm (LV 50)
+    Coins 20,000 Coins
+    Mantle Helix Mantle Helix x5
+    Black Hole Black Hole
+    Terra Swordsteel Terra Swordsteel x15
+
+Lich the Unholy StaffIconDarkIcon
+Job 2
+
+Job 2
+Stats LV 	1 	90
+HP 	467 	4247
+ATK 	31 	284
+DEF 	29 	266
+MATK 	42 	385
+MDEF 	37 	339
+Skills LV 1 	
+Skill icon 44 Anti-Lightning Shield, Equip
+[Passive: Reduce lightning damage by 40%.]
+LV 15 	
+Skill icon 10 Abyss, Pincer Area (1), 30%
+[Chain: Inflict x2 darkness damage.]
+LV 35 	
+Skill icon 44 Bolt Damage Down 10%, Adjacent, Equip
+[Passive: Reduce lightning damage by 10% for adjacent allies.]
+LV 65 	
+Skill icon 10 Shadow Counter, Cross (1), 50%
+[Counter: Inflict x1.5 darkness damage to adjacent spaces.]
+Add Job requirements
+
+    Coins 10,000 Coins
+    Lustrous Tail Lustrous Tail x15
+    Dark Ring Dark Ring x15
+    Orichalcum Orichalcum x3
+
+Lich the Infernal StaffIconDarkIcon
+Job 3
+
+Job 3
+Stats LV 	1 	90
+HP 	529 	4811
+ATK 	36 	330
+DEF 	32 	293
+MATK 	45 	412
+MDEF 	40 	366
+Skills LV 1 	
+Skill icon 26 Magic Defense +10%, Equip
+[Passive: Boost MDEF by 10%.]
+LV 15 	
+Skill icon 44 Bolt Damage Down 20%, Adjacent, Equip
+[Passive: Reduce lightning damage by 20% for adjacent allies.]
+LV 35 	
+Skill icon 68 Control Time +2 Sec, Equip
+[Passive: Extends this unit's move timer by 2 seconds.]
+LV 65 	
+Skill icon 10 Dark Matter, Pincer Area (1), 30%
+[Chain: Inflict x3 darkness damage.]
+Add Job requirements
+
+    Coins 20,000 Coins
+    Ignorant Flea Ignorant Flea x15
+    Dark Ring Dark Ring x15
+    Dark Matter Dark Matter x3
+	
+ Lio Adventurer
+Class 	Z
+Species 	Human
+Gender 	Female
+  Availability
+
+    Pact of Truth
+    Pact of Fate (Energy)
+
+Lio the Sharpshooter BowIconSkill icon 137
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	549 	4993
+ATK 	37 	336
+DEF 	39 	354
+MATK 	40 	363
+MDEF 	41 	372
+Skills LV 1 	
+Skill icon 137 Moonlight & Arrows, 80%
+[Pincer: Inflict x0.8 moon and x0.8 bow damage.]
+LV 30 	
+Skill icon 138 Anti-Solar Shield, Self
+[Equip: Reduce sun damage received by 40%.]
+LV 50 	
+Skill icon 137 Moonlight Counter, Cross (1), 50%
+[Counter: Inflict x1.5 moon damage.]
+LV 90 	
+Skill icon 137 Moonlight & Arrows, Area (1), 30%
+[Chain: Inflict x0.8 moon and x0.8 bow damage.]
+Lio the Haunting Huntress BowIconSkill icon 137
+Job 2
+
+Job 2
+Stats LV 	1 	90
+HP 	602 	5475
+ATK 	42 	381
+DEF 	45 	409
+MATK 	45 	409
+MDEF 	46 	418
+Skills LV 1 	
+Skill icon 26 Magic Defense +10%, Self
+[Equip: MDEF +10%.]
+LV 30 	
+Skill icon 137 Luna & Arrows, 60%
+[Pincer: Inflict x1.6 moon and x1.6 bow damage.]
+LV 50 	
+Skill icon 138 Solar Dmg Down 20%, Adjacent
+[Equip: Reduce sun damage received by 20%.]
+LV 90 	
+Skill icon 05 Mighty Counter, Area (1), 50%
+[Counter: Inflict x2.5 character-weapon damage.]
+Add Job requirements
+
+    Coins 14,000 Coins
+    Serenity Shoot Serenity Shoot x15
+    Lunar Ring Lunar Ring x15
+    Animaton Animaton x3
+
+Lio the Unforgiving BowIconSkill icon 137
+Job 3
+
+Job 3
+Stats LV 	1 	90
+HP 	664 	6039
+ATK 	47 	427
+DEF 	49 	445
+MATK 	50 	454
+MDEF 	51 	463
+Skills LV 1 	
+Skill icon 145 Scorch Guard, Self
+[Equip: Resistance to scorch +50%.]
+LV 30 	
+Skill icon 137 Moonlight & Arrows, Ring, 30%
+[Chain: Inflict x0.8 moon and x0.8 bow damage.]
+LV 50 	
+Skill icon 137 Frigid Moon & Arrows, 40%
+[Pincer: Inflict x2.6 moon and x2.6 bow damage.]
+LV 90 	
+Skill icon 137 Full Moon & Arrows, 30%
+[Pincer: Inflict x3 moon and x3 bow damage.]
+Add Job requirements
+
+    Coins 28,000 Coins
+    Wisdom Flower Wisdom Flower x15
+    Heartwood Bow Heartwood Bow x1
+    Evanescent Star Evanescent Star x50
+	
+ Lunaken Adventurer
+Class 	S
+Species 	Stonefolk
+Gender 	Male
+Artist 	Kimihiko Fujisaka
+  Availability
+
+    Pact of Truth
+    Pact of Fate (Energy)
+
+Lunaken the Sentry SpearIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	420 	3852
+ATK 	37 	339
+DEF 	32 	293
+MATK 	21 	192
+MDEF 	19 	175
+Skills LV 1 	
+Skill icon 03 Attack +10%, Self, 30%
+[Chain: Boost ATK by 10% for 2 turns.]
+LV 15 	
+Skill icon 29 Megaspear, 50%
+[Pincer: Inflict x1 spear damage.]
+LV 35 	
+Skill icon 26 Magic Defense +5%, Adjacent, Equip
+[Passive: Boost MDEF by 5% for adjacent allies.]
+LV 65 	
+Skill icon 93 Fancy Footwork, Equip
+[Passive: Boost physical evasion by 25%.]
+Lunaken the Fearsome SpearIcon
+Job 2
+
+Job 2
+Stats LV 	1 	90
+HP 	482 	4421
+ATK 	40 	366
+DEF 	35 	321
+MATK 	24 	220
+MDEF 	11 	203
+Skills LV 1 	
+Skill icon 03 Attack +10%, Equip
+[Passive: Boost ATK by 10%.]
+LV 15 	
+Skill icon 53 Demoralization Guard, Adjacent, Equip
+[Passive: +50% resistance to demoralization for adjacent allies.]
+LV 35 	
+Skill icon 29 Gigaspear, 40%
+[Pincer: Inflict x2 spear damage.]
+LV 65 	
+Skill icon 81 Expand Power Gauge, Equip
+[Passive: Store an additional powered point.]
+Add Job requirements
+
+    Coins 10,000 Coins
+    Forlorn Stone Forlorn Stone x15
+    Terra Spearbronze Terra Spearbronze x15
+    Dark Matter Dark Matter x3
+
+Lunaken the Royal Guardsman SpearIcon
+Job 3
+
+Job 3
+Stats LV 	1 	90
+HP 	541 	4962
+ATK 	43 	394
+DEF 	38 	348
+MATK 	27 	247
+MDEF 	25 	231
+Skills LV 1 	
+Skill icon 22 HP +10%, Equip
+[Passive: Boost HP by 10%.]
+LV 15 	
+Skill icon 26 Magic Defense +10%, Adjacent, Equip
+[Passive: Boost MDEF by 10% for adjacent allies.]
+LV 35 	
+Skill icon 40 Demoralizing Spear, 1 Column, 30%
+[Chain: Inflict x1 spear damage, 80% chance to apply demoralization for 3 turns.]
+LV 65 	
+Skill icon 93 Evasive Arts, Area (2), 30%
+[Chain: Boost physical evasion by 50% for 2 turns.]
+Add Job requirements
+
+    Coins 20,000 Coins
+    Shell of Madness Shell of Madness x15
+    Terra Spearbronze Terra Spearbronze x15
+    Animaton Animaton x3
+	
+ Lunato Adventurer
+Class 	S
+Species 	Stonefolk
+Gender 	Male
+Artist 	Kimihiko Fujisaka
+  Availability
+
+    Pact of Truth
+    Pact of Fate (Energy)
+
+Lunato the Sentry BowIcon
+Job 1
+
+Job 1
+Stats LV 	1 	90
+HP 	439 	4027
+ATK 	37 	339
+DEF 	32 	296
+MATK 	21 	192
+MDEF 	18 	165
+Skills LV 1 	
+Skill icon 03 Attack +10%, Self, 30%
+[Chain: Boost ATK by 10% for 2 turns.]
+LV 15 	
+Skill icon 30 Megabow, 50%
+[Pincer: Inflict x1 bow damage.]
+LV 35 	
+Skill icon 26 Magic Defense +5%, Adjacent, Equip
+[Passive: Boost MDEF by 5% for adjacent allies.]
+LV 65 	
+Skill icon 93 Fancy Footwork, Equip
+[Passive: Boost physical evasion by 25%.]
+Lunato the Petrifier BowIcon
+Job 2
+
+Job 2
+Stats LV 	1 	90
+HP 	493 	4522
+ATK 	40 	366
+DEF 	35 	323
+MATK 	24 	220
+MDEF 	21 	192
+Skills LV 1 	
+Skill icon 03 Attack +10%, Equip
+[Passive: Boost ATK by 10%.]
+LV 15 	
+Skill icon 54 Petrification Guard, Adjacent, Equip
+[Passive: +50% resistance to petrification for adjacent allies.]
+LV 35 	
+Skill icon 30 Gigabow, 40%
+[Pincer: Inflict x2 bow damage.]
+LV 65 	
+Skill icon 81 Expand Power Gauge, Equip
+[Passive: Store an additional powered point.]
+Add Job requirements
+
+    Coins 10,000 Coins
+    Forlorn Stone Forlorn Stone x15
+    Terra Bowstring Terra Bowstring x15
+    Orichalcum Orichalcum x3
+
+Lunato the Royal Guardsman BowIcon
+Job 3
+
+Job 3
+Stats LV 	1 	90
+HP 	551 	5054
+ATK 	43 	394
+DEF 	38 	351
+MATK 	27 	247
+MDEF 	24 	220
+Skills LV 1 	
+Skill icon 22 HP +10%, Equip
+[Passive: Boost HP by 10%.]
+LV 15 	
+Skill icon 26 Magic Defense +10%, Adjacent, Equip
+[Passive: Boost MDEF by 10% for adjacent allies.]
+LV 35 	
+Skill icon 37 Petrifying Arrows, 30%
+[Pincer: Inflict x1 bow damage, 80% chance to apply petrification for 99 turns.]
+LV 65 	
+Skill icon 93 Evasive Arts, Area (2), 30%
+[Chain: Boost physical evasion by 50% for 2 turns.]
+Add Job requirements
+
+    Coins 20,000 Coins
+    Shell of Madness Shell of Madness x15
+    Terra Bowstring Terra Bowstring x15
+    Dark Matter Dark Matter x3
+	
+	

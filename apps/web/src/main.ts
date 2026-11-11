@@ -25,7 +25,6 @@ import {
   companionByUid,
   getCharacterDef,
   getCompanionDef,
-  ownedCharacters,
 } from "./ui/inventory";
 import {
   applyClearRewards,
@@ -56,6 +55,7 @@ let session: DragSession | null = null;
 let timer = new MoveTimer();
 let busy = false;
 let rewardsGranted = false;
+let resultsShown = false;
 
 const renderer = new Renderer(canvas, () => session?.board ?? battle.board);
 
@@ -318,7 +318,7 @@ const ui = new UI();
 /** Active squad = first 6 owned characters (matches pre-battle strip). */
 function currentSquadStage(): ReturnType<typeof stageFor> {
   const { chapter, stage } = ui.getSelectedStage();
-  return stageWithSquad(stageFor(chapter, stage), ownedCharacters);
+  return stageWithSquad(stageFor(chapter, stage), ui.getActiveParty());
 }
 
 ui.setBattleCallback(() => {
@@ -327,6 +327,8 @@ ui.setBattleCallback(() => {
   session = null;
   busy = false;
   rewardsGranted = false;
+  resultsShown = false;
+  ui.hideLevelCompleted();
   renderer.setDrag(null);
   renderer.reset();
   renderer.resize();
@@ -341,12 +343,12 @@ $("btn-leave-battle")?.addEventListener("click", () => {
   ui.show("map");
 });
 
-function tryGrantRewards(): string | undefined {
+function tryGrantRewards(): { stageName: string; xp: ReturnType<typeof applyClearRewards>; reward: ReturnType<typeof grantStageRewards> } | undefined {
   if (battle.phase !== "victory" || rewardsGranted) return undefined;
   rewardsGranted = true;
   const { chapter, stage } = ui.getSelectedStage();
   const ref = getStageRef(chapter, stage);
-  if (!ref) return "Stage cleared.";
+  if (!ref) return undefined;
   const def = rewardsForStage(ref);
   // Seed from stage id so re-clear is stable; still grant coins/xp every clear
   const seed =
@@ -357,20 +359,14 @@ function tryGrantRewards(): string | undefined {
     for (const w of ref.waves) for (const e of w) ids.push(e.enemyId);
   }
   const reward = grantStageRewards(def, seed ^ (Date.now() & 0xffff), ids);
-  const characterXp = applyClearRewards(ref.id, reward, def.staminaCost ?? ref.stamina);
+  const characterXp = applyClearRewards(ref.id, reward, def.staminaCost ?? ref.stamina, ui.getActiveParty());
   const recruit = recruitForStage(ref.id);
   let recruitLine = "";
   if (recruit && tryRecruitBoss(recruit)) {
     recruitLine = ` · Recruited ${recruit.name}!`;
   }
   saveToLocalStorage();
-  const rewardLines = reward.lines.filter((line) => !line.endsWith(" XP"));
-  const xpLines = characterXp.map((entry) =>
-    entry.levelsGained > 0
-      ? `${entry.name} reached Job ${entry.job} Lv. ${entry.level}! (+${entry.xp} XP)`
-      : `${entry.name} +${entry.xp} XP`,
-  );
-  return `Cleared ${ref.name}! ${[...rewardLines, ...xpLines, `${reward.xp} party XP`, `${progress.coins} coins`].join(" · ")}${recruitLine}`;
+  return { stageName: ref.name + (recruitLine ? ` ·${recruitLine}` : ""), xp: characterXp, reward };
 }
 
 function hud(text?: string): void {
@@ -384,10 +380,19 @@ function hud(text?: string): void {
         : phase === "enemy"
           ? "Enemy turn…"
           : "Your turn";
-  const grantMsg = phase === "victory" ? tryGrantRewards() : undefined;
+  if (phase === "victory" && !resultsShown) {
+    const result = tryGrantRewards();
+    if (result) {
+      resultsShown = true;
+      const { chapter, stage } = ui.getSelectedStage();
+      ui.showLevelCompleted(`${chapter}.${stage}`, () =>
+        ui.showClearResults(result.stageName, result.xp, result.reward.items, result.reward.coins),
+      );
+      return;
+    }
+  }
   messageEl.textContent =
     text ??
-    grantMsg ??
     (phase === "victory"
       ? "Stage cleared. Press Restart to play again."
       : phase === "defeat"

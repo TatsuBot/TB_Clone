@@ -5,7 +5,7 @@
 
 import type { GrantedItem, RewardResult, RecruitBoss } from '@game/core';
 import { ownedCharacters } from './inventory';
-import { addCharacterJobXp, createCharacterInstance, CHARACTERS } from '@game/core';
+import { addCharacterJobXp, characterXpAtLevel, characterXpToNextLevel, createCharacterInstance, CHARACTERS } from '@game/core';
 
 export interface ProgressState {
   stamina: number;
@@ -24,7 +24,7 @@ export interface ProgressState {
   };
 }
 
-export const progress: ProgressState = {
+const STARTING_PROGRESS: Omit<ProgressState, 'lastClear'> = {
   stamina: 42,
   staminaMax: 50,
   energy: 18,
@@ -32,6 +32,13 @@ export const progress: ProgressState = {
   cleared: {},
   bag: {},
 };
+
+export const progress: ProgressState = structuredClone(STARTING_PROGRESS);
+
+export function resetProgress(): void {
+  Object.assign(progress, structuredClone(STARTING_PROGRESS));
+  delete progress.lastClear;
+}
 
 export function isCleared(stageId: string): boolean {
   return !!progress.cleared[stageId];
@@ -47,13 +54,13 @@ export function addItems(items: GrantedItem[]): void {
 export function applyClearRewards(
   stageId: string,
   reward: RewardResult,
-  staminaCost: number
-): { name: string; job: number; xp: number; level: number; levelsGained: number }[] {
+  staminaCost: number,
+  participants = ownedCharacters.slice(0, 6),
+): { name: string; job: number; xp: number; level: number; levelsGained: number; totalXp: number; xpIntoLevel: number; xpToNextLevel: number }[] {
   progress.cleared[stageId] = true;
   progress.coins += reward.coins;
   addItems(reward.items);
   progress.stamina = Math.max(0, progress.stamina - staminaCost);
-  const participants = ownedCharacters.slice(0, 6);
   const xpEach = participants.length > 0 ? Math.floor(reward.xp / participants.length) : 0;
   const remainder = participants.length > 0 ? reward.xp % participants.length : 0;
   const characterXp = participants.map((character, index) => {
@@ -69,6 +76,9 @@ export function applyClearRewards(
       xp: result.xpAwarded,
       level: character.jobLevels[job - 1],
       levelsGained: result.levelsGained,
+      totalXp: jobDef ? characterXpAtLevel(jobDef, character.jobLevels[job - 1]) + character.jobXp[job - 1] : 0,
+      xpIntoLevel: character.jobXp[job - 1],
+      xpToNextLevel: jobDef ? characterXpToNextLevel(jobDef, character.jobLevels[job - 1]) : 0,
     };
   });
   progress.lastClear = {

@@ -8,11 +8,13 @@ import { CHARACTERS, COMPANIONS, type CharacterInstance, type CompanionInstance 
 import {
   ownedCharacters,
   ownedCompanions,
+  resetInventory,
 } from './inventory';
-import { progress, progressSnapshot, applyProgressSnapshot } from './progress';
+import { progress, progressSnapshot, applyProgressSnapshot, resetProgress } from './progress';
 
 export const SAVE_VERSION = 1;
 const STORAGE_KEY = 'pincer-save-v1';
+const ARCHIVE_KEY = 'pincer-save-archive-v1';
 
 export interface SaveGame {
   version: number;
@@ -29,6 +31,38 @@ export interface SaveGame {
     cleared?: Record<string, boolean>;
     bag?: Record<string, number>;
   };
+}
+
+export interface ArchivedSaveFile {
+  filename: string;
+  modifiedAt: string;
+}
+
+export async function listArchivedSaves(): Promise<{ ok: true; saves: ArchivedSaveFile[] } | { ok: false }> {
+  try {
+    const response = await fetch('/__save-archives');
+    if (!response.ok) return { ok: false };
+    const saves = await response.json() as ArchivedSaveFile[];
+    return { ok: true, saves: Array.isArray(saves) ? saves : [] };
+  } catch {
+    return { ok: false };
+  }
+}
+
+export async function loadArchivedSave(filename: string): Promise<{ ok: true } | { ok: false; error: string }> {
+  if (!/^save-\d+\.json$/.test(filename)) return { ok: false, error: 'Invalid archived save name' };
+  try {
+    const response = await fetch(`/__save-archives/${encodeURIComponent(filename)}`);
+    if (!response.ok) return { ok: false, error: 'Could not read that archived save' };
+    const payload = await response.json() as { save?: SaveGame };
+    if (!payload.save) return { ok: false, error: 'Archived file has no save data' };
+    const result = applySave(payload.save);
+    if (!result.ok) return result;
+    saveToLocalStorage(payload.save.meta);
+    return { ok: true };
+  } catch {
+    return { ok: false, error: 'Could not load archived save' };
+  }
 }
 
 export function buildSave(meta?: SaveGame['meta']): SaveGame {
@@ -132,6 +166,65 @@ export function loadFromLocalStorage(): { ok: true; save: SaveGame } | { ok: fal
   } catch {
     return { ok: false };
   }
+}
+
+export function hasLocalSave(): boolean {
+  try { return localStorage.getItem(STORAGE_KEY) !== null; }
+  catch { return false; }
+}
+
+/** Archive the existing browser save, then clear it and restore the starter game state. */
+export async function archiveAndStartNewGame(): Promise<{ ok: true; archiveLocation?: 'saves' | 'download' } | { ok: false; error: string }> {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    let archiveLocation: 'saves' | 'download' = 'saves';
+    if (raw !== null) {
+      const previous: Array<{ archivedAt: string; save: string }> = JSON.parse(localStorage.getItem(ARCHIVE_KEY) ?? '[]');
+      const record = { archivedAt: new Date().toISOString(), save: raw };
+      previous.push(record);
+      const retained = previous.slice(-20);
+      try { localStorage.setItem(ARCHIVE_KEY, JSON.stringify(retained)); } catch { /* The file archive below remains the primary copy. */ }
+
+      let allStored = true;
+      for (const archived of retained) allStored = (await storeArchiveFile(archived)) && allStored;
+      if (allStored) {
+        localStorage.removeItem(ARCHIVE_KEY);
+      } else {
+        archiveLocation = 'download';
+        for (const archived of retained) downloadArchive(archived);
+      }
+      localStorage.removeItem(STORAGE_KEY);
+    }
+    resetInventory();
+    resetProgress();
+    return { ok: true, archiveLocation };
+  } catch {
+    return { ok: false, error: 'Could not archive the existing save. It was left untouched.' };
+  }
+}
+
+async function storeArchiveFile(record: { archivedAt: string; save: string }): Promise<boolean> {
+  try {
+    const response = await fetch('/__save-archive', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(record),
+    });
+    return response.ok;
+  } catch {
+    return false;
+  }
+}
+
+function downloadArchive(record: { archivedAt: string; save: string }): void {
+  const stamp = record.archivedAt.replace(/[^0-9]/g, '').slice(0, 17);
+  const blob = new Blob([JSON.stringify({ archivedAt: record.archivedAt, save: JSON.parse(record.save) }, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = `save-${stamp || Date.now()}.json`;
+  link.click();
+  URL.revokeObjectURL(url);
 }
 
 /** Trigger a browser download of the current save as JSON. */

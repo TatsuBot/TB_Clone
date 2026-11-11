@@ -42,20 +42,16 @@
       <div id="ui-screens" class="ui-screens">
         <!-- Title -->
         <div id="screen-title" class="ui-screen screen-title">
-          <div class="title-art">⚔️</div>
-          <div class="logo">Pincer</div>
-          <p class="tagline">A combat-first tactics clone</p>
-          <button id="btn-start" class="ui-btn large" type="button">
-            Start
-          </button>
-          <button
-            id="btn-continue"
-            class="ui-btn secondary large"
-            style="margin-top: 10px; display: none"
-            type="button"
-          >
-            Continue
-          </button>
+          <p class="title-kicker">TACTICAL ADVENTURE</p>
+          <div class="title-art" aria-hidden="true">TB</div>
+          <div class="logo">TB Clone</div>
+          <p class="tagline">Build your party. Enter the battle.</p>
+          <div class="title-actions">
+            <button id="btn-start" class="ui-btn large" type="button">Start New Game</button>
+            <button id="btn-continue" class="ui-btn large" style="display: none" type="button">Continue Game</button>
+            <button id="btn-restart-save" class="ui-btn secondary large title-restart" style="display: none" type="button">Archive Save &amp; Restart</button>
+          </div>
+          <p id="title-save-message" class="title-save-message" role="status"></p>
           <div class="version">v0.1.0 · Interfaces preview</div>
         </div>
 
@@ -122,14 +118,21 @@
           <button id="btn-start-battle" class="ui-btn large" type="button">
             Start Battle
           </button>
-          <button
-            class="ui-btn secondary large"
-            style="margin-top: 8px"
-            type="button"
-            disabled
-          >
-            Change Squad (soon)
+          <button id="btn-select-party" class="ui-btn secondary large" style="margin-top: 8px" type="button">
+            Select Party
           </button>
+        </div>
+
+        <div id="screen-party-select" class="ui-screen">
+          <div class="ui-header">
+            <button class="ui-back" id="btn-party-select-cancel" type="button">← Back</button>
+            <h1>Select Party</h1>
+          </div>
+          <p class="party-select-hint">Choose 2–6 adventurers for your active party.</p>
+          <p id="party-select-count" class="party-select-count"></p>
+          <div id="party-select-roster" class="party-select-roster"></div>
+          <p id="party-select-message" class="party-select-message" role="status"></p>
+          <button id="btn-party-select-confirm" class="ui-btn large" type="button">Use Selected Party</button>
         </div>
 
         <!-- Tavern -->
@@ -404,6 +407,7 @@
             >
               Load Game
             </button>
+            <div id="archived-saves" class="archived-saves" hidden></div>
             <p
               id="save-status"
               style="
@@ -418,17 +422,16 @@
 
         <!-- Results -->
         <div id="screen-results" class="ui-screen screen-results">
-          <div class="results-banner victory">Victory!</div>
-          <p style="color: var(--ui-muted)">Stage cleared</p>
-          <div class="results-rewards">
-            <div class="reward-row">
-              <span>Experience</span><span>+1,240</span>
-            </div>
-            <div class="reward-row"><span>Coins</span><span>+850</span></div>
-            <div class="reward-row">
-              <span>Items</span><span>Iron Ore ×2</span>
-            </div>
-          </div>
+          <div class="results-banner victory">Stage Clear!</div>
+          <p id="results-stage-name" style="color: var(--ui-muted)">Rewards</p>
+          <section class="results-section">
+            <h3>Adventurer Experience</h3>
+            <div id="results-xp" class="results-rewards"></div>
+          </section>
+          <section class="results-section">
+            <h3>Loot</h3>
+            <div id="results-loot" class="results-rewards"></div>
+          </section>
           <button id="btn-results-continue" class="ui-btn large" type="button">
             Continue
           </button>
@@ -465,7 +468,13 @@
         </button>
       </header>
       <div id="timer"><div id="timer-bar"></div></div>
-      <div id="stage"><canvas id="board"></canvas></div>
+      <div id="stage"><canvas id="board"></canvas>
+        <button id="level-completed-overlay" class="level-completed-overlay" type="button" hidden>
+          <span>Level Completed</span>
+          <strong id="level-completed-number"></strong>
+          <small>Click to continue</small>
+        </button>
+      </div>
       <p id="message"></p>
       <aside
         id="unit-description"

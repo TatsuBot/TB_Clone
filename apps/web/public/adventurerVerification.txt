@@ -1,0 +1,203 @@
+Adventurer	Verified
+36AIS	Y
+54B2	Y
+A'merpact	Y
+A'merpact Λ	Y
+A'misandra	Y
+A'misandra Λ	Y
+Alika	Y
+Alika Λ	Y
+Amazora	Y
+Amazora Λ	Y
+Amimari	Y
+Amina	Y
+Amina Λ	Y
+Andelucia	Y
+Andelucia Λ	Y
+Annu	Y
+Arionne	Y
+Ashe	Y
+Ba'gunar	Y
+Ba'gunar Λ	Y
+Bahamut	Y
+Bahamut Λ	Y
+Bahl	Y
+Bahl Λ	Y
+Bajanna	Y
+Beau'ne	Y
+Beau'ne Λ	Y
+Bonna	Y
+Bonna Λ	Y
+Burbaba	Y
+Burbaba Λ	Y
+Calista	Y
+Camellia	Y
+Camellia Λ	Y
+Captive Golem	Y
+Chirol	Y
+Clara	Y
+Clara Λ	Y
+Czekras	Y
+Dahlia	Y
+Daiana	Y
+Daiana Λ	Y
+Djagos	Y
+Djugan	Y
+Djugan Λ	Y
+Dracorin	Y
+Dracorin Λ	Y
+Echo	Y
+Echo Λ	Y
+Edg'low	Y
+Eileen	Y
+Eileen Λ	Y
+Elga	Y
+Ella Λ	Y
+Ellvern	Y
+Ellvern Λ	Y
+Engi	Y
+Feno	Y
+Feno Λ	Y
+Gaiga	Y
+Gatz	Y
+Gatz Λ	Y
+Gegonago	Y
+Gegonago Λ	Y
+Gigojago	Y
+Gigojago Λ	Y
+Ginny	Y
+Ginny Λ	Y
+Grace	Y
+Grace Λ	Y
+Gugba	Y
+Haggo	Y
+Hakann	Y
+Harold	Y
+Haruhikari	Y
+Invincible	Y
+Invincible Λ	Y
+Iskar	Y
+Jade Dragon	Y
+Jag	Y
+Jaguna	Y
+Jaguna Λ	Y
+Jennish	Y
+Jennish Λ	Y
+Ka'pori	Y
+Kana	Y
+Kem	Y
+Kem Λ	Y
+Kir'ue	Y
+Koh	Y
+Koko	Y
+Koko Λ	Y
+Korin	Y
+Korin Λ	Y
+Kuscah	Y
+Lacuma	Y
+Lacuma Λ	Y
+Leviathan	Y
+Leviathan Λ	Y
+Lew	Y
+Lewto	Y
+Lewto Λ	Y
+Lich Λ	Y
+Lio	Y
+Lucia	Y
+Lucia Λ	Y
+Lunaken	Y
+Lunato	Y
+Ma'curi	N
+Maldor	N
+Manmer	N
+Maralme	N
+Marcus	N
+Marilith Λ	N
+Metupí	N
+Mizell	Y
+Mizell Λ	Y
+Mizury	N
+Mogha	N
+Morgana	N
+Mutoh Λ	N
+Myne	N
+Nakupí	Y
+Nakupí Λ	Y
+Nazuna	Y
+Nazuna Λ	Y
+Nephrite Dragon	N
+Nia	Y
+Nia Λ	Y
+Noctis	N
+O'pari	N
+Odin	Y
+Odin Λ	Y
+Okklitot	N
+Olber	Y
+Olber Λ	Y
+Pahrl	N
+Pahrl Λ	N
+Palpa	Y
+Palpa Λ	Y
+Peyrna	N
+Piz'fer	N
+Piz'fer Λ	Y
+Pupropu	N
+Pupropé	Y
+Pupropé Λ	Y
+Pupru	N
+R'zonand	N
+Ra'prow	N
+Ra'prow Λ	N
+Rejin	Y
+Rejin Λ	Y
+Renova	N
+Rikken	N
+Roland	N
+Rowlow	N
+Ryoma	N
+S'naip	N
+S'naip Λ	N
+Samatha	Y
+Samatha Λ	Y
+Samupí	N
+Sayu	Y
+Sayu Λ	Y
+Scarlet	N
+Schweiz	N
+Seiryu	Y
+Seiryu Λ	Y
+Senala	Y
+Senala Λ	Y
+Sh'berdan	N
+Sh'berdan Λ	N
+Sha'plar	Y
+Sha'plar Λ	Y
+Shay	N
+Sheena	N
+Shin'en Λ	N
+Sorman	N
+Suoh	Y
+Suoh Λ	Y
+Tronic Gal	N
+Tsutsura	N
+U'nasag	N
+Varve	N
+Velraine	N
+Velraine Λ	N
+Violet	N
+Y'apkar	N
+Yukken	Y
+Yukken Λ	Y
+Yulia	N
+Zael	N
+Zafitte	Y
+Zafitte Λ	Y
+Zaldor	N
+Zan	N
+Zavison	N
+Zeera	N
+Zenzoze	N
+Zerro	Y
+Zerro Λ	Y
+Zuzu	N

@@ -1,7 +1,7 @@
 import { Board } from './board';
 import type { UnitStats } from './types';
 
-export type StatOverrides = Record<string, Partial<UnitStats>>;
+export type StatOverrides = Record<string, Partial<UnitStats> & { hp?: number }>;
 
 /**
  * Build a board from text. Tokens are separated by spaces:
@@ -20,7 +20,7 @@ export function parseBoard(rows: string[], stats: StatOverrides = {}): Board {
 
   const make = (id: string, side: 'ally' | 'enemy', w = 1, h = 1) => {
     const base: UnitStats = { maxHp: 100, atk: 10, def: 0, ...stats[id] };
-    return { id, name: id, side, stats: base, hp: base.maxHp, w, h };
+    return { id, name: id, side, stats: base, hp: stats[id]?.hp ?? base.maxHp, w, h };
   };
 
   grid.forEach((row, r) =>

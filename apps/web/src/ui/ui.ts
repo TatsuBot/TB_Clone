@@ -23,8 +23,9 @@ import {
   getCharacterDef,
   type CharacterInstance,
 } from './inventory';
-import { downloadSave, promptLoadSave, loadFromLocalStorage, saveToLocalStorage } from './save';
+import { archiveAndStartNewGame, downloadSave, hasLocalSave, listArchivedSaves, loadArchivedSave, promptLoadSave, loadFromLocalStorage, saveToLocalStorage } from './save';
 import { isCleared, progress } from './progress';
+import type { GrantedItem } from '@game/core';
 import { rollPact, addEnergy, type PactId } from './tavern';
 import { reportFatal } from '../errors';
 
@@ -40,6 +41,9 @@ export class UI {
   private selectedCharUid: string | null = null;
   private pickingCompanion = false;
   private onEnterBattle: (() => void) | null = null;
+  private resultsContinueTarget: ScreenId = 'map';
+  private activePartyUids = ownedCharacters.slice(0, 6).map((c) => c.uid);
+  private draftPartyUids: string[] = [];
 
   constructor() {
     this.root = document.getElementById('ui-root')!;
@@ -66,6 +70,13 @@ export class UI {
 
   getSelectedStage(): { chapter: number; stage: number } {
     return { chapter: this.selectedChapter, stage: this.selectedStage };
+  }
+
+  getActiveParty(): CharacterInstance[] {
+    const selected = this.activePartyUids
+      .map((uid) => ownedCharacters.find((c) => c.uid === uid))
+      .filter((c): c is CharacterInstance => !!c);
+    return selected.length ? selected : ownedCharacters.slice(0, 6);
   }
 
   show(id: ScreenId): void {
@@ -145,7 +156,23 @@ export class UI {
       }
     });
 
-    document.getElementById('btn-results-continue')?.addEventListener('click', () => this.show('map'));
+    document.getElementById('btn-select-party')?.addEventListener('click', () => {
+      this.draftPartyUids = this.getActiveParty().map((c) => c.uid);
+      this.show('party-select');
+    });
+    document.getElementById('btn-party-select-cancel')?.addEventListener('click', () => this.show('pre-battle'));
+    document.getElementById('btn-party-select-confirm')?.addEventListener('click', () => {
+      const message = document.getElementById('party-select-message');
+      if (this.draftPartyUids.length < 2) {
+        if (message) message.textContent = 'Select at least two adventurers to form a battle party.';
+        return;
+      }
+      this.activePartyUids = [...this.draftPartyUids];
+      saveToLocalStorage();
+      this.show('pre-battle');
+    });
+
+    document.getElementById('btn-results-continue')?.addEventListener('click', () => this.show(this.resultsContinueTarget));
 
     document.querySelectorAll('.toggle').forEach((el) => {
       el.addEventListener('click', () => el.classList.toggle('on'));
@@ -167,6 +194,36 @@ export class UI {
     });
 
     document.getElementById('btn-load-game')?.addEventListener('click', async () => {
+      const box = document.getElementById('archived-saves');
+      if (box) {
+        box.hidden = true;
+        box.innerHTML = '';
+      }
+      const archived = await listArchivedSaves();
+      if (archived.ok && archived.saves.length > 0 && box) {
+        box.innerHTML = `<div class="archived-saves-title">Archived saves</div>${archived.saves.map((save) =>
+          `<button class="archived-save-option" type="button" data-archive-file="${save.filename}">${new Date(save.modifiedAt).toLocaleString()}</button>`,
+        ).join('')}`;
+        box.hidden = false;
+        box.querySelectorAll<HTMLButtonElement>('[data-archive-file]').forEach((button) => {
+          button.addEventListener('click', async () => {
+            const filename = button.dataset.archiveFile;
+            if (!filename) return;
+            const loaded = await loadArchivedSave(filename);
+            if (loaded.ok) {
+              box.hidden = true;
+              this.setSaveStatus('Loaded archived save.');
+              if (this.current === 'party' || this.current === 'character-detail' || this.current === 'pre-battle') this.renderScreen(this.current);
+              this.refreshStatusBar();
+            } else {
+              this.setSaveStatus(loaded.error);
+            }
+          });
+        });
+        this.setSaveStatus('Choose an archived save to load.');
+        return;
+      }
+
       const result = await promptLoadSave();
       if (result.ok) {
         this.setSaveStatus('Loaded save file.');
@@ -174,6 +231,7 @@ export class UI {
         if (this.current === 'party' || this.current === 'character-detail' || this.current === 'pre-battle') {
           this.renderScreen(this.current);
         }
+        this.refreshStatusBar();
       } else {
         this.setSaveStatus(result.error);
       }
@@ -182,14 +240,73 @@ export class UI {
     document.getElementById('btn-continue')?.addEventListener('click', () => {
       this.show('hub');
     });
+    document.getElementById('btn-restart-save')?.addEventListener('click', async () => {
+      const result = await archiveAndStartNewGame();
+      if (!result.ok) {
+        const message = document.getElementById('title-save-message');
+        if (message) message.textContent = result.error;
+        return;
+      }
+      this.activePartyUids = ownedCharacters.slice(0, 6).map((c) => c.uid);
+      this.draftPartyUids = [];
+      this.configureTitleActions(false, false);
+      this.show('hub');
+    });
+  }
+
+  showLevelCompleted(levelNumber: string, onContinue: () => void): void {
+    const overlay = document.getElementById('level-completed-overlay') as HTMLButtonElement | null;
+    const number = document.getElementById('level-completed-number');
+    if (!overlay || !number) return;
+    number.textContent = levelNumber;
+    overlay.onclick = () => {
+      overlay.hidden = true;
+      onContinue();
+    };
+    overlay.hidden = false;
+  }
+
+  hideLevelCompleted(): void {
+    const overlay = document.getElementById('level-completed-overlay');
+    if (overlay) overlay.hidden = true;
+  }
+
+  showClearResults(stageName: string, xp: { name: string; job: number; xp: number; level: number; levelsGained: number; totalXp: number; xpIntoLevel: number; xpToNextLevel: number }[], items: GrantedItem[], coins: number): void {
+    this.resultsContinueTarget = 'map';
+    const title = document.getElementById('results-stage-name');
+    const xpList = document.getElementById('results-xp');
+    const lootList = document.getElementById('results-loot');
+    if (title) title.textContent = `${stageName} cleared`;
+    if (xpList) xpList.innerHTML = xp.length ? xp.map((entry) => {
+      const maxed = entry.xpToNextLevel === 0;
+      const percent = maxed ? 100 : Math.min(100, Math.round((entry.xpIntoLevel / entry.xpToNextLevel) * 100));
+      return `<div class="results-xp-entry">
+        <div class="results-xp-heading"><strong>${entry.name}</strong><strong>+${entry.xp.toLocaleString()} XP</strong></div>
+        <div class="results-xp-meta">Job ${entry.job} · Lv. ${entry.level}${entry.levelsGained ? ` · Level up +${entry.levelsGained}` : ''} · Total ${entry.totalXp.toLocaleString()} XP</div>
+        <div class="results-xp-meta">${maxed ? 'Maximum level' : `${entry.xpIntoLevel.toLocaleString()} / ${entry.xpToNextLevel.toLocaleString()} XP to next level`}</div>
+        <div class="xp-progress-track"><div class="xp-progress-fill ${maxed ? 'maxed' : ''}" style="width:${percent}%"></div></div>
+      </div>`;
+    }).join('') : '<div class="results-empty">No adventurers received experience.</div>';
+    if (lootList) {
+      const rows = [`<div class="reward-row"><span>Coins</span><strong>+${coins.toLocaleString()}</strong></div>`, ...items.map((item) => `<div class="reward-row"><span>${item.name}</span><strong>×${item.qty}</strong></div>`)];
+      lootList.innerHTML = rows.join('');
+    }
+    this.show('results');
   }
 
   private tryLoadAutosave(): void {
     const result = loadFromLocalStorage();
+    const exists = hasLocalSave();
+    this.configureTitleActions(exists, result.ok);
+  }
+
+  private configureTitleActions(saveExists: boolean, canContinue: boolean): void {
+    const start = document.getElementById('btn-start');
     const cont = document.getElementById('btn-continue');
-    if (result.ok && cont) {
-      cont.style.display = 'block';
-    }
+    const restart = document.getElementById('btn-restart-save');
+    if (start) start.style.display = canContinue ? 'none' : 'inline-flex';
+    if (cont) cont.style.display = canContinue ? 'inline-flex' : 'none';
+    if (restart) restart.style.display = saveExists ? 'inline-flex' : 'none';
   }
 
   private setSaveStatus(msg: string): void {
@@ -239,6 +356,7 @@ export class UI {
     if (id === 'map') this.renderMap();
     if (id === 'stage-select') this.renderStageSelect();
     if (id === 'pre-battle') this.renderPreBattle();
+    if (id === 'party-select') this.renderPartySelect();
     if (id === 'party') this.renderParty();
     if (id === 'character-detail') this.renderCharacterDetail();
   }
@@ -337,8 +455,7 @@ export class UI {
         <span class="stage-stars">${'★'.repeat(difficulty)}</span>
       </div>`;
 
-    // Show first 6 owned characters as the squad
-    slots.innerHTML = ownedCharacters.slice(0, 6)
+    slots.innerHTML = this.getActiveParty()
       .map((inst) => {
         const def = getCharacterDef(inst);
         if (!def) return '';
@@ -352,6 +469,39 @@ export class UI {
       </div>`;
       })
       .join('');
+  }
+
+  private renderPartySelect(): void {
+    const roster = document.getElementById('party-select-roster');
+    const count = document.getElementById('party-select-count');
+    const message = document.getElementById('party-select-message');
+    if (!roster || !count) return;
+    if (message) message.textContent = '';
+    count.textContent = `${this.draftPartyUids.length} / 6 selected`;
+    roster.innerHTML = ownedCharacters.map((inst) => {
+      const def = getCharacterDef(inst);
+      if (!def) return '';
+      const job = def.jobs[inst.activeJob - 1];
+      const selected = this.draftPartyUids.includes(inst.uid);
+      const level = inst.jobLevels[inst.activeJob - 1];
+      return `<button class="party-select-card ${selected ? 'selected' : ''}" type="button" data-party-uid="${inst.uid}" aria-pressed="${selected}">
+        <span class="portrait">${weaponEmoji(job.weapon)}</span>
+        <span class="party-select-name">${def.name}</span>
+        <span class="party-select-level">${def.rarity} · Lv.${level}</span>
+        <span class="party-select-state">${selected ? 'In party' : 'Add to party'}</span>
+      </button>`;
+    }).join('');
+    roster.querySelectorAll<HTMLButtonElement>('[data-party-uid]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const uid = button.dataset.partyUid;
+        if (!uid) return;
+        const index = this.draftPartyUids.indexOf(uid);
+        if (index >= 0) this.draftPartyUids.splice(index, 1);
+        else if (this.draftPartyUids.length < 6) this.draftPartyUids.push(uid);
+        else if (message) message.textContent = 'A party can have up to six adventurers.';
+        this.renderPartySelect();
+      });
+    });
   }
 
   private renderParty(): void {

@@ -13,33 +13,29 @@ import {
 
 export type { CharacterInstance, CompanionInstance };
 
-/** Starter owned companions at various levels. */
-export const ownedCompanions: CompanionInstance[] = [
-  createInstance('fire_visor', 7),
-  createInstance('fire_visor', 3),
-  createInstance('healing_ring', 10),
-  createInstance('healing_ring', 5),
-  createInstance('white_pendant', 12),
-  createInstance('silver_sword', 15),
-  createInstance('combat_shield', 10),
-  createInstance('punishers', 8),
-  createInstance('metal_minion', 1),
-  createInstance('hisos_tear', 5),
-];
+export const ownedCompanions: CompanionInstance[] = [];
+export const ownedCharacters: CharacterInstance[] = [];
 
-/** Starter roster the player "owns". */
-export const ownedCharacters: CharacterInstance[] = [
-  createCharacterInstance('bahl', { levels: [12, 1, 1] }),
-  createCharacterInstance('grace', { levels: [11, 1, 1] }),
-  createCharacterInstance('kuscah', { levels: [10, 1, 1] }),
-  createCharacterInstance('samatha', { levels: [18, 5, 1] }),
-  createCharacterInstance('ellvern', { levels: [14, 1, 1] }),
-  createCharacterInstance('palpa', { levels: [12, 1, 1] }),
-  createCharacterInstance('amina', { levels: [9, 1, 1] }),
-];
+/** Restore the starter roster while preserving references held by UI modules. */
+export function resetInventory(): void {
+  ownedCompanions.splice(0, ownedCompanions.length,
+    createInstance('fire_visor', 7), createInstance('fire_visor', 3),
+    createInstance('healing_ring', 10), createInstance('healing_ring', 5),
+    createInstance('white_pendant', 12), createInstance('silver_sword', 15),
+    createInstance('combat_shield', 10), createInstance('punishers', 8),
+    createInstance('metal_minion', 1), createInstance('hisos_tear', 5));
+  ownedCharacters.splice(0, ownedCharacters.length,
+    createCharacterInstance('bahl', { levels: [12, 1, 1] }),
+    createCharacterInstance('grace', { levels: [11, 1, 1] }),
+    createCharacterInstance('kuscah', { levels: [10, 1, 1] }),
+    createCharacterInstance('samatha', { levels: [18, 5, 1] }),
+    createCharacterInstance('ellvern', { levels: [14, 1, 1] }),
+    createCharacterInstance('palpa', { levels: [12, 1, 1] }),
+    createCharacterInstance('amina', { levels: [9, 1, 1] }));
+  ownedCharacters[0].companionUid = ownedCompanions[0].uid;
+}
 
-// Equip Fire Visor on Bahl by default
-ownedCharacters[0].companionUid = ownedCompanions[0].uid;
+resetInventory();
 
 export function companionByUid(uid: string | undefined): CompanionInstance | undefined {
   if (!uid) return undefined;
