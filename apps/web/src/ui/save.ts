@@ -30,7 +30,18 @@ export interface SaveGame {
     coins?: number;
     cleared?: Record<string, boolean>;
     bag?: Record<string, number>;
+    partyUids?: string[];
   };
+}
+
+let savedPartyUids: string[] = [];
+
+export function setSavedPartyUids(uids: string[]): void {
+  savedPartyUids = [...uids];
+}
+
+export function getSavedPartyUids(): string[] {
+  return [...savedPartyUids];
 }
 
 export interface ArchivedSaveFile {
@@ -50,18 +61,37 @@ export async function listArchivedSaves(): Promise<{ ok: true; saves: ArchivedSa
 }
 
 export async function loadArchivedSave(filename: string): Promise<{ ok: true } | { ok: false; error: string }> {
-  if (!/^save-\d+\.json$/.test(filename)) return { ok: false, error: 'Invalid archived save name' };
+  if (filename !== 'current-save.json' && !/^save-\d+\.json$/.test(filename)) return { ok: false, error: 'Invalid saved game name' };
   try {
     const response = await fetch(`/__save-archives/${encodeURIComponent(filename)}`);
     if (!response.ok) return { ok: false, error: 'Could not read that archived save' };
-    const payload = await response.json() as { save?: SaveGame };
-    if (!payload.save) return { ok: false, error: 'Archived file has no save data' };
-    const result = applySave(payload.save);
+    const payload = await response.json() as SaveGame | { save?: SaveGame };
+    const save = payload && typeof payload === 'object' && 'save' in payload && payload.save
+      ? payload.save
+      : payload as SaveGame;
+    const result = applySave(save);
     if (!result.ok) return result;
-    saveToLocalStorage(payload.save.meta);
+    saveToLocalStorage(save.meta);
     return { ok: true };
   } catch {
     return { ok: false, error: 'Could not load archived save' };
+  }
+}
+
+/** Write the current manual save into the project-level saves directory. */
+export async function saveToProjectFolder(): Promise<{ ok: true } | { ok: false; error: string }> {
+  const save = buildSave();
+  try {
+    const response = await fetch('/__save-current', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(save),
+    });
+    if (!response.ok) return { ok: false, error: 'Project save folder is unavailable' };
+    saveToLocalStorage();
+    return { ok: true };
+  } catch {
+    return { ok: false, error: 'Project save folder is unavailable' };
   }
 }
 
@@ -79,6 +109,7 @@ export function buildSave(meta?: SaveGame['meta']): SaveGame {
       coins: snap.coins,
       cleared: snap.cleared,
       bag: snap.bag,
+      partyUids: savedPartyUids,
     },
   };
 }
@@ -127,6 +158,12 @@ export function applySave(data: SaveGame): { ok: true } | { ok: false; error: st
   }));
   const companions = data.companions.filter(isUsableCompanion);
   if (characters.length === 0) return { ok: false, error: 'Save has no usable characters' };
+
+  const validUids = new Set(characters.map((character) => character.uid));
+  savedPartyUids = Array.isArray(data.meta?.partyUids)
+    ? data.meta.partyUids.filter((uid): uid is string => typeof uid === 'string' && validUids.has(uid)).slice(0, 6)
+    : [];
+  if (savedPartyUids.length === 0) savedPartyUids = characters.slice(0, 6).map((character) => character.uid);
 
   // An equipped companion that no longer exists is simply unequipped.
   const companionUids = new Set(companions.map((c) => c.uid));
@@ -256,7 +293,10 @@ export function promptLoadSave(): Promise<{ ok: true } | { ok: false; error: str
       const reader = new FileReader();
       reader.onload = () => {
         try {
-          const data = JSON.parse(String(reader.result)) as SaveGame;
+          const parsed = JSON.parse(String(reader.result)) as SaveGame | { save?: SaveGame };
+          const data = parsed && typeof parsed === 'object' && 'save' in parsed && parsed.save
+            ? parsed.save
+            : parsed as SaveGame;
           const result = applySave(data);
           if (result.ok) {
             saveToLocalStorage(data.meta);

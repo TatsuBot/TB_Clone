@@ -27,9 +27,12 @@ function score(board: Board, at: Pos): number {
 export function runEnemyMoves(board: Board, rng: Rng): EnemyMove[] {
   const moves: EnemyMove[] = [];
   if (board.unitsOf('ally').length === 0) return moves;
+  const establishedPincers = detectPincers(board, 'enemy').pincering;
 
   for (const enemy of board.unitsOf('enemy')) {
     if (enemy.w !== 1 || enemy.h !== 1) continue;
+    // Keep a pincer that is already in position intact so it can resolve this turn.
+    if (establishedPincers.has(enemy.id)) continue;
     const from = board.originOf(enemy.id);
     let best: { to: Pos; score: number } | null = null;
     const stay = score(board, from);

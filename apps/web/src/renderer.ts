@@ -110,9 +110,10 @@ export class Renderer {
    * damage numbers update as they land, and defeated units stay on screen until their step ends.
    * Returns how long the playback takes in ms so the caller can wait before the next phase.
    */
-  playResolution(res: Resolution, now: number): number {
-    const HIT_MS = 120;
-    const STEP_PAUSE_MS = 450;
+  playResolution(res: Resolution, now: number, speed = 1): number {
+    const playbackScale = 1 / Math.max(0.1, speed);
+    const HIT_MS = 120 * playbackScale;
+    const STEP_PAUSE_MS = 450 * playbackScale;
     const board = this.getBoard();
 
     const before = new Map<string, number>();
@@ -141,7 +142,7 @@ export class Renderer {
           run: (nowRun) => {
             this.flash.set(a.attacker, nowRun + 220);
             this.shownHp.set(a.target, Math.max(0, a.targetHp));
-            if (origin) {
+            if (origin && (a.effect !== "levitation" || a.target === a.attacker)) {
               let text = `-${a.damage}`;
               let color = "#ffffff";
               if (a.effect === "heal") {
@@ -156,6 +157,9 @@ export class Renderer {
               } else if (a.effect === "cure") {
                 text = "Cured!";
                 color = "#38bdf8";
+              } else if (a.effect === "levitation") {
+                text = "LEVITATE";
+                color = "#67e8f9";
               }
               this.floats.push({
                 text,
@@ -177,6 +181,34 @@ export class Renderer {
         }),
       );
     }
+    for (const [i, attack] of (res.directAttacks ?? []).entries()) {
+      const at = now + t + i * HIT_MS;
+      const origin = board.hasUnit(attack.target)
+        ? board.originOf(attack.target)
+        : res.directFallen?.find((fallen) => fallen.unit.id === attack.target)?.origin;
+      this.queue.push({
+        at,
+        run: (nowRun) => {
+          this.flash.set(attack.attacker, nowRun + 220);
+          this.shownHp.set(attack.target, Math.max(0, attack.targetHp));
+          if (origin) {
+            this.floats.push({
+              text: `-${attack.damage}`,
+              x: (origin.col + 0.5) * this.cell,
+              y: (origin.row + 0.3) * this.cell,
+              born: nowRun,
+              color: "#ffffff",
+            });
+          }
+        },
+      });
+    }
+    t += (res.directAttacks?.length ?? 0) * HIT_MS;
+    res.directFallen?.forEach((fallen) => this.ghosts.push({
+      unit: fallen.unit,
+      origin: fallen.origin,
+      until: now + t,
+    }));
     this.queue.push({ at: now + t, run: () => this.shownHp.clear() });
     return t;
   }

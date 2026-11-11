@@ -33,6 +33,23 @@ export function jobUnlockCost(
   };
 }
 
+/** Prefer the character's data-defined job cost, with the rarity estimate as fallback. */
+export function jobUnlockCostForCharacter(
+  charUid: string,
+  targetJob: 2 | 3,
+): { coins: number; items: Array<{ itemId: string; qty: number }> } | undefined {
+  const character = ownedCharacters.find((candidate) => candidate.uid === charUid);
+  const def = character ? CHARACTERS[character.defId] : undefined;
+  const job = def?.jobs.find((candidate) => candidate.jobIndex === targetJob);
+  if (!character || !def || !job) return undefined;
+  return job.unlockCost
+    ? {
+        coins: job.unlockCost.coins,
+        items: job.unlockCost.items.map((item) => ({ itemId: item.id, qty: item.qty })),
+      }
+    : jobUnlockCost(def.rarity, targetJob);
+}
+
 function hasItems(need: Array<{ itemId: string; qty: number }>): boolean {
   return need.every((n) => (progress.bag[n.itemId] ?? 0) >= n.qty);
 }
@@ -61,7 +78,8 @@ export function unlockNextJob(charUid: string): JobUnlockResult {
   if (!def.jobs.some((j) => j.jobIndex === target)) {
     return { ok: false, error: `No Job ${target} defined for ${def.name}` };
   }
-  const cost = jobUnlockCost(def.rarity, target);
+  const cost = jobUnlockCostForCharacter(charUid, target);
+  if (!cost) return { ok: false, error: `No Job ${target} defined for ${def.name}` };
   if (progress.coins < cost.coins) {
     return { ok: false, error: `Need ${cost.coins} coins` };
   }

@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
-import { mkdir, readFile, readdir, stat, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, readdir, stat, unlink, writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 
 const saveDirectory = fileURLToPath(new URL('../../saves/', import.meta.url));
@@ -13,12 +13,12 @@ function saveArchiveEndpoint() {
         if (pathname === '/__save-archives' && req.method === 'GET') {
           void (async () => {
             try {
-              const files = (await readdir(saveDirectory)).filter((name) => /^save-\d+\.json$/.test(name));
+              const files = (await readdir(saveDirectory)).filter((name) => name === 'current-save.json' || /^save-\d+\.json$/.test(name));
               const saves = await Promise.all(files.map(async (filename) => ({
                 filename,
                 modifiedAt: (await stat(`${saveDirectory}/${filename}`)).mtime.toISOString(),
               })));
-              saves.sort((a, b) => b.modifiedAt.localeCompare(a.modifiedAt));
+              saves.sort((a, b) => a.filename === 'current-save.json' ? -1 : b.filename === 'current-save.json' ? 1 : b.modifiedAt.localeCompare(a.modifiedAt));
               res.setHeader('Content-Type', 'application/json');
               res.end(JSON.stringify(saves));
             } catch (error) {
@@ -40,7 +40,7 @@ function saveArchiveEndpoint() {
             return;
           }
           const filename = decodeURIComponent(pathname.slice('/__save-archives/'.length));
-          if (!/^save-\d+\.json$/.test(filename)) {
+          if (filename !== 'current-save.json' && !/^save-\d+\.json$/.test(filename)) {
             res.statusCode = 400;
             res.end('Invalid save filename');
             return;
@@ -51,6 +51,48 @@ function saveArchiveEndpoint() {
           }).catch(() => {
             res.statusCode = 404;
             res.end('Archived save not found');
+          });
+          return;
+        }
+        if (pathname === '/__save-current') {
+          if (req.method !== 'POST') {
+            res.statusCode = 405;
+            res.end('Method not allowed');
+            return;
+          }
+          const decoder = new TextDecoder();
+          let body = '';
+          let size = 0;
+          req.on('data', (chunk: Uint8Array) => {
+            size += chunk.length;
+            if (size > 5_000_000) {
+              res.statusCode = 413;
+              res.end('Save is too large');
+              req.destroy();
+              return;
+            }
+            body += decoder.decode(chunk, { stream: true });
+          });
+          req.on('end', async () => {
+            try {
+              body += decoder.decode();
+              const save = JSON.parse(body) as { version?: number; characters?: unknown[]; companions?: unknown[] };
+              if (save.version !== 1 || !Array.isArray(save.characters) || !Array.isArray(save.companions)) {
+                throw new Error('Invalid save');
+              }
+              await mkdir(saveDirectory, { recursive: true });
+              const currentSavePath = `${saveDirectory}/current-save.json`;
+              try { await unlink(currentSavePath); } catch (error) {
+                if ((error as { code?: string }).code !== 'ENOENT') throw error;
+              }
+              await writeFile(currentSavePath, JSON.stringify(save, null, 2), { flag: 'wx' });
+              res.statusCode = 200;
+              res.setHeader('Content-Type', 'application/json');
+              res.end(JSON.stringify({ ok: true }));
+            } catch {
+              res.statusCode = 400;
+              res.end('Could not save game');
+            }
           });
           return;
         }

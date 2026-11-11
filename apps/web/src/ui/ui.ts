@@ -10,6 +10,8 @@ import {
   charStatsAtLevel,
   characterXpToNextLevel,
   skillsUnlocked,
+  addCharacterJobXp,
+  ITEMS,
   cycleWeaponAdvantagePreset,
   getWeaponAdvantageMultiplier,
 } from '@game/core';
@@ -23,11 +25,13 @@ import {
   getCharacterDef,
   type CharacterInstance,
 } from './inventory';
-import { archiveAndStartNewGame, downloadSave, hasLocalSave, listArchivedSaves, loadArchivedSave, promptLoadSave, loadFromLocalStorage, saveToLocalStorage } from './save';
+import { archiveAndStartNewGame, downloadSave, getSavedPartyUids, hasLocalSave, listArchivedSaves, loadArchivedSave, promptLoadSave, loadFromLocalStorage, saveToLocalStorage, saveToProjectFolder, setSavedPartyUids } from './save';
 import { isCleared, progress } from './progress';
 import type { GrantedItem } from '@game/core';
-import { rollPact, addEnergy, type PactId } from './tavern';
+import { rollPact, addEnergy, getPactPool, type PactId } from './tavern';
+import { jobUnlockCostForCharacter, setActiveJob, unlockNextJob } from './tavernJobs';
 import { reportFatal } from '../errors';
+import { cycleBattleSpeed, formatBattleSpeed } from './settings';
 
 /** Simple screen router + UI shell for the meta-game interfaces. */
 export class UI {
@@ -44,6 +48,10 @@ export class UI {
   private resultsContinueTarget: ScreenId = 'map';
   private activePartyUids = ownedCharacters.slice(0, 6).map((c) => c.uid);
   private draftPartyUids: string[] = [];
+  private pendingPartySwapUid: string | null = null;
+  private partySwapFeedback: string | null = null;
+  private recentlySwappedInUid: string | null = null;
+  private jobActionMessage = '';
 
   constructor() {
     this.root = document.getElementById('ui-root')!;
@@ -76,7 +84,13 @@ export class UI {
     const selected = this.activePartyUids
       .map((uid) => ownedCharacters.find((c) => c.uid === uid))
       .filter((c): c is CharacterInstance => !!c);
-    return selected.length ? selected : ownedCharacters.slice(0, 6);
+    if (selected.length) return selected;
+    const fallback = ownedCharacters.slice(0, 6);
+    // Saves may load after this UI field is initialized; adopt the fallback so swaps
+    // and party selection have real source indices from the first render.
+    this.activePartyUids = fallback.map((character) => character.uid);
+    setSavedPartyUids(this.activePartyUids);
+    return fallback;
   }
 
   show(id: ScreenId): void {
@@ -168,6 +182,7 @@ export class UI {
         return;
       }
       this.activePartyUids = [...this.draftPartyUids];
+      setSavedPartyUids(this.activePartyUids);
       saveToLocalStorage();
       this.show('pre-battle');
     });
@@ -176,6 +191,10 @@ export class UI {
 
     document.querySelectorAll('.toggle').forEach((el) => {
       el.addEventListener('click', () => el.classList.toggle('on'));
+    });
+
+    document.querySelectorAll<HTMLSelectElement>('#character-recode-filter, #character-rarity-filter').forEach((select) => {
+      select.addEventListener('change', () => this.renderParty());
     });
 
     const advRow = document.getElementById('row-weapon-advantage');
@@ -188,9 +207,39 @@ export class UI {
       if (advVal) advVal.textContent = `×${mult.toFixed(2).replace(/\.00$/, '')}`;
     });
 
-    document.getElementById('btn-save-game')?.addEventListener('click', () => {
-      downloadSave();
-      this.setSaveStatus('Saved — file downloaded and stored locally.');
+    const speedRow = document.getElementById('row-fast-forward');
+    const speedValue = document.getElementById('val-fast-forward');
+    const battleSpeedToggle = document.getElementById('battle-speed-toggle');
+    const refreshSpeed = () => {
+      const label = formatBattleSpeed();
+      if (speedValue) speedValue.textContent = label;
+      if (battleSpeedToggle) {
+        battleSpeedToggle.innerHTML = `FF &times;${label.slice(1)}`;
+        battleSpeedToggle.setAttribute('aria-label', `Change battle speed, currently ${label}`);
+      }
+    };
+    refreshSpeed();
+    const changeSpeed = () => {
+      cycleBattleSpeed();
+      refreshSpeed();
+    };
+    speedRow?.addEventListener('click', changeSpeed);
+    battleSpeedToggle?.addEventListener('click', changeSpeed);
+    speedRow?.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        changeSpeed();
+      }
+    });
+
+    document.getElementById('btn-save-game')?.addEventListener('click', async () => {
+      const saved = await saveToProjectFolder();
+      if (saved.ok) {
+        this.setSaveStatus('Saved to saves/current-save.json and browser storage.');
+      } else {
+        downloadSave();
+        this.setSaveStatus(`${saved.error}; downloaded a save file instead.`);
+      }
     });
 
     document.getElementById('btn-load-game')?.addEventListener('click', async () => {
@@ -201,9 +250,9 @@ export class UI {
       }
       const archived = await listArchivedSaves();
       if (archived.ok && archived.saves.length > 0 && box) {
-        box.innerHTML = `<div class="archived-saves-title">Archived saves</div>${archived.saves.map((save) =>
-          `<button class="archived-save-option" type="button" data-archive-file="${save.filename}">${new Date(save.modifiedAt).toLocaleString()}</button>`,
-        ).join('')}`;
+        box.innerHTML = `<div class="archived-saves-title">Saved games</div>${archived.saves.map((save) =>
+          `<button class="archived-save-option" type="button" data-archive-file="${save.filename}">${save.filename === 'current-save.json' ? 'Current project save' : 'Archived save'} · ${new Date(save.modifiedAt).toLocaleString()}</button>`,
+        ).join('')}<button class="ui-btn secondary" type="button" data-load-downloaded-save>Load downloaded save...</button>`;
         box.hidden = false;
         box.querySelectorAll<HTMLButtonElement>('[data-archive-file]').forEach((button) => {
           button.addEventListener('click', async () => {
@@ -211,6 +260,7 @@ export class UI {
             if (!filename) return;
             const loaded = await loadArchivedSave(filename);
             if (loaded.ok) {
+              this.activePartyUids = getSavedPartyUids();
               box.hidden = true;
               this.setSaveStatus('Loaded archived save.');
               if (this.current === 'party' || this.current === 'character-detail' || this.current === 'pre-battle') this.renderScreen(this.current);
@@ -220,21 +270,14 @@ export class UI {
             }
           });
         });
+        box.querySelector<HTMLButtonElement>('[data-load-downloaded-save]')?.addEventListener('click', () => {
+          void this.loadDownloadedSave();
+        });
         this.setSaveStatus('Choose an archived save to load.');
         return;
       }
 
-      const result = await promptLoadSave();
-      if (result.ok) {
-        this.setSaveStatus('Loaded save file.');
-        // refresh any open views that depend on inventory
-        if (this.current === 'party' || this.current === 'character-detail' || this.current === 'pre-battle') {
-          this.renderScreen(this.current);
-        }
-        this.refreshStatusBar();
-      } else {
-        this.setSaveStatus(result.error);
-      }
+      await this.loadDownloadedSave();
     });
 
     document.getElementById('btn-continue')?.addEventListener('click', () => {
@@ -248,6 +291,7 @@ export class UI {
         return;
       }
       this.activePartyUids = ownedCharacters.slice(0, 6).map((c) => c.uid);
+      setSavedPartyUids(this.activePartyUids);
       this.draftPartyUids = [];
       this.configureTitleActions(false, false);
       this.show('hub');
@@ -296,6 +340,7 @@ export class UI {
 
   private tryLoadAutosave(): void {
     const result = loadFromLocalStorage();
+    if (result.ok) this.activePartyUids = getSavedPartyUids();
     const exists = hasLocalSave();
     this.configureTitleActions(exists, result.ok);
   }
@@ -314,6 +359,21 @@ export class UI {
     if (el) el.textContent = msg;
   }
 
+  private async loadDownloadedSave(): Promise<void> {
+    const result = await promptLoadSave();
+    if (result.ok) {
+      this.activePartyUids = getSavedPartyUids();
+      this.pendingPartySwapUid = null;
+      this.setSaveStatus('Loaded save file.');
+      if (this.current === 'party' || this.current === 'character-detail' || this.current === 'pre-battle') {
+        this.renderScreen(this.current);
+      }
+      this.refreshStatusBar();
+    } else {
+      this.setSaveStatus(result.error);
+    }
+  }
+
 
   private refreshStatusBar(): void {
     const e = document.getElementById('stat-energy-val');
@@ -325,6 +385,40 @@ export class UI {
   }
 
   private bindTavern(): void {
+    document.querySelectorAll<HTMLButtonElement>('[data-pact-peek]').forEach((button) => {
+      const pactId = button.dataset.pactPeek as PactId;
+      const preview = document.querySelector<HTMLElement>(`[data-pact-preview="${pactId}"]`);
+      if (!preview) return;
+
+      const units = getPactPool(pactId);
+      const adventurers = units.filter((unit) => unit.kind === 'character');
+      const companions = units.filter((unit) => unit.kind === 'companion');
+      for (const [title, entries] of [['Adventurers', adventurers], ['Companions', companions]] as const) {
+        if (entries.length === 0) continue;
+        const group = document.createElement('section');
+        group.className = 'pact-pool-group';
+        const heading = document.createElement('h4');
+        heading.textContent = `${title} (${entries.length})`;
+        group.append(heading);
+        const list = document.createElement('ul');
+        list.className = 'pact-pool-list';
+        for (const unit of entries) {
+          const item = document.createElement('li');
+          item.textContent = `${unit.name} · ${unit.rarity}`;
+          list.append(item);
+        }
+        group.append(list);
+        preview.append(group);
+      }
+
+      button.textContent = `Peek possible units (${units.length})`;
+      button.addEventListener('click', () => {
+        preview.hidden = !preview.hidden;
+        button.setAttribute('aria-expanded', String(!preview.hidden));
+        button.textContent = `${preview.hidden ? 'Peek' : 'Hide'} possible units (${units.length})`;
+      });
+    });
+
     document.querySelectorAll('[data-pact]').forEach((btn) => {
       btn.addEventListener('click', () => {
         const pactId = (btn as HTMLElement).dataset.pact as PactId;
@@ -349,6 +443,29 @@ export class UI {
     document.getElementById('btn-add-energy-10')?.addEventListener('click', () => {
       addEnergy(10);
       this.refreshStatusBar();
+    });
+    document.getElementById('btn-add-character-xp')?.addEventListener('click', () => {
+      const party = this.getActiveParty();
+      const result = document.getElementById('debug-xp-result');
+      if (party.length === 0) {
+        if (result) result.textContent = 'Recruit adventurers before granting XP.';
+        return;
+      }
+      const reports = party.map((character) => {
+        const def = getCharacterDef(character);
+        const job = def?.jobs[character.activeJob - 1];
+        if (!def || !job) return `${character.defId}: active job data not found.`;
+        const jobIndex = job.jobIndex - 1;
+        const previousLevel = character.jobLevels[jobIndex];
+        const award = addCharacterJobXp(character, job, 10_000);
+        const currentLevel = character.jobLevels[jobIndex];
+        const progressText = currentLevel >= 90
+          ? 'Max level'
+          : `${character.jobXp[jobIndex].toLocaleString()} / ${characterXpToNextLevel(job, currentLevel).toLocaleString()} XP to next level`;
+        return `${def.name} · Job ${job.jobIndex}: +${award.xpAwarded.toLocaleString()} XP, Lv.${previousLevel} → Lv.${currentLevel}${award.levelsGained ? ` (+${award.levelsGained} levels)` : ''} · ${progressText}`;
+      });
+      saveToLocalStorage();
+      if (result) result.textContent = reports.join('\n');
     });
   }
 
@@ -506,26 +623,109 @@ export class UI {
 
   private renderParty(): void {
     const grid = document.getElementById('char-grid');
-    if (!grid) return;
-    grid.innerHTML = ownedCharacters
+    const activeGrid = document.getElementById('active-char-grid');
+    if (!grid || !activeGrid) return;
+
+    const makeCard = (inst: CharacterInstance, active: boolean, showSwap = false) => {
+      const def = getCharacterDef(inst);
+      if (!def) return '';
+      const job = def.jobs[inst.activeJob - 1];
+      const lv = inst.jobLevels[inst.activeJob - 1];
+      const recoded = inst.defId.endsWith('_lambda') || /lambda|λ/i.test(def.name);
+      return `
+        <div class="char-card rarity-${def.rarity.toLowerCase()} ${active ? 'in-active-party' : ''} ${this.recentlySwappedInUid === inst.uid ? 'swap-complete' : ''}" data-uid="${inst.uid}">
+          <div class="portrait">${weaponEmoji(job.weapon)}</div>
+          <div class="cname">${def.name}</div>
+          <div class="cmeta">${def.rarity} · Lv.${lv}${recoded ? ' · Recode' : ''}</div>
+          ${showSwap ? `<button class="party-swap-button" type="button" data-swap-source="${inst.uid}">${this.pendingPartySwapUid === inst.uid ? 'Cancel' : 'Swap'}</button>` : ''}
+        </div>`;
+    };
+
+    const activeParty = this.getActiveParty();
+    activeGrid.innerHTML = activeParty.map((inst) => makeCard(inst, true, true)).join('');
+    const swapStatus = document.getElementById('party-swap-status');
+    if (swapStatus) {
+      const selected = this.pendingPartySwapUid
+        ? ownedCharacters.find((inst) => inst.uid === this.pendingPartySwapUid)
+        : undefined;
+      const selectedDef = selected ? getCharacterDef(selected) : undefined;
+      swapStatus.textContent = selectedDef
+        ? `Choose another character card to swap with ${selectedDef.name}.`
+        : this.partySwapFeedback ?? 'Use Swap on a party member, then choose another character card.';
+    }
+
+    const recodeFilter = (document.getElementById('character-recode-filter') as HTMLSelectElement | null)?.value ?? 'all';
+    const rarityFilter = (document.getElementById('character-rarity-filter') as HTMLSelectElement | null)?.value ?? 'all';
+    const roster = ownedCharacters.filter((inst) => {
+      const def = getCharacterDef(inst);
+      if (!def) return false;
+      const recoded = inst.defId.endsWith('_lambda') || /lambda|λ/i.test(def.name);
+      if (recodeFilter === 'recode' && !recoded) return false;
+      if (recodeFilter === 'base' && recoded) return false;
+      if (rarityFilter !== 'all' && def.rarity !== rarityFilter) return false;
+      return true;
+    });
+
+    grid.innerHTML = roster
       .map((inst) => {
         const def = getCharacterDef(inst);
         if (!def) return '';
-        const job = def.jobs[inst.activeJob - 1];
-        const lv = inst.jobLevels[inst.activeJob - 1];
-        return `
-      <div class="char-card rarity-${def.rarity.toLowerCase()}" data-uid="${inst.uid}">
-        <div class="portrait">${weaponEmoji(job.weapon)}</div>
-        <div class="cname">${def.name}</div>
-        <div class="cmeta">${def.rarity} · Lv.${lv}</div>
-      </div>`;
+        return makeCard(inst, activeParty.some((member) => member.uid === inst.uid));
       })
       .join('');
 
-    grid.querySelectorAll('.char-card').forEach((card) => {
-      card.addEventListener('click', () => {
-        this.selectedCharUid = (card as HTMLElement).dataset.uid ?? null;
+    const handleCharacterClick = (event: MouseEvent) => {
+      const card = (event.target as HTMLElement).closest<HTMLElement>('.char-card');
+      if (!card) return;
+        const clickedUid = card.dataset.uid;
+        if (this.pendingPartySwapUid && clickedUid) {
+          const sourceIndex = this.activePartyUids.indexOf(this.pendingPartySwapUid);
+          let completedSwap = false;
+          if (sourceIndex >= 0) {
+            if (clickedUid !== this.pendingPartySwapUid) {
+              const source = ownedCharacters.find((character) => character.uid === this.pendingPartySwapUid);
+              const target = ownedCharacters.find((character) => character.uid === clickedUid);
+              const sourceName = (source ? getCharacterDef(source)?.name : undefined) ?? this.pendingPartySwapUid;
+              const targetName = (target ? getCharacterDef(target)?.name : undefined) ?? clickedUid;
+              const targetIndex = this.activePartyUids.indexOf(clickedUid);
+              if (targetIndex >= 0) {
+                [this.activePartyUids[sourceIndex], this.activePartyUids[targetIndex]] =
+                  [this.activePartyUids[targetIndex], this.activePartyUids[sourceIndex]];
+                this.partySwapFeedback = `Swapped party positions: ${sourceName} and ${targetName}.`;
+              } else {
+                this.activePartyUids[sourceIndex] = clickedUid;
+                this.partySwapFeedback = `${targetName} replaced ${sourceName} in the active party.`;
+              }
+              this.recentlySwappedInUid = clickedUid;
+              completedSwap = true;
+              setSavedPartyUids(this.activePartyUids);
+              saveToLocalStorage();
+            } else {
+              this.partySwapFeedback = 'Swap cancelled; the active party is unchanged.';
+            }
+          }
+          this.pendingPartySwapUid = null;
+          this.renderParty();
+          if (completedSwap) {
+            document.getElementById('screen-party')?.scrollTo({ top: 0, behavior: 'smooth' });
+          }
+          return;
+        }
+        this.selectedCharUid = clickedUid ?? null;
         this.show('character-detail');
+    };
+    activeGrid.onclick = handleCharacterClick;
+    grid.onclick = handleCharacterClick;
+
+    activeGrid.querySelectorAll<HTMLButtonElement>('[data-swap-source]').forEach((button) => {
+      button.addEventListener('click', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        const sourceUid = button.dataset.swapSource ?? null;
+        this.pendingPartySwapUid = this.pendingPartySwapUid === sourceUid ? null : sourceUid;
+        this.partySwapFeedback = this.pendingPartySwapUid ? null : 'Swap cancelled; the active party is unchanged.';
+        this.recentlySwappedInUid = null;
+        this.renderParty();
       });
     });
   }
@@ -569,23 +769,58 @@ export class UI {
     // Job tabs
     const jobTabs = document.querySelector('#screen-character-detail .job-tabs');
     if (jobTabs) {
+      const unlockedJobs = inst.jobsUnlocked ?? 1;
       jobTabs.innerHTML = def.jobs
         .map(
-          (j) =>
-            `<button type="button" class="${j.jobIndex === inst.activeJob ? 'active' : ''}" data-job="${j.jobIndex}" ${
-              j.jobIndex > 1 && inst.jobLevels[j.jobIndex - 1] <= 1 && j.jobIndex !== inst.activeJob ? '' : ''
-            }>Job ${j.jobIndex}</button>`
+          (j) => {
+            const locked = j.jobIndex > unlockedJobs;
+            return `<button type="button" class="${j.jobIndex === inst.activeJob ? 'active' : ''} ${locked ? 'locked' : ''}" data-job="${j.jobIndex}" ${locked ? 'disabled aria-label="Job ' + j.jobIndex + ' locked"' : ''}>Job ${j.jobIndex}${locked ? ' · Locked' : ''}</button>`;
+          }
         )
         .join('');
       jobTabs.querySelectorAll('button').forEach((btn) => {
         btn.addEventListener('click', () => {
           const j = Number((btn as HTMLElement).dataset.job) as 1 | 2 | 3;
-          if (def.jobs.some((x) => x.jobIndex === j)) {
-            inst.activeJob = j;
-            this.renderCharacterDetail();
-          }
+          const result = setActiveJob(inst.uid, j);
+          this.jobActionMessage = result.ok ? '' : result.error;
+          this.renderCharacterDetail();
         });
       });
+    }
+
+    const unlockPanel = document.getElementById('job-unlock-panel');
+    const actionMessage = document.getElementById('job-action-message');
+    if (actionMessage) actionMessage.textContent = this.jobActionMessage;
+    if (unlockPanel) {
+      const unlockedJobs = inst.jobsUnlocked ?? 1;
+      const targetJob = (unlockedJobs + 1) as 2 | 3;
+      const nextJob = def.jobs.find((candidate) => candidate.jobIndex === targetJob);
+      if (!nextJob) {
+        unlockPanel.innerHTML = '<div class="job-unlock-note">No additional jobs available.</div>';
+      } else {
+        const cost = jobUnlockCostForCharacter(inst.uid, targetJob);
+        if (!cost) {
+          unlockPanel.innerHTML = `<div class="job-unlock-note">Unlock cost for Job ${targetJob} is unavailable.</div>`;
+        } else {
+          const itemsAvailable = cost.items.every((item) => (progress.bag[item.itemId] ?? 0) >= item.qty);
+          const coinsAvailable = progress.coins >= cost.coins;
+          const canUnlock = itemsAvailable && coinsAvailable;
+          const itemLines = cost.items.map((item) => {
+            const name = ITEMS[item.itemId]?.name ?? item.itemId.replaceAll('_', ' ');
+            const owned = progress.bag[item.itemId] ?? 0;
+            return `<li class="${owned >= item.qty ? 'enough' : 'missing'}">${name}: ${owned} / ${item.qty}</li>`;
+          }).join('');
+          unlockPanel.innerHTML = `
+            <div class="job-unlock-cost"><strong>Unlock Job ${targetJob}</strong><span>${cost.coins.toLocaleString()} Coins (${progress.coins.toLocaleString()} available)</span></div>
+            <ul class="job-unlock-items">${itemLines}</ul>
+            <button class="ui-btn secondary" id="btn-unlock-next-job" type="button" ${canUnlock ? '' : 'disabled'}>Unlock Job ${targetJob}</button>`;
+          unlockPanel.querySelector<HTMLButtonElement>('#btn-unlock-next-job')?.addEventListener('click', () => {
+            const result = unlockNextJob(inst.uid);
+            this.jobActionMessage = result.ok ? result.message : result.error;
+            this.renderCharacterDetail();
+          });
+        }
+      }
     }
 
     // Skills
@@ -595,9 +830,12 @@ export class UI {
       skillList.innerHTML = allSkills
         .map((s) => {
           const open = lv >= s.level;
-          return `<div class="skill-row" style="${open ? '' : 'opacity:0.45'}">
-            <div class="sk-name">${open ? s.name : '— locked —'}</div>
-            <div class="sk-meta">${open ? `${s.trigger} · ${s.description}` : `Unlocks at Job Lv.${s.level}`}</div>
+          return `<div class="skill-row ${open ? '' : 'locked'}">
+            <div class="skill-row-main">
+              <div class="sk-name">${s.name}${open ? '' : ' <span class="skill-locked-label">Locked</span>'}</div>
+              ${open ? `<div class="sk-meta">${s.trigger} · ${s.description}</div>` : ''}
+            </div>
+            <span class="skill-unlock-level">Lv.${s.level}</span>
           </div>`;
         })
         .join('');

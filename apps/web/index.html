@@ -24,17 +24,19 @@
       <div id="ui-status" class="ui-status" style="display: none">
         <span class="rank">Rank 12</span>
         <span class="spacer"></span>
-        <span class="stat stamina"><span class="icon">S</span> 42/50</span>
         <span class="stat energy" id="stat-energy"
           ><span class="icon">E</span>
+          <span class="stat-name">Energy</span>
           <span id="stat-energy-val">18</span></span
         >
         <span class="stat coins" id="stat-coins"
           ><span class="icon">¢</span>
+          <span class="stat-name">Coins</span>
           <span id="stat-coins-val">24,500</span></span
         >
         <span class="stat stamina" id="stat-stamina"
           ><span class="icon">S</span>
+          <span class="stat-name">Stamina</span>
           <span id="stat-stamina-val">42</span></span
         >
       </div>
@@ -157,6 +159,10 @@
               <button class="ui-btn" type="button" data-pact="truth">
                 Recruit
               </button>
+              <button class="ui-btn secondary pact-peek" type="button" data-pact-peek="truth" aria-expanded="false">
+                Peek possible units
+              </button>
+              <div class="pact-pool-preview" data-pact-preview="truth" hidden></div>
             </div>
             <div class="pact-card">
               <div class="pact-name">Pact of Fellowship</div>
@@ -169,6 +175,10 @@
               >
                 Recruit
               </button>
+              <button class="ui-btn secondary pact-peek" type="button" data-pact-peek="fellowship" aria-expanded="false">
+                Peek possible units
+              </button>
+              <div class="pact-pool-preview" data-pact-preview="fellowship" hidden></div>
             </div>
             <div class="pact-card">
               <div class="pact-name">Companions of Truth</div>
@@ -181,6 +191,10 @@
               >
                 Recruit
               </button>
+              <button class="ui-btn secondary pact-peek" type="button" data-pact-peek="companions" aria-expanded="false">
+                Peek possible units
+              </button>
+              <div class="pact-pool-preview" data-pact-preview="companions" hidden></div>
             </div>
             <div
               id="pact-result"
@@ -204,6 +218,15 @@
               >
                 +10 Energy
               </button>
+              <button
+                class="ui-btn secondary"
+                type="button"
+                id="btn-add-character-xp"
+                style="margin: 8px 0 0 8px"
+              >
+                +10,000 XP to Active Party
+              </button>
+              <p id="debug-xp-result" class="debug-xp-result" role="status"></p>
             </div>
           </div>
           <div class="tavern-pane" data-pane="jobs" style="display: none">
@@ -275,6 +298,32 @@
         <!-- Party -->
         <div id="screen-party" class="ui-screen">
           <div class="ui-header"><h1>Characters</h1></div>
+          <section class="active-character-party">
+            <h2>Active Party</h2>
+            <p id="party-swap-status" class="party-swap-status" role="status"></p>
+            <div id="active-char-grid" class="char-grid active-char-grid"></div>
+          </section>
+          <h2 class="character-roster-title">All Characters</h2>
+          <div class="character-filters">
+            <label>Form
+              <select id="character-recode-filter">
+                <option value="all">All forms</option>
+                <option value="base">Non-recoded</option>
+                <option value="recode">Recoded</option>
+              </select>
+            </label>
+            <label>Rarity
+              <select id="character-rarity-filter">
+                <option value="all">All rarities</option>
+                <option value="Z">Z</option>
+                <option value="SS">SS</option>
+                <option value="S">S</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+              </select>
+            </label>
+          </div>
           <div id="char-grid" class="char-grid"></div>
         </div>
 
@@ -333,6 +382,8 @@
             <button type="button" disabled>Job 2</button>
             <button type="button" disabled>Job 3</button>
           </div>
+          <div id="job-unlock-panel" class="job-unlock-panel"></div>
+          <p id="job-action-message" class="job-action-message" role="status"></p>
           <div class="skill-list">
             <div class="skill-row">
               <div class="sk-name">Mega Slash</div>
@@ -365,9 +416,9 @@
               <span class="opt-label">Sound Effects</span>
               <div class="toggle on"></div>
             </div>
-            <div class="option-row">
+            <div class="option-row" id="row-fast-forward" style="cursor: pointer" role="button" tabindex="0" aria-label="Change battle speed">
               <span class="opt-label">Fast Forward</span
-              ><span class="opt-value">×2</span>
+              ><span class="opt-value" id="val-fast-forward">×2</span>
             </div>
             <div class="option-row">
               <span class="opt-label">Main Screen Tips</span>
@@ -462,6 +513,7 @@
       <header id="hud">
         <span id="wave"></span>
         <span id="status"></span>
+        <button id="battle-speed-toggle" type="button" aria-label="Change battle speed">FF &times;2</button>
         <button id="restart" type="button">Restart</button>
         <button id="btn-leave-battle" type="button" style="margin-left: 8px">
           Leave

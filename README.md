@@ -52,6 +52,8 @@ Screens are interfaces only — recruitment, job unlocks, currency, and real pro
   working in the game.
 - Restrict Tavern pacts to adventurers marked as verified.
 - Add a Tavern page that lists the units currently available from each pact.
+- On a new game, grant one starter from Bahl or Grace, one from Amisandra, Amimari, or Amina,
+  then give the player four Pact of Truth rolls with no duplicate adventurers.
 
 roster data (Phase 5), meta layer (Phase 6), and the Capacitor / Tauri wrappers. A `packages/meta`
 and `apps/mobile` / `apps/desktop` can slot into the existing workspaces.

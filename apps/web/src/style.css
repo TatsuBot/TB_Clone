@@ -42,7 +42,8 @@ body.battle-active #app {
   color: var(--muted);
 }
 #restart,
-#btn-leave-battle {
+#btn-leave-battle,
+#battle-speed-toggle {
   background: var(--panel);
   color: var(--text);
   border: 1px solid #2c3450;
@@ -51,6 +52,7 @@ body.battle-active #app {
   font: inherit;
   cursor: pointer;
 }
+#battle-speed-toggle { padding: 6px 8px; white-space: nowrap; }
 #timer {
   height: 8px;
   background: var(--panel);
@@ -124,23 +126,51 @@ body.battle-active #app {
   font-size: 12px;
   line-height: 1.45;
 }
+.unit-status-badge {
+  display: inline-block; margin: 5px 4px 0 0; padding: 2px 7px; border-radius: 10px;
+  font-size: 10px; line-height: 1.4;
+}
+.levitation-badge { color: #cffafe; background: rgb(8 145 178 / 28%); border: 1px solid rgb(103 232 249 / 45%); }
 .unit-description-stats {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 18px;
+  display: flex;
+  flex-direction: column;
   border-top: 1px solid #ffffff18;
   border-bottom: 1px solid #ffffff18;
   padding: 6px 0;
 }
+.unit-description-stats-top {
+  display: grid; grid-template-columns: max-content minmax(0, 1fr); column-gap: 18px;
+  align-items: center;
+}
+.unit-description-stat-status {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  column-gap: 18px;
+  align-items: start;
+}
+.unit-description-stat-pairs {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  column-gap: 12px;
+  align-content: start;
+}
+.unit-description-status-panel { min-width: 0; border-left: 1px solid #ffffff18; padding-left: 12px; }
+.unit-description-status-heading { justify-self: center; margin: 0 0 5px; color: var(--muted); font-size: 10px; font-weight: 700; }
+.unit-description-status-list { display: flex; flex-wrap: wrap; gap: 4px; font-size: 10px; }
+.unit-status-chip { display: inline-block; padding: 2px 6px; border: 1px solid #ffffff20; border-radius: 10px; background: #ffffff08; }
+.unit-status-chip.levitation { color: #cffafe; border-color: rgb(103 232 249 / 45%); }
+.unit-status-chip.buff { color: #bbf7d0; border-color: rgb(74 222 128 / 35%); }
+.unit-status-chip.poison, .unit-status-chip.paralysis, .unit-status-chip.sleep, .unit-status-chip.confusion { color: #fecaca; }
 .unit-stat-row {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 8px;
   padding: 3px 0;
   font-size: 12px;
 }
+.unit-description-hp { margin-bottom: 5px; }
 .unit-stat-row span { color: var(--muted); }
-.unit-stat-row strong { text-align: right; font-variant-numeric: tabular-nums; }
+.unit-stat-row strong { text-align: left; font-variant-numeric: tabular-nums; }
 .unit-description-section { margin-top: 10px; }
 .unit-description-section h2 {
   margin: 0 0 5px;
@@ -165,6 +195,7 @@ body.battle-active #app {
   line-height: 1.35;
 }
 .unit-skill-description { margin-top: 2px; }
+.unit-skill-row.locked { opacity: .52; }
 .unit-description-empty { color: var(--muted); font-size: 12px; }
 }
 

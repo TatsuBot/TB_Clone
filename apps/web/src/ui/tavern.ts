@@ -98,6 +98,13 @@ export interface RollResult {
 
 export type RollFail = { ok: false; error: string };
 
+export interface PactPoolUnit {
+  kind: 'character' | 'companion';
+  id: string;
+  name: string;
+  rarity: string;
+}
+
 export function canAfford(pact: PactDef): boolean {
   if (progress.energy < pact.energy) return false;
   if (progress.coins < pact.coins) return false;
@@ -110,11 +117,52 @@ function spend(pact: PactDef): void {
 }
 
 function poolCharacters(rarities: CharacterRarity[]): string[] {
-  return CHARACTER_LIST.filter((c) => rarities.includes(c.rarity)).map((c) => c.id);
+  return CHARACTER_LIST
+    .filter((c) => c.verified === 'Y' && rarities.includes(c.rarity))
+    .map((c) => c.id);
 }
 
 function poolCompanions(rarities: CompanionRarity[]): string[] {
   return COMPANION_LIST.filter((c) => rarities.includes(c.rarity)).map((c) => c.id);
+}
+
+/** All units the pact can currently produce, using the same filters as rolls. */
+export function getPactPool(pactId: PactId): PactPoolUnit[] {
+  const characters = () => {
+    const ids = new Set<string>();
+    for (const band of TRUTH_RARITY) {
+      let pool = poolCharacters([band.rarity]);
+      if (pool.length === 0) pool = poolCharacters(['B', 'A', 'S', 'SS', 'Z', 'C']);
+      pool.forEach((id) => ids.add(id));
+    }
+    return [...ids].map((id) => CHARACTERS[id]).filter(Boolean).map((character) => ({
+      kind: 'character' as const,
+      id: character.id,
+      name: character.name,
+      rarity: character.rarity,
+    }));
+  };
+  const companions = () => {
+    const ids = new Set<string>();
+    for (const band of COMPANION_RARITY) {
+      let pool = poolCompanions([band.rarity]);
+      if (pool.length === 0) pool = COMPANION_LIST.map((c) => c.id);
+      pool.forEach((id) => ids.add(id));
+    }
+    return [...ids].map((id) => COMPANIONS[id]).filter(Boolean).map((companion) => ({
+      kind: 'companion' as const,
+      id: companion.id,
+      name: companion.name,
+      rarity: companion.rarity,
+    }));
+  };
+
+  const units = pactId === 'truth'
+    ? characters()
+    : pactId === 'companions'
+      ? companions()
+      : [...characters(), ...companions()];
+  return units.sort((a, b) => a.kind.localeCompare(b.kind) || a.rarity.localeCompare(b.rarity) || a.name.localeCompare(b.name));
 }
 
 function rollCharacter(rand: () => number): RollResult {

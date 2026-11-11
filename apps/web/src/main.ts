@@ -9,7 +9,6 @@ import {
   recruitForStage,
   charStatsAtLevel,
   frequencyAtLevel,
-  skillsUnlocked,
   statsAtLevel,
   type DragSession,
   type Dir,
@@ -34,6 +33,7 @@ import {
 } from "./ui/progress";
 import { saveToLocalStorage } from "./ui/save";
 import { UI } from "./ui/ui";
+import { getBattleSpeed } from "./ui/settings";
 
 const $ = <T extends HTMLElement>(id: string) =>
   document.getElementById(id) as T;
@@ -67,6 +67,9 @@ interface InspectableSkill {
 }
 
 function skillPattern(skill: InspectableSkill): string {
+  if (/control time|move timer|timer/i.test(`${skill.name} ${skill.description}`)) {
+    return "Timer effect";
+  }
   const targets: Record<string, string> = {
     self: "Self",
     target: "Single target",
@@ -131,9 +134,10 @@ function addSkillRow(
   source: string,
   activation: string,
   weapon?: string,
+  locked = false,
 ): void {
   const row = document.createElement("div");
-  row.className = "unit-skill-row";
+  row.className = `unit-skill-row${locked ? " locked" : ""}`;
   const icon = document.createElement("span");
   icon.className = "unit-skill-icon";
   icon.setAttribute("aria-hidden", "true");
@@ -144,7 +148,9 @@ function addSkillRow(
   name.textContent = skill.name;
   const meta = document.createElement("div");
   meta.className = "unit-skill-meta";
-  meta.textContent = `${source} · ${skill.trigger} · ${skillPattern(skill)} · ${activation}`;
+  meta.textContent = [source, skill.trigger, skillPattern(skill), activation]
+    .filter(Boolean)
+    .join(" · ");
   const description = document.createElement("div");
   description.className = "unit-skill-description";
   description.textContent = skill.description;
@@ -153,15 +159,22 @@ function addSkillRow(
   unitDescriptionSkills.append(row);
 }
 
-function addStatRow(label: string, value: string): void {
+function addStatRow(label: string, value: string, container: HTMLElement = unitDescriptionStats): void {
   const row = document.createElement("div");
-  row.className = "unit-stat-row";
+  row.className = `unit-stat-row${label === "HP" ? " hp-row" : ""}`;
   const name = document.createElement("span");
   name.textContent = label;
   const result = document.createElement("strong");
   result.textContent = value;
   row.append(name, result);
-  unitDescriptionStats.append(row);
+  container.append(row);
+}
+
+function makeStatusChip(label: string, kind: string): HTMLElement {
+  const chip = document.createElement("span");
+  chip.className = `unit-status-chip ${kind}`;
+  chip.textContent = label;
+  return chip;
 }
 
 function closeUnitDescription(): void {
@@ -176,6 +189,25 @@ function showUnitDescription(
   const unit = battle.board.getUnit(unitId);
   unitDescriptionTitle.textContent = unit.name;
   unitDescriptionStats.replaceChildren();
+  const hpStats = document.createElement("div");
+  hpStats.className = "unit-description-hp";
+  const statusHeading = document.createElement("div");
+  statusHeading.className = "unit-description-status-heading";
+  statusHeading.textContent = "STATUS";
+  const statsTopRow = document.createElement("div");
+  statsTopRow.className = "unit-description-stats-top";
+  statsTopRow.append(hpStats, statusHeading);
+  const statPairs = document.createElement("div");
+  statPairs.className = "unit-description-stat-pairs";
+  const statusPanel = document.createElement("section");
+  statusPanel.className = "unit-description-status-panel";
+  const statusList = document.createElement("div");
+  statusList.className = "unit-description-status-list";
+  statusPanel.append(statusList);
+  const statStatusRow = document.createElement("div");
+  statStatusRow.className = "unit-description-stat-status";
+  statStatusRow.append(statPairs, statusPanel);
+  unitDescriptionStats.append(statsTopRow, statStatusRow);
   unitDescriptionCompanion.replaceChildren();
   unitDescriptionSkills.replaceChildren();
 
@@ -209,28 +241,45 @@ function showUnitDescription(
     character && job && instance && level !== undefined
       ? `${character.rarity} · ${character.species} · Job ${instance.activeJob}: ${job.title} · ${job.weapon} / ${job.element} · Lv. ${level} · Luck ${instance.luck} · Bonus ${instance.skillBoost}%`
       : `${unit.side === "ally" ? "Ally" : "Enemy"}${unit.weapon ? ` · ${unit.weapon}` : ""}`;
+  if (unit.levitationTurns !== undefined) {
+    statusList.append(makeStatusChip(
+      unit.levitationTurns < 0 ? "Levitation" : `Levitation · ${unit.levitationTurns} turns`,
+      "levitation",
+    ));
+  }
+  for (const buff of unit.buffs ?? []) {
+    const stat = buff.stat.toUpperCase();
+    const duration = `${buff.duration}t`;
+    statusList.append(makeStatusChip(`${stat} ${buff.percent > 0 ? "+" : ""}${buff.percent}% · ${duration}`, "buff"));
+  }
+  for (const status of unit.statuses ?? []) {
+    statusList.append(makeStatusChip(`${status.type} · ${status.duration}t`, status.type));
+  }
+  if (!statusList.childElementCount) statusList.textContent = "—";
 
   if (baseStats) {
-    addStatRow("HP", `${Math.max(0, unit.hp)} / ${baseStats.hp}`);
+    addStatRow("HP", `${Math.max(0, unit.hp)} / ${baseStats.hp}`, hpStats);
     for (const [label, base, bonus] of [
       ["ATK", baseStats.atk, activeBonuses.atk],
       ["MATK", baseStats.matk, activeBonuses.matk],
       ["DEF", baseStats.def, activeBonuses.def],
       ["MDEF", baseStats.mdef, activeBonuses.mdef],
     ] as const) {
-      addStatRow(label, `${base} + ${bonus} = ${base + bonus}`);
+      addStatRow(label, bonus ? `${base} + ${bonus} = ${base + bonus}` : String(base), statPairs);
     }
   } else {
-    addStatRow("HP", `${Math.max(0, unit.hp)} / ${unit.stats.maxHp}`);
-    addStatRow("ATK", String(unit.stats.atk));
+    addStatRow("HP", `${Math.max(0, unit.hp)} / ${unit.stats.maxHp}`, hpStats);
+    addStatRow("ATK", String(unit.stats.atk), statPairs);
     addStatRow(
       "MATK",
       unit.stats.matk === undefined ? "—" : String(unit.stats.matk),
+      statPairs,
     );
-    addStatRow("DEF", String(unit.stats.def));
+    addStatRow("DEF", String(unit.stats.def), statPairs);
     addStatRow(
       "MDEF",
       unit.stats.mdef === undefined ? "—" : String(unit.stats.mdef),
+      statPairs,
     );
   }
 
@@ -240,21 +289,36 @@ function showUnitDescription(
       const activeLabel = companionActive
         ? "Active"
         : `Inactive until Job Lv. ${companion.levelRequired}`;
-      unitDescriptionCompanion.textContent = `${companion.name} · Lv. ${companionInstance.level}/${companion.maxLevel} · ${activeLabel} · ATK +${companionStats.atk} · MATK +${companionStats.matk} · DEF +${companionStats.def} · MDEF +${companionStats.mdef}`;
+      const statBonuses: Array<[string, number]> = [
+        ["ATK", companionStats.atk],
+        ["MATK", companionStats.matk],
+        ["DEF", companionStats.def],
+        ["MDEF", companionStats.mdef],
+      ];
+      const bonuses = statBonuses
+        .filter(([, value]) => value > 0)
+        .map(([label, value]) => `${label} +${value}`)
+        .join(" · ");
+      unitDescriptionCompanion.textContent = [
+        `${companion.name} · Lv. ${companionInstance.level}/${companion.maxLevel} · ${activeLabel}`,
+        bonuses,
+      ].filter(Boolean).join(" · ");
     } else {
       unitDescriptionCompanion.textContent = "None equipped";
     }
   }
 
   if (job && level !== undefined) {
-    for (const skill of skillsUnlocked(job, level)) {
-      const activation =
-        skill.trigger === "equip"
-          ? "Always active"
+    for (const skill of job.skills) {
+      const locked = level < skill.level;
+      const activation = locked
+        ? `Unlocks at Job Lv. ${skill.level}`
+        : skill.trigger === "equip"
+          ? ""
           : `${Math.min(100, (skill.frequency ?? 100) + (instance?.skillBoost ?? 0))}%`;
-      addSkillRow(skill, `Job Lv. ${skill.level}`, activation, job.weapon);
+      addSkillRow(skill, `Job Lv. ${skill.level}`, activation, job.weapon, locked);
     }
-    if (companionActive && companion) {
+    if (companion && companionInstance) {
       const companionFrequency = frequencyAtLevel(
         companion,
         companionInstance!.level,
@@ -262,10 +326,13 @@ function showUnitDescription(
       addSkillRow(
         companion.skill,
         companion.name,
-        companion.skill.trigger === "equip"
-          ? "Always active"
-          : `${Math.round(companionFrequency)}%`,
+        !companionActive
+          ? `Inactive until Job Lv. ${companion.levelRequired}`
+          : companion.skill.trigger === "equip"
+            ? ""
+            : `${Math.round(companionFrequency)}%`,
         job.weapon,
+        !companionActive,
       );
     }
   } else if (unit.description) {
@@ -405,6 +472,10 @@ function describe(r: TurnReport): string {
   const down = r.resolution.defeated.length;
   const pincers = r.resolution.steps.length;
   const who = r.actor === "player" ? "You" : "Enemies";
+  const direct = r.resolution.directAttacks?.filter((attack) => attack.role === "direct").length ?? 0;
+  if (r.actor === "enemy" && direct > 0 && pincers === 0) {
+    return `Enemies attacked directly: ${direct} hit${direct === 1 ? "" : "s"}${down ? `, ${down} defeated` : ""}.`;
+  }
   if (hits === 0)
     return r.actor === "player" ? "No pincer formed." : "Enemies moved.";
   return `${who} resolved ${pincers} pincer${pincers === 1 ? "" : "s"}: ${hits} hit${hits === 1 ? "" : "s"}${down ? `, ${down} defeated` : ""}.`;
@@ -451,7 +522,8 @@ function endDrag(now: number): void {
   renderer.setDrag(null);
   const report = battle.commitDrag(s);
   if (!report) return hud();
-  const playback = renderer.playResolution(report.resolution, now);
+  const battleSpeed = getBattleSpeed();
+  const playback = renderer.playResolution(report.resolution, now, battleSpeed);
   hud(describe(report));
   if (battle.phase === "enemy") {
     busy = true;
@@ -462,11 +534,12 @@ function endDrag(now: number): void {
         const enemyPlayback = renderer.playResolution(
           r.resolution,
           performance.now(),
+          battleSpeed,
         );
         hud(describe(r));
         window.setTimeout(() => (busy = false), enemyPlayback);
       },
-      Math.max(550, playback + 300),
+      Math.max(550 / battleSpeed, playback + 300 / battleSpeed),
     );
   } else if (playback > 0) {
     busy = true; // a new wave or the end screen: let the hits play out first

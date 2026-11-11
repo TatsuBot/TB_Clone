@@ -3,6 +3,7 @@ import { Board } from "./board";
 import {
   applyBuff,
   inferSkillAttributes,
+  resolveAdjacentAttacks,
   resolveAttacks,
   type Resolution,
 } from "./combat";
@@ -56,6 +57,11 @@ export class Battle {
             unit.tapCharges[skill.id] = skill.tapCharges ?? 3;
           }
         }
+      }
+      if ((unit.skills ?? []).some(
+        (skill) => skill.trigger === "equip" && inferSkillAttributes(skill).effect === "levitation",
+      )) {
+        unit.levitationTurns = -1;
       }
     }
   }
@@ -211,6 +217,11 @@ export class Battle {
     if (this.phase !== "enemy") throw new Error("Not the enemy turn");
     const enemyMoves = runEnemyMoves(this.board, this.rng);
     const resolution = resolveAttacks(this.board, "enemy");
+    const direct = resolveAdjacentAttacks(this.board, "enemy", resolution.scan.pincering);
+    resolution.directAttacks = direct.attacks;
+    resolution.directFallen = direct.fallen;
+    resolution.attacks.push(...direct.attacks);
+    resolution.defeated.push(...direct.defeated);
     this.tickTurnEnd("enemy");
     this.phase = "player";
     this.checkDefeat();
@@ -235,6 +246,10 @@ export class Battle {
           s.duration -= 1;
         }
         unit.statuses = unit.statuses.filter((s) => s.duration > 0);
+      }
+      if (unit.levitationTurns !== undefined && unit.levitationTurns > 0) {
+        unit.levitationTurns -= 1;
+        if (unit.levitationTurns === 0) delete unit.levitationTurns;
       }
     }
     // Remove any units killed by poison or turn effects

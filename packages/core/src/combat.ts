@@ -32,6 +32,7 @@ export interface Attack {
   role:
     | "flanker"
     | "chain"
+    | "direct"
     | "counter"
     | "aoe"
     | "heal"
@@ -42,6 +43,7 @@ export interface Attack {
   targetHp: number;
   effect?: SkillEffectType;
   skillName?: string;
+  skillId?: string;
   stat?: "atk" | "def" | "matk" | "mdef";
 }
 
@@ -67,7 +69,16 @@ export interface Resolution {
   steps: ResolutionStep[];
   /** Flat views of `steps`, in resolution order. */
   attacks: Attack[];
+  /** Single-unit attacks against orthogonally adjacent targets. */
+  directAttacks?: Attack[];
+  directFallen?: Fallen[];
   defeated: string[];
+}
+
+export interface DirectAttackResolution {
+  attacks: Attack[];
+  defeated: string[];
+  fallen: Fallen[];
 }
 
 export interface ResolveOptions extends ChainOptions {
@@ -287,6 +298,14 @@ export function inferSkillAttributes(skill: Skill): {
   ) {
     effect = "cure";
     cureStatus = "confusion";
+  } else if (/levitat|ground attacks|floor traps/.test(text)) {
+    effect = "levitation";
+    const durMatch = text.match(/for\s*(\d+)\s*turn/);
+    duration = durMatch
+      ? parseInt(durMatch[1], 10)
+      : skill.trigger === "equip"
+        ? -1
+        : 3;
   } else if (
     /(attack|atk|defense|def|magic|matk|mdef)\s*([+-]\d+)%/.test(text)
   ) {
@@ -344,7 +363,9 @@ export function inferSkillAttributes(skill: Skill): {
   }
 
   let targetMode: SkillTargetMode = skill.target ?? "enemy";
-  if (effect === "heal" || effect === "cure" || effect === "buff") {
+  if (effect === "levitation") {
+    targetMode = skill.trigger === "equip" || text.includes("self") ? "self" : "ally";
+  } else if (effect === "heal" || effect === "cure" || effect === "buff") {
     if (skill.target === "self" || text.includes("self")) {
       targetMode = "self";
     } else if (
@@ -657,9 +678,20 @@ export function resolveAttacks(
 
       const trigger = role === "flanker" ? "pincer" : "chain";
       const skillEvents = buildSkillEvents(attacker, { trigger });
+      // A chain-wide Levitation on the pincer lead should also protect the
+      // chain members joining that pincer, while other chain skills retain
+      // their normal chain-only trigger.
+      if (role === "flanker" && (rosters[index] ?? []).some((member) => member.role === "chain")) {
+        const leadLevitation = buildSkillEvents(attacker, { trigger: "chain" })
+          .filter((event) => event.effect === "levitation" && event.trigger === "chain");
+        skillEvents.push(...leadLevitation);
+      }
 
       // 1. Support skills: heals, buffs, remedies
       for (const event of skillEvents) {
+        // Equip Levitation is initialized as a permanent unit state in Battle.initUnits.
+        // It should not be re-applied as an action effect on every pincer.
+        if (event.effect === "levitation" && event.trigger === "equip") continue;
         if (event.effect === "heal") {
           const origin = board.originOf(attacker.id);
           const healTargets = getTargetsInShape(
@@ -776,6 +808,36 @@ export function resolveAttacks(
               targetHp: targetAlly.hp,
               effect: "cure",
               skillName: event.skillName,
+            });
+          }
+        } else if (event.effect === "levitation") {
+          const origin = board.originOf(attacker.id);
+          const levitationTargets = getTargetsInShape(
+            board,
+            origin,
+            event.shape ?? "single",
+            event.radius ?? 1,
+            event.targetMode ?? "ally",
+            attacker,
+          );
+          for (const targetAlly of levitationTargets) {
+            const duration = event.duration ?? 3;
+            targetAlly.levitationTurns = targetAlly.levitationTurns === -1
+              ? -1
+              : duration < 0
+                ? -1
+                : Math.max(targetAlly.levitationTurns ?? 0, duration);
+            attacks.push({
+              step,
+              pincerIndex: index,
+              attacker: id,
+              target: targetAlly.id,
+              role: "buff",
+              damage: 0,
+              targetHp: targetAlly.hp,
+              effect: "levitation",
+              skillName: event.skillName,
+              skillId: event.skillId,
             });
           }
         }
@@ -913,4 +975,66 @@ export function resolveAttacks(
     attacks: steps.flatMap((s) => s.attacks),
     defeated: steps.flatMap((s) => s.defeated),
   };
+}
+
+/** Resolve one basic attack for each unit beside a target, excluding units already in a pincer. */
+export function resolveAdjacentAttacks(
+  board: Board,
+  attackers: Side,
+  excludedAttackers: ReadonlySet<string> = new Set(),
+): DirectAttackResolution {
+  const targetSide = attackers === "ally" ? "enemy" : "ally";
+  const attacks: Attack[] = [];
+  let step = 0;
+
+  for (const attacker of board.unitsOf(attackers)) {
+    if (attacker.hp <= 0 || excludedAttackers.has(attacker.id)) continue;
+    const attackerCells = board.cellsOf(attacker.id);
+    const target = board.unitsOf(targetSide).find((candidate) => {
+      if (candidate.hp <= 0) return false;
+      return attackerCells.some((a) => board.cellsOf(candidate.id).some((t) =>
+        Math.abs(a.row - t.row) + Math.abs(a.col - t.col) === 1,
+      ));
+    });
+    if (!target) continue;
+
+    const damage = computeDamage(attacker, target, { trigger: "pincer" });
+    target.hp -= damage;
+    attacks.push({
+      step,
+      pincerIndex: -1,
+      attacker: attacker.id,
+      target: target.id,
+      role: "direct",
+      damage,
+      targetHp: target.hp,
+      effect: "damage",
+    });
+
+    if (target.hp > 0 && (target.skills ?? []).some((skill) => skill.trigger === "counter")) {
+      const counterDamage = computeDamage(target, attacker, { trigger: "counter" });
+      attacker.hp -= counterDamage;
+      attacks.push({
+        step,
+        pincerIndex: -1,
+        attacker: target.id,
+        target: attacker.id,
+        role: "counter",
+        damage: counterDamage,
+        targetHp: attacker.hp,
+      });
+    }
+    step++;
+  }
+
+  const defeated: string[] = [];
+  const fallen: Fallen[] = [];
+  for (const unit of board.allUnits()) {
+    if (unit.hp <= 0) {
+      fallen.push({ unit: { ...unit, stats: { ...unit.stats } }, origin: board.originOf(unit.id) });
+      defeated.push(unit.id);
+    }
+  }
+  defeated.forEach((id) => board.remove(id));
+  return { attacks, defeated, fallen };
 }

@@ -68,6 +68,7 @@ body.battle-active #app { display: flex; }
 .ui-status .rank { font-weight: 600; color: var(--ui-gold); }
 .ui-status .spacer { flex: 1; }
 .ui-status .stat { display: flex; align-items: center; gap: 4px; }
+.ui-status .stat-name { font-weight: 500; }
 .ui-status .stat .icon {
   width: 16px; height: 16px; border-radius: 50%;
   display: inline-flex; align-items: center; justify-content: center;
@@ -256,6 +257,19 @@ body.battle-active #app { display: flex; }
 .pact-card .pact-name { font-size: 17px; font-weight: 700; margin-bottom: 4px; }
 .pact-card .pact-cost { font-size: 13px; color: var(--ui-energy); margin-bottom: 8px; }
 .pact-card .pact-rates { font-size: 12px; color: var(--ui-muted); margin-bottom: 12px; line-height: 1.5; }
+.pact-peek { margin: 8px 0 0 8px; }
+.pact-pool-preview {
+  max-height: 280px; overflow-y: auto; margin-top: 12px; padding: 10px 12px;
+  background: var(--ui-panel-2); border-radius: 10px;
+}
+.pact-pool-preview[hidden] { display: none; }
+.pact-pool-group + .pact-pool-group { margin-top: 12px; }
+.pact-pool-group h4 { margin: 0 0 6px; font-size: 13px; }
+.pact-pool-list {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 3px 12px;
+  margin: 0; padding-left: 18px; color: var(--ui-muted); font-size: 11px;
+}
+.debug-xp-result { min-height: 1.2em; margin: 8px 0 0; color: var(--ui-muted); font-size: 12px; white-space: pre-line; }
 
 /* Shop */
 .shop-item {
@@ -273,11 +287,31 @@ body.battle-active #app { display: flex; }
 
 /* Party grid */
 .char-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.active-character-party { margin-bottom: 14px; }
+.active-character-party h2, .character-roster-title { margin: 4px 0 10px; font-size: 15px; }
+.party-swap-status { min-height: 1.2em; margin: -4px 0 8px; color: var(--ui-muted); font-size: 11px; }
+.active-char-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.character-filters { display: flex; gap: 10px; margin-bottom: 12px; }
+.character-filters label { display: flex; flex: 1; flex-direction: column; gap: 4px; color: var(--ui-muted); font-size: 11px; }
+.character-filters select {
+  width: 100%; border: 1px solid var(--ui-border); border-radius: 8px; padding: 8px;
+  color: var(--ui-text); background: var(--ui-panel); font: inherit; font-size: 13px;
+}
 .char-card {
   background: var(--ui-panel); border: 1px solid var(--ui-border); border-radius: 12px;
   padding: 10px 8px; text-align: center; cursor: pointer;
 }
 .char-card:active { border-color: var(--ui-accent); }
+.char-card.in-active-party { border-color: var(--ui-accent-dim); }
+.char-card.swap-complete { animation: party-swap-feedback 1.25s ease-out; }
+@keyframes party-swap-feedback {
+  0% { transform: scale(1.04); border-color: var(--ui-success); box-shadow: 0 0 0 3px rgb(74 222 128 / 45%); }
+  100% { transform: scale(1); }
+}
+.party-swap-button {
+  margin-top: 7px; padding: 4px 10px; border: 1px solid var(--ui-border); border-radius: 12px;
+  color: var(--ui-text); background: var(--ui-panel-2); font: inherit; font-size: 11px; cursor: pointer;
+}
 .char-card .portrait {
   width: 56px; height: 56px; border-radius: 50%; background: var(--ui-panel-2);
   margin: 0 auto 8px; display: flex; align-items: center; justify-content: center;
@@ -304,10 +338,23 @@ body.battle-active #app { display: flex; }
   border-radius: 8px; padding: 8px; font-size: 13px; font-family: inherit; cursor: pointer;
 }
 .job-tabs button.active { background: var(--ui-accent); border-color: var(--ui-accent); color: #fff; }
+.job-tabs button:disabled { opacity: .45; cursor: not-allowed; }
+.job-unlock-panel { margin: 0 0 6px; padding: 12px; border: 1px solid var(--ui-border); border-radius: 10px; background: var(--ui-panel); }
+.job-unlock-cost { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px; font-size: 13px; }
+.job-unlock-items { display: flex; flex-wrap: wrap; gap: 4px 14px; margin: 8px 0; padding-left: 18px; color: var(--ui-muted); font-size: 12px; }
+.job-unlock-items .enough { color: var(--ui-success); }
+.job-unlock-items .missing { color: var(--ui-danger); }
+.job-unlock-note, .job-action-message { color: var(--ui-muted); font-size: 12px; }
+.job-action-message { min-height: 1.2em; margin: 4px 0 10px; }
+.job-unlock-panel button:disabled { opacity: .45; cursor: not-allowed; }
 .skill-list { display: flex; flex-direction: column; gap: 6px; }
-.skill-row { background: var(--ui-panel); border-radius: 8px; padding: 10px 12px; font-size: 13px; }
+.skill-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; background: var(--ui-panel); border-radius: 8px; padding: 10px 12px; font-size: 13px; }
+.skill-row.locked { opacity: .52; }
+.skill-row-main { min-width: 0; }
 .skill-row .sk-name { font-weight: 600; }
 .skill-row .sk-meta { color: var(--ui-muted); font-size: 12px; margin-top: 2px; }
+.skill-locked-label { margin-left: 6px; font-size: 10px; font-weight: 500; text-transform: uppercase; }
+.skill-unlock-level { flex: 0 0 auto; color: var(--ui-muted); font-size: 11px; white-space: nowrap; }
 
 /* Options */
 .options-list { display: flex; flex-direction: column; gap: 4px; }

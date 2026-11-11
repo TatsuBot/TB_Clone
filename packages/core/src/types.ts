@@ -84,6 +84,7 @@ export type SkillEffectType =
   | "heal"
   | "buff"
   | "debuff"
+  | "levitation"
   | "status"
   | "cure"
   | "utility";
@@ -189,6 +190,8 @@ export interface Unit {
   h: number;
   buffs?: ActiveBuff[];
   statuses?: StatusEffect[];
+  /** Turns of Levitation remaining; -1 means a permanent equip skill. */
+  levitationTurns?: number;
   tapCharges?: Record<string, number>;
 }
 

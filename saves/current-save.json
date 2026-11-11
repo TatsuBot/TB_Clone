@@ -1,0 +1,1117 @@
+{
+  "version": 1,
+  "savedAt": "2026-11-11T23:04:32.405Z",
+  "characters": [
+    {
+      "uid": "bahl_rlab3xr",
+      "defId": "bahl",
+      "activeJob": 1,
+      "jobLevels": [
+        12,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 7,
+      "luck": 0,
+      "companionUid": "fire_visor_ft8we2z"
+    },
+    {
+      "uid": "grace_izfdswq",
+      "defId": "grace",
+      "activeJob": 1,
+      "jobLevels": [
+        11,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 9,
+      "luck": 0
+    },
+    {
+      "uid": "kuscah_ulm8f4z",
+      "defId": "kuscah",
+      "activeJob": 1,
+      "jobLevels": [
+        10,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 5,
+      "luck": 0
+    },
+    {
+      "uid": "samatha_ms2noks",
+      "defId": "samatha",
+      "activeJob": 1,
+      "jobLevels": [
+        18,
+        5,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 0,
+      "luck": 0
+    },
+    {
+      "uid": "ellvern_0zwl2ip",
+      "defId": "ellvern",
+      "activeJob": 1,
+      "jobLevels": [
+        14,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 1,
+      "luck": 0
+    },
+    {
+      "uid": "palpa_o5s7r31",
+      "defId": "palpa",
+      "activeJob": 1,
+      "jobLevels": [
+        12,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 2,
+      "luck": 0
+    },
+    {
+      "uid": "amina_km7tvg8",
+      "defId": "amina",
+      "activeJob": 1,
+      "jobLevels": [
+        9,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 0,
+      "luck": 0
+    },
+    {
+      "uid": "daiana_lhbdrfy",
+      "defId": "daiana",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 3,
+      "luck": 0
+    },
+    {
+      "uid": "sha_plar_zkpm5uw",
+      "defId": "sha_plar",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 0,
+      "luck": 0
+    },
+    {
+      "uid": "bonna_plytpcb",
+      "defId": "bonna",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 0,
+      "luck": 0
+    },
+    {
+      "uid": "eileen_0wsbc44",
+      "defId": "eileen",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 1,
+      "luck": 0
+    },
+    {
+      "uid": "zafitte_lambda_dnho3k7",
+      "defId": "zafitte_lambda",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 0,
+      "luck": 0
+    },
+    {
+      "uid": "puprope_lambda_wmays35",
+      "defId": "puprope_lambda",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 1,
+      "luck": 0
+    },
+    {
+      "uid": "kem_lambda_zbjd004",
+      "defId": "kem_lambda",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 0,
+      "luck": 0
+    },
+    {
+      "uid": "gigojago_kkssvpc",
+      "defId": "gigojago",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 6,
+      "luck": 0
+    },
+    {
+      "uid": "harold_w1vpp0b",
+      "defId": "harold",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 3,
+      "luck": 0
+    },
+    {
+      "uid": "korin_ji720yp",
+      "defId": "korin",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 7,
+      "luck": 0
+    },
+    {
+      "uid": "bajanna_p5oo4xw",
+      "defId": "bajanna",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 0,
+      "luck": 0
+    },
+    {
+      "uid": "ba_gunar_lambda_fbexwa9",
+      "defId": "ba_gunar_lambda",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 0,
+      "luck": 0
+    },
+    {
+      "uid": "jade_dragon_cg85j5s",
+      "defId": "jade_dragon",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 2,
+      "luck": 0
+    },
+    {
+      "uid": "thirty6ais_shd7c2t",
+      "defId": "thirty6ais",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 0,
+      "luck": 0
+    },
+    {
+      "uid": "amerpact_y35h06w",
+      "defId": "amerpact",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 4,
+      "luck": 0
+    },
+    {
+      "uid": "nakupi_ctm92ck",
+      "defId": "nakupi",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 3,
+      "luck": 0
+    },
+    {
+      "uid": "jaguna_90xen8a",
+      "defId": "jaguna",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 5,
+      "luck": 0
+    },
+    {
+      "uid": "lich_lambda_o1u3rkw",
+      "defId": "lich_lambda",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 1,
+      "luck": 0
+    },
+    {
+      "uid": "ba_gunar_rntubb2",
+      "defId": "ba_gunar",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 3,
+      "luck": 0
+    },
+    {
+      "uid": "dracorin_gv55njd",
+      "defId": "dracorin",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 4,
+      "luck": 0
+    },
+    {
+      "uid": "kana_cpq7ggv",
+      "defId": "kana",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 3,
+      "luck": 0
+    },
+    {
+      "uid": "jennish_knngy26",
+      "defId": "jennish",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 0,
+      "luck": 0
+    },
+    {
+      "uid": "burbaba_9ccg4al",
+      "defId": "burbaba",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 2,
+      "luck": 0
+    },
+    {
+      "uid": "amazora_aklo3w7",
+      "defId": "amazora",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 0,
+      "luck": 0
+    },
+    {
+      "uid": "olber_im35d66",
+      "defId": "olber",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 0,
+      "luck": 0
+    },
+    {
+      "uid": "zafitte_yfu3nak",
+      "defId": "zafitte",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 0,
+      "luck": 0
+    },
+    {
+      "uid": "clara_6yjn88k",
+      "defId": "clara",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 0,
+      "luck": 0
+    },
+    {
+      "uid": "alika_n7ku1mu",
+      "defId": "alika",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 0,
+      "luck": 0
+    },
+    {
+      "uid": "gaiga_5lwjoaj",
+      "defId": "gaiga",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 1,
+      "luck": 0
+    },
+    {
+      "uid": "gegonago_019lwia",
+      "defId": "gegonago",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 1,
+      "luck": 0
+    },
+    {
+      "uid": "a_merpact_lambda_fm9uyzd",
+      "defId": "a_merpact_lambda",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 0,
+      "luck": 0
+    },
+    {
+      "uid": "puprope_chtg94o",
+      "defId": "puprope",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 2,
+      "luck": 0
+    },
+    {
+      "uid": "bahamut_mrwjkxd",
+      "defId": "bahamut",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 1,
+      "luck": 0
+    },
+    {
+      "uid": "iskar_leib2sn",
+      "defId": "iskar",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 3,
+      "luck": 0
+    },
+    {
+      "uid": "grace_lambda_2jnwuan",
+      "defId": "grace_lambda",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 1,
+      "luck": 0
+    },
+    {
+      "uid": "bahl_lambda_05guv6i",
+      "defId": "bahl_lambda",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 1,
+      "luck": 0
+    },
+    {
+      "uid": "suoh_1cmq7tq",
+      "defId": "suoh",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 0,
+      "luck": 0
+    },
+    {
+      "uid": "seiryu_lambda_abhwiov",
+      "defId": "seiryu_lambda",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 1,
+      "luck": 0
+    },
+    {
+      "uid": "camellia_cslfgz6",
+      "defId": "camellia",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 0,
+      "luck": 0
+    },
+    {
+      "uid": "ka_pori_t14vm9j",
+      "defId": "ka_pori",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 3,
+      "luck": 0
+    },
+    {
+      "uid": "lunaken_8appd9g",
+      "defId": "lunaken",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 3,
+      "luck": 0
+    },
+    {
+      "uid": "a_misandra_5e8qkk1",
+      "defId": "a_misandra",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 0,
+      "luck": 0
+    },
+    {
+      "uid": "koko_b07e1rm",
+      "defId": "koko",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 0,
+      "luck": 0
+    },
+    {
+      "uid": "lucia_r49q33p",
+      "defId": "lucia",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 0,
+      "luck": 0
+    },
+    {
+      "uid": "captive_golem_srxdrf6",
+      "defId": "captive_golem",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 0,
+      "luck": 0
+    },
+    {
+      "uid": "lacuma_kvx41v5",
+      "defId": "lacuma",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 0,
+      "luck": 0
+    },
+    {
+      "uid": "senala_n53qm4d",
+      "defId": "senala",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 0,
+      "luck": 0
+    },
+    {
+      "uid": "korin_lambda_y1jo8s5",
+      "defId": "korin_lambda",
+      "activeJob": 1,
+      "jobLevels": [
+        1,
+        1,
+        1
+      ],
+      "jobXp": [
+        0,
+        0,
+        0
+      ],
+      "jobsUnlocked": 1,
+      "skillBoost": 0,
+      "luck": 0
+    }
+  ],
+  "companions": [
+    {
+      "uid": "fire_visor_ft8we2z",
+      "defId": "fire_visor",
+      "level": 7,
+      "exp": 0
+    },
+    {
+      "uid": "fire_visor_e7lazu5",
+      "defId": "fire_visor",
+      "level": 3,
+      "exp": 0
+    },
+    {
+      "uid": "healing_ring_6gt5uc7",
+      "defId": "healing_ring",
+      "level": 10,
+      "exp": 0
+    },
+    {
+      "uid": "healing_ring_ulgnd41",
+      "defId": "healing_ring",
+      "level": 5,
+      "exp": 0
+    },
+    {
+      "uid": "white_pendant_ctnzbln",
+      "defId": "white_pendant",
+      "level": 12,
+      "exp": 0
+    },
+    {
+      "uid": "silver_sword_4q4xpes",
+      "defId": "silver_sword",
+      "level": 15,
+      "exp": 0
+    },
+    {
+      "uid": "combat_shield_hw6j8k3",
+      "defId": "combat_shield",
+      "level": 10,
+      "exp": 0
+    },
+    {
+      "uid": "punishers_aokk7ya",
+      "defId": "punishers",
+      "level": 8,
+      "exp": 0
+    },
+    {
+      "uid": "metal_minion_n0bth1u",
+      "defId": "metal_minion",
+      "level": 1,
+      "exp": 0
+    },
+    {
+      "uid": "hisos_tear_xj6i4sc",
+      "defId": "hisos_tear",
+      "level": 5,
+      "exp": 0
+    },
+    {
+      "uid": "fire_helmet_qy4ctsr",
+      "defId": "fire_helmet",
+      "level": 1,
+      "exp": 0
+    },
+    {
+      "uid": "healing_wand_rdbpvur",
+      "defId": "healing_wand",
+      "level": 1,
+      "exp": 0
+    },
+    {
+      "uid": "silver_sword_gmn0rnl",
+      "defId": "silver_sword",
+      "level": 1,
+      "exp": 0
+    },
+    {
+      "uid": "healing_ring_htsdb5n",
+      "defId": "healing_ring",
+      "level": 1,
+      "exp": 0
+    },
+    {
+      "uid": "metal_minion_lambda_ez1r9i5",
+      "defId": "metal_minion_lambda",
+      "level": 1,
+      "exp": 0
+    },
+    {
+      "uid": "silver_sword_vgr3vnx",
+      "defId": "silver_sword",
+      "level": 1,
+      "exp": 0
+    },
+    {
+      "uid": "metal_minion_lambda_aly26mo",
+      "defId": "metal_minion_lambda",
+      "level": 1,
+      "exp": 0
+    }
+  ],
+  "meta": {
+    "stamina": 42,
+    "staminaMax": 50,
+    "energy": 2,
+    "coins": 24500,
+    "cleared": {},
+    "bag": {},
+    "partyUids": [
+      "bahl_rlab3xr",
+      "grace_izfdswq",
+      "puprope_lambda_wmays35",
+      "ellvern_0zwl2ip",
+      "zafitte_lambda_dnho3k7",
+      "palpa_o5s7r31"
+    ]
+  }
+}
