@@ -99,6 +99,41 @@ describe("combat resolution", () => {
     expect(computeDamage(attacker, target, { trigger: "pincer" })).toBe(40);
   });
 
+  it("resolves hybrid magic and weapon damage through separate stats and matchups", () => {
+    const combinations = [
+      ["Graviton", "Sword", "Photon", "Bow"],
+      ["Ice", "Spear", "Fire", "Sword"],
+      ["Photon", "Bow", "Graviton", "Spear"],
+    ] as const;
+
+    for (const [element, weapon, targetElement, targetWeapon] of combinations) {
+      const board = parseBoard(["1 x"], {
+        "1": { atk: 30, def: 5, matk: 24, mdef: 4 },
+        x: { def: 10, mdef: 8 },
+      });
+      const attacker = board.getUnit("1");
+      const target = board.getUnit("x");
+
+      attacker.weapon = weapon;
+      attacker.element = element;
+      target.weapon = targetWeapon;
+      target.element = targetElement;
+      attacker.skills = [
+        {
+          id: "hybrid_attack",
+          trigger: "pincer",
+          frequency: 100,
+          damageComponents: [
+            { type: "magic", element, multiplier: 1 },
+            { type: "weapon", multiplier: 0.5 },
+          ],
+        },
+      ];
+
+      expect(computeDamage(attacker, target, { trigger: "pincer" })).toBe(39);
+    }
+  });
+
   it("chain-triggered skills add a multiplier to chain attacks", () => {
     const board = parseBoard(["1 x"], {
       "1": { atk: 20, def: 5 },

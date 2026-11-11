@@ -1,6 +1,6 @@
 import { Board } from "./board";
 import { RULES } from "./rules";
-import type { ElementType, Hazard, Pos, Unit } from "./types";
+import type { ElementType, Hazard, Pos, Skill, Unit } from "./types";
 import type { WeaponType } from "./types";
 
 export interface UnitTemplate {
@@ -15,6 +15,7 @@ export interface UnitTemplate {
   w?: number;
   h?: number;
   weapon?: WeaponType;
+  skills?: Skill[];
 }
 
 export interface Placement {
@@ -111,6 +112,7 @@ export function makeUnit(t: UnitTemplate, side: Unit["side"]): Unit {
     description: t.description,
     weapon: t.weapon,
     element: t.element,
+    skills: t.skills,
     w: t.w ?? 1,
     h: t.h ?? 1,
   };

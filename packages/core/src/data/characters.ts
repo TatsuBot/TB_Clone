@@ -1,3 +1,5 @@
+import type { DamageComponent } from "../types";
+
 /**
  * Adventurer / character data — first batch from Terra Battle wiki.
  * Names and mechanical numbers kept as internal reference labels (reskin before release).
@@ -23,10 +25,11 @@ export interface SkillUnlock {
   id: string;
   name: string;
   description: string;
-  trigger: "pincer" | "chain" | "equip" | "counter";
+  trigger: "pincer" | "chain" | "equip" | "counter" | "tap";
   target?: string;
   frequency?: number;
   power?: number;
+  damageComponents?: DamageComponent[];
 }
 
 export interface JobDef {
@@ -3570,6 +3573,177 @@ export const CHARACTERS: Record<string, CharacterDef> = {
             power: 2,
           },
         ],
+      },
+    ],
+  },
+  peyrna: {
+    id: "peyrna",
+    name: "Peyrna",
+    rarity: "Z",
+    species: "Stonefolk",
+    gender: "Female",
+    sources: ["Pact of Truth", "Pact of Fate"],
+    jobs: [
+      {
+        jobIndex: 1,
+        title: "The Ashen",
+        weapon: "Sword",
+        element: "Graviton",
+        statsMin: { hp: 557, atk: 38, def: 35, matk: 44, mdef: 39 },
+        statsMax: { hp: 5109, atk: 345, def: 318, matk: 400, mdef: 354 },
+        skills: [
+          {
+            level: 1,
+            id: "crushing_blade",
+            name: "Crushing Blade",
+            description: "x1 graviton and x0.5 sword damage",
+            trigger: "pincer",
+            frequency: 80,
+            damageComponents: [
+              { type: "magic", element: "Graviton", multiplier: 1 },
+              { type: "weapon", multiplier: 0.5 },
+            ],
+          },
+          {
+            level: 30,
+            id: "anti_photon_shield",
+            name: "Anti-Photon Shield",
+            description: "Reduce photon damage received by 40%",
+            trigger: "equip",
+            target: "self",
+          },
+          {
+            level: 50,
+            id: "augment_magic",
+            name: "Augment Magic, All",
+            description: "All allies' MATK +30% for 1 turn (3 charges)",
+            trigger: "tap",
+            target: "all",
+          },
+          {
+            level: 80,
+            id: "augment_magic_defense",
+            name: "Augment Magic Defense, All",
+            description: "All allies' MDEF +30% for 1 turn (3 charges)",
+            trigger: "tap",
+            target: "all",
+          },
+        ],
+      },
+      {
+        jobIndex: 2,
+        title: "The Solitary",
+        weapon: "Sword",
+        element: "Graviton",
+        statsMin: { hp: 584, atk: 41, def: 38, matk: 46, mdef: 42 },
+        statsMax: { hp: 5357, atk: 372, def: 345, matk: 418, mdef: 381 },
+        skills: [
+          {
+            level: 1,
+            id: "gravity_blade",
+            name: "Gravity Blade",
+            description: "x2 graviton and x0.7 sword damage",
+            trigger: "pincer",
+            frequency: 60,
+            damageComponents: [
+              { type: "magic", element: "Graviton", multiplier: 2 },
+              { type: "weapon", multiplier: 0.7 },
+            ],
+          },
+          {
+            level: 30,
+            id: "atk_eq",
+            name: "Attack +10%, Equip",
+            description: "ATK +10%",
+            trigger: "equip",
+          },
+          {
+            level: 50,
+            id: "augment_attack",
+            name: "Augment Attack, All",
+            description: "All allies' ATK +30% for 1 turn (3 charges)",
+            trigger: "tap",
+            target: "all",
+          },
+          {
+            level: 80,
+            id: "augment_defense",
+            name: "Augment Defense, All",
+            description: "All allies' DEF +30% for 1 turn (3 charges)",
+            trigger: "tap",
+            target: "all",
+          },
+        ],
+        unlockCost: {
+          coins: 14000,
+          items: [
+            { id: "forlorn_stone", qty: 15 },
+            { id: "graviton_ring", qty: 15 },
+            { id: "dark_matter", qty: 3 },
+          ],
+        },
+      },
+      {
+        jobIndex: 3,
+        title: "The Beloved",
+        weapon: "Sword",
+        element: "Graviton",
+        statsMin: { hp: 643, atk: 44, def: 41, matk: 49, mdef: 45 },
+        statsMax: { hp: 5898, atk: 400, def: 372, matk: 445, mdef: 409 },
+        skills: [
+          {
+            level: 1,
+            id: "control_time_4",
+            name: "Control Time +4 Sec, Self",
+            description: "Control time +4 sec",
+            trigger: "equip",
+            target: "self",
+          },
+          {
+            level: 30,
+            id: "crush_sword_column",
+            name: "Crush & Sword, Pincer Column",
+            description: "x0.8 graviton and x0.8 sword damage",
+            trigger: "pincer",
+            frequency: 30,
+            damageComponents: [
+              { type: "magic", element: "Graviton", multiplier: 0.8 },
+              { type: "weapon", multiplier: 0.8 },
+            ],
+          },
+          {
+            level: 50,
+            id: "gravity_sword_row",
+            name: "Gravity & Sword, Pincer Row",
+            description: "x1.6 graviton and x1.6 sword damage",
+            trigger: "pincer",
+            frequency: 30,
+            damageComponents: [
+              { type: "magic", element: "Graviton", multiplier: 1.6 },
+              { type: "weapon", multiplier: 1.6 },
+            ],
+          },
+          {
+            level: 80,
+            id: "supergravity_sword",
+            name: "Supergravity & Sword",
+            description: "x2.6 graviton and x2.6 sword damage",
+            trigger: "pincer",
+            frequency: 30,
+            damageComponents: [
+              { type: "magic", element: "Graviton", multiplier: 2.6 },
+              { type: "weapon", multiplier: 2.6 },
+            ],
+          },
+        ],
+        unlockCost: {
+          coins: 28000,
+          items: [
+            { id: "shell_of_madness", qty: 15 },
+            { id: "heartwood_sword", qty: 1 },
+            { id: "dark_star", qty: 50 },
+          ],
+        },
       },
     ],
   },

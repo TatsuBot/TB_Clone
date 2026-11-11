@@ -78,6 +78,14 @@ export type SkillShape =
   | "adjacent";
 export type SkillTargetMode = "enemy" | "ally" | "self" | "all";
 
+export interface DamageComponent {
+  /** Weapon uses ATK/DEF and the weapon triangle; magic uses MATK/MDEF and an element. */
+  type: "weapon" | "magic";
+  multiplier: number;
+  /** Magic element; omit to inherit the unit element or use "—" for neutral magic. */
+  element?: ElementType;
+}
+
 export interface Skill {
   id: string;
   name?: string;
@@ -86,6 +94,8 @@ export interface Skill {
   frequency?: number;
   /** Explicit numeric override for the skill's power multiplier. */
   power?: number;
+  /** Separate channels for hybrid attacks; when active these replace the default hit. */
+  damageComponents?: DamageComponent[];
   /** Optional explicit tier label; if omitted, the tier is inferred from the skill name prefix. */
   tier?: SkillPowerTier;
   /** Shape of the effect: single target, area burst, row, column, etc. */
@@ -104,6 +114,7 @@ export interface SkillEvent {
   targetUnitIds: string[];
   activated: boolean;
   multiplier: number;
+  damageComponents?: DamageComponent[];
   chance?: number;
   order: number;
   effect: "damage" | "heal" | "status" | "utility";

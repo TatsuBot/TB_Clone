@@ -163,6 +163,7 @@ export function buildSkillEvents(
     targetUnitIds: context.targetUnitIds ?? [],
     activated: true,
     multiplier: skillPowerMultiplier(skill),
+    damageComponents: skill.damageComponents,
     chance: skill.frequency,
     order: typeof context.order === "number" ? context.order + index : index,
     effect: "damage",
@@ -185,7 +186,33 @@ export function damageSkillMultiplier(
     },
   );
   if (active.length === 0) return 1;
-  return active.reduce((total, skillEvent) => total * skillEvent.multiplier, 1);
+  return active.reduce(
+    (total, skillEvent) =>
+      total * (skillEvent.damageComponents?.length ? 1 : skillEvent.multiplier),
+    1,
+  );
+}
+
+function damageForComponent(
+  attacker: Unit,
+  target: Unit,
+  component: NonNullable<Skill["damageComponents"]>[number],
+): number {
+  const isMagic = component.type === "magic";
+  const attackStat = isMagic
+    ? (attacker.stats.matk ?? attacker.stats.atk)
+    : attacker.stats.atk;
+  const defenseStat = isMagic
+    ? (target.stats.mdef ?? target.stats.def)
+    : target.stats.def;
+  const base = Math.max(1, attackStat - defenseStat);
+  const matchup = isMagic
+    ? elementalFactor(
+        { element: component.element ?? attacker.element },
+        target,
+      )
+    : weaponTriangleFactor(attacker, target);
+  return base * component.multiplier * matchup;
 }
 
 export function computeDamage(
@@ -193,6 +220,33 @@ export function computeDamage(
   target: Unit,
   context: DamageContext = {},
 ): number {
+  const skillEvents = buildSkillEvents(attacker, {
+    trigger: context.trigger,
+    random: context.random ?? Math.random,
+  });
+  const hybridEvents = skillEvents.filter(
+    (event) => event.damageComponents && event.damageComponents.length > 0,
+  );
+  const scalarMultiplier = skillEvents.reduce(
+    (total, event) =>
+      total * (event.damageComponents?.length ? 1 : event.multiplier),
+    1,
+  );
+
+  if (hybridEvents.length > 0) {
+    const componentDamage = hybridEvents.reduce(
+      (total, event) =>
+        total +
+        (event.damageComponents ?? []).reduce(
+          (sum, component) =>
+            sum + damageForComponent(attacker, target, component),
+          0,
+        ),
+      0,
+    );
+    return Math.max(1, Math.round(componentDamage * scalarMultiplier));
+  }
+
   const attackStat =
     attacker.weapon === "Staff"
       ? (attacker.stats.matk ?? attacker.stats.atk)
@@ -205,11 +259,7 @@ export function computeDamage(
   const modifier =
     weaponTriangleFactor(attacker, target) *
     elementalFactor(attacker, target) *
-    damageSkillMultiplier(
-      attacker,
-      context.trigger,
-      context.random ?? Math.random,
-    );
+    scalarMultiplier;
   return Math.max(1, Math.round(base * modifier));
 }
 

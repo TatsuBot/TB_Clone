@@ -73,6 +73,37 @@ describe("characters", () => {
     });
   });
 
+  it("includes Peyrna's three jobs, stats, Tap skills, and job costs", () => {
+    const peyrna = getCharacter("peyrna")!;
+    expect(peyrna.rarity).toBe("Z");
+    expect(peyrna.species).toBe("Stonefolk");
+    expect(peyrna.gender).toBe("Female");
+    expect(peyrna.jobs.map((job) => job.title)).toEqual([
+      "The Ashen",
+      "The Solitary",
+      "The Beloved",
+    ]);
+    expect(peyrna.jobs[0].statsMin).toEqual({
+      hp: 557,
+      atk: 38,
+      def: 35,
+      matk: 44,
+      mdef: 39,
+    });
+    expect(peyrna.jobs[2].statsMax).toEqual({
+      hp: 5898,
+      atk: 400,
+      def: 372,
+      matk: 445,
+      mdef: 409,
+    });
+    expect(
+      peyrna.jobs[0].skills.filter((skill) => skill.trigger === "tap"),
+    ).toHaveLength(2);
+    expect(peyrna.jobs[1].unlockCost?.coins).toBe(14000);
+    expect(peyrna.jobs[2].unlockCost?.coins).toBe(28000);
+  });
+
   it("keeps verified wiki class, species, and job counts", () => {
     const expectedProfiles = [
       ["gatz", "S", "Human"],
