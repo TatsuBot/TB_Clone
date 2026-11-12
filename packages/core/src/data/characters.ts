@@ -19,6 +19,7 @@ export interface SkillUnlock {
   frequency?: number;
   power?: number;
   damageComponents?: DamageComponent[];
+  element?: ElementType | "Healing";
 }
 
 export interface JobDef {

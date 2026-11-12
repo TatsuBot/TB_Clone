@@ -40,6 +40,9 @@ export function enemyToTemplate(
       def.skillNote ?? `${def.species ?? def.family} unit, level ${def.level}.`,
     w: def.w,
     h: def.h,
+    species: def.species,
+    weapon: def.weapon as UnitTemplate["weapon"],
+    element: def.element as UnitTemplate["element"],
   };
 }
 

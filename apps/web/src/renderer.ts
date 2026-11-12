@@ -1,4 +1,4 @@
-import type { Board, Fallen, Pos, Resolution, TapReport, Unit } from "@game/core";
+import { inferSkillStatChanges, type Board, type Fallen, type Pos, type Resolution, type TapReport, type Unit } from "@game/core";
 import { constrainToken, type Rect } from "./constrain";
 
 interface FloatText {
@@ -7,6 +7,13 @@ interface FloatText {
   y: number;
   born: number;
   color?: string;
+}
+
+interface ImpactIconAnimation {
+  image: HTMLImageElement;
+  x: number;
+  y: number;
+  born: number;
 }
 
 const TOKEN_R = 0.4; // token radius in cells
@@ -18,11 +25,21 @@ const COLORS = {
   cellB: "#222840",
   wall: "#0b0d12",
 };
-const WEAPON_GLYPHS: Partial<Record<NonNullable<Unit["weapon"]>, string>> = {
-  Sword: "⚔️",
-  Bow: "🏹",
-  Spear: "🔱",
-  Staff: "🔮",
+const WEAPON_ICON_FILES: Partial<Record<NonNullable<Unit["weapon"]>, string>> = {
+  Sword: "SwordIcon_5qB_.webp",
+  Spear: "SpearIcon_wbHQ.webp",
+  Bow: "BowIcon_5qB_.webp",
+  Staff: "StaffIcon_wbHQ.webp",
+};
+const ELEMENT_ICON_FILES: Record<string, string> = {
+  Fire: "FireIcon_wbHQ.webp",
+  Ice: "IceIcon_wbHQ.webp",
+  Lightning: "LightningIcon_wbHQ.webp",
+  Darkness: "DarkIcon_wbHQ.webp",
+  Photon: "Skill_icon_113_wbHQ.webp",
+  Graviton: "Skill_icon_114_wbHQ.webp",
+  Sun: "Skill_icon_136_wbHQ.webp",
+  Moon: "Skill_icon_137_wbHQ.webp",
 };
 const ELEMENT_COLORS: Partial<Record<NonNullable<Unit["element"]>, string>> = {
   Fire: "#ff6947",
@@ -34,6 +51,19 @@ const ELEMENT_COLORS: Partial<Record<NonNullable<Unit["element"]>, string>> = {
   Sun: "#ffad4a",
   Moon: "#c4b5fd",
 };
+const TAP_ICON_FILES: Record<number, string> = {
+  115: "20px-Skill_icon_115_aANT.webp",
+  116: "20px-Skill_icon_116_aANT.webp",
+  117: "20px-Skill_icon_117_aANT.png",
+  118: "20px-Skill_icon_118_aANT.webp",
+  119: "20px-Skill_icon_119_aANT.png",
+  120: "20px-Skill_icon_120_aANT.png",
+  121: "20px-Skill_icon_121_aANT.webp",
+  122: "20px-Skill_icon_122_aANT.png",
+  123: "20px-Skill_icon_123_aANT.png",
+  124: "20px-Skill_icon_124_aANT.png",
+};
+const ICON_FOR_STAT: Record<string, number> = { atk: 115, matk: 116, def: 117, mdef: 118 };
 
 /** Draws whatever board it is handed. Reads state, never decides outcomes. */
 export class Renderer {
@@ -50,6 +80,23 @@ export class Renderer {
     private getBoard: () => Board,
   ) {
     this.ctx = canvas.getContext("2d") as CanvasRenderingContext2D;
+    for (const [weapon, filename] of Object.entries(WEAPON_ICON_FILES)) {
+      if (!filename) continue;
+      const image = new Image();
+      image.src = new URL(`Assets/${filename}`, document.baseURI).href;
+      this.weaponIconImages.set(weapon, image);
+      this.impactIconImages.set(`weapon:${weapon}`, image);
+    }
+    for (const [element, filename] of Object.entries(ELEMENT_ICON_FILES)) {
+      const image = new Image();
+      image.src = new URL(`Assets/${filename}`, document.baseURI).href;
+      this.impactIconImages.set(`element:${element}`, image);
+    }
+    for (const [id, filename] of Object.entries(TAP_ICON_FILES)) {
+      const image = new Image();
+      image.src = new URL(`Assets/${filename}`, document.baseURI).href;
+      this.tapIconImages.set(Number(id), image);
+    }
     this.resize();
     window.addEventListener("resize", () => this.resize());
   }
@@ -94,6 +141,10 @@ export class Renderer {
   private queue: Array<{ at: number; run: (now: number) => void }> = [];
   private ghosts: Array<{ unit: Unit; origin: Pos; until: number }> = [];
   private shownHp = new Map<string, number>();
+  private tapIconImages = new Map<number, HTMLImageElement>();
+  private weaponIconImages = new Map<string, HTMLImageElement>();
+  private impactIconImages = new Map<string, HTMLImageElement>();
+  private impactIcons: ImpactIconAnimation[] = [];
 
   /** Forget all animation state (used on restart). */
   reset(): void {
@@ -103,6 +154,7 @@ export class Renderer {
     this.queue = [];
     this.ghosts = [];
     this.shownHp.clear();
+    this.impactIcons = [];
   }
 
   /**
@@ -132,6 +184,13 @@ export class Renderer {
 
     let t = 0;
     for (const step of res.steps) {
+      for (const tile of step.impactTiles ?? []) {
+        const at = now + t;
+        this.queue.push({
+          at,
+          run: (nowRun) => this.addImpactIcon(tile.icon, tile.position, nowRun),
+        });
+      }
       step.attacks.forEach((a, i) => {
         const at = now + t + i * HIT_MS;
         const origin = board.hasUnit(a.target)
@@ -143,6 +202,7 @@ export class Renderer {
             this.flash.set(a.attacker, nowRun + 220);
             this.shownHp.set(a.target, Math.max(0, a.targetHp));
             if (origin && (a.effect !== "levitation" || a.target === a.attacker)) {
+            if (a.impactIcon) this.addImpactIcon(a.impactIcon, origin, nowRun);
               let text = `-${a.damage}`;
               let color = "#ffffff";
               if (a.effect === "heal") {
@@ -192,6 +252,7 @@ export class Renderer {
           this.flash.set(attack.attacker, nowRun + 220);
           this.shownHp.set(attack.target, Math.max(0, attack.targetHp));
           if (origin) {
+            if (attack.impactIcon) this.addImpactIcon(attack.impactIcon, origin, nowRun);
             this.floats.push({
               text: `-${attack.damage}`,
               x: (origin.col + 0.5) * this.cell,
@@ -213,13 +274,30 @@ export class Renderer {
     return t;
   }
 
+  private addImpactIcon(
+    icon: { kind: "weapon" | "element"; value: string },
+    origin: Pos,
+    now: number,
+  ): void {
+    const image = this.impactIconImages.get(`${icon.kind}:${icon.value}`);
+    if (!image?.complete || image.naturalWidth === 0) return;
+    this.impactIcons.push({
+      image,
+      x: (origin.col + 0.5) * this.cell,
+      y: (origin.row + 0.5) * this.cell,
+      born: now,
+    });
+  }
+
   showTapFeedback(report: TapReport, now: number = performance.now()): void {
     const board = this.getBoard();
     const color = report.category === "buff" ? "#7dff9a" : "#f87171";
-    const text =
-      report.category === "buff"
-        ? `+${report.percent}% ${(report.stat ?? "BUFF").toUpperCase()}`
-        : `${report.percent}% ${(report.stat ?? "DEBUFF").toUpperCase()}`;
+    const changes = report.statChanges?.length
+      ? report.statChanges
+      : [{ stat: report.stat ?? "atk", percent: report.percent }];
+    const text = changes.map(({ stat, percent }) =>
+      `${percent > 0 ? "+" : ""}${percent}% ${stat.toUpperCase()}`,
+    ).join(" / ");
 
     if (board.hasUnit(report.unitId)) {
       const origin = board.originOf(report.unitId);
@@ -310,6 +388,18 @@ export class Renderer {
         false,
         this.shownHp.get(g.unit.id) ?? 0,
       );
+    }
+
+    this.impactIcons = this.impactIcons.filter((icon) => now - icon.born < 650);
+    for (const icon of this.impactIcons) {
+      const progress = (now - icon.born) / 650;
+      const size = cell * (0.34 + Math.min(1, progress * 5) * 0.1);
+      ctx.save();
+      ctx.globalAlpha = Math.max(0, 1 - progress);
+      ctx.shadowColor = "#ffffffaa";
+      ctx.shadowBlur = cell * 0.12;
+      ctx.drawImage(icon.image, icon.x - size / 2, icon.y - size / 2, size, size);
+      ctx.restore();
     }
 
     this.floats = this.floats.filter((f) => now - f.born < 900);
@@ -410,13 +500,11 @@ export class Renderer {
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
     ctx.fillText(label, x + w / 2, y + h / 2);
-    const weaponGlyph =
-      u.side === "ally" && u.weapon ? WEAPON_GLYPHS[u.weapon] : undefined;
-    if (weaponGlyph && u.w === 1 && u.h === 1) {
-      const tokenRadius = cell * TOKEN_R * (lifted ? LIFT : 1);
+    const weaponIcon = u.side === "ally" && u.weapon ? this.weaponIconImages.get(u.weapon) : undefined;
+    if (weaponIcon && u.w === 1 && u.h === 1) {
       const badgeRadius = Math.max(5, cell * 0.13);
-      const badgeX = x + w / 2 + tokenRadius * 0.55;
-      const badgeY = y + h / 2 - tokenRadius * 0.55;
+      const badgeX = x + w - pad - badgeRadius;
+      const badgeY = y + pad + badgeRadius;
       ctx.beginPath();
       ctx.arc(badgeX, badgeY, badgeRadius, 0, Math.PI * 2);
       ctx.fillStyle = "#101522";
@@ -424,13 +512,11 @@ export class Renderer {
       ctx.strokeStyle = "#dce4f2";
       ctx.lineWidth = Math.max(1, cell * 0.025);
       ctx.stroke();
-      ctx.font = `${Math.round(badgeRadius * 1.55)}px "Apple Color Emoji", "Segoe UI Emoji", sans-serif`;
-      ctx.textAlign = "center";
-      ctx.textBaseline = "middle";
-      ctx.fillStyle = "#ffffff";
-      ctx.fillText(weaponGlyph, badgeX, badgeY);
-    }
-    if (u.side === "ally" && singleCell && u.element && u.element !== "—") {
+      if (weaponIcon.complete && weaponIcon.naturalWidth > 0) {
+        const iconSize = badgeRadius * 1.45;
+        ctx.drawImage(weaponIcon, badgeX - iconSize / 2, badgeY - iconSize / 2, iconSize, iconSize);
+      }
+    }    if (u.side === "ally" && singleCell && u.element && u.element !== "—") {
       const markerX = x + w - pad * 2.2;
       const markerY = y + h - pad * 3.8;
       if (u.element === "Healing" || u.element === "Remedy") {
@@ -458,6 +544,7 @@ export class Renderer {
         }
       }
     }
+    if (u.side === "ally" && singleCell) this.drawAvailableTapIcons(u, x, y, pad);
     // hp bar
     const bw = w - pad * 4;
     ctx.fillStyle = "#00000088";
@@ -470,5 +557,45 @@ export class Renderer {
       cell * 0.08,
     );
     ctx.restore();
+  }
+
+  private drawAvailableTapIcons(unit: Unit, x: number, y: number, pad: number): void {
+    const available = new Set<number>();
+    for (const skill of unit.skills ?? []) {
+      if (skill.trigger !== "tap" || (unit.tapCharges?.[skill.id] ?? skill.tapCharges ?? 3) <= 0) continue;
+      const changes = inferSkillStatChanges(skill);
+      const stats = [...new Set(changes.map((change) => change.stat))];
+      const isDebuff = skill.target === "enemy" || changes.some((change) => change.percent < 0) ||
+        /enemies|enemy/i.test(`${skill.name ?? ""} ${skill.description ?? ""}`);
+      let iconId = stats.length > 1
+        ? (isDebuff ? 124 : 119)
+        : stats.length === 1
+          ? (ICON_FOR_STAT[stats[0]!] ?? (isDebuff ? 124 : 119))
+          : (isDebuff ? 124 : 119);
+      if (isDebuff && iconId < 120) iconId += 5;
+      available.add(iconId);
+    }
+
+    const { ctx, cell } = this;
+    if (available.size === 0) return;
+    const size = Math.max(8, Math.min(16, cell * 0.26));
+    const gap = Math.max(1, cell * 0.025);
+    const columns = Math.min(3, available.size);
+    const rows = Math.ceil(available.size / columns);
+    const iconsHeight = rows * size + (rows - 1) * gap;
+    const iconsTop = y + unit.h * cell - pad * 2.2 - iconsHeight - gap;
+    [...available].forEach((iconId, index) => {
+      const image = this.tapIconImages.get(iconId);
+      if (!image?.complete || image.naturalWidth === 0) return;
+      const col = index % columns;
+      const row = Math.floor(index / columns);
+      const ix = x + pad + col * (size + gap);
+      const iy = iconsTop + row * (size + gap);
+      ctx.fillStyle = "#101522dd";
+      ctx.beginPath();
+      ctx.roundRect(ix - 1, iy - 1, size + 2, size + 2, Math.max(2, size * 0.15));
+      ctx.fill();
+      ctx.drawImage(image, ix, iy, size, size);
+    });
   }
 }

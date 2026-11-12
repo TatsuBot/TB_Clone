@@ -1,0 +1,179 @@
+================================================================================
+CHAPTERS16F.TXT  -  Terra Battle Chapter 16 FINAL reference
+================================================================================
+Purpose : Stage-by-stage layout of Chapter 16 for building stage data.
+Status  : FINAL for available data. Wave lists from user paste.
+          No placement grids — all placements [MISSING].
+          16-10 incomplete; S/N Cell pair mechanic noted.
+Drafted : 2026-11-11
+Source  : User paste. Own words only. Filename ends in "f".
+
+--------------------------------------------------------------------------------
+HOW TO READ
+--------------------------------------------------------------------------------
+  Wave = wiki "Battle". Board = 6 cols x 8 rows.
+  Placement when grids arrive: (col, row) bottom-left origin.
+
+================================================================================
+CHAPTER 16  (Animata — sentient starship — working label)
+================================================================================
+After Ch15. 10 stages. Stamina 13 every stage.
+Difficulty 38 for 16-1..16-5,  39 for 16-6..16-10.
+Theme: Bow machine cells (Mechacell / Ramcell / Powercell / Snipercell).
+Special: S Cell + N Cell always spawn as a pair; slime trail refreshed between
+  them after either moves (shortest-path step heuristic) — stages 16-6+.
+Floor rocks (hazard, not enemies) on 16-3 and 16-9.
+
+ Stage  Stam  Diff  Waves  Coins / notes              Placement
+ 16-1   13    38    5      coins 572                   MISSING
+ 16-2   13    38    4      —                           MISSING
+ 16-3   13    38    4      rocks present               MISSING
+ 16-4   13    38    5      —                           MISSING
+ 16-5   13    38    3      —                           MISSING
+ 16-6   13    39    4      S/N Cell pairs              MISSING
+ 16-7   13    39    5      coins 832; S/N Cell         MISSING
+ 16-8   13    39    4      S/N Cell                    MISSING
+ 16-9   13    39    4      coins 650; rocks            MISSING
+ 16-10  13    39    3      list incomplete             MISSING
+
+================================================================================
+STAGE 16-1   Stam 13  Diff 38  5 waves
+================================================================================
+Totals: Bow 22
+Coins 572
+Wave 1  Mechacell [Bow] Lv42 x3
+Wave 2  Ramcell [Bow] Lv42 x3, Mechacell [Bow] Lv42 x1
+Wave 3  Ramcell [Bow] Lv42 x4, Powercell [Bow] Lv43 x1
+Wave 4  Mechacell [Bow] Lv42 x4
+Wave 5  Mechacell [Bow] Lv42 x2, Ramcell [Bow] Lv42 x2, Powercell [Bow] Lv43 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 16-2   Stam 13  Diff 38  4 waves
+================================================================================
+Totals: Bow 24
+Wave 1  Snipercell [Bow] Lv42 x1, Ramcell [Bow] Lv42 x3
+Wave 2  Powercell [Bow] Lv43 x3, Ramcell [Bow] Lv42 x2
+Wave 3  Snipercell [Bow] Lv42 x1, Powercell [Bow] Lv43 x2, Ramcell [Bow] Lv42 x2
+Wave 4  Snipercell [Bow] Lv42 x2, Powercell [Bow] Lv43 x4, Ramcell [Bow] Lv42 x4
+Placement: [MISSING]
+
+================================================================================
+STAGE 16-3   Stam 13  Diff 38  4 waves
+================================================================================
+Totals: Bow 28
+Note: floor rocks (hazard objects, not enemy spawns)
+Wave 1  Ramcell [Bow] Lv42 x6, Mechacell [Bow] Lv42 x4
+Wave 2  Snipercell [Bow] Lv42 x2, Ramcell [Bow] Lv42 x4
+Wave 3  Ramcell [Bow] Lv42 x2, Mechacell [Bow] Lv42 x4
+Wave 4  Snipercell [Bow] Lv42 x4, Ramcell [Bow] Lv46 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 16-4   Stam 13  Diff 38  5 waves
+================================================================================
+Totals: Bow 25, Staff 8
+Wave 1  Mechavirus 1567 [Staff] Lv38 x1, Mechacell [Bow] Lv42 x2
+Wave 2  Mechavirus 1567 [Staff] Lv38 x1, Mechacell [Bow] Lv42 x6
+Wave 3  Mechavirus 1567 [Staff] Lv38 x2, Mechacell [Bow] Lv42 x6
+Wave 4  Mechavirus 1567 [Staff] Lv38 x2, Mechacell [Bow] Lv42 x2, Snipercell [Bow] Lv42 x1
+Wave 5  Mechavirus 1567 [Staff] Lv38 x2, Mechacell [Bow] Lv42 x6, Snipercell [Bow] Lv42 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 16-5   Stam 13  Diff 38  3 waves
+================================================================================
+Totals: Bow 15, Staff 8
+Wave 1  Ramcell [Bow] Lv42 x5, Mechavirus 3721 [Staff] Lv45 x2
+Wave 2  Mechacell [Bow] Lv42 x4, Mechavirus 9643 [Staff] Lv45 x2
+Wave 3  Mechacell [Bow] Lv45 x3, Ramcell [Bow] Lv45 x3,
+        Mechavirus 1567 [Staff] Lv45 x1, Mechavirus 3721 [Staff] Lv45 x2,
+        Mechavirus 9643 [Staff] Lv45 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 16-6   Stam 13  Diff 39  4 waves
+================================================================================
+Totals: Bow 17
+SPECIAL: S Cell + N Cell always appear as a pair; slime trail is refreshed /
+  recreated between them after either one moves (shortest-path step heuristic).
+Wave 1  S Cell [Bow] Lv44 x1, N Cell [Bow] Lv44 x1
+Wave 2  S Cell [Bow] Lv44 x1, N Cell [Bow] Lv44 x1, Mechacell [Bow] Lv42 x2
+Wave 3  S Cell [Bow] Lv44 x1, N Cell [Bow] Lv44 x1, Mechacell [Bow] Lv42 x3,
+        Snipercell [Bow] Lv42 x1
+Wave 4  S Cell [Bow] Lv44 x1, N Cell [Bow] Lv44 x1, Mechacell [Bow] Lv46 x1,
+        Snipercell [Bow] Lv42 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 16-7   Stam 13  Diff 39  5 waves
+================================================================================
+Totals: Bow 32
+Coins 832
+Wave 1  Ramcell [Bow] Lv42 x4, Powercell [Bow] Lv43 x3
+Wave 2  Ramcell [Bow] Lv42 x2, Powercell [Bow] Lv43 x3, Mechacell [Bow] Lv42 x2
+Wave 3  S Cell [Bow] Lv44 x1, N Cell [Bow] Lv44 x1, Ramcell [Bow] Lv42 x3
+Wave 4  S Cell [Bow] Lv44 x1, N Cell [Bow] Lv44 x1, Powercell [Bow] Lv43 x2,
+        Mechacell [Bow] Lv42 x3
+Wave 5  S Cell [Bow] Lv44 x2, N Cell [Bow] Lv44 x2, Powercell [Bow] Lv43 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 16-8   Stam 13  Diff 39  4 waves
+================================================================================
+Totals: Bow 22, Staff 7
+Wave 1  S Cell [Bow] Lv44 x1, N Cell [Bow] Lv44 x1, Mechavirus 1567 [Staff] Lv38 x2
+Wave 2  Ramcell [Bow] Lv42 x4, Mechavirus 1567 [Staff] Lv38 x2
+Wave 3  S Cell [Bow] Lv44 x1, N Cell [Bow] Lv44 x1, Mechavirus 1567 [Staff] Lv38 x3,
+        Mechacell [Bow] Lv42 x2
+Wave 4  Ramcell [Bow] Lv42 x10, Mechacell [Bow] Lv42 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 16-9   Stam 13  Diff 39  4 waves
+================================================================================
+Totals: Bow 22, Staff 3
+Coins 650
+Note: floor rocks (hazard objects, not enemy spawns)
+Wave 1  Mechacell [Bow] Lv42 x2, Snipercell [Bow] Lv42 x2
+Wave 2  Ramcell [Bow] Lv42 x4, Snipercell [Bow] Lv42 x1, Mechavirus 1567 [Staff] Lv38 x1
+Wave 3  Mechacell [Bow] Lv42 x2, Mechavirus 1567 [Staff] Lv38 x2
+Wave 4  Ramcell [Bow] Lv42 x7, Mechacell [Bow] Lv42 x4
+Placement: [MISSING]
+
+================================================================================
+STAGE 16-10  Stam 13  Diff 39  3 waves
+================================================================================
+Totals: Bow 17
+Paste left Battle 1–3 blank except Stage-16-10-1:
+
+Wave 1  Powercell [Bow] Lv43 x2, Ramcell [Bow] Lv42 x6
+Wave 2  [MISSING]
+Wave 3  [MISSING]
+Placement: [MISSING]
+
+================================================================================
+ENEMY ROSTER (chapter levels) — stats [NOT FOUND]
+================================================================================
+Mechacell [Bow]               Lv42, Lv45, Lv46
+Mechavirus 1567 [Staff]       Lv38, Lv45
+Mechavirus 3721 [Staff]       Lv45
+Mechavirus 9643 [Staff]       Lv45
+N Cell [Bow]                  Lv44   (paired with S Cell)
+Powercell [Bow]               Lv43
+Ramcell [Bow]                 Lv42, Lv45, Lv46
+S Cell [Bow]                  Lv44   (paired with N Cell)
+Snipercell [Bow]              Lv42
+
+================================================================================
+COULD NOT FIND / OPEN
+================================================================================
+ 1. All placements (no grids).
+ 2. Full enemy stat blocks.
+ 3. Complete 16-10 wave list.
+ 4. Rock hazard tile coordinates (16-3, 16-9).
+ 5. Full S/N Cell slime-trail rules beyond the paste note.
+ 6. Official chapter title / XP for most stages.
+
+Wave lists complete for 16-1..16-9. 16-10 needs fuller data.
+================================================================================

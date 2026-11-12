@@ -1,0 +1,182 @@
+================================================================================
+CHAPTERS28F.TXT  -  Terra Battle Chapter 28 FINAL reference
+================================================================================
+Purpose : Stage-by-stage layout of Chapter 28 for building stage data.
+Status  : FINAL for available data. Wave lists present; 28-10 lists 3 battles
+          though header says 4. No placements.
+Drafted : 2026-11-11
+Source  : User paste. Own words only. Filename ends in "f".
+
+--------------------------------------------------------------------------------
+HOW TO READ
+--------------------------------------------------------------------------------
+  Wave = wiki "Battle". Board = 6 cols x 8 rows.
+  Placement when grids arrive: (col, row) bottom-left origin.
+
+================================================================================
+CHAPTER 28  (Life Breeder / Fiends — working label)
+================================================================================
+After Ch27. 10 stages. Stamina 19 every stage.
+Difficulty 65 for 28-1..28-5,  66 for 28-6..28-10.
+Theme: Mixed Oxsecian units + legendary bosses (Kraken, Marilith, Tiamat, Lich).
+Bosses:
+  28-3  Kraken Lv77 (+ Tentacles)
+  28-5  Oxsecian Blitzer x18 mini-boss wave
+  28-6  Marilith Lv78
+  28-9  Tiamat Lv76 (+ Ice/Fire Spawn)
+  28-10 Lich Lv77
+
+ Stage  Stam  Diff  Waves  XP / Coins
+ 28-1   19    65    5      XP 29849, coins 555
+ 28-2   19    65    4      XP 30971, coins 549
+ 28-3   19    65    3      XP 17517, coins 316  (Kraken)
+ 28-4   19    65    5      XP 102087, coins 1664
+ 28-5   19    65    3      XP 86320, coins 1316  (Blitzer x18)
+ 28-6   19    66    4      XP 63958, coins 1096  (Marilith)
+ 28-7   19    66    4      XP 39764, coins 702
+ 28-8   19    66    5      XP 88092, coins 1440
+ 28-9   19    66    3      XP 52852, coins 824  (Tiamat)
+ 28-10  19    66    4?     XP 51387, coins 914  (Lich; 3 waves listed)
+
+================================================================================
+STAGE 28-1   Stam 19  Diff 65  5 waves
+================================================================================
+Totals: Bow 27, Staff 9
+XP 29849 (1571/stam), Coins 555
+Wave 1  Arachnochip [Bow] Lv65 x2, Oxsecian Raider [Staff] Lv65 x2
+Wave 2  Arachnochip [Bow] Lv65 x3, Oxsecian Raider [Staff] Lv65 x5
+Wave 3  Arachnochip [Bow] Lv65 x9
+Wave 4  Arachnochip [Bow] Lv65 x5, Arachnochip EX [Bow] Lv67 x1
+Wave 5  Arachnochip [Bow] Lv65 x5, Oxsecian Raider [Staff] Lv65 x2, Arachnochip EX [Bow] Lv67 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 28-2   Stam 19  Diff 65  4 waves
+================================================================================
+Totals: Bow 33, Staff 7
+XP 30971 (1630/stam), Coins 549
+Wave 1  Arachnochip [Bow] Lv65 x6
+Wave 2  Arachnochip [Bow] Lv65 x3, Oxsecian Raider [Staff] Lv65 x2, Arachnochip EX [Bow] Lv67 x1
+Wave 3  Arachnochip [Bow] Lv65 x3, Oxsecian Raider [Staff] Lv65 x4, Arachnochip EX [Bow] Lv67 x1
+Wave 4  Arachnochip [Bow] Lv65 x16, Arachnochip EX [Bow] Lv67 x3
+Placement: [MISSING]
+
+================================================================================
+STAGE 28-3   Stam 19  Diff 65  3 waves
+================================================================================
+Totals: Bow 15, Staff 4
+XP 17517 (921/stam), Coins 316
+Wave 1  Oxsecian Raider [Staff] Lv65 x2
+Wave 2  Arachnochip [Bow] Lv65 x10, Arachnochip EX [Bow] Lv67 x2
+Wave 3  Kraken's Tentacle [Bow] Lv77 x2, BOSS Kraken [Bow] Lv77 x1
+Placement: [MISSING]
+Luck chests: partial list in paste (coins, rings, Metal Minion, Kraken recruit at Luck 100, etc.)
+
+================================================================================
+STAGE 28-4   Stam 19  Diff 65  5 waves
+================================================================================
+Totals: Sword 25, Staff 13
+XP 102087 (5373/stam), Coins 1664
+Wave 1  Oxsecian Blitzer [Sword] Lv66 x4
+Wave 2  Oxsecian Blitzer [Sword] Lv66 x8, Mediscanner [Staff/Regen] Lv66 x1
+Wave 3  Oxsecian Raider [Staff] Lv65 x2, Oxsecian Blitzer [Sword] Lv66 x4, Mediscanner [Staff/Regen] Lv66 x2
+Wave 4  Oxsecian Raider [Staff] Lv65 x2, Oxsecian Blitzer [Sword] Lv66 x3
+Wave 5  Oxsecian Raider [Staff] Lv65 x4, Oxsecian Blitzer [Sword] Lv66 x6, Mediscanner [Staff/Regen] Lv66 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 28-5   Stam 19  Diff 65  3 waves
+================================================================================
+Totals: Sword 22, Staff 8
+XP 86320 (4543/stam), Coins 1316
+Wave 1  Oxsecian Raider [Staff] Lv65 x2, Oxsecian Blitzer [Sword] Lv66 x2, Mediscanner [Staff/Regen] Lv66 x2
+Wave 2  Oxsecian Raider [Staff] Lv65 x2, Oxsecian Blitzer [Sword] Lv66 x2, Mediscanner [Staff/Regen] Lv66 x2
+Wave 3  Oxsecian Blitzer [Sword] Lv66 x18  (Mini-Boss)
+Placement: [MISSING]
+
+================================================================================
+STAGE 28-6   Stam 19  Diff 66  4 waves
+================================================================================
+Totals: Sword 13, Staff 12
+XP 63958 (3366/stam), Coins 1096
+Wave 1  Oxsecian Blitzer [Sword] Lv66 x2, Mediscanner [Staff/Regen] Lv66 x4
+Wave 2  Oxsecian Blitzer [Sword] Lv66 x4, Mediscanner [Staff/Regen] Lv66 x4
+Wave 3  Oxsecian Raider [Staff] Lv65 x2, Oxsecian Blitzer [Sword] Lv66 x4
+Wave 4  Oxsecian Raider [Staff] Lv65 x2, Oxsecian Blitzer [Sword] Lv66 x2, BOSS Marilith [Sword] Lv78 x1
+Placement: [MISSING]
+
+================================================================================
+STAGE 28-7   Stam 19  Diff 66  4 waves
+================================================================================
+Totals: Bow 13, Spear 15, Staff 3
+XP 39764 (2092/stam), Coins 702
+Wave 1  Oxsecian Lancer [Spear] Lv65 x5
+Wave 2  Oxsecian Lancer [Spear] Lv65 x6, Oxsecian RPS [Staff] Lv67 x1
+Wave 3  Arachnochip [Bow] Lv65 x4, Oxsecian Lancer [Spear] Lv65 x4, Oxsecian RPS [Staff] Lv67 x1
+Wave 4  Arachnochip [Bow] Lv65 x9, Oxsecian RPS [Staff] Lv67 x1
+Placement: [MISSING]
+
+================================================================================
+STAGE 28-8   Stam 19  Diff 66  5 waves
+================================================================================
+Totals: Sword 6, Bow 6, Spear 18, Staff 10
+XP 88092 (4636/stam), Coins 1440
+Wave 1  Mediscanner [Staff/Regen] Lv66 x2, Oxsecian Lancer [Spear] Lv65 x6
+Wave 2  Mediscanner [Staff/Regen] Lv66 x5, Oxsecian Lancer [Spear] Lv65 x5
+Wave 3  Arachnochip [Bow] Lv65 x3, Oxsecian Blitzer [Sword] Lv66 x3, Oxsecian RPS [Staff] Lv67 x1
+Wave 4  Oxsecian Lancer [Spear] Lv65 x6
+Wave 5  Arachnochip [Bow] Lv65 x3, Oxsecian Blitzer [Sword] Lv66 x3,
+        Mediscanner [Staff/Regen] Lv66 x1, Oxsecian Lancer [Spear] Lv65 x3, Oxsecian RPS [Staff] Lv67 x1
+Placement: [MISSING]
+
+================================================================================
+STAGE 28-9   Stam 19  Diff 66  3 waves
+================================================================================
+Totals: Staff 19, Fire 2, Ice 2
+XP 52852 (2781/stam), Coins 824
+Wave 1  Oxsecian Raider [Staff] Lv65 x6
+Wave 2  Oxsecian Raider [Staff] Lv65 x6, Mediscanner [Staff/Regen] Lv66 x2
+Wave 3  Ice Spawn [Staff/Ice] Lv76 x2, Fire Spawn [Staff/Fire] Lv77 x2,
+        BOSS Tiamat [Staff/Fire/Ice] Lv76 x1
+Placement: [MISSING]
+Luck chests: partial list in paste (Tiamat recruit at Luck 100, etc.)
+
+================================================================================
+STAGE 28-10  Stam 19  Diff 66  4 waves (header) / 3 listed
+================================================================================
+Totals: Sword 4, Bow 4, Spear 3, Staff 13
+XP 51387 (2704/stam), Coins 914
+Wave 1  Oxsecian Raider [Staff] Lv65 x2, Oxsecian Blitzer [Sword] Lv66 x3, Oxsecian RPS [Staff] Lv67 x1
+Wave 2  Arachnochip [Bow] Lv65 x3, Arachnochip EX [Bow] Lv67 x1, Oxsecian RPS [Staff] Lv67 x1
+Wave 3  Oxsecian Raider [Staff] Lv65 x4, BOSS Lich [Sword] Lv77 x1
+Wave 4  [MISSING — header says 4 battles]
+Placement: [MISSING]
+
+================================================================================
+ENEMY ROSTER (chapter levels) — stats [NOT FOUND]
+================================================================================
+Arachnochip [Bow]                    Lv65
+Arachnochip EX [Bow]                 Lv67
+Fire Spawn [Staff/Fire]              Lv77
+Ice Spawn [Staff/Ice]                Lv76
+Kraken (Boss) [Bow]                  Lv77
+Kraken's Tentacle [Bow]              Lv77
+Lich (Boss) [Sword]                  Lv77
+Marilith (Boss) [Sword]              Lv78
+Mediscanner [Staff/Regen]            Lv66
+Oxsecian Blitzer [Sword]             Lv66
+Oxsecian Lancer [Spear]              Lv65
+Oxsecian Raider [Staff]              Lv65
+Oxsecian RPS [Staff]                 Lv67
+Tiamat (Boss) [Staff/Fire/Ice]       Lv76
+
+================================================================================
+COULD NOT FIND / OPEN
+================================================================================
+ 1. All placements.
+ 2. Wave 4 of 28-10 (if it exists).
+ 3. Full enemy stats.
+ 4. Official chapter title.
+
+Wave lists complete for 28-1..28-9; 28-10 has 3 of 4.
+================================================================================

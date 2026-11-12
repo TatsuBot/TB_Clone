@@ -1,0 +1,175 @@
+================================================================================
+CHAPTERS21F.TXT  -  Terra Battle Chapter 21 FINAL reference
+================================================================================
+Purpose : Stage-by-stage layout of Chapter 21 for building stage data.
+Status  : FINAL for available data. Most wave lists present; 21-2, 21-5, 21-7,
+          21-9 partially incomplete. No placement grids.
+Drafted : 2026-11-11
+Source  : User paste. Own words only. Filename ends in "f".
+
+--------------------------------------------------------------------------------
+HOW TO READ
+--------------------------------------------------------------------------------
+  Wave = wiki "Battle". Board = 6 cols x 8 rows.
+  Placement when grids arrive: (col, row) bottom-left origin.
+
+================================================================================
+CHAPTER 21  (Planet Beastbait — working label)
+================================================================================
+After Ch20. 10 stages. Stamina 19 every stage.
+Difficulty 49 for 21-1..21-5,  50 for 21-6..21-10.
+Theme: Fire/jungle fauna — Pegawyrm, Rhinosaurus, Firespew, Pyrowisp, etc.
+Boss: Celestial Dragon Lv62 on 21-10 waves 1 and 4.
+
+ Stage  Stam  Diff  Waves  XP / Coins                 Wave status
+ 21-1   19    49    4      XP 41238–53000, coins 841  complete
+ 21-2   19    49    5      XP 38000, coins 725        partial (w4–5 blank)
+ 21-3   19    49    4      XP 31900, coins 609        complete
+ 21-4   19    49    4      XP 36000, coins 706        complete
+ 21-5   19    49    5      XP 60100, coins 1130       partial (w1 only)
+ 21-6   19    50    3      XP 35000, coins 1k         complete (+ layout note)
+ 21-7   19    50    4      XP 28000, coins 573        partial (w1 only)
+ 21-8   19    50    5      XP 56280, coins 1073       complete
+ 21-9   19    50    3      XP 25900, coins 464        partial (w2 blank)
+ 21-10  19    50    4      XP 27800, coins 541        complete (boss)
+
+================================================================================
+STAGE 21-1   Stam 19  Diff 49  4 waves
+================================================================================
+Totals: Spear 29, Fire 24
+XP 41238–53000 (2479/stam), Coins 841
+Wave 1  Rhinosaurus [Spear] Lv45 x1, Pegawyrm [Spear/Fire] Lv50 x4
+Wave 2  Pegawyrm [Spear/Fire] Lv50 x6
+Wave 3  Rhinosaurus [Spear] Lv45 x4, Pegawyrm [Spear/Fire] Lv50 x2
+Wave 4  Pegawyrm [Spear/Fire] Lv50 x12
+Placement: [MISSING]
+
+================================================================================
+STAGE 21-2   Stam 19  Diff 49  5 waves
+================================================================================
+Totals: Spear 10, Staff 16, Fire 22
+XP 38000 (2000/stam), Coins 725
+Wave 1  Pegawyrm [Spear/Fire] Lv50 x2, Firespew [Staff/Fire] Lv50 x1
+Wave 2  Firespew [Staff/Fire] Lv50 x6
+Wave 3  Pegawyrm [Spear/Fire] Lv50 x4, Firespew [Staff/Fire] Lv50 x2
+Wave 4  [MISSING]
+Wave 5  [MISSING]
+Placement: [MISSING]
+
+================================================================================
+STAGE 21-3   Stam 19  Diff 49  4 waves
+================================================================================
+Totals: Spear 9, Staff 12, Fire 21
+XP 31900 (1678/stam), Coins 609
+Wave 1  Pyrowisp [Staff/Fire] Lv49 x2
+Wave 2  Pyrowisp [Staff/Fire] Lv49 x2, Pegawyrm [Spear/Fire] Lv50 x3
+Wave 3  Pyrowisp [Staff/Fire] Lv49 x2, Firespew [Staff/Fire] Lv50 x2
+Wave 4  Pyrowisp [Staff/Fire] Lv49 x4, Pegawyrm [Spear/Fire] Lv50 x6
+Placement: [MISSING]
+
+================================================================================
+STAGE 21-4   Stam 19  Diff 49  4 waves
+================================================================================
+Totals: Spear 25
+XP 36000 (1894/stam), Coins 706
+Wave 1  Slime Slug [Spear] Lv51 x3, Floralpede [Spear] Lv51 x1
+Wave 2  Rhinosaurus [Spear] Lv45 x1, Slime Slug [Spear] Lv51 x3, Floralpede [Spear] Lv51 x1
+Wave 3  Rhinosaurus [Spear] Lv45 x3, Slime Slug [Spear] Lv51 x3
+Wave 4  Rhinosaurus [Spear] Lv45 x2, Slime Slug [Spear] Lv51 x6, Floralpede [Spear] Lv51 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 21-5   Stam 19  Diff 49  5 waves
+================================================================================
+Totals: Spear 30, Staff 10, Fire 10
+XP 60100 (3163/stam), Coins 1130
+Paste left Battle 1–5 blank except Stage-21-5-1:
+
+Wave 1  Floralpede [Spear] Lv51 x6
+Wave 2–5  [MISSING]
+Placement: [MISSING]
+Drops: Sunstorm Wand
+
+================================================================================
+STAGE 21-6   Stam 19  Diff 50  3 waves
+================================================================================
+Totals: Spear 14, Staff 12, Fire 19
+XP 35000 (1842/stam), Coins 1000
+Wave 1  Pegawyrm [Spear/Fire] Lv50 x3, Slime Slug [Spear] Lv51 x3
+Wave 2  Pegawyrm [Spear/Fire] Lv50 x4, Floralpede [Spear] Lv51 x2
+Wave 3  Pyrowisp [Staff/Fire] Lv49 x12, Floralpede [Spear] Lv51 x2
+Placement note (paste): Pyrowisps fill next-to-top row and next-to-bottom row;
+  Floralpedes in the middle.
+Placement: [MISSING] (layout hint only)
+
+================================================================================
+STAGE 21-7   Stam 19  Diff 50  4 waves
+================================================================================
+Totals: Spear 8, Staff 12, Fire 12
+XP 28000 (1473/stam), Coins 573
+Paste left Battle 1–4 blank except Stage-21-7-1:
+
+Wave 1  Carnelibean [Staff/Fire] Lv50 x1
+Wave 2–4  [MISSING]
+Placement: [MISSING]
+Drops: Slime Slug (recruit); Small Shield, Wisp of Jealousy (Carnelibean);
+       Rainbow Tears, Elixir, Shooting Star (Phoenix — not in partial wave)
+
+================================================================================
+STAGE 21-8   Stam 19  Diff 50  5 waves
+================================================================================
+Totals: Spear 11, Staff 27, Fire 38
+XP 56280 (2962/stam), Coins 1073
+Wave 1  Carnelibean [Staff/Fire] Lv50 x1, Pegawyrm [Spear/Fire] Lv50 x3
+Wave 2  Firespew [Staff/Fire] Lv50 x8
+Wave 3  Firespew [Staff/Fire] Lv50 x8
+Wave 4  Carnelibean [Staff/Fire] Lv50 x1, Firespew [Staff/Fire] Lv50 x4
+Wave 5  Carnelibean [Staff/Fire] Lv50 x1, Pegawyrm [Spear/Fire] Lv50 x8,
+        Firespew [Staff/Fire] Lv50 x4
+Placement: [MISSING]
+
+================================================================================
+STAGE 21-9   Stam 19  Diff 50  3 waves
+================================================================================
+Totals: Spear 12, Staff 5, Fire 11
+XP 25900 (1363/stam), Coins 464
+Wave 1  Rhinosaurus [Spear] Lv51 x4
+Wave 2  [MISSING]
+Wave 3  Rhinosaurus [Spear] Lv51 x2, Pegawyrm [Spear/Fire] Lv53 x6
+Placement: [MISSING]
+
+================================================================================
+STAGE 21-10  Stam 19  Diff 50  4 waves
+================================================================================
+Totals: Spear 20, Fire 8
+XP 27800 (1463/stam), Coins 541
+Wave 1  BOSS Celestial Dragon [Spear] Lv62 x1
+Wave 2  Pegawyrm [Spear/Fire] Lv50 x6, Slime Slug [Spear] Lv51 x4
+Wave 3  Pegawyrm [Spear/Fire] Lv50 x2, Slime Slug [Spear] Lv51 x6
+Wave 4  BOSS Celestial Dragon [Spear] Lv62 x1
+Placement: [MISSING]
+NOTE: Boss appears on both wave 1 and wave 4.
+
+================================================================================
+ENEMY ROSTER (chapter levels) — stats [NOT FOUND]
+================================================================================
+Carnelibean [Staff/Fire]          Lv50
+Celestial Dragon (Boss) [Spear]   Lv62
+Firespew [Staff/Fire]             Lv50
+Floralpede [Spear]                Lv51
+Pegawyrm [Spear/Fire]             Lv50, Lv53
+Pyrowisp [Staff/Fire]             Lv49
+Rhinosaurus [Spear]               Lv45, Lv51
+Slime Slug [Spear]                 Lv51
+
+================================================================================
+COULD NOT FIND / OPEN
+================================================================================
+ 1. All placements (except 21-6 row hint).
+ 2. Wave lists for 21-2 w4–5, 21-5 w2–5, 21-7 w2–4, 21-9 w2.
+ 3. Full enemy stats.
+ 4. Phoenix presence (drops on 21-7 only).
+ 5. Official chapter title (Planet Beastbait used from story text).
+
+Wave lists complete for 21-1, 21-3, 21-4, 21-6, 21-8, 21-10.
+================================================================================

@@ -1,0 +1,121 @@
+================================================================================
+CHAPTERS20F.TXT  -  Terra Battle Chapter 20 FINAL reference
+================================================================================
+Purpose : Stage-by-stage layout of Chapter 20 for building stage data.
+Status  : FINAL for available data. Single stage, 20 battles. Full wave list
+          from paste. No placement grids.
+Drafted : 2026-11-11
+Source  : User paste. Own words only. Filename ends in "f".
+
+--------------------------------------------------------------------------------
+HOW TO READ
+--------------------------------------------------------------------------------
+  Wave = wiki "Battle". Board = 6 cols x 8 rows.
+  Placement when grids arrive: (col, row) bottom-left origin.
+
+================================================================================
+CHAPTER 20 : AWAKENING
+================================================================================
+After Ch19. ONE stage only (20-1), with 20 consecutive battles.
+Stamina 25. Difficulty 47.
+XP 209606–255513 (9302/stam), Coins 3877.
+Totals: Sword 37, Bow 36, Spear 51, Staff 2.
+Theme: Oxsecian mixed weapons; multi-boss finale (SP units + EM Generator).
+Narrative: board Oxsecian ship after EM overload; comrades missing; alarm.
+
+ Stage  Stam  Diff  Waves  XP / Coins
+ 20-1   25    47    20     XP 209606–255513, coins 3877
+
+================================================================================
+STAGE 20-1   Stam 25  Diff 47  20 waves
+================================================================================
+Wave 1   Oxsecian Airgrunt [Sword] Lv50 x2, Oxsecian Airgrunt [Spear] Lv50 x2,
+         Oxsecian Airgrunt [Bow] Lv50 x2
+Wave 2   Oxsecian Airgrunt [Spear] Lv50 x2, Oxsecian Airgrunt [Sword] Lv50 x2,
+         Oxsecian Battery [Bow] Lv51 x1
+Wave 3   Oxsecian Airgrunt [Bow] Lv50 x2, Pneumatobot (Beta) [Spear] Lv50 x3
+Wave 4   Oxsecian Battery [Bow] Lv51 x2, Oxsecian Grunt [Sword] Lv50 x2
+Wave 5   Pneumatobot (Beta) [Spear] Lv50 x16
+Wave 6   Oxsecian Grunt [Spear] Lv50 x1, Oxsecian Grunt [Sword] Lv50 x1,
+         Oxsecian Airgrunt [Bow] Lv50 x3
+Wave 7   Chargebot [Staff] Lv50 x1, Oxsecian Grunt [Sword] Lv50 x2,
+         Oxsecian Grunt [Spear] Lv50 x2
+Wave 8   Oxsecian Guard [Spear] Lv49 x2, Oxsecian Airgrunt [Sword] Lv50 x4
+Wave 9   Oxsecian Battery [Bow] Lv51 x4, Chargebot [Staff] Lv50 x1
+Wave 10  Oxsecian Grunt [Sword] Lv50 x4, Oxsecian Battery [Bow] Lv51 x2
+Wave 11  Oxsecian Grunt [Sword] Lv50 x2, Oxsecian Sniper [Bow] Lv51 x2,
+         Oxsecian Airgrunt [Sword] Lv50 x2
+Wave 12  Oxsecian Guard [Sword] Lv49 x2, Oxsecian Airgrunt [Sword] Lv50 x4
+Wave 13  Oxsecian Guard [Sword] Lv49 x1, Oxsecian Airgrunt [Spear] Lv50 x2,
+         Oxsecian Sniper [Bow] Lv51 x2
+Wave 14  Oxsecian Grunt [Sword] Lv50 x1, Oxsecian Grunt [Spear] Lv50 x1,
+         Oxsecian Sniper [Bow] Lv51 x1, Oxsecian Airgrunt [Bow] Lv50 x3
+Wave 15  Oxsecian Guard [Spear] Lv49 x2, Oxsecian Airgrunt [Bow] Lv50 x4
+Wave 16  Pneumatobot (Beta) [Spear] Lv50 x10
+Wave 17  Lock-On [Bow] Lv49 x2, Oxsecian Grunt [Sword] Lv50 x2,
+         BOSS Oxsecian Grunt SP [Spear] Lv55 x1
+Wave 18  Oxsecian Airgrunt [Bow] Lv50 x3, Oxsecian Airgrunt [Spear] Lv50 x3,
+         BOSS Oxsecian Guard SP [Sword] Lv55 x1
+Wave 19  Oxsecian Airgrunt [Sword] Lv50 x2, Oxsecian Airgrunt [Spear] Lv50 x1,
+         Oxsecian Grunt [Spear] Lv50 x1, BOSS Oxsecian Gunner SP [Bow] Lv55 x1
+Wave 20  BOSS EM Generator [Sword] Lv63 x1,
+         Oxsecian Airgrunt [Sword] Lv50 x1, Oxsecian Airgrunt [Bow] Lv50 x2,
+         Oxsecian Airgrunt [Spear] Lv50 x1, Oxsecian Grunt [Sword] Lv50 x1,
+         Oxsecian Grunt [Spear] Lv50 x1
+Placement: [MISSING] all 20 waves
+
+Drops (paste):
+  Animaton (Oxsecian Grunt SP, B17)
+  Dark Matter (Oxsecian Guard SP, B18)
+  Oxsecium (Oxsecian Gunner SP, B19)
+  Heartwood Sword, Moon Tears (EM Generator, B20)
+  Also: Benevolent Fang, Claw of Fate, Pelt of Knowledge, Tail of Insight,
+  Terra Bowstring / Spearbronze / Swordsteel, White Ring, Wisdom Flower
+
+Experience table (max EXP per floor / accumulated) [READ from paste]:
+  1: 11134 / 11134
+  2: 9056 / 20190
+  3: 8907 / 29097
+  4: 7399 / 36496
+  5: 41569 / 78065
+  6: 9192 / 87257
+  7: 9651 / 96908
+  8: 11444 / 108352
+  9: 9651 / 118003
+  10: 12064 / 130067
+  11: 11742 / 141809
+  12: 11444 / 153253
+  13: 9354 / 162607
+  14: 11543 / 174150
+  15: 11494 / 185644
+  16: 21526 / 207170
+  17: 9924 / 217094
+  18: 14030 / 231124
+  19: 9490 / 240614
+  20: 14402 / 255016
+
+================================================================================
+ENEMY ROSTER (chapter levels) — stats [NOT FOUND]
+================================================================================
+Chargebot [Staff]                    Lv50
+EM Generator (Boss) [Sword]          Lv63
+Lock-On [Bow]                        Lv49
+Oxsecian Airgrunt [Sword/Spear/Bow]  Lv50
+Oxsecian Battery [Bow]               Lv51
+Oxsecian Grunt [Sword/Spear]         Lv50
+Oxsecian Grunt SP (Boss) [Spear]     Lv55
+Oxsecian Guard [Sword/Spear]         Lv49
+Oxsecian Guard SP (Boss) [Sword]     Lv55
+Oxsecian Gunner SP (Boss) [Bow]      Lv55
+Oxsecian Sniper [Bow]                Lv51
+Pneumatobot (Beta) [Spear]           Lv50
+
+================================================================================
+COULD NOT FIND / OPEN
+================================================================================
+ 1. All placements for 20 waves.
+ 2. Full enemy stat blocks / skill notes for SP bosses and EM Generator.
+ 3. Whether SP bosses are recruitable (drops list materials/items, not units).
+
+Single stage, full 20-wave list captured.
+================================================================================

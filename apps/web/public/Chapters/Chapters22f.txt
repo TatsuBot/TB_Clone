@@ -1,0 +1,171 @@
+================================================================================
+CHAPTERS22F.TXT  -  Terra Battle Chapter 22 FINAL reference
+================================================================================
+Purpose : Stage-by-stage layout of Chapter 22 for building stage data.
+Status  : FINAL for available data. All wave lists present. No placements.
+Drafted : 2026-11-11
+Source  : User paste. Own words only. Filename ends in "f".
+
+--------------------------------------------------------------------------------
+HOW TO READ
+--------------------------------------------------------------------------------
+  Wave = wiki "Battle". Board = 6 cols x 8 rows.
+  Placement when grids arrive: (col, row) bottom-left origin.
+
+================================================================================
+CHAPTER 22  (marsh / ruins approach — working label)
+================================================================================
+After Ch21. 10 stages. Stamina 16 every stage.
+Difficulty 51 for 22-1..22-5,  52 for 22-6..22-10.
+Theme: Staff enemies; Ice early, Lightning late. Marshlands story.
+Bosses: Ice Golem Lv57 on 22-5 wave 5; Vajra Lv64 on 22-10 wave 3.
+22-3 battle count omitted in paste header but 5 waves listed.
+
+ Stage  Stam  Diff  Waves  Coins
+ 22-1   16    51    4      519
+ 22-2   16    51    5      675
+ 22-3   16    51    5      922
+ 22-4   16    51    3      777
+ 22-5   16    51    5      1125  (Ice Golem boss)
+ 22-6   16    52    4      760
+ 22-7   16    52    3      999
+ 22-8   16    52    5      881
+ 22-9   16    52    4      763
+ 22-10  16    52    3      628  (Vajra boss)
+
+================================================================================
+STAGE 22-1   Stam 16  Diff 51  4 waves
+================================================================================
+Totals: Staff 19, Ice 15
+Coins 519
+Wave 1  Starwhip [Staff/Regen] Lv49 x1, Cryowisp [Staff/Ice] Lv51 x2
+Wave 2  Starwhip [Staff/Regen] Lv49 x1, Snowspew [Staff/Ice] Lv52 x3
+Wave 3  Cryowisp [Staff/Ice] Lv51 x2, Snowspew [Staff/Ice] Lv52 x4
+Wave 4  Starwhip [Staff/Regen] Lv49 x2, Cryowisp [Staff/Ice] Lv51 x2, Snowspew [Staff/Ice] Lv52 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 22-2   Stam 16  Diff 51  5 waves
+================================================================================
+Totals: Staff 25, Ice 14
+Coins 675
+Wave 1  Starwhip [Staff/Regen] Lv49 x1, Snowspew [Staff/Ice] Lv52 x2, Lazulibean [Staff/Ice] Lv52 x1
+Wave 2  Snowspew [Staff/Ice] Lv52 x4, Lazulibean [Staff/Ice] Lv52 x1
+Wave 3  Starwhip [Staff/Regen] Lv49 x4
+Wave 4  Starwhip [Staff/Regen] Lv49 x2, Lazulibean [Staff/Ice] Lv52 x1
+Wave 5  Starwhip [Staff/Regen] Lv49 x4, Snowspew [Staff/Ice] Lv52 x4, Lazulibean [Staff/Ice] Lv52 x1
+Placement: [MISSING]
+
+================================================================================
+STAGE 22-3   Stam 16  Diff 51  5 waves
+================================================================================
+Totals: Staff 33, Ice 33
+Coins 922
+Wave 1  Cryowisp [Staff/Ice] Lv51 x4
+Wave 2  Aquafeeder [Staff/Ice] Lv53 x5
+Wave 3  Lazulibean [Staff/Ice] Lv52 x1, Aquafeeder [Staff/Ice] Lv53 x6
+Wave 4  Cryowisp [Staff/Ice] Lv51 x2, Lazulibean [Staff/Ice] Lv52 x1, Aquafeeder [Staff/Ice] Lv53 x2
+Wave 5  Cryowisp [Staff/Ice] Lv51 x4, Aquafeeder [Staff/Ice] Lv53 x6, Aquafeeder [Staff/Ice] Lv56 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 22-4   Stam 16  Diff 51  3 waves
+================================================================================
+Totals: Staff 28, Ice 21
+Coins 777
+Wave 1  Aquafeeder [Staff/Ice] Lv53 x8
+Wave 2  Starwhip [Staff/Regen] Lv49 x6, Cryowisp [Staff/Ice] Lv51 x3
+Wave 3  Starwhip [Staff/Regen] Lv49 x1, Aquafeeder [Staff/Ice] Lv53 x7, Cryowisp [Staff/Ice] Lv55 x3
+Placement: [MISSING]
+
+================================================================================
+STAGE 22-5   Stam 16  Diff 51  5 waves
+================================================================================
+Totals: Staff 41, Ice 20
+Coins 1125
+Wave 1  Aquafeeder [Staff/Ice] Lv53 x5, Mudwing [Staff] Lv53 x5
+Wave 2  Lazulibean [Staff/Ice] Lv52 x1, Mudwing [Staff] Lv53 x3
+Wave 3  Lazulibean [Staff/Ice] Lv52 x1, Aquafeeder [Staff/Ice] Lv53 x2, Mudwing [Staff] Lv53 x3
+Wave 4  Aquafeeder [Staff/Ice] Lv53 x4, Mudwing [Staff] Lv53 x4
+Wave 5  Aquafeeder [Staff/Ice] Lv53 x6, Mudwing [Staff] Lv53 x6, BOSS Ice Golem [Staff/Ice] Lv57 x1
+Placement: [MISSING]
+Drops: Sea Tears, Heartwood Wand (Ice Golem)
+
+================================================================================
+STAGE 22-6   Stam 16  Diff 52  4 waves
+================================================================================
+Totals: Staff 28, Lightning 14
+Coins 760
+Wave 1  Mudwing [Staff] Lv53 x2, Thunder Horn [Staff/Lightning] Lv51 x2
+Wave 2  Mudwing [Staff] Lv53 x8, Thunder Horn [Staff/Lightning] Lv51 x2
+Wave 3  Thunder Horn [Staff/Lightning] Lv51 x6
+Wave 4  Mudwing [Staff] Lv53 x4, Thunder Horn [Staff/Lightning] Lv54 x4
+Placement: [MISSING]
+
+================================================================================
+STAGE 22-7   Stam 16  Diff 52  3 waves
+================================================================================
+Totals: Staff 37, Lightning 22
+Coins 999
+Wave 1  Starwhip [Staff/Regen] Lv49 x15
+Wave 2  Boltspew [Staff/Lightning] Lv52 x14
+Wave 3  Starwhip [Staff/Regen] Lv49 x2, Boltspew [Staff/Lightning] Lv52 x6, Thunder Horn [Staff/Lightning] Lv51 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 22-8   Stam 16  Diff 52  5 waves
+================================================================================
+Totals: Staff 32, Lightning 26
+Coins 881
+Wave 1  Mermaid [Staff/Lightning] Lv53 x3
+Wave 2  Boltspew [Staff/Lightning] Lv52 x3, Mermaid [Staff/Lightning] Lv53 x2
+Wave 3  Starwhip [Staff/Regen] Lv49 x2, Mermaid [Staff/Lightning] Lv53 x4
+Wave 4  Boltspew [Staff/Lightning] Lv52 x6
+Wave 5  Starwhip [Staff/Regen] Lv49 x4, Mermaid [Staff/Lightning] Lv53 x8
+Placement: [MISSING]
+
+================================================================================
+STAGE 22-9   Stam 16  Diff 52  4 waves
+================================================================================
+Totals: Staff 28, Lightning 15
+Coins 763
+Wave 1  Mudwing [Staff] Lv53 x5, Thunder Horn [Staff/Lightning] Lv51 x2
+Wave 2  Thunder Horn [Staff/Lightning] Lv51 x4, Mermaid [Staff/Lightning] Lv53 x3
+Wave 3  Mudwing [Staff] Lv53 x4, Mermaid [Staff/Lightning] Lv53 x2
+Wave 4  Mudwing [Staff] Lv53 x4, Thunder Horn [Staff/Lightning] Lv51 x2, Mermaid [Staff/Lightning] Lv55 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 22-10  Stam 16  Diff 52  3 waves
+================================================================================
+Totals: Staff 23, Lightning 23
+Coins 628
+Wave 1  Boltspew [Staff/Lightning] Lv52 x6
+Wave 2  Boltspew [Staff/Lightning] Lv52 x4, Thunder Horn [Staff/Lightning] Lv51 x2, Mermaid [Staff/Lightning] Lv53 x4
+Wave 3  Boltspew [Staff/Lightning] Lv52 x4, Mermaid [Staff/Lightning] Lv53 x4, BOSS Vajra [Staff/Lightning] Lv64 x1
+Placement: [MISSING]
+
+================================================================================
+ENEMY ROSTER (chapter levels) — stats [NOT FOUND]
+================================================================================
+Aquafeeder [Staff/Ice]              Lv53, Lv56
+Boltspew [Staff/Lightning]          Lv52
+Cryowisp [Staff/Ice]                Lv51, Lv55
+Ice Golem (Boss) [Staff/Ice]        Lv57
+Lazulibean [Staff/Ice]              Lv52
+Mermaid [Staff/Lightning]           Lv53, Lv55
+Mudwing [Staff]                     Lv53
+Snowspew [Staff/Ice]                Lv52
+Starwhip [Staff/Regen]              Lv49
+Thunder Horn [Staff/Lightning]      Lv51, Lv54
+Vajra (Boss) [Staff/Lightning]      Lv64
+
+================================================================================
+COULD NOT FIND / OPEN
+================================================================================
+ 1. All placements.
+ 2. Full enemy stats / XP values (coins only in paste).
+ 3. Official chapter title.
+
+Wave lists complete for all 10 stages.
+================================================================================

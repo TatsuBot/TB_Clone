@@ -72,12 +72,30 @@ export const SKILL_POWER_TIER_VALUES: Record<SkillPowerTier, number> = {
 export type SkillShape =
   | "single"
   | "area"
+  | "rowBand"
+  | "columnBand"
   | "row"
   | "column"
   | "cross"
   | "adjacent"
   | "lateral"
-  | "all";
+  | "all"
+  | "vertical"
+  | "ring"
+  | "diamond"
+  | "corners"
+  | "border"
+  | "outerRows"
+  | "outerColumns"
+  | "interior"
+  | "pincer"
+  | "pincerArea"
+  | "pincerRow"
+  | "pincerColumn"
+  | "pincerRing"
+  | "pincerAreaRow"
+  | "pincerAreaColumn"
+  | "pincerAndRing";
 export type SkillTargetMode = "enemy" | "ally" | "self" | "all";
 export type SkillEffectType =
   | "damage"
@@ -145,18 +163,23 @@ export interface Skill {
 export interface SkillEvent {
   skillId: string;
   skillName?: string;
+  description?: string;
   trigger: SkillTrigger;
   sourceUnitId?: string;
   targetUnitIds: string[];
   activated: boolean;
   multiplier: number;
   damageComponents?: DamageComponent[];
+  element?: ElementType;
   chance?: number;
   order: number;
   effect: SkillEffectType;
   shape?: SkillShape;
   radius?: number;
   targetMode?: SkillTargetMode;
+  targetWeapons?: WeaponType[];
+  targetElements?: ElementType[];
+  targetSpecies?: string[];
   stat?: "atk" | "def" | "matk" | "mdef";
   statPercent?: number;
   duration?: number;
@@ -183,6 +206,7 @@ export interface Unit {
   hp: number;
   description?: string;
   weapon?: WeaponType;
+  species?: string;
   element?: ElementType;
   skills?: Skill[];
   /** Footprint in cells. Allies are always 1x1; bosses may be larger. */
@@ -202,6 +226,7 @@ export interface TapReport {
   category: "debuff" | "buff";
   remainingCharges: number;
   stat?: "atk" | "def" | "matk" | "mdef";
+  statChanges?: Array<{ stat: "atk" | "def" | "matk" | "mdef"; percent: number }>;
   percent: number;
   duration: number;
   targets: string[];

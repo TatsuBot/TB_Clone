@@ -10,8 +10,15 @@ party, character detail, shop, options) is also present as navigable mock screen
 packages/core   pure battle core: no DOM, no rendering, no input. Fully unit-tested.
 apps/web        presentation + input + UI shell
   src/ui/       screen router, status bar, bottom nav, all meta screens
+  public/       static game data and assets
 docs/           core-rules.md is the rules spec.
 ```
+
+## Public assets and chapter data
+
+- `apps/web/public/Assets/` contains icons, including weapon and element icons, for use in the UI.
+- `apps/web/public/chapters/` contains chapter data for chapters 8–31. Use these files as source data
+  when implementing those levels.
 
 ## Commands
 
@@ -50,8 +57,11 @@ Screens are interfaces only — recruitment, job unlocks, currency, and real pro
   `packages/core/src/data/enemies.ts`, keeping enemy records separate from recruitable adventurers.
 - Build a skill reference table listing each skill, its mechanics, and whether it has been verified
   working in the game.
+- Implement character skill mechanics still missing from combat: barriers and damage mitigation,
+  status application and status resistance/immunity (including instant death and unsupported
+  ailments), HP absorption, revival, coin stealing, bomb skills, and progression/reward passives
+  such as XP bonuses, item-drop bonuses, and extra encounters.
 - Restrict Tavern pacts to adventurers marked as verified.
-- Add a Tavern page that lists the units currently available from each pact.
 - On a new game, grant one starter from Bahl or Grace, one from Amisandra, Amimari, or Amina,
   then give the player four Pact of Truth rolls with no duplicate adventurers.
 

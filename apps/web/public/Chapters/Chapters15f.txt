@@ -1,0 +1,184 @@
+================================================================================
+CHAPTERS15F.TXT  -  Terra Battle Chapter 15 FINAL reference
+================================================================================
+Purpose : Stage-by-stage layout of Chapter 15 for building stage data.
+Status  : FINAL for available data. Wave lists from user paste.
+          No placement grids — all placements [MISSING].
+Drafted : 2026-11-11
+Source  : User paste. Own words only. Filename ends in "f".
+
+--------------------------------------------------------------------------------
+HOW TO READ
+--------------------------------------------------------------------------------
+  Wave = wiki "Battle". Board = 6 cols x 8 rows.
+  Placement when grids arrive: (col, row) bottom-left origin.
+
+================================================================================
+CHAPTER 15  (Maker's chamber — working label)
+================================================================================
+After Ch14. 10 stages. Stamina 12 every stage.
+Difficulty 36–37 (mix; see table).
+Theme: Ice machine cells; Maker system narrative.
+Bosses: Ice Urchin Lv46 on 15-6 wave 5; Megacell Lv46 on 15-10 wave 3.
+Floor traps: 15-3, 15-4, 15-6, 15-8.
+Special: Regenercell on 15-10 flees when alone (Lv35 then Lv42).
+
+ Stage  Stam  Diff  Waves  XP / Coins              Placement
+ 15-1   12    36    3      —                       MISSING
+ 15-2   12    37    4      —                       MISSING
+ 15-3   12    36    5      — (floor traps)         MISSING
+ 15-4   12    36    4      — (floor traps)         MISSING
+ 15-5   12    36    4      —                       MISSING
+ 15-6   12    37    5      — (Ice Urchin boss)     MISSING
+ 15-7   12    37    4      —                       MISSING
+ 15-8   12    37    4      — (floor traps)         MISSING
+ 15-9   12    37    5      —                       MISSING
+ 15-10  12    37    3      XP 18747–20913, coins 435  MISSING (Megacell)
+
+================================================================================
+STAGE 15-1   Stam 12  Diff 36  3 waves
+================================================================================
+Totals: Sword 1, Staff 10, Ice 10
+Wave 1  Shieldcell [Staff/Ice] Lv30 x2, Cryoplatelet [Staff/Ice] Lv37 x1
+Wave 2  Cryocell [Sword/Ice] Lv38 x1, Shieldcell [Staff/Ice] Lv30 x3
+Wave 3  Regenercell [Staff/Regen] Lv34 x1, Shieldcell [Staff/Ice] Lv30 x3
+Placement: [MISSING]
+
+================================================================================
+STAGE 15-2   Stam 12  Diff 37  4 waves
+================================================================================
+Totals: Sword 15, Spear 3, Staff 8, Ice 26
+Wave 1  Cryocell [Sword/Ice] Lv38 x6
+Wave 2  Cryocell [Sword/Ice] Lv38 x6, Shieldcell [Staff/Ice] Lv30 x2
+Wave 3  Cryoplatelet [Staff/Ice] Lv37 x2, Shieldcell [Staff/Ice] Lv30 x2
+Wave 4  Freeze Sparker [Spear/Ice] Lv38 x3, Cryoplatelet [Staff/Ice] Lv37 x2,
+        Cryocell [Sword/Ice] Lv38 x3
+Placement: [MISSING]
+
+================================================================================
+STAGE 15-3   Stam 12  Diff 36  5 waves
+================================================================================
+Totals: Bow 7, Spear 9, Staff 6, Ice 18
+Note: Beware floor traps
+Wave 1  Toxic Cannon [Staff] Lv35 x1
+Wave 2  Toxic Cannon [Staff] Lv35 x1, Ice Archercell [Bow/Ice] Lv38 x1,
+        Freeze Sparker [Spear/Ice] Lv38 x3
+Wave 3  Ice Archercell [Bow/Ice] Lv38 x2, Freeze Sparker [Spear/Ice] Lv38 x4
+Wave 4  Toxic Cannon [Staff] Lv35 x2, Freeze Sparker [Spear/Ice] Lv38 x2
+Wave 5  Ice Archercell [Bow/Ice] Lv38 x4, Cryoplatelet [Staff/Ice] Lv37 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 15-4   Stam 12  Diff 36  4 waves
+================================================================================
+Totals: Bow 5, Spear 3, Staff 5, Ice 8
+Note: Beware floor traps
+Wave 1  Ice Archercell [Bow/Ice] Lv38 x4
+Wave 2  Toxic Cannon [Staff] Lv35 x1, Ice Archercell [Bow/Ice] Lv38 x1
+Wave 3  Freeze Sparker [Spear/Ice] Lv38 x3, Regenercell [Staff/Regen] Lv34 x1
+Wave 4  Toxic Cannon [Staff] Lv35 x3
+Placement: [MISSING]
+
+================================================================================
+STAGE 15-5   Stam 12  Diff 36  4 waves
+================================================================================
+Totals: Sword 7, Bow 3, Spear 6, Staff 6, Ice 16
+Wave 1  Mechavirus 9643 [Staff] Lv36 x1, Freeze Sparker [Spear/Ice] Lv38 x2
+Wave 2  Mechavirus 9643 [Staff] Lv36 x1, Cryocell [Sword/Ice] Lv38 x2,
+        Freeze Sparker [Spear/Ice] Lv38 x1, Ice Archercell [Bow/Ice] Lv38 x1
+Wave 3  Mechavirus 9643 [Staff] Lv36 x1, Cryocell [Sword/Ice] Lv38 x3,
+        Freeze Sparker [Spear/Ice] Lv38 x2
+Wave 4  Mechavirus 9643 [Staff] Lv36 x3, Ice Archercell [Bow/Ice] Lv38 x2,
+        Cryocell [Sword/Ice] Lv38 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 15-6   Stam 12  Diff 37  5 waves
+================================================================================
+Totals: Spear 10, Staff 6, Ice 14
+Note: Beware floor traps
+Wave 1  Freeze Sparker [Spear/Ice] Lv38 x2
+Wave 2  Shieldcell [Staff/Ice] Lv30 x2, Mechavirus 9643 [Staff] Lv36 x1
+Wave 3  Shieldcell [Staff/Ice] Lv30 x2, Freeze Sparker [Spear/Ice] Lv38 x1
+Wave 4  Freeze Sparker [Spear/Ice] Lv38 x4
+Wave 5  BOSS Ice Urchin [Spear/Ice] Lv46 x1, Mechavirus 9643 [Staff] Lv36 x1,
+        Freeze Sparker [Spear/Ice] Lv38 x2
+Placement: [MISSING]
+Drops: Orichalcum 20% (Ice Urchin)
+
+================================================================================
+STAGE 15-7   Stam 12  Diff 37  4 waves
+================================================================================
+Totals: Sword 7, Bow 1, Staff 15, Ice 17
+Wave 1  Regenercell [Staff/Regen] Lv34 x1, Cryocell [Sword/Ice] Lv38 x5
+Wave 2  Cryoplatelet [Staff/Ice] Lv37 x3, Regenercell [Staff/Regen] Lv34 x2
+Wave 3  Shieldcell [Staff/Ice] Lv30 x2, Cryocell [Sword/Ice] Lv38 x2,
+        Ice Archercell [Bow/Ice] Lv38 x1
+Wave 4  Shieldcell [Staff/Ice] Lv30 x4, Mechavirus 9643 [Staff] Lv36 x1,
+        Regenercell [Staff/Regen] Lv34 x1
+Placement: [MISSING]
+
+================================================================================
+STAGE 15-8   Stam 12  Diff 37  4 waves
+================================================================================
+Totals: Sword 2, Bow 3, Spear 2, Staff 4, Ice 7
+Note: Beware floor traps
+Wave 1  Ice Archercell [Bow/Ice] Lv38 x3
+Wave 2  Toxic Cannon [Staff] Lv35 x1, Cryocell [Sword/Ice] Lv38 x2
+Wave 3  Freeze Sparker [Spear/Ice] Lv38 x2
+Wave 4  Toxic Cannon [Staff] Lv35 x3
+Placement: [MISSING]
+
+================================================================================
+STAGE 15-9   Stam 12  Diff 37  5 waves
+================================================================================
+Totals: Sword 19, Bow 8, Spear 10, Ice 37
+Wave 1  Freeze Sparker [Spear/Ice] Lv38 x3, Ice Archercell [Bow/Ice] Lv38 x2
+Wave 2  Cryocell [Sword/Ice] Lv38 x10
+Wave 3  Freeze Sparker [Spear/Ice] Lv38 x4, Cryocell [Sword/Ice] Lv38 x2
+Wave 4  Ice Archercell [Bow/Ice] Lv38 x4, Cryocell [Sword/Ice] Lv38 x3
+Wave 5  Cryocell [Sword/Ice] Lv38 x4, Freeze Sparker [Spear/Ice] Lv38 x3,
+        Ice Archercell [Bow/Ice] Lv38 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 15-10  Stam 12  Diff 37  3 waves
+================================================================================
+Totals: Spear 2, Staff 12, Ice 11
+XP 18747–20913 (1652/stam), Coins 435
+Wave 1  Shieldcell [Staff/Ice] Lv30 x2, Cryoplatelet [Staff/Ice] Lv37 x2
+Wave 2  Cryoplatelet [Staff/Ice] Lv37 x4, Regenercell [Staff/Regen] Lv35 x1
+        (flees when alone)
+Wave 3  Freeze Sparker [Spear/Ice] Lv38 x2, Regenercell [Staff/Regen] Lv42 x1
+        (flees when alone), BOSS Megacell [Staff/Ice] Lv46 x1
+Placement: [MISSING]
+Drops: Megacell (recruit); Regenercell (recruit); Claw of Fate;
+       Forlorn Stone (Regenercell); Ice Ring (Cryoplatelet); White Ring (Regenercell)
+
+================================================================================
+ENEMY ROSTER (chapter levels) — stats [NOT FOUND]
+================================================================================
+Cryocell [Sword/Ice]              Lv38
+Cryoplatelet [Staff/Ice]          Lv37
+Freeze Sparker [Spear/Ice]         Lv38
+Ice Archercell [Bow/Ice]           Lv38
+Ice Urchin (Boss) [Spear/Ice]     Lv46
+Mechavirus 9643 [Staff]           Lv36
+Megacell (Boss) [Staff/Ice]       Lv46
+Regenercell [Staff/Regen]         Lv34, Lv35, Lv42
+Shieldcell [Staff/Ice]            Lv30
+Toxic Cannon [Staff]              Lv35
+
+================================================================================
+COULD NOT FIND / OPEN
+================================================================================
+ 1. All placements (no grids).
+ 2. Full enemy stat blocks.
+ 3. XP/coins for most stages (only 15-10 had numbers).
+ 4. Floor-trap coordinates (15-3, 15-4, 15-6, 15-8).
+ 5. Official chapter title.
+ 6. Ice Urchin / Megacell footprints and full skill notes.
+ 7. Exact "flees when alone" AI rules for Regenercell on 15-10.
+
+Wave lists complete for all 10 stages.
+================================================================================

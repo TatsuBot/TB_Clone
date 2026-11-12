@@ -11,6 +11,7 @@ export interface UnitTemplate {
   def: number;
   description?: string;
   element?: ElementType;
+  species?: string;
   /** Footprint; omit for 1x1. Only enemies may be larger. */
   w?: number;
   h?: number;
@@ -112,6 +113,7 @@ export function makeUnit(t: UnitTemplate, side: Unit["side"]): Unit {
     description: t.description,
     weapon: t.weapon,
     element: t.element,
+    species: t.species,
     skills: t.skills,
     w: t.w ?? 1,
     h: t.h ?? 1,

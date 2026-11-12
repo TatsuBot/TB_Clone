@@ -1,0 +1,185 @@
+================================================================================
+CHAPTERS19F.TXT  -  Terra Battle Chapter 19 FINAL reference
+================================================================================
+Purpose : Stage-by-stage layout of Chapter 19 for building stage data.
+Status  : FINAL for available data. Wave lists complete for 19-1..19-9.
+          19-10 incomplete. No placement grids.
+Drafted : 2026-11-11
+Source  : User paste. Own words only. Filename ends in "f".
+
+--------------------------------------------------------------------------------
+HOW TO READ
+--------------------------------------------------------------------------------
+  Wave = wiki "Battle". Board = 6 cols x 8 rows.
+  Placement when grids arrive: (col, row) bottom-left origin.
+
+================================================================================
+CHAPTER 19  (Oxsecian continued — working label)
+================================================================================
+After Ch18. 10 stages. Stamina 14 every stage.
+Difficulty 44 for 19-1..19-5,  45 for 19-6..19-10.
+Theme: Oxsecian Bow variants + Flamebot / Laser Units / Lock-On series.
+Boss: Lock-On 333+ Lv56 on 19-5 wave 3.
+
+ Stage  Stam  Diff  Waves  XP / Coins              Placement
+ 19-1   14    44    5      XP 32700, coins 736     MISSING
+ 19-2   14    44    4      XP 30300, coins 704     MISSING
+ 19-3   14    44    5      XP 33500, coins 736     MISSING
+ 19-4   14    44    4      XP 32600, coins 704     MISSING
+ 19-5   14    44    3      XP 19900, coins 440     MISSING (boss)
+ 19-6   14    45    5      XP 39700, coins 792     MISSING
+ 19-7   14    45    3      XP 32500, coins 642     MISSING
+ 19-8   14    45    4      XP 35200, coins 760     MISSING
+ 19-9   14    45    4      XP 31300, coins 672     MISSING
+ 19-10  14    45    5      XP 36400, coins 799     MISSING (list incomplete)
+
+================================================================================
+STAGE 19-1   Stam 14  Diff 44  5 waves
+================================================================================
+Totals: Sword 6, Bow 17
+XP 32700 (2335/stam), Coins 736
+Wave 1  Oxsecian Sniper [Bow] Lv49 x1
+Wave 2  Oxsecian Airgrunt [Bow] Lv49 x3, Oxsecian Sniper [Bow] Lv49 x1
+Wave 3  Oxsecian Sniper [Bow] Lv49 x2, Oxsecian Airgrunt [Sword] Lv49 x3
+Wave 4  Oxsecian Airgrunt [Bow] Lv49 x2, Oxsecian Airgrunt [Sword] Lv49 x3
+Wave 5  Oxsecian Sniper [Bow] Lv49 x2, Oxsecian Airgrunt [Bow] Lv49 x6
+Placement: [MISSING]
+
+================================================================================
+STAGE 19-2   Stam 14  Diff 44  4 waves
+================================================================================
+Totals: Sword 10, Bow 12
+XP 30300 (2164/stam), Coins 704
+Wave 1  Oxsecian Airgrunt [Bow] Lv49 x2, Flamebot [Sword] Lv47 x2
+Wave 2  Oxsecian Airgrunt [Bow] Lv49 x3, Flamebot [Sword] Lv47 x2
+Wave 3  Oxsecian Sniper [Bow] Lv49 x1, Oxsecian Airgrunt [Bow] Lv49 x2,
+        Flamebot [Sword] Lv47 x2
+Wave 4  Oxsecian Sniper [Bow] Lv49 x2, Oxsecian Airgrunt [Bow] Lv49 x2,
+        Flamebot [Sword] Lv47 x4
+Placement: [MISSING]
+
+================================================================================
+STAGE 19-3   Stam 14  Diff 44  5 waves
+================================================================================
+Totals: Sword 6, Bow 17
+XP 33500 (2392/stam), Coins 736
+Wave 1  Oxsecian Grunt [Bow] Lv49 x2
+Wave 2  Oxsecian Airgrunt [Bow] Lv49 x3, Oxsecian Grunt [Bow] Lv49 x2
+Wave 3  Flamebot [Sword] Lv47 x3, Oxsecian Airgrunt [Bow] Lv49 x3
+Wave 4  Flamebot [Sword] Lv47 x1, Oxsecian Sniper [Bow] Lv49 x2,
+        Oxsecian Grunt [Bow] Lv49 x1
+Wave 5  Oxsecian Airgrunt [Bow] Lv49 x2, Oxsecian Grunt [Bow] Lv49 x2,
+        Flamebot [Sword] Lv52 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 19-4   Stam 14  Diff 44  4 waves
+================================================================================
+Totals: Sword 5, Bow 17
+XP 32600 (2328/stam), Coins 704
+Wave 1  Lock-On 333 [Bow] Lv47 x1, Oxsecian Airgrunt [Bow] Lv49 x3
+Wave 2  Oxsecian Airgrunt [Sword] Lv49 x3, Oxsecian Airgrunt [Bow] Lv49 x3,
+        Lock-On 333 [Bow] Lv47 x1
+Wave 3  Oxsecian Grunt [Bow] Lv49 x1, Oxsecian Airgrunt [Bow] Lv49 x1,
+        Oxsecian Airgrunt [Sword] Lv49 x2, Lock-On 333 [Bow] Lv47 x1
+Wave 4  Lock-On 333 [Bow] Lv47 x2, Oxsecian Airgrunt [Bow] Lv49 x2,
+        Oxsecian Grunt [Bow] Lv49 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 19-5   Stam 14  Diff 44  3 waves
+================================================================================
+Totals: Sword 3, Bow 11
+XP 19900 (1421/stam), Coins 440
+Wave 1  Lock-On 333 [Bow] Lv47 x1, Laser Unit V [Bow] Lv47 x1, Laser Unit H [Bow] Lv47 x1
+Wave 2  Lock-On 333 [Bow] Lv47 x1, Laser Unit V [Bow] Lv47 x1, Laser Unit H [Bow] Lv47 x1,
+        Oxsecian Airgrunt [Sword] Lv49 x3
+Wave 3  BOSS Lock-On 333+ [Bow] Lv56 x1, Laser Unit H [Bow] Lv47 x2, Laser Unit V [Bow] Lv47 x2
+Placement: [MISSING]
+Drops: Spirit Tears, Black Hole, Evanescent Star (Lock-On 333+)
+
+================================================================================
+STAGE 19-6   Stam 14  Diff 45  5 waves
+================================================================================
+Totals: Sword 8, Bow 13, Staff 4
+XP 39700 (2835/stam), Coins 792
+Wave 1  Flamebot [Sword] Lv47 x2, Chargebot [Staff] Lv46 x1
+Wave 2  Flamebot [Sword] Lv47 x2, Chargebot [Staff] Lv46 x1, Laser Unit V [Bow] Lv47 x1
+Wave 3  Flamebot [Sword] Lv47 x2, Chargebot [Staff] Lv46 x1,
+        Laser Unit V [Bow] Lv47 x1, Laser Unit H [Bow] Lv47 x1
+Wave 4  Oxsecian Grunt [Bow] Lv49 x2, Flamebot [Sword] Lv47 x2
+Wave 5  Laser Unit V [Bow] Lv47 x8, Chargebot [Staff] Lv46 x1
+Placement: [MISSING]
+
+================================================================================
+STAGE 19-7   Stam 14  Diff 45  3 waves
+================================================================================
+Totals: Sword 5, Bow 14, Staff 1
+XP 32500 (2321/stam), Coins 642
+Wave 1  Oxsecian Airgrunt [Bow] Lv49 x8
+Wave 2  Oxsecian Airgrunt [Bow] Lv49 x2, Oxsecian Grunt [Bow] Lv49 x1,
+        Chargebot [Staff] Lv46 x1, Lock-On 333 [Bow] Lv47 x1
+Wave 3  Flamebot [Sword] Lv47 x5, Oxsecian Grunt [Bow] Lv49 x1, Lock-On 333 [Bow] Lv47 x1
+Placement: [MISSING]
+
+================================================================================
+STAGE 19-8   Stam 14  Diff 45  4 waves
+================================================================================
+Totals: Sword 7, Bow 17
+XP 35200 (2514/stam), Coins 760
+Wave 1  Oxsecian Sniper [Bow] Lv49 x2, Laser Unit V [Bow] Lv47 x1
+Wave 2  Flamebot [Sword] Lv47 x2, Oxsecian Sniper [Bow] Lv49 x1, Laser Unit H [Bow] Lv47 x3
+Wave 3  Flamebot [Sword] Lv47 x3, Oxsecian Airgrunt [Bow] Lv49 x4
+Wave 4  Flamebot [Sword] Lv52 x2, Oxsecian Sniper [Bow] Lv49 x2,
+        Laser Unit H [Bow] Lv47 x2, Laser Unit V [Bow] Lv47 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 19-9   Stam 14  Diff 45  4 waves
+================================================================================
+Totals: Sword 6, Bow 14, Staff 1
+XP 31300 (2235/stam), Coins 672
+Wave 1  Oxsecian Airgrunt [Sword] Lv49 x3, Oxsecian Grunt [Bow] Lv49 x1
+Wave 2  Oxsecian Airgrunt [Sword] Lv49 x2, Oxsecian Airgrunt [Bow] Lv49 x2,
+        Lock-On 333 [Bow] Lv47 x1
+Wave 3  Oxsecian Grunt [Bow] Lv49 x1, Oxsecian Airgrunt [Bow] Lv49 x3, Flamebot [Sword] Lv47 x1
+Wave 4  Chargebot [Staff] Lv46 x1, Lock-On 333 [Bow] Lv47 x2, Oxsecian Airgrunt [Bow] Lv55 x4
+Placement: [MISSING]
+
+================================================================================
+STAGE 19-10  Stam 14  Diff 45  5 waves
+================================================================================
+Totals: Bow 25
+XP 36400 (2600/stam), Coins 799
+Paste left Battle 1–5 blank except Stage-19-10-1:
+
+Wave 1  Laser Unit H [Bow] Lv47 x1, Oxsecian Airgrunt [Bow] Lv49 x2,
+        Oxsecian Sniper [Bow] Lv49 x1
+Wave 2–5  [MISSING]
+Placement: [MISSING]
+Drops: Apollo (Energy Aspirator) — unit not listed in partial wave; note only.
+
+================================================================================
+ENEMY ROSTER (chapter levels) — stats [NOT FOUND]
+================================================================================
+Chargebot [Staff]                    Lv46
+Flamebot [Sword]                     Lv47, Lv52
+Laser Unit H [Bow]                   Lv47
+Laser Unit V [Bow]                   Lv47
+Lock-On 333 [Bow]                    Lv47
+Lock-On 333+ (Boss) [Bow]            Lv56
+Oxsecian Airgrunt [Bow] or [Sword]   Lv49, Lv55
+Oxsecian Grunt [Bow]                 Lv49
+Oxsecian Sniper [Bow]                Lv49
+
+================================================================================
+COULD NOT FIND / OPEN
+================================================================================
+ 1. All placements.
+ 2. Full enemy stats.
+ 3. Complete 19-10 wave list.
+ 4. Official chapter title.
+ 5. Energy Aspirator identity (only in drop line).
+
+Wave lists complete for 19-1..19-9.
+================================================================================

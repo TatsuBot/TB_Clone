@@ -1,0 +1,180 @@
+================================================================================
+CHAPTERS23F.TXT  -  Terra Battle Chapter 23 FINAL reference
+================================================================================
+Purpose : Stage-by-stage layout of Chapter 23 for building stage data.
+Status  : FINAL for available data. Wave lists complete except 23-3.
+          No placement grids. Dual-boss on 23-10 wave 5 noted.
+Drafted : 2026-11-11
+Source  : User paste. Own words only. Filename ends in "f".
+
+--------------------------------------------------------------------------------
+HOW TO READ
+--------------------------------------------------------------------------------
+  Wave = wiki "Battle". Board = 6 cols x 8 rows.
+  Placement when grids arrive: (col, row) bottom-left origin.
+
+================================================================================
+CHAPTER 23  (Animata seeks a new world — working label)
+================================================================================
+After Ch22. 10 stages. Stamina 16 every stage.
+Difficulty 53 for 23-1..23-5,  54 for 23-6..23-10.
+Theme: Dark sword units (Slasher, Cursed Claw, ShadowSlug, Dark Pegawyrm) + Seed /
+  Necromancer support.
+Bosses: Young Onyx Dragon Lv63 then Onyx Dragon Lv67 on 23-10 (wave 5 / part 2).
+
+ Stage  Stam  Diff  Waves  XP / Coins
+ 23-1   16    53    4      XP 36337, coins 704
+ 23-2   16    53    5      XP 60234, coins 1131
+ 23-3   16    53    4      XP 32196–38330, coins 653  (list incomplete)
+ 23-4   16    53    4      XP 72017–100996, coins 1178
+ 23-5   16    53    3      XP 41389, coins 735
+ 23-6   16    54    5      XP 45807, coins 834
+ 23-7   16    54    4      XP 23628, coins 446
+ 23-8   16    54    3      XP 42972, coins 713
+ 23-9   16    54    5      XP 49609, coins 891
+ 23-10  16    54    5      XP 56880, coins 959  (dual boss)
+
+================================================================================
+STAGE 23-1   Stam 16  Diff 53  4 waves
+================================================================================
+Totals: Sword 23, Dark 14
+XP 36337 (2271/stam), Coins 704
+Wave 1  Slasher [Sword] Lv55 x3, ShadowSlug [Sword/Dark] Lv56 x1
+Wave 2  Cursed Claw [Sword/Dark] Lv57 x3
+Wave 3  Cursed Claw [Sword/Dark] Lv57 x3, Slasher [Sword] Lv55 x1, ShadowSlug [Sword/Dark] Lv56 x1
+Wave 4  Cursed Claw [Sword/Dark] Lv57 x4, Slasher [Sword] Lv55 x4, ShadowSlug [Sword/Dark] Lv56 x1
+Placement: [MISSING]
+
+================================================================================
+STAGE 23-2   Stam 16  Diff 53  5 waves
+================================================================================
+Totals: Sword 37, Dark 21
+XP 60234 (3764/stam), Coins 1131
+Wave 1  Slasher [Sword] Lv55 x8
+Wave 2  Slasher [Sword] Lv55 x4, ShadowSlug [Sword/Dark] Lv56 x2
+Wave 3  Cursed Claw [Sword/Dark] Lv57 x5
+Wave 4  Cursed Claw [Sword/Dark] Lv57 x4, Slasher [Sword] Lv55 x4, ShadowSlug [Sword/Dark] Lv56 x1
+Wave 5  Cursed Claw [Sword/Dark] Lv57 x9
+Placement: [MISSING]
+
+================================================================================
+STAGE 23-3   Stam 16  Diff 53  4 waves
+================================================================================
+Totals: Sword 20, Staff 1, Dark 21
+XP 32196–38330 (2203/stam), Coins 653
+Paste left Battle 1–4 blank; only partial tag:
+
+Wave 1?  Dark Pegawyrm [Sword/Dark] Lv54 x3   [wave assignment unclear]
+Waves: [MISSING beyond partial Dark Pegawyrm note]
+Placement: [MISSING]
+Drops: Spirit Particle, Wormhole (Dark Dragon — not in partial wave)
+
+================================================================================
+STAGE 23-4   Stam 16  Diff 53  4 waves
+================================================================================
+Totals: Sword 12, Staff 26, Dark 12
+XP 72017–100996 (5406/stam), Coins 1178
+Wave 1  Dark Pegawyrm [Sword/Dark] Lv54 x2, Seed [Staff] Lv55 x1
+Wave 2  Dark Pegawyrm [Sword/Dark] Lv54 x6
+Wave 3  Dark Pegawyrm [Sword/Dark] Lv54 x4, Seed [Staff] Lv55 x1
+Wave 4  Seed [Staff] Lv55 x24
+Placement: [MISSING]
+
+================================================================================
+STAGE 23-5   Stam 16  Diff 53  3 waves
+================================================================================
+Totals: Sword 18, Staff 6, Dark 9
+XP 41389 (2586/stam), Coins 735
+Wave 1  Slasher [Sword] Lv55 x2, Slasher [Sword] Lv59 x1,
+        Dark Pegawyrm [Sword/Dark] Lv54 x2, Dark Pegawyrm [Sword/Dark] Lv57 x1,
+        Seed [Staff] Lv55 x2
+Wave 2  Slasher [Sword] Lv55 x1, Slasher [Sword] Lv59 x2,
+        Dark Pegawyrm [Sword/Dark] Lv54 x1, Dark Pegawyrm [Sword/Dark] Lv57 x2,
+        Seed [Staff] Lv55 x2
+Wave 3  Slasher [Sword] Lv59 x3, Dark Pegawyrm [Sword/Dark] Lv57 x3, Seed [Staff] Lv55 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 23-6   Stam 16  Diff 54  5 waves
+================================================================================
+Totals: Sword 21, Staff 6, Dark 6
+XP 45807 (2862/stam), Coins 834
+Wave 1  Necromancer [Staff/Dark] Lv53 x1
+Wave 2  Necromancer [Staff/Dark] Lv53 x1, Slasher [Sword] Lv55 x4
+Wave 3  Necromancer [Staff/Dark] Lv53 x2
+Wave 4  Slasher [Sword] Lv55 x9
+Wave 5  Necromancer [Staff/Dark] Lv53 x2, Slasher [Sword] Lv55 x8
+Placement: [MISSING]
+
+================================================================================
+STAGE 23-7   Stam 16  Diff 54  4 waves
+================================================================================
+Totals: Sword 3, Staff 11, Dark 7
+XP 23628 (1476/stam), Coins 446
+Wave 1  Seed [Staff] Lv55 x4
+Wave 2  Necromancer [Staff/Dark] Lv53 x1, Seed [Staff] Lv55 x2
+Wave 3  Necromancer [Staff/Dark] Lv53 x1, ShadowSlug [Sword/Dark] Lv56 x1
+Wave 4  Necromancer [Staff/Dark] Lv53 x2, ShadowSlug [Sword/Dark] Lv56 x2, Seed [Staff] Lv55 x1
+Placement: [MISSING]
+
+================================================================================
+STAGE 23-8   Stam 16  Diff 54  3 waves
+================================================================================
+Totals: Sword 22, Staff 1, Dark 22
+XP 42972 (2685/stam), Coins 713
+Wave 1  Dark Pegawyrm [Sword/Dark] Lv54 x4
+Wave 2  ShadowSlug [Sword/Dark] Lv56 x1, Dark Pegawyrm [Sword/Dark] Lv54 x2
+Wave 3  Dark Pegawyrm [Sword/Dark] Lv54 x15, Seed [Staff] Lv55 x1
+Placement: [MISSING]
+
+================================================================================
+STAGE 23-9   Stam 16  Diff 54  5 waves
+================================================================================
+Totals: Sword 22, Staff 7, Dark 19
+XP 49609 (3100/stam), Coins 891
+Wave 1  Slasher [Sword] Lv55 x4, Dark Pegawyrm [Sword/Dark] Lv54 x4
+Wave 2  Slasher [Sword] Lv55 x1, Dark Pegawyrm [Sword/Dark] Lv54 x2
+Wave 3  Necromancer [Staff/Dark] Lv53 x1, Slasher [Sword] Lv55 x2
+Wave 4  Slasher [Sword] Lv55 x3, Dark Pegawyrm [Sword/Dark] Lv54 x6
+Wave 5  Necromancer [Staff/Dark] Lv53 x6
+Placement: [MISSING]
+
+================================================================================
+STAGE 23-10  Stam 16  Diff 54  5 waves
+================================================================================
+Totals: Sword 20, Staff 4, Dark 11
+XP 56880 (3555/stam), Coins 959
+Wave 1  Cursed Claw [Sword/Dark] Lv57 x5
+Wave 2  Slasher [Sword] Lv55 x6
+Wave 3  Necromancer [Staff/Dark] Lv53 x2
+Wave 4  Necromancer [Staff/Dark] Lv53 x2, Dark Pegawyrm [Sword/Dark] Lv54 x2
+Wave 5  Slasher [Sword] Lv55 x6, BOSS Young Onyx Dragon [Sword] Lv63 x1
+Wave 5 part 2  Dark Pegawyrm [Sword/Dark] Lv54 x6, BOSS Onyx Dragon [Staff/Dark] Lv67 x1
+Placement: [MISSING]
+NOTE: Paste lists wave 5 then a "Battle 5 (part 2)" — treat as sequential phases of
+  the final battle or a sixth wave depending on engine support.
+Drops: Lore Particle, Ether (Young Onyx Dragon); Binary Star (Onyx Dragon)
+
+================================================================================
+ENEMY ROSTER (chapter levels) — stats [NOT FOUND]
+================================================================================
+Cursed Claw [Sword/Dark]              Lv57
+Dark Pegawyrm [Sword/Dark]            Lv54, Lv57
+Necromancer [Staff/Dark]              Lv53
+Onyx Dragon (Boss) [Staff/Dark]       Lv67
+Seed [Staff]                          Lv55
+ShadowSlug [Sword/Dark]               Lv56
+Slasher [Sword]                       Lv55, Lv59
+Young Onyx Dragon (Boss) [Sword]      Lv63
+
+================================================================================
+COULD NOT FIND / OPEN
+================================================================================
+ 1. All placements.
+ 2. Full 23-3 wave list.
+ 3. Full enemy stats.
+ 4. How dual-boss "Battle 5 / part 2" maps to engine wave model.
+ 5. Official chapter title.
+
+Wave lists complete for 23-1, 23-2, 23-4..23-10.
+================================================================================

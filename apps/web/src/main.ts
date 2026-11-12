@@ -10,11 +10,13 @@ import {
   charStatsAtLevel,
   frequencyAtLevel,
   statsAtLevel,
+  RULES,
   type DragSession,
   type Dir,
   type Pos,
   type StepDir,
   type TurnReport,
+  type Unit,
 } from "@game/core";
 import { Renderer } from "./renderer";
 import { stage1, stageFor } from "./stage1";
@@ -39,6 +41,7 @@ const $ = <T extends HTMLElement>(id: string) =>
   document.getElementById(id) as T;
 const canvas = $<HTMLCanvasElement>("board");
 const timerBar = $("timer-bar");
+const timerLabel = $("timer-label");
 const waveEl = $("wave");
 const statusEl = $("status");
 const messageEl = $("message");
@@ -90,6 +93,17 @@ function skillPattern(skill: InspectableSkill): string {
   if (skill.trigger === "equip") return "Passive";
   if (skill.trigger === "counter") return "Counter target";
   return "Single target";
+}
+
+function controlTimeBonusMs(unit: Unit): number {
+  return (unit.skills ?? []).reduce((total, skill) => {
+    const text = `${skill.name ?? ""} ${skill.description ?? ""}`;
+    if (!/control time|move timer/i.test(text)) return total;
+    const personal = skill.trigger === "equip" || skill.target === "self" || /this unit/i.test(text);
+    if (!personal) return total;
+    const bonus = text.match(/(?:\+|by\s*)(\d+)\s*(?:sec(?:ond)?s?)/i);
+    return total + (bonus ? Number.parseInt(bonus[1]!, 10) * 1000 : 0);
+  }, 0);
 }
 
 function weaponGlyph(weapon?: string): string | undefined {
@@ -555,7 +569,7 @@ canvas.addEventListener("pointerdown", (e) => {
   const s = id ? battle.startDrag(id) : null;
   if (!s) return;
   session = s;
-  timer = new MoveTimer();
+  timer = new MoveTimer(RULES.moveTimerMs + controlTimeBonusMs(battle.board.getUnit(s.moverId)));
   canvas.setPointerCapture(e.pointerId);
   renderer.setDrag(id, e.clientX, e.clientY);
 });
@@ -619,6 +633,7 @@ $("restart").addEventListener("click", () => {
 function frame(now: number): void {
   if (session && timer.expired(now)) endDrag(now); // time's up: the unit stops where it is
   timerBar.style.transform = `scaleX(${session ? timer.fraction(now) : 1})`;
+  timerLabel.textContent = session ? `${(timer.remainingMs(now) / 1000).toFixed(1)}s` : "";
   renderer.draw(now);
   requestAnimationFrame(frame);
 }

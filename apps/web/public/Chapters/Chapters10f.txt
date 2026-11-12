@@ -1,0 +1,196 @@
+================================================================================
+CHAPTERS10F.TXT  -  Terra Battle Chapter 10 FINAL reference
+================================================================================
+Purpose : Stage-by-stage layout of Chapter 10 for building stage data.
+Status  : FINAL for available data. All wave lists from user paste.
+          No placement grids provided — all placements [MISSING].
+Drafted : 2026-11-11
+Source  : User paste of chapter 10 wiki data. Own words only.
+          Filename ends in "f" = final for this pass.
+
+--------------------------------------------------------------------------------
+HOW TO READ
+--------------------------------------------------------------------------------
+  Wave = wiki "Battle". Board = 6 cols x 8 rows.
+  Placement: (col, row) from BOTTOM-LEFT when grids arrive.
+  Engine top-left row 0: engine_row = 8 - row
+
+================================================================================
+CHAPTER 10 : STONEFOLK KEEP (working title from prior catalog)
+================================================================================
+After Ch9 In Utero. 10 stages.
+Stamina 9 every stage.
+Difficulty 24 for 10-1..10-5,  25 for 10-6..10-10.
+Bosses: Burnbot Redux Lv35 on 10-5 wave 3; Time Devourer Lv36 on 10-10 wave 3.
+Theme: Stonefolk units + Burnbot / Toxic Bomborg / Teksura support.
+        Fire common early; mixed weapons mid-late.
+
+ Stage  Stam  Diff  Waves  Coins   Placement
+ 10-1   9     24    4      276     MISSING
+ 10-2   9     24    5      479     MISSING
+ 10-3   9     24    5      591     MISSING
+ 10-4   9     24    3      253     MISSING
+ 10-5   9     24    3      278     MISSING (boss Burnbot Redux)
+ 10-6   9     25    5      731     MISSING
+ 10-7   9     25    5      414     MISSING
+ 10-8   9     25    4      664     MISSING
+ 10-9   9     25    5      437     MISSING
+ 10-10  9     25    3      347     MISSING (boss Time Devourer)
+
+================================================================================
+STAGE 10-1   Stam 9  Diff 24  4 waves
+================================================================================
+Totals: Sword 4, Staff 8, Fire 8
+Coins 276
+Wave 1  Burnbot [Staff/Fire] Lv37 x1, Stonefolk Mage [Staff/Fire] Lv31 x1
+Wave 2  Burnbot [Staff/Fire] Lv37 x1, Stonefolk Mage [Staff/Fire] Lv31 x1
+Wave 3  Burnbot [Staff/Fire] Lv37 x1, Stonefolk Mage [Staff/Fire] Lv31 x2
+Wave 4  Burnbot [Staff/Fire] Lv37 x1, Stonefolk Warrior [Sword] Lv33 x4
+Placement: [MISSING]
+Drops: Forlorn Stone; Fire Ring
+
+================================================================================
+STAGE 10-2   Stam 9  Diff 24  5 waves
+================================================================================
+Totals: Bow 3, Spear 14, Staff 5
+Coins 479
+Wave 1  Stonefolk Archer [Bow] Lv33 x1, Stonefolk Knight [Spear] Lv33 x2
+Wave 2  Stonefolk Healer [Staff] Lv32 x1, Stonefolk Knight [Spear] Lv33 x4
+Wave 3  Stonefolk Archer [Bow] Lv33 x2, Stonefolk Knight [Spear] Lv33 x2
+Wave 4  Stonefolk Healer [Staff] Lv32 x2, Stonefolk Knight [Spear] Lv33 x2
+Wave 5  Stonefolk Healer [Staff] Lv32 x4, Stonefolk Knight [Spear] Lv33 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 10-3   Stam 9  Diff 24  5 waves
+================================================================================
+Totals: Bow 13, Staff 13
+Coins 591
+Wave 1  Toxic Bomborg [Staff] Lv36 x2
+Wave 2  Stonefolk Archer [Bow] Lv33 x3, Toxic Bomborg [Staff] Lv36 x1
+Wave 3  Stonefolk Archer [Bow] Lv33 x4, Stonefolk Healer [Staff] Lv32 x4
+Wave 4  Stonefolk Archer [Bow] Lv33 x2, Stonefolk Healer [Staff] Lv32 x2,
+        Toxic Bomborg [Staff] Lv36 x1
+Wave 5  Stonefolk Archer [Bow] Lv33 x4, Stonefolk Healer [Staff] Lv32 x1,
+        Toxic Bomborg [Staff] Lv36 x2
+Placement: [MISSING]
+Drops: Terra Staffwood; Benevolent Fang; Forlorn Stone; White Ring
+
+================================================================================
+STAGE 10-4   Stam 9  Diff 24  3 waves
+================================================================================
+Totals: Staff 11, Fire 7
+Coins 253
+Wave 1  Stonefolk Mage [Staff/Fire] Lv31 x4
+Wave 2  Stonefolk Mage [Staff/Fire] Lv31 x2, Toxic Bomborg [Staff] Lv36 x2
+Wave 3  Stonefolk Mage [Staff/Fire] Lv40 x1, Toxic Bomborg [Staff] Lv36 x2
+Placement: [MISSING]
+Drops: Terra Staffwood; Benevolent Fang; Ignorant Flea; Fire Ring
+
+================================================================================
+STAGE 10-5   Stam 9  Diff 24  3 waves
+================================================================================
+Totals: Staff 12, Fire 12
+Coins 278
+Wave 1  Burnbot [Staff/Fire] Lv37 x2, Stonefolk Mage [Staff/Fire] Lv31 x1
+Wave 2  Burnbot [Staff/Fire] Lv37 x6
+Wave 3  BOSS Burnbot Redux [Staff/Fire] Lv35 x1, Stonefolk Mage [Staff/Fire] Lv31 x2
+Placement: [MISSING]
+Drops: Spirit Tears 20% (boss); Benevolent Fang 4%; Fire Ring 4%; Claw of Fate 4%
+
+================================================================================
+STAGE 10-6   Stam 9  Diff 25  5 waves
+================================================================================
+Totals: Sword 11, Bow 4, Spear 12, Staff 5, Fire 1
+Coins 731
+Wave 1  Stonefolk Knight [Spear] Lv33 x2, Stonefolk Warrior [Sword] Lv33 x4
+Wave 2  Stonefolk Knight [Spear] Lv33 x2, Stonefolk Warrior [Sword] Lv33 x3
+Wave 3  Stonefolk Healer [Staff] Lv32 x3, Stonefolk Knight [Spear] Lv33 x4
+Wave 4  Stonefolk Knight [Spear] Lv33 x4, Stonefolk Warrior [Sword] Lv33 x4,
+        Teksura [Sword/Fire] Lv30 x1
+Wave 5  Stonefolk Archer [Bow] Lv33 x4, Stonefolk Healer [Staff] Lv32 x2
+Placement: [MISSING]
+Drops: Forlorn Stone; Terra Bowstring; Terra Swordsteel
+
+================================================================================
+STAGE 10-7   Stam 9  Diff 25  5 waves
+================================================================================
+Totals: Sword 10, Spear 4, Staff 4, Fire 5, Lightning 10
+Coins 414
+Wave 1  Teksura [Sword/Fire] Lv30 x2
+Wave 2  Stonefolk Warrior [Sword] Lv33 x3, Toxic Bomborg [Staff] Lv36 x1
+Wave 3  Stonefolk Knight [Spear] Lv33 x2, Teksura [Sword/Fire] Lv30 x1,
+        Toxic Bomborg [Staff] Lv36 x1
+Wave 4  Stonefolk Knight [Spear] Lv33 x2, Stonefolk Warrior [Sword] Lv33 x2
+Wave 5  Teksura [Sword/Fire] Lv30 x2, Toxic Bomborg [Staff] Lv36 x2
+Placement: [MISSING]
+NOTE: Stage totals list Lightning 10 but no Lightning enemies in the wave list.
+      Could not resolve — leave as wiki paste inconsistency.
+
+================================================================================
+STAGE 10-8   Stam 9  Diff 25  4 waves
+================================================================================
+Totals: Sword 19, Bow 3, Spear 4, Staff 3, Fire 2
+Coins 664
+Wave 1  Stonefolk Archer [Bow] Lv33 x2
+Wave 2  Stonefolk Healer [Staff] Lv32 x2, Stonefolk Knight [Spear] Lv33 x2,
+        Stonefolk Warrior [Sword] Lv33 x3, Teksura [Sword/Fire] Lv30 x1
+Wave 3  Stonefolk Archer [Bow] Lv33 x1, Stonefolk Knight [Spear] Lv33 x2,
+        Stonefolk Warrior [Sword] Lv33 x2
+Wave 4  Stonefolk Healer [Staff] Lv32 x1, Stonefolk Warrior [Sword] Lv33 x8,
+        Teksura [Sword/Fire] Lv30 x1
+Placement: [MISSING]
+
+================================================================================
+STAGE 10-9   Stam 9  Diff 25  5 waves
+================================================================================
+Totals: Sword 6, Spear 6, Staff 7, Fire 7
+Coins 437
+Wave 1  Burnbot [Staff/Fire] Lv37 x1, Stonefolk Mage [Staff/Fire] Lv31 x1
+Wave 2  Stonefolk Knight [Spear] Lv33 x3, Stonefolk Mage [Staff/Fire] Lv31 x1
+Wave 3  Burnbot [Staff/Fire] Lv37 x1, Stonefolk Warrior [Sword] Lv33 x3
+Wave 4  Stonefolk Warrior [Sword] Lv33 x6
+Wave 5  Burnbot [Staff/Fire] Lv37 x2, Stonefolk Mage [Staff/Fire] Lv31 x1
+Placement: [MISSING]
+
+================================================================================
+STAGE 10-10  Stam 9  Diff 25  3 waves
+================================================================================
+Totals: Sword 6, Bow 2, Spear 7
+Coins 347
+Wave 1  Stonefolk Knight [Spear] Lv33 x4
+Wave 2  Stonefolk Archer [Bow] Lv33 x2, Stonefolk Warrior [Sword] Lv33 x6
+Wave 3  Stonefolk Knight [Spear] Lv33 x2, BOSS Time Devourer [Spear] Lv36 x1
+Placement: [MISSING]
+Drops: Gungnir 15% (boss); Tail of Insight; Terra Spearbronze
+
+================================================================================
+ENEMY ROSTER (chapter levels) — stats [NOT FOUND]
+================================================================================
+Names/levels from paste only. Full HP/ATK blocks not provided.
+
+Burnbot [Staff/Fire]              Lv37
+Burnbot Redux (Boss) [Staff/Fire] Lv35
+Stonefolk Archer [Bow]            Lv33
+Stonefolk Healer [Staff]          Lv32
+Stonefolk Knight [Spear]          Lv33
+Stonefolk Mage [Staff/Fire]       Lv31, Lv40
+Stonefolk Warrior [Sword]         Lv33
+Teksura [Sword/Fire]              Lv30
+Time Devourer (Boss) [Spear]      Lv36
+Toxic Bomborg [Staff]             Lv36
+
+================================================================================
+COULD NOT FIND / OPEN
+================================================================================
+ 1. All placements (no grids for any 10-x wave).
+ 2. Full enemy stat blocks.
+ 3. XP values (paste gave coins only for most stages).
+ 4. Lightning icon total on 10-7 with no Lightning enemies listed.
+ 5. Exact chapter title on wiki (used prior working name "Stonefolk Keep").
+ 6. Time Devourer / Burnbot Redux footprint and skill notes beyond names.
+ 7. Recruit flags beyond listed boss drops.
+
+Wave lists for all 10 stages are present and consistent with the paste.
+Send grids to fill placements the same way as Ch8/Ch9.
+================================================================================

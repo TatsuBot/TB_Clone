@@ -1,0 +1,231 @@
+================================================================================
+CHAPTERS9F.TXT  -  Terra Battle Chapter 9 FINAL reference
+================================================================================
+Purpose : Stage-by-stage layout of Chapter 9 (In Utero) for building stage data.
+Status  : FINAL for available data. Wave lists from user paste; placements only
+          where grids were provided (9-7 and 9-10). All other placements MISSING.
+Drafted : 2026-11-11
+Source  : User paste of chapter 9 wiki data + stage layout screenshots.
+          Own words only. Filename ends in "f" = final for this pass.
+
+--------------------------------------------------------------------------------
+HOW TO READ
+--------------------------------------------------------------------------------
+  Wave = wiki "Battle". Board = 6 cols x 8 rows.
+  Placement: (col, row) from BOTTOM-LEFT, col 1..6, row 1..8 (image top = row 8).
+  Engine top-left row 0: engine_row = 8 - row
+  Numbered 1–6 markers = ally spawns only.
+
+================================================================================
+CHAPTER 9 : IN UTERO
+================================================================================
+After Ch8 Labyrinth, before Ch10 (next story chapter).
+10 stages. Stamina 9 every stage.
+Difficulty 21 for 9-1..9-5,  22 for 9-6..9-10.
+Bosses: Mantle Mammoth x2 on 9-3 wave 5; Golem Lv35 on 9-10 wave 3.
+Theme: Fire-heavy; Mantle / Magma / Heat enemies. Floor traps on 9-5 and 9-6.
+
+ Stage  Stam  Diff  Waves  XP / Coins (when known)     Placement
+ 9-1    9     21    3      XP 11753, coins 377         MISSING
+ 9-2    9     21    5      —                           MISSING
+ 9-3    9     21    5      — (boss Mantle Mammoth x2)  MISSING
+ 9-4    9     21    4      —                           MISSING
+ 9-5    9     21    5      — (floor traps)             MISSING
+ 9-6    9     22    5      coins 316 (floor traps)     MISSING
+ 9-7    9     22    3      XP 11480–11642, coins 420   complete (from grids)
+ 9-8    9     22    4      XP 13415–14224, coins 460   MISSING
+ 9-9    9     22    5      XP 13086–14108, coins 492   MISSING
+ 9-10   9     22    3      XP 8993–9771, coins 322     complete (from grids)
+
+================================================================================
+STAGE 9-1   Stam 9  Diff 21  3 waves
+================================================================================
+Totals: Spear 3, Staff 14, Fire 17
+XP 11753 (1305/stam), Coins 377
+Wave 1  Pyrotoad [Spear/Fire] Lv29 x1
+Wave 2  Pyrotoad [Spear/Fire] Lv29 x1, Mantle Slime [Staff/Fire] Lv30 x3
+Wave 3  Pyrotoad [Spear/Fire] Lv29 x1, Mantle Slime [Staff/Fire] Lv30 x11
+Placement: [MISSING]
+Drops: Fire Ring, Shell of Madness (Mantle Slime); Wisdom Flower; Wisp of Jealousy
+
+================================================================================
+STAGE 9-2   Stam 9  Diff 21  5 waves
+================================================================================
+Totals: Spear 13, Staff 9, Fire 22
+Wave 1  Heat Sparker [Spear/Fire] Lv29 x2
+Wave 2  Heat Sparker [Spear/Fire] Lv29 x3, Mantle Slime [Staff/Fire] Lv30 x3
+Wave 3  Pyrotoad [Spear/Fire] Lv29 x1, Mantle Slime [Staff/Fire] Lv30 x3
+Wave 4  Heat Sparker [Spear/Fire] Lv29 x4, Mantle Slime [Staff/Fire] Lv30 x3
+Wave 5  Heat Sparker [Spear/Fire] Lv33 x2, Pyrotoad [Spear/Fire] Lv29 x1
+Placement: [MISSING]
+
+================================================================================
+STAGE 9-3   Stam 9  Diff 21  5 waves
+================================================================================
+Totals: Spear 8, Staff 14, Fire 17
+Wave 1  Heat Sparker [Spear/Fire] Lv29 x2, Red Starwhip [Staff/Fire] Lv26 x2
+Wave 2  Mantle Slime [Staff/Fire] Lv30 x5, Magma Mummy [Staff/Regen] Lv24 x1
+Wave 3  Heat Sparker [Spear/Fire] Lv29 x2, Magma Mummy [Staff/Regen] Lv24 x2
+Wave 4  Heat Sparker [Spear/Fire] Lv29 x2, Magma Mummy [Staff/Regen] Lv24 x2,
+        Red Starwhip [Staff/Fire] Lv26 x2
+Wave 5  BOSS Mantle Mammoth [Staff/Fire] x2
+Placement: [MISSING]
+Drops: Gyros (boss 15%)
+
+================================================================================
+STAGE 9-4   Stam 9  Diff 21  4 waves
+================================================================================
+Totals: Spear 10, Staff 5, Fire 10
+Wave 1  Rockfreeze [Spear] Lv33 x2
+Wave 2  Rockfreeze [Spear] Lv33 x1, Magma Mummy [Staff/Regen] Lv24 x2,
+        Mantle Mammoth [Spear/Fire] Lv23 x1
+Wave 3  Mantle Mammoth [Spear/Fire] Lv23 x2, Red Starwhip [Staff/Fire] Lv26 x3
+Wave 4  Mantle Mammoth [Spear/Fire] Lv23 x4
+Placement: [MISSING]
+Drops: Fire Ring; Claw of Fate
+
+================================================================================
+STAGE 9-5   Stam 9  Diff 21  5 waves
+================================================================================
+Totals: Spear 10, Staff 21, Fire 20
+Note: Beware floor traps
+Wave 1  Magma Mummy [Staff/Regen] Lv24 x6
+Wave 2  Mantle Slime [Staff/Fire] Lv30 x8, Redguard [Spear] Lv33 x1
+Wave 3  Mantle Slime [Staff/Fire] Lv30 x4, Redguard [Spear] Lv33 x2
+Wave 4  Magma Mummy [Staff/Regen] Lv24 x3, Redguard [Spear] Lv33 x1
+Wave 5  Rockfreeze [Spear] Lv33 x2, Redguard [Spear] Lv33 x4
+Placement: [MISSING]
+
+================================================================================
+STAGE 9-6   Stam 9  Diff 22  5 waves
+================================================================================
+Totals: Spear 14, Staff 0, Fire 11
+Coins 316
+Note: Beware floor traps
+Wave 1  Dark Tortoise [Spear] Lv26 x1
+Wave 2  Magma Slug [Spear/Fire] Lv33 x2
+Wave 3  Dark Tortoise [Spear] Lv26 x1, Magma Slug [Spear/Fire] Lv33 x1,
+        Redguard [Spear] Lv33 x1
+Wave 4  Dark Tortoise [Spear] Lv26 x1, Redguard [Spear] Lv33 x3
+Wave 5  Magma Slug [Spear/Fire] Lv33 x2, Redguard [Spear] Lv33 x2
+Placement: [MISSING]
+Drops: Fire Ring (Redguard)
+
+================================================================================
+STAGE 9-7   Stam 9  Diff 22  3 waves
+================================================================================
+Totals: Spear 19, Staff 0, Fire 19
+XP 11480–11642 (1284/stam), Coins 420
+Paste left Battle 1–2 blank; filled from screenshots + icon totals.
+
+Wave 1  Heat Sparker [Spear/Fire] Lv29 x11   [DERIVED from grid + totals]
+  Placement (from Stage-9-7-1 grid):
+    Heat Sparker (2,8) (3,8) (4,8) (5,8)
+    Heat Sparker (3,7) (4,7) (5,7) (6,7)
+    Heat Sparker (3,5) (4,5) (5,5)
+    (count from image ≈11; if in-engine differs, adjust to match Spear/Fire 19 total with w2+w3)
+
+Wave 2  Heat Sparker [Spear/Fire] Lv29 x6    [READ from Stage-9-7-2]
+  Placement:
+    Heat Sparker (3,8) (3,7) (3,6) (3,5) (3,4) (3,3)
+    (vertical column, center-left)
+
+Wave 3  Flame Urchin [Spear/Fire] Lv30 x2    [READ from Stage-9-7-3]
+  Placement:
+    Flame Urchin (2,6) (5,5)
+Drops: Rainbow Tears (Flame Urchin); Mangled Horn (Heat Sparker)
+Luck chests: Wisdom Flower; Claw of Fate; Luck 80/100 Lizardfolk Mage (Fire)
+
+NOTE: Wave 1 count is approximate from the grid. Paste totals imply
+  Heat Sparker total across w1+w2 = 17 if w3 is only the two urchins (19−2).
+  Image w2 shows 6 → w1 should be 11. Marked [DERIVED].
+
+================================================================================
+STAGE 9-8   Stam 9  Diff 22  4 waves
+================================================================================
+Totals: Spear 20, Staff 0, Fire 7
+XP 13415–14224 (1535/stam), Coins 460
+Wave 1  Pyrotoad [Spear/Fire] Lv29 x1, Rockfreeze [Spear] Lv33 x1
+Wave 2  Dark Tortoise [Spear] Lv26 x2, Magma Slug [Spear/Fire] Lv33 x2
+Wave 3  Dark Tortoise [Spear] Lv26 x8, Magma Slug [Spear/Fire] Lv33 x2
+Wave 4  Pyrotoad [Spear/Fire] Lv29 x2, Rockfreeze [Spear] Lv33 x2
+Placement: [MISSING]
+Drops: Benevolent Fang; Fire Ring; Terra Spearbronze; Wisdom Flower (Pyrotoad)
+
+================================================================================
+STAGE 9-9   Stam 9  Diff 22  5 waves
+================================================================================
+Totals: Spear 16, Staff 6, Fire 11
+XP 13086–14108 (1510/stam), Coins 492
+Wave 1  Dark Tortoise [Spear] Lv26 x2, Redguard [Spear] Lv33 x1
+Wave 2  Redguard [Spear] Lv33 x1, Rockfreeze [Spear] Lv32 x1,
+        Pyrotoad [Spear/Fire] Lv29 x1
+Wave 3  Redguard [Spear] Lv33 x2, Magma Mummy [Staff/Regen] Lv24 x2
+Wave 4  Redguard [Spear] Lv33 x4, Dark Tortoise [Spear] Lv26 x2
+Wave 5  Magma Mummy [Staff/Regen] Lv24 x4, Pyrotoad [Spear/Fire] Lv29 x2
+Placement: [MISSING]
+Drops: Terra Spearbronze; Forlorn Stone; Wisdom Flower; Shell of Madness;
+       White Ring; Fire Ring
+
+================================================================================
+STAGE 9-10  Stam 9  Diff 22  3 waves
+================================================================================
+Totals: Spear 14, Staff 0, Fire 0
+XP 8993–9771 (1042/stam), Coins 322
+Paste left Battle 1–2 blank; filled from screenshots.
+
+Wave 1  Rockfreeze [Spear] Lv33 x3           [READ from Stage-9-10-1]
+  Placement:
+    Rockfreeze (2,7) (4,6) (5,5)
+
+Wave 2  Rockfreeze [Spear] Lv33 x7           [READ from Stage-9-10-2]
+  Placement:
+    Rockfreeze (3,7) (4,7)
+    Rockfreeze (2,5) (5,5)
+    Rockfreeze (3,4) (4,4)
+    Rockfreeze (3,3)
+    (image shows ~7 units; paste stage total Spear 14 with w1=3 and boss support
+     implies w2 + boss escorts ≈11 — if count is off, prefer image layout)
+
+Wave 3  BOSS Golem Lv35 x1, Rockfreeze [Spear] Lv33 x4   [READ from Stage-9-10-3]
+  Placement:
+    Golem      center ~ (3,5)–(4,6)  [large unit; treat as 2x2 or special]
+    Rockfreeze (2,7) (5,7) (2,3) (5,3)
+  NOTE: Paste said Rockfreeze x3 on last battle; screenshot shows four nameplates.
+        Using screenshot count (x4). Golem is recruitable boss.
+Drops: Golem (recruit); Dark Tortoise; Bronze Sword (Rockfreeze)
+
+================================================================================
+ENEMY ROSTER (chapter levels) — stats mostly [NOT FOUND]
+================================================================================
+Names and levels from paste/grids only. Full HP/ATK blocks not in the provided
+material; mark for later wiki scrape if needed.
+
+Dark Tortoise [Spear]            Lv26
+Flame Urchin [Spear/Fire]        Lv30
+Golem (Boss)                     Lv35
+Heat Sparker [Spear/Fire]        Lv29, Lv33
+Magma Mummy [Staff/Regen]        Lv24
+Magma Slug [Spear/Fire]          Lv33
+Mantle Mammoth [Staff/Fire] or [Spear/Fire]  Lv23 (also boss form on 9-3)
+Mantle Slime [Staff/Fire]        Lv30
+Pyrotoad [Spear/Fire]            Lv29
+Red Starwhip [Staff/Fire]        Lv26
+Redguard [Spear]                 Lv33
+Rockfreeze [Spear]               Lv32, Lv33
+
+================================================================================
+COULD NOT FIND / OPEN
+================================================================================
+ 1. Placements for 9-1, 9-2, 9-3, 9-4, 9-5, 9-6, 9-8, 9-9 (no grids provided).
+ 2. Exact enemy counts on 9-7 wave 1 (derived from totals + image).
+ 3. Exact enemy counts on 9-10 wave 2 (image vs spear total tension).
+ 4. Paste vs image: 9-10 last battle Rockfreeze x3 (paste) vs x4 (screenshot) —
+     preferred screenshot.
+ 5. Full enemy stat blocks (HP/ATK/DEF/MATK/MDEF/MOV) for this chapter.
+ 6. Floor-trap tile coordinates for 9-5 and 9-6.
+ 7. Mantle Mammoth exact level on 9-3 boss wave (paste omitted Lv).
+ 8. Golem footprint size (assumed 2x2-style; confirm in data model).
+
+Wave lists for all 10 stages are present. Placement-complete stages: 9-7, 9-10.
+================================================================================

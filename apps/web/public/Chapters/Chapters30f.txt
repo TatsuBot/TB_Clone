@@ -1,0 +1,174 @@
+================================================================================
+CHAPTERS30F.TXT  -  Terra Battle Chapter 30 FINAL reference
+================================================================================
+Purpose : Stage-by-stage layout of Chapter 30 for building stage data.
+Status  : FINAL for available data. All wave lists present. No placements.
+          Final boss 6ZOO Lv99 on 30-10.
+Drafted : 2026-11-11
+Source  : User paste. Own words only. Filename ends in "f".
+
+--------------------------------------------------------------------------------
+HOW TO READ
+--------------------------------------------------------------------------------
+  Wave = wiki "Battle". Board = 6 cols x 8 rows.
+  Placement when grids arrive: (col, row) bottom-left origin.
+
+================================================================================
+CHAPTER 30  (Zero Series true form / 6ZOO — working label)
+================================================================================
+After Ch29. 10 stages. Stamina 20 every stage.
+Difficulty 69 for 30-1..30-5,  70 for 30-6..30-10.
+Theme: Oxsecian bots (Arrowbot / Bladebot / Spearbot / Striker) + Elemental Spinner.
+Bosses:
+  30-8  Oxsecian Fighter EX Lv87
+  30-10 6ZOO Lv99 (true Zero Series form)
+
+ Stage  Stam  Diff  Waves  XP / Coins
+ 30-1   20    69    5      XP 66015, coins 1152
+ 30-2   20    69    5      XP 71038, coins 1152
+ 30-3   20    69    3      XP 52772, coins 864
+ 30-4   20    69    5      XP 102578, coins 1512
+ 30-5   20    69    5      XP 77151, coins 1260
+ 30-6   20    70    4      XP 69963, coins 1116
+ 30-7   20    70    5      XP 88589, coins 1476
+ 30-8   20    70    1      XP 32315, coins 625  (Fighter EX)
+ 30-9   20    70    4      XP 57518, coins 936
+ 30-10  20    70    1      XP 12552, coins 222  (6ZOO)
+
+================================================================================
+STAGE 30-1   Stam 20  Diff 69  5 waves
+================================================================================
+Totals: Bow 10, Staff 22
+XP 66015 (3300/stam), Coins 1152
+Wave 1  Oxsecian Striker [Staff] Lv69 x4, Oxsecian Arrowbot [Bow] Lv71 x2
+Wave 2  Oxsecian Arrowbot [Bow] Lv71 x4
+Wave 3  Oxsecian Striker [Staff] Lv69 x4, Oxsecian Arrowbot [Bow] Lv71 x2
+Wave 4  Oxsecian Striker [Staff] Lv69 x6
+Wave 5  Oxsecian Striker [Staff] Lv69 x8, Oxsecian Arrowbot [Bow] Lv71 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 30-2   Stam 20  Diff 69  5 waves
+================================================================================
+Totals: Sword 5, Bow 18, Staff 9
+XP 71038 (3551/stam), Coins 1152
+Wave 1  Oxsecian Arrowbot [Bow] Lv71 x6
+Wave 2  Oxsecian Arrowbot [Bow] Lv71 x3, Space Debris [Staff] Lv68 x1
+Wave 3  Oxsecian Arrowbot [Bow] Lv71 x2, Oxsecian Bladebot [Sword] Lv71 x4
+Wave 4  Oxsecian Striker [Staff] Lv69 x3, Oxsecian Arrowbot [Bow] Lv71 x2, Space Debris [Staff] Lv68 x1
+Wave 5  Oxsecian Striker [Staff] Lv69 x2, Oxsecian Arrowbot [Bow] Lv71 x3,
+        Space Debris [Staff] Lv68 x2, Oxsecian Bladebot [Sword] Lv71 x3
+Placement: [MISSING]
+
+================================================================================
+STAGE 30-3   Stam 20  Diff 69  3 waves
+================================================================================
+Totals: Sword 21, Staff 3
+XP 52772 (2638/stam), Coins 864
+Wave 1  Space Debris [Staff] Lv68 x1, Oxsecian Bladebot [Sword] Lv71 x5
+Wave 2  Oxsecian Bladebot [Sword] Lv71 x6
+Wave 3  Space Debris [Staff] Lv68 x2, Oxsecian Bladebot [Sword] Lv71 x10
+Placement: [MISSING]
+
+================================================================================
+STAGE 30-4   Stam 20  Diff 69  5 waves
+================================================================================
+Totals: Sword 23, Spear 7, Staff 12
+XP 102578 (5128/stam), Coins 1512
+Wave 1  Oxsecian Bladebot [Sword] Lv71 x2, Oxsecian Spearbot [Spear] Lv71 x2
+Wave 2  Oxsecian Striker [Staff] Lv69 x3, Oxsecian Bladebot [Sword] Lv71 x5
+Wave 3  Oxsecian Striker [Staff] Lv69 x2, Oxsecian Bladebot [Sword] Lv71 x2, Oxsecian Spearbot [Spear] Lv71 x2
+Wave 4  Oxsecian Striker [Staff] Lv69 x4, Oxsecian Bladebot [Sword] Lv71 x4
+Wave 5  Oxsecian Striker [Staff] Lv69 x3, Oxsecian Bladebot [Sword] Lv71 x10, Oxsecian Spearbot [Spear] Lv71 x3
+Placement: [MISSING]
+
+================================================================================
+STAGE 30-5   Stam 20  Diff 69  5 waves
+================================================================================
+Totals: Spear 22, Staff 13, Fire 9
+XP 77151 (3857/stam), Coins 1260
+Wave 1  Oxsecian Spearbot [Spear] Lv71 x10
+Wave 2  Oxsecian Spearbot [Spear] Lv71 x4, Elemental Spinner [Staff/Fire] Lv69 x2
+Wave 3  Elemental Spinner [Staff/Fire] Lv69 x3
+Wave 4  Oxsecian Striker [Staff] Lv69 x4, Oxsecian Spearbot [Spear] Lv71 x2
+Wave 5  Oxsecian Spearbot [Spear] Lv71 x6, Elemental Spinner [Staff/Fire] Lv69 x4
+Placement: [MISSING]
+
+================================================================================
+STAGE 30-6   Stam 20  Diff 70  4 waves
+================================================================================
+Totals: Bow 6, Spear 18, Staff 7, Ice 4
+XP 69963 (3498/stam), Coins 1116
+Wave 1  Space Debris [Staff] Lv68 x1, Oxsecian Spearbot [Spear] Lv71 x4
+Wave 2  Oxsecian Spearbot [Spear] Lv71 x4, Elemental Spinner [Staff/Ice] Lv69 x2
+Wave 3  Oxsecian Arrowbot [Bow] Lv71 x6, Oxsecian Spearbot [Spear] Lv71 x6
+Wave 4  Space Debris [Staff] Lv68 x2, Oxsecian Spearbot [Spear] Lv71 x4, Elemental Spinner [Staff/Ice] Lv69 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 30-7   Stam 20  Diff 70  5 waves
+================================================================================
+Totals: Sword 8, Bow 8, Spear 8, Staff 18
+XP 88589 (4429/stam), Coins 1476
+Wave 1  Oxsecian Striker [Staff] Lv69 x2, Oxsecian Arrowbot [Bow] Lv71 x1,
+        Oxsecian Bladebot [Sword] Lv71 x1, Oxsecian Spearbot [Spear] Lv71 x1
+Wave 2  Oxsecian Arrowbot [Bow] Lv71 x2, Oxsecian Bladebot [Sword] Lv71 x2, Oxsecian Spearbot [Spear] Lv71 x2
+Wave 3  Oxsecian Striker [Staff] Lv69 x8
+Wave 4  Oxsecian Arrowbot [Bow] Lv71 x3, Oxsecian Bladebot [Sword] Lv71 x3, Oxsecian Spearbot [Spear] Lv71 x3
+Wave 5  Oxsecian Striker [Staff] Lv69 x8, Oxsecian Arrowbot [Bow] Lv71 x2,
+        Oxsecian Bladebot [Sword] Lv71 x2, Oxsecian Spearbot [Spear] Lv71 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 30-8   Stam 20  Diff 70  1 wave
+================================================================================
+Totals: Staff 17
+XP 32315 (1615/stam), Coins 625
+Wave 1  Oxsecian Striker [Staff] Lv69 x16, BOSS Oxsecian Fighter EX [Staff] Lv87 x1
+Placement: [MISSING]
+Drops: Dark Matter, Mantle Helix (Oxsecian Fighter EX)
+
+================================================================================
+STAGE 30-9   Stam 20  Diff 70  4 waves
+================================================================================
+Totals: Sword 4, Bow 4, Spear 4, Staff 14, Dark 6
+XP 57518 (2875/stam), Coins 936
+Wave 1  Oxsecian Arrowbot [Bow] Lv71 x2, Oxsecian Bladebot [Sword] Lv71 x2, Oxsecian Spearbot [Spear] Lv71 x2
+Wave 2  Oxsecian Arrowbot [Bow] Lv71 x1, Oxsecian Bladebot [Sword] Lv71 x1, Oxsecian Spearbot [Spear] Lv71 x1,
+        Elemental Spinner [Staff/Dark] Lv69 x2
+Wave 3  Oxsecian Striker [Staff] Lv69 x6, Elemental Spinner [Staff/Dark] Lv69 x2
+Wave 4  Oxsecian Arrowbot [Bow] Lv71 x1, Space Debris [Staff] Lv68 x2, Oxsecian Bladebot [Sword] Lv71 x1,
+        Oxsecian Spearbot [Spear] Lv71 x1, Elemental Spinner [Staff/Dark] Lv69 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 30-10  Stam 20  Diff 70  1 wave
+================================================================================
+Totals: (none listed — pure boss)
+XP 12552 (627/stam), Coins 222
+Wave 1  BOSS 6ZOO [Sword] Lv99 x1
+Placement: [MISSING]
+Story: Zero Series true form; "WE ARE THE SOURCE, 6ZOO."
+
+================================================================================
+ENEMY ROSTER (chapter levels) — stats [NOT FOUND]
+================================================================================
+6ZOO (Boss) [Sword]                   Lv99
+Elemental Spinner [Staff/Fire|Ice|Dark]  Lv69
+Oxsecian Arrowbot [Bow]               Lv71
+Oxsecian Bladebot [Sword]             Lv71
+Oxsecian Fighter EX (Boss) [Staff]    Lv87
+Oxsecian Spearbot [Spear]             Lv71
+Oxsecian Striker [Staff]              Lv69
+Space Debris [Staff]                  Lv68
+
+================================================================================
+COULD NOT FIND / OPEN
+================================================================================
+ 1. All placements.
+ 2. Full enemy stats / 6ZOO skill set.
+ 3. Official chapter title.
+ 4. Whether 6ZOO or Fighter EX are recruitable.
+
+Wave lists complete for all 10 stages. End of main story chapter sequence (Ch1–30).
+================================================================================

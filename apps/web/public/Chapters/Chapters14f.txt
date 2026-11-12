@@ -1,0 +1,200 @@
+================================================================================
+CHAPTERS14F.TXT  -  Terra Battle Chapter 14 FINAL reference
+================================================================================
+Purpose : Stage-by-stage layout of Chapter 14 for building stage data.
+Status  : FINAL for available data. Wave lists from user paste.
+          No placement grids — all placements [MISSING].
+          14-1 and 14-4 incomplete in paste; Pepropé appears as boss then ally.
+Drafted : 2026-11-11
+Source  : User paste. Own words only. Filename ends in "f".
+
+--------------------------------------------------------------------------------
+HOW TO READ
+--------------------------------------------------------------------------------
+  Wave = wiki "Battle". Board = 6 cols x 8 rows.
+  Placement when grids arrive: (col, row) bottom-left origin.
+
+================================================================================
+CHAPTER 14  (miasma shaft / Heart of Gallus approach — working label)
+================================================================================
+After Ch13. 10 stages. Stamina 11 every stage.
+Difficulty 33 for 14-1..14-5,  34 for 14-6..14-10.
+Theme: Dark-element machine cells; miasma narrative.
+Bosses: Pepropé Lv32 (14-9, all three waves); Ancient Key Lv47 (14-10 wave 5).
+Special: Pepropé spawns as ally on 14-10 wave 1 at B7 (paste note).
+Recruit: Regenercell on 14-4 drops.
+
+ Stage  Stam  Diff  Waves  XP / Coins              Placement
+ 14-1   11    33    5      coins 594               MISSING (list incomplete)
+ 14-2   11    33    4      coins 442               MISSING
+ 14-3   11    33    5      —                       MISSING
+ 14-4   11    33    5      XP 26874–27783, coins 590  MISSING (list incomplete)
+ 14-5   11    33    4      coins 474               MISSING
+ 14-6   11    34    4      —                       MISSING
+ 14-7   11    34    5      coins 732               MISSING
+ 14-8   11    34    4      —                       MISSING
+ 14-9   11    34    3      — (Pepropé boss x3)     MISSING
+ 14-10  11    34    5      coins 659 (Ancient Key) MISSING
+
+================================================================================
+STAGE 14-1   Stam 11  Diff 33  5 waves
+================================================================================
+Totals: Sword 9, Bow 6, Spear 12, Dark 27
+Coins 594
+Paste left Battle 1–5 blank except Stage-14-1-1:
+
+Wave 1  Dark Archercell [Bow/Dark] Lv36, Dark Mechacell [Sword/Dark] Lv36,
+        Dark Sparker [Spear/Dark] Lv36     [counts unknown beyond presence]
+Wave 2–5  [MISSING]
+Placement: [MISSING]
+Drops: Small Shield, Cipher Cell (Dark Mechacell); Mangled Horn (Dark Archercell);
+       Sentient Flame (Dark Sparker)
+
+================================================================================
+STAGE 14-2   Stam 11  Diff 33  4 waves
+================================================================================
+Totals: Sword 6, Bow 5, Spear 7, Staff 3, Dark 21
+Coins 442
+Wave 1  Dark Ampcell [Staff/Dark] Lv37 x1, Dark Archercell [Bow/Dark] Lv36 x2
+Wave 2  Dark Ampcell [Staff/Dark] Lv37 x1, Dark Sparker [Spear/Dark] Lv36 x4
+Wave 3  Dark Mechacell [Sword/Dark] Lv36 x4, Dark Archercell [Bow/Dark] Lv36 x1,
+        Dark Sparker [Spear/Dark] Lv36 x1
+Wave 4  Dark Mechacell [Sword/Dark] Lv36 x2, Dark Ampcell [Staff/Dark] Lv37 x1,
+        Dark Archercell [Bow/Dark] Lv36 x2, Dark Sparker [Spear/Dark] Lv36 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 14-3   Stam 11  Diff 33  5 waves
+================================================================================
+Totals: Spear 9, Staff 9, Dark 15
+Wave 1  Darkbot [Staff/Dark] Lv37 x1
+Wave 2  Dark Sparker [Spear/Dark] Lv36 x4, Darkbot [Staff/Dark] Lv37 x1
+Wave 3  Dark Sparker [Spear/Dark] Lv36 x3, Regenercell [Staff/Regen] Lv34 x1
+Wave 4  Darkbot [Staff/Dark] Lv37 x2, Dark Ampcell [Staff/Dark] Lv37 x1
+Wave 5  Regenercell [Staff/Regen] Lv34 x2, Dark Sparker [Spear/Dark] Lv36 x2,
+        Darkbot [Staff/Dark] Lv37 x1
+Placement: [MISSING]
+
+================================================================================
+STAGE 14-4   Stam 11  Diff 33  5 waves
+================================================================================
+Totals: Sword 8, Bow 3, Staff 15, Dark 19
+XP 26874–27783 (2484/stam), Coins 590
+Paste left Battle 1–5 blank except Stage-14-4-1:
+
+Wave 1  Dark Mechacell [Sword/Dark] Lv36 x4, Regenercell [Staff/Regen] Lv34 x3
+Wave 2–5  [MISSING]
+Placement: [MISSING]
+Drops: Regenercell (recruit); Shadow Visor (Dark Ampcell); Small Shield (Dark Mechacell);
+       Quickfire Bow (Darkbot); Warped Particle, Heartwood Pendant (Mechadrake Redux);
+       Cipher Cell; Mangled Horn (Dark Archercell, Regenercell)
+NOTE: Drop list mentions Mechadrake Redux and Darkbot not in the partial wave line.
+
+================================================================================
+STAGE 14-5   Stam 11  Diff 33  4 waves
+================================================================================
+Totals: Sword 6, Bow 1, Spear 2, Staff 12, Dark 9
+Coins 474
+Wave 1  Dark Sparker [Spear/Dark] Lv36 x2, Mechavirus 3721 [Staff] Lv35 x1
+Wave 2  Mechavirus 3721 [Staff] Lv35 x2, Dark Archercell [Bow/Dark] Lv36 x1
+Wave 3  Dark Mechacell [Sword/Dark] Lv36 x6, Mechavirus 3721 [Staff] Lv35 x1
+Wave 4  Mechavirus 3721 [Staff] Lv35 x8
+Placement: [MISSING]
+
+================================================================================
+STAGE 14-6   Stam 11  Diff 34  4 waves
+================================================================================
+Totals: Staff 18, Dark 3
+Wave 1  Wastecell [Staff] Lv34 x1
+Wave 2  Wastecell [Staff] Lv34 x2, Regenercell [Staff/Regen] Lv34 x2,
+        Darkbot [Staff/Dark] Lv37 x1
+Wave 3  Mechavirus 3721 [Staff] Lv35 x3, Wastecell [Staff] Lv34 x1
+Wave 4  Regenercell [Staff/Regen] Lv34 x2, Darkbot [Staff/Dark] Lv37 x2,
+        Mechavirus 3721 [Staff] Lv35 x4
+Placement: [MISSING]
+
+================================================================================
+STAGE 14-7   Stam 11  Diff 34  5 waves
+================================================================================
+Totals: Sword 12, Bow 8, Spear 7, Staff 6, Dark 29
+Coins 732
+Wave 1  Dark Mechacell [Sword/Dark] Lv36 x3, Dark Ampcell [Staff/Dark] Lv37 x1,
+        Dark Sparker [Spear/Dark] Lv36 x3
+Wave 2  Dark Archercell [Bow/Dark] Lv36 x6
+Wave 3  Wastecell [Staff] Lv34 x2, Dark Sparker [Spear/Dark] Lv36 x2
+Wave 4  Dark Ampcell [Staff/Dark] Lv37 x1, Dark Mechacell [Sword/Dark] Lv36 x7
+Wave 5  Wastecell [Staff] Lv34 x1, Dark Archercell [Bow/Dark] Lv36 x2,
+        Dark Mechacell [Sword/Dark] Lv36 x2, Dark Sparker [Spear/Dark] Lv36 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 14-8   Stam 11  Diff 34  4 waves
+================================================================================
+Totals: Sword 1, Bow 1, Spear 2, Staff 18, Dark 9
+Wave 1  Dark Sparker [Spear/Dark] Lv36 x1, Dark Archercell [Bow/Dark] Lv36 x1,
+        Dark Mechacell [Sword/Dark] Lv36 x1, Mechavirus 3721 [Staff] Lv35 x3
+Wave 2  Darkbot [Staff/Dark] Lv37 x4, Wastecell [Staff] Lv34 x2
+Wave 3  Mechavirus 3721 [Staff] Lv35 x1, Dark Sparker [Spear/Dark] Lv36 x1,
+        Wastecell [Staff] Lv34 x1, Darkbot [Staff/Dark] Lv37 x1
+Wave 4  Wastecell [Staff] Lv34 x3, Mechavirus 3721 [Staff] Lv35 x3
+Placement: [MISSING]
+
+================================================================================
+STAGE 14-9   Stam 11  Diff 34  3 waves
+================================================================================
+Totals: Sword 11, Bow 4, Spear 10, Staff 2, Dark 22
+Wave 1  Regenercell [Staff/Regen] Lv34 x2, Dark Sparker [Spear/Dark] Lv36 x2,
+        Dark Mechacell [Sword/Dark] Lv36 x2, BOSS Pepropé [Sword] Lv32 x1
+Wave 2  Dark Sparker [Spear/Dark] Lv36 x4, Dark Mechacell [Sword/Dark] Lv36 x2,
+        Dark Archercell [Bow/Dark] Lv36 x1, BOSS Pepropé [Sword] Lv32 x1
+Wave 3  BOSS Pepropé [Sword] Lv32 x1, Dark Sparker [Spear/Dark] Lv36 x4,
+        Dark Mechacell [Sword/Dark] Lv36 x4, Dark Archercell [Bow/Dark] Lv36 x3
+Placement: [MISSING]
+NOTE: Pepropé listed on all three waves as Boss Lv32.
+
+================================================================================
+STAGE 14-10  Stam 11  Diff 34  5 waves
+================================================================================
+Totals: Sword 1, Bow 4, Spear 6, Staff 18, Dark 16
+Coins 659
+Wave 1  Dark Archercell [Bow/Dark] Lv36 x3, Dark Ampcell [Staff/Dark] Lv37 x1,
+        Pepropé [Sword] Lv39 (Ally — paste: spawns at B7)
+Wave 2  Dark Sparker [Spear/Dark] Lv36 x4, Dark Ampcell [Staff/Dark] Lv37 x2
+Wave 3  Regenercell [Staff/Regen] Lv34 x2, Mechavirus 3721 [Staff] Lv35 x6
+Wave 4  Regenercell [Staff/Regen] Lv34 x1, Mechavirus 3721 [Staff] Lv35 x1,
+        Dark Ampcell [Staff/Dark] Lv37 x1, Dark Sparker [Spear/Dark] Lv36 x1
+Wave 5  BOSS Ancient Key [Staff] Lv47 x1, Mechavirus 3721 [Staff] Lv35 x2,
+        Dark Ampcell [Staff/Dark] Lv37 x1, Dark Sparker [Spear/Dark] Lv36 x1,
+        Dark Mechacell [Sword/Dark] Lv36 x1, Dark Archercell [Bow/Dark] Lv36 x1
+Placement: [MISSING]
+NOTE: Ally Pepropé on wave 1 is a special spawn (B7 = board cell; map to engine coords later).
+      Ancient Key is the stage boss (strategy-tagged in paste).
+
+================================================================================
+ENEMY ROSTER (chapter levels) — stats [NOT FOUND]
+================================================================================
+Ancient Key (Boss) [Staff]           Lv47
+Dark Ampcell [Staff/Dark]            Lv37
+Dark Archercell [Bow/Dark]           Lv36
+Dark Mechacell [Sword/Dark]          Lv36
+Dark Sparker [Spear/Dark]            Lv36
+Darkbot [Staff/Dark]                 Lv37
+Mechavirus 3721 [Staff]              Lv35
+Pepropé [Sword]                      Lv32 (boss), Lv39 (ally)
+Regenercell [Staff/Regen]            Lv34
+Wastecell [Staff]                    Lv34
+
+================================================================================
+COULD NOT FIND / OPEN
+================================================================================
+ 1. All placements (no grids).
+ 2. Full enemy stat blocks.
+ 3. Complete wave lists for 14-1 and 14-4.
+ 4. Exact meaning of "B7" for ally Pepropé spawn (assume board cell; confirm).
+ 5. Ancient Key footprint / skills.
+ 6. XP for most stages.
+ 7. Official chapter title.
+ 8. Whether Pepropé on 14-9 is the same unit fought three times or one multi-wave boss.
+
+Wave lists complete for 14-2, 14-3, 14-5..14-10. 14-1 and 14-4 need fuller paste.
+================================================================================

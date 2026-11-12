@@ -38,6 +38,7 @@ export function placementsFromSquad(squad: CharacterInstance[]): Placement[] {
           frequency: skill.frequency,
           power: skill.power,
           damageComponents: skill.damageComponents,
+          element: skill.element,
           target: skill.target as any,
         },
       ];
@@ -52,6 +53,7 @@ export function placementsFromSquad(squad: CharacterInstance[]): Placement[] {
       def: Math.max(0, stats.def),
       weapon: job?.weapon,
       element: job?.element,
+      species: def?.species,
       skills,
     };
 

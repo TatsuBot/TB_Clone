@@ -1,0 +1,144 @@
+================================================================================
+CHAPTERS17F.TXT  -  Terra Battle Chapter 17 FINAL reference
+================================================================================
+Purpose : Stage-by-stage layout of Chapter 17 for building stage data.
+Status  : FINAL for available data. MOST WAVE LISTS ARE MISSING in the paste —
+          only icon totals + partial 17-3 / 17-10. Documented honestly.
+Drafted : 2026-11-11
+Source  : User paste. Own words only. Filename ends in "f".
+
+--------------------------------------------------------------------------------
+HOW TO READ
+--------------------------------------------------------------------------------
+  Wave = wiki "Battle". Board = 6 cols x 8 rows.
+  Placement when grids arrive: (col, row) bottom-left origin.
+
+================================================================================
+CHAPTER 17  (compulsory transport / Oxsecian contact — working label)
+================================================================================
+After Ch16. 10 stages. Stamina 13 every stage.
+Difficulty 40 for 17-1..17-5,  41 for 17-6..17-10.
+Theme: Alien Oxsecian forces; Spear-heavy. Paste does not name most enemies
+  per wave — only stage-level weapon totals and two partial stage tags.
+
+ Stage  Stam  Diff  Waves  Icon totals (Sword/Bow/Spear/Staff)   Wave list
+ 17-1   13    40    4      0 / 0 / 13 / 3                          MISSING
+ 17-2   13    40    5      0 / 7 / 14 / 3                          MISSING
+ 17-3   13    40    3      0 / 4 / 15 / 2                          PARTIAL (w1 only)
+ 17-4   13    40    4      0 / 0 / 25 / 0                          MISSING
+ 17-5   13    40    5      0 / 0 / 23 / 8                          MISSING
+ 17-6   13    41    5      0 / 7 / 15 / 3                          MISSING
+ 17-7   13    41    3      0 / 6 / 11 / 5                          MISSING
+ 17-8   13    41    4      0 / 0 / 31 / 2                          MISSING
+ 17-9   13    41    5      0 / 5 / 23 / 0                          MISSING
+ 17-10  13    41    4      0 / 2 / 17 / 3                          PARTIAL (w1 only)
+
+No XP or coins in paste for any stage.
+
+================================================================================
+STAGE 17-1   Stam 13  Diff 40  4 waves
+================================================================================
+Totals: Spear 13, Staff 3
+Waves: [MISSING — no per-battle enemy list in paste]
+Placement: [MISSING]
+
+================================================================================
+STAGE 17-2   Stam 13  Diff 40  5 waves
+================================================================================
+Totals: Bow 7, Spear 14, Staff 3
+Waves: [MISSING]
+Placement: [MISSING]
+
+================================================================================
+STAGE 17-3   Stam 13  Diff 40  3 waves
+================================================================================
+Totals: Bow 4, Spear 15, Staff 2
+Paste left Battle 1–3 blank except Stage-17-3-1:
+
+Wave 1  Oxsecian Bomb [Staff] Lv44 x1, Pneumatobot (Beta) [Spear] Lv44 x4
+Wave 2  [MISSING]
+Wave 3  [MISSING]
+Placement: [MISSING]
+Drops: Dark Matter (Pneumatobot)
+
+================================================================================
+STAGE 17-4   Stam 13  Diff 40  4 waves
+================================================================================
+Totals: Spear 25
+Waves: [MISSING]
+Placement: [MISSING]
+
+================================================================================
+STAGE 17-5   Stam 13  Diff 40  5 waves
+================================================================================
+Totals: Spear 23, Staff 8
+Waves: [MISSING]
+Placement: [MISSING]
+
+================================================================================
+STAGE 17-6   Stam 13  Diff 41  5 waves
+================================================================================
+Totals: Bow 7, Spear 15, Staff 3
+Waves: [MISSING]
+Placement: [MISSING]
+
+================================================================================
+STAGE 17-7   Stam 13  Diff 41  3 waves
+================================================================================
+Totals: Bow 6, Spear 11, Staff 5
+Waves: [MISSING]
+Placement: [MISSING]
+
+================================================================================
+STAGE 17-8   Stam 13  Diff 41  4 waves
+================================================================================
+Totals: Spear 31, Staff 2
+Waves: [MISSING]
+Placement: [MISSING]
+
+================================================================================
+STAGE 17-9   Stam 13  Diff 41  5 waves
+================================================================================
+Totals: Bow 5, Spear 23
+Waves: [MISSING]
+Placement: [MISSING]
+
+================================================================================
+STAGE 17-10  Stam 13  Diff 41  4 waves
+================================================================================
+Totals: Bow 2, Spear 17, Staff 3
+Paste left Battle 1–4 blank except Stage-17-10-1:
+
+Wave 1  Lock-On [Bow] Lv44 x2, Oxsecian Airgrunt [Spear] Lv43 x2,
+        Pneumatobot (Beta) [Spear] Lv47 x2
+Wave 2  [MISSING]
+Wave 3  [MISSING]
+Wave 4  [MISSING]
+Placement: [MISSING]
+Drops: Golem's Badge (Lock-On); Wisp of Jealousy (Oxsecian Airgrunt Lv43);
+       Sentient Flame (Oxsecian Airgrunt Lv48 — level in drop line differs from
+       wave line Lv43; both noted)
+
+================================================================================
+ENEMY ROSTER (named in paste only) — stats [NOT FOUND]
+================================================================================
+Lock-On [Bow]                     Lv44
+Oxsecian Airgrunt [Spear]         Lv43 (drop text also mentions Lv48)
+Oxsecian Bomb [Staff]             Lv44
+Pneumatobot (Beta) [Spear]        Lv44, Lv47
+
+Likely more Oxsecian units exist for the missing waves (not named in paste).
+
+================================================================================
+COULD NOT FIND / OPEN
+================================================================================
+ 1. Wave lists for 17-1, 17-2, 17-4..17-9 entirely absent from paste.
+ 2. Waves 2+ for 17-3 and 17-10.
+ 3. All placements.
+ 4. Enemy stats, XP, coins.
+ 5. Official chapter title.
+ 6. Full Oxsecian roster for this chapter.
+
+This chapter needs a fuller wiki scrape or more detailed paste to be authorable
+beyond shell stage metadata and the two partial battles above.
+================================================================================

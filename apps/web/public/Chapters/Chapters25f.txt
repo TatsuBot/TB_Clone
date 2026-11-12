@@ -1,0 +1,183 @@
+================================================================================
+CHAPTERS25F.TXT  -  Terra Battle Chapter 25 FINAL reference
+================================================================================
+Purpose : Stage-by-stage layout of Chapter 25 for building stage data.
+Status  : FINAL for available data. Wave lists complete except 25-7.
+          No placements. Zero Series (1AOO / 2BOO / 3COO) special mechanics noted.
+Drafted : 2026-11-11
+Source  : User paste. Own words only. Filename ends in "f".
+
+--------------------------------------------------------------------------------
+HOW TO READ
+--------------------------------------------------------------------------------
+  Wave = wiki "Battle". Board = 6 cols x 8 rows.
+  Placement when grids arrive: (col, row) bottom-left origin.
+
+================================================================================
+CHAPTER 25  (Zero Series release — working label)
+================================================================================
+After Ch24. 10 stages. Stamina 18 every stage.
+Difficulty 58 for 25-1..25-5,  59 for 25-6..25-10.
+Theme: Mixed weapons; Zero Series humanoid bosses that clone and vanish.
+Boss stage 25-4: 1AOO / 2BOO / 3COO each Lv80 alone on consecutive waves.
+Clone notes: each generates MarkI clones Lv59 x3 and disappears.
+
+ Stage  Stam  Diff  Waves  Coins / XP
+ 25-1   18    58    4      coins 808
+ 25-2   18    58    4      coins 1069
+ 25-3   18    58    5      coins 917
+ 25-4   18    58    3      coins 288  (Zero Series bosses)
+ 25-5   18    58    5      coins 792
+ 25-6   18    59    5      coins 1056
+ 25-7   18    59    4      coins 711  (list incomplete)
+ 25-8   18    59    5      coins 1074
+ 25-9   18    59    3      XP 78000, coins 1254
+ 25-10  18    59    4      coins 852
+
+================================================================================
+STAGE 25-1   Stam 18  Diff 58  4 waves
+================================================================================
+Totals: Sword 17, Spear 4, Staff 4
+Coins 808
+Wave 1  Slasher [Sword] Lv60 x2, Slime Slug [Spear] Lv60 x2, Paralypede [Staff] Lv62 x1
+Wave 2  Slasher [Sword] Lv60 x2, SlimeSlug [Spear] Lv60 x2, Paralypede [Staff] Lv62 x1
+Wave 3  Slasher [Sword] Lv60 x9
+Wave 4  Slasher [Sword] Lv64 x4, Paralypede [Staff] Lv62 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 25-2   Stam 18  Diff 58  4 waves
+================================================================================
+Totals: Bow 12, Spear 20, Staff 1
+Coins 1069
+Wave 1  Slime Slug [Spear] Lv60 x3, Thornasaurus [Bow] Lv53 x2
+Wave 2  Slime Slug [Spear] Lv60 x3, Thornasaurus [Bow] Lv53 x2
+Wave 3  Slime Slug [Spear] Lv60 x6, Thornasaurus [Bow] Lv53 x2
+Wave 4  Slime Slug [Spear] Lv60 x8, Paralypede [Staff] Lv62 x1, Thornasaurus [Bow] Lv53 x6
+Placement: [MISSING]
+
+================================================================================
+STAGE 25-3   Stam 18  Diff 58  5 waves
+================================================================================
+Totals: Sword 3, Bow 21, Staff 4
+Coins 917
+Wave 1  Thornasaurus [Bow] Lv53 x5
+Wave 2  Thornasaurus [Bow] Lv53 x4, Mudwing [Staff] Lv60 x2
+Wave 3  Slasher [Sword] Lv60 x2, Thornasaurus [Bow] Lv53 x3
+Wave 4  Thornasaurus [Bow] Lv53 x6
+Wave 5  Slasher [Sword] Lv60 x1, Thornasaurus [Bow] Lv58 x3, Mudwing [Staff] Lv60 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 25-4   Stam 18  Diff 58  3 waves
+================================================================================
+Totals: Sword 1, Bow 1, Spear 1
+Coins 288
+Wave 1  BOSS 1AOO [Sword] Lv80 x1
+Wave 2  BOSS 2BOO [Spear] Lv80 x1
+Wave 3  BOSS 3COO [Bow] Lv80 x1
+Placement: [MISSING]
+Mechanic notes (paste):
+  1AOO generates clones then disappears → 1AOO MarkI [Sword] Lv59 x3
+  2BOO generates clones then disappears → 2BOO MarkI [Spear] Lv59 x3
+  3COO generates clones then disappears → 3COO MarkI [Bow] Lv59 x3
+
+================================================================================
+STAGE 25-5   Stam 18  Diff 58  5 waves
+================================================================================
+Totals: Sword 3, Bow 17, Staff 4
+Coins 792
+Wave 1  3COO MarkI [Bow] Lv59 x5
+Wave 2  1AOO MarkI [Sword] Lv59 x1, 3COO MarkI [Bow] Lv59 x3
+Wave 3  3COO MarkI [Bow] Lv59 x2, Electroseizer [Staff] Lv58 x2
+Wave 4  1AOO MarkI [Sword] Lv59 x2, 3COO MarkI [Bow] Lv59 x3
+Wave 5  3COO MarkI [Bow] Lv59 x4, Electroseizer [Staff] Lv58 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 25-6   Stam 18  Diff 59  5 waves
+================================================================================
+Totals: Bow 3, Spear 25, Staff 5
+Coins 1056
+Wave 1  2BOO MarkI [Spear] Lv59 x6, Time Analyzer [Staff] Lv61 x1
+Wave 2  2BOO MarkI [Spear] Lv59 x3, 3COO MarkI [Bow] Lv59 x2, Time Analyzer [Staff] Lv61 x1
+Wave 3  2BOO MarkI [Spear] Lv59 x3, 3COO MarkI [Bow] Lv59 x1
+Wave 4  2BOO MarkI [Spear] Lv59 x3, Electroseizer [Staff] Lv58 x1
+Wave 5  2BOO MarkI [Spear] Lv59 x10, Electroseizer [Staff] Lv58 x1, Time Analyzer [Staff] Lv61 x1
+Placement: [MISSING]
+
+================================================================================
+STAGE 25-7   Stam 18  Diff 59  4 waves
+================================================================================
+Totals: Sword 2, Bow 2, Spear 2, Staff 17
+Coins 711
+Paste left Battle 1–4 blank; only partial tag:
+
+Wave ?  1AOO MarkI [Sword] Lv59, 2BOO MarkI [Spear] Lv59, 3COO MarkI [Bow] Lv59
+         [counts and wave assignment unknown]
+Placement: [MISSING]
+Drops: Warped Particle, White Hole (Craggy Leviathan — not in partial wave)
+Luck chests (partial list in paste)
+
+================================================================================
+STAGE 25-8   Stam 18  Diff 59  5 waves
+================================================================================
+Totals: Sword 26, Staff 7
+Coins 1074
+Wave 1  Paralypede [Staff] Lv62 x2, 1AOO MarkI [Sword] Lv59 x2
+Wave 2  Slasher [Sword] Lv60 x7, Time Analyzer [Staff] Lv61 x1
+Wave 3  Slasher [Sword] Lv60 x2, Paralypede [Staff] Lv62 x1, 1AOO MarkI [Sword] Lv59 x2
+Wave 4  Paralypede [Staff] Lv62 x3, 1AOO MarkI [Sword] Lv59 x3
+Wave 5  Slasher [Sword] Lv60 x6, 1AOO MarkI [Sword] Lv59 x4
+Placement: [MISSING]
+
+================================================================================
+STAGE 25-9   Stam 18  Diff 59  3 waves
+================================================================================
+Totals: Bow 38
+XP 78000 (4333/stam), Coins 1254
+Wave 1  Thornasaurus [Bow] Lv53 x8, 3COO MarkI [Bow] Lv59 x8
+Wave 2  Thornasaurus [Bow] Lv53 x8, 3COO MarkI [Bow] Lv59 x4
+Wave 3  Thornasaurus [Bow] Lv53 x6, 3COO MarkI [Bow] Lv59 x4
+Placement: [MISSING]
+
+================================================================================
+STAGE 25-10  Stam 18  Diff 59  4 waves
+================================================================================
+Totals: Spear 20, Staff 6
+Coins 852
+Wave 1  2BOO MarkI [Spear] Lv59 x2, Electroseizer [Staff] Lv58 x4
+Wave 2  2BOO MarkI [Spear] Lv59 x6
+Wave 3  Slime Slug [Spear] Lv60 x3, 2BOO MarkI [Spear] Lv59 x3
+Wave 4  Slime Slug [Spear] Lv60 x3, 2BOO MarkI [Spear] Lv59 x3, Electroseizer [Staff] Lv58 x2
+Placement: [MISSING]
+
+================================================================================
+ENEMY ROSTER (chapter levels) — stats [NOT FOUND]
+================================================================================
+1AOO (Boss) [Sword]                   Lv80
+1AOO MarkI [Sword]                    Lv59
+2BOO (Boss) [Spear]                   Lv80
+2BOO MarkI [Spear]                    Lv59
+3COO (Boss) [Bow]                     Lv80
+3COO MarkI [Bow]                      Lv59
+Electroseizer [Staff]                 Lv58
+Mudwing [Staff]                       Lv60
+Paralypede [Staff]                    Lv62
+Slasher [Sword]                       Lv60, Lv64
+Slime Slug [Spear]                     Lv60
+Thornasaurus [Bow]                    Lv53, Lv58
+Time Analyzer [Staff]                 Lv61
+
+================================================================================
+COULD NOT FIND / OPEN
+================================================================================
+ 1. All placements.
+ 2. Full 25-7 wave list.
+ 3. Full enemy stats / most XP values.
+ 4. Exact clone-despawn timing rules for Zero Series.
+ 5. Craggy Leviathan (drops only on 25-7).
+ 6. Official chapter title.
+
+Wave lists complete for 25-1..25-6, 25-8..25-10.
+================================================================================

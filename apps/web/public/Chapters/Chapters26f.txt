@@ -1,0 +1,175 @@
+================================================================================
+CHAPTERS26F.TXT  -  Terra Battle Chapter 26 FINAL reference
+================================================================================
+Purpose : Stage-by-stage layout of Chapter 26 for building stage data.
+Status  : FINAL for available data. All wave lists present. No placements.
+          Recurring boss 54B2 (Oxsecian King) Lv68 across multiple stages.
+Drafted : 2026-11-11
+Source  : User paste. Own words only. Filename ends in "f".
+
+--------------------------------------------------------------------------------
+HOW TO READ
+--------------------------------------------------------------------------------
+  Wave = wiki "Battle". Board = 6 cols x 8 rows.
+  Placement when grids arrive: (col, row) bottom-left origin.
+
+================================================================================
+CHAPTER 26  (Oxsecian King 54B2 — working label)
+================================================================================
+After Ch25. 10 stages. Stamina 18 every stage.
+Difficulty 61 for 26-1..26-5,  62 for 26-6..26-10.
+Theme: Ice sword units (Ice Slammer, Cryobird, Ice Razor) + Defense Amp /
+  Electrosapper / Oxsecian Gunner.
+Recurring boss: 54B2 [Sword] Lv68 (King) — paste notes on 26-2: may not need to
+  kill him to advance; row(1) attack; improved AI targeting.
+Boss: Jade Guardian Lv66 on 26-5 wave 4.
+
+ Stage  Stam  Diff  Waves  XP / Coins
+ 26-1   18    61    5      coins 1020
+ 26-2   18    61    3      coins 480   (54B2 each wave)
+ 26-3   18    61    4      —
+ 26-4   18    61    5      XP 55915, coins 1020
+ 26-5   18    61    4      XP 42610, coins 751  (Jade Guardian)
+ 26-6   18    62    5      XP 57866, coins 960
+ 26-7   18    62    5      XP 66184, coins 1110
+ 26-8   18    62    3      —
+ 26-9   18    62    4      XP 79177, coins 1350
+ 26-10  18    62    1      XP 10901, coins 210  (final king fight)
+
+================================================================================
+STAGE 26-1   Stam 18  Diff 61  5 waves
+================================================================================
+Totals: Sword 34, Ice 34
+Coins 1020
+Wave 1  Ice Slammer [Sword/Ice] Lv63 x3
+Wave 2  Ice Slammer [Sword/Ice] Lv63 x3, Cryobird [Sword/Ice] Lv63 x2
+Wave 3  Cryobird [Sword/Ice] Lv63 x6
+Wave 4  Ice Slammer [Sword/Ice] Lv63 x2, Cryobird [Sword/Ice] Lv63 x8
+Wave 5  Ice Slammer [Sword/Ice] Lv63 x5, Cryobird [Sword/Ice] Lv63 x5
+Placement: [MISSING]
+
+================================================================================
+STAGE 26-2   Stam 18  Diff 61  3 waves
+================================================================================
+Totals: Sword 19, Ice 16
+Coins 480
+Wave 1  Ice Razor [Sword/Ice] Lv63 x2, BOSS 54B2 [Sword] Lv68 x1
+Wave 2  Ice Slammer [Sword/Ice] Lv63 x3, Ice Razor [Sword/Ice] Lv63 x3, BOSS 54B2 [Sword] Lv68 x1
+Wave 3  Ice Slammer [Sword/Ice] Lv63 x4, Ice Razor [Sword/Ice] Lv63 x4, BOSS 54B2 [Sword] Lv68 x1
+Placement: [MISSING]
+Note (paste): King may not need to be killed to advance — clear other units.
+  Row(1) attack; improved AI targeting for max damage.
+
+================================================================================
+STAGE 26-3   Stam 18  Diff 61  4 waves
+================================================================================
+Totals: Sword 40, Ice 39
+Wave 1  Cryobird [Sword/Ice] Lv63 x10
+Wave 2  Cryobird [Sword/Ice] Lv63 x4, Ice Razor [Sword/Ice] Lv63 x4
+Wave 3  Ice Slammer [Sword/Ice] Lv63 x2, Cryobird [Sword/Ice] Lv63 x2,
+        Ice Razor [Sword/Ice] Lv63 x2, BOSS 54B2 [Sword] Lv68 x1
+Wave 4  Ice Slammer [Sword/Ice] Lv63 x4, Cryobird [Sword/Ice] Lv63 x8, Ice Razor [Sword/Ice] Lv63 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 26-4   Stam 18  Diff 61  5 waves
+================================================================================
+Totals: Sword 29, Staff 7, Ice 28
+XP 55915 (3106/stam), Coins 1020
+Wave 1  Ice Razor [Sword/Ice] Lv63 x3, Defense Amp [Staff] Lv60 x1
+Wave 2  Cryobird [Sword/Ice] Lv63 x1, Ice Razor [Sword/Ice] Lv63 x4, Defense Amp [Staff] Lv60 x1
+Wave 3  Ice Razor [Sword/Ice] Lv63 x6, Defense Amp [Staff] Lv60 x2
+Wave 4  Cryobird [Sword/Ice] Lv63 x2, Ice Razor [Sword/Ice] Lv63 x2,
+        BOSS 54B2 [Sword] Lv68 x1, Defense Amp [Staff] Lv60 x1
+Wave 5  Ice Razor [Sword/Ice] Lv63 x10, Defense Amp [Staff] Lv60 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 26-5   Stam 18  Diff 61  4 waves
+================================================================================
+Totals: Sword 20, Staff 6, Ice 20
+XP 42610 (2367/stam), Coins 751
+Wave 1  Ice Slammer [Sword/Ice] Lv63 x4, Defense Amp [Staff] Lv60 x2
+Wave 2  Ice Slammer [Sword/Ice] Lv63 x5, BOSS 54B2 [Sword] Lv68 x1, Defense Amp [Staff] Lv60 x1
+Wave 3  IceSlammer [Sword/Ice] Lv63 x6
+Wave 4  IceSlammer [Sword/Ice] Lv63 x4, Defense Amp [Staff] Lv60 x2,
+        BOSS Jade Guardian [Sword/Ice] Lv66 x1
+Placement: [MISSING]
+Drops: Oxsecium, Deepwater Helix (Jade Guardian)
+
+================================================================================
+STAGE 26-6   Stam 18  Diff 62  5 waves
+================================================================================
+Totals: Sword 33, Ice 23
+XP 57866 (3214/stam), Coins 960
+Wave 1  Oxsecian Gunner [Sword] Lv60 x2, BOSS 54B2 [Sword] Lv68 x1
+Wave 2  Cryobird [Sword/Ice] Lv63 x2, Ice Razor [Sword/Ice] Lv63 x3, Oxsecian Gunner [Sword] Lv60 x1
+Wave 3  Cryobird [Sword/Ice] Lv63 x2, Ice Razor [Sword/Ice] Lv63 x2, Oxsecian Gunner [Sword] Lv60 x2
+Wave 4  Cryobird [Sword/Ice] Lv63 x6, Ice Razor [Sword/Ice] Lv63 x4
+Wave 5  Cryobird [Sword/Ice] Lv63 x2, Ice Razor [Sword/Ice] Lv63 x2, Oxsecian Gunner [Sword] Lv60 x4
+Placement: [MISSING]
+
+================================================================================
+STAGE 26-7   Stam 18  Diff 62  5 waves
+================================================================================
+Totals: Sword 31, Staff 7, Ice 27
+XP 66184 (3676/stam), Coins 1110
+Wave 1  Ice Razor [Sword/Ice] Lv63 x2, Electrosapper [Staff] Lv61 x2
+Wave 2  Ice Slammer [Sword/Ice] Lv63 x2, Ice Razor [Sword/Ice] Lv63 x2, Electrosapper [Staff] Lv61 x2
+Wave 3  Ice Slammer [Sword/Ice] Lv63 x7, Oxsecian Gunner [Sword] Lv60 x1
+Wave 4  Ice Razor [Sword/Ice] Lv63 x4, BOSS 54B2 [Sword] Lv68 x1, Electrosapper [Staff] Lv61 x1
+Wave 5  Ice Slammer [Sword/Ice] Lv63 x2, Ice Razor [Sword/Ice] Lv63 x8,
+        Oxsecian Gunner [Sword] Lv60 x2, Electrosapper [Staff] Lv61 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 26-8   Stam 18  Diff 62  3 waves
+================================================================================
+Totals: Sword 16, Staff 9
+Wave 1  Electrosapper [Staff] Lv61 x5
+Wave 2  BOSS 54B2 [Sword] Lv68 x1, Defense Amp [Staff] Lv60 x2, Electrosapper [Staff] Lv61 x1
+Wave 3  Defense Amp [Staff] Lv60 x1, Oxsecian Gunner [Sword] Lv60 x15
+Placement: [MISSING]
+
+================================================================================
+STAGE 26-9   Stam 18  Diff 62  4 waves
+================================================================================
+Totals: Sword 42, Staff 4, Ice 41
+XP 79177 (4398/stam), Coins 1350
+Wave 1  Ice Slammer [Sword/Ice] Lv63 x6, Cryobird [Sword/Ice] Lv63 x6
+Wave 2  Cryobird [Sword/Ice] Lv63 x4, Electrosapper [Staff] Lv61 x2
+Wave 3  IceSlammer [Sword/Ice] Lv63 x9, BOSS 54B2 [Sword] Lv68 x1
+Wave 4  IceSlammer [Sword/Ice] Lv63 x2, Cryobird [Sword/Ice] Lv63 x14, Defense Amp [Staff] Lv60 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 26-10  Stam 18  Diff 62  1 wave
+================================================================================
+Totals: Sword 3, Staff 2, Ice 2
+XP 10901 (605/stam), Coins 210
+Wave 1  Ice Razor [Sword/Ice] Lv63 x2, BOSS 54B2 [Sword] Lv68 x1, Defense Amp [Staff] Lv60 x2
+Placement: [MISSING]
+
+================================================================================
+ENEMY ROSTER (chapter levels) — stats [NOT FOUND]
+================================================================================
+54B2 (Boss / King) [Sword]           Lv68
+Cryobird [Sword/Ice]                 Lv63
+Defense Amp [Staff]                  Lv60
+Electrosapper [Staff]                Lv61
+Ice Razor [Sword/Ice]                 Lv63
+IceSlammer [Sword/Ice]                Lv63
+Jade Guardian (Boss) [Sword/Ice]     Lv66
+Oxsecian Gunner [Sword]              Lv60
+
+================================================================================
+COULD NOT FIND / OPEN
+================================================================================
+ 1. All placements.
+ 2. Full enemy stats / some XP and coins.
+ 3. Exact 54B2 skill list beyond paste notes (row attack, heal, etc.).
+ 4. Whether 54B2 is recruitable.
+ 5. Official chapter title.
+
+Wave lists complete for all 10 stages.
+================================================================================

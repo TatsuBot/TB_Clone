@@ -3,6 +3,7 @@ import { Board } from "./board";
 import {
   applyBuff,
   inferSkillAttributes,
+  inferSkillStatChanges,
   resolveAdjacentAttacks,
   resolveAttacks,
   type Resolution,
@@ -133,17 +134,23 @@ export class Battle {
 
     unit.tapCharges[chosenSkill.id] -= 1;
     const attr = inferSkillAttributes(chosenSkill);
-    const stat = attr.stat ?? (category === "debuff" ? "def" : "atk");
-    const percent = attr.statPercent ?? (category === "debuff" ? -30 : 30);
+    const statChanges = inferSkillStatChanges(chosenSkill);
+    const changes = statChanges.length
+      ? statChanges
+      : [{
+          stat: attr.stat ?? (category === "debuff" ? "def" : "atk"),
+          percent: attr.statPercent ?? (category === "debuff" ? -30 : 30),
+        }];
+    const { stat, percent } = changes[0]!;
     const duration = attr.duration ?? 1;
 
     const targetIds: string[] = [];
     if (category === "debuff") {
       for (const enemy of this.board.unitsOf("enemy")) {
-        applyBuff(enemy, {
+        for (const change of changes) applyBuff(enemy, {
           id: chosenSkill.id,
-          stat,
-          percent,
+          stat: change.stat,
+          percent: change.percent,
           duration,
           isTap: true,
         });
@@ -151,10 +158,10 @@ export class Battle {
       }
     } else {
       for (const ally of this.board.unitsOf("ally")) {
-        applyBuff(ally, {
+        for (const change of changes) applyBuff(ally, {
           id: chosenSkill.id,
-          stat,
-          percent,
+          stat: change.stat,
+          percent: change.percent,
           duration,
           isTap: true,
         });
@@ -169,6 +176,7 @@ export class Battle {
       category,
       remainingCharges: unit.tapCharges[chosenSkill.id],
       stat,
+      statChanges: changes,
       percent,
       duration,
       targets: targetIds,
@@ -192,15 +200,7 @@ export class Battle {
     this.tickTurnEnd("player");
 
     if (this.board.unitsOf("enemy").length === 0) {
-      if (this.waveIndex + 1 < this.waveCount) {
-        this.waveIndex++;
-        const newSpawned = spawnWave(this.board, this.stage, this.waveIndex);
-        spawned.push(...newSpawned);
-        this.initUnits();
-        this.phase = "player"; // a fresh wave arrives; the player keeps the initiative
-      } else {
-        this.phase = "victory";
-      }
+      this.advanceClearedWave(spawned);
     } else {
       this.phase = "enemy";
     }
@@ -225,7 +225,23 @@ export class Battle {
     this.tickTurnEnd("enemy");
     this.phase = "player";
     this.checkDefeat();
-    return this.record({ actor: "enemy", enemyMoves, resolution, spawned: [] });
+    const spawned: string[] = [];
+    if (this.board.unitsOf("ally").length >= RULES.minAlliesToFight) {
+      this.advanceClearedWave(spawned);
+    }
+    return this.record({ actor: "enemy", enemyMoves, resolution, spawned });
+  }
+
+  private advanceClearedWave(spawned: string[]): void {
+    if (this.board.unitsOf("enemy").length > 0) return;
+    if (this.waveIndex + 1 < this.waveCount) {
+      this.waveIndex++;
+      spawned.push(...spawnWave(this.board, this.stage, this.waveIndex));
+      this.initUnits();
+      this.phase = "player";
+    } else {
+      this.phase = "victory";
+    }
   }
 
   private tickTurnEnd(actor: "player" | "enemy"): void {

@@ -1,0 +1,155 @@
+================================================================================
+CHAPTERS31F.TXT  -  Terra Battle Chapter 31 FINAL reference
+================================================================================
+Purpose : Stage-by-stage layout of Chapter 31 for building stage data.
+Status  : FINAL for available data. MOST stages only have wave-1 tags from
+          Stage31-N-1 images; full wave lists largely missing. No placements.
+Drafted : 2026-11-11
+Source  : User paste. Own words only. Filename ends in "f".
+
+--------------------------------------------------------------------------------
+HOW TO READ
+--------------------------------------------------------------------------------
+  Wave = wiki "Battle". Board = 6 cols x 8 rows.
+  Placement when grids arrive: (col, row) bottom-left origin.
+
+================================================================================
+CHAPTER 31  (Proto / castle approach — working label)
+================================================================================
+After Ch30 main ending. New world / wasteland / Proto the robotic soldier.
+10 stages. Stamina 20 every stage.
+Difficulty 72 for 31-1..31-5,  73 for 31-6..31-10.
+Theme: Spear-heavy wasteland fauna (Spitch, Creeper, Antlion, etc.).
+
+ Stage  Stam  Diff  Waves  XP / Coins              Wave list
+ 31-1   20    72    1      XP 35880, coins 1000    partial (boss-like)
+ 31-2   20    72    5      XP 47970, coins 1088    partial (w1 only)
+ 31-3   20    72    3      XP 39780, coins 1010    partial (w1 only)
+ 31-4   20    72    5      XP 49725, coins 1026    partial (w1 only)
+ 31-5   20    72    5      XP 49920, coins 1045    partial (w1 only)
+ 31-6   20    73    4      XP 39780, coins 850     partial (w1 only)
+ 31-7   20    73    4      XP 48360, coins 940     partial (w1 only)
+ 31-8   20    73    5      XP 53820, coins 1232    partial (w1 only)
+ 31-9   20    73    3      XP 53820, coins 1158    partial (w1 only)
+ 31-10  20    73    4      XP 39195, coins 929     partial (w1 only)
+
+================================================================================
+STAGE 31-1   Stam 20  Diff 72  1 wave
+================================================================================
+Totals: Spear 3
+XP 35880 (1794/stam), Coins 1000
+Wave 1  Antlion [Spear] Lv98 x1,
+        Spitch Leader [Spear] Lv74 x2
+        (Spitch Leader summons Spitch [Spear] Lv73 x2 every turn while alive)
+Placement: [MISSING]
+Luck chests: Pelt of Knowledge; Tail of Insight; Lustrous Tail; Beastfolk Knight
+
+================================================================================
+STAGE 31-2   Stam 20  Diff 72  5 waves
+================================================================================
+Totals: Spear 25, Staff 3
+XP 47970 (2398/stam), Coins 1088
+Wave 1  Mudcrawler [Staff] Lv70 x1, Spitch [Spear] Lv73 x3
+Wave 2–5  [MISSING]
+Placement: [MISSING]
+
+================================================================================
+STAGE 31-3   Stam 20  Diff 72  3 waves
+================================================================================
+Totals: Spear 27
+XP 39780 (1989/stam), Coins 1010
+Wave 1  Gnorusk [Spear] Lv76 x1, Spitch [Spear] Lv73 x6
+Wave 2–3  [MISSING]
+Placement: [MISSING]
+
+================================================================================
+STAGE 31-4   Stam 20  Diff 72  5 waves
+================================================================================
+Totals: Spear 23, Staff 3
+XP 49725 (2486/stam), Coins 1026
+Wave 1  Spitch Leader [Spear] Lv74 x2, Spitch [Spear] Lv73 x4
+        (Spitch summoned by Leaders)
+Wave 2–5  [MISSING]
+Placement: [MISSING]
+
+================================================================================
+STAGE 31-5   Stam 20  Diff 72  5 waves
+================================================================================
+Totals: Spear 23, Staff 5
+XP 49920 (2496/stam), Coins 1045
+Wave 1  Thorny Creeper [Spear] Lv73 x6
+Wave 2–5  [MISSING]
+Placement: [MISSING]
+
+================================================================================
+STAGE 31-6   Stam 20  Diff 73  4 waves
+================================================================================
+Totals: Spear 17
+XP 39780 (1989/stam), Coins 850
+Wave 1  Right Creeper [Spear] Lv74 x1, Left Creeper [Spear] Lv74 x1
+Wave 2–4  [MISSING]
+Placement: [MISSING]
+
+================================================================================
+STAGE 31-7   Stam 20  Diff 73  4 waves
+================================================================================
+Totals: Spear 22
+XP 48360 (2418/stam), Coins 940
+Wave 1  Thorny Creeper [Spear] x4   [level omitted in paste; 31-5 uses Lv73]
+Wave 2–4  [MISSING]
+Placement: [MISSING]
+
+================================================================================
+STAGE 31-8   Stam 20  Diff 73  5 waves
+================================================================================
+Totals: Spear 3, Staff 22
+XP 53820 (2691/stam), Coins 1232
+Wave 1  Snaptrap Seedling [Staff] Lv4 x5   [level 4 as written — verify]
+Wave 2–5  [MISSING]
+Placement: [MISSING]
+NOTE: Lv4 seems anomalous for chapter 31 difficulty; paste may have truncated level.
+
+================================================================================
+STAGE 31-9   Stam 20  Diff 73  3 waves
+================================================================================
+Totals: Spear 31
+XP 53820 (2691/stam), Coins 1158
+Wave 1  Right Creeper [Spear] Lv74 x1, Left Creeper [Spear] Lv74 x1,
+        Spitch Leader [Spear] Lv75 x4
+Wave 2–3  [MISSING]
+Placement: [MISSING]
+
+================================================================================
+STAGE 31-10  Stam 20  Diff 73  4 waves
+================================================================================
+Totals: Spear 19, Staff 1
+XP 39195 (1959/stam), Coins 929
+Wave 1  Spitch [Spear] Lv74 x5
+Wave 2–4  [MISSING]
+Placement: [MISSING]
+
+================================================================================
+ENEMY ROSTER (named in paste) — stats [NOT FOUND]
+================================================================================
+Antlion [Spear]                      Lv98
+Gnorusk [Spear]                      Lv76
+Left Creeper [Spear]                 Lv74
+Mudcrawler [Staff]                   Lv70
+Right Creeper [Spear]                Lv74
+Snaptrap Seedling [Staff]            Lv4? (verify)
+Spitch [Spear]                       Lv73, Lv74
+Spitch Leader [Spear]                Lv74, Lv75  (summons Spitch)
+Thorny Creeper [Spear]               Lv73
+
+================================================================================
+COULD NOT FIND / OPEN
+================================================================================
+ 1. Full wave lists for 31-2..31-10 (only Stage31-N-1 tags).
+ 2. All placements.
+ 3. Full enemy stats.
+ 4. Snaptrap Seedling true level (paste says LV 4).
+ 5. Official chapter title.
+ 6. Luck chest full tables.
+
+This chapter needs a fuller wiki scrape for remaining battles.
+================================================================================

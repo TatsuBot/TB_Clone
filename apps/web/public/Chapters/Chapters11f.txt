@@ -1,0 +1,187 @@
+================================================================================
+CHAPTERS11F.TXT  -  Terra Battle Chapter 11 FINAL reference
+================================================================================
+Purpose : Stage-by-stage layout of Chapter 11 for building stage data.
+Status  : FINAL for available data. Wave lists from user paste.
+          No placement grids — all placements [MISSING].
+          11-10 wave list incomplete in paste.
+Drafted : 2026-11-11
+Source  : User paste. Own words only. Filename ends in "f".
+
+--------------------------------------------------------------------------------
+HOW TO READ
+--------------------------------------------------------------------------------
+  Wave = wiki "Battle". Board = 6 cols x 8 rows.
+  Placement when grids arrive: (col, row) bottom-left origin.
+
+================================================================================
+CHAPTER 11  (shaft / Gallus approach — working label)
+================================================================================
+After Ch10. 10 stages. Stamina 10 every stage.
+Difficulty 27 for 11-1..11-5,  28 for 11-6..11-10.
+Theme: Machine / scrap enemies; Bow + Lightning heavy.
+Boss-like: Mothbot Queen Lv33 on 11-5 wave 3.
+
+ Stage  Stam  Diff  Waves  XP / Coins              Placement
+ 11-1   10    27    5      coins 520               MISSING
+ 11-2   10    27    5      coins 676               MISSING
+ 11-3   10    27    4      XP 12300, coins 338     MISSING
+ 11-4   10    27    4      XP 22000, coins 598     MISSING
+ 11-5   10    27    3      coins 472               MISSING (Mothbot Queen)
+ 11-6   10    28    5      coins 442               MISSING
+ 11-7   10    28    5      XP 23000, coins 572     MISSING
+ 11-8   10    28    3      XP 11800, coins 312     MISSING
+ 11-9   10    28    5      XP 24900, coins 676     MISSING
+ 11-10  10    28    4      XP 12000, coins 316     MISSING (list incomplete)
+
+================================================================================
+STAGE 11-1   Stam 10  Diff 27  5 waves
+================================================================================
+Totals: Bow 9, Staff 11, Lightning 11
+Coins 520
+Wave 1  Phantasmal Lens [Bow] Lv36 x2
+Wave 2  Scrap Slime [Staff] Lv34 x5
+Wave 3  Phantasmal Lens [Bow] Lv36 x1, Scrap Slime [Staff] Lv34 x3
+Wave 4  Beambot [Bow] Lv38 x2, Scrap Slime [Staff] Lv34 x3
+Wave 5  Beambot [Bow] Lv38 x2, Phantasmal Lens [Bow] Lv36 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 11-2   Stam 10  Diff 27  5 waves
+================================================================================
+Totals: Bow 21, Staff 5, Lightning 10
+Coins 676
+Wave 1  Beambot [Bow] Lv38 x2, Electropede [Bow] Lv39 x1
+Wave 2  Electropede [Bow] Lv39 x2, Scrap Slime [Staff] Lv34 x2
+Wave 3  Beambot [Bow] Lv38 x2, Scrap Slime [Staff] Lv34 x3, Phantasmal Lens [Bow] Lv36 x1
+Wave 4  Beambot [Bow] Lv38 x9
+Wave 5  Electropede [Bow] Lv39 x1, Phantasmal Lens [Bow] Lv36 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 11-3   Stam 10  Diff 27  4 waves
+================================================================================
+Totals: Bow 10, Staff 3, Lightning 6
+XP 12300 (1230/stam), Coins 338
+Wave 1  Mothbot [Staff] Lv27 x1          [count assumed x1; paste omitted]
+Wave 2  Electropede [Bow] Lv39 x2, Mothbot [Staff] Lv27 x1
+Wave 3  Electropede [Bow] Lv39 x4
+Wave 4  Beambot [Bow] Lv38 x4, Mothbot [Staff] Lv27 x1
+Placement: [MISSING]
+Drops: Lightning Ring; Wisdom Flower
+
+================================================================================
+STAGE 11-4   Stam 10  Diff 27  4 waves
+================================================================================
+Totals: Bow 5, Staff 18, Lightning 16
+XP 22000 (2200/stam), Coins 598
+Wave 1  Bludgeonbot [Bow] Lv31 x1, Scrap Slime [Staff] Lv34 x2
+Wave 2  Mothbot [Staff] Lv27 x1, Scrap Slime [Staff] Lv34 x6
+Wave 3  Bludgeonbot [Bow] Lv31 x2, Mothbot [Staff] Lv27 x1
+Wave 4  Bludgeonbot [Bow] Lv31 x2, Scrap Slime [Staff] Lv34 x8
+Placement: [MISSING]
+Drops: Lightning Ring; Serenity Shoot; Terra Staffwood
+
+================================================================================
+STAGE 11-5   Stam 10  Diff 27  3 waves
+================================================================================
+Totals: Bow 17, Staff 1
+Coins 472
+Wave 1  Beambot [Bow] Lv38 x7
+Wave 2  Beambot [Bow] Lv38 x6
+Wave 3  Bludgeonbot [Bow] Lv34 x4, Mothbot Queen [Staff] Lv33 x1
+Placement: [MISSING]
+Drops: Lore Particle 20%
+
+================================================================================
+STAGE 11-6   Stam 10  Diff 28  5 waves
+================================================================================
+Totals: Bow 13, Staff 4, Lightning 8
+Coins 442
+Wave 1  Scrap Golem [Bow] Lv30 x1
+Wave 2  Scrap Golem [Bow] Lv30 x1, Scrap Slime [Staff/Lightning] Lv34 x2,
+        Electropede [Bow/Lightning] Lv39 x1
+Wave 3  Scrap Slime [Staff/Lightning] Lv34 x2, Electropede [Bow/Lightning] Lv39 x2,
+        Bludgeonbot [Bow] Lv31 x1
+Wave 4  Scrap Golem [Bow] Lv30 x1, Electropede [Bow/Lightning] Lv39 x1,
+        Bludgeonbot [Bow] Lv31 x2
+Wave 5  Scrap Golem [Bow] Lv30 x3
+Placement: [MISSING]
+
+================================================================================
+STAGE 11-7   Stam 10  Diff 28  5 waves
+================================================================================
+Totals: Bow 8, Staff 14, Lightning 17
+XP 23000 (2300/stam), Coins 572
+Wave 1  Nanoworm [Staff/Lightning] Lv33 x2
+Wave 2  Beambot [Bow] Lv38 x4, Scrap Slime [Staff/Lightning] Lv34 x4
+Wave 3  Scrap Slime [Staff/Lightning] Lv34 x4, Mechaclops [Bow/Lightning] Lv40 x1
+Wave 4  Nanoworm [Staff/Lightning] Lv33 x2, Scrap Golem [Bow] Lv30 x1
+Wave 5  Nanoworm [Staff/Lightning] Lv33 x2, Mechaclops [Bow/Lightning] Lv40 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 11-8   Stam 10  Diff 28  3 waves
+================================================================================
+Totals: Bow 9, Staff 3, Lightning 9
+XP 11800 (1180/stam), Coins 312
+Wave 1  Mechaclops [Bow/Lightning] Lv40 x1, Electropede [Bow/Lightning] Lv39 x2
+Wave 2  Electropede [Bow/Lightning] Lv39 x1, Nanoworm [Staff/Lightning] Lv33 x1,
+        Bludgeonbot [Bow] Lv31 x2
+Wave 3  Electropede [Bow/Lightning] Lv39 x2, Nanoworm [Staff/Lightning] Lv33 x2,
+        Bludgeonbot [Bow] Lv31 x1
+Placement: [MISSING]
+
+================================================================================
+STAGE 11-9   Stam 10  Diff 28  5 waves
+================================================================================
+Totals: Bow 13, Staff 13, Lightning 12
+XP 24900 (2490/stam), Coins 676
+Wave 1  Scrap Slime [Staff] Lv34 x5
+Wave 2  Mothbot [Staff] Lv27 x1, Phantasmal Lens [Bow] Lv36 x2
+Wave 3  Beambot [Bow] Lv38 x4, Phantasmal Lens [Bow] Lv36 x1
+Wave 4  Beambot [Bow] Lv38 x4, Scrap Slime [Staff] Lv34 x3
+Wave 5  Scrap Golem [Bow] Lv30 x1, Scrap Slime [Staff] Lv34 x4, Phantasmal Lens [Bow] Lv36 x1
+Placement: [MISSING]
+Drops: Bronze Rod (Scrap Golem); Lightning Ring; Serenity Shoot; Terra Bowstring
+
+================================================================================
+STAGE 11-10  Stam 10  Diff 28  4 waves
+================================================================================
+Totals: Bow 7, Staff 5, Lightning 12
+XP 12000 (1200/stam), Coins 316
+Paste left Battle 1–4 mostly blank. Partial from Stage-11-10-1 note only:
+
+Wave 1  Electropede [Bow/Lightning] Lv39  (count unknown)
+        Nanoworm [Staff/Lightning] Lv33   (count unknown)
+Wave 2  [MISSING — not in paste]
+Wave 3  [MISSING — not in paste]
+Wave 4  [MISSING — not in paste]
+Placement: [MISSING]
+
+================================================================================
+ENEMY ROSTER (chapter levels) — stats [NOT FOUND]
+================================================================================
+Beambot [Bow]                         Lv38
+Bludgeonbot [Bow]                     Lv31, Lv34
+Electropede [Bow] or [Bow/Lightning]  Lv39
+Mechaclops [Bow/Lightning]            Lv40
+Mothbot [Staff]                       Lv27
+Mothbot Queen [Staff]                 Lv33
+Nanoworm [Staff/Lightning]            Lv33
+Phantasmal Lens [Bow]                 Lv36
+Scrap Golem [Bow]                     Lv30
+Scrap Slime [Staff] or [Staff/Lightning]  Lv34
+
+================================================================================
+COULD NOT FIND / OPEN
+================================================================================
+ 1. All placements (no grids).
+ 2. Full enemy stat blocks.
+ 3. Complete 11-10 wave list (paste only tagged Stage-11-10-1 enemies).
+ 4. Exact counts where paste omitted "xN" (treated as x1 when single name).
+ 5. Official chapter title.
+ 6. Whether Scrap Slime is always Lightning-tagged or only on some stages.
+
+Wave lists complete for 11-1..11-9. 11-10 needs a fuller paste or grids.
+================================================================================

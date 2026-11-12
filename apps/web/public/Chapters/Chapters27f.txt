@@ -1,0 +1,173 @@
+================================================================================
+CHAPTERS27F.TXT  -  Terra Battle Chapter 27 FINAL reference
+================================================================================
+Purpose : Stage-by-stage layout of Chapter 27 for building stage data.
+Status  : FINAL for available data. Wave lists mostly complete; 27-10 incomplete;
+          27-4 has paste anomaly (two "Battle 1" lines). No placements.
+Drafted : 2026-11-11
+Source  : User paste. Own words only. Filename ends in "f".
+
+--------------------------------------------------------------------------------
+HOW TO READ
+--------------------------------------------------------------------------------
+  Wave = wiki "Battle". Board = 6 cols x 8 rows.
+  Placement when grids arrive: (col, row) bottom-left origin.
+
+================================================================================
+CHAPTER 27  (36AIS / Oxsecian kin cull — working label)
+================================================================================
+After Ch26. 10 stages. Stamina 19 every stage.
+Difficulty 63 for 27-1..27-5,  64 for 27-6..27-10.
+Theme: All Staff — Dark Oxsecian support units.
+Boss: Mechabird Lv72 on 27-4 wave 3.
+
+ Stage  Stam  Diff  Waves  XP / Coins
+ 27-1   19    63    5      XP 50400, coins 920
+ 27-2   19    63    4      XP 53473, coins 930
+ 27-3   19    63    4      coins 714
+ 27-4   19    63    3      XP 37041, coins 600  (Mechabird boss)
+ 27-5   19    63    5      XP 57383, coins 1001
+ 27-6   19    64    5      XP 62100, coins 1080
+ 27-7   19    64    4      XP 69305, coins 1141
+ 27-8   19    64    5      XP 83573, coins 1389
+ 27-9   19    64    4      XP 76054, coins 1249
+ 27-10  19    64    3      XP 29761, coins 463  (list incomplete)
+
+================================================================================
+STAGE 27-1   Stam 19  Diff 63  5 waves
+================================================================================
+Totals: Staff 26, Dark 10
+XP 50400 (2652/stam), Coins 920
+Wave 1  Dark Petrifier [Staff/Dark] Lv63 x1, Oxsecian Stormer [Staff] Lv65 x2
+Wave 2  Oxsecian Stormer [Staff] Lv65 x2, Grim Leaker [Staff/Dark] Lv64 x2
+Wave 3  Dark Petrifier [Staff/Dark] Lv63 x1, Oxsecian Stormer [Staff] Lv65 x4
+Wave 4  Dark Petrifier [Staff/Dark] Lv63 x1, Grim Leaker [Staff/Dark] Lv64 x3
+Wave 5  Oxsecian Stormer [Staff] Lv65 x8, Grim Leaker [Staff/Dark] Lv64 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 27-2   Stam 19  Diff 63  4 waves
+================================================================================
+Totals: Staff 26, Dark 20
+XP 53473 (2814/stam), Coins 930
+Wave 1  Oxsecian Stormer [Staff] Lv65 x3, Grim Leaker [Staff/Dark] Lv64 x1
+Wave 2  Dark Petrifier [Staff/Dark] Lv63 x6
+Wave 3  Oxsecian Stormer [Staff] Lv65 x3, Grim Leaker [Staff/Dark] Lv64 x3
+Wave 4  Dark Petrifier [Staff/Dark] Lv63 x6, Grim Leaker [Staff/Dark] Lv64 x4
+Placement: [MISSING]
+
+================================================================================
+STAGE 27-3   Stam 19  Diff 63  4 waves
+================================================================================
+Totals: Staff 20, Dark 14
+Coins 714
+Wave 1  Nebulator [Staff/Dark] Lv64 x2
+Wave 2  Oxsecian Stormer [Staff] Lv65 x2, Grim Leaker [Staff/Dark] Lv64 x1, Nebulator [Staff/Dark] Lv64 x1
+Wave 3  Dark Petrifier [Staff/Dark] Lv63 x1, Oxsecian Stormer [Staff] Lv65 x2,
+        Grim Leaker [Staff/Dark] Lv64 x1, Nebulator [Staff/Dark] Lv64 x2
+Wave 4  Oxsecian Stormer [Staff] Lv65 x2, Grim Leaker [Staff/Dark] Lv64 x3, Nebulator [Staff/Dark] Lv64 x3
+Placement: [MISSING]
+
+================================================================================
+STAGE 27-4   Stam 19  Diff 63  3 waves
+================================================================================
+Totals: Staff 17, Dark 5
+XP 37041 (1949/stam), Coins 600
+Paste lists two "Battle 1" lines; interpreted as waves 1–3:
+
+Wave 1  Oxsecian Stormer [Staff] Lv65 x12
+Wave 2  Nebulator [Staff/Dark] Lv64 x4
+Wave 3  BOSS Mechabird [Staff/Dark] Lv72 x1
+Placement: [MISSING]
+
+================================================================================
+STAGE 27-5   Stam 19  Diff 63  5 waves
+================================================================================
+Totals: Staff 28, Dark 21
+XP 57383 (3020/stam), Coins 1001
+Wave 1  Nebulator [Staff/Dark] Lv64 x2, Crasher [Staff/Dark] Lv65 x1
+Wave 2  Oxsecian Stormer [Staff] Lv65 x4, Crasher [Staff/Dark] Lv65 x1
+Wave 3  Grim Leaker [Staff/Dark] Lv64 x2, Nebulator [Staff/Dark] Lv64 x1
+Wave 4  Oxsecian Stormer [Staff] Lv65 x3, Grim Leaker [Staff/Dark] Lv64 x1, Crasher [Staff/Dark] Lv65 x1
+Wave 5  Grim Leaker [Staff/Dark] Lv64 x2, Nebulator [Staff/Dark] Lv64 x8, Crasher [Staff/Dark] Lv65 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 27-6   Stam 19  Diff 64  5 waves
+================================================================================
+Totals: Staff 30, Dark 30
+XP 62100 (3268/stam), Coins 1080
+Wave 1  Crasher [Staff/Dark] Lv65 x6
+Wave 2  Crasher [Staff/Dark] Lv65 x8
+Wave 3  Crasher [Staff/Dark] Lv65 x6
+Wave 4  Crasher [Staff/Dark] Lv65 x6
+Wave 5  Nebulator [Staff/Dark] Lv70 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 27-7   Stam 19  Diff 64  4 waves
+================================================================================
+Totals: Staff 32, Dark 21
+XP 69305 (3647/stam), Coins 1141
+Wave 1  Dark Petrifier [Staff/Dark] Lv63 x6
+Wave 2  Oxsecian Stormer [Staff] Lv65 x3, Nebulator [Staff/Dark] Lv64 x2
+Wave 3  Dark Petrifier [Staff/Dark] Lv63 x2, Nebulator [Staff/Dark] Lv64 x3
+Wave 4  Dark Petrifier [Staff/Dark] Lv63 x6, Oxsecian Stormer [Staff] Lv65 x8, Nebulator [Staff/Dark] Lv64 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 27-8   Stam 19  Diff 64  5 waves
+================================================================================
+Totals: Staff 0 icons in paste header (likely incomplete total) — enemies are Staff/Dark
+XP 83573 (4398/stam), Coins 1389
+Wave 1  Grim Leaker [Staff/Dark] Lv64 x3
+Wave 2  Oxsecian Stormer [Staff] Lv65 x6
+Wave 3  Oxsecian Stormer [Staff] Lv65 x4, Grim Leaker [Staff/Dark] Lv64 x4, Crasher [Staff/Dark] Lv65 x2
+Wave 4  Grim Leaker [Staff/Dark] Lv64 x8
+Wave 5  Dark Petrifier [Staff/Dark] Lv63 x3, Oxsecian Stormer [Staff] Lv65 x5, Crasher [Staff/Dark] Lv65 x4
+Placement: [MISSING]
+
+================================================================================
+STAGE 27-9   Stam 19  Diff 64  4 waves
+================================================================================
+Totals: Staff 35, Dark 24
+XP 76054 (4002/stam), Coins 1249
+Wave 1  Oxsecian Stormer [Staff] Lv65 x5, Grim Leaker [Staff/Dark] Lv64 x5, Crasher [Staff/Dark] Lv65 x5
+Wave 2  Oxsecian Stormer [Staff] Lv65 x3, Crasher [Staff/Dark] Lv65 x2
+Wave 3  Oxsecian Stormer [Staff] Lv65 x3, Grim Leaker [Staff/Dark] Lv64 x2
+Wave 4  Grim Leaker [Staff/Dark] Lv69 x4, Crasher [Staff/Dark] Lv65 x6
+Placement: [MISSING]
+
+================================================================================
+STAGE 27-10  Stam 19  Diff 64  3 waves
+================================================================================
+Totals: Staff 15, Dark 6
+XP 29761 (1566/stam), Coins 463
+Paste left Battle 1–3 blank except Stage-27-10-1:
+
+Wave 1  Oxsecian Stormer [Staff] Lv65 x3, Nebulator [Staff/Dark] Lv64 x1
+Wave 2  [MISSING]
+Wave 3  [MISSING]
+Placement: [MISSING]
+
+================================================================================
+ENEMY ROSTER (chapter levels) — stats [NOT FOUND]
+================================================================================
+Crasher [Staff/Dark]                 Lv65
+Dark Petrifier [Staff/Dark]          Lv63
+Grim Leaker [Staff/Dark]             Lv64, Lv69
+Mechabird (Boss) [Staff/Dark]        Lv72
+Nebulator [Staff/Dark]               Lv64, Lv70
+Oxsecian Stormer [Staff]             Lv65
+
+================================================================================
+COULD NOT FIND / OPEN
+================================================================================
+ 1. All placements.
+ 2. Full 27-10 wave list.
+ 3. Exact mapping of 27-4's duplicated "Battle 1" labels.
+ 4. Full enemy stats.
+ 5. Official chapter title.
+
+Wave lists complete for 27-1..27-9 (with 27-4 interpretation noted).
+================================================================================

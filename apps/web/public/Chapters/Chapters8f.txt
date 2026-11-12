@@ -1,0 +1,236 @@
+================================================================================
+CHAPTERS8F.TXT  -  Terra Battle Chapter 8 FINAL reference
+================================================================================
+Purpose : Stage-by-stage layout of Chapter 8 (Labyrinth) for building stage data.
+Status  : FINAL — all wave contents and all placements complete (8-1 .. 8-10).
+Drafted : 2026-11-11
+Source  : wiki.gg Labyrinth; enemy pages; user battle-grid screenshots.
+          Own words only. Filename ends in "f" = final.
+
+--------------------------------------------------------------------------------
+HOW TO READ
+--------------------------------------------------------------------------------
+  Wave = wiki "Battle". Board = 6 cols x 8 rows.
+  Placement: (col, row) from BOTTOM-LEFT, col 1..6, row 1..8 (image top = row 8).
+  Engine top-left row 0: engine_row = 8 - row
+  Red 1–6 markers = ally spawns only.
+
+================================================================================
+CHAPTER 8 : LABYRINTH
+================================================================================
+After Ch7 Molten Menace, before Ch9 In Utero.  10 stages.
+Stamina 8 every stage.  Diff 19 for 8-1..8-5,  20 for 8-6..8-10.
+Boss: Mechadrake 2x2 on 8-10 wave 4.  Cyberwyrm x4 on 8-5 wave 3.
+First-clear: stamina refill, +1 energy, max stamina +4.
+Theme: Machine enemies (Bomborg is the Wild Beast exception). Lightning common.
+
+ Stage  Stam  Diff  Waves  Placement
+ 8-1    8     19    5      complete
+ 8-2    8     19    4      complete
+ 8-3    8     19    4      complete
+ 8-4    8     19    5      complete
+ 8-5    8     19    3      complete  (XP 10230–13102, coins 449)
+ 8-6    8     20    5      complete
+ 8-7    8     20    3      complete
+ 8-8    8     20    5      complete
+ 8-9    8     20    4      complete
+ 8-10   8     20    4      complete (boss wave)
+
+================================================================================
+STAGE 8-1   Stam 8  Diff 19  5 waves
+================================================================================
+Wave 1  Bomborg [Staff] Lv24 x2
+  Bomborg (3,4) (4,5)
+Wave 2  Electrotick [Sword/Lightning] Lv16 x2, Arachnobot [Sword] Lv14 x2
+  Arachnobot (2,6) (3,6); Electrotick (4,4) (5,5)
+Wave 3  Electrotick [Sword/Lightning] Lv16 x6
+  Electrotick (2,3) (2,4) (2,5) (3,5) (4,5) (5,6)
+Wave 4  Arachnobot [Sword] Lv14 x4, Bomborg [Staff] Lv24 x2
+  Bomborg (1,7) (1,2); Arachnobot (4,6) (4,5) (4,4) (4,3)
+Wave 5  Electrotick [Sword/Lightning] Lv19 x2, Bomborg [Staff] Lv24 x2
+  Electrotick (3,5) (4,4); Bomborg (4,5) (3,4)
+Drops: Small Shield (D); Arachnobot 2%; Bomborg 2%
+
+================================================================================
+STAGE 8-2   Stam 8  Diff 19  4 waves
+================================================================================
+Wave 1  Electrotick [Sword/Lightning] Lv16 x6
+  Electrotick (2,6) (2,5) (2,4) (5,5) (5,4) (5,3)
+Wave 2  Electrotick [Sword/Lightning] Lv19 x3
+  Electrotick (3,6) (3,3) (2,2)
+Wave 3  Mechanic [Staff/Healing] Lv21 x1, Bomborg [Staff] Lv24 x1,
+        Electrotick [Sword/Lightning] Lv16 x4
+  Bomborg (2,5); Electrotick (2,4) (2,3) (3,4) (4,4); Mechanic (3,3)
+Wave 4  Bomborg [Staff] Lv24 x2, Electrotick [Sword/Lightning] Lv19 x2,
+        Mechanic [Staff/Healing] Lv21 x2
+  Bomborg (2,8) (5,8); Electrotick (3,5) (3,4); Mechanic (4,5) (3,3)
+Note: first Mechanic (battle-only recruit)
+
+================================================================================
+STAGE 8-3   Stam 8  Diff 19  4 waves
+================================================================================
+Wave 1  Teksura [Staff/Lightning] Lv21 x1
+  Teksura (3,2)
+Wave 2  Teksura [Staff/Lightning] Lv21 x1, Arachnobot [Sword] Lv14 x4
+  Arachnobot (4,6) (4,5) (4,4) (4,3); Teksura (3,2)
+Wave 3  Arachnobot [Sword] Lv14 x3, Electrotick [Sword/Lightning] Lv16 x2,
+        Mech Orbling [Sword] Lv23 x2
+  Electrotick (3,7) (2,4); Arachnobot (2,6) (2,5) (3,5);
+  Mech Orbling (4,4) (4,3)
+Wave 4  Mech Orbling [Sword] Lv23 x2, Electrotick [Sword/Lightning] Lv16 x2,
+        Teksura [Staff/Lightning] Lv21 x2
+  Teksura (1,8) (6,2); Electrotick (2,5) (2,4); Mech Orbling (3,5) (3,4)
+
+================================================================================
+STAGE 8-4   Stam 8  Diff 19  5 waves
+================================================================================
+Wave 1  Teksura [Staff/Lightning] Lv21 x1, Cybermummy [Sword] Lv21 x2
+  Cybermummy (1,6); Teksura (5,8); Cybermummy (5,4)
+Wave 2  Electrotick [Sword/Lightning] Lv19 x2, Arachnobot [Sword] Lv14 x4
+  Electrotick (4,5) (4,4)
+  Arachnobot  (5,6) (5,5) (5,4) (5,3)
+Wave 3  Arachnobot [Sword] Lv17 x2, Teksura [Staff/Lightning] Lv21 x2
+  Arachnobot (1,5) (1,3); Teksura (5,5) (5,3)
+Wave 4  Cybermummy [Sword] Lv21 x4
+  Cybermummy (1,8) (6,8) (1,2) (6,2)
+Wave 5  Mechanic [Staff/Healing] Lv21 x1, Arachnobot [Sword] Lv17 x7
+  Arachnobot (1,7) (1,6) (1,5); Mechanic (2,7);
+  Arachnobot (4,5) (4,4) (3,3) (4,3)
+
+================================================================================
+STAGE 8-5   Stam 8  Diff 19  3 waves
+================================================================================
+Rewards: XP 10230–13102, XP/stam 1458, Coins 449
+Wave 1  Mech Orbling [Sword] Lv15 x9
+  Mech Orbling (1,8) (2,8) (3,8) (4,8)
+  Mech Orbling (1,7) (1,6) (1,5) (1,4) (1,3)
+Wave 2  Mech Orbling [Sword] Lv15 x10
+  Mech Orbling (2,7) (3,7) (4,7)
+  Mech Orbling (1,6) (1,5) (1,4) (1,3)
+  Mech Orbling (2,2) (3,2) (4,2)
+Wave 3  Cyberwyrm [Sword/Lightning] Lv23 x4
+  Cyberwyrm (1,8) (6,8) (1,1) (6,1)
+Drops: Terra Swordsteel, Claw of Fate, Benevolent Fang, Moon Tears;
+       Mech Orbling 2% recruit. Sleeping Gas on Mech Orbling.
+
+================================================================================
+STAGE 8-6   Stam 8  Diff 20  5 waves
+================================================================================
+Wave 1  Cyberscorp [Spear/Lightning] Lv20 x2
+  Cyberscorp (5,7) (5,2)
+Wave 2  Cyberscorp [Spear/Lightning] Lv20 x3
+  Cyberscorp (2,4) (3,4) (4,4)
+Wave 3  Trilobot [Spear] Lv21 x5, Mechanic [Staff/Healing] Lv21 x1
+  Trilobot (2,6) (3,6) (4,6); Trilobot (2,3) (3,3); Mechanic (4,3)
+Wave 4  Trilobot [Spear] Lv21 x2, Teksura [Staff/Lightning] Lv21 x1,
+        Mechanic [Staff/Healing] Lv21 x1
+  Trilobot (2,3); Mechanic (3,3); Teksura (2,2); Trilobot (3,2)
+Wave 5  Teksura [Staff/Lightning] Lv21 x2, Trilobot [Spear] Lv21 x8
+  Teksura (3,8) (4,8)
+  Trilobot (1,7) (2,7) (3,7) (4,7)
+  Trilobot (1,3) (2,3) (3,3) (4,3)
+
+================================================================================
+STAGE 8-7   Stam 8  Diff 20  3 waves
+================================================================================
+Wave 1  Electrowatt [Spear/Lightning] Lv22 x3
+  Electrowatt (2,7) (3,7) (4,7)
+Wave 2  Electrowatt [Spear/Lightning] Lv22 x4, Cyberscorp [Spear/Lightning] Lv20 x2
+  Cyberscorp (2,6); Electrowatt (4,6)
+  Electrowatt (2,5); Cyberscorp (4,4)
+  Electrowatt (3,4); Electrowatt (5,5)
+Wave 3  Mechanic [Staff/Healing] Lv21 x1, Cyberscorp [Spear/Lightning] Lv20 x5
+  Cyberscorp (2,6) (2,4) (3,5) (4,5) (4,4); Mechanic (5,6)
+
+================================================================================
+STAGE 8-8   Stam 8  Diff 20  5 waves
+================================================================================
+Wave 1  Trilobot [Spear] Lv21 x4
+  Trilobot (2,6) (3,6) (4,6) (5,6)
+Wave 2  Trilobot [Spear] Lv21 x4, Electrowatt [Spear/Lightning] Lv22 x2
+  Trilobot (3,6) (4,6); Trilobot (2,4) (4,4)
+  Electrowatt (1,2) (6,2)
+Wave 3  Electrowatt [Spear/Lightning] Lv22 x2, Cyberscorp [Spear/Lightning] Lv20 x2
+  Cyberscorp (2,7); Electrowatt (3,7)
+  Electrowatt (4,4); Cyberscorp (5,4)
+Wave 4  Trilobot [Spear] Lv21 x8
+  Trilobot (2,3) (3,3) (4,3) (5,3)
+  Trilobot (2,2) (3,2) (4,2) (5,2)
+Wave 5  Cyberscorp [Spear/Lightning] Lv20 x6
+  Cyberscorp (1,7) (2,6) (2,5) (3,4) (3,3) (4,2)
+Drops: Quickfire Bow (D) possible
+
+================================================================================
+STAGE 8-9   Stam 8  Diff 20  4 waves
+================================================================================
+Wave 1  Mechanic [Staff/Healing] Lv21 x1, Cyberscorp [Spear/Lightning] Lv20 x2
+  Cyberscorp (3,7) (4,7); Mechanic (6,2)
+Wave 2  Mechanic [Staff/Healing] Lv21 x1, Electrowatt [Spear/Lightning] Lv22 x3
+  Mechanic (2,7); Electrowatt (3,7) (4,7) (5,7)
+Wave 3  Mechanic [Staff/Healing] Lv21 x1, Cyberscorp [Spear/Lightning] Lv20 x3,
+        Trilobot [Spear] Lv21 x2
+  Cyberscorp (4,7) (5,7); Mechanic (4,5)
+  Trilobot (2,4) (3,4); Cyberscorp (3,5)
+Wave 4  Bomborg [Staff] Lv24 x8
+  Bomborg (1,8) (2,8) (3,8) (4,8)
+  Bomborg (1,1) (2,1) (3,1) (4,1)
+
+================================================================================
+STAGE 8-10  Stam 8  Diff 20  4 waves
+================================================================================
+Wave 1  Teksura [Staff/Lightning] Lv21 x1, Electrowatt [Spear/Lightning] Lv22 x2
+  Electrowatt (4,7) (5,7); Teksura (3,2)
+Wave 2  Trilobot [Spear] Lv21 x5
+  Trilobot (2,7) (3,7); Trilobot (2,6)
+  Trilobot (4,5) (4,4)
+Wave 3  Trilobot [Spear] Lv21 x2, Teksura [Staff/Lightning] Lv21 x2
+  Teksura (2,5); Trilobot (3,5)
+  Teksura (5,5); Trilobot (5,4)
+Wave 4  BOSS Mechadrake [Spear/Lightning] Lv30 x1 (2x2: cols 3–4, rows 4–5),
+        Electrowatt [Spear/Lightning] Lv25 x4
+  Electrowatt (2,7) (5,7) (2,3) (5,3)
+  Mechadrake anchor (3,4)
+Note: Mechadrake uses "Recharging" then Discharge Area / Discharge All next turn;
+  otherwise Thrust Away (vertical).
+
+================================================================================
+ENEMY ROSTER (chapter levels)
+================================================================================
+Arachnobot [Sword] Machine
+  Lv14 813/71/48/42/59/5 | Lv17 915/73/52/47/61/5
+Bomborg [Staff] Wild Beast
+  Lv24 678/74/48/44/58/5   Build Bomb / Explosion
+Cybermummy [Sword] Machine   Lv21 (Lv14 Ch6 ref: 718/56/54/42/77/4)
+Cyberscorp [Spear/Lightning] Machine
+  Lv20 905/75/90/71/92/5
+Cyberwyrm [Sword/Lightning] Machine  Lv23
+Electrotick [Sword/Lightning] Machine
+  Lv16 659/68/48/67/62/5 | Lv19 975/68/78/69/78/5
+Electrowatt [Spear/Lightning] Machine
+  Lv22 822/68/59/69/62/3 | Lv25 1624/69/86/69/82/3
+Mech Orbling [Sword] Machine
+  Lv15 611/68/38/67/60/3 | Lv23 808/70/77/76/99/3
+Mechadrake BOSS 2x2 [Spear/Lightning] Machine
+  Lv30 11620/81/211/118/238/2
+Mechanic [Staff/Healing] Machine
+  Lv21 605/68/41/75/56/6
+Teksura [Staff/Lightning] Machine
+  Lv21 774/71/45/72/62/3
+Trilobot [Spear] Machine
+  Lv21 829/77/53/47/60/5
+
+================================================================================
+RECRUITS / DROPS
+================================================================================
+Battle-only: Bomborg (C), Mechanic (C)
+Also: Arachnobot (D 2%), Mech Orbling (C 2% from 8-5)
+Companions: Small Shield (D) on 8-1; Quickfire Bow (D) on 8-8
+
+================================================================================
+FINAL — NO OPEN PLACEMENT GAPS
+================================================================================
+Optional polish only (not required for stage authoring):
+  - Per-stage XP/coins except 8-5
+  - Full Cybermummy Lv21 / Cyberwyrm Lv23 stat blocks
+  - In-engine wall/collision validation nudges (±1 cell)
+================================================================================

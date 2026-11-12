@@ -1,0 +1,195 @@
+================================================================================
+CHAPTERS12F.TXT  -  Terra Battle Chapter 12 FINAL reference
+================================================================================
+Purpose : Stage-by-stage layout of Chapter 12 for building stage data.
+Status  : FINAL for available data. Wave lists from user paste.
+          No placement grids — all placements [MISSING].
+          12-2 incomplete; some early waves omit levels; 12-10 has ??? enemy.
+Drafted : 2026-11-11
+Source  : User paste. Own words only. Filename ends in "f".
+
+--------------------------------------------------------------------------------
+HOW TO READ
+--------------------------------------------------------------------------------
+  Wave = wiki "Battle". Board = 6 cols x 8 rows.
+  Placement when grids arrive: (col, row) bottom-left origin.
+
+================================================================================
+CHAPTER 12  (prison / darkness — working label)
+================================================================================
+After Ch11. 10 stages. Stamina 10 every stage.
+Difficulty 29 for 12-1..12-5,  30 for 12-6..12-10.
+Theme: Assassins, Slashbots, Chainers; sword-heavy. Floor traps on 12-10.
+Recruit note: Assassin appears as a drop on 12-2.
+
+ Stage  Stam  Diff  Waves  XP / Coins                    Placement
+ 12-1   10    29    5      XP 24400, coins 594           MISSING
+ 12-2   10    29    5      XP 17700, coins 435           MISSING (list incomplete)
+ 12-3   10    29    4      XP 17780, coins 351           MISSING
+ 12-4   10    29    4      XP 18900, coins 532           MISSING
+ 12-5   10    29    5      XP 30000–34000, coins 783     MISSING
+ 12-6   10    30    4      XP 16900, coins 405           MISSING
+ 12-7   10    30    4      XP 22000, coins 686           MISSING
+ 12-8   10    30    4      XP 16000, coins 378           MISSING
+ 12-9   10    30    5      XP 29800, coins 675           MISSING
+ 12-10  10    30    4      XP 13000, coins 324           MISSING (floor traps; ???)
+
+================================================================================
+STAGE 12-1   Stam 10  Diff 29  5 waves
+================================================================================
+Totals: Sword 17, Staff 5
+XP 24400 (2440/stam), Coins 594
+Wave 1  Chainer [Staff] x2                    [level not in paste]
+Wave 2  Slashbot Redux [Sword] x3, Chainer [Staff] x1
+Wave 3  Slashbot Redux [Sword] x3, Assassin [Sword] x1
+Wave 4  Slashbot Redux [Sword] x7
+Wave 5  Slashbot Redux [Sword] x2, Chainer [Staff] x2, Assassin [Sword] x1
+Placement: [MISSING]
+NOTE: Levels omitted in paste for this stage; later stages use Chainer Lv23,
+      Slashbot Redux Lv34, Assassin Lv30 as reference defaults if needed.
+
+================================================================================
+STAGE 12-2   Stam 10  Diff 29  5 waves
+================================================================================
+Totals: Sword 11, Staff 5, Fire 1
+XP 17700 (1770/stam), Coins 435
+Paste left Battle 1–5 blank except Stage-12-2-1 tag:
+
+Wave 1  Assassin [Sword] Lv30 x1, Hell Bat [Sword] Lv37 x2   [partial]
+Wave 2  [MISSING]
+Wave 3  [MISSING]
+Wave 4  [MISSING]
+Wave 5  [MISSING]
+Placement: [MISSING]
+Drops: Assassin (recruit); Magma Mummy; Bronze Sword (Hell Bat);
+       Flame of Indra (Stonefiend); Cipher Cell (Hell Bat); Sentient Flame (Assassin)
+NOTE: Drop list mentions Stonefiend and Magma Mummy not in the partial wave line.
+
+================================================================================
+STAGE 12-3   Stam 10  Diff 29  4 waves
+================================================================================
+Totals: Sword 13, Fire 3
+XP 17780 (1778/stam), Coins 351
+Wave 1  Pyrosaurus [Sword/Fire] x1             [level not in paste; 12-4 uses Lv34]
+Wave 2  Pyrosaurus [Sword/Fire] x1, Slashbot [Sword] x4
+Wave 3  Assassin [Sword] x2
+Wave 4  Pyrosaurus [Sword/Fire] x1, Assassin [Sword] x1, Hell Bat [Sword] x3
+Placement: [MISSING]
+
+================================================================================
+STAGE 12-4   Stam 10  Diff 29  4 waves
+================================================================================
+Totals: Sword 9, Staff 8, Fire 2
+XP 18900 (1890/stam), Coins 532
+Wave 1  Magma Mummy [Staff/Regen] Lv19 x3, Chainer [Staff] Lv23 x2
+Wave 2  Assassin [Sword] Lv30 x2, Assassin Poseur [Sword] Lv32 x1
+Wave 3  Magma Mummy [Staff/Regen] Lv19 x3, Assassin [Sword] Lv30 x2,
+        Hell Bat [Sword] Lv37 x2
+Wave 4  Pyrosaurus [Sword/Fire] Lv34 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 12-5   Stam 10  Diff 29  5 waves
+================================================================================
+Totals: Sword 9, Staff 20
+XP 30000–34000 (3200/stam), Coins 783
+Wave 1  Vial Chucker [Staff] Lv22 x1
+Wave 2  Vial Chucker [Staff] Lv22 x9
+Wave 3  Vial Chucker [Staff] Lv22 x1, Magma Mummy [Staff/Regen] Lv19 x2
+Wave 4  Magma Mummy [Staff/Regen] Lv19 x1, Slashbot Redux [Sword] Lv34 x5
+Wave 5  Magma Mummy [Staff/Regen] Lv19 x4, Slashbot Redux [Sword] Lv34 x4,
+        Vial Chucker [Staff] Lv22 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 12-6   Stam 10  Diff 30  4 waves
+================================================================================
+Totals: Sword 12, Staff 3, Fire 4
+XP 16900 (1690/stam), Coins 405
+Wave 1  Cyberclops [Sword/Fire] Lv35 x2
+Wave 2  Cyberclops [Sword/Fire] Lv35 x1, Vial Chucker [Staff] Lv22 x1,
+        Hell Bat [Sword] Lv37 x1
+Wave 3  Hell Bat [Sword] Lv37 x6
+Wave 4  Hell Bat [Sword] Lv37 x1, Vial Chucker [Staff] Lv22 x2,
+        Cyberclops [Sword/Fire] Lv35 x1
+Placement: [MISSING]
+
+================================================================================
+STAGE 12-7   Stam 10  Diff 30  4 waves
+================================================================================
+Totals: Sword 14, Staff 6, Fire 2
+XP 22000 (2200/stam), Coins 686
+Wave 1  Slashbot Redux [Sword] Lv34 x6
+Wave 2  Slashbot Redux [Sword] Lv34 x4, Chainer [Staff] Lv23 x2
+Wave 3  Chainer [Staff] Lv23 x2, Assassin Poseur [Sword] Lv32 x2
+Wave 4  Chainer [Staff] Lv23 x2, Pyrosaurus [Sword/Fire] Lv34 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 12-8   Stam 10  Diff 30  4 waves
+================================================================================
+Totals: Sword 10, Staff 4, Fire 4
+XP 16000 (1600/stam), Coins 378
+Wave 1  Assassin [Sword] Lv30 x1, Magic Muzzler [Staff] Lv27 x1
+Wave 2  Assassin [Sword] Lv30 x1, Cyberclops [Sword/Fire] Lv35 x2
+Wave 3  Magic Muzzler [Staff] Lv27 x1, Cyberclops [Sword/Fire] Lv35 x2
+Wave 4  Assassin [Sword] Lv30 x4, Vial Chucker [Staff] Lv22 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 12-9   Stam 10  Diff 30  5 waves
+================================================================================
+Totals: Sword 19, Staff 6
+XP 29800 (2980/stam), Coins 675
+Wave 1  Chainer [Staff] Lv23 x1, Slashbot Redux [Sword] Lv34 x3
+Wave 2  Assassin [Sword] Lv30 x1, Vial Chucker [Staff] Lv22 x2
+Wave 3  Magic Muzzler [Staff] Lv27 x1, Slashbot Redux [Sword] Lv34 x3
+Wave 4  Assassin [Sword] Lv30 x6
+Wave 5  Slashbot Redux [Sword] Lv34 x6, Vial Chucker [Staff] Lv22 x1,
+        Chainer [Staff] Lv23 x1
+Placement: [MISSING]
+
+================================================================================
+STAGE 12-10  Stam 10  Diff 30  4 waves
+================================================================================
+Totals: Sword 14, Fire 4
+XP 13000 (1300/stam), Coins 324
+Note: Beware floor traps
+Wave 1  ??? [Sword] Lv23 x1, Assassin [Sword] Lv30 x1
+Wave 2  Cyberclops [Sword/Fire] Lv35 x2, Hell Bat [Sword] Lv37 x1
+Wave 3  Hell Bat [Sword] Lv37 x3, Assassin [Sword] Lv30 x1
+Wave 4  ??? [Sword] Lv23 x1, Assassin [Sword] Lv30 x2, Cyberclops [Sword/Fire] Lv35 x2
+Placement: [MISSING]
+NOTE: "???" is how the paste listed the enemy — identity not provided.
+      Likely a named unit with obscured wiki text; do not invent a name.
+
+================================================================================
+ENEMY ROSTER (chapter levels) — stats [NOT FOUND]
+================================================================================
+Assassin [Sword]              Lv30
+Assassin Poseur [Sword]       Lv32
+Chainer [Staff]               Lv23 (also unleveled on 12-1)
+Cyberclops [Sword/Fire]       Lv35
+Hell Bat [Sword]              Lv37
+Magic Muzzler [Staff]         Lv27
+Magma Mummy [Staff/Regen]     Lv19
+Pyrosaurus [Sword/Fire]       Lv34
+Slashbot [Sword]              (level not given on 12-3)
+Slashbot Redux [Sword]        Lv34
+Vial Chucker [Staff]          Lv22
+??? [Sword]                   Lv23   [identity unknown]
+
+================================================================================
+COULD NOT FIND / OPEN
+================================================================================
+ 1. All placements (no grids).
+ 2. Full enemy stat blocks.
+ 3. Complete 12-2 wave list (only wave 1 partial).
+ 4. Levels for 12-1 enemies and some 12-3 names.
+ 5. Identity of "???" on 12-10.
+ 6. Floor-trap coordinates for 12-10.
+ 7. Official chapter title.
+ 8. Stonefiend presence (listed in 12-2 drops, not in partial waves).
+
+Wave lists complete for 12-1, 12-3..12-10 (with ??? preserved). 12-2 needs more data.
+================================================================================

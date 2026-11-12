@@ -1,0 +1,180 @@
+================================================================================
+CHAPTERS29F.TXT  -  Terra Battle Chapter 29 FINAL reference
+================================================================================
+Purpose : Stage-by-stage layout of Chapter 29 for building stage data.
+Status  : FINAL for available data. All wave lists present. No placements.
+          Zero Series bosses + MarkII clones throughout.
+Drafted : 2026-11-11
+Source  : User paste. Own words only. Filename ends in "f".
+
+--------------------------------------------------------------------------------
+HOW TO READ
+--------------------------------------------------------------------------------
+  Wave = wiki "Battle". Board = 6 cols x 8 rows.
+  Placement when grids arrive: (col, row) bottom-left origin.
+
+================================================================================
+CHAPTER 29  (Life Breeder defense / Zero Series finale — working label)
+================================================================================
+After Ch28. 10 stages. Stamina 20 every stage.
+Difficulty 67 for 29-1..29-5,  68 for 29-6..29-10.
+Theme: Zero Series (1AOO / 2BOO / 3COO) and MarkII clones + Oxsecian SP support.
+Floor traps on 29-6 and 29-7.
+Clone notes:
+  2BOO first turn: "The Zero Series look on from a distance." → spawn MarkII x2
+  3COO generates clones → MarkII x3
+  1AOO generates clones → MarkII x2
+
+ Stage  Stam  Diff  Waves  XP / Coins
+ 29-1   20    67    4      XP 50178, coins 924
+ 29-2   20    67    5      XP 58164, coins 1085
+ 29-3   20    67    4      XP 63918, coins 1157
+ 29-4   20    67    5      —
+ 29-5   20    67    5      XP 104497, coins 1589
+ 29-6   20    68    4      XP 45081, coins 796  (traps)
+ 29-7   20    68    4      XP 66981, coins 1159  (traps)
+ 29-8   20    68    3      XP 23225, coins 421
+ 29-9   20    68    3      XP 44570, coins 774
+ 29-10  20    68    3      XP 38733, coins 685
+
+================================================================================
+STAGE 29-1   Stam 20  Diff 67  4 waves
+================================================================================
+Totals: Spear 5, Staff 17
+XP 50178 (2508/stam), Coins 924
+Wave 1  BOSS 2BOO [Spear] Lv80 x1
+Wave 2  2BOO MarkII [Spear] Lv67 x2, Oxsecian Stormer SP [Staff] Lv68 x3
+Wave 3  Oxsecian Stormer SP [Staff] Lv68 x8
+Wave 4  2BOO MarkII [Spear] Lv67 x2, Oxsecian Stormer SP [Staff] Lv68 x4, Oxsecian Gas Bomb [Staff] Lv66 x2
+Placement: [MISSING]
+Note: 2BOO turn 1 spawns MarkII x2 from distance.
+
+================================================================================
+STAGE 29-2   Stam 20  Diff 67  5 waves
+================================================================================
+Totals: Spear 11, Staff 16, Lightning 4
+XP 58164 (2908/stam), Coins 1085
+Wave 1  2BOO MarkII [Spear] Lv67 x2, Oxsecian Stormer SP [Staff] Lv68 x4
+Wave 2  2BOO MarkII [Spear] Lv67 x1, Oxsecian Stormer SP [Staff] Lv68 x2, Hover Zapper [Staff/Lightning] Lv69 x2
+Wave 3  2BOO MarkII [Spear] Lv67 x3
+Wave 4  2BOO MarkII [Spear] Lv67 x1, Oxsecian Gas Bomb [Staff] Lv66 x2, Hover Zapper [Staff/Lightning] Lv69 x2
+Wave 5  2BOO MarkII [Spear] Lv67 x4, Oxsecian Stormer SP [Staff] Lv68 x4
+Placement: [MISSING]
+
+================================================================================
+STAGE 29-3   Stam 20  Diff 67  4 waves
+================================================================================
+Totals: Spear 9, Staff 20, Lightning 12
+XP 63918 (3195/stam), Coins 1157
+Wave 1  2BOO MarkII [Spear] Lv67 x5
+Wave 2  Oxsecian Stormer SP [Staff] Lv68 x4, Hover Zapper [Staff/Lightning] Lv69 x2
+Wave 3  2BOO MarkII [Spear] Lv67 x2, Oxsecian Stormer SP [Staff] Lv68 x4
+Wave 4  2BOO MarkII [Spear] Lv67 x2, Hover Zapper [Staff/Lightning] Lv69 x10
+Placement: [MISSING]
+
+================================================================================
+STAGE 29-4   Stam 20  Diff 67  5 waves
+================================================================================
+Totals: Bow 9, Staff 20
+Wave 1  Oxsecian Stormer SP [Staff] Lv68 x4, Oxsecian Worm [Staff] Lv66 x1
+Wave 2  BOSS 3COO [Bow] Lv80 x1
+Wave 3  Oxsecian Stormer SP [Staff] Lv68 x7, 3COO MarkII [Bow] Lv67 x2
+Wave 4  Oxsecian Worm [Staff] Lv66 x1, 3COO MarkII [Bow] Lv67 x2
+Wave 5  Oxsecian Stormer SP [Staff] Lv68 x6, Oxsecian Worm [Staff] Lv66 x1, 3COO MarkII [Bow] Lv67 x4
+Placement: [MISSING]
+Note: 3COO generates clones → MarkII x3.
+
+================================================================================
+STAGE 29-5   Stam 20  Diff 67  5 waves
+================================================================================
+Totals: Bow 30, Staff 9
+XP 104497 (5224/stam), Coins 1589
+Wave 1  3COO MarkII [Bow] Lv67 x4
+Wave 2  Oxsecian Stormer SP [Staff] Lv68 x2, 3COO MarkII [Bow] Lv67 x2
+Wave 3  Oxsecian Stormer SP [Staff] Lv68 x6, Oxsecian Worm [Staff] Lv66 x1
+Wave 4  3COO MarkII [Bow] Lv67 x10
+Wave 5  3COO MarkII [Bow] Lv67 x12
+Placement: [MISSING]
+
+================================================================================
+STAGE 29-6   Stam 20  Diff 68  4 waves
+================================================================================
+Totals: Sword 7, Staff 12, Lightning 8
+XP 45081 (2254/stam), Coins 796
+Note: Beware floor traps
+Wave 1  BOSS 1AOO [Sword] Lv80 x1
+Wave 2  Oxsecian Gas Bomb [Staff] Lv66 x2, 1AOO MarkII [Sword] Lv67 x2
+Wave 3  Hover Zapper [Staff/Lightning] Lv69 x4, 1AOO MarkII [Sword] Lv67 x2
+Wave 4  Oxsecian Gas Bomb [Staff] Lv66 x2, Hover Zapper [Staff/Lightning] Lv69 x4, 1AOO MarkII [Sword] Lv67 x2
+Placement: [MISSING]
+Note: 1AOO generates clones → MarkII x2.
+
+================================================================================
+STAGE 29-7   Stam 20  Diff 68  4 waves
+================================================================================
+Totals: Sword 10, Staff 20, Lightning 9
+XP 66981 (3349/stam), Coins 1159
+Note: Beware floor traps
+Wave 1  Oxsecian Stormer SP [Staff] Lv68 x8, 1AOO MarkII [Sword] Lv67 x2
+Wave 2  Hover Zapper [Staff/Lightning] Lv69 x4, Oxsecian Worm [Staff] Lv66 x1
+Wave 3  Oxsecian Worm [Staff] Lv66 x1, 1AOO MarkII [Sword] Lv67 x4
+Wave 4  Hover Zapper [Staff/Lightning] Lv69 x5, Oxsecian Worm [Staff] Lv66 x1, 1AOO MarkII [Sword] Lv67 x4
+Placement: [MISSING]
+
+================================================================================
+STAGE 29-8   Stam 20  Diff 68  3 waves
+================================================================================
+Totals: Sword 16
+XP 23225 (1161/stam), Coins 421
+Wave 1  1AOO MarkII [Sword] Lv67 x3
+Wave 2  1AOO MarkII [Sword] Lv67 x6
+Wave 3  Laser Unit V [Sword] Lv69 x4, Laser Unit H [Sword] Lv69 x2, BOSS 1AOO [Sword] Lv80 x1
+Placement: [MISSING]
+
+================================================================================
+STAGE 29-9   Stam 20  Diff 68  3 waves
+================================================================================
+Totals: Spear 13, Staff 6
+XP 44570 (2228/stam), Coins 774
+Wave 1  2BOO MarkII [Spear] Lv67 x2, Oxsecian Stormer SP [Staff] Lv68 x2
+Wave 2  2BOO MarkII [Spear] Lv67 x2, Oxsecian Stormer SP [Staff] Lv68 x4
+Wave 3  2BOO MarkII [Spear] Lv67 x8, BOSS 2BOO [Spear] Lv80 x1
+Placement: [MISSING]
+
+================================================================================
+STAGE 29-10  Stam 20  Diff 68  3 waves
+================================================================================
+Totals: Bow 10, Staff 7
+XP 38733 (1936/stam), Coins 685
+Wave 1  Oxsecian Gas Bomb [Staff] Lv66 x2, 3COO MarkII [Bow] Lv67 x2
+Wave 2  Oxsecian Gas Bomb [Staff] Lv66 x3, 3COO MarkII [Bow] Lv67 x3
+Wave 3  Oxsecian Gas Bomb [Staff] Lv66 x2, 3COO MarkII [Bow] Lv67 x4, BOSS 3COO [Bow] Lv80 x1
+Placement: [MISSING]
+Drops: Orichalcum, Cipher Cell (3COO)
+
+================================================================================
+ENEMY ROSTER (chapter levels) — stats [NOT FOUND]
+================================================================================
+1AOO (Boss) [Sword]                  Lv80
+1AOO MarkII [Sword]                  Lv67
+2BOO (Boss) [Spear]                  Lv80
+2BOO MarkII [Spear]                  Lv67
+3COO (Boss) [Bow]                    Lv80
+3COO MarkII [Bow]                    Lv67
+Hover Zapper [Staff/Lightning]       Lv69
+Laser Unit H [Sword]                 Lv69
+Laser Unit V [Sword]                 Lv69
+Oxsecian Gas Bomb [Staff]            Lv66
+Oxsecian Stormer SP [Staff]          Lv68
+Oxsecian Worm [Staff]                Lv66
+
+================================================================================
+COULD NOT FIND / OPEN
+================================================================================
+ 1. All placements.
+ 2. Floor-trap coordinates (29-6, 29-7).
+ 3. Full enemy stats / clone timing beyond paste notes.
+ 4. Official chapter title.
+
+Wave lists complete for all 10 stages.
+================================================================================

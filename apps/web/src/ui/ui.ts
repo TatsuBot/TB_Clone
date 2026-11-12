@@ -193,7 +193,7 @@ export class UI {
       el.addEventListener('click', () => el.classList.toggle('on'));
     });
 
-    document.querySelectorAll<HTMLSelectElement>('#character-recode-filter, #character-rarity-filter').forEach((select) => {
+    document.querySelectorAll<HTMLSelectElement>('#character-recode-filter, #character-rarity-filter, #character-sort-order').forEach((select) => {
       select.addEventListener('change', () => this.renderParty());
     });
 
@@ -444,7 +444,11 @@ export class UI {
       addEnergy(10);
       this.refreshStatusBar();
     });
-    document.getElementById('btn-add-character-xp')?.addEventListener('click', () => {
+    document.getElementById('btn-add-energy-100')?.addEventListener('click', () => {
+      addEnergy(100);
+      this.refreshStatusBar();
+    });
+    const grantPartyXp = (amount: number) => {
       const party = this.getActiveParty();
       const result = document.getElementById('debug-xp-result');
       if (party.length === 0) {
@@ -457,7 +461,7 @@ export class UI {
         if (!def || !job) return `${character.defId}: active job data not found.`;
         const jobIndex = job.jobIndex - 1;
         const previousLevel = character.jobLevels[jobIndex];
-        const award = addCharacterJobXp(character, job, 10_000);
+        const award = addCharacterJobXp(character, job, amount);
         const currentLevel = character.jobLevels[jobIndex];
         const progressText = currentLevel >= 90
           ? 'Max level'
@@ -466,7 +470,9 @@ export class UI {
       });
       saveToLocalStorage();
       if (result) result.textContent = reports.join('\n');
-    });
+    };
+    document.getElementById('btn-add-character-xp')?.addEventListener('click', () => grantPartyXp(10_000));
+    document.getElementById('btn-add-character-xp-100k')?.addEventListener('click', () => grantPartyXp(100_000));
   }
 
   private renderScreen(id: ScreenId): void {
@@ -580,7 +586,7 @@ export class UI {
         const lv = inst.jobLevels[inst.activeJob - 1];
         return `
       <div class="party-slot filled">
-        <div class="portrait">${weaponEmoji(job.weapon)}</div>
+        <div class="portrait">${weaponIcon(job.weapon)}</div>
         <div>${def.name}</div>
         <div class="lvl">Lv.${lv}</div>
       </div>`;
@@ -602,7 +608,7 @@ export class UI {
       const selected = this.draftPartyUids.includes(inst.uid);
       const level = inst.jobLevels[inst.activeJob - 1];
       return `<button class="party-select-card ${selected ? 'selected' : ''}" type="button" data-party-uid="${inst.uid}" aria-pressed="${selected}">
-        <span class="portrait">${weaponEmoji(job.weapon)}</span>
+        <span class="portrait">${weaponIcon(job.weapon)}</span>
         <span class="party-select-name">${def.name}</span>
         <span class="party-select-level">${def.rarity} · Lv.${level}</span>
         <span class="party-select-state">${selected ? 'In party' : 'Add to party'}</span>
@@ -634,7 +640,7 @@ export class UI {
       const recoded = inst.defId.endsWith('_lambda') || /lambda|λ/i.test(def.name);
       return `
         <div class="char-card rarity-${def.rarity.toLowerCase()} ${active ? 'in-active-party' : ''} ${this.recentlySwappedInUid === inst.uid ? 'swap-complete' : ''}" data-uid="${inst.uid}">
-          <div class="portrait">${weaponEmoji(job.weapon)}</div>
+          <div class="portrait">${weaponIcon(job.weapon)}</div>
           <div class="cname">${def.name}</div>
           <div class="cmeta">${def.rarity} · Lv.${lv}${recoded ? ' · Recode' : ''}</div>
           ${showSwap ? `<button class="party-swap-button" type="button" data-swap-source="${inst.uid}">${this.pendingPartySwapUid === inst.uid ? 'Cancel' : 'Swap'}</button>` : ''}
@@ -656,6 +662,7 @@ export class UI {
 
     const recodeFilter = (document.getElementById('character-recode-filter') as HTMLSelectElement | null)?.value ?? 'all';
     const rarityFilter = (document.getElementById('character-rarity-filter') as HTMLSelectElement | null)?.value ?? 'all';
+    const sortOrder = (document.getElementById('character-sort-order') as HTMLSelectElement | null)?.value ?? 'az';
     const roster = ownedCharacters.filter((inst) => {
       const def = getCharacterDef(inst);
       if (!def) return false;
@@ -665,6 +672,14 @@ export class UI {
       if (rarityFilter !== 'all' && def.rarity !== rarityFilter) return false;
       return true;
     });
+    if (sortOrder !== 'recruit') {
+      const direction = sortOrder === 'za' ? -1 : 1;
+      roster.sort((a, b) => {
+        const nameA = getCharacterDef(a)?.name ?? a.defId;
+        const nameB = getCharacterDef(b)?.name ?? b.defId;
+        return direction * nameA.localeCompare(nameB, undefined, { sensitivity: 'base' });
+      });
+    }
 
     grid.innerHTML = roster
       .map((inst) => {
@@ -746,7 +761,7 @@ export class UI {
 
     // Header / portrait / name
     const portrait = document.querySelector('#screen-character-detail .detail-portrait');
-    if (portrait) portrait.textContent = weaponEmoji(job.weapon);
+    if (portrait) portrait.innerHTML = weaponIcon(job.weapon);
 
     const nameBlock = document.querySelector('#screen-character-detail .detail-portrait')?.nextElementSibling;
     if (nameBlock) {
@@ -928,14 +943,15 @@ export class UI {
   }
 }
 
-function weaponEmoji(w: string): string {
-  switch (w) {
-    case 'Sword': return '⚔️';
-    case 'Bow': return '🏹';
-    case 'Spear': return '🔱';
-    case 'Staff': return '🔮';
-    default: return '👤';
-  }
+function weaponIcon(w: string): string {
+  const icons: Record<string, string> = {
+    Sword: 'SwordIcon_5qB_.webp',
+    Spear: 'SpearIcon_wbHQ.webp',
+    Bow: 'BowIcon_5qB_.webp',
+    Staff: 'StaffIcon_wbHQ.webp',
+  };
+  const filename = icons[w];
+  return filename ? `<img class="weapon-icon" src="./Assets/${filename}" alt="${w}" />` : '';
 }
 
 function companionEmoji(id: string): string {

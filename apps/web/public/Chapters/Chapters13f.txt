@@ -1,0 +1,181 @@
+================================================================================
+CHAPTERS13F.TXT  -  Terra Battle Chapter 13 FINAL reference
+================================================================================
+Purpose : Stage-by-stage layout of Chapter 13 for building stage data.
+Status  : FINAL for available data. Wave lists from user paste.
+          No placement grids — all placements [MISSING].
+          Some paste lines omit xN (treated as x1).
+Drafted : 2026-11-11
+Source  : User paste. Own words only. Filename ends in "f".
+
+--------------------------------------------------------------------------------
+HOW TO READ
+--------------------------------------------------------------------------------
+  Wave = wiki "Battle". Board = 6 cols x 8 rows.
+  Placement when grids arrive: (col, row) bottom-left origin.
+
+================================================================================
+CHAPTER 13  (prison tower — working label)
+================================================================================
+After Ch12. 10 stages. Stamina 11 every stage.
+Difficulty 31 for 13-1..13-5,  32 for 13-6..13-10.
+Boss: Pepropé Lv25 on 13-10 wave 3 (flees after battle per story note).
+Theme: Spear-heavy machines/prison units; Ice on Androclops/Oculus/Cryosaurus.
+Floor traps on 13-2, 13-6, 13-9.
+Recruit: Androclops on 13-4.
+
+ Stage  Stam  Diff  Waves  XP / Coins                 Placement
+ 13-1   11    31    5      —                          MISSING
+ 13-2   11    31    5      — (floor traps)            MISSING
+ 13-3   11    31    5      —                          MISSING
+ 13-4   11    31    4      —                          MISSING
+ 13-5   11    31    3      —                          MISSING
+ 13-6   11    32    4      — (floor traps)            MISSING
+ 13-7   11    32    5      —                          MISSING
+ 13-8   11    32    4      XP 43415–49910, coins 900–1027  MISSING
+ 13-9   11    32    4      XP 16700, coins 430 (traps) MISSING
+ 13-10  11    32    3      — (boss Pepropé)           MISSING
+
+================================================================================
+STAGE 13-1   Stam 11  Diff 31  5 waves
+================================================================================
+Totals: Sword 1, Spear 19
+Wave 1  Drillasaurus [Spear] Lv35 x1
+Wave 2  Gaoler [Spear] Lv36 x1, Impalebot Redux [Spear] Lv36 x3
+Wave 3  Drillasaurus [Spear] Lv35 x1, Impalebot Redux [Spear] Lv36 x5
+Wave 4  Assassin Poseur [Sword] Lv34 x1, Drillasaurus [Spear] Lv35 x2
+Wave 5  Gaoler [Spear] Lv36 x2, Impalebot Redux [Spear] Lv36 x4
+Placement: [MISSING]
+
+================================================================================
+STAGE 13-2   Stam 11  Diff 31  5 waves
+================================================================================
+Totals: Spear 15, Ice 3
+Note: Beware floor traps
+Wave 1  Mecharose [Spear] Lv25 x2
+Wave 2  Impalebot Redux [Spear] Lv36 x2, Mecharose [Spear] Lv25 x1
+Wave 3  Impalebot Redux [Spear] Lv36 x2, Cryosaurus [Spear] Lv36 x1
+Wave 4  Impalebot Redux [Spear] Lv36 x3, Mecharose [Spear] Lv25 x1
+Wave 5  Cryosaurus [Spear] Lv36 x2, Mecharose [Spear] Lv25 x1
+Placement: [MISSING]
+
+================================================================================
+STAGE 13-3   Stam 11  Diff 31  5 waves
+================================================================================
+Totals: Spear 30
+Wave 1  Impalebot Redux [Spear] Lv36 x7
+Wave 2  Impalebot Redux [Spear] Lv36 x4, Drillasaurus [Spear] Lv35 x2
+Wave 3  Mecharose [Spear] Lv25 x3
+Wave 4  Impalebot Redux [Spear] Lv36 x8
+Wave 5  Drillasaurus [Spear] Lv35 x2, Mecharose [Spear] Lv25 x4
+Placement: [MISSING]
+
+================================================================================
+STAGE 13-4   Stam 11  Diff 31  4 waves
+================================================================================
+Totals: Sword 2, Spear 9, Ice 8
+Wave 1  Androclops [Spear/Ice] Lv36 x1
+Wave 2  Gaoler [Spear] Lv36 x1, Androclops [Spear/Ice] Lv36 x2
+Wave 3  Assassin Poseur [Sword] Lv34 x2, Androclops [Spear/Ice] Lv36 x1
+Wave 4  Androclops [Spear/Ice] Lv36 x4
+Placement: [MISSING]
+Drops: Androclops (recruit); Benevolent Fang; Terra Swordsteel; Wisp of Jealousy
+
+================================================================================
+STAGE 13-5   Stam 11  Diff 31  3 waves
+================================================================================
+Totals: Spear 7, Ice 7
+Wave 1  Oculus [Spear/Ice] Lv39 x1
+Wave 2  Oculus [Spear/Ice] Lv39 x1, Androclops [Spear/Ice] Lv36 x2
+Wave 3  Oculus [Spear/Ice] Lv39 x3
+Placement: [MISSING]
+
+================================================================================
+STAGE 13-6   Stam 11  Diff 32  4 waves
+================================================================================
+Totals: Spear 23, Ice 6
+Note: Beware floor traps
+Wave 1  Mecharose [Spear] Lv25 x1, Androclops [Spear/Ice] Lv36 x2
+Wave 2  Mecharose [Spear] Lv25 x2, Impalebot Redux [Spear] Lv36 x3
+Wave 3  Impalebot Redux [Spear] Lv36 x2, Androclops [Spear/Ice] Lv36 x2,
+        Mecharose [Spear] Lv25 x1
+Wave 4  Mecharose [Spear] Lv25 x8, Androclops [Spear/Ice] Lv36 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 13-7   Stam 11  Diff 32  5 waves
+================================================================================
+Totals: Sword 1, Spear 5, Staff 6, Ice 2
+Wave 1  Shackler [Staff] Lv25 x1
+Wave 2  Shackler [Staff] Lv25 x1, Assassin Poseur [Sword] Lv34 x1, Gaoler [Spear] Lv36 x1
+Wave 3  Shackler [Staff] Lv25 x1, Cryosaurus [Spear] Lv36 x1
+Wave 4  Gaoler [Spear] Lv36 x2
+Wave 5  Shackler [Staff] Lv25 x3, Oculus [Spear/Ice] Lv39 x1
+Placement: [MISSING]
+
+================================================================================
+STAGE 13-8   Stam 11  Diff 32  4 waves
+================================================================================
+Totals: Spear 33
+XP 43415–49910 (4242/stam), Coins 900–1027
+Wave 1  Impalebot Redux [Spear] Lv36 x6
+Wave 2  Impalebot Redux [Spear] Lv36 x12
+Wave 3  Impalebot Redux [Spear] Lv36 x8
+Wave 4  Toxoid [Spear] Lv38 x1, Impalebot Redux [Spear] Lv36 x6
+Placement: [MISSING]
+Drops: Shell of Madness (Impalebot Redux); Heartwood Bow (Toxoid); Wish Particle (Toxoid)
+Luck chests (partial): Pelt of Knowledge, Terra Swordsteel, Ice Ring, Coins,
+  Claw of Fate, Wisp of Jealousy; Luck 80 Metal Minion / Stonefolk Knight / Mage (Ice);
+  Luck 100 Metal Minion Λ / Mecharose / Heartwood Bow
+
+================================================================================
+STAGE 13-9   Stam 11  Diff 32  4 waves
+================================================================================
+Totals: Spear 11, Staff 3, Ice 8
+XP 16700 (1518/stam), Coins 430
+Note: Beware floor traps
+Wave 1  Androclops [Spear/Ice] Lv36 x4
+Wave 2  Shackler [Staff] Lv25 x1, Drillasaurus [Spear] Lv35 x1
+Wave 3  Androclops [Spear/Ice] Lv36 x2, Gaoler [Spear] Lv36 x1
+Wave 4  Androclops [Spear/Ice] Lv36 x2, Shackler [Staff] Lv25 x2, Gaoler [Spear] Lv36 x1
+Placement: [MISSING]
+
+================================================================================
+STAGE 13-10  Stam 11  Diff 32  3 waves
+================================================================================
+Totals: Sword 1, Spear 10, Staff 3, Ice 1
+Wave 1  Cryosaurus [Spear] Lv36 x1, Mecharose [Spear] Lv25 x2
+Wave 2  Shackler [Staff] Lv25 x1, Impalebot Redux [Spear] Lv36 x4
+Wave 3  BOSS Pepropé [Sword] Lv25 x1, Mecharose [Spear] Lv25 x3, Shackler [Staff] Lv25 x2
+Placement: [MISSING]
+Note: Story text says Pepropé flees after the fight; treat as clearable boss encounter
+  for stage data. Luck chests (partial): Coins, Pelt of Knowledge, Mangled Horn,
+  Metal Minion; Luck 100 Coins 550.
+
+================================================================================
+ENEMY ROSTER (chapter levels) — stats [NOT FOUND]
+================================================================================
+Androclops [Spear/Ice]        Lv36
+Assassin Poseur [Sword]       Lv34
+Cryosaurus [Spear]            Lv36
+Drillasaurus [Spear]          Lv35
+Gaoler [Spear]                 Lv36
+Impalebot Redux [Spear]        Lv36
+Mecharose [Spear]              Lv25
+Oculus [Spear/Ice]             Lv39
+Pepropé (Boss) [Sword]        Lv25
+Shackler [Staff]              Lv25
+Toxoid [Spear]                Lv38
+
+================================================================================
+COULD NOT FIND / OPEN
+================================================================================
+ 1. All placements (no grids).
+ 2. Full enemy stat blocks.
+ 3. XP/coins for most stages (only 13-8 and 13-9 had numbers).
+ 4. Floor-trap coordinates (13-2, 13-6, 13-9).
+ 5. Official chapter title.
+ 6. Pepropé boss skills / whether recruitable (paste does not say).
+
+Wave lists complete for all 10 stages. Counts with omitted xN treated as x1.
+================================================================================

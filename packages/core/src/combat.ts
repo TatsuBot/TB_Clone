@@ -45,6 +45,7 @@ export interface Attack {
   skillName?: string;
   skillId?: string;
   stat?: "atk" | "def" | "matk" | "mdef";
+  impactIcon?: { kind: "weapon" | "element"; value: WeaponType | ElementType };
 }
 
 /** Snapshot of a unit at the moment it fell, so the UI can still show it. */
@@ -59,6 +60,10 @@ export interface ResolutionStep {
   pincerIndex: number;
   pincer: Pincer;
   attacks: Attack[];
+  impactTiles?: Array<{
+    position: Pos;
+    icon: NonNullable<Attack["impactIcon"]>;
+  }>;
   defeated: string[];
   fallen: Fallen[];
 }
@@ -84,6 +89,34 @@ export interface DirectAttackResolution {
 export interface ResolveOptions extends ChainOptions {
   /** The unit the player just moved. Pincers it flanks resolve first. */
   moverId?: string;
+}
+
+function impactIconFor(
+  attacker: Unit,
+  event?: Pick<SkillEvent, "damageComponents" | "element" | "skillName" | "description">,
+): Attack["impactIcon"] {
+  const component = event?.damageComponents?.[0];
+  if (component?.type === "weapon") return attacker.weapon ? { kind: "weapon", value: attacker.weapon } : undefined;
+  const skillText = `${event?.skillName ?? ""} ${event?.description ?? ""}`.toLowerCase();
+  const namedElement: ElementType | undefined =
+    /darkness|\bdark\b/.test(skillText) ? "Darkness"
+      : /\bfire\b/.test(skillText) ? "Fire"
+        : /\bice\b/.test(skillText) ? "Ice"
+          : /lightning|\bthunder\b|\bbolt\b/.test(skillText) ? "Lightning"
+            : /photon/.test(skillText) ? "Photon"
+              : /graviton/.test(skillText) ? "Graviton"
+                : /\bsun\b/.test(skillText) ? "Sun"
+                  : /\bmoon\b/.test(skillText) ? "Moon"
+                    : undefined;
+  const element = component?.element ?? event?.element ?? namedElement ??
+    (event && attacker.weapon === "Staff" ? attacker.element : undefined);
+  if (component?.type === "magic" && element && element !== "Healing" && element !== "Remedy") {
+    return { kind: "element", value: element };
+  }
+  if (element && element !== "Healing" && element !== "Remedy") {
+    return { kind: "element", value: element };
+  }
+  return attacker.weapon ? { kind: "weapon", value: attacker.weapon } : undefined;
 }
 
 const weaponAdvantage: Record<WeaponType, WeaponType | null> = {
@@ -242,6 +275,32 @@ export function shouldActivateSkill(
   return random() * 100 < skill.frequency;
 }
 
+/** Read every stat named before a signed percentage, e.g. ATK/MATK/DEF/MDEF +30%. */
+export function inferSkillStatChanges(
+  skill: Skill,
+): Array<{ stat: "atk" | "def" | "matk" | "mdef"; percent: number }> {
+  if (skill.stat && skill.statPercent !== undefined) {
+    return [{ stat: skill.stat, percent: skill.statPercent }];
+  }
+  const text = `${skill.name ?? ""} ${skill.description ?? ""}`.toLowerCase();
+  const percentage = /([+-]\d+)%/.exec(text);
+  if (!percentage || percentage.index === undefined) return [];
+
+  const statText = text.slice(0, percentage.index);
+  const aliases: Record<string, "atk" | "def" | "matk" | "mdef"> = {
+    attack: "atk", atk: "atk", "magic attack": "matk", matk: "matk",
+    defense: "def", defence: "def", def: "def", "magic defense": "mdef",
+    "magic defence": "mdef", mdef: "mdef",
+  };
+  const stats = new Set<"atk" | "def" | "matk" | "mdef">();
+  const statPattern = /\b(magic\s+attack|magic\s+defen[cs]e|attack|defen[cs]e|matk|mdef|atk|def)\b/g;
+  for (const match of statText.matchAll(statPattern)) {
+    const stat = aliases[match[1] ?? ""];
+    if (stat) stats.add(stat);
+  }
+  return [...stats].map((stat) => ({ stat, percent: Number.parseInt(percentage[1]!, 10) }));
+}
+
 /** Infer AoE shape, effect type, stat buff info, and target mode from skill data and descriptions. */
 export function inferSkillAttributes(skill: Skill): {
   shape: SkillShape;
@@ -252,12 +311,16 @@ export function inferSkillAttributes(skill: Skill): {
   statPercent?: number;
   duration?: number;
   cureStatus?: StatusType | "all";
+  targetWeapons?: WeaponType[];
+  targetElements?: ElementType[];
+  targetSpecies?: string[];
 } {
   const text = `${skill.name ?? ""} ${skill.description ?? ""}`.toLowerCase();
 
   let effect: SkillEffectType = skill.effect ?? "damage";
-  let stat: "atk" | "def" | "matk" | "mdef" | undefined = skill.stat;
-  let statPercent: number | undefined = skill.statPercent;
+  const statChanges = inferSkillStatChanges(skill);
+  let stat: "atk" | "def" | "matk" | "mdef" | undefined = statChanges[0]?.stat ?? skill.stat;
+  let statPercent: number | undefined = statChanges[0]?.percent ?? skill.statPercent;
   let duration: number | undefined = skill.duration ?? 2;
   let cureStatus: StatusType | "all" | undefined = skill.cureStatus;
 
@@ -306,27 +369,10 @@ export function inferSkillAttributes(skill: Skill): {
       : skill.trigger === "equip"
         ? -1
         : 3;
-  } else if (
-    /(attack|atk|defense|def|magic|matk|mdef)\s*([+-]\d+)%/.test(text)
-  ) {
-    const match = text.match(
-      /(attack|atk|defense|def|magic|matk|mdef)\s*([+-]\d+)%/,
-    );
-    if (match) {
-      const s = match[1];
-      stat =
-        s === "attack" || s === "atk"
-          ? "atk"
-          : s === "defense" || s === "def"
-            ? "def"
-            : s === "magic" || s === "matk"
-              ? "matk"
-              : "mdef";
-      statPercent = parseInt(match[2], 10);
-      effect = statPercent >= 0 ? "buff" : "debuff";
-      const durMatch = text.match(/for\s*(\d+)\s*turn/);
-      if (durMatch) duration = parseInt(durMatch[1], 10);
-    }
+  } else if (statChanges.length > 0) {
+    effect = statChanges[0]!.percent >= 0 ? "buff" : "debuff";
+    const durMatch = text.match(/for\s*(\d+)\s*turn/);
+    if (durMatch) duration = parseInt(durMatch[1], 10);
   }
 
   let shape: SkillShape = skill.shape ?? "single";
@@ -334,25 +380,63 @@ export function inferSkillAttributes(skill: Skill): {
 
   if (skill.shape) {
     shape = skill.shape;
-  } else if (/area\s*\(\s*2\s*\)/i.test(text)) {
+  } else if (/pincer\s*area\s*\(\s*column\s*\)/i.test(text)) {
+    shape = "pincerAreaColumn";
+  } else if (/pincer\s*area\s*\(\s*row\s*\)/i.test(text)) {
+    shape = "pincerAreaRow";
+  } else if (/pincer\s*ring/i.test(text)) {
+    shape = "pincerRing";
+  } else if (/pincer\s*area/i.test(text)) {
+    shape = "pincerArea";
+  } else if (/pincer\s*column/i.test(text)) {
+    shape = "pincerColumn";
+  } else if (/pincer\s*row/i.test(text)) {
+    shape = "pincerRow";
+  } else if (/pincer/i.test(text)) {
+    shape = "pincer";
+  } else if (/area\s*\(\s*(\d+)\s*\)/i.test(text)) {
     shape = "area";
-    radius = 2;
-  } else if (/area\s*\(\s*1\s*\)|area\s*1|\(area\s*1\)/i.test(text)) {
-    shape = "area";
-    radius = 1;
-  } else if (/column|1 column/i.test(text)) {
-    shape = "column";
-  } else if (/row|1 row/i.test(text)) {
-    shape = "row";
+    radius = Number(text.match(/area\s*\(\s*(\d+)\s*\)/i)?.[1] ?? 1);
+  } else if (/(\d+)\s+columns?/i.test(text)) {
+    const count = Number(text.match(/(\d+)\s+columns?/i)?.[1] ?? 1);
+    shape = count > 1 ? "columnBand" : "column";
+    radius = Math.floor(count / 2);
+  } else if (/(\d+)\s+rows?/i.test(text)) {
+    const count = Number(text.match(/(\d+)\s+rows?/i)?.[1] ?? 1);
+    shape = count > 1 ? "rowBand" : "row";
+    radius = Math.floor(count / 2);
   } else if (/cross\s*\(\s*all\s*\)/i.test(text)) {
+    shape = "cross"; radius = 0;
+  } else if (/cross\s*\(\s*(\d+)\s*\)/i.test(text)) {
     shape = "cross";
-    radius = 0;
-  } else if (/cross\s*\(\s*1\s*\)|cross/i.test(text)) {
+    radius = Number(text.match(/cross\s*\(\s*(\d+)\s*\)/i)?.[1] ?? 1);
+  } else if (/diamond/i.test(text)) {
+    shape = "diamond";
+  } else if (/corner/i.test(text)) {
+    shape = "corners";
+  } else if (/outer\s+rows?/i.test(text)) {
+    shape = "outerRows";
+  } else if (/outer\s+columns?/i.test(text)) {
+    shape = "outerColumns";
+  } else if (/4\s*x\s*6|interior/i.test(text)) {
+    shape = "interior";
+  } else if (/border/i.test(text)) {
+    shape = "border";
+  } else if (/ring/i.test(text)) {
+    shape = "ring";
+  } else if (/vertical\s*\(\s*(\d+)\s*\)/i.test(text)) {
+    shape = "vertical";
+    radius = Number(text.match(/vertical\s*\(\s*(\d+)\s*\)/i)?.[1] ?? 1);
+  } else if (/cross/i.test(text)) {
     shape = "cross";
     radius = 1;
+  } else if (/column/i.test(text)) {
+    shape = "column";
+  } else if (/row/i.test(text)) {
+    shape = "row";
   } else if (/lateral/i.test(text)) {
     shape = "lateral";
-    radius = 1;
+    radius = Number(text.match(/lateral\s*\(\s*(\d+)\s*\)/i)?.[1] ?? 1);
   } else if (/adjacent|surround/i.test(text)) {
     shape = "adjacent";
   } else if (
@@ -390,7 +474,16 @@ export function inferSkillAttributes(skill: Skill): {
     statPercent,
     duration,
     cureStatus,
+    targetWeapons: parseDescriptorTargets(skill.description ?? "", ["sword", "spear", "bow"], "weapon") as WeaponType[] | undefined,
+    targetElements: parseDescriptorTargets(skill.description ?? "", ["fire", "ice", "lightning", "darkness", "photon", "graviton", "sun", "moon"], "element") as ElementType[] | undefined,
+    targetSpecies: parseDescriptorTargets(skill.description ?? "", ["wild beast", "dragon", "machine", "oxsecian"], "species"),
   };
+}
+
+function parseDescriptorTargets(text: string, values: string[], kind: "weapon" | "element" | "species"): string[] | undefined {
+  const descriptor = text.split(/[;:]/, 1)[0] ?? "";
+  const found = values.filter((value) => new RegExp(`\\b${value.replace(/ /g, "\\s+")}\\b`, "i").test(descriptor));
+  return found.length ? found.map((value) => kind === "weapon" ? value[0]!.toUpperCase() + value.slice(1) : kind === "element" ? value[0]!.toUpperCase() + value.slice(1) : value) : undefined;
 }
 
 export function getCellsInShape(
@@ -398,8 +491,32 @@ export function getCellsInShape(
   origin: Pos,
   shape: SkillShape,
   radius = 1,
+  anchors: Pos[] = [origin],
 ): Pos[] {
   const cells: Pos[] = [];
+  const add = (p: Pos) => { if (board.inBounds(p)) cells.push(p); };
+  if (shape === "pincerAndRing") {
+    const pincered = getCellsInShape(board, origin, "pincer", radius, anchors);
+    const ring = getCellsInShape(board, origin, "ring", radius);
+    return [...new Map([...pincered, ...ring].map(p => [`${p.row},${p.col}`, p])).values()];
+  }
+  if (shape.startsWith("pincer")) {
+    const out = new Map<string, Pos>();
+    for (const anchor of anchors) {
+      let base: SkillShape = "pincer";
+      if (shape === "pincerArea") base = "area";
+      else if (shape === "pincerRow" || shape === "pincerAreaRow") base = "row";
+      else if (shape === "pincerColumn" || shape === "pincerAreaColumn") base = "column";
+      else if (shape === "pincerRing") base = "ring";
+      const points = base === "pincer" ? [anchor] : getCellsInShape(board, anchor, base, base === "area" ? 1 : radius);
+      for (const p of points) out.set(`${p.row},${p.col}`, p);
+      if (shape === "pincerAreaRow" || shape === "pincerAreaColumn") {
+        const band = shape === "pincerAreaRow" ? "rowBand" : "columnBand";
+        for (const p of getCellsInShape(board, anchor, band, 1)) out.set(`${p.row},${p.col}`, p);
+      }
+    }
+    return [...out.values()];
+  }
   switch (shape) {
     case "single":
       if (board.inBounds(origin)) cells.push(origin);
@@ -417,10 +534,18 @@ export function getCellsInShape(
         cells.push({ row: r, col: origin.col });
       }
       break;
+    case "columnBand":
+      for (let c = origin.col - radius; c <= origin.col + radius; c++)
+        for (let r = 0; r < board.rows; r++) add({ row: r, col: c });
+      break;
     case "row":
       for (let c = 0; c < board.cols; c++) {
         cells.push({ row: origin.row, col: c });
       }
+      break;
+    case "rowBand":
+      for (let r = origin.row - radius; r <= origin.row + radius; r++)
+        for (let c = 0; c < board.cols; c++) add({ row: r, col: c });
       break;
     case "cross":
       if (radius === 0) {
@@ -445,6 +570,33 @@ export function getCellsInShape(
         const p = { row: origin.row, col: origin.col + d };
         if (board.inBounds(p)) cells.push(p);
       }
+      break;
+    case "vertical":
+      for (let d = -radius; d <= radius; d++) add({ row: origin.row + d, col: origin.col });
+      break;
+    case "diamond": {
+      const cross = getCellsInShape(board, origin, "cross", 2);
+      const area = getCellsInShape(board, origin, "area", 1);
+      return [...new Map([...cross, ...area].map(p => [`${p.row},${p.col}`, p])).values()];
+    }
+    case "ring":
+      for (let r = origin.row - 2; r <= origin.row + 2; r++) for (let c = origin.col - 2; c <= origin.col + 2; c++)
+        if (Math.max(Math.abs(r-origin.row), Math.abs(c-origin.col)) === 2) add({ row:r, col:c });
+      break;
+    case "corners":
+      [[0,0],[0,board.cols-1],[board.rows-1,0],[board.rows-1,board.cols-1]].forEach(([row,col]) => add({row: row!, col: col!}));
+      break;
+    case "border":
+      for (let r=0;r<board.rows;r++) for(let c=0;c<board.cols;c++) if(r===0||c===0||r===board.rows-1||c===board.cols-1) add({row:r,col:c});
+      break;
+    case "outerRows":
+      for (const r of [1,board.rows-2]) for(let c=0;c<board.cols;c++) add({row:r,col:c});
+      break;
+    case "outerColumns":
+      for (const c of [1,board.cols-2]) for(let r=0;r<board.rows;r++) add({row:r,col:c});
+      break;
+    case "interior":
+      for(let r=1;r<board.rows-1;r++) for(let c=1;c<board.cols-1;c++) add({row:r,col:c});
       break;
     case "adjacent":
       for (let r = origin.row - 1; r <= origin.row + 1; r++) {
@@ -473,8 +625,10 @@ export function getTargetsInShape(
   radius: number,
   targetMode: SkillTargetMode,
   attacker: Unit,
+  anchors?: Pos[],
+  filters?: Pick<SkillEvent, "targetWeapons" | "targetElements" | "targetSpecies">,
 ): Unit[] {
-  const cells = getCellsInShape(board, origin, shape, radius);
+  const cells = getCellsInShape(board, origin, shape, radius, anchors);
   const matchedUnitIds = new Set<string>();
   const units: Unit[] = [];
 
@@ -483,6 +637,10 @@ export function getTargetsInShape(
     if (!id || matchedUnitIds.has(id)) continue;
     matchedUnitIds.add(id);
     const u = board.getUnit(id);
+    const matchesFilters = (!filters?.targetWeapons?.length || filters.targetWeapons.includes(u.weapon ?? "None")) &&
+      (!filters?.targetElements?.length || filters.targetElements.includes(u.element ?? "—")) &&
+      (!filters?.targetSpecies?.length || filters.targetSpecies.some(s => (u.species ?? "").toLowerCase().includes(s.toLowerCase())));
+    if (!matchesFilters) continue;
     if (targetMode === "self") {
       if (u.id === attacker.id) units.push(u);
     } else if (targetMode === "ally") {
@@ -521,12 +679,14 @@ export function buildSkillEvents(
     return {
       skillId: skill.id,
       skillName: skill.name ?? skill.id,
+      description: skill.description,
       trigger: skill.trigger,
       sourceUnitId: context.sourceUnitId ?? attacker.id,
       targetUnitIds: context.targetUnitIds ?? [],
       activated: true,
       multiplier: skillPowerMultiplier(skill),
       damageComponents: skill.damageComponents,
+      element: skill.element,
       chance: skill.frequency,
       order: typeof context.order === "number" ? context.order + index : index,
       effect: attr.effect,
@@ -537,6 +697,9 @@ export function buildSkillEvents(
       statPercent: attr.statPercent,
       duration: attr.duration,
       cureStatus: attr.cureStatus,
+      targetWeapons: attr.targetWeapons,
+      targetElements: attr.targetElements,
+      targetSpecies: attr.targetSpecies,
     };
   });
 }
@@ -670,6 +833,7 @@ export function resolveAttacks(
 
     const step = steps.length;
     const attacks: Attack[] = [];
+    const impactTiles: NonNullable<ResolutionStep["impactTiles"]> = [];
 
     for (const { id, role } of rosters[index] ?? []) {
       if (!board.hasUnit(id)) continue;
@@ -861,6 +1025,14 @@ export function resolveAttacks(
           ? board.originOf(attacker.id)
           : board.originOf(targets[0]);
 
+        const anchors = targets.map(targetId => board.originOf(targetId));
+        const impactIcon = impactIconFor(attacker, aoe);
+        if (impactIcon) {
+          for (const position of getCellsInShape(board, origin, aoe.shape ?? "area", aoe.radius ?? 1, anchors)) {
+            if (board.terrainAt(position) === "floor") impactTiles.push({ position, icon: impactIcon });
+          }
+        }
+
         const aoeTargets = getTargetsInShape(
           board,
           origin,
@@ -868,6 +1040,8 @@ export function resolveAttacks(
           aoe.radius ?? 1,
           "enemy",
           attacker,
+          anchors,
+          aoe,
         );
 
         for (const targetEnemy of aoeTargets) {
@@ -905,6 +1079,7 @@ export function resolveAttacks(
                 role: "counter",
                 damage: counterDamage,
                 targetHp: attacker.hp,
+                impactIcon: impactIconFor(targetEnemy, targetEnemy.skills?.find((skill) => skill.trigger === "counter")),
               });
             }
           }
@@ -928,6 +1103,7 @@ export function resolveAttacks(
           damage,
           targetHp: target.hp,
           effect: "damage",
+          impactIcon: impactIconFor(attacker, skillEvents.find((event) => event.effect === "damage")),
         });
 
         if (target.hp > 0) {
@@ -947,6 +1123,7 @@ export function resolveAttacks(
               role: "counter",
               damage: counterDamage,
               targetHp: attacker.hp,
+              impactIcon: impactIconFor(target, target.skills?.find((skill) => skill.trigger === "counter")),
             });
           }
         }
@@ -966,7 +1143,15 @@ export function resolveAttacks(
       }
     }
     defeated.forEach((id) => board.remove(id));
-    steps.push({ step, pincerIndex: index, pincer, attacks, defeated, fallen });
+    steps.push({
+      step,
+      pincerIndex: index,
+      pincer,
+      attacks,
+      ...(impactTiles.length ? { impactTiles } : {}),
+      defeated,
+      fallen,
+    });
   }
 
   return {
@@ -1009,6 +1194,7 @@ export function resolveAdjacentAttacks(
       damage,
       targetHp: target.hp,
       effect: "damage",
+      impactIcon: impactIconFor(attacker),
     });
 
     if (target.hp > 0 && (target.skills ?? []).some((skill) => skill.trigger === "counter")) {
@@ -1022,6 +1208,7 @@ export function resolveAdjacentAttacks(
         role: "counter",
         damage: counterDamage,
         targetHp: attacker.hp,
+        impactIcon: impactIconFor(target, target.skills?.find((skill) => skill.trigger === "counter")),
       });
     }
     step++;

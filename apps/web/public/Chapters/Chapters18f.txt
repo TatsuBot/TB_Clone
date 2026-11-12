@@ -1,0 +1,186 @@
+================================================================================
+CHAPTERS18F.TXT  -  Terra Battle Chapter 18 FINAL reference
+================================================================================
+Purpose : Stage-by-stage layout of Chapter 18 for building stage data.
+Status  : FINAL for available data. All wave lists present in paste.
+          No placement grids — all placements [MISSING].
+Drafted : 2026-11-11
+Source  : User paste. Own words only. Filename ends in "f".
+
+--------------------------------------------------------------------------------
+HOW TO READ
+--------------------------------------------------------------------------------
+  Wave = wiki "Battle". Board = 6 cols x 8 rows.
+  Placement when grids arrive: (col, row) bottom-left origin.
+
+================================================================================
+CHAPTER 18  (Oxsecian assault — working label)
+================================================================================
+After Ch17. 10 stages. Stamina 14 every stage.
+Difficulty 42 for 18-1..18-5,  43 for 18-6..18-10.
+Theme: Oxsecian sword units + Analyzer / Chargebot / Flamebot support.
+Floor traps: 18-1, 18-2, 18-3, 18-5, 18-8, 18-10.
+Boss wave: 18-10 wave 3 — Oxsecian Guard / Grunt / Airgrunt all Lv55 (boss),
+  plus Airgrunt Lv49 x3. Paste includes strategy notes (summarized below).
+
+ Stage  Stam  Diff  Waves  Notes
+ 18-1   14    42    4      floor traps
+ 18-2   14    42    5      floor traps
+ 18-3   14    42    3      floor traps
+ 18-4   14    42    4
+ 18-5   14    42    5      floor traps; Flamebot focus
+ 18-6   14    43    4
+ 18-7   14    43    5
+ 18-8   14    43    3      floor traps
+ 18-9   14    43    4
+ 18-10  14    43    3      floor traps; triple boss Lv55
+
+================================================================================
+STAGE 18-1   Stam 14  Diff 42  4 waves
+================================================================================
+Totals: Sword 19, Staff 3
+Note: Beware floor traps
+Wave 1  Analyzer [Staff] Lv45 x1, Oxsecian Airgrunt [Sword] Lv45 x3
+Wave 2  Analyzer [Staff] Lv45 x1, Oxsecian Airgrunt [Sword] Lv45 x4
+Wave 3  Oxsecian Airgrunt [Sword] Lv45 x4
+Wave 4  Analyzer [Staff] Lv45 x1, Oxsecian Airgrunt [Sword] Lv45 x8
+Placement: [MISSING]
+
+================================================================================
+STAGE 18-2   Stam 14  Diff 42  5 waves
+================================================================================
+Totals: Sword 26, Staff 1
+Note: Beware floor traps
+Wave 1  Oxsecian Grunt [Sword] Lv45 x2
+Wave 2  Oxsecian Grunt [Sword] Lv45 x2, Oxsecian Airgrunt [Sword] Lv45 x4
+Wave 3  Analyzer [Staff] Lv45 x1, Oxsecian Grunt [Sword] Lv45 x2,
+        Oxsecian Airgrunt [Sword] Lv45 x2
+Wave 4  Oxsecian Airgrunt [Sword] Lv45 x6, Oxsecian Grunt [Sword] Lv45 x2
+Wave 5  Oxsecian Grunt [Sword] Lv45 x4, Oxsecian Airgrunt [Sword] Lv49 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 18-3   Stam 14  Diff 42  3 waves
+================================================================================
+Totals: Sword 14
+Note: Beware floor traps
+Wave 1  Oxsecian Guard [Sword] Lv45 x1, Oxsecian Airgrunt [Sword] Lv45 x1
+Wave 2  Oxsecian Guard [Sword] Lv45 x1, Oxsecian Grunt [Sword] Lv45 x2
+Wave 3  Oxsecian Grunt [Sword] Lv45 x2, Oxsecian Airgrunt [Sword] Lv45 x7
+Placement: [MISSING]
+
+================================================================================
+STAGE 18-4   Stam 14  Diff 42  4 waves
+================================================================================
+Totals: Sword 26, Staff 4
+Wave 1  Oxsecian Guard [Sword] Lv45 x2, Chargebot (Beta) [Staff] Lv44 x1
+Wave 2  Oxsecian Guard [Sword] Lv45 x1, Oxsecian Airgrunt [Sword] Lv45 x8
+Wave 3  Chargebot (Beta) [Staff] Lv44 x1, Oxsecian Grunt [Sword] Lv45 x1,
+        Oxsecian Guard [Sword] Lv45 x1, Oxsecian Airgrunt [Sword] Lv45 x3
+Wave 4  Analyzer [Staff] Lv45 x1, Chargebot (Beta) [Staff] Lv44 x1,
+        Oxsecian Airgrunt [Sword] Lv45 x8, Oxsecian Grunt [Sword] Lv45 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 18-5   Stam 14  Diff 42  5 waves
+================================================================================
+Totals: Sword 24
+Note: Beware floor traps
+Wave 1  Flamebot (Beta) [Sword] Lv46 x4
+Wave 2  Flamebot (Beta) [Sword] Lv46 x4
+Wave 3  Flamebot (Beta) [Sword] Lv46 x4
+Wave 4  Flamebot (Beta) [Sword] Lv46 x8
+Wave 5  Flamebot (Beta) [Sword] Lv51 x4
+Placement: [MISSING]
+
+================================================================================
+STAGE 18-6   Stam 14  Diff 43  4 waves
+================================================================================
+Totals: Sword 23, Staff 1
+Wave 1  Oxsecian Trapper [Sword] Lv45 x1, Flamebot (Beta) [Sword] Lv46 x2
+Wave 2  Oxsecian Trapper [Sword] Lv45 x1, Flamebot (Beta) [Sword] Lv46 x6
+Wave 3  Analyzer [Staff] Lv45 x1, Oxsecian Trapper [Sword] Lv45 x1,
+        Flamebot (Beta) [Sword] Lv46 x6
+Wave 4  Oxsecian Trapper [Sword] Lv45 x2, Oxsecian Grunt [Sword] Lv49 x4
+Placement: [MISSING]
+
+================================================================================
+STAGE 18-7   Stam 14  Diff 43  5 waves
+================================================================================
+Totals: Sword 44, Staff 1
+Wave 1  Oxsecian Guard [Sword] Lv45 x2, Flamebot (Beta) [Sword] Lv46 x4
+Wave 2  Oxsecian Trapper [Sword] Lv45 x1, Chargebot (Beta) [Staff] Lv44 x1,
+        Oxsecian Airgrunt [Sword] Lv45 x3, Flamebot (Beta) [Sword] Lv46 x3
+Wave 3  Oxsecian Guard [Sword] Lv45 x1, Oxsecian Airgrunt [Sword] Lv45 x4,
+        Flamebot (Beta) [Sword] Lv46 x4
+Wave 4  Flamebot (Beta) [Sword] Lv46 x6, Oxsecian Airgrunt [Sword] Lv45 x4
+Wave 5  Oxsecian Trapper [Sword] Lv45 x2, Flamebot (Beta) [Sword] Lv51 x2,
+        Oxsecian Airgrunt [Sword] Lv45 x8
+Placement: [MISSING]
+
+================================================================================
+STAGE 18-8   Stam 14  Diff 43  3 waves
+================================================================================
+Totals: Sword 21
+Note: Beware floor traps
+Wave 1  Oxsecian Airgrunt [Sword] Lv45 x3, Oxsecian Grunt [Sword] Lv45 x1
+Wave 2  Flamebot (Beta) [Sword] Lv46 x5, Oxsecian Airgrunt [Sword] Lv45 x4
+Wave 3  Oxsecian Guard [Sword] Lv45 x2, Oxsecian Airgrunt [Sword] Lv45 x4,
+        Flamebot (Beta) [Sword] Lv46 x2
+Placement: [MISSING]
+
+================================================================================
+STAGE 18-9   Stam 14  Diff 43  4 waves
+================================================================================
+Totals: Sword 26, Staff 4
+Wave 1  Flamebot (Beta) [Sword] Lv46 x6
+Wave 2  Oxsecian Grunt [Sword] Lv45 x2, Flamebot (Beta) [Sword] Lv46 x8
+Wave 3  Oxsecian Trapper [Sword] Lv45 x1, Flamebot (Beta) [Sword] Lv46 x8
+Wave 4  Oxsecian Guard [Sword] Lv45 x1, Analyzer [Staff] Lv45 x4
+Placement: [MISSING]
+
+================================================================================
+STAGE 18-10  Stam 14  Diff 43  3 waves
+================================================================================
+Totals: Sword 16
+Note: Beware floor traps. Very hard without Levitation (paste note).
+Wave 1  Oxsecian Grunt [Sword] Lv45 x2, Oxsecian Airgrunt [Sword] Lv45 x3
+Wave 2  Oxsecian Airgrunt [Sword] Lv45 x4, Flamebot (Beta) [Sword] Lv46 x2
+Wave 3  BOSS Oxsecian Guard [Sword] Lv55 x1,
+        BOSS Oxsecian Grunt [Sword] Lv55 x1,
+        BOSS Oxsecian Airgrunt [Sword] Lv55 x1,
+        Oxsecian Airgrunt [Sword] Lv49 x3
+Placement: [MISSING]
+
+Boss strategy notes (from paste, condensed):
+  - Guard creates stone shields; does not trigger supporting fire from other bosses.
+  - Soldier (laser / Grunt boss) gets supporting fire from Guard.
+  - Airsoldier (lateral / Airgrunt boss) gets supporting fire from Soldier.
+  - Guard pattern: turn1 lateral 2-space shields both sides → turn2 shields drop +
+    cross attack → turn3 shields again perpendicular to previous. Pincer laterally
+    the turn before vertical shields to avoid being shoved.
+  - Priority: clear small fry + Guard first, then Soldier (stay off laser lines),
+    then Airsoldier (avoid sticking to sides).
+
+================================================================================
+ENEMY ROSTER (chapter levels) — stats [NOT FOUND]
+================================================================================
+Analyzer [Staff]                    Lv45
+Chargebot (Beta) [Staff]            Lv44
+Flamebot (Beta) [Sword]             Lv46, Lv51
+Oxsecian Airgrunt [Sword]           Lv45, Lv49, Lv55 (boss)
+Oxsecian Guard [Sword]              Lv45, Lv55 (boss)
+Oxsecian Grunt [Sword]              Lv45, Lv49, Lv55 (boss)
+Oxsecian Trapper [Sword]            Lv45
+
+================================================================================
+COULD NOT FIND / OPEN
+================================================================================
+ 1. All placements (no grids).
+ 2. Full enemy stat blocks / XP / coins.
+ 3. Floor-trap coordinates.
+ 4. Official chapter title.
+ 5. Exact skill IDs for boss supporting-fire / shield patterns (notes only).
+
+Wave lists complete for all 10 stages.
+================================================================================
